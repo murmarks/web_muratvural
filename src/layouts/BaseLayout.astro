@@ -1,32 +1,74 @@
 ---
+/**
+ * Bütün sayfaların iskeleti: dil, başlık, arama motoru etiketleri (hreflang dahil), yazı tipleri,
+ * üst çubuk, menü ve sayfa sonundaki iletişim bandı.
+ */
+import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource/jetbrains-mono/latin-400.css';
+import '@fontsource/jetbrains-mono/latin-ext-400.css';
+import '@fontsource/jetbrains-mono/latin-500.css';
+import '@fontsource/jetbrains-mono/latin-ext-500.css';
+import archivoLatin from '@fontsource-variable/archivo/files/archivo-latin-wdth-normal.woff2?url';
 import '../styles/global.css';
+import { site } from '../config/site';
+import { locales, switchLocalePath, useT, type Locale } from '../i18n';
+import SiteHeader from '../components/SiteHeader.astro';
+import MenuOverlay from '../components/MenuOverlay.astro';
+import ContactBand from '../components/ContactBand.astro';
 
 interface Props {
-  title: string;
+  lang: Locale;
+  /** Sayfanın kendi başlığı; ana sayfada verilmez */
+  title?: string;
   description?: string;
+  /** Sosyal medya önizleme görseli (public/ altındaki yol) */
+  image?: string;
 }
 
-const { title, description = 'Enhancing Business Performance through Strategy and Insight' } = Astro.props;
-const fullTitle = title === 'Home' ? 'PeBuC | Dr. Murat Vural - Performance Business Consulting' : `${title} | PeBuC`;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const { lang, title, description, image = '/photos/team-color.webp' } = Astro.props;
+const t = useT(lang);
+const brand = site.brand === 'pebuc' ? 'PeBuC' : t('siteName');
+const fullTitle = title ? `${title} · ${brand}` : `${brand} · ${t('kickerL').replace('&amp;', '&')}`;
+const desc = description ?? t('metaDescription');
+const here = Astro.url.pathname;
+const canonical = new URL(here, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{fullTitle}</title>
-    <meta name="description" content={description} />
+    <script is:inline>document.documentElement.classList.add('js')</script>
+    <meta name="description" content={desc} />
+    <meta name="theme-color" content="#0b0b0c" />
     <link rel="canonical" href={canonical} />
+    {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(switchLocalePath(here, l), Astro.site)} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preload" href={archivoLatin} as="font" type="font/woff2" crossorigin />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={brand} />
     <meta property="og:title" content={fullTitle} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={desc} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:locale" content={t('ogLocale')} />
+    <slot name="head" />
   </head>
   <body>
-    <slot />
+    <a class="skip" href="#main">{t('skip')}</a>
+    <div class="grain" aria-hidden="true"></div>
+    <SiteHeader lang={lang} />
+    <MenuOverlay lang={lang} />
+    <main id="main">
+      <slot />
+    </main>
+    <ContactBand lang={lang} />
+    <script>
+      import '../scripts/site';
+    </script>
   </body>
 </html>

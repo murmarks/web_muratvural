@@ -1,0 +1,21 @@
+---
+/** Küçük önizlemeler: birden çok fotoğraf varsa aralarında geçiş. Sıra numarası gösterilmez. */
+import type { Photo } from '../data/photos';
+
+interface Props {
+  photos: Photo[];
+}
+const { photos } = Astro.props;
+---
+
+{
+  photos.length > 1 && (
+    <div class="alts">
+      {photos.map((p, i) => (
+        <button type="button" data-alt={i} aria-current={i === 0 ? 'true' : 'false'} aria-label={`${i + 1} / ${photos.length}`}>
+          <img src={p.th} alt="" loading="lazy" decoding="async" />
+        </button>
+      ))}
+    </div>
+  )
+}

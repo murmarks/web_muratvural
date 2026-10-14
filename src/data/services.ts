@@ -1,108 +1,88 @@
 /**
- * PeBuC hizmet ağacı. Eski WordPress sitesindeki sol menünün (akordiyon) birebir karşılığı.
- * `wp` alanı eski adresin kısa adı (pebuc.site/menu-a1/ gibi); yönlendirmeler buradan üretilir.
+ * Hizmet ağacı. Eski WordPress sitesindeki sol menünün (akordiyon) birebir karşılığı.
+ * Başlıklar eski sitelerin menülerinden (EN: pebuc.site, TR: muratvural.online) aynen alındı.
+ * `wp` alanı eski adresin kısa adı (pebuc.site/menu-a1/ gibi); sayfa metni ve yönlendirmeler buradan bulunur.
  */
+import type { Locale } from '../config/site';
+
 export interface Service {
-  /** Eski WordPress kısa adı, ör. "a1" → /menu-a1/ */
+  /** Eski WordPress kısa adı, ör. "a1" → /menu-a1/ ve src/content/services/<dil>/a1.json */
   wp: string;
   /** Menüde görünen numara, ör. "1.1" */
   no: string;
-  title: string;
-  /** Bu düğümün adres parçası */
+  title: Record<Locale, string>;
+  /** Bu düğümün adres parçası (bütün dillerde aynı) */
   slug: string;
   children?: Service[];
 }
 
+const S = (wp: string, no: string, slug: string, en: string, tr: string, children?: Service[]): Service => ({
+  wp, no, slug, title: { en, tr }, children,
+});
+
 export const services: Service[] = [
-  {
-    wp: 'a', no: '1', title: 'New Business Setup', slug: 'new-business-setup',
-    children: [
-      {
-        wp: 'a1', no: '1.1', title: 'Global Business Expansion & Development', slug: 'global-business-expansion',
-        children: [
-          { wp: 'a11', no: '1.1.1', title: 'Export Strategy & Partnering', slug: 'export-strategy' },
-          { wp: 'a12', no: '1.1.2', title: 'Import Strategy & Partnering', slug: 'import-strategy' },
-        ],
-      },
-      { wp: 'a2', no: '1.2', title: 'Market Research & Opportunity Analysis', slug: 'market-research' },
-      { wp: 'a3', no: '1.3', title: 'Strategic Marketing Plan Development', slug: 'strategic-marketing-plan' },
-      { wp: 'a4', no: '1.4', title: 'Business Plan Creation & Financial Modeling', slug: 'business-plan' },
-      { wp: 'a5', no: '1.5', title: 'Recruitment & Administrative Structuring', slug: 'recruitment-administration' },
-      { wp: 'a6', no: '1.6', title: 'Sales & Marketing Team Building & Recruitment', slug: 'team-building' },
-      { wp: 'a7', no: '1.7', title: 'Legal Setup & Product Registration', slug: 'legal-setup' },
-      { wp: 'a8', no: '1.8', title: 'Logistics & Supply Chain Setup', slug: 'logistics-supply-chain' },
-    ],
-  },
-  {
-    wp: 'b', no: '2', title: 'Performance Enhancement & Expansion', slug: 'performance-enhancement',
-    children: [
-      { wp: 'b1', no: '2.1', title: 'Business Analysis & Productivity Audit', slug: 'productivity-audit' },
-      { wp: 'b2', no: '2.2', title: 'Marketing Plan Review & Enhancement', slug: 'marketing-plan-review' },
-      { wp: 'b3', no: '2.3', title: 'HR Structure & Workforce Optimization', slug: 'hr-workforce' },
-      {
-        wp: 'b4', no: '2.4', title: 'Sales & Marketing Team Performance Optimization', slug: 'team-performance',
-        children: [
-          { wp: 'b41', no: '2.4.1', title: 'Team Performance Diagnostics', slug: 'diagnostics' },
-          { wp: 'b42', no: '2.4.2', title: 'Performance Management System Design', slug: 'performance-management-system' },
-          { wp: 'b43', no: '2.4.3', title: 'Performance Monitoring & KPIs', slug: 'monitoring-kpis' },
-          {
-            wp: 'b44', no: '2.4.4', title: 'Coaching & Counseling Programs', slug: 'coaching',
-            children: [
-              { wp: 'b441', no: '2.4.4.a', title: 'For Sales Representatives', slug: 'sales-representatives' },
-              { wp: 'b442', no: '2.4.4.b', title: 'For Field Sales Managers', slug: 'field-sales-managers' },
-              { wp: 'b443', no: '2.4.4.c', title: 'For Marketing Managers', slug: 'marketing-managers' },
-            ],
-          },
-        ],
-      },
-      { wp: 'b5', no: '2.5', title: 'Legal & Logistics Efficiency Review', slug: 'legal-logistics-review' },
-    ],
-  },
-  {
-    wp: 'c', no: '3', title: 'Training Services', slug: 'training',
-    children: [
-      { wp: 'c1', no: '3.1', title: 'Basic Technical Training', slug: 'basic-technical' },
-      { wp: 'c2', no: '3.2', title: 'Product Training', slug: 'product' },
-      {
-        wp: 'c3', no: '3.3', title: 'Sales Techniques Training', slug: 'sales-techniques',
-        children: [
-          { wp: 'c31', no: '3.3.1', title: 'Beginner Level', slug: 'beginner' },
-          { wp: 'c32', no: '3.3.2', title: 'Intermediate Level', slug: 'intermediate' },
-          { wp: 'c33', no: '3.3.3', title: 'Advanced Level', slug: 'advanced' },
-        ],
-      },
-      {
-        wp: 'c4', no: '3.4', title: 'Marketing Strategy & Execution Training', slug: 'marketing-strategy',
-        children: [
-          { wp: 'c41', no: '3.4.1', title: 'Beginner Level', slug: 'beginner' },
-          { wp: 'c42', no: '3.4.2', title: 'Intermediate Level', slug: 'intermediate' },
-          { wp: 'c43', no: '3.4.3', title: 'Advanced Level', slug: 'advanced' },
-        ],
-      },
-      { wp: 'c5', no: '3.5', title: 'Leadership & Management Training', slug: 'leadership-management' },
-      { wp: 'c6', no: '3.6', title: 'Coaching & Counseling Skills for Managers', slug: 'coaching-skills' },
-      { wp: 'c7', no: '3.7', title: 'Train-the-Trainer Programs', slug: 'train-the-trainer' },
-    ],
-  },
-  {
-    wp: 'd', no: '4', title: 'Remote & On-Demand Support', slug: 'remote-support',
-    children: [
-      { wp: 'd1', no: '4.1', title: 'Virtual Office & Contact Center Setup', slug: 'virtual-office' },
-      { wp: 'd2', no: '4.2', title: 'Remote Office & Operations Management', slug: 'remote-operations' },
-      { wp: 'd3', no: '4.3', title: 'Remote Customer Engagement Solutions', slug: 'customer-engagement' },
-      { wp: 'd4', no: '4.4', title: 'Other Tailored Remote Support Services', slug: 'tailored-support' },
-    ],
-  },
+  S('a', '1', 'new-business-setup', 'New Business Setup', 'Yeni İş Kurulumu', [
+    S('a1', '1.1', 'global-business-expansion', 'Global Business Expansion & Development', 'Küresel İş Genişlemesi ve Geliştirme', [
+      S('a11', '1.1.1', 'export-strategy', 'Export Strategy & Partnering', 'İhracat Stratejisi ve Yeni İş Birlikleri'),
+      S('a12', '1.1.2', 'import-strategy', 'Import Strategy & Partnering', 'İthalat Stratejisi ve Yeni İş Birlikleri'),
+    ]),
+    S('a2', '1.2', 'market-research', 'Market Research & Opportunity Analysis', 'Pazar Araştırması ve Fırsat Analizi'),
+    S('a3', '1.3', 'strategic-marketing-plan', 'Strategic Marketing Plan Development', 'Stratejik Pazarlama Planı Geliştirme'),
+    S('a4', '1.4', 'business-plan', 'Business Plan Creation & Financial Modeling', 'İş Planı Oluşturma ve Finansal Modelleme'),
+    S('a5', '1.5', 'recruitment-administration', 'Recruitment and Administrative Structuring', 'İşe Alım ve İdari Yapılanma'),
+    S('a6', '1.6', 'team-building', 'Sales & Marketing Team Building & Recruitment', 'Satış ve Pazarlama Ekibi Kurma ve İşe Alım'),
+    S('a7', '1.7', 'legal-setup', 'Legal Setup & Product Registration', 'Hukuki Kurulum ve Ürün Tescili'),
+    S('a8', '1.8', 'logistics-supply-chain', 'Logistics and Supply Chain Setup', 'Lojistik ve Tedarik Zinciri Kurulumu'),
+  ]),
+  S('b', '2', 'performance-enhancement', 'Performance Enhancement & Expansion', 'Performans Artırımı ve Genişleme', [
+    S('b1', '2.1', 'productivity-audit', 'Business Analysis & Productivity Audit', 'İş Analizi ve Verimlilik Denetimi'),
+    S('b2', '2.2', 'marketing-plan-review', 'Marketing Plan Review & Enhancement', 'Pazarlama Planı Gözden Geçirme ve İyileştirme'),
+    S('b3', '2.3', 'hr-workforce', 'HR Structure & Workforce Optimization', 'İK Yapısı ve İşgücü Optimizasyonu'),
+    S('b4', '2.4', 'team-performance', 'Sales & Marketing Team Performance Optimization', 'Satış ve Pazarlama Ekibi Performans Optimizasyonu', [
+      S('b41', '2.4.1', 'diagnostics', 'Team Performance Diagnostics', 'Ekip Performansı Analizi'),
+      S('b42', '2.4.2', 'performance-management-system', 'Performance Management System Design', 'Performans Yönetim Sistemi Kurulumu'),
+      S('b43', '2.4.3', 'monitoring-kpis', 'Performance Monitoring & KPIs', 'Performans İzleme ve KPI’ler'),
+      S('b44', '2.4.4', 'coaching', 'Coaching & Counseling Programs', 'Koçluk ve Danışmanlık Programları', [
+        S('b441', '2.4.4.a', 'sales-representatives', 'For Sales Representatives', 'Satış Temsilcileri için'),
+        S('b442', '2.4.4.b', 'field-sales-managers', 'For Field Sales Managers', 'Saha Satış Müdürleri için'),
+        S('b443', '2.4.4.c', 'marketing-managers', 'For Marketing Managers', 'Pazarlama Müdürleri için'),
+      ]),
+    ]),
+    S('b5', '2.5', 'legal-logistics-review', 'Legal & Logistics Efficiency Review', 'Hukuki ve Lojistik Verimlilik Değerlendirmesi'),
+  ]),
+  S('c', '3', 'training', 'Training Services', 'Eğitim Hizmetleri', [
+    S('c1', '3.1', 'basic-technical', 'Basic Technical Training', 'Temel Teknik Eğitim'),
+    S('c2', '3.2', 'product', 'Product Training', 'Ürün Eğitimi'),
+    S('c3', '3.3', 'sales-techniques', 'Sales Techniques Training', 'Satış Teknikleri Eğitimi', [
+      S('c31', '3.3.1', 'beginner', 'Beginner Level', 'Başlangıç Seviyesi'),
+      S('c32', '3.3.2', 'intermediate', 'Intermediate Level', 'Orta Seviye'),
+      S('c33', '3.3.3', 'advanced', 'Advanced Level', 'İleri Seviye'),
+    ]),
+    S('c4', '3.4', 'marketing-strategy', 'Marketing Strategy & Execution Training', 'Pazarlama Stratejisi ve Uygulama Eğitimi', [
+      S('c41', '3.4.1', 'beginner', 'Beginner Level', 'Başlangıç Seviyesi'),
+      S('c42', '3.4.2', 'intermediate', 'Intermediate Level', 'Orta Seviye'),
+      S('c43', '3.4.3', 'advanced', 'Advanced Level', 'İleri Seviye'),
+    ]),
+    S('c5', '3.5', 'leadership-management', 'Leadership & Management Training', 'Liderlik ve Yönetim Eğitimi'),
+    S('c6', '3.6', 'coaching-skills', 'Coaching & Counseling Skills for Managers', 'Yöneticiler için Koçluk ve Danışmanlık Becerileri'),
+    S('c7', '3.7', 'train-the-trainer', 'Train-the-Trainer Programs', 'Eğitmen Eğitimi Programları'),
+  ]),
+  S('d', '4', 'remote-support', 'Remote & On-Demand Support', 'Uzaktan ve Talebe Bağlı Destek', [
+    S('d1', '4.1', 'virtual-office', 'Virtual Office & Contact Center Setup', 'Sanal Ofis ve Çağrı Merkezi Kurulumu'),
+    S('d2', '4.2', 'remote-operations', 'Remote Office & Operations Management', 'Uzak Ofis ve Operasyon Yönetimi'),
+    S('d3', '4.3', 'customer-engagement', 'Remote Customer Engagement Solutions', 'Uzak Müşteri Etkileşimi Çözümleri'),
+    S('d4', '4.4', 'tailored-support', 'Other Tailored Remote Support Services', 'Diğer Özelleştirilmiş Uzaktan Destek Hizmetleri'),
+  ]),
 ];
 
 export interface FlatService extends Service {
-  /** /services/ altındaki tam yol, ör. "new-business-setup/global-business-expansion" */
+  /** services/ altındaki tam yol, ör. "new-business-setup/global-business-expansion" */
   path: string;
   /** Kökten bu düğüme kadar olan zincir (kendisi dahil) */
   trail: Service[];
 }
 
-/** Ağacı düz bir listeye çevirir; sayfa üretimi, yönlendirme ve breadcrumb için. */
+/** Ağacı menü sırasıyla düz bir listeye çevirir; sayfa üretimi, önceki/sonraki, yönlendirme ve konum çubuğu için. */
 export function flattenServices(nodes: Service[] = services, parents: Service[] = []): FlatService[] {
   return nodes.flatMap((node) => {
     const trail = [...parents, node];
@@ -111,11 +91,19 @@ export function flattenServices(nodes: Service[] = services, parents: Service[] 
   });
 }
 
-export const serviceHref = (path: string) => `/services/${path}/`;
+export const flatServices = flattenServices();
+export const serviceByWp = Object.fromEntries(flatServices.map((s) => [s.wp, s])) as Record<string, FlatService>;
 
-/** Eski WordPress adresleri → yeni adresler (astro.config.mjs içinde kullanılır). */
+export const serviceHref = (lang: Locale, path: string) => `/${lang}/services/${path}/`;
+
+/** Bir düğümün altındaki bütün sayfaların sayısı */
+export const countPages = (n: Service): number => (n.children ?? []).reduce((sum, c) => sum + 1 + countPages(c), 0);
+
+/** Eski WordPress adresleri → yeni adresler (astro.config.mjs içinde kullanılır). Eski site İngilizceydi. */
 export function legacyServiceRedirects(): Record<string, string> {
-  const map: Record<string, string> = { '/menu': '/services/', '/our-services': '/services/' };
-  for (const s of flattenServices()) map[`/menu-${s.wp}`] = serviceHref(s.path);
+  const lang = 'en' satisfies Locale;
+  const map: Record<string, string> = { '/menu': `/${lang}/services/`, '/our-services': `/${lang}/services/` };
+  for (const s of flatServices) map[`/menu-${s.wp}`] = serviceHref(lang, s.path);
   return map;
 }
+

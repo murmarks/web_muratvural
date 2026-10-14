@@ -1,0 +1,176 @@
+---
+/**
+ * Hizmet sayfası: solda hizmet haritası, ortada sayfanın eski sitedeki metni, sağda kendi fotoğrafları.
+ * Metin ve fotoğraflar src/content/services/<dil>/<wp>.json dosyasından gelir.
+ */
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ServiceTree from '../../../components/ServiceTree.astro';
+import Gallery from '../../../components/Gallery.astro';
+import { locales, useT, type Locale } from '../../../i18n';
+import { flatServices, serviceByWp, serviceHref, services, type FlatService } from '../../../data/services';
+import { areaPhotos } from '../../../data/home';
+import { hasServicePhoto, servicePhoto } from '../../../data/photos';
+import { inline } from '../../../lib/inline';
+import '../../../styles/service.css';
+
+export function getStaticPaths() {
+  return locales.flatMap((lang) =>
+    flatServices.map((service) => ({ params: { lang, path: service.path }, props: { lang, service } })),
+  );
+}
+
+interface Props {
+  lang: Locale;
+  service: FlatService;
+}
+const { lang, service } = Astro.props;
+const t = useT(lang);
+const entry = await getEntry('services', `${lang}/${service.wp}`);
+if (!entry) throw new Error(`Metin yok: src/content/services/${lang}/${service.wp}.json`);
+
+let blocks = entry.data.blocks;
+// sayfanın ilk alt başlığı, başlığın altındaki sarı vurgu cümlesi olur
+let kicker: string | undefined;
+if (blocks[0]?.t === 'h3') {
+  kicker = blocks[0].x;
+  blocks = blocks.slice(1);
+}
+const own = blocks
+  .filter((b) => b.t === 'img' && b.n && hasServicePhoto(b.n))
+  .map((b) => servicePhoto(b.n!, b.cap || b.alt || undefined));
+const area = service.trail[0];
+const photos = own.length ? own : areaPhotos[area.wp];
+const text = blocks.filter((b) => b.t !== 'img');
+
+const i = flatServices.findIndex((s) => s.wp === service.wp);
+const prev = flatServices[i - 1];
+const next = flatServices[i + 1];
+const parent = service.trail.length > 2 ? service.trail[service.trail.length - 2] : undefined;
+const pageTitle = parent ? `${service.title[lang]} – ${parent.title[lang]}` : service.title[lang];
+const firstP = text.find((b) => b.t === 'p')?.x ?? '';
+const description = firstP.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').slice(0, 180);
+const crumbs = service.trail.map((s) => serviceByWp[s.wp]);
+---
+
+<BaseLayout lang={lang} title={pageTitle} description={description}>
+  <noscript slot="head"><style>.map-body{display:grid!important}.tree .sub{grid-template-rows:1fr!important}.tree .tg{visibility:hidden}</style></noscript>
+  <div class="svc wrap">
+    <aside class="map" data-map aria-label={t('serviceMap')}>
+      <button type="button" class="map-toggle" data-map-toggle aria-expanded="false" aria-controls="map-body">
+        <span class="mono">{t('serviceMap')}</span>
+        <span class="here"><b>{service.no}</b> {service.title[lang]}</span>
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m2 4 4 4 4-4"></path></svg>
+      </button>
+      <div class="map-body" id="map-body">
+        <div class="map-top">
+          <p class="mono">{t('serviceMap')}</p>
+          <label class="search">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="5"></circle><path d="m11 11 3.5 3.5"></path></svg>
+            <span class="sr">{t('search')}</span>
+            <input type="search" data-filter placeholder={t('search')} autocomplete="off" />
+          </label>
+        </div>
+        <nav class="tree" data-tree aria-label={t('services')}>
+          <ServiceTree nodes={services} lang={lang} current={service.wp} trail={service.trail.map((s) => s.wp)} />
+          <p class="empty" data-empty hidden>{t('none')}</p>
+        </nav>
+      </div>
+    </aside>
+
+    <article class="page">
+      <nav class="crumbs mono" aria-label={t('here')}>
+        <ol>
+          <li><a href={`/${lang}/`}>{t('home')}</a></li>
+          <li><a href={`/${lang}/services/`}>{t('services')}</a></li>
+          {
+            crumbs.map((c) =>
+              c.wp === service.wp ? (
+                <li aria-current="page">{c.no} {c.title[lang]}</li>
+              ) : (
+                <li><a href={serviceHref(lang, c.path)}>{c.no} {c.title[lang]}</a></li>
+              ),
+            )
+          }
+        </ol>
+      </nav>
+
+      <header class="head">
+        <div class="p-no" aria-hidden="true">{service.no}</div>
+        <h1><span class="sr">{service.no} </span>{service.title[lang]}</h1>
+        {kicker && <p class="kicker" set:html={inline(kicker)} />}
+      </header>
+
+      <div class="side">
+        <Gallery photos={photos} caption={own.length > 0} />
+      </div>
+
+      <div class="main">
+        {
+          service.children && (
+            <nav class="kids" aria-label={t('inThis')}>
+              <p class="mono">{t('inThis')}</p>
+              <ul>
+                {service.children.map((k) => (
+                  <li>
+                    <a href={serviceHref(lang, `${service.path}/${k.slug}`)}>
+                      <b>{k.no}</b>
+                      <span>{k.title[lang]}</span>
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )
+        }
+        <div class="art">
+          {
+            text.map((b) => {
+              if (b.t === 'h2' || b.t === 'h3') return <h2 set:html={inline(b.x)} />;
+              if (b.t === 'h4') return <h3 set:html={inline(b.x)} />;
+              if (b.t === 'ul') return <ul>{b.items?.map((x) => <li set:html={inline(x)} />)}</ul>;
+              if (b.t === 'ol')
+                return (
+                  <ol start={b.start} style={`--start:${(b.start ?? 1) - 1}`}>
+                    {b.items?.map((x) => (
+                      <li>
+                        <span set:html={inline(x)} />
+                      </li>
+                    ))}
+                  </ol>
+                );
+              if (b.t === 'q') return <blockquote set:html={inline(b.x)} />;
+              return <p set:html={inline(b.x)} />;
+            })
+          }
+        </div>
+      </div>
+
+      <nav class="pn" aria-label={`${t('prev')} / ${t('next')}`}>
+        {
+          prev ? (
+            <a class="prev" href={serviceHref(lang, prev.path)} rel="prev">
+              <span class="mono">← {t('prev')}</span>
+              <span class="tt"><b>{prev.no}</b> {prev.title[lang]}</span>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+        {
+          next && (
+            <a class="next" href={serviceHref(lang, next.path)} rel="next">
+              <span class="mono">{t('next')} →</span>
+              <span class="tt"><b>{next.no}</b> {next.title[lang]}</span>
+            </a>
+          )
+        }
+      </nav>
+    </article>
+  </div>
+</BaseLayout>
+
+<script>
+  import '../../../scripts/service-map';
+</script>

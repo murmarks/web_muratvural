@@ -1,0 +1,22 @@
+---
+/** Fotoğraf galerisi: büyük fotoğraf, altında açıklaması (sarı kare ile), en altta önizlemeler. */
+import type { Photo } from '../data/photos';
+import Shots from './Shots.astro';
+import Alts from './Alts.astro';
+
+interface Props {
+  photos: Photo[];
+  /** açıklama satırı gösterilsin mi */
+  caption?: boolean;
+  class?: string;
+}
+const { photos, caption = true, class: cls } = Astro.props;
+const caps = photos.map((p) => p.cap ?? '');
+const showCap = caption && caps.some(Boolean);
+---
+
+<div class:list={['gal', cls]} data-box data-caps={showCap ? JSON.stringify(caps) : undefined}>
+  <Shots photos={photos} />
+  {showCap && <p class="gcap" data-gcap aria-hidden="true">{caps[0]}</p>}
+  <Alts photos={photos} />
+</div>

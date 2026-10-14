@@ -1,0 +1,33 @@
+---
+/** Menü: sarı perde açılır. Bölümler ana sayfada; hizmetler kendi sayfasında; iletişim her sayfanın sonunda. */
+import { useT, type Locale } from '../i18n';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const home = `/${lang}/`;
+const items = [
+  { href: `${home}#numbers`, label: t('numbersNav') },
+  { href: `${home}#field`, label: t('field') },
+  { href: `${home}#career`, label: t('career') },
+  { href: `/${lang}/services/`, label: t('services') },
+  { href: `${home}#founder`, label: t('founder') },
+  { href: '#contact', label: t('contact') },
+];
+---
+
+<div class="overlay" id="overlay" aria-hidden="true" inert>
+  <button class="close" type="button" data-close>{t('close')}</button>
+  <nav class="wrap" aria-label={t('mainNav')}>
+    {
+      items.map((it, i) => (
+        <a href={it.href} data-nav>
+          <small>{String(i + 1).padStart(2, '0')}</small>
+          <span>{it.label}</span>
+        </a>
+      ))
+    }
+  </nav>
+</div>

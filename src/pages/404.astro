@@ -1,10 +1,66 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+/** Bulunamayan adres. Hangi dilde gösterileceği adresin başından anlaşılamadığı için iki dil birlikte. */
+import '@fontsource-variable/archivo/wdth.css';
+import '../styles/global.css';
+import { locales, site } from '../config/site';
+import { localeNames, useT } from '../i18n';
 ---
 
-<BaseLayout title="Page not found">
-  <main style="max-width: 48rem; margin: 0 auto; padding: 4rem 1rem;">
-    <h1>Page not found</h1>
-    <p><a href="/">Back to home</a> · <a href="/services/">Our services</a></p>
-  </main>
-</BaseLayout>
+<!doctype html>
+<html lang={site.defaultLocale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex" />
+    <title>404 · Dr. Murat Vural</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+  <body>
+    <main class="nf wrap">
+      <p class="code">404</p>
+      {
+        locales.map((l) => {
+          const t = useT(l);
+          return (
+            <section lang={l}>
+              <h1>{t('notFound')}</h1>
+              <p>{t('notFoundText')}</p>
+              <p class="links mono">
+                <a href={`/${l}/`}>{t('home')}</a> · <a href={`/${l}/services/`}>{t('services')}</a>
+                <span class="sr">({localeNames[l]})</span>
+              </p>
+            </section>
+          );
+        })
+      }
+    </main>
+  </body>
+</html>
+
+<style>
+  .nf {
+    min-height: 100svh;
+    display: grid;
+    align-content: center;
+    gap: 2rem;
+    max-width: 48rem;
+  }
+  .code {
+    margin: 0;
+    font: 900 clamp(6rem, 20vw, 12rem) / 0.8 var(--display);
+    font-stretch: 125%;
+    color: var(--amber);
+  }
+  h1 {
+    margin: 0;
+    font: 800 1.6rem/1.1 var(--display);
+    text-transform: uppercase;
+  }
+  section p {
+    margin: 0.4rem 0 0;
+    color: var(--muted);
+  }
+  .links a {
+    color: var(--fg);
+  }
+</style>

@@ -1,0 +1,57 @@
+---
+/**
+ * Sol paneldeki hizmet haritası (eski sitedeki akordiyon menünün karşılığı).
+ * Bulunulan sayfanın bütün üst dalları açık gelir, sayfanın kendisi işaretlenir.
+ * Her bağlantı gerçek bir adres; dalları açıp kapatmak ve aramak için küçük bir betik var.
+ */
+import { locales, useT, type Locale } from '../i18n';
+import { serviceHref, type Service } from '../data/services';
+
+interface Props {
+  nodes: Service[];
+  lang: Locale;
+  /** bulunulan sayfanın wp kısa adı */
+  current?: string;
+  /** bulunulan sayfanın kökten zinciri (wp kısa adları) */
+  trail?: string[];
+  base?: string;
+}
+const { nodes, lang, current = '', trail = [], base = '' } = Astro.props;
+const t = useT(lang);
+const chevron = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m4 2 4 4-4 4"/></svg>';
+---
+
+<ul>
+  {
+    nodes.map((n) => {
+      const path = base ? `${base}/${n.slug}` : n.slug;
+      const onPath = trail.includes(n.wp);
+      const isCurrent = n.wp === current;
+      const open = !!n.children && onPath;
+      // arama her dildeki başlıkta yapılır
+      const q = [n.no, ...locales.map((l) => n.title[l])].join(' ');
+      return (
+        <li data-wp={n.wp} data-q={q} class:list={{ open, path: onPath }}>
+          <div class="row">
+            {n.children ? (
+              <button type="button" class="tg" aria-expanded={open ? 'true' : 'false'} aria-label={t('toggle')} set:html={chevron} />
+            ) : (
+              <span class="tg-sp" />
+            )}
+            <a href={serviceHref(lang, path)} aria-current={isCurrent ? 'page' : undefined}>
+              <span class="no">{n.no}</span>
+              <span class="t">{n.title[lang]}</span>
+            </a>
+          </div>
+          {n.children && (
+            <div class="sub">
+              <div>
+                <Astro.self nodes={n.children} lang={lang} current={current} trail={trail} base={path} />
+              </div>
+            </div>
+          )}
+        </li>
+      );
+    })
+  }
+</ul>

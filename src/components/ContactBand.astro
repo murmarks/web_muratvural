@@ -1,0 +1,42 @@
+---
+/** Sayfa sonu: sarı iletişim bandı. E-posta ve WhatsApp bağlantıları gerçek; kopyala düğmeleri de var. */
+import { site } from '../config/site';
+import { useT, type Locale } from '../i18n';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const { email, whatsapp, whatsappLabel, timeZone } = site.contact;
+const mail = `mailto:${email}?subject=${encodeURIComponent(t('ctaSubject'))}`;
+const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"/></svg>';
+---
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap"><p class="push" id="contact-h">{t('push')}</p></div>
+  <div class="marq">
+    <a href={mail}><span>{t('cta')}</span><Fragment set:html={arrow} /></a>
+    <a href={mail} aria-hidden="true" tabindex="-1"><span>{t('cta')}</span><Fragment set:html={arrow} /></a>
+  </div>
+  <div class="wrap">
+    <dl>
+      <div>
+        <dt>{t('email')}</dt>
+        <dd><a href={`mailto:${email}`}>{email}</a><button type="button" class="copy" data-copy={email} data-copied={t('copied')}>{t('copy')}</button></dd>
+      </div>
+      <div>
+        <dt>{t('whatsapp')}</dt>
+        <dd><a href={`https://wa.me/${whatsapp.replace(/\D/g, '')}`} rel="noopener">{whatsappLabel}</a><button type="button" class="copy" data-copy={whatsapp} data-copied={t('copied')}>{t('copy')}</button></dd>
+      </div>
+      <div>
+        <dt>{t('tz')}</dt>
+        <dd><span>{timeZone}</span></dd>
+      </div>
+    </dl>
+    <div class="foot">
+      <span>{site.brand === 'pebuc' ? t('siteNamePebuc') : 'Dr. Murat Vural, M.D.'}</span>
+      <span>{t('slogan')}</span>
+    </div>
+  </div>
+</section>

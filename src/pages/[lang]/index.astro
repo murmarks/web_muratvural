@@ -1,0 +1,237 @@
+---
+/**
+ * Ana sayfa (Sahne A · Perde): perde açılır ve ışık önce lideri, sonra bütün ekibi bulur;
+ * kanıtıyla rakamlar; sahadan fotoğraflar, her seferinde bir yer; ölçekli kariyer; hizmet alanları; kurucu.
+ * Bütün metin sunucuda her dil için yazılır; betik yalnızca hareket ve etkileşim içindir.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Shots from '../../components/Shots.astro';
+import Alts from '../../components/Alts.astro';
+import Gallery from '../../components/Gallery.astro';
+import Pin from '../../components/Pin.astro';
+import { locales, useT, type Locale } from '../../i18n';
+import { countPages, serviceHref, services } from '../../data/services';
+import { abroad, areaIntro, areaPhotos, career, careerYears, countryNames, heroPhotos, places, slides } from '../../data/home';
+import { inline } from '../../lib/inline';
+import '../../styles/home.css';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang }, props: { lang } }));
+}
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const yrs = (n: number) => `${n} ${n === 1 ? t('yr') : t('yrs')}`;
+const plus = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg>';
+const { color, focus, portrait } = heroPhotos;
+const peopleMax = Math.max(...career.map((r) => r.people ?? 0));
+---
+
+<BaseLayout lang={lang}>
+  <link slot="head" rel="preload" as="image" href={color.src} fetchpriority="high" />
+
+  <section class="s1" aria-labelledby="h1">
+    <div class="kicker mono">
+      <span set:html={t('kickerL')} />
+      <span><b>{careerYears}</b> {t('yearsShort')} · <b>{abroad.length}</b> {t('countriesWord')} · <b>≈{peopleMax}</b> {t('peopleShort')}</span>
+    </div>
+    <div class="stage" data-stage>
+      <img class="color" src={color.src} alt={t('heroAlt')} width={color.w} height={color.h} fetchpriority="high" />
+      <img class="focus" src={focus.src} alt="" width={focus.w} height={focus.h} aria-hidden="true" />
+      <div class="shade" aria-hidden="true"></div>
+      <div class="cur l" aria-hidden="true"></div>
+      <div class="cur r" aria-hidden="true"></div>
+    </div>
+    <h1 id="h1"><span class="one">{t('oneTeamA')}</span> <span class="two">{t('oneTeamB')}</span></h1>
+    <div class="sub mono"><span>{t('tagline')}</span><span class="scroll-hint" aria-hidden="true"><i></i><span>{t('scroll')}</span></span></div>
+  </section>
+
+  <section class="s2" id="numbers" aria-labelledby="n-h">
+    <h2 class="sr" id="n-h">{t('numbersNav')}</h2>
+    <div class="scene">
+      <div><span class="ix mono">01 / 04</span><div class="big" data-count={careerYears}>{careerYears}</div><p class="lbl">{t('years')}</p></div>
+      <div class="ev">
+        <p class="cap mono">{t('ev1')}</p>
+        <div class="ruler" aria-hidden="true">
+          <div class="ticks">{Array.from({ length: careerYears + 1 }, () => <i />)}</div>
+          <div class="roles">{career.map((r) => <span style={`--y:${r.years}`} class:list={{ k: r.people }} />)}</div>
+          <div class="nums mono"><span>0</span><span>5</span><span>10</span><span>15</span><span>20</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="scene">
+      <div><span class="ix mono">02 / 04</span><div class="big"><small>≈</small><span data-count={peopleMax}>{peopleMax}</span></div><p class="lbl">{t('people')}</p></div>
+      <div class="ev"><p class="cap mono">{t('ev2')}</p><canvas class="dots" data-dots data-n={peopleMax} width="1000" height="500" aria-hidden="true"></canvas></div>
+    </div>
+    <div class="scene">
+      <div><span class="ix mono">03 / 04</span><div class="big" data-count={abroad.length}>{abroad.length}</div><p class="lbl">{t('countries')}</p></div>
+      <div class="ev">
+        <p class="cap mono">{t('ev3')}</p>
+        <ul class="clist" data-clist>{abroad.map((c, i) => <li class="on"><b>{String(i + 1).padStart(2, '0')}</b>{countryNames[c][lang]}</li>)}</ul>
+      </div>
+    </div>
+    <div class="scene">
+      <div><span class="ix mono">04 / 04</span><div class="big" data-count={slides.length}>{slides.length}</div><p class="lbl">{t('languages')}</p></div>
+      <div class="ev">
+        <p class="cap mono">{t('ev4')}</p>
+        <div class="slides">
+          {
+            slides.map((s) => (
+              <figure>
+                <img src={s.photo.src} alt={s.title} lang={s.lang} width={s.photo.w} height={s.photo.h} loading="lazy" decoding="async" />
+                <figcaption lang={s.lang}>{s.name}</figcaption>
+              </figure>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <div class="ticks2" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+  </section>
+
+  <section class="s3" id="field" aria-labelledby="field-h">
+    <div class="wrap head">
+      <h2 class="h2" id="field-h" set:html={t('fieldTitle')} />
+      <p class="lede">{t('fieldNote')}</p>
+    </div>
+    <div class="viewer" data-viewer>
+      <div class="amb" aria-hidden="true">{places.map((pl, i) => <img src={pl.photos[0].th} alt="" class:list={{ on: i === 0 }} loading="lazy" />)}</div>
+      <div class="pics" data-pics>
+        {
+          places.map((pl, i) => {
+            const where = `${pl.country[lang]}, ${pl.city[lang]}`;
+            return (
+              <figure class:list={['place-fig', { on: i === 0 }]} data-box data-place={i}>
+                <Shots photos={pl.photos} alt={`${where}: ${pl.what[lang]}`} />
+                <figcaption class="capbar">
+                  <div class="pl">
+                    <Pin />
+                    <span class="place">{where}</span>
+                    <span class="what">{pl.what[lang]}</span>
+                  </div>
+                  <Alts photos={pl.photos} />
+                </figcaption>
+              </figure>
+            );
+          })
+        }
+      </div>
+      <ol class="places" aria-label={t('places')}>
+        {
+          places.map((pl, i) => (
+            <li class:list={{ on: i === 0 }}>
+              <button type="button" data-jump={i}>
+                <Pin />
+                <span class="th"><img src={pl.photos[0].th} alt="" loading="lazy" /></span>
+                <span class="nm">
+                  <span>{pl.country[lang]}</span>
+                  <small>{pl.city[lang]}{pl.photos.length > 1 && ` · ${pl.photos.length} ${t('photos')}`}</small>
+                </span>
+              </button>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="s4 wrap" id="career" aria-labelledby="career-h">
+    <div class="head">
+      <h2 class="h2" id="career-h" set:html={t('careerTitle')} />
+      <p class="lede">{t('careerNote')}</p>
+    </div>
+    <div class="gantt" style={`--total:${careerYears}`}>
+      <div class="axis" aria-hidden="true"><span></span><div class="scale mono"><span>0</span><span style="left:25%">5</span><span style="left:50%">10</span><span style="left:75%">15</span><span style="left:100%">20</span></div></div>
+      <div class="grid" aria-hidden="true"></div>
+      {
+        career.map((r) => {
+          const meta = [r.people ? `<b>≈${r.people}</b> ${t('peopleLed')}` : '', r.countries.length > 1 ? `${r.countries.length} ${t('countriesN')}` : ''].filter(Boolean).join(' · ');
+          return (
+            <div class:list={['row', { 'has-meta': meta }]}>
+              <div class="who">
+                <div class="co"><span lang={r.companyLang}>{r.company}</span> · {r.from === r.to ? r.from : `${r.from}–${r.to}`}</div>
+                <div class="role">{r.role[lang]}</div>
+                <div class="d">{r.detail[lang]}</div>
+              </div>
+              <div class="tr">
+                <div class:list={['barx', { k: r.people }]} style={`--from:${r.from};--yrs:${r.years}`}>{yrs(r.years)}</div>
+                {meta && <div class="meta mono" style={`--from:${r.from}`} set:html={meta} />}
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </section>
+
+  <section class="s5 wrap" id="services" aria-labelledby="svc-h">
+    <h2 class="h2" id="svc-h" set:html={t('svcTitle')} />
+    <ul class="areas">
+      {
+        services.map((a, i) => (
+          <li class:list={['area', { open: i === 0 }]}>
+            <h3>
+              <button type="button" aria-expanded={i === 0 ? 'true' : 'false'} aria-controls={`ar-${a.wp}`}>
+                <span class="n">0{a.no}</span>
+                <span class="t">{a.title[lang]}</span>
+                <span class="c">{countPages(a)} {t('pages')}</span>
+                <span class="pm" set:html={plus} />
+              </button>
+            </h3>
+            <div class="more" id={`ar-${a.wp}`}>
+              <div>
+                <div class="inner">
+                  <div class="txt">
+                    <p set:html={inline(areaIntro[a.wp][lang])} />
+                    <ol>
+                      {a.children?.map((c) => (
+                        <li>
+                          <a href={serviceHref(lang, `${a.slug}/${c.slug}`)}>
+                            <b>{c.no}</b>
+                            <span>{c.title[lang]}</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ol>
+                    <a class="go" href={serviceHref(lang, a.slug)}>
+                      <span>{t('openArea')}</span>
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                  <Gallery photos={areaPhotos[a.wp]} caption={false} />
+                </div>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+    <a class="all" href={`/${lang}/services/`}><span>{t('allServices')}</span><span aria-hidden="true">→</span></a>
+  </section>
+
+  <section class="s6 wrap" id="founder" aria-labelledby="founder-h">
+    <div class="founder">
+      <div class="lit">
+        <img src={portrait.src} alt={t('founderAlt')} width={portrait.w} height={portrait.h} loading="lazy" decoding="async" />
+        <div class="desk" aria-hidden="true"></div>
+      </div>
+      <div>
+        <p class="mono lbl">{t('founder')}</p>
+        <h2 class="h2" id="founder-h" set:html={t('founderTitle')} />
+        <p class="bio" data-bio>{t('bio')}</p>
+        <ul class="facts">
+          <li><b>{t('f1a')}</b><span>{t('f1b')}</span></li>
+          <li><b>{t('f2a')}</b><span>{t('f2b')}</span></li>
+          <li><b>{t('f3a')}</b><span>{t('f3b')}</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import '../../scripts/home';
+</script>

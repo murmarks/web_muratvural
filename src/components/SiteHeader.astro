@@ -1,0 +1,54 @@
+---
+/**
+ * Üst çubuk: marka, dil düğmesi, menü. Dil düğmesi aynı sayfanın diğer dildeki adresine götürür
+ * ve seçimi tarayıcıda saklar (bir sonraki ziyarette site o dilde açılır).
+ */
+import { site } from '../config/site';
+import { locales, localeNames, switchLocalePath, useT, type Locale } from '../i18n';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const here = Astro.url.pathname;
+---
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href={`/${lang}/`}>
+      {
+        site.brand === 'pebuc' ? (
+          <span style="display:flex;align-items:center;gap:.55rem">
+            <img src="/photos/mark.png" alt="" width="26" height="26" />
+            PeBuC
+          </span>
+        ) : (
+          <span>
+            <span class="full">{t('siteName')}</span>
+            <span class="short">{t('siteNameShort')}</span>
+          </span>
+        )
+      }
+    </a>
+    <div class="right">
+      <nav class="lang" aria-label={t('language')}>
+        {
+          locales.map((l) => (
+            <a
+              href={switchLocalePath(here, l)}
+              hreflang={l}
+              lang={l}
+              aria-current={l === lang ? 'true' : 'false'}
+              data-lang-link={l}
+              title={localeNames[l]}
+            >
+              {l.toUpperCase()}
+            </a>
+          ))
+        }
+      </nav>
+      <button class="menu-btn" type="button" data-open aria-expanded="false" aria-controls="overlay">{t('menu')}</button>
+    </div>
+  </div>
+</header>

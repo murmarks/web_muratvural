@@ -1,19 +1,53 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+/**
+ * Kök adres (/): ziyaretçiyi kendi diline gönderir.
+ * Sıra: 1) ziyaretçinin daha önce seçtiği dil, 2) site.ts'deki dil modu (sabit ya da bölgesel), 3) varsayılan dil.
+ * JavaScript yoksa iki dilin bağlantısı görünür.
+ */
+import { locales, site } from '../config/site';
+import { localeNames, useT } from '../i18n';
+
+const t = useT(site.defaultLocale);
 ---
 
-<BaseLayout title="Home">
-  <main class="wrap">
-    <h1>PeBuC</h1>
-    <p>Performance Business Consulting · Dr. Murat Vural</p>
-    <p>The new website is being built. <a href="/services/">See our services</a>.</p>
-  </main>
-</BaseLayout>
-
-<style>
-  .wrap {
-    max-width: 48rem;
-    margin: 0 auto;
-    padding: 4rem 1rem;
-  }
-</style>
+<!doctype html>
+<html lang={site.defaultLocale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{site.brand === 'pebuc' ? 'PeBuC' : t('siteName')}</title>
+    <meta name="description" content={t('metaDescription')} />
+    <meta name="theme-color" content="#0b0b0c" />
+    {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(`/${l}/`, Astro.site)} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <script
+      is:inline
+      define:vars={{ locales, def: site.defaultLocale, mode: site.languageMode, regional: site.regional }}
+    >
+      let l = null;
+      try { l = localStorage.getItem('site-lang'); } catch (e) {}
+      if (!locales.includes(l)) {
+        l = def;
+        if (mode === 'regional') {
+          let tz = '';
+          try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+          const langs = (navigator.languages || [navigator.language || '']).map((x) => String(x).slice(0, 2).toLowerCase());
+          for (const [k, r] of Object.entries(regional)) {
+            if (r.timeZones.includes(tz) || langs.some((x) => r.languages.includes(x))) { l = k; break; }
+          }
+        }
+      }
+      location.replace('/' + l + '/' + location.hash);
+    </script>
+    <style>
+      body { margin: 0; min-height: 100svh; display: grid; place-content: center; gap: 1rem; background: #0b0b0c; color: #f3f0ea; font: 500 1.1rem/1.4 system-ui, sans-serif; text-align: center; }
+      nav { display: flex; gap: 1rem; justify-content: center; }
+      a { color: #f2a900; }
+    </style>
+  </head>
+  <body>
+    <p>{t('chooseLanguage')}</p>
+    <nav>{locales.map((l) => <a href={`/${l}/`} hreflang={l} lang={l}>{localeNames[l]}</a>)}</nav>
+  </body>
+</html>

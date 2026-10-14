@@ -1,0 +1,36 @@
+---
+/**
+ * Üst üste duran fotoğraflar; aynı anda biri görünür. Her fotoğraf bütün olarak ve en fazla
+ * kendi boyutunda gösterilir (--nw), en-boy oranı korunur (--ar).
+ */
+import type { Photo } from '../data/photos';
+
+interface Props {
+  photos: Photo[];
+  /** vizör köşeleri */
+  vf?: boolean;
+  /** ilk fotoğraf hemen yüklensin */
+  eager?: boolean;
+  /** fotoğrafların alt metni (verilmezse her fotoğrafın kendi açıklaması) */
+  alt?: string;
+}
+const { photos, vf = true, eager = false, alt } = Astro.props;
+---
+
+<div class="shots">
+  {
+    photos.map((p, i) => (
+      <div class:list={['ph', { lo: p.lo, on: i === 0 }]} style={`--ar:${(p.w / p.h).toFixed(4)};--nw:${p.w}px`}>
+        <img
+          src={p.src}
+          alt={alt ?? p.cap ?? ''}
+          width={p.w}
+          height={p.h}
+          loading={eager && i === 0 ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+        {vf && <i class="vf" />}
+      </div>
+    ))
+  }
+</div>
