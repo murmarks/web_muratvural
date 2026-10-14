@@ -15,9 +15,9 @@ permissions:
   contents: write
 
 env:
-  # Hostinger senkronu. Yeni site hazır olup sahibi onaylayana kadar 'false' kalır;
+  # Hostinger senkronu (sahibi 2026-10-14'te açtı). 'false' yapılırsa wMV'ye gönderim durur;
   # 'true' olunca her yayından sonra main dalı wMV'ye gider ve Hostinger onu yayınlar.
-  SYNC_TO_WMV: 'false'
+  SYNC_TO_WMV: 'true'
 
 concurrency:
   group: deploy-main
