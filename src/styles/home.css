@@ -92,6 +92,10 @@
   letter-spacing: -0.01em;
   text-transform: uppercase;
 }
+.s1 h1 .two {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--fg);
+}
 .s1 .sub {
   width: var(--stage-w);
   margin-top: 1rem;
@@ -214,6 +218,11 @@
   display: flex;
   justify-content: space-between;
   color: var(--dim);
+}
+.dots {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .clist {
   list-style: none;

@@ -65,9 +65,9 @@ Eski adresler (`/menu-a1/`, `/menu-b442/` …) derlemede otomatik olarak yeni İ
 
 ## Metin dili
 
-Sitedeki metinler değerlendirme yapmaz, bilgi verir; yargıyı okura bırakır.
+Metinler okurun vereceği hükmü onun yerine vermez; hükmü taşıyan bilgiyi dik ve eksiksiz söyler.
 
-- "Pek çok", "lider", "aynı anda yönetti" gibi okurun kendi varacağı sonucu onun yerine söyleyen sözler kullanılmaz. Yıl, ülke, şirket, görev, şehir gibi doğrulanabilir bilgiler ise çekinmeden, tam büyüklüğüyle yazılır.
-- Tasarımın amacı ya da sayfanın nasıl yapıldığı (fotoğrafların "gerçek" olduğu, grafiğin "ölçekli" çizildiği gibi) sayfaya yazılmaz; bunu sayfanın kendisi gösterir.
-- Zaten görünen şey sayılmaz ("4 fotoğraf", "6 sayfa" gibi).
+- Güçlü bilgi silinmez, tonu ayarlanır: "≈800 kişiyi aynı anda yönetti" yerine "≈800 kişilik uluslararası satış ve pazarlama ekipleri". Rakam, şirket, görev, ülke ve şehir çekinmeden yazılır.
+- "Pek çok", "lider" gibi okurun kendi varacağı sonucu söyleyen sözler yerine o sonucu doğuran somut bilgi konur ("Farklı bayraklar. Tek ekip.").
+- Tasarımın amacı ya da sayfanın nasıl yapıldığı sayfaya yazılmaz; zaten görünen şey sayılmaz ("4 fotoğraf" gibi).
 - Eski sitelerden gelen metinler (hizmet sayfaları, alan girişleri, slogan, çağrı cümlesi, kısa özgeçmiş) sahibinin kendi metnidir; çevrilmez, olduğu gibi kullanılır.
