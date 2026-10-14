@@ -1,0 +1,42 @@
+# source dalına her push'ta siteyi derler ve dist/ çıktısını main dalına yazar.
+# main dalı her yayında tek bir commit'e sıfırlanır (önceki sürümün üzerine yazılır);
+# eski bir sürüme dönmek için source dalındaki ilgili commit'ten yeniden derlemek yeterli.
+name: Derle ve main'e yayınla
+
+on:
+  push:
+    branches: [source]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-main
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+
+      - name: dist/ çıktısını main dalına gönder
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: main
+          publish_dir: ./dist
+          force_orphan: true
+          user_name: github-actions[bot]
+          user_email: 41898283+github-actions[bot]@users.noreply.github.com
+          full_commit_message: "Yayın: ${{ github.sha }}"

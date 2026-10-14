@@ -1,0 +1,54 @@
+---
+import type { Service } from '../data/services';
+import { serviceHref } from '../data/services';
+
+interface Props {
+  trail: Service[];
+}
+
+const { trail } = Astro.props;
+const crumbs = trail.map((s, i) => ({
+  label: `${s.no} ${s.title}`,
+  href: serviceHref(trail.slice(0, i + 1).map((t) => t.slug).join('/')),
+}));
+---
+
+<nav aria-label="Konum" class="breadcrumbs">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/services/">Services</a></li>
+    {
+      crumbs.map((c, i) => (
+        <li>
+          <a href={c.href} aria-current={i === crumbs.length - 1 ? 'page' : undefined}>
+            {c.label}
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<style>
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+  }
+  li + li::before {
+    content: '/';
+    margin-inline-end: 0.5rem;
+    opacity: 0.4;
+  }
+  a {
+    color: inherit;
+  }
+  a[aria-current='page'] {
+    font-weight: 600;
+    text-decoration: none;
+  }
+</style>

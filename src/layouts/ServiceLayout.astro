@@ -1,0 +1,66 @@
+---
+/**
+ * Hizmet sayfası iskeleti: solda hizmet haritası, üstte konum, ortada içerik.
+ * Tasarım prototipi seçildikten sonra görsel dil buraya uygulanacak.
+ */
+import BaseLayout from './BaseLayout.astro';
+import ServiceNav from '../components/ServiceNav.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { services, type FlatService } from '../data/services';
+
+interface Props {
+  service: FlatService;
+}
+
+const { service } = Astro.props;
+---
+
+<BaseLayout title={`${service.no} ${service.title}`}>
+  <div class="service-page">
+    <aside class="sidebar" aria-label="Our Services">
+      <p class="sidebar-title">Our Services</p>
+      <ServiceNav nodes={services} current={service.path} />
+    </aside>
+    <main>
+      <Breadcrumbs trail={service.trail} />
+      <h1><span class="no">{service.no}</span> {service.title}</h1>
+      <slot />
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .service-page {
+    display: grid;
+    grid-template-columns: minmax(16rem, 22rem) 1fr;
+    gap: 2.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  .sidebar {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+  }
+  .sidebar-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+  }
+  .no {
+    color: var(--accent, #f5b400);
+  }
+  @media (max-width: 52rem) {
+    .service-page {
+      grid-template-columns: 1fr;
+    }
+    .sidebar {
+      position: static;
+      max-height: none;
+    }
+  }
+</style>

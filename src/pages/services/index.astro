@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceNav from '../../components/ServiceNav.astro';
+import { services } from '../../data/services';
+---
+
+<BaseLayout title="Our Services">
+  <main class="wrap">
+    <h1>Our Services</h1>
+    <ServiceNav nodes={services} />
+  </main>
+</BaseLayout>
+
+<style>
+  .wrap {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+</style>

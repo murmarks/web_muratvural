@@ -1,0 +1,30 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { flattenServices, serviceHref } from '../../data/services';
+
+export function getStaticPaths() {
+  return flattenServices().map((service) => ({
+    params: { path: service.path },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+---
+
+<ServiceLayout service={service}>
+  <p>Content for this service will be migrated from the WordPress site.</p>
+  {
+    service.children && (
+      <ul>
+        {service.children.map((child) => (
+          <li>
+            <a href={serviceHref(`${service.path}/${child.slug}`)}>
+              {child.no} {child.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</ServiceLayout>

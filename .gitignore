@@ -1,0 +1,13 @@
+# derleme çıktısı (main dalına Actions gönderir)
+dist/
+.astro/
+node_modules/
+
+# ortam
+.env
+.env.*
+!.env.example
+
+# sistem
+.DS_Store
+*.log
