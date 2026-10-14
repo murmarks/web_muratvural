@@ -1,6 +1,9 @@
 # source dalına her push'ta siteyi derler ve dist/ çıktısını main dalına yazar.
 # main dalı her yayında tek bir commit'e sıfırlanır (önceki sürümün üzerine yazılır);
 # eski bir sürüme dönmek için source dalındaki ilgili commit'ten yeniden derlemek yeterli.
+# Son adım, yeni main'i Hostinger'ın bağlı olduğu wmmurvur/wMV deposunun main dalına da gönderir.
+# Bu adım ayrı bir dosyada (main'de) durmuyor: GitHub, bir iş akışının GITHUB_TOKEN ile yaptığı
+# gönderimden yeni bir iş akışı başlatmaz, o yüzden main'deki bir dosya kendiliğinden hiç çalışmazdı.
 name: Derle ve main'e yayınla
 
 on:
@@ -10,6 +13,11 @@ on:
 
 permissions:
   contents: write
+
+env:
+  # Hostinger senkronu. Yeni site hazır olup sahibi onaylayana kadar 'false' kalır;
+  # 'true' olunca her yayından sonra main dalı wMV'ye gider ve Hostinger onu yayınlar.
+  SYNC_TO_WMV: 'false'
 
 concurrency:
   group: deploy-main
@@ -40,3 +48,21 @@ jobs:
           user_name: github-actions[bot]
           user_email: 41898283+github-actions[bot]@users.noreply.github.com
           full_commit_message: "Yayın: ${{ github.sha }}"
+
+      - name: main dalını wMV'ye gönder (Hostinger)
+        if: env.SYNC_TO_WMV == 'true'
+        env:
+          TARGET_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
+        run: |
+          set -eu
+          if [ -z "$TARGET_TOKEN" ]; then
+            echo "::error::TARGET_REPO_TOKEN tanımlı değil (Settings > Secrets and variables > Actions)"
+            exit 1
+          fi
+          git fetch --depth 1 origin main
+          # checkout'un bu depo için bıraktığı yetki başlığı wMV'ye gitmesin
+          git config --local --unset-all http.https://github.com/.extraheader || true
+          AUTH=$(printf 'x-access-token:%s' "$TARGET_TOKEN" | base64 -w 0)
+          # main her yayında tek commit'e sıfırlandığı için wMV'nin main'i de zorla güncellenir
+          git -c http.extraheader="AUTHORIZATION: basic $AUTH" \
+            push --force https://github.com/wmmurvur/wMV.git FETCH_HEAD:refs/heads/main
