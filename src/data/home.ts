@@ -18,7 +18,7 @@ export const places: Place[] = [
   { country: T('Croatia', 'Hırvatistan'), city: T('Zagreb', 'Zagreb'), what: T('Training seminar for medical doctors', 'Hekimler için eğitim semineri'), photos: [photo('croatia')] },
   { country: T('Bosnia and Herzegovina', 'Bosna-Hersek'), city: T('Sarajevo', 'Saraybosna'), what: T('Working with the local team at the office', 'Yerel ekiple ofiste çalışma'), photos: [photo('bosnia')] },
   { country: T('Libya', 'Libya'), city: T('Tripoli', 'Trablus'), what: T('Pharmacy visit in the field', 'Sahada eczane ziyareti'), photos: [photo('libya')] },
-  { country: T('Türkiye', 'Türkiye'), city: T('Antalya', 'Antalya'), what: T('Sales techniques training for a full hall of field staff', 'Salon dolusu saha ekibine satış teknikleri eğitimi'), photos: ['antalya-1', 'antalya-2', 'antalya-3', 'antalya-4'].map((n) => photo(n)) },
+  { country: T('Türkiye', 'Türkiye'), city: T('Antalya', 'Antalya'), what: T('Sales techniques training for the field teams', 'Saha ekiplerine satış teknikleri eğitimi'), photos: ['antalya-1', 'antalya-2', 'antalya-3', 'antalya-4'].map((n) => photo(n)) },
   { country: T('Vietnam', 'Vietnam'), city: T('Ho Chi Minh City', 'Ho Chi Minh City'), what: T('Southeast Asia operations and product registration', 'Güneydoğu Asya operasyonları ve ürün ruhsatlandırma'), photos: [photo('vietnam')] },
 ];
 
