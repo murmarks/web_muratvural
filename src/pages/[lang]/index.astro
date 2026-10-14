@@ -1,7 +1,8 @@
 ---
 /**
- * Ana sayfa (Sahne A · Perde): perde açılır ve ışık önce lideri, sonra bütün ekibi bulur;
- * kanıtıyla rakamlar; sahadan fotoğraflar, her seferinde bir yer; ölçekli kariyer; hizmet alanları; kurucu.
+ * Ana sayfa (Sahne A · Perde): perde açılır ve ışık önce onu, sonra bütün ekibi bulur;
+ * kanıtıyla rakamlar; sahadan fotoğraflar, her seferinde bir yer; ölçekli kariyer; hizmet alanları; hakkında.
+ * Metinler yargı bildirmez, bilgi verir: değerlendirmeyi okura bırakır (bkz. README, "Metin dili").
  * Bütün metin sunucuda her dil için yazılır; betik yalnızca hareket ve etkileşim içindir.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -10,8 +11,8 @@ import Alts from '../../components/Alts.astro';
 import Gallery from '../../components/Gallery.astro';
 import Pin from '../../components/Pin.astro';
 import { locales, useT, type Locale } from '../../i18n';
-import { countPages, serviceHref, services } from '../../data/services';
-import { abroad, areaIntro, areaPhotos, career, careerYears, countryNames, heroPhotos, places, slides } from '../../data/home';
+import { serviceHref, services } from '../../data/services';
+import { abroad, areaIntro, areaPhotos, career, careerYears, companies, countryNames, heroPhotos, places, slides } from '../../data/home';
 import { inline } from '../../lib/inline';
 import '../../styles/home.css';
 
@@ -27,7 +28,6 @@ const t = useT(lang);
 const yrs = (n: number) => `${n} ${n === 1 ? t('yr') : t('yrs')}`;
 const plus = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg>';
 const { color, focus, portrait } = heroPhotos;
-const peopleMax = Math.max(...career.map((r) => r.people ?? 0));
 ---
 
 <BaseLayout lang={lang}>
@@ -36,7 +36,6 @@ const peopleMax = Math.max(...career.map((r) => r.people ?? 0));
   <section class="s1" aria-labelledby="h1">
     <div class="kicker mono">
       <span set:html={t('kickerL')} />
-      <span><b>{careerYears}</b> {t('yearsShort')} · <b>{abroad.length}</b> {t('countriesWord')} · <b>≈{peopleMax}</b> {t('peopleShort')}</span>
     </div>
     <div class="stage" data-stage>
       <img class="color" src={color.src} alt={t('heroAlt')} width={color.w} height={color.h} fetchpriority="high" />
@@ -45,16 +44,16 @@ const peopleMax = Math.max(...career.map((r) => r.people ?? 0));
       <div class="cur l" aria-hidden="true"></div>
       <div class="cur r" aria-hidden="true"></div>
     </div>
-    <h1 id="h1"><span class="one">{t('oneTeamA')}</span> <span class="two">{t('oneTeamB')}</span></h1>
+    <h1 id="h1"><span>{t('siteName')}</span></h1>
     <div class="sub mono"><span>{t('tagline')}</span><span class="scroll-hint" aria-hidden="true"><i></i><span>{t('scroll')}</span></span></div>
   </section>
 
   <section class="s2" id="numbers" aria-labelledby="n-h">
     <h2 class="sr" id="n-h">{t('numbersNav')}</h2>
     <div class="scene">
-      <div><span class="ix mono">01 / 04</span><div class="big" data-count={careerYears}>{careerYears}</div><p class="lbl">{t('years')}</p></div>
+      <div><span class="ix mono">01 / 03</span><div class="big" data-count={careerYears}>{careerYears}</div><p class="lbl">{t('years')}</p></div>
       <div class="ev">
-        <p class="cap mono">{t('ev1')}</p>
+        <p class="cap mono">{companies.map((c, i) => <>{i > 0 && ' · '}<span lang={c.lang}>{c.name}</span></>)}</p>
         <div class="ruler" aria-hidden="true">
           <div class="ticks">{Array.from({ length: careerYears + 1 }, () => <i />)}</div>
           <div class="roles">{career.map((r) => <span style={`--y:${r.years}`} class:list={{ k: r.people }} />)}</div>
@@ -63,18 +62,14 @@ const peopleMax = Math.max(...career.map((r) => r.people ?? 0));
       </div>
     </div>
     <div class="scene">
-      <div><span class="ix mono">02 / 04</span><div class="big"><small>≈</small><span data-count={peopleMax}>{peopleMax}</span></div><p class="lbl">{t('people')}</p></div>
-      <div class="ev"><p class="cap mono">{t('ev2')}</p><canvas class="dots" data-dots data-n={peopleMax} width="1000" height="500" aria-hidden="true"></canvas></div>
-    </div>
-    <div class="scene">
-      <div><span class="ix mono">03 / 04</span><div class="big" data-count={abroad.length}>{abroad.length}</div><p class="lbl">{t('countries')}</p></div>
+      <div><span class="ix mono">02 / 03</span><div class="big" data-count={abroad.length}>{abroad.length}</div><p class="lbl">{t('countries')}</p></div>
       <div class="ev">
         <p class="cap mono">{t('ev3')}</p>
-        <ul class="clist" data-clist>{abroad.map((c, i) => <li class="on"><b>{String(i + 1).padStart(2, '0')}</b>{countryNames[c][lang]}</li>)}</ul>
+        <ul class="clist" data-clist>{abroad.map((c) => <li class="on">{countryNames[c][lang]}</li>)}</ul>
       </div>
     </div>
     <div class="scene">
-      <div><span class="ix mono">04 / 04</span><div class="big" data-count={slides.length}>{slides.length}</div><p class="lbl">{t('languages')}</p></div>
+      <div><span class="ix mono">03 / 03</span><div class="big" data-count={slides.length}>{slides.length}</div><p class="lbl">{t('languages')}</p></div>
       <div class="ev">
         <p class="cap mono">{t('ev4')}</p>
         <div class="slides">
@@ -89,7 +84,7 @@ const peopleMax = Math.max(...career.map((r) => r.people ?? 0));
         </div>
       </div>
     </div>
-    <div class="ticks2" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+    <div class="ticks2" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
   </section>
 
   <section class="s3" id="field" aria-labelledby="field-h">
@@ -128,7 +123,7 @@ const peopleMax = Math.max(...career.map((r) => r.people ?? 0));
                 <span class="th"><img src={pl.photos[0].th} alt="" loading="lazy" /></span>
                 <span class="nm">
                   <span>{pl.country[lang]}</span>
-                  <small>{pl.city[lang]}{pl.photos.length > 1 && ` · ${pl.photos.length} ${t('photos')}`}</small>
+                  <small>{pl.city[lang]}</small>
                 </span>
               </button>
             </li>
@@ -141,14 +136,13 @@ const peopleMax = Math.max(...career.map((r) => r.people ?? 0));
   <section class="s4 wrap" id="career" aria-labelledby="career-h">
     <div class="head">
       <h2 class="h2" id="career-h" set:html={t('careerTitle')} />
-      <p class="lede">{t('careerNote')}</p>
     </div>
     <div class="gantt" style={`--total:${careerYears}`}>
       <div class="axis" aria-hidden="true"><span></span><div class="scale mono"><span>0</span><span style="left:25%">5</span><span style="left:50%">10</span><span style="left:75%">15</span><span style="left:100%">20</span></div></div>
       <div class="grid" aria-hidden="true"></div>
       {
         career.map((r) => {
-          const meta = [r.people ? `<b>≈${r.people}</b> ${t('peopleLed')}` : '', r.countries.length > 1 ? `${r.countries.length} ${t('countriesN')}` : ''].filter(Boolean).join(' · ');
+          const meta = [r.people ? t('teamOf').replace('{n}', String(r.people)) : '', r.countries.length > 1 ? `${r.countries.length} ${t('countriesN')}` : ''].filter(Boolean).join(' · ');
           return (
             <div class:list={['row', { 'has-meta': meta }]}>
               <div class="who">
@@ -158,7 +152,7 @@ const peopleMax = Math.max(...career.map((r) => r.people ?? 0));
               </div>
               <div class="tr">
                 <div class:list={['barx', { k: r.people }]} style={`--from:${r.from};--yrs:${r.years}`}>{yrs(r.years)}</div>
-                {meta && <div class="meta mono" style={`--from:${r.from}`} set:html={meta} />}
+                {meta && <div class="meta mono" style={`--from:${r.from}`}>{meta}</div>}
               </div>
             </div>
           );
@@ -177,7 +171,6 @@ const peopleMax = Math.max(...career.map((r) => r.people ?? 0));
               <button type="button" aria-expanded={i === 0 ? 'true' : 'false'} aria-controls={`ar-${a.wp}`}>
                 <span class="n">0{a.no}</span>
                 <span class="t">{a.title[lang]}</span>
-                <span class="c">{countPages(a)} {t('pages')}</span>
                 <span class="pm" set:html={plus} />
               </button>
             </h3>

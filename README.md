@@ -62,3 +62,12 @@ Türkçe ya da İngilizce sayfaya gönderir. Yeni dil eklemek için `site.ts` i�
 `content/services/<kod>/` metinlerini eklemek yeter; `npm run check` eksikleri gösterir.
 
 Eski adresler (`/menu-a1/`, `/menu-b442/` …) derlemede otomatik olarak yeni İngilizce adreslere yönlendirilir.
+
+## Metin dili
+
+Sitedeki metinler değerlendirme yapmaz, bilgi verir; yargıyı okura bırakır.
+
+- "Pek çok", "lider", "aynı anda yönetti" gibi okurun kendi varacağı sonucu onun yerine söyleyen sözler kullanılmaz. Yıl, ülke, şirket, görev, şehir gibi doğrulanabilir bilgiler ise çekinmeden, tam büyüklüğüyle yazılır.
+- Tasarımın amacı ya da sayfanın nasıl yapıldığı (fotoğrafların "gerçek" olduğu, grafiğin "ölçekli" çizildiği gibi) sayfaya yazılmaz; bunu sayfanın kendisi gösterir.
+- Zaten görünen şey sayılmaz ("4 fotoğraf", "6 sayfa" gibi).
+- Eski sitelerden gelen metinler (hizmet sayfaları, alan girişleri, slogan, çağrı cümlesi, kısa özgeçmiş) sahibinin kendi metnidir; çevrilmez, olduğu gibi kullanılır.

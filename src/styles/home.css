@@ -92,10 +92,6 @@
   letter-spacing: -0.01em;
   text-transform: uppercase;
 }
-.s1 h1 .two {
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--fg);
-}
 .s1 .sub {
   width: var(--stage-w);
   margin-top: 1rem;
@@ -219,11 +215,6 @@
   justify-content: space-between;
   color: var(--dim);
 }
-.dots {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 .clist {
   list-style: none;
   margin: 0;
@@ -242,11 +233,6 @@
 }
 .clist li.on {
   color: var(--fg);
-}
-.clist li b {
-  color: var(--amber);
-  font-weight: 500;
-  margin-right: 0.5rem;
 }
 .slides {
   display: grid;
@@ -590,7 +576,7 @@
 .area > h3 button {
   width: 100%;
   display: grid;
-  grid-template-columns: 5.5rem minmax(0, 1fr) auto 2.6rem;
+  grid-template-columns: 5.5rem minmax(0, 1fr) 2.6rem;
   align-items: center;
   gap: 1rem;
   background: none;
@@ -612,12 +598,6 @@
 .area > h3 button:hover .t,
 .area.open .t {
   font-stretch: 125%;
-}
-.area .c {
-  font: 500 0.72rem/1 var(--mono);
-  color: var(--muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 .area .pm {
   width: 2.6rem;
@@ -904,9 +884,6 @@
   }
   .area > h3 button {
     grid-template-columns: 2.6rem minmax(0, 1fr) 2.4rem;
-  }
-  .area .c {
-    display: none;
   }
   .area .inner {
     grid-template-columns: minmax(0, 1fr);

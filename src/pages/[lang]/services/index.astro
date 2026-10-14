@@ -3,7 +3,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Gallery from '../../../components/Gallery.astro';
 import { locales, useT, type Locale } from '../../../i18n';
-import { countPages, flattenServices, serviceHref, services } from '../../../data/services';
+import { flattenServices, serviceHref, services } from '../../../data/services';
 import { areaIntro, areaPhotos } from '../../../data/home';
 import { inline } from '../../../lib/inline';
 
@@ -23,7 +23,7 @@ const t = useT(lang);
     <header class="top">
       <p class="mono crumb"><a href={`/${lang}/`}>{t('home')}</a> / <span>{t('services')}</span></p>
       <h1 class="h2" set:html={t('svcTitle')} />
-      <p class="lede">{t('svcIndexLede')}</p>
+      <p class="lede" set:html={t('svcIndexLede')} />
     </header>
     {
       services.map((a) => {
@@ -31,7 +31,7 @@ const t = useT(lang);
         return (
           <section class="ar" aria-labelledby={`h-${a.wp}`}>
             <div class="txt">
-              <p class="n mono">0{a.no} · {countPages(a)} {t('pages')}</p>
+              <p class="n mono">0{a.no}</p>
               <h2 id={`h-${a.wp}`}>
                 <a href={serviceHref(lang, a.slug)}>{a.title[lang]}</a>
               </h2>

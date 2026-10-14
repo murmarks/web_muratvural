@@ -97,7 +97,6 @@ export const serviceByWp = Object.fromEntries(flatServices.map((s) => [s.wp, s])
 export const serviceHref = (lang: Locale, path: string) => `/${lang}/services/${path}/`;
 
 /** Bir düğümün altındaki bütün sayfaların sayısı */
-export const countPages = (n: Service): number => (n.children ?? []).reduce((sum, c) => sum + 1 + countPages(c), 0);
 
 /** Eski WordPress adresleri → yeni adresler (astro.config.mjs içinde kullanılır). Eski site İngilizceydi. */
 export function legacyServiceRedirects(): Record<string, string> {
