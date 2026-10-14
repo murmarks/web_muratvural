@@ -1,0 +1,401 @@
+# Copyright (C) 2020 WP Sheet Editor
+# This file is distributed under the same license as the WP Sheet Editor - Media Library plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Sheet Editor - Media Library 1.6.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/media-library\n"
+"POT-Creation-Date: 2021-03-18T21:06:49+00:00\n"
+"PO-Revision-Date: 2021-03-22 17:55-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_PE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WP Sheet Editor - Media Library"
+msgstr "Editor Masivo - Biblioteca de Medios"
+
+#. Plugin URI of the plugin
+msgid ""
+"https://wpsheeteditor.com/go/woocommerce-addon?utm_source=wp-"
+"admin&utm_medium=plugins-list&utm_campaign=products"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Edit the information of all the files in the media library in a spreadsheet."
+msgstr ""
+"Editar la información de todos los archivos de la biblioteca de medios en "
+"una hoja de cálculo."
+
+#. Author of the plugin
+msgid "WP Sheet Editor"
+msgstr "WP Sheet Editor"
+
+#. Author URI of the plugin
+msgid ""
+"http://wpsheeteditor.com/?utm_source=wp-admin&utm_medium=plugins-"
+"list&utm_campaign=products"
+msgstr ""
+
+#: inc/integrations/enable-media-replace-replacer.php:41
+msgid ""
+"The uploaded file could not be moved to %1$s. This is most likely an issue "
+"with permissions, or upload failed."
+msgstr ""
+
+#: inc/integrations/enable-media-replace.php:32
+msgid "Replace with this file"
+msgstr "Reemplazar con este archivo"
+
+#: inc/integrations/phoenix-lite.php:109 inc/integrations/phoenix-lite.php:112
+#: inc/integrations/phoenix-lite.php:282 inc/integrations/phoenix-lite.php:285
+msgid "Post with ID "
+msgstr "Post con ID "
+
+#: inc/integrations/phoenix-lite.php:115 inc/integrations/phoenix-lite.php:288
+msgid "The field is empty!"
+msgstr "¡El campo está vacío!"
+
+#: inc/integrations/phoenix-lite.php:119 inc/integrations/phoenix-lite.php:292
+msgid "Bad characters or invalid filename!"
+msgstr "¡Campos incorrectos o nombre de archivo inválido!"
+
+#: inc/integrations/phoenix-lite.php:122 inc/integrations/phoenix-lite.php:295
+#: inc/integrations/phoenix-media-rename.php:66
+msgid "A file with that name already exists in the containing folder!"
+msgstr "¡Un archivo con ese nombre ya existe en el folder!"
+
+#: inc/integrations/phoenix-lite.php:125 inc/integrations/phoenix-lite.php:298
+msgid "The media containing directory is not writable!"
+msgstr "¡El directorio de los archivos multimedia no es editable!"
+
+#: inc/integrations/phoenix-lite.php:148 inc/integrations/phoenix-lite.php:321
+msgid "File renaming error!"
+msgstr "¡Error al cambiar el nombre del archivo!"
+
+#: inc/integrations/phoenix-media-rename.php:29
+msgid "File name"
+msgstr "Nombre del archivo"
+
+#: inc/integrations/phoenix-media-rename.php:62
+msgid ""
+"The file ID %d can not be renamed because it does not exist in the server. A "
+"missing file can not be renamed."
+msgstr ""
+"El archivo ID %d no puede ser renombrado porque el archivo no existe en el "
+"servidor. Un archivo inexistente no puede ser renombrado."
+
+#: inc/integrations/woocommerce.php:60 inc/integrations/woocommerce.php:68
+msgid "SKU"
+msgstr "SKU"
+
+#: inc/sheet.php:108
+msgid "Auto rename image files?"
+msgstr "Auto renombrar archivos de imágenes?"
+
+#: inc/sheet.php:108
+msgid ""
+"You need to add the new file name at the end of the image URL separated with "
+"2 colons (::). for example: https://site.com/1234.jpg::my-great-file.jpg - "
+"will rename the file 1234.jpg into my-great-file.jpg. This only works for "
+"image columns."
+msgstr ""
+"Tú debes agregar el nuevo nombre de archivo al final de la URL de las "
+"imágenes separados por 2 :: - Por ejemplo: https://site.com/1234.jpg::my-"
+"great-file.jpg - va a renombrar el archivo 1234.jpg hacia my-great-file.jpg. "
+"Esto solo funciona en columnas de imágenes."
+
+#: inc/sheet.php:151
+msgid "Is image used as featured image?"
+msgstr "¿Se utiliza la imagen como imagen destacada?"
+
+#: inc/sheet.php:151
+msgid "It searches all images being used as a featured image of a post"
+msgstr ""
+"Busca todas las imágenes que se utilizan como imagen destacada de un post"
+
+#: inc/sheet.php:171
+msgid "Edit Images in a Spreadsheet"
+msgstr "Editar imágenes en una hoja de cálculo"
+
+#: inc/sheet.php:196 inc/sheet.php:205
+msgid "Similar file name"
+msgstr "Un nombre de archivo similar"
+
+#: inc/sheet.php:197
+msgid "Download file from this URL"
+msgstr "Descargar archivo desde esta URL"
+
+#: inc/sheet.php:402
+msgid "You dont have enough permissions to do this action."
+msgstr "No tienes suficientes permisos para realizar esta acción."
+
+#: inc/sheet.php:424
+msgid "Step 1/3 completed: All featured images were attached."
+msgstr "Paso 1/3 completado: Se adjuntaron todas las imágenes destacadas."
+
+#: inc/sheet.php:430
+msgid "Step 1/3 started: Finding featured images to attach..."
+msgstr "El paso 1/3 comenzó: Encontrar imágenes destacadas para adjuntar..."
+
+#: inc/sheet.php:460
+msgid "Step 2/3 completed: Product gallery images were attached."
+msgstr ""
+"Paso 2/3 completado: Se adjuntaron imágenes de la galería de productos."
+
+#: inc/sheet.php:477
+msgid ""
+"Step 3/3 completed: Images from the posts content were attached.<br>You had "
+"%d unattached images initially, we were able to attach %d, now you have %d "
+"unattached images."
+msgstr ""
+"Paso 3/3 completado: Se adjuntaron las imágenes del contenido de los posts."
+"<br>Tenías %d imágenes sin adjuntar inicialmente, pudimos adjuntar %d, ahora "
+"tienes %d imágenes sin adjuntar."
+
+#: inc/sheet.php:500
+msgid "Step 3/3 started: Finding images from the posts content to attach..."
+msgstr ""
+"El paso 3/3 comenzó: Encontrar imágenes del contenido de los posts para "
+"adjuntar..."
+
+#: inc/sheet.php:584
+msgid "Uploaded by these users"
+msgstr "Subido por estos usuarios"
+
+#: inc/sheet.php:601
+msgid "Media sheet"
+msgstr "Hoja de medios"
+
+#: inc/sheet.php:606
+msgid "Show these columns from the associated post"
+msgstr "Mostrar estas columnas del post asociado"
+
+#: inc/sheet.php:607
+msgid ""
+"For example: When an image is uploaded to a product, we automatically show "
+"columns with the product title and product taxonomies (categories, "
+"attributes). You can use those columns to copy the values into the alt text "
+"or use them for exports, or any bulk edit. This option is for displaying "
+"additional post information in the media sheet. Enter the list of post meta "
+"keys separated by commas, every meta key will appear as individual column."
+msgstr ""
+"Por ejemplo: Cuando se sube una imagen a un producto, se muestran "
+"automáticamente columnas con el título del producto y las taxonomías del "
+"producto (categorías, atributos). Puedes usar esas columnas para copiar los "
+"valores en el texto alternativo o usarlas para las exportaciones, o "
+"cualquier edición masiva. Esta opción sirve para mostrar información "
+"adicional del puesto en la hoja de medios. Ingresa la lista de metaclaves de "
+"los puestos separados por comas, cada metaclave aparecerá como una columna "
+"individual."
+
+#: inc/sheet.php:613
+msgid "Image preview width inside the cell"
+msgstr "Ancho de la vista previa de la imagen dentro de la celda"
+
+#: inc/sheet.php:620
+msgid "Image preview height inside the cell"
+msgstr "Altura de la vista previa de la imagen dentro de la célula"
+
+#: inc/sheet.php:629
+msgid "How many images do you want to attach per batch?"
+msgstr "Cuántas imágenes quieres asociar por tanda?"
+
+#: inc/sheet.php:631
+msgid ""
+"When you use the \"Attach images\" option, we will get 30 unattached images "
+"and find posts where the images are used and attach the images to those "
+"posts and we will repeat the process until it finishes. You can control the "
+"batch size to reduce the server usage."
+msgstr ""
+"Cuando usas la opción \"Adjuntar imágenes\", nosotros obtendremos 30 "
+"imágenes sin asociar a ningún post y encontraremos las páginas/posts donde "
+"son usadas y las asociaremos a esos posts. Repetiremos el proceso hasta "
+"procesar todas las imágenes sin asociar. Tú puedes controlar cuáles imágenes "
+"son asociadas en cada tanda usando esta opción."
+
+#: inc/sheet.php:649
+msgid "Media library"
+msgstr "Biblioteca de medios"
+
+#: inc/sheet.php:778
+msgid "Keyword in title of associated post"
+msgstr "Palabra clave en el título del post asociado"
+
+#: inc/sheet.php:778
+msgid ""
+"It searches in the title of the post that contains the image. <br>i.e. find "
+"images from products containing the keyword music.<br/>Search by multiple "
+"keywords separating keywords with a semicolon (;)"
+msgstr ""
+"Busca en el título del post que contiene la imagen. <br>Por ejemplo, "
+"encontrar imágenes de productos que contengan la palabra clave música.<br/"
+">Buscar por múltiples palabras clave separando las palabras clave con un "
+"punto y coma (;)"
+
+#: inc/sheet.php:781
+msgid "Files associated to"
+msgstr "Archivos asociados a"
+
+#: inc/sheet.php:781
+msgid "Example: Find images used by posts or products"
+msgstr "Ejemplo: Encontrar imágenes usadas por posts o productos"
+
+#: inc/sheet.php:783
+msgid "Any post type"
+msgstr "Cualquier tipo de post"
+
+#: inc/sheet.php:793
+msgid "Taxonomies in associated post: %s"
+msgstr "Taxonomías en el post asociado: %s"
+
+#: inc/sheet.php:793
+msgid ""
+"Example: Find images of products from the category Shoes. <br>Enter the "
+"names of %s"
+msgstr ""
+"Ejemplo: Buscar imágenes de productos de la categoría Zapatos. <br>Ingresa "
+"los nombres de los %s"
+
+#: inc/sheet.php:794
+msgid "Category name..."
+msgstr "Nombre de la categoría..."
+
+#: inc/sheet.php:815
+msgid "Preview"
+msgstr "Vista previa"
+
+#: inc/sheet.php:829
+msgid "Format"
+msgstr "Formato"
+
+#: inc/sheet.php:842
+msgid "Alt text"
+msgstr "Texto alternativo"
+
+#: inc/sheet.php:854
+msgid "View Associated Post"
+msgstr "Ver el Post Asociado"
+
+#: inc/sheet.php:866
+msgid "Attached to this post"
+msgstr "Adjunto a este post"
+
+#: inc/sheet.php:878
+msgid "Taxonomies of parent post"
+msgstr "Taxonomías del post padre"
+
+#: inc/sheet.php:894
+msgid "Associated post: %s"
+msgstr "Post asociado: %s"
+
+#: inc/sheet.php:908
+msgid "Image width (px)"
+msgstr "Ancho de la imagen (px)"
+
+#: inc/sheet.php:920
+msgid "Image height (px)"
+msgstr "Altura de la imagen (px)"
+
+#: inc/sheet.php:932
+msgid "File size (kb)"
+msgstr "Tamaño del archivo (kb)"
+
+#: inc/sheet.php:944
+msgid "Local file exists"
+msgstr "El archivo local existe"
+
+#: inc/sheet.php:958
+msgid "Description"
+msgstr "Descripción"
+
+#: inc/sheet.php:974
+msgid "Caption"
+msgstr "Pie de foto"
+
+#: inc/sheet.php:977
+msgid "Uploaded by"
+msgstr "Subido por"
+
+#: inc/sheet.php:980
+msgid "File editor"
+msgstr "Editor de archivos"
+
+#: inc/sheet.php:985
+msgid "Parent post slug"
+msgstr "Slug del post padre"
+
+#: inc/sheet.php:997
+msgid "Parent post taxonomy slugs"
+msgstr "Slugs de las taxonomías del post padre"
+
+#: inc/sheet.php:1086
+msgid "Yes"
+msgstr "Sí"
+
+#: inc/sheet.php:1086
+msgid "No"
+msgstr "No"
+
+#: inc/sheet.php:1153
+msgid "Upload files"
+msgstr "Subir archivos"
+
+#: inc/sheet.php:1162
+msgid ""
+"Find posts using any image and attach the images to the posts. The images "
+"should be attached to posts so you can make searches by post title, "
+"taxonomies, post type, or bulk edits that rely on information of the post."
+msgstr ""
+"Encuentra los posts usando cualquier imagen y adjunta las imágenes a los "
+"posts. Las imágenes deben adjuntarse a los posts para que puedas hacer "
+"búsquedas por título del post, taxonomías, tipo de post o ediciones masivas "
+"que se basan en la información del post."
+
+#: inc/sheet.php:1163 inc/sheet.php:1175
+msgid "Attach images"
+msgstr "Adjuntar imágenes"
+
+#: inc/sheet.php:1176
+msgid ""
+"We will find the posts using the images and attach the images to those posts."
+msgstr ""
+"Encontraremos los posts usando las imágenes y adjuntaremos las imágenes a "
+"esos posts."
+
+#: inc/sheet.php:1179
+msgid "Start now"
+msgstr "Empezar ahora"
+
+#: inc/sheet.php:1180
+msgid "Close"
+msgstr "Cerrar"
+
+#: media-library.php:79
+msgid ""
+"Please update the WP Sheet Editor plugin and all its extensions to the "
+"latest version. The features of the plugin \""
+msgstr ""
+"Por favor, actualiza el plugin WP Sheet Editor y todas sus extensiones a la "
+"última versión. Características del plugin \""
+
+#: media-library.php:134
+msgid "My license"
+msgstr "Mi licencia"
+
+#: views/welcome-page-content.php:4
+msgid "Thank you for installing our plugin."
+msgstr "Gracias por instalar nuestro plugin."
+
+#: views/welcome-page-content.php:8
+msgid ""
+"You can open the Media library Bulk Editor Now:  <a href=\"%s\" class="
+"\"button\">Click here</a>"
+msgstr ""
+"Puedes abrir el Editor de Masivo de Medios ahora:  <a href=\"%s\" class="
+"\"button\">Clic aquí</a>"

@@ -1,0 +1,228 @@
+# Copyright (C) 2020 WP Sheet Editor
+# This file is distributed under the same license as the WP Sheet Editor - Comments plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Sheet Editor - Comments 1.0.6.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/comments\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-06-18T22:32:04+00:00\n"
+"PO-Revision-Date: 2021-03-22 15:56-0600\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es_CO\n"
+
+#. Plugin Name of the plugin
+msgid "WP Sheet Editor - Comments"
+msgstr "WP Sheet Editor - Comentarios"
+
+#. Plugin URI of the plugin
+msgid ""
+"https://wpsheeteditor.com/go/comments-addon?utm_source=wp-"
+"admin&utm_medium=plugins-list&utm_campaign=comments"
+msgstr ""
+
+#. Description of the plugin
+msgid "Edit comments and reviews in a spreadsheet."
+msgstr "Edita comentarios y reviews en una hoja de cálculo."
+
+#. Author of the plugin
+msgid "WP Sheet Editor"
+msgstr "WP Sheet Editor"
+
+#. Author URI of the plugin
+msgid ""
+"https://wpsheeteditor.com/?utm_source=wp-admin&utm_medium=plugins-"
+"list&utm_campaign=comments"
+msgstr ""
+
+#: comments.php:78
+msgid ""
+"Please update the WP Sheet Editor plugin and all its extensions to the "
+"latest version. The features of the plugin \""
+msgstr ""
+"Por favor, actualiza el plugin WP Sheet Editor y todas sus extensiones a la "
+"última versión. Las características del plugin \""
+
+#: inc/bootstrap.php:15
+msgid "Open in a Spreadsheet"
+msgstr "Abrir en una Hoja de Cálculo"
+
+#: inc/bootstrap.php:37
+msgid "ID"
+msgstr "ID"
+
+#: inc/bootstrap.php:48
+msgid "Author"
+msgstr "Autor"
+
+#: inc/bootstrap.php:54
+msgid "Author email"
+msgstr "Correo del Autor"
+
+#: inc/bootstrap.php:60
+msgid "Author URL"
+msgstr "URL del Usuario"
+
+#: inc/bootstrap.php:66
+msgid "Author IP"
+msgstr "IP del Usuario"
+
+#: inc/bootstrap.php:72
+msgid "Content"
+msgstr "Contenido"
+
+#: inc/bootstrap.php:82
+msgid "Date"
+msgstr "Fecha"
+
+#: inc/bootstrap.php:89
+msgid "Post ID"
+msgstr "ID del Comentario"
+
+#: inc/bootstrap.php:95
+msgid "Post Title"
+msgstr "Título del Post"
+
+#: inc/bootstrap.php:106
+msgid "View Post"
+msgstr "Ver Post"
+
+#: inc/bootstrap.php:118
+msgid "Karma"
+msgstr "Karma"
+
+#: inc/bootstrap.php:124
+msgid "Status"
+msgstr "Estado"
+
+#: inc/bootstrap.php:128
+msgid "Pending moderation"
+msgstr "Pendiente de moderar"
+
+#: inc/bootstrap.php:129 inc/sheet.php:94
+msgid "Approved"
+msgstr "Aprobado"
+
+#: inc/bootstrap.php:130
+msgid "Spam"
+msgstr "Spam"
+
+#: inc/bootstrap.php:131
+msgid "Trash"
+msgstr "Papelera"
+
+#: inc/bootstrap.php:132
+msgid "Delete completely"
+msgstr "Eliminar Completamente"
+
+#: inc/bootstrap.php:138
+msgid "Browser of the user"
+msgstr "Navegador del usuario"
+
+#: inc/bootstrap.php:145
+msgid "Type"
+msgstr "Tipo"
+
+#: inc/bootstrap.php:152
+msgid "Parent comment"
+msgstr "Comentario padre"
+
+#: inc/bootstrap.php:158
+msgid "User ID of the Author"
+msgstr "ID de Usuario del Autor"
+
+#: inc/providers/comments.php:239
+msgid "The item id does not exist. Error #89827cc"
+msgstr "El ID del item no existe. Error #89827cc"
+
+#: inc/sheet.php:20
+msgid "Comments"
+msgstr "Comentarios"
+
+#: inc/sheet.php:41
+msgid "Bulk edit"
+msgstr "Editor Masivo"
+
+#: inc/sheet.php:41
+msgid "Bulk edit comments"
+msgstr "Editar comentarios masivamente"
+
+#: inc/sheet.php:79
+msgid "Post type"
+msgstr "Tipo de Post"
+
+#: inc/sheet.php:79
+msgid ""
+"Find comments created for all posts in a post type. I.e. Find comments left "
+"on posts, or reviews left on products"
+msgstr ""
+"Encontrar comentarios creados para todos los posts en un tipo de post. Esto "
+"es, encontrar comentarios en entradas o reviews en productos"
+
+#: inc/sheet.php:90
+msgid "Comment status"
+msgstr "Estado del comentario"
+
+#: inc/sheet.php:91 inc/sheet.php:99
+msgid "Select..."
+msgstr "Seleccionar..."
+
+#: inc/sheet.php:92 inc/sheet.php:100
+msgid "All"
+msgstr "Todo"
+
+#: inc/sheet.php:93
+msgid "Pending"
+msgstr "Pendiente"
+
+#: inc/sheet.php:98
+msgid "Post author"
+msgstr "Autor del post"
+
+#: inc/sheet.php:98
+msgid ""
+"Example: Find comments left on posts created by an author or reviews left on "
+"the events published by a specific user"
+msgstr ""
+"Ejemplo: Encontrar comentarios en entradas creadas por un autor o reviews en "
+"eventos publicados por un usuario específico"
+
+#: inc/sheet.php:113
+msgid "Comment type"
+msgstr "Tipo de comentario"
+
+#: inc/sheet.php:115
+msgid "Comment"
+msgstr "Comentario"
+
+#: inc/sheet.php:149
+msgid ""
+"We find items that have the same ID in the CSV and the WP Field.<br>Please "
+"select the CSV column that contains the comment ID."
+msgstr ""
+"Encontraremos items que tienen el mismo ID en el CSV y el campo WordPress."
+"<br>Por favor, selecciona la columna CSV que contiene el ID del comentario."
+
+#: views/welcome-page-content.php:4
+msgid "Thank you for installing our plugin."
+msgstr "Gracias por instalar nuestro plugin."
+
+#: views/welcome-page-content.php:10
+msgid ""
+"<p>Note. You are using the free version and you can edit only comments of "
+"the blog posts.</p>"
+msgstr ""
+"<p>Nota. Estás usando la versión gratuita y solo puedes editar comentarios "
+"de las entradas del blog.</p>"
+
+#: views/welcome-page-content.php:15
+msgid ""
+"You can open the Comments Bulk Editor Now:  <a href=\"%s\" class=\"button"
+"\">Click here</a>"
+msgstr ""
+"Puedes abrir el Editor Masivo de Comentarios Ahora:  <a href=\"%s\" class="
+"\"button\">Clic aquí</a>"

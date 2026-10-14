@@ -1,0 +1,30 @@
+{
+    "name": "wp-sheet-editor-comments",
+    "version": "1.1.34",
+    "vgDistName": "bulk-edit-comments-reviews",
+    "vgPreviousVersion": "1.1.34-beta.1",
+    "sheetEditorModules": {
+        "free": [
+            "autofill-cells",
+            "columns-resizing",
+            "columns-visibility",
+            "filters",
+            "wp-sheet-editor",
+            "user-path"
+        ],
+        "pro": [
+            "acf",
+            "advanced-filters",
+            "columns-renaming",
+            "formulas",
+            "custom-columns",
+            "universal-sheet",
+            "columns-manager"
+        ]
+    },
+    "package_file_path": "C:\\VegaCorp\\dev\\wp-sheet-editor\/comments\/package.json",
+    "vgEditorKeys": [
+        "comments"
+    ],
+    "textName": "vg_sheet_editor_comments"
+}

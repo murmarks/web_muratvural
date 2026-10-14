@@ -1,0 +1,746 @@
+# Copyright (C) 2023 Brizy.io
+# This file is distributed under the To be announced.
+msgid ""
+msgstr ""
+"Project-Id-Version: Brizy Pro 2.4.29\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/brizy-pro\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-14T12:01:06+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: brizy-pro\n"
+
+#. Plugin Name of the plugin
+msgid "Brizy Pro"
+msgstr "بريزي برو"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://brizy.io/"
+msgstr "https://brizy.io/"
+
+#. Description of the plugin
+msgid "Extended functionality for the Brizy WordPress builder plugin."
+msgstr "وظائف إضافية لبرنامج إنشاء Brizy على ووردبريس."
+
+#. Author of the plugin
+msgid "Brizy.io"
+msgstr "بريزي.ايو"
+
+#: admin/integrations.php:33
+#: admin/integrations.php:50
+msgid "Integrations"
+msgstr "التكامل"
+
+#: admin/license.php:80
+msgid "Brizy Pro does not support multisite license anymore."
+msgstr "Brizy Pro لا يدعم ترخيص المواقع المتعددة بعد الآن."
+
+#: admin/license.php:89
+#: admin/wp-cli.php:59
+msgid "License was successfully deactivated!"
+msgstr "تم إلغاء تنشيط الترخيص بنجاح!"
+
+#: admin/license.php:119
+msgid "Deactivate"
+msgstr "إلغاء التنشيط"
+
+#: admin/license.php:119
+#: admin/license.php:165
+msgid "Activate"
+msgstr "تنشيط"
+
+#: admin/license.php:130
+msgid "License"
+msgstr "ترخيص"
+
+#: admin/license.php:161
+msgid "Welcome to %s!"
+msgstr "مرحبًا بك في %s!"
+
+#: admin/license.php:163
+msgid "Please activate your license to get feature updates, premium support and unlimited access to the template library."
+msgstr "الرجاء تنشيط الترخيص للحصول على تحديثات الميزات والدعم المتميز والوصول غير المحدود إلى مكتبة القوالب."
+
+#: admin/license.php:179
+msgid "Please provide a license key."
+msgstr "الرجاء تقديم مفتاح الترخيص."
+
+#: admin/license.php:198
+msgid "License successfully activated."
+msgstr "تم تنشيط الترخيص بنجاح."
+
+#: admin/license.php:213
+msgid "No license was found in your installation"
+msgstr "لم يتم العثور على ترخيص في التثبيت الخاص بك"
+
+#: admin/license.php:281
+msgid "Please provide license key."
+msgstr "الرجاء تقديم مفتاح الترخيص."
+
+#: admin/license.php:295
+msgid "The remote server response code is %s."
+msgstr "كود استجابة الخادم البعيد هو %s."
+
+#: admin/license.php:301
+msgid "An error occurred on json decode response. The json last error is: %s"
+msgstr "حدث خطأ في استجابة فك ترميز json. خطأ json الأخير هو: %s"
+
+#: admin/license.php:303
+msgid "Empty body was returned by the remote server."
+msgstr "تم إرجاع جسم فارغ بواسطة الخادم البعيد."
+
+#: admin/license.php:308
+msgid "The response of the remote server has an unexpected format"
+msgstr "استجابة الخادم البعيد بها تنسيق غير متوقع"
+
+#: admin/license.php:369
+msgid "On a multisite installation the plugin must be network activated!"
+msgstr "في التثبيت متعدد المواقع ، يجب تنشيط الإضافة على الشبكة!"
+
+#: admin/login.php:23
+#: admin/login.php:67
+#: admin/login.php:127
+msgid "Something went wrong. Please refresh the page and try again."
+msgstr "حدث خطأ. الرجاء تحديث الصفحة والمحاولة مرة أخرى."
+
+#: admin/login.php:33
+msgid "The current registration type is not supported. Please change it in network settings(Allow new registrations)."
+msgstr "نوع التسجيل الحالي غير مدعوم. الرجاء تغييره في إعدادات الشبكة (السماح بالتسجيلات الجديدة)."
+
+#: admin/login.php:48
+#: admin/login.php:60
+msgid "Registration complete. Please check your email, then visit the login page."
+msgstr "تم التسجيل بنجاح. الرجاء التحقق من البريد الإلكتروني الخاص بك ، ثم قم بزيارة صفحة تسجيل الدخول."
+
+#: admin/login.php:52
+msgid "Registration on this site has been disabled."
+msgstr "تم تعطيل التسجيل على هذا الموقع."
+
+#: admin/login.php:75
+msgid "You Have Successfully Logged in!"
+msgstr "لقد سجلت الدخول بنجاح!"
+
+#: admin/login.php:136
+msgid "The password reset link has been sent successfully on your email."
+msgstr "تم إرسال رابط إعادة تعيين كلمة المرور بنجاح إلى بريدك الإلكتروني."
+
+#: admin/membership/membership.php:46
+msgctxt "post type general name"
+msgid "Roles"
+msgstr "الأدوار"
+
+#: admin/membership/membership.php:47
+msgctxt "post type singular name"
+msgid "Role"
+msgstr "دور"
+
+#: admin/membership/membership.php:48
+msgctxt "admin menu"
+msgid "Roles"
+msgstr "الأدوار"
+
+#: admin/membership/membership.php:49
+msgctxt "add new on admin bar"
+msgid "Role"
+msgstr "دور"
+
+#: admin/membership/membership.php:50
+msgctxt "add new post type role"
+msgid "Add Role"
+msgstr "إضافة دور"
+
+#: admin/membership/membership.php:51
+msgid "Add New Role"
+msgstr "إضافة دور جديد"
+
+#: admin/membership/membership.php:52
+msgid "New Role"
+msgstr "دور جديد"
+
+#: admin/membership/membership.php:53
+msgid "Edit Role"
+msgstr "تحرير الدور"
+
+#: admin/membership/membership.php:54
+msgid "View Role"
+msgstr "عرض الدور"
+
+#: admin/membership/membership.php:55
+msgid "Roles"
+msgstr "الأدوار"
+
+#: admin/membership/membership.php:56
+msgid "Search Role"
+msgstr "البحث عن دور"
+
+#: admin/membership/membership.php:57
+msgid "Parent Role:"
+msgstr "الدور الأصلي:"
+
+#: admin/membership/membership.php:58
+msgid "No Roles found."
+msgstr "لم يتم العثور على أدوار."
+
+#: admin/membership/membership.php:59
+msgid "No Roles found in Trash."
+msgstr "لم يتم العثور على أدوار في سلة المهملات."
+
+#: admin/membership/membership.php:66
+msgid "roles"
+msgstr "الأدوار"
+
+#: admin/membership/membership.php:88
+msgid "Enter Role Name"
+msgstr "أدخل اسم الدور"
+
+#: admin/membership/membership.php:133
+#: admin/membership/membership.php:136
+msgid "Role updated."
+msgstr "تم تحديث الدور."
+
+#: admin/membership/membership.php:134
+msgid "Custom field updated."
+msgstr "تم تحديث الحقل المخصص."
+
+#: admin/membership/membership.php:135
+msgid "Custom field deleted."
+msgstr "تم حذف الحقل المخصص."
+
+#: admin/membership/membership.php:137
+msgid "Role published."
+msgstr "تم نشر الدور."
+
+#: admin/membership/membership.php:138
+msgid "Role saved."
+msgstr "تم حفظ الدور."
+
+#: admin/membership/membership.php:139
+msgid "Role submitted."
+msgstr "تم تقديم الدور."
+
+#: admin/settings.php:21
+msgid "Limited Access"
+msgstr "وصول محدود"
+
+#: admin/updater.php:256
+msgid "On last check of the license status a HTTP error occured: server response code is %s. Please try to force updates in the update page of the dashboard."
+msgstr "في آخر فحص لحالة الترخيص حدث خطأ HTTP: كود استجابة الخادم هو %s. يرجى محاولة فرض التحديثات في صفحة التحديث في لوحة المعلومات."
+
+#: admin/updater.php:261
+msgid "An error occurred on json decode response, please try to force updates in the update page of the dashboard."
+msgstr "حدث خطأ في فك ترميز json ، يرجى محاولة فرض التحديثات في صفحة التحديث في لوحة المعلومات."
+
+#: admin/views/integrations/view.php:10
+#: admin/views/integrations/view.php:75
+msgid "Select All"
+msgstr "تحديد الكل"
+
+#: admin/views/integrations/view.php:15
+#: admin/views/integrations/view.php:79
+msgid "App"
+msgstr "تطبيق"
+
+#: admin/views/integrations/view.php:19
+#: admin/views/integrations/view.php:82
+msgid "Details"
+msgstr "تفاصيل"
+
+#: admin/views/integrations/view.php:31
+msgid "Select Account"
+msgstr "تحديد الحساب"
+
+#: admin/views/integrations/view.php:42
+msgid "Are you sure you want to completely remove the selected accounts? All the features that use this integration will stop working!"
+msgstr "هل أنت متأكد أنك تريد إزالة الحسابات المحددة بشكل كامل؟ ستتوقف جميع الميزات التي تستخدم هذا التكامل عن العمل!"
+
+#: admin/views/integrations/view.php:44
+msgid "Delete"
+msgstr "حذف"
+
+#: admin/views/integrations/view.php:50
+msgid "Show more details"
+msgstr "إظهار المزيد من التفاصيل"
+
+#: admin/views/integrations/view.php:92
+msgid "Are you sure you want to completely remove the selected account? All the features that use these integrations will stop working!"
+msgstr "هل أنت متأكد أنك تريد إزالة الحساب المحدد بشكل كامل؟ ستتوقف جميع الميزات التي تستخدم هذه التكاملات عن العمل!"
+
+#: admin/views/integrations/view.php:97
+msgid "Add new accounts directly in the %s builder."
+msgstr "أضف حسابات جديدة مباشرة في برنامج إنشاء %s."
+
+#: admin/views/license.php:7
+msgid "Your License Key"
+msgstr "مفتاح الترخيص الخاص بك"
+
+#: admin/views/white-label.php:3
+#: admin/white-label.php:265
+#: admin/white-label.php:266
+msgid "White Label"
+msgstr "تسمية بيضاء"
+
+#: admin/views/white-label.php:7
+msgid "General"
+msgstr "عام"
+
+#: admin/views/white-label.php:15
+msgid "Dismiss this notice."
+msgstr "تجاهل هذا الإشعار."
+
+#: admin/views/white-label.php:68
+msgid "Change"
+msgstr "تغيير"
+
+#: admin/views/white-label.php:78
+msgid "Are you sure you want to reset to the default values?"
+msgstr "هل أنت متأكد أنك تريد إعادة التعيين إلى القيم الافتراضية؟"
+
+#: admin/views/white-label.php:79
+msgid "Reset"
+msgstr "إعادة تعيين"
+
+#: admin/views/white-label.php:85
+msgid "These options are visible only in your current session.<br>Logout to make them disappear from the sidebar."
+msgstr "هذه الخيارات مرئية فقط في جلسةك الحالية.<br> اسجل الخروج لجعلها تختفي من الشريط الجانبي."
+
+#: admin/white-label.php:105
+msgid "Description"
+msgstr "الوصف"
+
+#: admin/white-label.php:218
+#: admin/white-label.php:241
+msgid "Settings saved."
+msgstr "تم حفظ الإعدادات."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number.
+#: admin/white-label.php:423
+msgid "There is a new version(%1$s) of %2$s available."
+msgstr "هناك إصدار جديد (%1$s) من %2$s متاح."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number.
+#: admin/white-label.php:430
+msgid "There is a new version(%1$s) of %2$s available. <em>Automatic update is unavailable for this plugin.</em>"
+msgstr "هناك إصدار جديد (%1$s) من %2$s متاح. <em>التحديث التلقائي غير متاح لهذه الإضافة.</em>"
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number, 5: Update URL, 6: Additional link attributes.
+#: admin/white-label.php:438
+msgid "There is a new version(%1$s) of %2$s available. Please <a href=\"%3$s\" %4$s>update now</a>."
+msgstr "هناك إصدار جديد (%1$s) من %2$s متاح. يرجى <a href=\"%3$s\" %4$s>تحديث الآن</a>."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number 5: URL to Update PHP page.
+#: admin/white-label.php:451
+msgid "There is a new version(%1$s) of %2$s available, but it doesn't work with your version of PHP. <a href=\"%3$s\">Learn more about updating PHP</a>."
+msgstr "هناك إصدار جديد (%1$s) من %2$s متاح، ولكنه لا يعمل مع إصدار PHP الخاص بك. <a href=\"%3$s\">تعرف على المزيد حول تحديث PHP</a>."
+
+#: admin/wp-cli.php:172
+msgid "White label was successfully installed!"
+msgstr "تم تثبيت التسمية البيضاء بنجاح!"
+
+#: admin/wp-cli.php:192
+msgid "There is no white label on this installation."
+msgstr "لا يوجد تسمية بيضاء في هذا التثبيت."
+
+#: admin/wp-cli.php:205
+msgid "White label was successfully removed!"
+msgstr "تم إزالة التسمية البيضاء بنجاح!"
+
+#: admin/wp-cli.php:269
+msgid "The fields have been updated successfully!"
+msgstr "تم تحديث الحقول بنجاح!"
+
+#: content/placeholders/breadcrumbs.php:25
+msgid "Home"
+msgstr "الرئيسية"
+
+#: content/placeholders/breadcrumbs.php:26
+msgid "Archive by Category \"%s\""
+msgstr "الأرشيف حسب الفئة \"%s\""
+
+#: content/placeholders/breadcrumbs.php:27
+msgid "Search Results for \"%s\" Query"
+msgstr "نتائج البحث عن استعلام \"%s\""
+
+#: content/placeholders/breadcrumbs.php:28
+msgid "Posts Tagged \"%s\""
+msgstr "المقالات الموسومة \"%s\""
+
+#: content/placeholders/breadcrumbs.php:29
+msgid "Articles Posted by %s"
+msgstr "المقالات التي نشرتها %s"
+
+#: content/placeholders/breadcrumbs.php:30
+msgid "Error 404"
+msgstr "خطأ 404"
+
+#: content/placeholders/breadcrumbs.php:31
+msgid "Page %s"
+msgstr "الصفحة %s"
+
+#: content/placeholders/breadcrumbs.php:32
+msgid "Comment Page %s"
+msgstr "صفحة التعليق %s"
+
+#: content/placeholders/comments.php:109
+msgid "Name"
+msgstr "الاسم"
+
+#: content/placeholders/comments.php:117
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: content/placeholders/comments.php:125
+msgid "Website"
+msgstr "الموقع الإلكتروني"
+
+#: content/placeholders/comments.php:137
+msgid "Required fields are marked %s"
+msgstr "الحقول المطلوبة مُشار إليها %s"
+
+#: content/placeholders/comments.php:138
+msgctxt "noun"
+msgid "Your review"
+msgstr "تقييمك"
+
+#: content/placeholders/comments.php:138
+msgctxt "noun"
+msgid "Comment"
+msgstr "تعليق"
+
+#: content/placeholders/comments.php:156
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "يجب أن تكون %1$sمسجل الدخول%2$s لترك تعليق."
+
+#: content/placeholders/comments.php:165
+msgid "Logged in as %1$s. %2$sLog out?%3$s"
+msgstr "تم تسجيل الدخول باسم %1$s. %2$sتسجيل الخروج؟%3$s"
+
+#: content/placeholders/comments.php:167
+msgid "Log out of this account"
+msgstr "تسجيل الخروج من هذا الحساب"
+
+#: content/placeholders/comments.php:174
+msgid "Your email address will not be published."
+msgstr "لن يتم نشر عنوان بريدك الإلكتروني."
+
+#: content/placeholders/comments.php:184
+msgid "Your rating"
+msgstr "تقييمك"
+
+#: content/placeholders/comments.php:186
+msgid "Rate&hellip;"
+msgstr "قيّم..."
+
+#: content/placeholders/comments.php:187
+msgid "Perfect"
+msgstr "مثالي"
+
+#: content/placeholders/comments.php:188
+msgid "Good"
+msgstr "جيد"
+
+#: content/placeholders/comments.php:189
+msgid "Average"
+msgstr "متوسط"
+
+#: content/placeholders/comments.php:190
+msgid "Not that bad"
+msgstr "ليس سيئًا لهذا الحد"
+
+#: content/placeholders/comments.php:191
+msgid "Very poor"
+msgstr "ضعيف جداً"
+
+#: content/placeholders/excerpt.php:58
+msgid "There is no excerpt because this is a protected post."
+msgstr "لا يوجد ملخص لأن هذا المنشور محمي."
+
+#: content/placeholders/featured-img.php:163
+#: content/providers/wp.php:246
+msgid "Featured Image"
+msgstr "الصورة المميزة"
+
+#: content/placeholders/post-loop-tags.php:37
+msgid "All"
+msgstr "الكل"
+
+#: content/providers/woocommerce.php:9
+msgid "Review link"
+msgstr "رابط التقييم"
+
+#: content/providers/woocommerce.php:92
+msgid "Single sale badge"
+msgstr "شارة البيع الفردية"
+
+#: content/providers/woocommerce.php:101
+#: content/providers/woocommerce.php:269
+msgid "Sale!"
+msgstr "تخفيض!"
+
+#: content/providers/woocommerce.php:109
+msgid "Upsells"
+msgstr "العروض التكميلية"
+
+#: content/providers/woocommerce.php:117
+msgid "Reviews Title"
+msgstr "عنوان التقييمات"
+
+#. translators: 1: reviews count 2: product name
+#: content/providers/woocommerce.php:125
+#: templates/comments.php:38
+msgid "%1$s review for %2$s"
+msgid_plural "%1$s reviews for %2$s"
+msgstr[0] "%1$s تقييم لـ %2$s"
+msgstr[1] "%1$s تقييمات لـ %2$s"
+
+#: content/providers/woocommerce.php:131
+msgid "Reviews"
+msgstr "التقييمات"
+
+#: content/providers/woocommerce.php:161
+msgid "You may also like&hellip;"
+msgstr "قد تعجبك أيضًا..."
+
+#: content/providers/woocommerce.php:180
+msgid "Related products"
+msgstr "المنتجات ذات الصلة"
+
+#: content/providers/woocommerce.php:200
+msgid "SKU"
+msgstr "المرجع"
+
+#: content/providers/woocommerce.php:206
+msgctxt "Woocommerce Product Meta Category"
+msgid "Category"
+msgid_plural "Categories"
+msgstr[0] "الفئة"
+msgstr[1] "الفئات"
+
+#: content/providers/woocommerce.php:211
+msgctxt "Woocommerce Product Meta Tag"
+msgid "Tag"
+msgid_plural "Tags"
+msgstr[0] "الوسم"
+msgstr[1] "الوسوم"
+
+#: content/providers/woocommerce.php:342
+msgid "Subtotal"
+msgstr "الإجمالي الفرعي"
+
+#: content/providers/woocommerce.php:350
+msgid "View cart"
+msgstr "عرض السلة"
+
+#: content/providers/woocommerce.php:354
+msgid "Checkout"
+msgstr "الدفع"
+
+#: content/providers/woocommerce.php:390
+msgid "Product"
+msgstr "المنتج"
+
+#: content/providers/woocommerce.php:404
+msgid "Price"
+msgstr "السعر"
+
+#: content/providers/woocommerce.php:425
+msgid "Remove this item"
+msgstr "إزالة هذا العنصر"
+
+#: content/providers/woocommerce.php:475
+msgid "No products in the cart."
+msgstr "لا توجد منتجات في السلة."
+
+#: content/providers/wp.php:79
+msgid "Post Title"
+msgstr "عنوان المقالة"
+
+#: content/providers/wp.php:88
+msgid "Post Content"
+msgstr "محتوى المقالة"
+
+#: content/providers/wp.php:90
+msgid "Post Excerpt"
+msgstr "ملخص المقالة"
+
+#: content/providers/wp.php:92
+msgid "Post Date"
+msgstr "تاريخ المقالة"
+
+#: content/providers/wp.php:96
+msgid "Post Time"
+msgstr "وقت المقالة"
+
+#: content/providers/wp.php:100
+msgid "Post ID"
+msgstr "معرف المقالة"
+
+#: content/providers/wp.php:104
+msgid "Post Comments Count"
+msgstr "عدد التعليقات على المقالة"
+
+#: content/providers/wp.php:110
+msgid "Author Name"
+msgstr "اسم الكاتب"
+
+#: content/providers/wp.php:119
+msgid "Author Bio"
+msgstr "نبذة عن الكاتب"
+
+#: content/providers/wp.php:123
+msgid "Author Email"
+msgstr "بريد الكاتب الإلكتروني"
+
+#: content/providers/wp.php:127
+msgid "Author Website"
+msgstr "موقع الكاتب الإلكتروني"
+
+#: content/providers/wp.php:131
+msgid "Site Title"
+msgstr "عنوان الموقع"
+
+#: content/providers/wp.php:135
+msgid "Site Tagline"
+msgstr "شعار الموقع"
+
+#: content/providers/wp.php:139
+msgid "Archive Title"
+msgstr "عنوان الأرشيف"
+
+#: content/providers/wp.php:143
+msgid "Archive Description"
+msgstr "وصف الأرشيف"
+
+#: content/providers/wp.php:147
+msgid "Username"
+msgstr "اسم المستخدم"
+
+#: content/providers/wp.php:158
+msgid "User Role"
+msgstr "دور المستخدم"
+
+#: content/providers/wp.php:170
+msgid "User First Name"
+msgstr "الاسم الأول للمستخدم"
+
+#: content/providers/wp.php:179
+msgid "User Last Name"
+msgstr "الاسم الأخير للمستخدم"
+
+#: content/providers/wp.php:188
+msgid "User Nickname"
+msgstr "اسم المستخدم المستعار"
+
+#: content/providers/wp.php:197
+msgid "User Display Name"
+msgstr "اسم العرض للمستخدم"
+
+#: content/providers/wp.php:208
+msgid "User Email"
+msgstr "بريد المستخدم الإلكتروني"
+
+#: content/providers/wp.php:219
+msgid "User Website"
+msgstr "موقع المستخدم الإلكتروني"
+
+#: content/providers/wp.php:230
+msgid "User Description"
+msgstr "وصف المستخدم"
+
+#: content/providers/wp.php:247
+msgid "Site logo"
+msgstr "شعار الموقع"
+
+#: content/providers/wp.php:248
+msgid "Author Profile Picture"
+msgstr "صورة ملف تعريف الكاتب"
+
+#: content/providers/wp.php:251
+msgid "User Avatar"
+msgstr "الصورة الرمزية للمستخدم"
+
+#: content/providers/wp.php:261
+msgid "Post URL"
+msgstr "رابط المقالة"
+
+#: content/providers/wp.php:269
+msgid "Author URL"
+msgstr "رابط الكاتب"
+
+#: content/providers/wp.php:277
+msgid "Comments URL"
+msgstr "رابط التعليقات"
+
+#: content/providers/wp.php:285
+msgid "Site URL"
+msgstr "رابط الموقع"
+
+#: content/providers/wp.php:289
+msgid "Login Url"
+msgstr "رابط تسجيل الدخول"
+
+#: content/providers/wp.php:293
+msgid "Logout Url"
+msgstr "رابط تسجيل الخروج"
+
+#: content/providers/wp.php:304
+msgid "Lost Password Url"
+msgstr "رابط نسيت كلمة المرور"
+
+#: content/providers/wp.php:316
+msgid "User registration URL"
+msgstr "رابط تسجيل المستخدم"
+
+#: content/providers/wp.php:320
+msgid "User Profile"
+msgstr "ملف تعريف المستخدم"
+
+#: content/providers/wp.php:327
+msgid "Archive URL"
+msgstr "رابط الأرشيف"
+
+#: content/providers/wp.php:394
+msgid "Post Navigation"
+msgstr "تنقل المقالة"
+
+#: main.php:365
+msgid "Dynamic content"
+msgstr "المحتوى الديناميكي"
+
+#. translators: %s: post title
+#: templates/comments.php:49
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "رد واحد على &ldquo;%s&rdquo;"
+
+#. translators: 1: number of comments, 2: post title
+#: templates/comments.php:53
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s رد على &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s ردود على &ldquo;%2$s&rdquo;"
+
+#: templates/comments.php:82
+msgid "Previous"
+msgstr "السابق"
+
+#: templates/comments.php:83
+msgid "Next"
+msgstr "التالي"
+
+#: templates/comments.php:88
+msgid "There are no reviews yet."
+msgstr "لا توجد تقييمات بعد."
+
+#: templates/comments.php:95
+msgid "Only logged in customers who have purchased this product may leave a review."
+msgstr "يمكن للعملاء المسجلين الذين قاموا بشراء هذا المنتج ترك تقييم."
+
+#: templates/comments.php:99
+msgid "Comments are closed."
+msgstr "تم إغلاق التعليقات."

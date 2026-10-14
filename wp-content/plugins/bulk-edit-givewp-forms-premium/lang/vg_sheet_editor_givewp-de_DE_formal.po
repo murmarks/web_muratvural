@@ -1,0 +1,125 @@
+# Copyright (C) 2020 WP Sheet Editor
+# This file is distributed under the same license as the WP Sheet Editor - Bulk Edit GiveWP Forms plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Sheet Editor - Bulk Edit GiveWP Forms 1.0.21.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/givewp\n"
+"Language-Team: Hanno Bolte IT Consulting <info@bsoft.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-10-20T18:04:02+00:00\n"
+"PO-Revision-Date: 2020-11-17 10:17+0100\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: Hanno Bolte <xlate@bsoft.de>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE@formal\n"
+
+#. Plugin Name of the plugin
+msgid "WP Sheet Editor - Bulk Edit GiveWP Forms"
+msgstr "WP Sheet Editor - Massenbearbeitung von GiveWP-Formularen"
+
+#. Plugin URI of the plugin
+msgid ""
+"https://wpsheeteditor.com/extensions/givewp-spreadsheet/?utm_source=wp-"
+"admin&utm_medium=plugins-list&utm_campaign=givewp"
+msgstr ""
+"https://wpsheeteditor.com/extensions/givewp-spreadsheet/?utm_source=wp-"
+"admin&utm_medium=plugins-list&utm_campaign=givewp"
+
+#. Description of the plugin
+msgid "Edit GiveWP forms in a spreadsheet."
+msgstr "GiveWP-Formulare in einem Arbeitsblatt bearbeiten."
+
+#. Author of the plugin
+msgid "WP Sheet Editor"
+msgstr "WP Sheet Editor"
+
+#. Author URI of the plugin
+msgid ""
+"https://wpsheeteditor.com/?utm_source=wp-admin&utm_medium=plugins-"
+"list&utm_campaign=givewp"
+msgstr ""
+"https://wpsheeteditor.com/?utm_source=wp-admin&utm_medium=plugins-"
+"list&utm_campaign=givewp"
+
+#: givewp.php:80
+msgid ""
+"Please update the WP Sheet Editor plugin and all its extensions to the "
+"latest version. The features of the plugin \""
+msgstr ""
+"Bitte aktualisieren Sie das WP Sheet Editor Plugin und alle seine "
+"Erweiterungen auf die neueste Version. Die Eigenschaften des Plugins \""
+
+#: givewp.php:160
+msgid "My license"
+msgstr "Meine Lizenz"
+
+#: givewp.php:223 givewp.php:226 givewp.php:249 givewp.php:257
+msgid "Give Forms"
+msgstr "GiveWP-Formulare"
+
+#: inc/donations.php:38
+msgid "Anonymous Donation:"
+msgstr "Anonyme Spende:"
+
+#: inc/donations.php:47
+msgid "Payment Currency:"
+msgstr "Zahlungswährung:"
+
+#: inc/donations.php:54
+msgid "Donor email"
+msgstr "E-Mail des Spenders"
+
+#: inc/donations.php:58
+msgid "Form title"
+msgstr "Formulartitel"
+
+#: inc/donations.php:97
+msgid "Completed"
+msgstr "Abgeschlossen"
+
+#: inc/donations.php:98
+msgid "Processing"
+msgstr "In Bearbeitung"
+
+#: inc/donations.php:99
+msgid "Abandoned"
+msgstr "Verlassen"
+
+#: inc/donations.php:100
+msgid "Cancelled"
+msgstr "Abgebrochen"
+
+#: inc/donations.php:101
+msgid "Revoked"
+msgstr "Widerrufen"
+
+#: inc/donations.php:102
+msgid "Failed"
+msgstr "Fehlgeschlagen"
+
+#: inc/donations.php:103
+msgid "Refunded"
+msgstr "Rückerstattet"
+
+#: views/welcome-page-content.php:4
+msgid "Thank you for installing our plugin."
+msgstr "Vielen Dank für die Installation unseres Plugins."
+
+#: views/welcome-page-content.php:10
+msgid ""
+"Install the plugin: Give. <a href=\"%s\" target=\"_blank\" class=\"button "
+"install-plugin-trigger\">Click here</a>. This is a GiveWP extension."
+msgstr ""
+"Installieren Sie das Plugin: GiveWP. <a href=\"%s\" target=\"_blank\" "
+"class=\"button install-plugin-trigger\">Klicken Sie hier</a>. Dies ist "
+"eine GiveWP-Erweiterung."
+
+#: views/welcome-page-content.php:12
+msgid ""
+"You can open the Give Forms Editor Now:  <a href=\"%s\" class=\"button"
+"\">Click here</a>"
+msgstr ""
+"Sie können jetzt den Editor für GiveWP-Formulare öffnen: <a href=\"%s\" "
+"class=\"button\">Hier klicken</a>"

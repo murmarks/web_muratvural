@@ -1,0 +1,166 @@
+.vgse-scheduled-actions-popup table {
+    width: 100%;
+}
+
+.vgse-scheduled-actions-popup table {
+    border-collapse: collapse;
+    border: 1px solid #cccccc;
+}
+
+.vgse-scheduled-actions-popup table td,
+.vgse-scheduled-actions-popup table th {
+    border-top: 1px solid #cccccc;
+    padding: 4px
+}
+
+.vgse-scheduled-actions-popup .remodal-cancel {
+    margin-top: 20px;
+}
+
+.schedule-for-later-container .schedule-recurring label {
+    display: inline-block;
+}
+
+.schedule-for-later-container:not(.visible-internal-fields) .fields-scheduler,
+.schedule-for-later-container:not(.visible-internal-fields) .if-recurring-yes,
+.schedule-for-later-container:not(.visible-internal-fields) .if-sync-bidirectional,
+.schedule-for-later-container:not(.visible-internal-fields) .if-sync-one_directional,
+.schedule-for-later-container:not(.visible-internal-fields) .if-recurring-no,
+.schedule-for-later-container:not(.visible-internal-fields) .if-recurring-sync {
+    display: none;
+}
+
+.import-csv-modal .field-wrap.schedule-for-later-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.schedule-for-later-container label {
+    display: block;
+}
+
+.schedule-for-later-container .field-wrap {
+    margin-bottom: 15px;
+}
+
+.schedule-for-later-container>label {
+    margin-bottom: 10px;
+}
+
+.vgse-scheduled-actions-popup .view-job-log textarea {
+    min-height: 200px;
+    width: 100%;
+    overflow: scroll;
+}
+
+.vgse-scheduled-actions-popup .edit-job-form .schedule-fields-wrapper,
+.vgse-scheduled-actions-popup .edit-job-form .job-details {
+    width: 50%;
+    float: left;
+}
+
+.vgse-scheduled-actions-popup .scheduled-actions {
+    text-align: right;
+}
+
+.vgse-scheduled-actions-popup .edit-job-form .form-actions {
+    clear: both;
+}
+
+/*Google Sheets*/
+
+.modal-google-sheets .connection-status-connected {
+    color: green;
+}
+
+.modal-google-sheets .connection-status-disconnected {
+    color: red;
+}
+
+.modal-google-sheets .login-with-google-btn {
+    transition: background-color 0.3s, box-shadow 0.3s;
+    padding: 12px 16px 12px 42px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 12px 11px;
+}
+
+.modal-google-sheets .login-with-google-btn:hover {
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.modal-google-sheets .login-with-google-btn:active {
+    background-color: #eeeeee;
+}
+
+.modal-google-sheets .login-with-google-btn:focus {
+    outline: none;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25), 0 0 0 3px #c8dafc;
+}
+
+.modal-google-sheets .login-with-google-btn:disabled {
+    filter: grayscale(100%);
+    background-color: #ebebeb;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+    cursor: not-allowed;
+}
+.modal-google-sheets .remodal-cancel,
+.modal-google-sheets .login-with-google-btn {
+    min-width: 180px !important;
+}
+.vgse-scheduled-actions-popup .edit-job-form {
+    text-align: left;
+}
+.vgse-scheduled-actions-popup .edit-job-form form {
+    padding: 0 30px 30px;
+}
+.vgse-scheduled-actions-popup .schedule-fields-wrapper input[type="text"],
+.vgse-scheduled-actions-popup .schedule-fields-wrapper input[type="datetime-local"],
+.vgse-scheduled-actions-popup .schedule-fields-wrapper input[type="email"] {
+    min-width: 400px;
+}
+.vgse-scheduled-actions-popup tr.view-job-log td {
+    padding: 30px;
+}
+.schedule-for-later-container .id-column-container,
+.import-csv-modal .real-time-import-wrapper,
+.import-csv-modal .real-time-import-fields {
+    display: none;
+}
+.modal-google-sheets .login-with-google-btn.disconnect[data-scope="current"] {
+    background: none;
+    padding-left: 16px;
+}
+.select2-container .gs-file-dropdown-option {
+    overflow: auto;
+    display: block;
+}
+.select2-container .gs-file-dropdown-option i {
+    color: green;
+    margin-right: 5px;
+}
+
+.select2-container span.gs-file-meta-data {
+    font-size: 80%;
+    float: right;
+}
+
+.import-csv-form a.clear-gs-files-cache {
+    float: right;
+}
+
+.import-csv-form .data-input.google_sheets {
+    max-width: 330px;
+    margin: 0 auto 20px;
+}
+.remodal .if-scheduled-for-later {
+    display: none;
+}

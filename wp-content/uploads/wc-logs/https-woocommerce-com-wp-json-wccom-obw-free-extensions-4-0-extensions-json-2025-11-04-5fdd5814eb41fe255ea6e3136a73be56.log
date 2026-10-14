@@ -1,0 +1,21 @@
+2025-11-04T09:28:45+00:00 ERROR Error getting data feed
+2025-11-04T09:28:45+00:00 ERROR WP_Error Object
+(
+    [errors] => Array
+        (
+            [http_request_failed] => Array
+                (
+                    [0] => cURL error 6: getaddrinfo() thread failed to start
+                )
+
+        )
+
+    [error_data] => Array
+        (
+        )
+
+    [additional_data:protected] => Array
+        (
+        )
+
+)

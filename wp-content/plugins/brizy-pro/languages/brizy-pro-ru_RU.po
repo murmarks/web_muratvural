@@ -1,0 +1,746 @@
+# Copyright (C) 2023 Brizy.io
+# This file is distributed under the To be announced.
+msgid ""
+msgstr ""
+"Project-Id-Version: Brizy Pro 2.4.29\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/brizy-pro\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-14T12:01:06+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: brizy-pro\n"
+
+#. Plugin Name of the plugin
+msgid "Brizy Pro"
+msgstr "Brizy Pro"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://brizy.io/"
+msgstr "https://brizy.io/"
+
+#. Description of the plugin
+msgid "Extended functionality for the Brizy WordPress builder plugin."
+msgstr "Расширенные функции для плагина-строителя сайтов Brizy для WordPress."
+
+#. Author of the plugin
+msgid "Brizy.io"
+msgstr "Brizy.io"
+
+#: admin/integrations.php:33
+#: admin/integrations.php:50
+msgid "Integrations"
+msgstr "Интеграции"
+
+#: admin/license.php:80
+msgid "Brizy Pro does not support multisite license anymore."
+msgstr "Brizy Pro больше не поддерживает лицензии для мультисайтов."
+
+#: admin/license.php:89
+#: admin/wp-cli.php:59
+msgid "License was successfully deactivated!"
+msgstr "Лицензия успешно деактивирована!"
+
+#: admin/license.php:119
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: admin/license.php:119
+#: admin/license.php:165
+msgid "Activate"
+msgstr "Активировать"
+
+#: admin/license.php:130
+msgid "License"
+msgstr "Лицензия"
+
+#: admin/license.php:161
+msgid "Welcome to %s!"
+msgstr "Добро пожаловать в %s!"
+
+#: admin/license.php:163
+msgid "Please activate your license to get feature updates, premium support and unlimited access to the template library."
+msgstr "Активируйте вашу лицензию, чтобы получить обновления функций, премиум-поддержку и неограниченный доступ к библиотеке шаблонов."
+
+#: admin/license.php:179
+msgid "Please provide a license key."
+msgstr "Пожалуйста, введите ключ лицензии."
+
+#: admin/license.php:198
+msgid "License successfully activated."
+msgstr "Лицензия успешно активирована."
+
+#: admin/license.php:213
+msgid "No license was found in your installation"
+msgstr "Лицензия не найдена в вашей установке"
+
+#: admin/license.php:281
+msgid "Please provide license key."
+msgstr "Пожалуйста, укажите ключ лицензии."
+
+#: admin/license.php:295
+msgid "The remote server response code is %s."
+msgstr "Код ответа удаленного сервера: %s."
+
+#: admin/license.php:301
+msgid "An error occurred on json decode response. The json last error is: %s"
+msgstr "Произошла ошибка при декодировании json-ответа. Последняя ошибка json: %s"
+
+#: admin/license.php:303
+msgid "Empty body was returned by the remote server."
+msgstr "Пустое тело возвращено удаленным сервером."
+
+#: admin/license.php:308
+msgid "The response of the remote server has an unexpected format"
+msgstr "Ответ удаленного сервера имеет неожиданный формат."
+
+#: admin/license.php:369
+msgid "On a multisite installation the plugin must be network activated!"
+msgstr "В мультисайтовой установке плагин должен быть активирован в сети!"
+
+#: admin/login.php:23
+#: admin/login.php:67
+#: admin/login.php:127
+msgid "Something went wrong. Please refresh the page and try again."
+msgstr "Что-то пошло не так. Пожалуйста, обновите страницу и попробуйте еще раз."
+
+#: admin/login.php:33
+msgid "The current registration type is not supported. Please change it in network settings(Allow new registrations)."
+msgstr "Текущий тип регистрации не поддерживается. Пожалуйста, измените его в настройках сети (Разрешить новые регистрации)."
+
+#: admin/login.php:48
+#: admin/login.php:60
+msgid "Registration complete. Please check your email, then visit the login page."
+msgstr "Регистрация завершена. Пожалуйста, проверьте свою электронную почту, затем посетите страницу входа."
+
+#: admin/login.php:52
+msgid "Registration on this site has been disabled."
+msgstr "Регистрация на этом сайте отключена."
+
+#: admin/login.php:75
+msgid "You Have Successfully Logged in!"
+msgstr "Вы успешно вошли!"
+
+#: admin/login.php:136
+msgid "The password reset link has been sent successfully on your email."
+msgstr "Ссылка на сброс пароля успешно отправлена на вашу электронную почту."
+
+#: admin/membership/membership.php:46
+msgctxt "post type general name"
+msgid "Roles"
+msgstr "Роли"
+
+#: admin/membership/membership.php:47
+msgctxt "post type singular name"
+msgid "Role"
+msgstr "Роль"
+
+#: admin/membership/membership.php:48
+msgctxt "admin menu"
+msgid "Roles"
+msgstr "Роли"
+
+#: admin/membership/membership.php:49
+msgctxt "add new on admin bar"
+msgid "Role"
+msgstr "Роль"
+
+#: admin/membership/membership.php:50
+msgctxt "add new post type role"
+msgid "Add Role"
+msgstr "Добавить роль"
+
+#: admin/membership/membership.php:51
+msgid "Add New Role"
+msgstr "Добавить новую роль"
+
+#: admin/membership/membership.php:52
+msgid "New Role"
+msgstr "Новая роль"
+
+#: admin/membership/membership.php:53
+msgid "Edit Role"
+msgstr "Редактировать роль"
+
+#: admin/membership/membership.php:54
+msgid "View Role"
+msgstr "Просмотр роли"
+
+#: admin/membership/membership.php:55
+msgid "Roles"
+msgstr "Роли"
+
+#: admin/membership/membership.php:56
+msgid "Search Role"
+msgstr "Поиск роли"
+
+#: admin/membership/membership.php:57
+msgid "Parent Role:"
+msgstr "Родительская роль:"
+
+#: admin/membership/membership.php:58
+msgid "No Roles found."
+msgstr "Роли не найдены."
+
+#: admin/membership/membership.php:59
+msgid "No Roles found in Trash."
+msgstr "Роли не найдены в корзине."
+
+#: admin/membership/membership.php:66
+msgid "roles"
+msgstr "роли"
+
+#: admin/membership/membership.php:88
+msgid "Enter Role Name"
+msgstr "Введите имя роли"
+
+#: admin/membership/membership.php:133
+#: admin/membership/membership.php:136
+msgid "Role updated."
+msgstr "Роль обновлена."
+
+#: admin/membership/membership.php:134
+msgid "Custom field updated."
+msgstr "Пользовательское поле обновлено."
+
+#: admin/membership/membership.php:135
+msgid "Custom field deleted."
+msgstr "Пользовательское поле удалено."
+
+#: admin/membership/membership.php:137
+msgid "Role published."
+msgstr "Роль опубликована."
+
+#: admin/membership/membership.php:138
+msgid "Role saved."
+msgstr "Роль сохранена."
+
+#: admin/membership/membership.php:139
+msgid "Role submitted."
+msgstr "Роль отправлена."
+
+#: admin/settings.php:21
+msgid "Limited Access"
+msgstr "Ограниченный доступ"
+
+#: admin/updater.php:256
+msgid "On last check of the license status a HTTP error occured: server response code is %s. Please try to force updates in the update page of the dashboard."
+msgstr "При последней проверке статуса лицензии произошла ошибка HTTP: код ответа сервера %s. Попробуйте принудительно обновить на странице обновлений в панели управления."
+
+#: admin/updater.php:261
+msgid "An error occurred on json decode response, please try to force updates in the update page of the dashboard."
+msgstr "Произошла ошибка при декодировании json-ответа, попробуйте принудительно обновить на странице обновлений в панели управления."
+
+#: admin/views/integrations/view.php:10
+#: admin/views/integrations/view.php:75
+msgid "Select All"
+msgstr "Выбрать все"
+
+#: admin/views/integrations/view.php:15
+#: admin/views/integrations/view.php:79
+msgid "App"
+msgstr "Приложение"
+
+#: admin/views/integrations/view.php:19
+#: admin/views/integrations/view.php:82
+msgid "Details"
+msgstr "Детали"
+
+#: admin/views/integrations/view.php:31
+msgid "Select Account"
+msgstr "Выбрать аккаунт"
+
+#: admin/views/integrations/view.php:42
+msgid "Are you sure you want to completely remove the selected accounts? All the features that use this integration will stop working!"
+msgstr "Вы уверены, что хотите полностью удалить выбранные аккаунты? Все функции, использующие эту интеграцию, прекратят работу!"
+
+#: admin/views/integrations/view.php:44
+msgid "Delete"
+msgstr "Удалить"
+
+#: admin/views/integrations/view.php:50
+msgid "Show more details"
+msgstr "Показать подробности"
+
+#: admin/views/integrations/view.php:92
+msgid "Are you sure you want to completely remove the selected account? All the features that use these integrations will stop working!"
+msgstr "Вы уверены, что хотите полностью удалить выбранный аккаунт? Все функции, использующие эти интеграции, прекратят работу!"
+
+#: admin/views/integrations/view.php:97
+msgid "Add new accounts directly in the %s builder."
+msgstr "Добавьте новые аккаунты непосредственно в конструктор %s."
+
+#: admin/views/license.php:7
+msgid "Your License Key"
+msgstr "Ваш ключ лицензии"
+
+#: admin/views/white-label.php:3
+#: admin/white-label.php:265
+#: admin/white-label.php:266
+msgid "White Label"
+msgstr "Белый лейбл"
+
+#: admin/views/white-label.php:7
+msgid "General"
+msgstr "Общее"
+
+#: admin/views/white-label.php:15
+msgid "Dismiss this notice."
+msgstr "Закрыть это уведомление."
+
+#: admin/views/white-label.php:68
+msgid "Change"
+msgstr "Изменить"
+
+#: admin/views/white-label.php:78
+msgid "Are you sure you want to reset to the default values?"
+msgstr "Вы уверены, что хотите сбросить значения на значения по умолчанию?"
+
+#: admin/views/white-label.php:79
+msgid "Reset"
+msgstr "Сбросить"
+
+#: admin/views/white-label.php:85
+msgid "These options are visible only in your current session.<br>Logout to make them disappear from the sidebar."
+msgstr "Эти параметры видны только в текущей сессии.<br>Выйдите, чтобы они исчезли из боковой панели."
+
+#: admin/white-label.php:105
+msgid "Description"
+msgstr "Описание"
+
+#: admin/white-label.php:218
+#: admin/white-label.php:241
+msgid "Settings saved."
+msgstr "Настройки сохранены."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number.
+#: admin/white-label.php:423
+msgid "There is a new version(%1$s) of %2$s available."
+msgstr "Доступна новая версия(%1$s) %2$s."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number.
+#: admin/white-label.php:430
+msgid "There is a new version(%1$s) of %2$s available. <em>Automatic update is unavailable for this plugin.</em>"
+msgstr "Доступна новая версия(%1$s) %2$s. <em>Автоматическое обновление недоступно для этого плагина.</em>"
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number, 5: Update URL, 6: Additional link attributes.
+#: admin/white-label.php:438
+msgid "There is a new version(%1$s) of %2$s available. Please <a href=\"%3$s\" %4$s>update now</a>."
+msgstr "Доступна новая версия(%1$s) %2$s. Пожалуйста, <a href=\"%3$s\" %4$s>обновите сейчас</a>."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number 5: URL to Update PHP page.
+#: admin/white-label.php:451
+msgid "There is a new version(%1$s) of %2$s available, but it doesn&#8217;t work with your version of PHP. <a href=\"%3$s\">Learn more about updating PHP</a>."
+msgstr "Доступна новая версия(%1$s) %2$s, но она не работает с вашей версией PHP. <a href=\"%3$s\">Узнайте больше о обновлении PHP</a>."
+
+#: admin/wp-cli.php:172
+msgid "White label was successfully installed!"
+msgstr "Белый лейбл успешно установлен!"
+
+#: admin/wp-cli.php:192
+msgid "There is no white label on this installation."
+msgstr "На этой установке нет белого лейбла."
+
+#: admin/wp-cli.php:205
+msgid "White label was successfully removed!"
+msgstr "Белый лейбл успешно удален!"
+
+#: admin/wp-cli.php:269
+msgid "The fields have been updated successfully!"
+msgstr "Поля успешно обновлены!"
+
+#: content/placeholders/breadcrumbs.php:25
+msgid "Home"
+msgstr "Главная"
+
+#: content/placeholders/breadcrumbs.php:26
+msgid "Archive by Category \"%s\""
+msgstr "Архив по категории \"%s\""
+
+#: content/placeholders/breadcrumbs.php:27
+msgid "Search Results for \"%s\" Query"
+msgstr "Результаты поиска по запросу \"%s\""
+
+#: content/placeholders/breadcrumbs.php:28
+msgid "Posts Tagged \"%s\""
+msgstr "Записи с тегом \"%s\""
+
+#: content/placeholders/breadcrumbs.php:29
+msgid "Articles Posted by %s"
+msgstr "Статьи, опубликованные %s"
+
+#: content/placeholders/breadcrumbs.php:30
+msgid "Error 404"
+msgstr "Ошибка 404"
+
+#: content/placeholders/breadcrumbs.php:31
+msgid "Page %s"
+msgstr "Страница %s"
+
+#: content/placeholders/breadcrumbs.php:32
+msgid "Comment Page %s"
+msgstr "Страница комментариев %s"
+
+#: content/placeholders/comments.php:109
+msgid "Name"
+msgstr "Имя"
+
+#: content/placeholders/comments.php:117
+msgid "Email"
+msgstr "Электронная почта"
+
+#: content/placeholders/comments.php:125
+msgid "Website"
+msgstr "Сайт"
+
+#: content/placeholders/comments.php:137
+msgid "Required fields are marked %s"
+msgstr "Обязательные поля отмечены %s"
+
+#: content/placeholders/comments.php:138
+msgctxt "noun"
+msgid "Your review"
+msgstr "Ваш обзор"
+
+#: content/placeholders/comments.php:138
+msgctxt "noun"
+msgid "Comment"
+msgstr "Комментарий"
+
+#: content/placeholders/comments.php:156
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "Вы должны быть %1$sвошедшим%2$s, чтобы оставить комментарий."
+
+#: content/placeholders/comments.php:165
+msgid "Logged in as %1$s. %2$sLog out?%3$s"
+msgstr "Вы вошли как %1$s. %2$sВыйти?%3$s"
+
+#: content/placeholders/comments.php:167
+msgid "Log out of this account"
+msgstr "Выйти из этой учетной записи"
+
+#: content/placeholders/comments.php:174
+msgid "Your email address will not be published."
+msgstr "Ваш адрес электронной почты не будет опубликован."
+
+#: content/placeholders/comments.php:184
+msgid "Your rating"
+msgstr "Ваша оценка"
+
+#: content/placeholders/comments.php:186
+msgid "Rate&hellip;"
+msgstr "Оцените&hellip;"
+
+#: content/placeholders/comments.php:187
+msgid "Perfect"
+msgstr "Отлично"
+
+#: content/placeholders/comments.php:188
+msgid "Good"
+msgstr "Хорошо"
+
+#: content/placeholders/comments.php:189
+msgid "Average"
+msgstr "Средне"
+
+#: content/placeholders/comments.php:190
+msgid "Not that bad"
+msgstr "Не так плохо"
+
+#: content/placeholders/comments.php:191
+msgid "Very poor"
+msgstr "Очень плохо"
+
+#: content/placeholders/excerpt.php:58
+msgid "There is no excerpt because this is a protected post."
+msgstr "Экземпляр отсутствует, потому что это защищенная запись."
+
+#: content/placeholders/featured-img.php:163
+#: content/providers/wp.php:246
+msgid "Featured Image"
+msgstr "Изображение для обложки"
+
+#: content/placeholders/post-loop-tags.php:37
+msgid "All"
+msgstr "Все"
+
+#: content/providers/woocommerce.php:9
+msgid "Review link"
+msgstr "Ссылка на отзыв"
+
+#: content/providers/woocommerce.php:92
+msgid "Single sale badge"
+msgstr "Значок одной продажи"
+
+#: content/providers/woocommerce.php:101
+#: content/providers/woocommerce.php:269
+msgid "Sale!"
+msgstr "Распродажа!"
+
+#: content/providers/woocommerce.php:109
+msgid "Upsells"
+msgstr "Допродажи"
+
+#: content/providers/woocommerce.php:117
+msgid "Reviews Title"
+msgstr "Заголовок отзывов"
+
+#. translators: 1: reviews count 2: product name
+#: content/providers/woocommerce.php:125
+#: templates/comments.php:38
+msgid "%1$s review for %2$s"
+msgid_plural "%1$s reviews for %2$s"
+msgstr[0] "%1$s отзыв для %2$s"
+msgstr[1] "%1$s отзывов для %2$s"
+
+#: content/providers/woocommerce.php:131
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: content/providers/woocommerce.php:161
+msgid "You may also like&hellip;"
+msgstr "Вам также может понравиться&hellip;"
+
+#: content/providers/woocommerce.php:180
+msgid "Related products"
+msgstr "Похожие продукты"
+
+#: content/providers/woocommerce.php:200
+msgid "SKU"
+msgstr "Артикул"
+
+#: content/providers/woocommerce.php:206
+msgctxt "Woocommerce Product Meta Category"
+msgid "Category"
+msgid_plural "Categories"
+msgstr[0] "Категория"
+msgstr[1] "Категории"
+
+#: content/providers/woocommerce.php:211
+msgctxt "Woocommerce Product Meta Tag"
+msgid "Tag"
+msgid_plural "Tags"
+msgstr[0] "Тег"
+msgstr[1] "Теги"
+
+#: content/providers/woocommerce.php:342
+msgid "Subtotal"
+msgstr "Промежуточный итог"
+
+#: content/providers/woocommerce.php:350
+msgid "View cart"
+msgstr "Посмотреть корзину"
+
+#: content/providers/woocommerce.php:354
+msgid "Checkout"
+msgstr "Оформить заказ"
+
+#: content/providers/woocommerce.php:390
+msgid "Product"
+msgstr "Продукт"
+
+#: content/providers/woocommerce.php:404
+msgid "Price"
+msgstr "Цена"
+
+#: content/providers/woocommerce.php:425
+msgid "Remove this item"
+msgstr "Удалить этот товар"
+
+#: content/providers/woocommerce.php:475
+msgid "No products in the cart."
+msgstr "Нет товаров в корзине."
+
+#: content/providers/wp.php:79
+msgid "Post Title"
+msgstr "Заголовок записи"
+
+#: content/providers/wp.php:88
+msgid "Post Content"
+msgstr "Содержание записи"
+
+#: content/providers/wp.php:90
+msgid "Post Excerpt"
+msgstr "Отрывок записи"
+
+#: content/providers/wp.php:92
+msgid "Post Date"
+msgstr "Дата записи"
+
+#: content/providers/wp.php:96
+msgid "Post Time"
+msgstr "Время записи"
+
+#: content/providers/wp.php:100
+msgid "Post ID"
+msgstr "ID записи"
+
+#: content/providers/wp.php:104
+msgid "Post Comments Count"
+msgstr "Количество комментариев к записи"
+
+#: content/providers/wp.php:110
+msgid "Author Name"
+msgstr "Имя автора"
+
+#: content/providers/wp.php:119
+msgid "Author Bio"
+msgstr "Биография автора"
+
+#: content/providers/wp.php:123
+msgid "Author Email"
+msgstr "Email автора"
+
+#: content/providers/wp.php:127
+msgid "Author Website"
+msgstr "Сайт автора"
+
+#: content/providers/wp.php:131
+msgid "Site Title"
+msgstr "Название сайта"
+
+#: content/providers/wp.php:135
+msgid "Site Tagline"
+msgstr "Слоган сайта"
+
+#: content/providers/wp.php:139
+msgid "Archive Title"
+msgstr "Название архива"
+
+#: content/providers/wp.php:143
+msgid "Archive Description"
+msgstr "Описание архива"
+
+#: content/providers/wp.php:147
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: content/providers/wp.php:158
+msgid "User Role"
+msgstr "Роль пользователя"
+
+#: content/providers/wp.php:170
+msgid "User First Name"
+msgstr "Имя пользователя"
+
+#: content/providers/wp.php:179
+msgid "User Last Name"
+msgstr "Фамилия пользователя"
+
+#: content/providers/wp.php:188
+msgid "User Nickname"
+msgstr "Псевдоним пользователя"
+
+#: content/providers/wp.php:197
+msgid "User Display Name"
+msgstr "Отображаемое имя пользователя"
+
+#: content/providers/wp.php:208
+msgid "User Email"
+msgstr "Email пользователя"
+
+#: content/providers/wp.php:219
+msgid "User Website"
+msgstr "Сайт пользователя"
+
+#: content/providers/wp.php:230
+msgid "User Description"
+msgstr "Описание пользователя"
+
+#: content/providers/wp.php:247
+msgid "Site logo"
+msgstr "Логотип сайта"
+
+#: content/providers/wp.php:248
+msgid "Author Profile Picture"
+msgstr "Изображение профиля автора"
+
+#: content/providers/wp.php:251
+msgid "User Avatar"
+msgstr "Аватар пользователя"
+
+#: content/providers/wp.php:261
+msgid "Post URL"
+msgstr "URL записи"
+
+#: content/providers/wp.php:269
+msgid "Author URL"
+msgstr "URL автора"
+
+#: content/providers/wp.php:277
+msgid "Comments URL"
+msgstr "URL комментариев"
+
+#: content/providers/wp.php:285
+msgid "Site URL"
+msgstr "URL сайта"
+
+#: content/providers/wp.php:289
+msgid "Login Url"
+msgstr "URL входа"
+
+#: content/providers/wp.php:293
+msgid "Logout Url"
+msgstr "URL выхода"
+
+#: content/providers/wp.php:304
+msgid "Lost Password Url"
+msgstr "URL восстановления пароля"
+
+#: content/providers/wp.php:316
+msgid "User registration URL"
+msgstr "URL регистрации пользователя"
+
+#: content/providers/wp.php:320
+msgid "User Profile"
+msgstr "Профиль пользователя"
+
+#: content/providers/wp.php:327
+msgid "Archive URL"
+msgstr "URL архива"
+
+#: content/providers/wp.php:394
+msgid "Post Navigation"
+msgstr "Навигация по записи"
+
+#: main.php:365
+msgid "Dynamic content"
+msgstr "Динамический контент"
+
+#. translators: %s: post title
+#: templates/comments.php:49
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "Один ответ на &ldquo;%s&rdquo;"
+
+#. translators: 1: number of comments, 2: post title
+#: templates/comments.php:53
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s ответ на &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s ответов на &ldquo;%2$s&rdquo;"
+
+#: templates/comments.php:82
+msgid "Previous"
+msgstr "Предыдущий"
+
+#: templates/comments.php:83
+msgid "Next"
+msgstr "Следующий"
+
+#: templates/comments.php:88
+msgid "There are no reviews yet."
+msgstr "Пока нет отзывов."
+
+#: templates/comments.php:95
+msgid "Only logged in customers who have purchased this product may leave a review."
+msgstr "Только зарегистрированные клиенты, купившие этот продукт, могут оставить отзыв."
+
+#: templates/comments.php:99
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."

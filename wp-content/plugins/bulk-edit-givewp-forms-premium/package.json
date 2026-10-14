@@ -1,0 +1,28 @@
+{
+    "name": "wp-sheet-editor-givewp",
+    "version": "1.0.62",
+    "vgDistName": "bulk-edit-givewp-forms",
+    "vgPreviousVersion": "1.0.62-beta.1",
+    "sheetEditorModules": {
+        "free": [
+            "autofill-cells",
+            "columns-resizing",
+            "columns-visibility",
+            "filters",
+            "wp-sheet-editor",
+            "user-path"
+        ],
+        "pro": [
+            "advanced-filters",
+            "columns-renaming",
+            "formulas",
+            "custom-columns",
+            "spreadsheet-setup",
+            "posts-templates",
+            "universal-sheet",
+            "columns-manager"
+        ]
+    },
+    "package_file_path": "C:\\VegaCorp\\dev\\wp-sheet-editor\/givewp\/package.json",
+    "textName": "vg_sheet_editor_givewp"
+}

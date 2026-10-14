@@ -1,0 +1,31 @@
+{
+    "name": "wp-sheet-editor-media-library",
+    "version": "1.10.18",
+    "vgDistName": "bulk-edit-media-library",
+    "vgPreviousVersion": "1.10.18-beta.1",
+    "sheetEditorModules": {
+        "free": [
+            "autofill-cells",
+            "columns-resizing",
+            "columns-visibility",
+            "filters",
+            "wp-sheet-editor"
+        ],
+        "pro": [
+            "advanced-filters",
+            "columns-renaming",
+            "formulas",
+            "custom-columns",
+            "spreadsheet-setup",
+            "acf",
+            "universal-sheet",
+            "wpml",
+            "columns-manager"
+        ]
+    },
+    "package_file_path": "C:\\VegaCorp\\dev\\wp-sheet-editor\/media-library\/package.json",
+    "vgEditorKeys": [
+        "attachment"
+    ],
+    "textName": "vg_sheet_editor_media_library"
+}

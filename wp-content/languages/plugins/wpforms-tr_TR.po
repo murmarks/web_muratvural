@@ -1,0 +1,4134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-10-31T08:50:30+00:00\n"
+"PO-Revision-Date: 2025-10-31T08:50:30+00:00\n"
+"Language: \n"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: src/Pro/Access/Integrations.php:103
+#: src/Pro/Access/Integrations.php:160
+#: src/Pro/Admin/DashboardWidget.php:238
+#: src/Pro/Admin/SiteHealth.php:37
+msgid "WPForms"
+msgstr "WPForms"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://wpforms.com"
+msgstr "https://wpforms.com"
+
+#. Description of the plugin
+msgid "Beginner friendly WordPress contact form plugin. Use our Drag & Drop form builder to create your WordPress forms."
+msgstr "Yeni başlayan dostu WordPress iletişim formu eklentisi. WordPress formlarınızı oluşturmak için Sürükle & Bırak form oluşturucumuzu kullanın."
+
+#: pro/includes/admin/ajax-actions.php:43
+#: pro/includes/admin/entries/class-entries-single.php:261
+#: src/Pro/Admin/Entries/ListTable.php:1333
+msgid "Entry starred."
+msgstr "Girdi yıldızla işaretlendi."
+
+#: pro/includes/admin/ajax-actions.php:53
+#: pro/includes/admin/entries/class-entries-single.php:292
+#: src/Pro/Admin/Entries/ListTable.php:1393
+msgid "Entry unstarred."
+msgstr "Girdinin yıldızı kaldırıldı."
+
+#: pro/includes/admin/ajax-actions.php:113
+#: pro/includes/admin/entries/class-entries-single.php:731
+#: src/Pro/Admin/Entries/Edit.php:513
+#: src/Pro/Admin/Entries/ListTable.php:1129
+msgid "Entry read."
+msgstr "Girdi okundu."
+
+#: pro/includes/admin/ajax-actions.php:123
+#: pro/includes/admin/entries/class-entries-single.php:359
+#: src/Pro/Admin/Entries/ListTable.php:1189
+msgid "Entry unread."
+msgstr "Girdi okunmamış hale getirildi."
+
+#: pro/includes/admin/ajax-actions.php:160
+msgid "This feature requires an active license. Please contact the site administrator."
+msgstr "Bu özellik aktif bir lisans gerektirir. Lütfen site yöneticisi ile iletişime geçin."
+
+#: pro/includes/admin/ajax-actions.php:165
+#: pro/includes/admin/ajax-actions.php:215
+#: src/Pro/Admin/Education/StringsTrait.php:83
+msgid "Please enter a license key."
+msgstr "Lütfen bir lisans anahtarı girin."
+
+#: pro/includes/admin/class-license.php:157
+#: pro/includes/admin/class-license.php:296
+#: pro/includes/admin/class-license.php:380
+msgid "There was an error connecting to the remote key API. Please try again later."
+msgstr "Uzak anahtar API'sına bağlanma sırasında bir hata oluştu. Lütfen tekrar deneyin."
+
+#: pro/includes/admin/class-license.php:179
+msgid "Congratulations! This site is now receiving automatic updates."
+msgstr "Tebrikler! Bu site artık otomatik güncellemeler alıyor."
+
+#: pro/includes/admin/class-license.php:395
+msgid "You have deactivated the key from this site successfully."
+msgstr "Bu siteden anahtarı başarılı bir şekilde devre dışı bıraktınız."
+
+#. translators: %1$s - WPForms.com Account dashboard URL, %2$s - WPForms.com pricing URL.
+#: pro/includes/admin/class-license.php:498
+msgid "Your license key can be found in your <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">WPForms Account Dashboard</a>. Don’t have a license? <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up today!</a>"
+msgstr "Lisans anahtarınızı <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">WPForms Hesap Panosundan</a> bulabilirsiniz. Lisansınız yok mu? <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">Bugün kaydolun!</a>"
+
+#: pro/includes/admin/class-license.php:514
+msgid "<strong>Your license has expired.</strong> An active license is needed to create new forms and edit existing forms. It also provides access to new features & addons, plugin updates (including security improvements), and our world class support!"
+msgstr "<strong>Lisansınızın geçerliliği sona erdi.</strong> Yeni formlar oluşturmak ve mevcut formları düzenlemek için aktif bir lisans gerekiyor. Bu aynı zamanda yeni özellik ve modüllere, eklenti güncellemelerine (güvenlik iyileştirmeleri dahil) ve dünya sınıfında desteğimize erişim sağlar!"
+
+#: pro/includes/admin/class-license.php:521
+msgid "<strong>Your license key has been disabled.</strong> Please use a different key to continue receiving automatic updates."
+msgstr "<strong>Lisans anahtarınız devre dışı bırakıldı.</strong> Otomatik güncellemeleri almaya devam edebilmek için lütfen farklı bir anahtar kullanın."
+
+#: pro/includes/admin/class-license.php:528
+msgid "<strong>Your license key is invalid.</strong> The key no longer exists or the user associated with the key has been deleted. Please use a different key to continue receiving automatic updates."
+msgstr "<strong>Lisans anahtarınız geçersiz.</strong> Anahtar artık mevcut değil veya anahtarla ilişkili kullanıcı silinmiş. Otomatik güncellemeleri almaya devam edebilmek için lütfen farklı bir anahtar kullanın."
+
+#. translators: %1$s - WPForms.com Account licenses URL.
+#: pro/includes/admin/class-license.php:536
+msgid "<strong>Sorry, but this license has no activations left.</strong> You can manage your site activations, upgrade your license, or purchase a new one in <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">your account</a>."
+msgstr "<strong>Üzgünüz, ancak bu lisansın aktivasyonu kalmadı.</strong> Site aktivasyonlarınızı yönetebilir, lisansınızı yükseltebilir veya <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">hesabınızdan</a> yeni bir lisans satın alabilirsiniz."
+
+#. translators: %1$s - WPForms.com license key support URL.
+#: pro/includes/admin/class-license.php:553
+msgid "<strong>Heads up! Before you can activate this key, we'd like to check in with you.</strong> Please <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">reach out to support here.</a>"
+msgstr "<strong>Dikkat! Bu anahtarı etkinleştirmeden önce sizinle iletişime geçmek istiyoruz.</strong> Lütfen <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">buradan destek ekibine ulaşın.</a>"
+
+#. translators: %s - Link to the Settings > General screen in the plugin, where users can enter their license key.
+#: pro/includes/admin/class-license.php:597
+msgid "To access all features, addons, and enable automatic updates, please <a href=\"%s\" target=\"_blank\">activate your WPForms license.</a>"
+msgstr "Tüm özelliklere, modüllere erişmek ve otomatik güncellemeleri etkinleştirmek için <a href=\"%s\" target=\"_blank\">WPForms lisansınızı etkinleştirin.</a>"
+
+#: pro/includes/admin/class-license.php:643
+#: src/Pro/Admin/Builder/LicenseAlert.php:131
+msgid "Heads up! Your WPForms license has expired."
+msgstr "Dikkat! WPForms lisansınızın geçerliliği sona erdi."
+
+#: pro/includes/admin/class-license.php:644
+msgid "An active license is needed to create new forms and edit existing forms. It also provides access to new features & addons, plugin updates (including security improvements), and our world class support!"
+msgstr "Yeni formlar oluşturmak ve mevcut formları düzenlemek için aktif bir lisansa ihtiyaç vardır. Bu aynı zamanda yeni özellik ve modüllere, eklenti güncellemelerine (güvenlik iyileştirmeleri dahil) ve dünya sınıfında desteğimize de erişim sağlar!"
+
+#: pro/includes/admin/class-license.php:646
+#: pro/includes/admin/class-license.php:670
+#: pro/includes/admin/class-license.php:693
+#: pro/includes/admin/class-license.php:716
+#: src/Pro/Admin/Builder/LicenseAlert.php:133
+#: src/Pro/Admin/Education/StringsTrait.php:91
+msgid "Renew Now"
+msgstr "Şimdi Yenile"
+
+#: pro/includes/admin/class-license.php:648
+#: pro/includes/admin/class-license.php:672
+#: pro/includes/admin/class-license.php:695
+#: pro/includes/admin/class-license.php:718
+#: pro/templates/education/admin/did-you-know.php:30
+#: src/Pro/Admin/Builder/LicenseAlert.php:134
+#: src/Pro/Admin/DashboardWidget.php:328
+#: src/Pro/Admin/DashboardWidget.php:669
+msgid "Learn More"
+msgstr "Daha Fazla Öğrenin"
+
+#: pro/includes/admin/class-license.php:667
+msgid "Heads up! Your WPForms license has been disabled."
+msgstr "Dikkat! WPForms lisansınız devre dışı bırakıldı."
+
+#: pro/includes/admin/class-license.php:668
+msgid "Your license key for WPForms has been disabled. Please use a different key to continue receiving automatic updates"
+msgstr "WPForms için lisans anahtarınız devre dışı bırakılmıştır. Otomatik güncellemeleri almaya devam edebilmek için lütfen farklı bir anahtar kullanın"
+
+#: pro/includes/admin/class-license.php:690
+msgid "Heads up! Your WPForms license is invalid."
+msgstr "Dikkat! WPForms lisansınız geçersiz."
+
+#: pro/includes/admin/class-license.php:691
+msgid "The key no longer exists or the user associated with the key has been deleted. Please use a different key to continue receiving automatic updates."
+msgstr "Anahtar artık mevcut değil veya anahtarla ilişkilendirilen kullanıcı silinmiş. Otomatik güncellemeleri almaya devam etmek için lütfen farklı bir anahtar kullanın."
+
+#: pro/includes/admin/class-license.php:713
+msgid "Heads up! Your WPForms license has no activations left."
+msgstr "Dikkat! WPForms lisansınızın aktivasyon hakkı kalmadı."
+
+#: pro/includes/admin/class-license.php:714
+msgid "Sorry, but this license has no activations left. You can update the list of your sites, upgrade the license in the Account area or purchase a new license key."
+msgstr "Üzgünüz, ancak bu lisansın aktivasyon hakkı kalmadı. Sitelerinizin listesini güncelleyebilir, Hesap alanından lisansı yükseltebilir veya yeni bir lisans anahtarı satın alabilirsiniz."
+
+#: pro/includes/admin/class-license.php:742
+#: src/Pro/Admin/Education/StringsTrait.php:55
+msgid "Heads up!"
+msgstr "Dikkat et!"
+
+#: pro/includes/admin/class-license.php:743
+msgid "Before you can activate this key, we'd like to check in with you. Please reach out to support."
+msgstr "Bu anahtarı etkinleştirmeden önce sizinle iletişime geçmek istiyoruz. Lütfen destek ekibine ulaşın."
+
+#: pro/includes/admin/class-license.php:745
+#: src/Pro/Admin/Education/StringsTrait.php:97
+msgid "Contact Support"
+msgstr "Destekle İletişime Geç"
+
+#: pro/includes/admin/class-license.php:1023
+msgid "You've Exceeded the Allowed License Verification Attempts"
+msgstr "İzin Verilen Lisans Doğrulama Girişimlerini Aştınız"
+
+#: pro/includes/admin/class-license.php:1024
+msgid "Double-check the license key in your account and try again later. If your license key is no longer valid, please renew or install the free version of WPForms."
+msgstr "Hesabınızdaki lisans anahtarını bir kez daha kontrol edin ve daha sonra tekrar deneyin. Lisans anahtarınız artık geçerli değilse lütfen WPForms'un ücretsiz sürümünü yenileyin veya yükleyin."
+
+#: pro/includes/admin/class-license.php:1066
+msgid "Your license key for WPForms is invalid. The key no longer exists or the user associated with the key has been deleted. Please use a different key to continue receiving automatic updates."
+msgstr "WPForms için lisans anahtarınız geçersiz. Anahtar artık mevcut değil veya anahtarla ilişkili kullanıcı silinmiş. Otomatik güncellemeleri almaya devam edebilmek için lütfen farklı bir anahtar kullanın."
+
+#: pro/includes/admin/class-license.php:1090
+msgid "Your license key for WPForms has expired. Please renew your license key on WPForms.com to continue receiving automatic updates."
+msgstr "WPForms için lisans anahtarınızın geçerliliği sona erdi. Otomatik güncellemeleri almaya devam edebilmek için lütfen WPForms.com üzerinden lisans anahtarınızı yenileyin."
+
+#: pro/includes/admin/class-license.php:1114
+msgid "Your license key for WPForms has been disabled. Please use a different key to continue receiving automatic updates."
+msgstr "WPForms için lisans anahtarınız devre dışı bırakılmıştır. Otomatik güncellemeleri almaya devam edebilmek için lütfen farklı bir anahtar kullanın."
+
+#: pro/includes/admin/class-license.php:1138
+msgid "Sorry, but this license has no activations left. You can manage your site activations, upgrade your license, or purchase a new one in your account."
+msgstr "Üzgünüz, ancak bu lisansın aktivasyonu kalmadı. Site aktivasyonlarınızı yönetebilir, lisansınızı yükseltebilir veya hesabınızdan yeni bir lisans satın alabilirsiniz."
+
+#. translators: %1$s - WPForms.com license key support URL.
+#: pro/includes/admin/class-license.php:1165
+msgid "Heads up! Before you can activate this key, we'd like to check in with you. Please <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">reach out to support here.</a>"
+msgstr "Dikkat! Bu anahtarı etkinleştirmeden önce sizinle iletişime geçmek istiyoruz. Lütfen <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">buradan destek ekibine ulaşın.</a>"
+
+#: pro/includes/admin/class-license.php:1204
+msgid "Your key has been refreshed successfully."
+msgstr "Anahtarınız başarılı bir şekilde yenilenmiştir."
+
+#: pro/includes/admin/entries/class-entries-export.php:224
+#: src/Pro/Admin/Entries/Table/Facades/Columns.php:145
+#: src/Pro/Forms/Fields/DateTime/Field.php:121
+msgid "Date"
+msgstr "Tarih"
+
+#: pro/includes/admin/entries/class-entries-export.php:225
+msgid "Date GMT"
+msgstr "Tarih GMT"
+
+#: pro/includes/admin/entries/class-entries-export.php:226
+msgid "ID"
+msgstr "No"
+
+#: pro/includes/admin/entries/class-entries-export.php:367
+msgid "You do not have permission to export entries."
+msgstr "Girdileri dışa aktarma izniniz yok."
+
+#: pro/includes/admin/entries/class-entries-export.php:368
+msgid "Error"
+msgstr "Hata"
+
+#: pro/includes/admin/entries/class-entries-single.php:136
+#: src/Pro/Forms/Fields/Richtext/EntryViewContent.php:66
+msgid "Sorry, you are not allowed to view this entry."
+msgstr "Üzgünüz, bu girdiyi görüntülemeye izniniz yok."
+
+#: pro/includes/admin/entries/class-entries-single.php:271
+msgid "This entry has been starred."
+msgstr "Bu girdi yıldızla işaretlendi."
+
+#: pro/includes/admin/entries/class-entries-single.php:302
+msgid "This entry has been unstarred."
+msgstr "Bu girdinin yıldızı kaldırıldı."
+
+#: pro/includes/admin/entries/class-entries-single.php:367
+msgid "This entry has been marked unread."
+msgstr "Bu girdi okunmadı olarak işaretlendi."
+
+#: pro/includes/admin/entries/class-entries-single.php:396
+msgid "Note deleted."
+msgstr "Not silindi."
+
+#: pro/includes/admin/entries/class-entries-single.php:437
+msgid "Something went wrong while deleting a note. Please try again."
+msgstr "Bir not silerken bir şeyler ters gitti. Lütfen tekrar deneyin."
+
+#: pro/includes/admin/entries/class-entries-single.php:489
+msgid "Please provide a meaningful content for the note."
+msgstr "Lütfen not için anlamlı bir içerik sağlayın."
+
+#: pro/includes/admin/entries/class-entries-single.php:498
+msgid "Note added."
+msgstr "Not eklendi."
+
+#: pro/includes/admin/entries/class-entries-single.php:585
+msgid "Notifications were resent!"
+msgstr "Bildirimler tekrar gönderildi!"
+
+#: pro/includes/admin/entries/class-entries-single.php:601
+msgid "It looks like the provided entry ID isn't valid."
+msgstr "Görünene bakılırsa verilen girdi numarası geçerli değil."
+
+#: pro/includes/admin/entries/class-entries-single.php:621
+#: src/Pro/Admin/Entries/Edit.php:444
+msgid "It looks like the entry you are trying to access is no longer available."
+msgstr "Görünene bakılırsa erişmeye çalıştığınız girdi artık mevcut değil."
+
+#: pro/includes/admin/entries/class-entries-single.php:630
+msgid "You can't view this entry because it's in the trash."
+msgstr "Çöp kutusunda olduğu için bu girdiyi görüntüleyemezsiniz."
+
+#: pro/includes/admin/entries/class-entries-single.php:771
+#: src/Pro/Admin/Entries/Edit.php:401
+msgid "View Entry"
+msgstr "Girdiyi Görüntüle"
+
+#: pro/includes/admin/entries/class-entries-single.php:816
+#: pro/templates/admin/empty-states/no-entries.php:24
+#: pro/templates/admin/empty-states/no-entry.php:24
+msgid "Back to All Entries"
+msgstr "Tüm Girdilere Geri Dön"
+
+#. translators: %1$d - current entry number, %2$d - total number of entries.
+#: pro/includes/admin/entries/class-entries-single.php:824
+msgid "Entry %1$d of %2$d"
+msgstr "Girdi %1$d / %2$d"
+
+#: pro/includes/admin/entries/class-entries-single.php:833
+msgid "Previous form entry"
+msgstr "Önceki form girdisi"
+
+#: pro/includes/admin/entries/class-entries-single.php:841
+msgid "Current form entry"
+msgstr "Mevcut form girdisi"
+
+#: pro/includes/admin/entries/class-entries-single.php:847
+msgid "Next form entry"
+msgstr "Bir sonraki form girdisi"
+
+#: pro/includes/admin/entries/class-entries-single.php:921
+msgid "Field Descriptions"
+msgstr "Alan Açıklamaları"
+
+#: pro/includes/admin/entries/class-entries-single.php:925
+#: pro/templates/admin/entry-print/legend-start.php:20
+msgid "Empty Fields"
+msgstr "Boş Alanlar"
+
+#: pro/includes/admin/entries/class-entries-single.php:929
+#: pro/templates/admin/entry-print/legend-start.php:21
+msgid "Unselected Choices"
+msgstr "Seçimi Kaldırılmış Tercihler"
+
+#: pro/includes/admin/entries/class-entries-single.php:933
+msgid "HTML/Content Fields"
+msgstr "HTML/İçerik Alanları"
+
+#: pro/includes/admin/entries/class-entries-single.php:937
+#: pro/templates/admin/entry-print/legend-start.php:23
+msgid "Section Dividers"
+msgstr "Bölüm Ayırıcılar"
+
+#: pro/includes/admin/entries/class-entries-single.php:941
+#: pro/templates/admin/entry-print/legend-start.php:24
+msgid "Page Breaks"
+msgstr "Sayfa Sonları"
+
+#: pro/includes/admin/entries/class-entries-single.php:947
+msgid "Maintain Layouts"
+msgstr "Düzenleri Koruyun"
+
+#: pro/includes/admin/entries/class-entries-single.php:951
+#: pro/templates/admin/entry-print/legend-start.php:28
+msgid "Compact View"
+msgstr "Kompakt Görünüm"
+
+#. translators: %d - form ID.
+#: pro/includes/admin/entries/class-entries-single.php:1001
+#: src/Pro/Admin/Entries/Page.php:1178
+msgid "Form (#%d)"
+msgstr "Form (#%d)"
+
+#: pro/includes/admin/entries/class-entries-single.php:1033
+#: pro/templates/admin/entry-print/no-fields.php:14
+#: src/Pro/Admin/Entries/Edit.php:715
+msgid "This entry does not have any fields"
+msgstr "Bu girdide hiçbir alan yok"
+
+#: pro/includes/admin/entries/class-entries-single.php:1254
+#: pro/includes/admin/entries/class-entries-single.php:1304
+#: pro/templates/admin/entry-print/field.php:41
+#: src/Pro/Admin/Entries/Edit.php:407
+#: src/Pro/Admin/Entries/Edit.php:1027
+#: src/Pro/Admin/Entries/PrintPreview.php:462
+#: src/Pro/Forms/Fields/EntryPreview/Field.php:972
+msgid "Empty"
+msgstr "Boş"
+
+#: pro/includes/admin/entries/class-entries-single.php:1413
+#: pro/templates/admin/entry-print/legend-start.php:32
+#: pro/templates/admin/entry-print/notes.php:19
+msgid "Notes"
+msgstr "Notlar"
+
+#: pro/includes/admin/entries/class-entries-single.php:1423
+#: pro/includes/admin/entries/class-entries-single.php:1439
+msgid "Add Note"
+msgstr "Not Ekle"
+
+#: pro/includes/admin/entries/class-entries-single.php:1440
+#: src/Pro/Admin/Builder/Settings/Themes.php:56
+#: src/Pro/Admin/Entries/Export/Admin.php:135
+#: src/Pro/AntiSpam/KeywordFilter.php:122
+#: src/Pro/Integrations/Elementor/Elementor.php:72
+#: src/Pro/Integrations/Gutenberg/FormSelector.php:162
+msgid "Cancel"
+msgstr "İptal"
+
+#: pro/includes/admin/entries/class-entries-single.php:1449
+msgid "No notes."
+msgstr "Not yok."
+
+#. translators: %1$s - user name, %2$s - date.
+#: pro/includes/admin/entries/class-entries-single.php:1490
+#: pro/includes/admin/entries/class-entries-single.php:1567
+#: pro/templates/admin/entry-print/notes.php:32
+msgid "Added by %1$s on %2$s"
+msgstr "%1$s tarafından %2$s tarihinde eklenmiştir"
+
+#: pro/includes/admin/entries/class-entries-single.php:1498
+msgctxt "Entry: note"
+msgid "Delete"
+msgstr "Sil"
+
+#: pro/includes/admin/entries/class-entries-single.php:1536
+msgid "Log"
+msgstr "Log"
+
+#: pro/includes/admin/entries/class-entries-single.php:1544
+msgid "No logs."
+msgstr "Log yok."
+
+#: pro/includes/admin/entries/class-entries-single.php:1664
+msgid "Debug Information"
+msgstr "Hata Ayıklama Bilgisi"
+
+#. translators: %1$s - formatted date, %2$s - formatted time.
+#: pro/includes/admin/entries/class-entries-single.php:1691
+#: src/Pro/Admin/Entries/Edit.php:1305
+msgid "%1$s at %2$s"
+msgstr "%1$s saat %2$s"
+
+#: pro/includes/admin/entries/class-entries-single.php:1703
+msgid "Entry Details"
+msgstr "Girdi Ayrıntıları"
+
+#. translators: %s - entry ID.
+#: pro/includes/admin/entries/class-entries-single.php:1716
+msgid "Entry ID: %s"
+msgstr "Girdi No: %s"
+
+#. translators: %1$s - post type name, %2$s - post type ID.
+#: pro/includes/admin/entries/class-entries-single.php:1734
+msgid "%1$s ID: %2$s"
+msgstr "%1$s No: %2$s"
+
+#: pro/includes/admin/entries/class-entries-single.php:1745
+msgid "Submitted:"
+msgstr "Gönderildi:"
+
+#: pro/includes/admin/entries/class-entries-single.php:1754
+msgid "Modified:"
+msgstr "Değiştirildi:"
+
+#: pro/includes/admin/entries/class-entries-single.php:1765
+msgid "User:"
+msgstr "Kullanıcı:"
+
+#: pro/includes/admin/entries/class-entries-single.php:1782
+msgid "User IP:"
+msgstr "Kullanıcı IP'si:"
+
+#: pro/includes/admin/entries/class-entries-single.php:1801
+msgid "Type:"
+msgstr "Tür:"
+
+#: pro/includes/admin/entries/class-entries-single.php:1802
+#: src/Pro/Admin/Entries/Export/Ajax.php:939
+#: src/Pro/Admin/Entries/ListTable.php:420
+msgid "Completed"
+msgstr "Tamamlandı"
+
+#: pro/includes/admin/entries/class-entries-single.php:1855
+msgid "Trash Entry"
+msgstr "Çöp Girdi"
+
+#: pro/includes/admin/entries/class-entries-single.php:1892
+#: src/Pro/Admin/Entries/Export/Ajax.php:1070
+#: src/Pro/Admin/Entries/ListTable.php:2032
+#: src/Pro/Admin/Entries/ListTable.php:2041
+msgid "N/A"
+msgstr "Yok"
+
+#: pro/includes/admin/entries/class-entries-single.php:1987
+#: src/Pro/Admin/Entries/ListTable.php:885
+msgid "Unstar"
+msgstr "Yıldızı Kaldır"
+
+#: pro/includes/admin/entries/class-entries-single.php:1987
+#: src/Pro/Admin/Entries/ListTable.php:884
+msgid "Star"
+msgstr "Yıldız"
+
+#: pro/includes/admin/entries/class-entries-single.php:2007
+#: pro/templates/admin/entry-print/legend-start.php:96
+#: src/Pro/Admin/Entries/ListTable.php:886
+msgid "Print"
+msgstr "Yazdır"
+
+#: pro/includes/admin/entries/class-entries-single.php:2012
+msgid "Export (CSV)"
+msgstr "Dışa Aktar (CSV)"
+
+#: pro/includes/admin/entries/class-entries-single.php:2017
+msgid "Export (XLSX)"
+msgstr "Dışa Aktar (XLSX)"
+
+#: pro/includes/admin/entries/class-entries-single.php:2035
+#: src/Pro/Admin/Entries/ListTable.php:883
+msgid "Mark as Unread"
+msgstr "Okunmadı Olarak İşaretle"
+
+#: pro/includes/admin/entries/class-entries-single.php:2067
+msgid "Delete Entry"
+msgstr "Girdiyi Sil"
+
+#: pro/includes/admin/entries/class-entries-single.php:2078
+#: src/Pro/Admin/Entries/ListTable.php:2138
+#: src/Pro/Admin/Entries/Table/Facades/Columns.php:457
+msgid "Actions"
+msgstr "Eylemler"
+
+#. translators: %s - a list of addons that disable the link.
+#: pro/includes/admin/entries/class-entries-single.php:2094
+msgid "Unavailable because %s is enabled."
+msgid_plural "Unavailable because %s are enabled."
+msgstr[0] "%s etkinleştirilmiş olduğundan kullanılamaz."
+msgstr[1] "%s etkinleştirilmiş olduğundan kullanılamaz."
+
+#: pro/includes/admin/entries/class-entries-single.php:2100
+#: src/Pro/Forms/Fields/Repeater/Builder.php:107
+msgid "and"
+msgstr "ve"
+
+#: pro/includes/admin/entries/class-entries-single.php:2169
+msgid "Resend Notifications"
+msgstr "Bildirimleri Tekrar Gönder"
+
+#. translators: %s - payment add-on name.
+#: pro/includes/admin/entries/class-entries-single.php:2192
+msgid "the \"%s completed payments\" setting"
+msgstr "\"%s tamamlanan ödeme\" ayarı"
+
+#: pro/includes/admin/entries/class-entries-single.php:2257
+msgid "Related Entries"
+msgstr "İlişkili Girdiler"
+
+#: pro/includes/admin/entries/class-entries-single.php:2263
+msgid "The user who created this entry also submitted the entries below."
+msgstr "Bu girdiyi oluşturan kullanıcı, aşağıdaki girdileri de göndermiştir."
+
+#: pro/includes/admin/entries/class-entries-single.php:2279
+msgid "(Abandoned)"
+msgstr "(Terk edildi)"
+
+#: pro/includes/admin/entries/class-entries-single.php:2448
+msgid "Section Divider"
+msgstr "Bölüm Ayırıcı"
+
+#: pro/includes/admin/entries/class-entries-single.php:2452
+msgid "Page Break"
+msgstr "Sayfa Sonu"
+
+#: pro/includes/admin/entries/class-entries-single.php:2456
+msgid "Content Field"
+msgstr "İçerik Alanı"
+
+#. translators: %d - field ID.
+#: pro/includes/admin/entries/class-entries-single.php:2478
+msgid "Field ID #%s"
+msgstr "Alan Kimlik Numarası %s"
+
+#. translators: %s - choice number.
+#: pro/includes/admin/entries/class-entries-single.php:2572
+#: pro/includes/admin/entries/class-entries-single.php:2634
+#: src/Pro/Admin/Entries/Export/Ajax.php:685
+#: src/Pro/Admin/Entries/PrintPreview.php:510
+msgid "Choice %s"
+msgstr "%s Seçimi"
+
+#. translators: %s - item number.
+#: pro/includes/admin/entries/class-entries-single.php:2578
+msgid "Item %s"
+msgstr "Öğe %s"
+
+#: pro/includes/class-conditional-logic-core.php:233
+msgid "this field if"
+msgstr "şu durumda bu alanı"
+
+#: pro/includes/class-conditional-logic-core.php:237
+msgid "Show"
+msgstr "Göster"
+
+#: pro/includes/class-conditional-logic-core.php:238
+msgid "Hide"
+msgstr "Gizle"
+
+#: pro/includes/class-conditional-logic-core.php:251
+#: pro/includes/class-conditional-logic-core.php:339
+#: src/Pro/Admin/Builder/Builder.php:112
+msgid "Enable Conditional Logic"
+msgstr "Koşullu Mantığı Etkinleştir"
+
+#: pro/includes/class-conditional-logic-core.php:255
+#: pro/includes/class-conditional-logic-core.php:344
+#: src/Pro/Admin/Builder/Builder.php:90
+msgid "How to use Conditional Logic"
+msgstr "Koşullu Mantık nasıl kullanılır"
+
+#: pro/includes/class-conditional-logic-core.php:290
+msgid "this connection if"
+msgstr "şu durumda bu bağlantı"
+
+#: pro/includes/class-conditional-logic-core.php:295
+msgid "Process"
+msgstr "İşle"
+
+#: pro/includes/class-conditional-logic-core.php:296
+msgid "Don't process"
+msgstr "İşleme"
+
+#: pro/includes/class-conditional-logic-core.php:430
+msgid "--- Select Field ---"
+msgstr "--- Alan Seçin ---"
+
+#. translators: %d - field ID.
+#: pro/includes/class-conditional-logic-core.php:452
+#: src/Pro/Admin/Builder/Notifications/Advanced/Settings.php:251
+#: src/Pro/Admin/Entries/Export/Admin.php:334
+#: src/Pro/Admin/Entries/Export/Admin.php:460
+#: src/Pro/Admin/Entries/Export/Admin.php:487
+#: src/Pro/Admin/Entries/Export/Ajax.php:334
+#: src/Pro/Admin/Entries/Export/Ajax.php:1282
+#: src/Pro/Admin/Entries/Table/DataObjects/FieldColumn.php:37
+msgid "Field #%d"
+msgstr "%d Nolu Alan"
+
+#: pro/includes/class-conditional-logic-core.php:482
+#: src/Pro/Admin/Entries/Export/Admin.php:518
+#: src/Pro/Admin/Entries/ListTable.php:1834
+#: src/Pro/Admin/Entries/Page.php:614
+msgid "is"
+msgstr "bu şekilde"
+
+#: pro/includes/class-conditional-logic-core.php:483
+#: src/Pro/Admin/Entries/Export/Admin.php:519
+#: src/Pro/Admin/Entries/ListTable.php:1837
+#: src/Pro/Admin/Entries/Page.php:615
+msgid "is not"
+msgstr "bu şekilde değil"
+
+#: pro/includes/class-conditional-logic-core.php:484
+msgid "empty"
+msgstr "boş"
+
+#: pro/includes/class-conditional-logic-core.php:485
+msgid "not empty"
+msgstr "boş değil"
+
+#: pro/includes/class-conditional-logic-core.php:495
+#: src/Pro/Admin/Entries/Export/Admin.php:516
+#: src/Pro/Admin/Entries/ListTable.php:1828
+#: src/Pro/Admin/Entries/Page.php:612
+msgid "contains"
+msgstr "içerir"
+
+#: pro/includes/class-conditional-logic-core.php:496
+#: src/Pro/Admin/Entries/Export/Admin.php:517
+#: src/Pro/Admin/Entries/ListTable.php:1831
+#: src/Pro/Admin/Entries/Page.php:613
+msgid "does not contain"
+msgstr "içermez"
+
+#: pro/includes/class-conditional-logic-core.php:497
+msgid "starts with"
+msgstr "şununla başlar"
+
+#: pro/includes/class-conditional-logic-core.php:498
+msgid "ends with"
+msgstr "şununla biter"
+
+#: pro/includes/class-conditional-logic-core.php:499
+msgid "greater than"
+msgstr "şundan büyük"
+
+#: pro/includes/class-conditional-logic-core.php:500
+msgid "less than"
+msgstr "şundan küçük"
+
+#: pro/includes/class-conditional-logic-core.php:545
+msgid "--- Select Choice ---"
+msgstr "--- Seçim Seçin ---"
+
+#. translators: %d - choice number.
+#. translators: %d - choice ID.
+#: pro/includes/class-conditional-logic-core.php:553
+#: pro/includes/class-conditional-logic-fields.php:920
+#: src/Pro/Admin/Entries/Export/Ajax.php:1505
+msgid "Choice %d"
+msgstr "Seçim %d"
+
+#: pro/includes/class-conditional-logic-core.php:576
+msgid "Create new rule"
+msgstr "Yeni kural oluştur"
+
+#: pro/includes/class-conditional-logic-core.php:576
+msgctxt "Conditional Logic: new rule logic."
+msgid "And"
+msgstr "Ve"
+
+#: pro/includes/class-conditional-logic-core.php:577
+msgid "Delete rule"
+msgstr "Kuralı sil"
+
+#: pro/includes/class-conditional-logic-core.php:586
+msgctxt "Conditional Logic: new rule logic."
+msgid "or"
+msgstr "veya"
+
+#: pro/includes/class-conditional-logic-core.php:592
+msgid "Add New Group"
+msgstr "Yeni Grup Ekle"
+
+#: pro/includes/class-conditional-logic-fields.php:197
+msgid "Smart Logic"
+msgstr "Akıllı Mantık"
+
+#: pro/includes/class-conditional-logic-fields.php:531
+msgid "An Entry Notification was not sent due to conditional logic."
+msgstr "Koşullu mantık nedeniyle Girdi Bildirimi gönderilmedi."
+
+#: pro/includes/class-conditional-logic-fields.php:588
+msgid "Entry Confirmation stopped by conditional logic."
+msgstr "Girdi Doğrulaması, koşullu mantık tarafından durduruldu."
+
+#: pro/includes/payments/class-payment.php:250
+msgid "One-Time Payments"
+msgstr "Tek Seferlik Ödemeler"
+
+#: pro/includes/payments/class-payment.php:258
+msgid "Enable one-time payments"
+msgstr "Tek seferlik ödemeleri etkinleştir"
+
+#: pro/includes/payments/class-payment.php:262
+msgid "Allow your customers to one-time pay via the form."
+msgstr "Müşterilerinizin tek seferlik ödemeleri form yoluyla yapmalarına izin verin."
+
+#: pro/includes/payments/class-payment.php:284
+msgid "Recurring Payments"
+msgstr "Tekrarlanan Ödemeler"
+
+#: pro/includes/payments/class-payment.php:287
+msgid "Add New Plan"
+msgstr "Yeni Plan Ekle"
+
+#: pro/includes/payments/class-payment.php:295
+msgid "Enable recurring subscription payments"
+msgstr "Tekrarlanan abonelik ödemelerini etkinleştir"
+
+#: pro/includes/payments/class-payment.php:299
+msgid "Allow your customer to pay recurringly via the form."
+msgstr "Müşterilerinizin tekrar eden ödemeleri form yoluyla yapmasına izin verin."
+
+#. translators: %s - addon title.
+#: pro/templates/admin/addons-item.php:30
+msgid "%s logo"
+msgstr "%s logosu"
+
+#: pro/templates/admin/addons-item.php:52
+msgid "Learn more"
+msgstr "Daha fazlasını öğrenin"
+
+#: pro/templates/admin/addons-item.php:71
+msgid "This addon is not compatible."
+msgstr "Bu modül uyumlu değil."
+
+#: pro/templates/admin/addons-item.php:86
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: pro/templates/admin/empty-states/no-entries.php:17
+#: pro/templates/admin/empty-states/no-entry.php:17
+msgid "Hi there!"
+msgstr "Merhabalar!"
+
+#: pro/templates/admin/entries/single-entry/payment-details.php:27
+msgid "Payment Details"
+msgstr "Ödeme Ayrıntıları"
+
+#. translators: %s - payment status.
+#: pro/templates/admin/entries/single-entry/payment-details.php:36
+msgid "Status: <strong>%s</strong>"
+msgstr "Durum: <strong>%s</strong>"
+
+#. translators: %s - payment type.
+#: pro/templates/admin/entries/single-entry/payment-details.php:51
+msgid "Type: <strong>%s</strong>"
+msgstr "Tür: <strong>%s</strong>"
+
+#. translators: %s - payment total.
+#: pro/templates/admin/entries/single-entry/payment-details.php:71
+msgid "Total: <strong>%s</strong>"
+msgstr "Toplam: <strong>%s</strong>"
+
+#. translators: %s - payment gateway.
+#: pro/templates/admin/entries/single-entry/payment-details.php:84
+msgid "Gateway: <strong>%s</strong>"
+msgstr "Geçit: <strong>%s</strong>"
+
+#: pro/templates/admin/entries/single-entry/payment-details.php:95
+msgctxt "Gateway mode"
+msgid "Test"
+msgstr "Test"
+
+#: pro/templates/admin/entries/single-entry/payment-details.php:110
+msgid "View Payment"
+msgstr "Ödemeyi Görüntüle"
+
+#: pro/templates/admin/entries/single-entry/settings.php:28
+#: pro/templates/admin/entry-print/legend-start.php:102
+msgid "Field Settings"
+msgstr "Alan Ayarları"
+
+#: pro/templates/admin/entries/single-entry/settings.php:44
+#: pro/templates/admin/entry-print/legend-start.php:116
+msgid "Display Settings"
+msgstr "Görünüm Ayarları"
+
+#: pro/templates/admin/entry-print/head.php:52
+#: src/Pro/Admin/Builder/LicenseAlert.php:165
+#: src/Pro/Admin/Builder/Settings/Themes.php:59
+#: src/Pro/Integrations/Elementor/Elementor.php:75
+#: src/Pro/Integrations/Gutenberg/FormSelector.php:165
+msgid "Close"
+msgstr "Kapat"
+
+#: pro/templates/admin/entry-print/legend-start.php:19
+msgid "Field Description"
+msgstr "Alan Açıklaması"
+
+#: pro/templates/admin/entry-print/legend-start.php:22
+msgid "HTML/Content fields"
+msgstr "HTML/İçerik alanları"
+
+#: pro/templates/admin/entry-print/legend-start.php:27
+msgid "Maintain Layout"
+msgstr "Yerleşimi Koru"
+
+#. translators: %d - entry ID.
+#: pro/templates/admin/entry-print/legend-start.php:83
+msgid "Entry #%d"
+msgstr "Girdi #%d"
+
+#: pro/templates/admin/entry-print/legend-start.php:98
+msgid "Cog"
+msgstr "Başlık"
+
+#: pro/templates/admin/google-sign-in-button.php:41
+#: pro/templates/admin/google-sign-in-button.php:42
+msgid "Continue with Google"
+msgstr "Google ile devam edin"
+
+#: pro/templates/admin/lite-connect/dashboard-widget-notice-in-progress.php:20
+#: src/Pro/Integrations/LiteConnect/Admin.php:184
+msgid "Entry Restore in Progress"
+msgstr "Girdi Geri Yüklemesi Devam Ediyor"
+
+#: pro/templates/admin/lite-connect/dashboard-widget-notice-in-progress.php:23
+#: src/Pro/Integrations/LiteConnect/Admin.php:185
+msgid "Your entries are currently being imported. This should only take a few minutes. An admin notice will be displayed when the process is complete."
+msgstr "Girdileriniz şu anda içe aktarılıyor. Bu yalnızca birkaç dakika sürecektir. İşlem tamamlandığında bir yönetici bildirimi görüntülenecektir."
+
+#: pro/templates/admin/lite-connect/dashboard-widget-notice-restore.php:25
+#: src/Pro/Integrations/LiteConnect/Admin.php:213
+msgid "Restore Your Form Entries"
+msgstr "Form Girdilerinizi Geri Yükleyin"
+
+#: pro/templates/admin/lite-connect/dashboard-widget-notice-restore.php:29
+msgid "Restore them now and get instant access to reports."
+msgstr "Şimdi geri yükleyin ve raporlara anında erişim sahibi olun."
+
+#: pro/templates/admin/lite-connect/dashboard-widget-notice-restore.php:33
+#: src/Pro/Integrations/LiteConnect/Admin.php:215
+msgid "Restore Entries Now"
+msgstr "Girdileri Şimdi Geri Yükle"
+
+#: pro/templates/builder/antispam/reformat-warning.php:14
+msgid "It appears your keyword filter list is comma-separated. Would you like to reformat it?"
+msgstr "Görünen o ki, anahtar sözcük filtresi listeniz virgülle ayrılmış. Yeniden biçimlendirmek ister misiniz?"
+
+#: pro/templates/builder/antispam/reformat-warning.php:19
+msgid "Yes, Reformat"
+msgstr "Evet, Yeniden Biçimlendir"
+
+#: pro/templates/builder/context-menu.php:36
+msgid "Duplicate Template"
+msgstr "Şablonu Çoğalt"
+
+#: pro/templates/builder/context-menu.php:53
+msgid "Duplicate Form"
+msgstr "Formu Çoğalt"
+
+#: pro/templates/builder/context-menu.php:67
+msgid "Save as Template"
+msgstr "Şablon Olarak Kaydet"
+
+#: pro/templates/builder/context-menu.php:86
+#: src/Pro/Admin/Settings/Access.php:186
+#: src/Pro/Integrations/LiteConnect/Admin.php:280
+msgid "View Entries"
+msgstr "Girdileri Görüntüle"
+
+#: pro/templates/builder/context-menu.php:99
+#: src/Pro/Admin/Entries/Page.php:1214
+msgid "View Payments"
+msgstr "Ödemeleri Görüntüle"
+
+#: pro/templates/builder/context-menu.php:113
+msgid "What's New"
+msgstr "Yenilikler Neler"
+
+#: pro/templates/builder/context-menu.php:125
+msgid "Keyboard Shortcuts"
+msgstr "Klavye Kısayolları"
+
+#: pro/templates/education/admin/did-you-know.php:25
+msgid "Did You Know?"
+msgstr "Biliyor Muydunuz?"
+
+#: pro/templates/education/admin/did-you-know.php:33
+msgid "Upgrade to Pro"
+msgstr "Pro sürümüne yükselt"
+
+#: pro/templates/education/admin/did-you-know.php:35
+#: pro/wpforms-pro.php:1072
+msgid "Dismiss this message."
+msgstr "Bu mesajı yok sayın."
+
+#: pro/templates/education/admin/entries/geolocation.php:29
+#: pro/templates/education/admin/entries/geolocation.php:43
+#: src/Pro/Admin/Entries/Export/Ajax.php:1015
+msgid "Location"
+msgstr "Konum"
+
+#: pro/templates/education/admin/entries/geolocation.php:47
+#: src/Pro/Admin/Entries/Export/Ajax.php:1024
+msgid "Zipcode"
+msgstr "Posta Kodu"
+
+#: pro/templates/education/admin/entries/geolocation.php:51
+#: src/Pro/Admin/Entries/Export/Ajax.php:1033
+#: src/Pro/Admin/Entries/Export/Ajax.php:1390
+msgid "Country"
+msgstr "Ülke"
+
+#: pro/templates/education/admin/entries/geolocation.php:55
+#: src/Pro/Admin/Entries/Export/Ajax.php:996
+msgid "Lat/Long"
+msgstr "Enl/Boyl"
+
+#: pro/templates/education/admin/entries/geolocation.php:63
+msgid "Geolocation"
+msgstr "Konum Belirleme"
+
+#: pro/templates/education/admin/entries/geolocation.php:69
+msgid "Geolocation allows you to quickly see where your visitors are located!"
+msgstr "Konum belirleme, ziyaretçilerinizin nerede bulunduğunu hızlı bir şekilde görmenize izin verir!"
+
+#: pro/templates/education/admin/entries/geolocation.php:71
+msgid "You can install the Geolocation addon with just a few clicks!"
+msgstr "Sadece birkaç tıklama ile Konum Belirleme modülünü yükleyebilirsiniz!"
+
+#: pro/templates/education/admin/entries/geolocation.php:80
+#: pro/templates/education/admin/entries/user-journey.php:258
+#: pro/wpforms-pro.php:551
+#: pro/wpforms-pro.php:716
+#: pro/wpforms-pro.php:2047
+msgid "Activate"
+msgstr "Etkinleştir"
+
+#: pro/templates/education/admin/entries/geolocation.php:81
+#: pro/templates/education/admin/entries/user-journey.php:259
+msgid "Install & Activate"
+msgstr "Yükle ve Etkinleştir"
+
+#: pro/templates/education/admin/entries/geolocation.php:85
+msgid "Please upgrade to the PRO plan to unlock Geolocation and more awesome features."
+msgstr "Lütfen Konum Belirleme ve daha fazla harika özelliğin kilidini açmak için PRO plana yükseltin."
+
+#: pro/templates/education/admin/entries/geolocation.php:88
+#: pro/templates/education/admin/entries/user-journey.php:266
+msgid "Upgrade to WPForms Pro"
+msgstr "WPForms Pro'ya Yükselt"
+
+#: pro/templates/education/admin/entries/user-journey.php:29
+#: pro/templates/education/admin/entries/user-journey.php:239
+msgid "User Journey"
+msgstr "Kullanıcı Yolculuğu"
+
+#: pro/templates/education/admin/entries/user-journey.php:61
+msgid "Search Results"
+msgstr "Arama Sonuçları"
+
+#: pro/templates/education/admin/entries/user-journey.php:84
+msgid "Homepage"
+msgstr "Ana sayfa"
+
+#: pro/templates/education/admin/entries/user-journey.php:107
+msgid "Frequently Asked Questions"
+msgstr "Sık Sorulan Sorular"
+
+#: pro/templates/education/admin/entries/user-journey.php:130
+msgid "About Us"
+msgstr "Hakkımızda"
+
+#: pro/templates/education/admin/entries/user-journey.php:153
+msgid "Meet The Team"
+msgstr "Ekiple Tanışın"
+
+#: pro/templates/education/admin/entries/user-journey.php:176
+msgid "Testimonials"
+msgstr "Deneyimler"
+
+#: pro/templates/education/admin/entries/user-journey.php:199
+msgid "Contact Us"
+msgstr "Bizimle İletişime Geçin"
+
+#: pro/templates/education/admin/entries/user-journey.php:223
+msgid "Contact form submitted"
+msgstr "İletişim formu gönderildi"
+
+#: pro/templates/education/admin/entries/user-journey.php:227
+msgid "User took 7 steps over 14 mins"
+msgstr "Kullanıcı, 14 dakikada 7 adım attı"
+
+#: pro/templates/education/admin/entries/user-journey.php:245
+msgid "Easily trace each visitor’s path through your site, right up to the moment they hit ‘Submit’!"
+msgstr "'Gönder' düğmesine tıkladıkları ana kadar her ziyaretçinin sitenizdeki yolculuğunu kolayca takip edin!"
+
+#: pro/templates/education/admin/entries/user-journey.php:248
+msgid "You can install the User Journey addon with just a few clicks!"
+msgstr "Sadece birkaç tıklama ile Kullanıcı Yolculuğu modülünü yükleyebilirsiniz!"
+
+#: pro/templates/education/admin/entries/user-journey.php:263
+msgid "Please upgrade to the PRO plan to unlock User Journey and more awesome features."
+msgstr "Kullanıcı Yolculuğu ve daha fazla harika özelliğin kilidini açmak için lütfen PRO plana yükseltin."
+
+#. translators: %s - provider name.
+#: pro/templates/education/admin/settings/integrations-item.php:43
+msgid "Integrate %s with WPForms"
+msgstr "%s' WPForms ile Entegre Edilsin"
+
+#: pro/templates/education/builder/providers-item.php:45
+msgid "Recommended"
+msgstr "Tavsiye edilen"
+
+#. translators: %1$s - site URL; %2$s - site title.
+#: pro/templates/emails/elegant-footer.php:26
+#: pro/templates/emails/modern-footer.php:26
+#: pro/templates/emails/tech-footer.php:26
+msgid "Sent from <a href=\"%1$s\">%2$s</a>"
+msgstr "<a href=\"%1$s\">%2$s</a> üzerinden gönderildi"
+
+#: pro/templates/fields/camera-modal.php:20
+msgid "Camera Preview"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:38
+msgid "Capture Photo"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:54
+msgid "Retake Photo"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:55
+msgid "Use Photo"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:56
+msgid "Apply Crop"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:57
+msgid "Crop Photo"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:58
+msgid "Cancel Crop"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:64
+msgid "Remaining"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:65
+msgid "Record Video"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:70
+msgid "Stop Recording"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:81
+msgid "Redo Video"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:82
+msgid "Use Video"
+msgstr ""
+
+#: pro/templates/fields/camera-modal.php:83
+msgid "Delete Video"
+msgstr ""
+
+#: pro/templates/fields/file-upload-backend.php:22
+msgid "Click or drag a file to this area to upload."
+msgid_plural "Click or drag files to this area to upload."
+msgstr[0] "Yüklemek için tıklayın veya dosyayı bu alana sürükleyin."
+msgstr[1] "Yüklemek için tıklayın veya dosyaları bu alana sürükleyin."
+
+#: pro/templates/fields/file-upload-frontend.php:48
+#: pro/templates/fields/file-upload-frontend.php:52
+msgid "Drag & Drop Files, "
+msgstr ""
+
+#: pro/templates/fields/file-upload-frontend.php:49
+#: pro/templates/fields/file-upload-frontend.php:53
+msgid "Choose Files to Upload"
+msgstr ""
+
+#: pro/templates/fields/file-upload-frontend.php:49
+msgid ", or"
+msgstr ""
+
+#: pro/templates/fields/file-upload-frontend.php:50
+#: src/Pro/Forms/Fields/Camera/Field.php:172
+#: src/Pro/Forms/Fields/FileUpload/Field.php:590
+msgid "Capture With Your Camera"
+msgstr ""
+
+#: pro/templates/fields/richtext-single-iframe.php:22
+msgid "View Entry &gt; Rich Text field"
+msgstr "Girdiyi Görüntüle &gt; Zengin Metin alanı"
+
+#: pro/templates/frontend/file/file-not-found.php:18
+#: pro/templates/frontend/file/file-not-found.php:25
+msgid "File Not Found"
+msgstr "Dosya Bulunamadı"
+
+#: pro/templates/frontend/file/file-not-found.php:24
+#: pro/templates/frontend/file/file-password-required.php:38
+#: pro/templates/frontend/file/file-protected.php:24
+#: pro/templates/frontend/file/file-protected.php:25
+msgid "File Protected"
+msgstr "Dosya Korumalı"
+
+#: pro/templates/frontend/file/file-not-found.php:26
+msgid "Sorry, the file you’re looking for could not be found."
+msgstr "Üzgünüz, aradığınız dosya bulunamadı."
+
+#: pro/templates/frontend/file/file-password-required.php:20
+#: pro/templates/frontend/file/file-password-required.php:39
+msgid "Password Required"
+msgstr "Şifre Gerekli"
+
+#: pro/templates/frontend/file/file-password-required.php:40
+msgid "This file is protected. Enter the password to access."
+msgstr "Bu dosya korunmaktadır. Erişmek için şifreyi girin."
+
+#: pro/templates/frontend/file/file-password-required.php:43
+msgid "Enter Password"
+msgstr "Şifre Girin"
+
+#: pro/templates/frontend/file/file-password-required.php:44
+msgid "Submit"
+msgstr "Gönder"
+
+#: pro/templates/frontend/file/file-protected.php:18
+msgid "Access Denied"
+msgstr "Erişim engellendi"
+
+#: pro/templates/frontend/file/file-protected.php:26
+msgid "Sorry, you don’t have access to this file."
+msgstr "Üzgünüz, bu dosyaya erişiminiz yok."
+
+#: pro/wpforms-pro.php:462
+msgid "Go to WPForms.com Support page"
+msgstr "WPForms.com Destek sayfasına gidin"
+
+#: pro/wpforms-pro.php:463
+msgid "Support"
+msgstr "Destek"
+
+#: pro/wpforms-pro.php:479
+msgid "Read the documentation"
+msgstr "Dokümantasyonu okuyun"
+
+#: pro/wpforms-pro.php:480
+msgid "Docs"
+msgstr "Dokümanlar"
+
+#: pro/wpforms-pro.php:498
+msgid "Inactive &mdash; You've got a paid version of WPForms"
+msgstr "Etkin olmayan &mdash; WPForms'un ücretli bir sürümüne sahipsiniz"
+
+#: pro/wpforms-pro.php:573
+#: pro/wpforms-pro.php:717
+msgid "You cannot activate WPForms Lite because you have a paid version of WPForms activated."
+msgstr "WPForms'un ücretli bir sürümü etkinleştirildiği için WPForms Lite'ı etkinleştiremiyorsunuz."
+
+#: pro/wpforms-pro.php:640
+msgid "Verify Key"
+msgstr "Anahtarı Doğrula"
+
+#: pro/wpforms-pro.php:646
+msgid "Renew License"
+msgstr "Lisansı Yenile"
+
+#: pro/wpforms-pro.php:652
+msgid "Remove Key"
+msgstr "Anahtarı Kaldır"
+
+#. translators: $s - license type.
+#: pro/wpforms-pro.php:662
+msgid "Your license key level is %s."
+msgstr "Lisans anahtarı seviyeniz %s."
+
+#. translators: %s - refresh link.
+#: pro/wpforms-pro.php:669
+msgid "If your license has been upgraded or is incorrect, then please %1$sforce a refresh%2$s."
+msgstr "Lisansınızın yükseltilmiş olması veya yanlış olması halinde lütfen %1$sbir zorla yenileme%2$s gerçekleştirin."
+
+#: pro/wpforms-pro.php:758
+msgid "Website URL"
+msgstr "Web sitesi URL'si"
+
+#: pro/wpforms-pro.php:760
+#: pro/wpforms-pro.php:1778
+#: src/Pro/Forms/Fields/Url/Field.php:76
+msgid "Please enter a valid URL."
+msgstr "Lütfen geçerli bir URL girin."
+
+#: pro/wpforms-pro.php:764
+msgid "Phone"
+msgstr "Telefon"
+
+#: pro/wpforms-pro.php:766
+#: src/Pro/Forms/Fields/Phone/Field.php:220
+#: src/Pro/Forms/Fields/Phone/Field.php:325
+msgid "Please enter a valid phone number."
+msgstr "Lütfen geçerli bir telefon numarası girin."
+
+#: pro/wpforms-pro.php:770
+msgid "File Extension"
+msgstr "Dosya Uzantısı"
+
+#: pro/wpforms-pro.php:772
+#: pro/wpforms-pro.php:1781
+#: src/Pro/Forms/Fields/Camera/Field.php:667
+#: src/Pro/Forms/Fields/Camera/Field.php:696
+#: src/Pro/Forms/Fields/FileUpload/Field.php:283
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1840
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1868
+msgid "File type is not allowed."
+msgstr "Dosya türüne izin verilmiyor."
+
+#: pro/wpforms-pro.php:776
+msgid "File Size"
+msgstr "Dosya Boyutu"
+
+#: pro/wpforms-pro.php:778
+#: pro/wpforms-pro.php:1782
+msgid "File exceeds max size allowed. File was not uploaded."
+msgstr "Dosya, izin verilen maksimum boyutu aşıyor. Dosya yüklenmedi."
+
+#: pro/wpforms-pro.php:782
+msgid "File Uploads"
+msgstr "Karşıya Dosya Yüklemeler"
+
+#. translators: %s - max number of files allowed.
+#: pro/wpforms-pro.php:785
+#: src/Pro/Forms/Fields/FileUpload/Field.php:279
+#: src/Pro/Forms/Fields/FileUpload/Field.php:913
+msgid "File uploads exceed the maximum number allowed (%s)."
+msgstr "Dosya yüklemeleri, izin verilen maksimum sayıyı (%s) aşıyor."
+
+#: pro/wpforms-pro.php:791
+msgid "Time (12 hour)"
+msgstr "Zaman (12 saat)"
+
+#: pro/wpforms-pro.php:793
+#: pro/wpforms-pro.php:1773
+msgid "Please enter time in 12-hour AM/PM format (eg 8:45 AM)."
+msgstr "Lütfen zamanı 12 saatlik AM/PM formatında girin (örn. 8:45 AM)."
+
+#: pro/wpforms-pro.php:797
+msgid "Time (24 hour)"
+msgstr "Zaman (24 saat)"
+
+#: pro/wpforms-pro.php:799
+#: pro/wpforms-pro.php:1774
+msgid "Please enter time in 24-hour format (eg 22:45)."
+msgstr "Lütfen zamanı 24 saatlik formatta girin (örn. 22:45)."
+
+#: pro/wpforms-pro.php:803
+msgid "Limit Hours"
+msgstr "Saatleri Sınırla"
+
+#: pro/wpforms-pro.php:805
+#: pro/wpforms-pro.php:1775
+#: src/Pro/Forms/Fields/DateTime/Field.php:744
+msgid "Please enter time between {minTime} and {maxTime}."
+msgstr "Lütfen {minTime} ile {maxTime} arasında bir zaman girin."
+
+#: pro/wpforms-pro.php:809
+msgid "File Upload Total Size"
+msgstr "Dosya Yükleme Toplam Boyutu"
+
+#. translators: %1$s - total size of the selected files in megabytes, %2$s - allowed file upload limit in megabytes.
+#: pro/wpforms-pro.php:812
+#: pro/wpforms-pro.php:1766
+msgid "The total size of the selected files %1$s MB exceeds the allowed limit %2$s MB."
+msgstr "Seçilen dosyaların toplam boyutu %1$s MB, izin verilen sınır değer olan %2$s MB'ı aşıyor."
+
+#: pro/wpforms-pro.php:819
+msgid "Password Strength"
+msgstr "Şifre Gücü"
+
+#: pro/wpforms-pro.php:821
+#: src/Pro/Forms/Fields/Password/Field.php:495
+msgid "A stronger password is required. Consider using upper and lower case letters, numbers, and symbols."
+msgstr "Daha güçlü bir şifre gerekiyor. Büyük ve küçük harfler, sayılar ve semboller kullanmayı değerlendirin."
+
+#: pro/wpforms-pro.php:830
+msgid "Disable User Cookies"
+msgstr "Kullanıcı Çerezlerini Devre Dışı Bırak"
+
+#: pro/wpforms-pro.php:831
+msgid "Disable user tracking cookies. This will disable the Related Entries feature and the Form Abandonment addon."
+msgstr "Kullanıcı izleme çerezlerini devre dışı bırak. Böylece İlgili Girdiler özelliğin ve Form Terk Etme modülü devre dışı bırakılacaktır."
+
+#: pro/wpforms-pro.php:838
+msgid "Disable User Details"
+msgstr "Kullanıcı Ayrıntılarını Devre Dışı Bırak"
+
+#: pro/wpforms-pro.php:839
+msgid "Disable storage IP addresses and User Agent on all forms. If unchecked, then this can be managed on a form-by-form basis inside the form builder under Settings → General"
+msgstr "Tüm formlarda depolama IP adreslerini ve Kullanıcı Aracısını devre dışı bırakın. İşaretlenmemişse, form oluşturucu içerisinde Ayarlar → Genel başlığı altında her form için ayrı ayrı yönetilebilir"
+
+#: pro/wpforms-pro.php:932
+msgid "Disable storing entry information in WordPress"
+msgstr "WordPress içerisinde girdi bilgisi saklamayı devre dışı bırak"
+
+#: pro/wpforms-pro.php:944
+msgid "Disable storing user details (IP address and user agent)"
+msgstr "Kullanıcı detaylarını saklamayı devre dışı bırak (IP adresi ve kullanıcı aracısı)"
+
+#: pro/wpforms-pro.php:969
+#: src/Pro/Admin/AdminBarMenu.php:96
+#: src/Pro/Admin/DashboardWidget.php:216
+#: src/Pro/Admin/Entries/Overview/Page.php:187
+#: src/Pro/Admin/Entries/Overview/Page.php:244
+#: src/Pro/Admin/Entries/Page.php:863
+#: src/Pro/Admin/Entries/Page.php:999
+#: src/Pro/Admin/Settings/Access.php:376
+msgid "Entries"
+msgstr "Girdiler"
+
+#. translators: %s - form name.
+#: pro/wpforms-pro.php:1046
+msgid "New %s Entry"
+msgstr "Yeni %s Girdisi"
+
+#: pro/wpforms-pro.php:1063
+msgid "Notifications"
+msgstr "Bildirimler"
+
+#: pro/wpforms-pro.php:1065
+msgid "Add New Notification"
+msgstr "Yeni Bildirim Ekle"
+
+#. translators: %s - link to the WPForms.com doc article.
+#: pro/wpforms-pro.php:1076
+msgid "Notifications are emails sent when a form is submitted. By default, these emails include entry details. For setup and customization options, including a video overview, please <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">see our tutorial</a>."
+msgstr "Bildirimler, bir form gönderildiğinde gönderilen e-postalardır. Varsayılan haliyle bu e-postalar, girdi ayrıntılarını içerir. Videoya genel bakış dahil olmak üzere, kurulum ve özelleştirme seçenekleri için lütfen <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">eğitim materyalimizi gözden geçirin</a>."
+
+#. translators: 1$s, %2$s - links to the WPForms.com doc articles.
+#: pro/wpforms-pro.php:1091
+msgid "After saving these settings, be sure to <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">test a form submission</a>. This lets you see how emails will look, and to ensure that they <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">are delivered successfully</a>."
+msgstr "Bu ayarları görmeniz sonrasında <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">bir form gönderimi testi</a> yaptığınızdan emin olun. Bu sayede e-postaların nasıl göründüğünü öğrenir ve <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">başarılı bir şekilde gönderildiğinden</a> emin olabilirsiniz."
+
+#: pro/wpforms-pro.php:1113
+msgid "Enable Notifications"
+msgstr "Bildirimleri Etkinleştir"
+
+#: pro/wpforms-pro.php:1121
+msgid "Default Notification"
+msgstr "Varsayılan Bildirim"
+
+#: pro/wpforms-pro.php:1183
+msgid "Clone"
+msgstr "Klonla"
+
+#: pro/wpforms-pro.php:1184
+#: pro/wpforms-pro.php:1566
+#: src/Pro/Admin/Entries/ListTable.php:707
+#: src/Pro/Admin/Entries/ListTable.php:933
+msgid "Delete"
+msgstr "Sil"
+
+#: pro/wpforms-pro.php:1185
+#: pro/wpforms-pro.php:1567
+msgid "Open / Close"
+msgstr "Aç / Kapat"
+
+#: pro/wpforms-pro.php:1197
+#: pro/wpforms-pro.php:1578
+#: src/Pro/Admin/Entries/Edit.php:562
+#: src/Pro/Admin/Entries/ListTable.php:745
+msgid "Edit"
+msgstr "Düzenle"
+
+#: pro/wpforms-pro.php:1208
+msgid "Send To Email Address"
+msgstr "E-Posta Adresine Gönder"
+
+#: pro/wpforms-pro.php:1211
+msgid "Enter the email address to receive form entry notifications. For multiple notifications, separate email addresses with a comma."
+msgstr "Form girdi bildirimleri alacak e-posta adreslerini girin. Birden çok bildirim için e-posta adreslerini virgülle ayırın."
+
+#: pro/wpforms-pro.php:1231
+msgid "CC"
+msgstr "CC"
+
+#: pro/wpforms-pro.php:1233
+msgid "Enter the email address to add it to the carbon copy of the form entry notifications. For multiple notifications, separate email addresses with a comma."
+msgstr "Form girdisi bildirimlerinin karbon kopyasına eklemek için e-posta adresi girin. Birden fazla bildirim için e-posta adreslerini virgülle ayırın."
+
+#: pro/wpforms-pro.php:1254
+msgid "Email Subject Line"
+msgstr "E-posta Konu Satırı"
+
+#. translators: %s - form name.
+#: pro/wpforms-pro.php:1257
+msgid "New Entry: %s"
+msgstr "Yeni Girdi: %s"
+
+#: pro/wpforms-pro.php:1274
+msgid "From Name"
+msgstr "Form Adı"
+
+#: pro/wpforms-pro.php:1308
+msgid "From Email"
+msgstr "Gönderen E-Posta Adresi"
+
+#: pro/wpforms-pro.php:1343
+msgid "Reply-To"
+msgstr "Şuna Yanıtla"
+
+#. translators: %s - <email@example.com>.
+#: pro/wpforms-pro.php:1347
+msgid "Enter the email address or email address with recipient's name in \"First Last %s\" format."
+msgstr "E-posta adresini veya e-posta adresi ve alıcının adını \"Ad Soyad %s\" formatında girin."
+
+#: pro/wpforms-pro.php:1369
+msgid "Email Message"
+msgstr "E-posta Mesajı"
+
+#. translators: %s - all fields smart tag.
+#: pro/wpforms-pro.php:1382
+msgid "To display all form fields, use the %s Smart Tag."
+msgstr "Tüm form alanlarını görüntülemek için %s Akıllı Etiketini kullanın."
+
+#: pro/wpforms-pro.php:1394
+msgid "Send"
+msgstr "Gönder"
+
+#: pro/wpforms-pro.php:1395
+msgid "Don't send"
+msgstr "Gönderme"
+
+#: pro/wpforms-pro.php:1397
+msgid "this notification if"
+msgstr "şu durumda bu bildirimi"
+
+#: pro/wpforms-pro.php:1398
+msgid "Email notifications"
+msgstr "E-posta bildirimleri"
+
+#: pro/wpforms-pro.php:1505
+#: pro/wpforms-pro.php:1613
+msgid "Thanks for contacting us! We will be in touch with you shortly."
+msgstr "Bizimle iletişime geçtiğiniz için teşekkür ederiz! Kısa zaman içerisinde sizinle iletişime geçeceğiz."
+
+#: pro/wpforms-pro.php:1518
+msgid "Confirmations"
+msgstr "Onaylar"
+
+#: pro/wpforms-pro.php:1519
+msgid "Add New Confirmation"
+msgstr "Yeni Doğrulama Ekle"
+
+#: pro/wpforms-pro.php:1524
+msgid "Default Confirmation"
+msgstr "Varsayılan Onay"
+
+#: pro/wpforms-pro.php:1590
+msgid "Confirmation Type"
+msgstr "Doğrulama Türü"
+
+#: pro/wpforms-pro.php:1594
+msgid "Message"
+msgstr "Mesaj"
+
+#: pro/wpforms-pro.php:1595
+msgid "Show Page"
+msgstr "Sayfayı Göster"
+
+#: pro/wpforms-pro.php:1596
+msgid "Go to URL (Redirect)"
+msgstr "URL'ye Git (Yeniden Yönlendirme)"
+
+#: pro/wpforms-pro.php:1611
+#: src/Pro/Admin/Builder/Builder.php:96
+msgid "Confirmation Message"
+msgstr "Doğrulama Mesajı"
+
+#: pro/wpforms-pro.php:1634
+msgid "Automatically scroll to the confirmation message"
+msgstr "Otomatik olarak doğrulama mesajına kay"
+
+#: pro/wpforms-pro.php:1648
+msgid "Confirmation Page"
+msgstr "Doğrulama Sayfası"
+
+#: pro/wpforms-pro.php:1668
+msgid "URL Parameters"
+msgstr ""
+
+#: pro/wpforms-pro.php:1674
+msgid "Add query string parameters to append to the URL when the form is submitted. Separate multiple parameters with an ampersand (&)."
+msgstr ""
+
+#: pro/wpforms-pro.php:1683
+msgid "Confirmation Redirect URL"
+msgstr "Doğrulama Yeniden Yönlendirme URL'si"
+
+#: pro/wpforms-pro.php:1697
+msgid "Open confirmation in new tab"
+msgstr "Onayı yeni sekmede aç"
+
+#: pro/wpforms-pro.php:1731
+msgid "Use"
+msgstr "Kullan"
+
+#: pro/wpforms-pro.php:1732
+msgid "Don't use"
+msgstr "Kullanma"
+
+#: pro/wpforms-pro.php:1734
+msgid "this confirmation if"
+msgstr "şu durumda bu doğrulamayı"
+
+#: pro/wpforms-pro.php:1735
+msgid "Form confirmations"
+msgstr "Form doğrulamaları"
+
+#. translators: %s - WPForms.com announcement page URL.
+#: pro/wpforms-pro.php:1804
+msgid "Conditional logic functionality is now included in the core WPForms plugin! The WPForms Conditional Logic addon can be removed without affecting your forms. For more details <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">read our announcement</a>."
+msgstr "Koşullu mantık işlevi artık çekirdek WPForms eklentisine dahildir! WPForms Koşullu Mantık modülü, formlarınızı herhangi bir şekilde etkilemeden silinebilir. Daha fazla ayrıntı için <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">duyurumuzu okuyabilirsiniz</a>."
+
+#. translators: %s - WPForms.com Account dashboard URL.
+#: pro/wpforms-pro.php:1845
+msgid "Your WPForms license key has expired. In order to continue receiving support and plugin updates you must renew your license key. Please log in to <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">your WPForms.com account</a> to renew your license."
+msgstr "WPForms lisansınızın geçerliliği sona erdi. Destek ve eklenti güncellemelerini almaya devam edebilmek için lisans anahtarınızı yenilemeniz zorunludur. Lisansınızı yenilemek için lütfen <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">WPForms.com hesabınıza</a> giriş yapın."
+
+#: pro/wpforms-pro.php:1965
+msgid "Addon auto-updates controlled by WPForms"
+msgstr "WPForms tarafından kontrol edilen modül otomatik güncellemeleri"
+
+#: pro/wpforms-pro.php:2046
+msgid "Active"
+msgstr "Etkin"
+
+#: pro/wpforms-pro.php:2048
+msgid "Inactive"
+msgstr "Devre dışı"
+
+#: pro/wpforms-pro.php:2049
+msgid "Deactivate"
+msgstr "Etkisizleştir"
+
+#: src/Pro/Access/Capabilities.php:70
+#: src/Pro/Admin/Settings/Access.php:96
+msgid "Create Forms"
+msgstr "Form oluşturma"
+
+#: src/Pro/Access/Capabilities.php:71
+msgid "View Own Forms"
+msgstr "Kendi Formlarınızı Görüntüleyin"
+
+#: src/Pro/Access/Capabilities.php:72
+msgid "View Others' Forms"
+msgstr "Başkalarının Formlarını Görüntüleyin"
+
+#: src/Pro/Access/Capabilities.php:73
+msgid "Edit Own Forms"
+msgstr "Kendi Formlarınızı Düzenleyin"
+
+#: src/Pro/Access/Capabilities.php:74
+msgid "Edit Others' Forms"
+msgstr "Başkalarının Formlarını Düzenleyin"
+
+#: src/Pro/Access/Capabilities.php:75
+msgid "Delete Own Forms"
+msgstr "Kendi Formlarınızı Silin"
+
+#: src/Pro/Access/Capabilities.php:76
+msgid "Delete Others' Forms"
+msgstr "Başkalarının Formlarını Silin"
+
+#: src/Pro/Access/Capabilities.php:78
+msgid "View Own Forms Entries"
+msgstr "Kendi Form Girdilerinizi Görüntüleyin"
+
+#: src/Pro/Access/Capabilities.php:79
+msgid "View Others' Forms Entries"
+msgstr "Başkalarının Form Girdilerini Görüntüleyin"
+
+#: src/Pro/Access/Capabilities.php:80
+msgid "Edit Own Forms Entries"
+msgstr "Kendi Form Girdilerinizi Düzenleyin"
+
+#: src/Pro/Access/Capabilities.php:81
+msgid "Edit Others' Forms Entries"
+msgstr "Başkalarının Form Girdilerini Düzenleyin"
+
+#: src/Pro/Access/Capabilities.php:82
+msgid "Delete Own Forms Entries"
+msgstr "Kendi Form Girdilerinizi Silin"
+
+#: src/Pro/Access/Capabilities.php:83
+msgid "Delete Others' Forms Entries"
+msgstr "Başkalarının Form Girdilerini Silin"
+
+#: src/Pro/Access/File.php:285
+msgid "Sorry, the password you entered is incorrect."
+msgstr "Üzgünüz, girdiğiniz şifre yanlış."
+
+#: src/Pro/Admin/Addons/GoogleSheets.php:100
+msgid "Important Update for Google Sheets Addon Users"
+msgstr "Google E-Tablolar Modülü Kullanıcılar için Önemli Güncelleme"
+
+#. translators: %1$s - Google Sheets Re-Authentication doc link.
+#: src/Pro/Admin/Addons/GoogleSheets.php:103
+msgid "The Google Sheets addon for WPForms will be updated soon. All users who are sending entries to Google Sheets will need to <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">update the addon and re-authenticate their Google connection</a> as soon as version 2.0 becomes available to avoid interruptions in service."
+msgstr "WPForms için Google E-Tablolar modülü yakında güncellenecek. Google E-Tablolar'a girdi gönderen tüm kullanıcıların, hizmette yaşanan kesintileri önlemek için sürüm 2.0 kullanıma sunulur sunulmaz <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">modülü güncellemesi ve Google bağlantılarını yeniden doğrulaması</a> gerekecektir."
+
+#: src/Pro/Admin/Addons/GoogleSheets.php:123
+msgid "Urgent Action Required for Google Sheets Addon Users"
+msgstr "Google E-Tablolar Modülü Kullanıcıları için Acil Eylem Gerekiyor"
+
+#. translators: %1$s - Google Sheets Re-Authentication doc link.
+#: src/Pro/Admin/Addons/GoogleSheets.php:126
+msgid "WPForms Google Sheets addon version 2.0 is now available. All users who are sending entries to Google Sheets need to <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">update the addon and re-authenticate their Google connection</a> as soon as possible to avoid interruptions in service."
+msgstr "WPForms Google E-Tablolar modülünün 2.0 sürümü artık mevcut. Google E-Tablolar'a girdi gönderen tüm kullanıcıların, hizmette kesinti yaşanmaması için mümkün olan en kısa sürede modülü güncellemeleri ve Google bağlantılarını</a> <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">doğrulamaları gerekir."
+
+#: src/Pro/Admin/Builder/AntiSpam.php:47
+msgid "Your keyword filter list has been reformatted. Please save these changes."
+msgstr "Anahtar sözcük filtre listeniz yeniden biçimlendirildi. Lütfen bu değişiklikleri kaydedin."
+
+#: src/Pro/Admin/Builder/Builder.php:52
+msgid " - clone"
+msgstr " - klonla"
+
+#. translators: %1$s - payment provider completed payments. Example: "PayPal Standard completed payments".
+#: src/Pro/Admin/Builder/Builder.php:55
+msgid "<p>You have just enabled this notification for <strong>%1$s</strong>. Please note that this email notification will only send for <strong>%1$s</strong>.</p><p>If you'd like to set up additional notifications for this form, please see our <a href=\"https://wpforms.com/docs/setup-form-notification-wpforms/\" rel=\"nofollow noopener\" target=\"_blank\">tutorial</a>.</p>"
+msgstr "<p>Bu bildirimi <strong>%1$s</strong>için etkinleştirdiniz. Lütfen bu e-posta bildiriminin yalnızca <strong>%1$s</strong> için gönderileceğini unutmayın.</p><p>Bu form için ek bildirimler ayarlamak isterseniz, lütfen <a href=\"https://wpforms.com/docs/setup-form-notification-wpforms/\" rel=\"nofollow noopener\" target=\"_blank\">eğitim materyalimize</a> bakın.</p>"
+
+#. translators: %1$s - payment provider completed payments. Example: "PayPal Standard completed payments", %2$s - disabled Payment provider completed payments.
+#: src/Pro/Admin/Builder/Builder.php:68
+msgid "<p>You have just <strong>disabled</strong> the notification for <strong>%2$s</strong> and <strong>enabled</strong> the notification for <strong>%1$s</strong>. Please note that this email notification will only send for <strong>%1$s</strong>.</p><p>If you'd like to set up additional notifications for this form, please see our <a href=\"https://wpforms.com/docs/setup-form-notification-wpforms/\" rel=\"nofollow noopener\" target=\"_blank\">tutorial</a>.</p>"
+msgstr "<p>Şimdi bildirimleri <strong>%2$s</strong> için <strong>devre dışı</strong> bıraktınız ve <strong>%1$s</strong> için <strong>etkinleştirdiniz</strong>. Lütfen bu e-posta bildiriminin sadece <strong>%1$s</strong>için gönderileceğini unutmayın.</p><p>Bu form için ek bildirimler açmak isterseniz lütfen <a href=\"https://wpforms.com/docs/setup-form-notification-wpforms/\" rel=\"nofollow noopener\" target=\"_blank\">eğitim materyalimize</a> bakın.</p>"
+
+#: src/Pro/Admin/Builder/LicenseAlert.php:132
+msgid "An active license is needed to access new features & addons, plugin updates (including security improvements), and our world class support!"
+msgstr "Yeni özelliklere, modüllere ve eklenti güncellemelerine (güvenlik iyileştirmeleri de dahil) ve dünya sınıfında müşteri desteğimize erişmek için aktif bir lisans gereklidir!"
+
+#: src/Pro/Admin/Builder/LicenseAlert.php:135
+#: src/Pro/Admin/DashboardWidget.php:672
+msgid "Dismiss"
+msgstr "Yoksay"
+
+#: src/Pro/Admin/Builder/LicenseAlert.php:161
+msgid "Heads up! A WPForms license key is required."
+msgstr "Dikkat! Bir WPForms lisans anahtarı gerekiyor."
+
+#: src/Pro/Admin/Builder/LicenseAlert.php:162
+msgid "To create more forms, please verify your WPForms license."
+msgstr "Daha fazla form oluşturmak için lütfen WPForms lisansınızı doğrulayın."
+
+#: src/Pro/Admin/Builder/LicenseAlert.php:163
+#: src/Pro/Admin/Education/StringsTrait.php:57
+#: src/Pro/Admin/Education/StringsTrait.php:81
+msgid "Enter License Key"
+msgstr "Lisans Anahtarını Gir"
+
+#: src/Pro/Admin/Builder/LicenseAlert.php:164
+msgid "Get WPForms Pro"
+msgstr "WPForms Pro'yu Edinin"
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/EntryCsvAttachment.php:149
+msgid "All Fields"
+msgstr "Tüm Alanlar"
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/EntryCsvAttachment.php:206
+msgid "Enable Entry CSV Attachment"
+msgstr "Girdi CSV Eklentisini Etkinleştir"
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/EntryCsvAttachment.php:222
+msgid "File Name"
+msgstr "Dosya Adı"
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/EntryCsvAttachment.php:261
+msgid "Entry Information"
+msgstr "Girdi Bilgisi"
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/EntryCsvAttachment.php:263
+msgid "At least one item must be selected for inclusion in the CSV file."
+msgstr "CSV dosyasına eklemek için en az bir öğenin seçilmiş olması zorunludur."
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:56
+msgid "You do not have any file upload fields"
+msgstr "Herhangi bir dosya yükleme alanınız yok"
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:57
+msgid "Restrictions Enabled"
+msgstr "Kısıtlamalar Etkinleştirildi"
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:81
+msgid "Enable File Upload Attachments"
+msgstr "Dosya Yükleme Eklentilerini Etkinleştir"
+
+#. translators: %s - link to the WPForms.com doc article.
+#: src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:114
+msgid "<strong>Heads up!</strong> Some email providers have limits on attachment file size. If your visitors upload large files, your notifications may not be delivered. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn More</a>"
+msgstr "<strong>Dikkat!</strong> Bazı e-posta sağlayıcıların eklenti dosyası boyutunda sınırlama mevcuttur. Ziyaretçileriniz büyük dosyalar yüklerse bildirimlerinizin gönderilemeyebilir. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Daha Fazlasını Öğrenin</a>"
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:134
+msgid "You allow attaching up to <strong><span class=\"notifications-file-upload-attachment-size\">0</span> MB</strong>"
+msgstr "Şu anda <strong><span class=\"notifications-file-upload-attachment-size\">0</span> MB</strong>'a kadar olan eklemelere izin veriyorsunuz"
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:148
+msgid "File Upload Fields"
+msgstr "Dosya Yükleme Alanları"
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:151
+msgid "Select the file upload field(s) containing the files you’d like to receive as attachments."
+msgstr "Eklenti olarak almak istediğiniz dosyaları içeren dosya yükleme alan(lar)ını seçin."
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/Settings.php:48
+msgid "Field #"
+msgstr "Alan #"
+
+#: src/Pro/Admin/Builder/Notifications/Advanced/Settings.php:104
+msgid "Advanced"
+msgstr "Gelişmiş"
+
+#. translators: %s - payment provider.
+#: src/Pro/Admin/Builder/Payments.php:68
+msgid "<p>One of %s's recurring payment plans doesn't have conditional logic, which means that One-Time Payments will never work and were disabled.</p>"
+msgstr "<p>%s tekrarlanan ödeme planlarından birinde koşullu mantık yok; Tek Seferlik Ödemelerin asla çalışmayacağı ve devre dışı bırakıldığı anlamına gelir.</p>"
+
+#. translators: %s - payment provider.
+#: src/Pro/Admin/Builder/Payments.php:78
+msgid "<p>You should check your settings in <strong>Payments » %s</strong>.</p>"
+msgstr "<p>Ayarlarınızı <strong>Ödemeler » %s</strong> </p>içerisinde gözden geçirmelisiniz."
+
+#: src/Pro/Admin/Builder/Payments.php:91
+msgid "Enter a plan name"
+msgstr "Bir plan adı girin"
+
+#: src/Pro/Admin/Builder/Payments.php:92
+msgid "Eg: Monthly Subscription"
+msgstr "Örn: Aylık Abonelik"
+
+#: src/Pro/Admin/Builder/Payments.php:93
+msgid "Plan Name #{id}"
+msgstr "Plan Adı #{id}"
+
+#: src/Pro/Admin/Builder/Payments.php:94
+msgid "Are you sure you want to delete this recurring plan?"
+msgstr "Bu tekrarlanan planı silmek istediğinizden emin misiniz?"
+
+#: src/Pro/Admin/Builder/Payments.php:95
+msgid "You must provide a plan name."
+msgstr "Bir plan adı sağlamalısınız."
+
+#: src/Pro/Admin/Builder/Settings/Themes.php:50
+#: src/Pro/Integrations/Elementor/Elementor.php:77
+#: src/Pro/Integrations/Gutenberg/FormSelector.php:167
+msgid "Choose a Stock Photo"
+msgstr "Bir Stok Fotoğrafı Seçin"
+
+#: src/Pro/Admin/Builder/Settings/Themes.php:51
+#: src/Pro/Integrations/Elementor/Elementor.php:78
+#: src/Pro/Integrations/Gutenberg/FormSelector.php:168
+msgid "Browse for the perfect image for your form background."
+msgstr "Form arka planınız için mükemmel görsele göz atın."
+
+#: src/Pro/Admin/Builder/Settings/Themes.php:52
+#: src/Pro/Integrations/Elementor/Elementor.php:68
+#: src/Pro/Integrations/Gutenberg/FormSelector.php:158
+msgid "The theme you’ve selected has a background image."
+msgstr "Seçtiğiniz temanın bir arka plan görüntüsü var."
+
+#: src/Pro/Admin/Builder/Settings/Themes.php:53
+#: src/Pro/Integrations/Elementor/Elementor.php:69
+#: src/Pro/Integrations/Gutenberg/FormSelector.php:159
+msgid "In order to use Stock Photos, an image library must be downloaded and installed."
+msgstr "Stok Fotoğraflarını kullanabilmek için bir görsel kütüphanesinin indirilmesi ve yüklenmesi gerekir."
+
+#: src/Pro/Admin/Builder/Settings/Themes.php:54
+#: src/Pro/Integrations/Elementor/Elementor.php:70
+#: src/Pro/Integrations/Gutenberg/FormSelector.php:160
+msgid "It's quick and easy, and you'll only have to do this once."
+msgstr "Hızlı ve kolaydır ve bunu yalnızca bir kez yapmanız gerekir."
+
+#: src/Pro/Admin/Builder/Settings/Themes.php:55
+#: src/Pro/Integrations/Elementor/Elementor.php:71
+#: src/Pro/Integrations/Gutenberg/FormSelector.php:161
+msgid "Continue"
+msgstr "Devam et"
+
+#: src/Pro/Admin/Builder/Settings/Themes.php:57
+#: src/Pro/Integrations/Elementor/Elementor.php:74
+#: src/Pro/Integrations/Gutenberg/FormSelector.php:163
+msgid "Installing"
+msgstr "Kuruluyor"
+
+#: src/Pro/Admin/Builder/Settings/Themes.php:58
+#: src/Pro/Integrations/Elementor/Elementor.php:73
+#: src/Pro/Integrations/Gutenberg/FormSelector.php:164
+msgid "Uh oh!"
+msgstr "Hay aksi!"
+
+#: src/Pro/Admin/Builder/Settings/Themes.php:60
+#: src/Pro/Integrations/Elementor/Elementor.php:76
+#: src/Pro/Integrations/Gutenberg/FormSelector.php:166
+msgid "Something went wrong while performing an AJAX request."
+msgstr "AJAX isteği gerçekleştirirken bir şeyler ters gitti."
+
+#: src/Pro/Admin/DashboardWidget.php:212
+#: src/Pro/Admin/DashboardWidget.php:632
+msgid "Show More"
+msgstr "Daha Fazlasını Göster"
+
+#: src/Pro/Admin/DashboardWidget.php:213
+msgid "Show Less"
+msgstr "Daha Azını Göster"
+
+#: src/Pro/Admin/DashboardWidget.php:215
+#: src/Pro/Admin/DashboardWidget.php:348
+#: src/Pro/Admin/DashboardWidget.php:396
+#: src/Pro/Admin/Entries/Overview/Page.php:347
+msgid "Total Entries"
+msgstr "Toplam Girdi"
+
+#: src/Pro/Admin/DashboardWidget.php:217
+msgid "Form Entries"
+msgstr "Form Girdileri"
+
+#: src/Pro/Admin/DashboardWidget.php:317
+msgid "Sullie the WPForms mascot"
+msgstr "WPForms maskotu Sullie"
+
+#: src/Pro/Admin/DashboardWidget.php:318
+msgid "Create Your First Form to Start Collecting Leads"
+msgstr "Potansiyel Müşterileri Edinmeye Başlamak İçin İlk Formunuzu Oluşturun"
+
+#: src/Pro/Admin/DashboardWidget.php:319
+msgid "You can use WPForms to build contact forms, surveys, payment forms, and more with just a few clicks."
+msgstr "WPForms'u iletişim formları, anketler, ödeme formları ve çok daha fazlasını sadece birkaç tıklamayla oluşturabilmek için kullanabilirsiniz."
+
+#: src/Pro/Admin/DashboardWidget.php:323
+msgid "Create Your Form"
+msgstr "Formunuzu Oluşturun"
+
+#: src/Pro/Admin/DashboardWidget.php:368
+#: src/Pro/Admin/Entries/Overview/Page.php:299
+#: src/Pro/Admin/Entries/Overview/Table.php:329
+msgid "Reset chart to display all forms"
+msgstr "Tüm formları görüntülemek için çizelgeyi sıfırlayın"
+
+#: src/Pro/Admin/DashboardWidget.php:443
+msgid "No entries for selected period."
+msgstr "Seçilen dönem için hiçbir girdi yok."
+
+#: src/Pro/Admin/DashboardWidget.php:585
+#: src/Pro/Admin/Entries/Overview/Table.php:333
+msgid "Display only this form data in the graph"
+msgstr "Grafikteki yalnızca bu form verisini görüntüleyin"
+
+#: src/Pro/Admin/DashboardWidget.php:589
+msgid "Reset graph to display all forms"
+msgstr "Tüm formları görüntülemek için grafiği sıfırlayın"
+
+#: src/Pro/Admin/DashboardWidget.php:631
+msgid "Show all forms"
+msgstr "Tüm formları görüntüle"
+
+#: src/Pro/Admin/DashboardWidget.php:661
+msgid "Recommended Plugin:"
+msgstr "Tavsiye Edilen Eklenti:"
+
+#: src/Pro/Admin/DashboardWidget.php:666
+msgid "Install"
+msgstr "Yükle"
+
+#: src/Pro/Admin/DashboardWidget.php:702
+#: src/Pro/Admin/Entries/Overview/Page.php:349
+msgid "No entries for selected period"
+msgstr "Seçilen dönem için hiçbir girdi yok"
+
+#: src/Pro/Admin/DashboardWidget.php:703
+#: src/Pro/Admin/Entries/Overview/Page.php:350
+msgid "Please select a different period or check back later."
+msgstr "Lütfen farklı bir dönem seçin veya daha sonra tekrar kontrol edin."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:94
+msgid "You can capture email addresses from partial form entries to get more leads. Abandoned cart emails have an average open rate of 45%!"
+msgstr "Daha fazla potansiyel müşteri elde etmek için kısmen doldurulmuş form girdilerinden e-posta adreslerini alabilirsiniz. Terk edilmiş sepet e-postalarının %45 gibi bir ortalama açılma oranı vardır!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:99
+msgid "You can easily integrate your forms with 7,000+ useful apps by using WPForms + Zapier."
+msgstr "WPForms + Zapier kullanarak formlarınızı 7.000'den fazla kullanışlı uygulamayla kolayca entegre edebilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:104
+msgid "You can integrate your forms to automatically send entries to your most used apps. Perfect for users of Salesforce, Slack, Trello, and 7,000+ others."
+msgstr "Girdileri en çok kullandığınız uygulamalara otomatik olarak göndermek için formlarınızı entegre edebilirsiniz. Salesforce, Slack, Trello ve 7.000'den fazla kullanıcı için mükemmel."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:109
+msgid "You can make distraction-free and custom landing pages in WPForms! Perfect for getting more leads."
+msgstr "WPForms ile dikkat dağıtıcı unsurlar içermeen ve özelleştirilmiş açılış sayfaları oluşturabilirsiniz! Daha fazla potansiyel müşteri edinmek için harikadır."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:114
+msgid "You can build and customize your own professional-looking landing page. A great alternative to Google Forms!"
+msgstr "Kendi profesyonel görünümlü açılış sayfanızı oluşturup özelleştirebilirsiniz. Google Forms'a harika bir alternatiftir!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:119
+msgid "You don’t have to build your forms from scratch. The Form Templates Pack addon gives you access to 150+ additional templates."
+msgstr "Formlarınızı sıfırdan oluşturmak zorunda değilsiniz. Form Şablonları Paketi modülü, 150'nin üzerinde ek şablona erişiminizi sağlar."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:124
+msgid "You can password-protect your forms. Perfect for collecting reviews or success stories from customers!"
+msgstr "Formlarınızı şifreli koruma altına alabilirsiniz. Müşterilerden yorumları ve başarı hikayelerini toplamak için mükemmeldir!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:129
+msgid "You can automatically close a form at a specific date and time. Great for applications!"
+msgstr "Belirli bir tarih ve saatte formu otomatik olarak kapatabilirsiniz. Uygulamalar için harikadır!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:134
+msgid "You can generate more fresh content for your website for free by accepting guest blog posts."
+msgstr "Misafir blog gönderilerini kabul ederek web siteniz için ücretsiz olarak daha fazla taze içerik oluşturabilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:139
+msgid "You can easily add a field to your forms that let users draw their signature then saves it as an image with their entry."
+msgstr "Kullanıcıların imzalarını çizip girdileriyle birlikte bir görsel olarak kaydetmelerine izin veren bir alanı formlarınıza kolayca ekleyebilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:144
+msgid "You can set up your forms to let your site visitors pick which payment method they want to use."
+msgstr "Formlarınızı, site ziyaretçilerinizin kullanmak istedikleri ödeme yöntemlerini seçmelerine izin verecek şekilde düzenleyebilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:149
+msgid "You can increase your revenue by accepting recurring payments on your forms."
+msgstr "Formlarınızda tekrar eden ödemeleri kabul ederek gelirinizi artırabilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:154
+msgid "For added insight into your customers, you can collect your user's city, state, and country behind-the-scenes with Geolocation!"
+msgstr "Müşterilerinizle ilgili daha fazla bilgi edinmek için kullanıcılarınızın şehir, eyalet ve ülkelerini, perde arkasından Konum Belirleme sayesinde elde edebilirsiniz!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:159
+msgid "You can let people automatically register as users on your WordPress site. Perfect for things like accepting guest blog posts!"
+msgstr "WordPress sitenizde kişilerin otomatik bir şekilde kullanıcı olarak kaydolmasına izin verebilirsiniz. Ziyaretçi blog gönderilerini kabul etmek gibi şeyler için harikadır!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:164
+msgid "You can limit one form submission per person to avoid duplicate entries. Perfect for applications and giveaway!"
+msgstr "Yinelenen girdilerden kaçınmak için kişi başına bir form gönderimi sınırlaması getirebilirsiniz. Uygulamalar ve çekilişler için mükemmeldir!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:169
+msgid "You can use NPS Surveys to learn about your visitors. A tactic used by some of the biggest brands around!"
+msgstr "Ziyaretçileriniz hakkında daha fazla bilgi almak için NPS Anketlerini kullanabilirsiniz. Bu, piyasadaki en büyük markalardan bazıları tarafından kullanılan bir taktiktir!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:174
+msgid "If you're planning an event, you can create an RSVP form to stay organized and get higher response rates!"
+msgstr "Bir etkinlik planlıyorsanız organize halde kalmak ve daha yüksek yanıt oranları almak için RSVP formu oluşturabilirsiniz!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:179
+msgid "With the Offline Forms addon, you can save data entered into your forms even if the user loses their internet connection."
+msgstr "Çevrim Dışı Formlar modülü ile kullanıcınızın internet bağlantısının kesilmesi durumunda bile formlarınıza girilen verileri kaydedebilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:184
+msgid "You can accept PayPal on your website — a great way to increase your revenue."
+msgstr "Web sitenizde PayPal'ı kabul edebilirsiniz — gelirinizi artırmanın harika bir yoludur."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:189
+msgid "You can make money selling digital downloads on your site by using Stripe or PayPal."
+msgstr "Stripe veya PayPal'ı kullanarak sitenizde dijital indirilebilir ürünler satarak para kazanabilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:194
+msgid "You can create a simple order form on your site to sell services or products online."
+msgstr "Çevrim içi olarak ürün ve hizmetler satmak için sitenizde basit bir sipariş formu oluşturabilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:199
+msgid "You can create surveys or polls and see interactive visual reports of your user's answers."
+msgstr "Anketler ve kısa oylamalar oluşturarak kullanıcılarınızın etkileşimli görsel raporlarını görebilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:204
+msgid "You can add a customer feedback form to your site. Try automatically emailing it out after a sale!"
+msgstr "Sitenize bir müşteri geri bildirim formu ekleyebilirsiniz. Bunu bir satış sonrasında otomatik olarak e-posta ile göndermeyi deneyin!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:209
+msgid "You can add a Likert rating scale to your WordPress forms. Great for measuring your customer’s experience with your business!"
+msgstr "WordPress formlarınıza bir Likert puan ölçeği ekleyebilirsiniz. Müşterilerinizin işletmenizle deneyimini ölçmenin harika bir yoludur!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:214
+msgid "You can easily add a poll to your site! Helpful for making business decisions based on your audience's needs."
+msgstr "Sitenize kolayca kısa oylama ekleyebilirsiniz! Hedef kitlenizin ihtiyaçlarına bağlı iş kararları almak için oldukça işe yarar."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:219
+msgid "You can create a customer cancellation survey to find out what you can do to improve."
+msgstr "Hangi noktaları iyileştirebileceğinizi öğrenmek için bir müşteri iptal anketi oluşturabilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:224
+msgid "WPForms is a great alternative to SurveyMonkey! You can create your first survey or poll today."
+msgstr "WPForms, SurveyMonkey'e harika bir alternatiftir! İlk anketinizi veya kısa oylamanızı bugün oluşturabilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:229
+msgid "You can make your forms interactive and easier to complete. A great way to get more leads!"
+msgstr "Formlarınızı interaktif ve tamamlanması daha kolay hale getirebilirsiniz. Daha fazla potansiyel müşteri edinmenin harika bir yoludur!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:234
+msgid "You can easily display survey results graphically. Great for presentations!"
+msgstr "Anket sonuçlarını kolayca grafiksel olarak görüntüleyebilirsiniz. Sunumlar için harikadır!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:239
+msgid "You can make your forms feel like a one-on-one conversation and boost conversion rates."
+msgstr "Formlarınızı birebir konuşmalar gibi hissettirebilir ve dönüşüm oranlarınızı bu şekilde arttırabilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:244
+msgid "You can put a pre-built job application form on your website. Perfect if you’re looking for new employees!"
+msgstr "Web sitenize önceden oluşturulmuş bir iş başvuru formu koyabilirsiniz. Yeni çalışanlar arıyorsanız bu tam size göre!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:249
+msgid "You can automatically send form entries to your Google Calendar. Perfect for appointments!"
+msgstr "Form girdilerini Google Takvim'e otomatik olarak gönderebilirsiniz. Randevular için harikadır!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:254
+msgid "You can automatically send uploaded files from your form entries to Dropbox for safekeeping and organization!"
+msgstr "Form girdilerinizden yüklenen dosyaları güvende tutmak ve organizasyon için Dropbox'a otomatik olarak gönderebilirsiniz!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:259
+msgid "When a user submits an uploaded file to your form, it can upload automatically to your Google Drive for better organization!"
+msgstr "Bir kullanıcı, formunuza dosya yüklediğinde, daha iyi organizasyon için bu otomatik olarak Google Drive'ınıza yüklenebilir!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:264
+msgid "You can get notified via text when someone completes your form! Great for closing deals faster."
+msgstr "Birileri formunuzu doldurduğunda metin mesajıyla bildirim alabilirsiniz! Satış sürecini daha hızlı tamamlamak için harikadır."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:269
+msgid "Save time on invoicing! You can automatically add customers to Quickbooks after they complete a form."
+msgstr "Faturalandırmada zamandan tasarruf edin! Müşterileriniz formu doldurduktan sonra müşterilerinizi otomatik olarak Quickbooks'a ekleyebilirsiniz."
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:274
+msgid "You can let users upload videos to your YouTube channel. Perfect for collecting testimonials!"
+msgstr "Kullanıcılarınızın YouTube kanalınıza videolar yüklemesine izin verebilirsiniz. Deneyimleri toplamak için harikadır!"
+
+#: src/Pro/Admin/Education/Admin/DidYouKnow.php:279
+msgid "You can automatically save submitted form info in a free Google Sheets spreadsheet. Great for keeping track of your entries!"
+msgstr "Gönderilmiş formu ücretsiz bir Google E-Tablolar tablosuna otomatik olarak kaydedebilirsiniz. Girdilerinizi takip etmenin harika bir yoludur!"
+
+#: src/Pro/Admin/Education/Admin/Settings/Integrations.php:37
+msgid "Almost done! Would you like to refresh the page?"
+msgstr "Neredeyse tamamlandı! Sayfayı yenilemek ister misiniz?"
+
+#: src/Pro/Admin/Education/Admin/Settings/Integrations.php:38
+msgid "Refresh page"
+msgstr "Sayfayı yenile"
+
+#. translators: %s - field name.
+#: src/Pro/Admin/Education/Builder/Fields.php:171
+msgid "%s field"
+msgstr "%s alanı"
+
+#. translators: %s - addon name.
+#: src/Pro/Admin/Education/Builder/Fields.php:181
+msgid "%s addon"
+msgstr "%s modülü"
+
+#. translators: %s - WPForms.com announcement page URL.
+#: src/Pro/Admin/Education/Builder/Fields.php:282
+msgid "They will not be present in the published form. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Upgrade now</a> to unlock these features."
+msgstr "Yayınlanan formda yer almayacaklar. Bu özelliklerin kilidini açmak için <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">şimdi yükseltin</a>."
+
+#: src/Pro/Admin/Education/Builder/Fields.php:297
+msgid "They will still be visible in the form preview, but will not be present in the published form."
+msgstr "Bunlar form ön izlemede görünür olacak, ancak yayınlanan formda mevcut olmayacak."
+
+#: src/Pro/Admin/Education/Builder/Fields.php:302
+msgid "Your Form Contains Fields From Inactive Addons"
+msgstr "Formunuz Etkin Olmayan Modüllerden Alanlar İçeriyor"
+
+#: src/Pro/Admin/Education/Builder/Fields.php:309
+msgid "Your Form Contains Fields From Incompatible Addons"
+msgstr "Formunuz Uyumsuz Modüllerden Alanlar İçeriyor"
+
+#. translators: %1$s - addon download URL, %2$s - link to manual installation guide, %3$s - link to contact support.
+#: src/Pro/Admin/Education/StringsTrait.php:25
+msgid "Could not install the addon. Please <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">download it from wpforms.com</a> and <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">install it manually</a>, or <a href=\"%3$s\" target=\"_blank\" rel=\"noopener noreferrer\">contact support</a> for assistance."
+msgstr "Modül yüklenemedi. Lütfen <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">wpforms.com'dan indirin</a> ve <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">manuel olarak yükleyin</a> veya yardım için <a href=\"%3$s\" target=\"_blank\" rel=\"noopener noreferrer\">destek birimiyle iletişime geçin</a>."
+
+#: src/Pro/Admin/Education/StringsTrait.php:40
+msgid "Incompatible Addon"
+msgstr "Uyumsuz Modül"
+
+#: src/Pro/Admin/Education/StringsTrait.php:41
+msgid "Check for Update"
+msgstr "Güncellemeleri Kontrol Et"
+
+#: src/Pro/Admin/Education/StringsTrait.php:56
+msgid "To access the %name%, please enter and activate your WPForms license key in the plugin settings."
+msgstr "%name% üzerinde düzenlemeler yapmak için lütfen eklenti ayarları içerisinden WPForms lisans anahtarınızı girin ve etkinleştirin."
+
+#: src/Pro/Admin/Education/StringsTrait.php:63
+msgid "To access the %name%, please enter your WPForms license key."
+msgstr "%name% erişimi için lütfen WPForms lisans anahtarınızı girin."
+
+#. translators: %s - WPForms.com account licenses page URL.
+#: src/Pro/Admin/Education/StringsTrait.php:67
+msgid "Your key can be found inside the <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">WPForms.com Account Dashboard</a>."
+msgstr "Anahtarınız <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">WPForms.com Hesap Panosu</a> içerisinden bulunabilir."
+
+#: src/Pro/Admin/Education/StringsTrait.php:78
+msgid "Your license was activated"
+msgstr "Lisansınız etkinleştirildi"
+
+#: src/Pro/Admin/Education/StringsTrait.php:79
+msgid "All templates and fields will be available once the form builder is reloaded."
+msgstr "Form oluşturucu yeniden yüklendiğinde tüm şablonlar ve alanlar kullanılabilir olacaktır."
+
+#: src/Pro/Admin/Education/StringsTrait.php:80
+msgid "Would you like to save and reload now?"
+msgstr "Şimdi kaydedip tekrar yüklemek ister misiniz?"
+
+#: src/Pro/Admin/Education/StringsTrait.php:82
+msgid "Activate License"
+msgstr "Lisansı Etkinleştir"
+
+#: src/Pro/Admin/Education/StringsTrait.php:84
+msgid "Yes, Save and Reload"
+msgstr "Evet, Kaydet ve Yeniden Yükle"
+
+#: src/Pro/Admin/Education/StringsTrait.php:90
+msgid "Your WPForms license is expired. To access the %name%, please renew your license."
+msgstr "WPForms lisansınızın geçerliliği sona erdi. %name% erişimi için lütfen lisansınızı yenileyin."
+
+#: src/Pro/Admin/Education/StringsTrait.php:96
+msgid "Your WPForms license is not active. To access the %name%, please contact support for more details."
+msgstr "WPForms lisansınız aktif değil. %name% erişimi amacıyla daha fazla ayrıntı için lütfen destekle iletişime geçin."
+
+#: src/Pro/Admin/Entries/Ajax/Columns.php:83
+msgid "Cannot save columns order."
+msgstr "Sütun sırası kaydedilemiyor."
+
+#: src/Pro/Admin/Entries/Ajax/Columns.php:100
+msgid "Most likely, your session expired. Please reload the page."
+msgstr "Büyük olasılıkla oturumunuz sona erdi. Lütfen sayfayı yeniden yükleyin."
+
+#: src/Pro/Admin/Entries/Ajax/Columns.php:104
+msgid "Form ID is missing."
+msgstr "Form kimliği eksik."
+
+#: src/Pro/Admin/Entries/Ajax/Columns.php:111
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1650
+msgid "You are not allowed to perform this action."
+msgstr "Bu eylemi gerçekleştirme izniniz yok."
+
+#: src/Pro/Admin/Entries/Edit.php:398
+#: src/Pro/Admin/Entries/Edit.php:1089
+msgid "Update"
+msgstr "Güncelle"
+
+#: src/Pro/Admin/Entries/Edit.php:399
+msgid "Success"
+msgstr "Başarılı"
+
+#: src/Pro/Admin/Entries/Edit.php:400
+msgid "Continue Editing"
+msgstr "Düzenlemeye Devam Et"
+
+#: src/Pro/Admin/Entries/Edit.php:402
+msgid "The entry was successfully saved."
+msgstr "Girdi başarılı bir şekilde kaydedildi."
+
+#. translators: %s - file name.
+#: src/Pro/Admin/Entries/Edit.php:404
+msgid "Are you sure you want to permanently delete the file \"%s\"?"
+msgstr "\"%s\" dosyasını kalıcı şekilde silmek istediğinizden emin misiniz?"
+
+#: src/Pro/Admin/Entries/Edit.php:453
+msgid "You can't edit this entry because it's in the trash."
+msgstr "Çöp kutusunda olduğu için bu kaydı düzenleyemezsiniz."
+
+#: src/Pro/Admin/Entries/Edit.php:606
+#: src/Pro/Admin/Entries/Edit.php:664
+msgid "Edit Entry"
+msgstr "Girdiyi Düzenle"
+
+#: src/Pro/Admin/Entries/Edit.php:611
+msgid "Back to Entry"
+msgstr "Girdiye Geri Dön"
+
+#: src/Pro/Admin/Entries/Edit.php:704
+msgid "Show Empty Fields"
+msgstr "Boş alanları göster"
+
+#: src/Pro/Admin/Entries/Edit.php:704
+msgid "Hide Empty Fields"
+msgstr "Boş alanları gizle"
+
+#. translators: %d - field ID.
+#: src/Pro/Admin/Entries/Edit.php:972
+#: src/Pro/Forms/Fields/EntryPreview/Field.php:879
+msgid "Field ID #%d"
+msgstr "Alan No #%d"
+
+#. translators: %s - form edit URL.
+#: src/Pro/Admin/Entries/Edit.php:1054
+msgid "You don't have any fields in this form. <a href=\"%s\">Add some!</a>"
+msgstr "Bu formda herhangi bir alanınız yok. <a href=\"%s\">Birkaç alan ekleyin!</a>"
+
+#: src/Pro/Admin/Entries/Edit.php:1064
+msgid "You don't have any fields in this form."
+msgstr "Bu formda herhangi bir alanınız yok."
+
+#: src/Pro/Admin/Entries/Edit.php:1106
+#: src/Pro/Admin/Entries/Edit.php:1147
+msgid "Invalid form."
+msgstr "Geçersiz form."
+
+#: src/Pro/Admin/Entries/Edit.php:1110
+msgid "Invalid Entry."
+msgstr "Geçersiz Girdi."
+
+#: src/Pro/Admin/Entries/Edit.php:1114
+#: src/Pro/Admin/Entries/Page.php:353
+#: src/Pro/Admin/Entries/Page.php:433
+msgid "You do not have permission to perform this action."
+msgstr "Bu eylemi gerçekleştirmek için gereken izne sahip değilsiniz."
+
+#: src/Pro/Admin/Entries/Edit.php:1156
+msgid "Invalid entry."
+msgstr "Geçersiz girdi."
+
+#: src/Pro/Admin/Entries/Edit.php:1195
+msgid "Entry has not been saved, please see the fields errors."
+msgstr "Girdi kaydedilmedi, lütfen alanlarla ilgili hataları inceleyin."
+
+#: src/Pro/Admin/Entries/Edit.php:1296
+msgid "Entry edited."
+msgstr "Girdi düzenlendi."
+
+#. translators: %s - name of the file that has been deleted.
+#: src/Pro/Admin/Entries/Edit.php:1712
+msgid "The uploaded file \"%s\" has been deleted."
+msgstr "Yüklenen dosya \"%s\" silindi."
+
+#: src/Pro/Admin/Entries/Export/Admin.php:64
+msgid "Export Entries"
+msgstr "Girdileri Dışa Aktar"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:66
+msgid "Select a form to export entries, then select the fields you would like to include. You can also define search and date filters to further personalize the list of entries you want to retrieve. WPForms will generate a downloadable CSV/XLSX file of your entries."
+msgstr "Girdileri dışa aktarmak için bir form seçin, sonrasında dahil etmek istediğiniz alanları seçin. Geri getirmek istediğiniz girdiler listesini daha ileri seviyede kişiselleştirmek için arama ve tarih filtrelerini de tanımlayabilirsiniz. WPForms tarafından girdilerinizin bir CSV/XLSX indirilebilir dosyası oluşturulacaktır."
+
+#: src/Pro/Admin/Entries/Export/Admin.php:80
+#: src/Pro/Admin/Entries/Page.php:1060
+msgid "Form Fields"
+msgstr "Form Alanları"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:88
+msgid "Payment Fields"
+msgstr "Ödeme Alanları"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:96
+msgid "Additional Information"
+msgstr "Ek Bilgiler"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:103
+msgid "Custom Date Range"
+msgstr "Özel Tarih Aralığı"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:110
+#: src/Pro/Admin/Entries/ListTable.php:860
+msgid "Select a date range"
+msgstr "Bir tarih aralığı seçin"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:115
+msgid "Clear Start Date"
+msgstr "Başlangıç ​​Tarihini Temizle"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:125
+#: src/Pro/Admin/Entries/Page.php:969
+msgid "Search"
+msgstr "Ara"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:132
+msgid "Download Export File"
+msgstr "Dışa Aktarım Dosyasını İndir"
+
+#. translators: %1$s - link to the WPForms.com doc article.
+#: src/Pro/Admin/Entries/Export/Admin.php:166
+msgid "If you need to export entries on a regular basis, you can now automate this process. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn More</a>"
+msgstr "Girdileri düzenli olarak dışa aktarmanız gerekiyorsa, artık bu işlemi otomatikleştirebilirsiniz. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Daha Fazla Bilgi Edinin</a>"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:181
+msgid "Dismiss this notice."
+msgstr "Bu bildirimi yok sayın."
+
+#: src/Pro/Admin/Entries/Export/Admin.php:234
+msgid "Select a Form"
+msgstr "Bir Form Seçin"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:251
+msgid "You need to have at least one form before you can use entries export."
+msgstr "Girdi dışa aktarmayı kullanmadan önce en azından bir formunuzun olması gerekmektedir."
+
+#: src/Pro/Admin/Entries/Export/Admin.php:276
+msgid "Status"
+msgstr "Durum"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:400
+msgid "Export Options"
+msgstr "Dışa Aktarma Seçenekleri"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:450
+#: src/Pro/Admin/Entries/ListTable.php:1795
+msgid "Form fields"
+msgstr "Form alanları"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:451
+#: src/Pro/Admin/Entries/ListTable.php:1796
+msgid "Any form field"
+msgstr "Herhangi bir form alanı"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:473
+msgid "Payment fields"
+msgstr "Ödeme alanları"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:479
+msgid "No payment fields found"
+msgstr "Ödeme alanı bulunamadı"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:501
+#: src/Pro/Admin/Entries/ListTable.php:1811
+msgid "Advanced Options"
+msgstr "Gelişmiş Seçenekler"
+
+#: src/Pro/Admin/Entries/Export/Admin.php:618
+#: src/Pro/Admin/Entries/Export/Export.php:214
+msgid "Select All"
+msgstr "Tümünü Seç"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:380
+#: src/Pro/Admin/Entries/Export/Ajax.php:569
+#: src/Pro/Admin/Entries/Export/Ajax.php:1355
+#: src/Pro/Admin/Entries/Export/Ajax.php:1458
+msgid " (modified)"
+msgstr " (değiştirildi)"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:602
+msgid "Checked"
+msgstr "Kontrol edildi"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:862
+msgid "Yes"
+msgstr "Evet"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:862
+msgid "No"
+msgstr "Hayır"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1008
+msgid "Map"
+msgstr "Harita"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1026
+msgid "Postal"
+msgstr "Posta Kodu"
+
+#. translators: %d - deleted field ID.
+#: src/Pro/Admin/Entries/Export/Ajax.php:1136
+msgid "Deleted field #%d"
+msgstr "Silinen alan #%d"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1197
+msgid "Total"
+msgstr "Toplam"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1198
+msgid "Currency"
+msgstr "Para Birimi"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1199
+msgid "Gateway"
+msgstr "Geçit"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1200
+#: src/Pro/Admin/Entries/Export/Export.php:156
+msgid "Type"
+msgstr "Tür"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1201
+msgid "Mode"
+msgstr "Mod"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1202
+msgid "Transaction"
+msgstr "İşlem"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1203
+msgid "Customer"
+msgstr "Müşteri"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1204
+msgid "Subscription"
+msgstr "Abonelik"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1205
+msgid "Subscription Status"
+msgstr "Abonelik Durumu"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1240
+msgid "Payment Note"
+msgstr "Ödeme Notu"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1241
+msgid "Subscription Period"
+msgstr "Abonelik Dönemi"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1357
+msgid "File"
+msgstr "Dosya"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1373
+#: src/Pro/Admin/Entries/Export/Ajax.php:1377
+msgid "First"
+msgstr "Ad"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1374
+#: src/Pro/Admin/Entries/Export/Ajax.php:1379
+msgid "Last"
+msgstr "Soyad"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1378
+msgid "Middle"
+msgstr "İkinci Ad"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1385
+msgid "Address Line 1"
+msgstr "Adres Satırı 1"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1386
+msgid "Address Line 2"
+msgstr "Adres Satırı 2"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1387
+msgid "City"
+msgstr "Şehir"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1388
+msgid "State"
+msgstr "Eyalet"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1389
+msgid "Zip/Postal Code"
+msgstr "Zip/Posta Kodu"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1396
+msgid "Value"
+msgstr "Değer"
+
+#: src/Pro/Admin/Entries/Export/Ajax.php:1397
+msgid "Quantity"
+msgstr "Miktar"
+
+#: src/Pro/Admin/Entries/Export/Export.php:153
+#: src/Pro/Admin/Entries/Helpers.php:22
+#: src/Pro/Admin/Entries/Table/Facades/Columns.php:137
+#: src/Pro/SmartTags/SmartTags.php:26
+msgid "Entry ID"
+msgstr "Girdi Numarası"
+
+#: src/Pro/Admin/Entries/Export/Export.php:154
+#: src/Pro/SmartTags/SmartTags.php:27
+msgid "Entry Date"
+msgstr "Girdi Tarihi"
+
+#: src/Pro/Admin/Entries/Export/Export.php:155
+#: src/Pro/Admin/Entries/Helpers.php:23
+#: src/Pro/Admin/Entries/Table/Facades/Columns.php:141
+msgid "Entry Notes"
+msgstr "Girdi Notları"
+
+#: src/Pro/Admin/Entries/Export/Export.php:157
+msgid "Viewed"
+msgstr "Görüntülendi"
+
+#: src/Pro/Admin/Entries/Export/Export.php:158
+#: src/Pro/Admin/Entries/ListTable.php:260
+msgid "Starred"
+msgstr "Yıldızla işaretlendi"
+
+#: src/Pro/Admin/Entries/Export/Export.php:159
+#: src/Pro/Admin/Entries/Helpers.php:25
+#: src/Pro/Admin/Entries/Table/Facades/Columns.php:154
+msgid "User Agent"
+msgstr "Kullanıcı Aracısı"
+
+#: src/Pro/Admin/Entries/Export/Export.php:160
+#: src/Pro/Admin/Entries/Table/Facades/Columns.php:151
+msgid "User IP"
+msgstr "Kullanıcı IP'si"
+
+#: src/Pro/Admin/Entries/Export/Export.php:161
+msgid "Unique Generated User ID"
+msgstr "Eşsiz Oluşturulmuş Kullanıcı No"
+
+#: src/Pro/Admin/Entries/Export/Export.php:162
+msgid "Payment Status"
+msgstr "Ödeme Durumu"
+
+#: src/Pro/Admin/Entries/Export/Export.php:163
+msgid "Payment Gateway Information"
+msgstr "Ödeme Geçidi Bilgisi"
+
+#: src/Pro/Admin/Entries/Export/Export.php:164
+msgid "Include data of previously deleted fields"
+msgstr "Önceden silinmiş alanların verilerini dahil et"
+
+#: src/Pro/Admin/Entries/Export/Export.php:168
+msgid "Geolocation Details"
+msgstr "Konum Belirleme Ayrıntıları"
+
+#: src/Pro/Admin/Entries/Export/Export.php:185
+msgid "Export in Microsoft Excel (.xlsx)"
+msgstr "Microsoft Excel (.xlsx) olarak Dışa Aktar"
+
+#: src/Pro/Admin/Entries/Export/Export.php:188
+msgid "Separate dynamic choices into individual columns"
+msgstr "Dinamik seçenekleri ayrı sütunlara ayırın"
+
+#: src/Pro/Admin/Entries/Export/Export.php:198
+msgid "There were problems while preparing your export file. Please recheck export settings and try again."
+msgstr "Dışa aktarma dosyanızı oluştururken problemler oluştu. Lütfen dışa aktarma ayarlarınızı tekrar kontrol edin ve tekrar deneyin."
+
+#: src/Pro/Admin/Entries/Export/Export.php:199
+msgid "You don't have enough capabilities to complete this request."
+msgstr "Bu isteği tamamlamak için yeterli yetkinliğiniz yok."
+
+#: src/Pro/Admin/Entries/Export/Export.php:200
+msgid "Incorrect form ID has been specified."
+msgstr "Yanlış form no belirtilmiş."
+
+#: src/Pro/Admin/Entries/Export/Export.php:201
+msgid "Incorrect entry ID has been specified."
+msgstr "Yanlış girdi no belirtilmiş."
+
+#: src/Pro/Admin/Entries/Export/Export.php:202
+msgid "Specified form seems to be broken."
+msgstr "Belirtilen form bozuk görünüyor."
+
+#: src/Pro/Admin/Entries/Export/Export.php:203
+msgid "Unknown request."
+msgstr "Bilinmeyen istek."
+
+#: src/Pro/Admin/Entries/Export/Export.php:204
+msgid "Export file cannot be retrieved from a file system."
+msgstr "Dışa aktarma dosyası bir dosya sisteminden alınamıyor."
+
+#: src/Pro/Admin/Entries/Export/Export.php:205
+msgid "Export file is empty."
+msgstr "Dışa aktarma dosyası boş."
+
+#: src/Pro/Admin/Entries/Export/Export.php:206
+msgid "The form does not have any fields for export."
+msgstr "Formda dışa aktarmak için herhangi bir alan yok."
+
+#: src/Pro/Admin/Entries/Export/Export.php:207
+msgid "File system is not configured."
+msgstr "Dosya sistemi yapılandırılmamış."
+
+#: src/Pro/Admin/Entries/Export/Export.php:215
+msgid "Generating a list of entries according to your filters."
+msgstr "Filtrelerinize göre girdilerin bir listesi oluşturuluyor."
+
+#: src/Pro/Admin/Entries/Export/Export.php:216
+msgid "This can take a while. Please wait."
+msgstr "Bu biraz süre alabilir. Lütfen bekleyin."
+
+#: src/Pro/Admin/Entries/Export/Export.php:217
+msgid "No entries found after applying your filters."
+msgstr "Filtreleriniz uygulandıktan sonra herhangi bir girdi bulunamadı."
+
+#: src/Pro/Admin/Entries/Export/Export.php:218
+msgid "The file was generated successfully."
+msgstr "Dosya başarılı bir şekilde oluşturuldu."
+
+#: src/Pro/Admin/Entries/Export/Export.php:219
+msgid "If the download does not start automatically"
+msgstr "İndirmenin otomatik olarak başlamaması halinde"
+
+#: src/Pro/Admin/Entries/Export/Export.php:220
+msgid "click here"
+msgstr "buraya tıklayın"
+
+#. translators: %d - dynamic columns count.
+#: src/Pro/Admin/Entries/Export/Traits/Export.php:25
+msgid "This form has %d dynamic columns. Exporting dynamic columns will increase the size of the exported table."
+msgstr "Bu formda %d dinamik sütun var. Dinamik sütunların dışa aktarılması, dışa aktarılan tablonun boyutunu artıracaktır."
+
+#: src/Pro/Admin/Entries/Export/Traits/Export.php:172
+msgid "Published"
+msgstr "Yayınlandı"
+
+#: src/Pro/Admin/Entries/Helpers.php:24
+msgid "IP Address"
+msgstr "IP Adresi"
+
+#: src/Pro/Admin/Entries/ListTable.php:234
+msgid "All"
+msgstr "Tümü"
+
+#: src/Pro/Admin/Entries/ListTable.php:240
+msgid "Unread"
+msgstr "Okunmadı"
+
+#: src/Pro/Admin/Entries/ListTable.php:252
+#: src/Pro/Admin/Entries/Table/Facades/Columns.php:165
+msgid "Payment"
+msgid_plural "Payments"
+msgstr[0] "Ödeme"
+msgstr[1] "Ödemeler"
+
+#: src/Pro/Admin/Entries/ListTable.php:306
+#: src/Pro/Admin/Entries/ListTable.php:767
+msgid "Trash"
+msgstr "Çöp Kutusuna Taşı"
+
+#: src/Pro/Admin/Entries/ListTable.php:450
+msgid "The payment in the Trash."
+msgstr "Ödeme Çöp Kutusunda."
+
+#. translators: date and time separator.
+#: src/Pro/Admin/Entries/ListTable.php:556
+msgid "at"
+msgstr "saat"
+
+#: src/Pro/Admin/Entries/ListTable.php:643
+msgid "Unstar entry"
+msgstr "Girdinin yıldızını kaldır"
+
+#: src/Pro/Admin/Entries/ListTable.php:643
+msgid "Star entry"
+msgstr "Girdiye yıldız koy"
+
+#: src/Pro/Admin/Entries/ListTable.php:648
+msgid "Mark entry unread"
+msgstr "Kaydı okunmamış olarak işaretle"
+
+#: src/Pro/Admin/Entries/ListTable.php:648
+msgid "Mark entry read"
+msgstr "Kaydı okunmuş olarak işaretle"
+
+#: src/Pro/Admin/Entries/ListTable.php:687
+msgid "Restore Form Entry"
+msgstr "Form Girdilerini Geri Yükle"
+
+#: src/Pro/Admin/Entries/ListTable.php:688
+#: src/Pro/Admin/Entries/ListTable.php:928
+msgid "Restore"
+msgstr "Geri Kurtar"
+
+#: src/Pro/Admin/Entries/ListTable.php:706
+msgid "Delete Form Entry"
+msgstr "Form Girdisini Sil"
+
+#: src/Pro/Admin/Entries/ListTable.php:724
+msgid "View Form Entry"
+msgstr "Form Girdisini Görüntüle"
+
+#: src/Pro/Admin/Entries/ListTable.php:725
+#: src/Pro/Admin/Entries/Overview/Page.php:69
+msgid "View"
+msgstr "Görüntüle"
+
+#: src/Pro/Admin/Entries/ListTable.php:744
+msgid "Edit Form Entry"
+msgstr "Form Girdisini Düzenle"
+
+#: src/Pro/Admin/Entries/ListTable.php:766
+msgid "Trash Form Entry"
+msgstr "Çöp Formu Girdisi"
+
+#: src/Pro/Admin/Entries/ListTable.php:831
+#: src/Pro/Admin/Entries/Page.php:1249
+msgid "Empty Trash"
+msgstr "Çöp Kutusunu Boşalt"
+
+#: src/Pro/Admin/Entries/ListTable.php:864
+msgid "Filter"
+msgstr "Filtre"
+
+#: src/Pro/Admin/Entries/ListTable.php:882
+msgid "Mark as Read"
+msgstr "Okundu Olarak İşaretle"
+
+#: src/Pro/Admin/Entries/ListTable.php:919
+msgid "----------"
+msgstr "----------"
+
+#: src/Pro/Admin/Entries/ListTable.php:922
+#: src/Pro/AntiSpam/SpamEntry.php:367
+#: src/Pro/AntiSpam/SpamEntry.php:665
+msgid "Mark as Not Spam"
+msgstr "Spam Değil olarak işaretle"
+
+#: src/Pro/Admin/Entries/ListTable.php:924
+#: src/Pro/AntiSpam/SpamEntry.php:563
+#: src/Pro/AntiSpam/SpamEntry.php:688
+msgid "Mark as Spam"
+msgstr "Spam Olarak İşaretle"
+
+#: src/Pro/Admin/Entries/ListTable.php:930
+msgid "Move to Trash"
+msgstr "Çöp Kutusuna Taşı"
+
+#. translators: %d - number of processed entries.
+#: src/Pro/Admin/Entries/ListTable.php:1639
+msgid "%d entry was successfully marked as read."
+msgid_plural "%d entries were successfully marked as read."
+msgstr[0] "%d girdi başarıyla okundu olarak işaretlendi."
+msgstr[1] "%d girdi başarıyla okundu olarak işaretlendi."
+
+#. translators: %d - number of processed entries.
+#: src/Pro/Admin/Entries/ListTable.php:1641
+msgid "%d entry was successfully marked as unread."
+msgid_plural "%d entries were successfully marked as unread."
+msgstr[0] "%d girdi başarıyla okunmadı olarak işaretlendi."
+msgstr[1] "%d girdi başarıyla okunmadı olarak işaretlendi."
+
+#. translators: %d - number of processed entries.
+#: src/Pro/Admin/Entries/ListTable.php:1643
+msgid "%d entry was successfully marked as spam."
+msgid_plural "%d entries were successfully marked as spam."
+msgstr[0] "%d girdi başarıyla spam olarak işaretlendi."
+msgstr[1] "%d girdi başarıyla spam olarak işaretlendi."
+
+#. translators: %d - number of processed entries.
+#: src/Pro/Admin/Entries/ListTable.php:1645
+msgid "%d entry was successfully marked as not spam."
+msgid_plural "%d entries were successfully marked as not spam."
+msgstr[0] "%d girdi başarıyla spam değil olarak işaretlendi."
+msgstr[1] "%d girdi başarıyla spam değil olarak işaretlendi."
+
+#. translators: %d - number of processed entries.
+#: src/Pro/Admin/Entries/ListTable.php:1647
+msgid "%d entry was successfully starred."
+msgid_plural "%d entries were successfully starred."
+msgstr[0] "%d girdiye başarıyla yıldız eklendi."
+msgstr[1] "%d girdiye başarıyla yıldız eklendi."
+
+#. translators: %d - number of processed entries.
+#: src/Pro/Admin/Entries/ListTable.php:1649
+msgid "%d entry was successfully unstarred."
+msgid_plural "%d entries were successfully unstarred."
+msgstr[0] "%d girdinin yıldızı başarıyla kaldırıldı."
+msgstr[1] "%d girdinin yıldızı başarıyla kaldırıldı."
+
+#. translators: %d - number of processed entries.
+#: src/Pro/Admin/Entries/ListTable.php:1651
+msgid "%d entry was successfully deleted."
+msgid_plural "%d entries were successfully deleted."
+msgstr[0] "%d girdi başarıyla silindi."
+msgstr[1] "%d girdi başarıyla silindi."
+
+#. translators: %d - number of processed entries.
+#: src/Pro/Admin/Entries/ListTable.php:1653
+msgid "%d entry was successfully trashed."
+msgid_plural "%d entries were successfully trashed."
+msgstr[0] "%d girdi başarıyla çöpe gönderildi."
+msgstr[1] "%d girdi başarıyla çöp kutusuna gönderildi."
+
+#. translators: %d - number of processed entries.
+#: src/Pro/Admin/Entries/ListTable.php:1655
+msgid "%d entry was successfully restored."
+msgid_plural "%d entries were successfully restored."
+msgstr[0] "%d kayıt başarıyla geri yüklendi."
+msgstr[1] "%d girdi başarıyla geri yüklendi."
+
+#: src/Pro/Admin/Entries/ListTable.php:1659
+msgid "All entries for the currently selected form were successfully deleted."
+msgstr "Şu anda seçili formdaki tüm girdiler başarılı bir şekilde silinmiştir."
+
+#: src/Pro/Admin/Entries/ListTable.php:1663
+msgid "All entries for the currently selected form were successfully trashed."
+msgstr "Şu anda seçili forma ilişkin tüm girdiler başarıyla çöp kutusuna gönderildi."
+
+#: src/Pro/Admin/Entries/ListTable.php:1692
+msgid "No entries found."
+msgstr "Hiçbir girdi bulunamadı."
+
+#: src/Pro/Admin/Entries/ListTable.php:1725
+msgid "Field"
+msgstr "Alan"
+
+#: src/Pro/Admin/Entries/Overview/Page.php:52
+msgid "Pagination"
+msgstr "Sayfalama"
+
+#: src/Pro/Admin/Entries/Overview/Page.php:55
+#: src/Pro/Admin/Entries/Overview/Page.php:223
+msgid "Number of forms per page:"
+msgstr "Sayfa başına form sayısı:"
+
+#: src/Pro/Admin/Entries/Overview/Page.php:72
+msgid "Show form templates"
+msgstr "Form şablonlarını göster"
+
+#: src/Pro/Admin/Entries/Overview/Page.php:298
+msgid "All Forms"
+msgstr "Tüm Formlar"
+
+#: src/Pro/Admin/Entries/Overview/Table.php:160
+msgid "No forms found."
+msgstr "Hiçbir form bulunamadı."
+
+#: src/Pro/Admin/Entries/Overview/Table.php:173
+msgid "Form Name"
+msgstr "Form Adı"
+
+#: src/Pro/Admin/Entries/Overview/Table.php:174
+msgid "Created"
+msgstr "Oluşturuldu"
+
+#: src/Pro/Admin/Entries/Overview/Table.php:175
+msgid "Last Entry"
+msgstr "Son Girdi"
+
+#: src/Pro/Admin/Entries/Overview/Table.php:176
+msgid "All Time"
+msgstr "Tüm Zamanlar"
+
+#: src/Pro/Admin/Entries/Overview/Table.php:179
+msgid "Graph"
+msgstr "Grafik"
+
+#: src/Pro/Admin/Entries/Page.php:137
+msgid "You do not have permission to view this form's entries."
+msgstr "Bu formun girdilerini görüntüleme izniniz yok."
+
+#: src/Pro/Admin/Entries/Page.php:143
+msgid "It looks like the form you are trying to access is no longer available."
+msgstr "Görünen o ki, erişmeye çalıştığınız form artık mevcut değil."
+
+#: src/Pro/Admin/Entries/Page.php:327
+msgid "All entries marked as read."
+msgstr "Tüm girdiler okundu olarak işaretlendi."
+
+#: src/Pro/Admin/Entries/Page.php:341
+#: src/Pro/Admin/Entries/Page.php:421
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1645
+msgid "Your session expired. Please reload the builder."
+msgstr "Oturumunuzun süresi doldu. Lütfen oluşturucuyu yeniden yükleyin."
+
+#: src/Pro/Admin/Entries/Page.php:348
+#: src/Pro/Admin/Entries/Page.php:362
+#: src/Pro/Admin/Entries/Page.php:377
+#: src/Pro/Admin/Entries/Page.php:428
+#: src/Pro/Admin/Entries/Page.php:444
+msgid "Something went wrong while performing this action."
+msgstr "Bu eylemi gerçekleştirirken bir şeyler ters gitti."
+
+#: src/Pro/Admin/Entries/Page.php:636
+msgid "any form field"
+msgstr "herhangi bir form alanı"
+
+#. translators: %1$s - field name, %2$s - operation, %3$s term.
+#: src/Pro/Admin/Entries/Page.php:640
+msgid "where %1$s %2$s \"%3$s\""
+msgstr "burada %1$s %2$s \"%3$s\""
+
+#. translators: %s: date.
+#: src/Pro/Admin/Entries/Page.php:696
+msgid "on %s"
+msgstr "%s tarihinde"
+
+#. translators: %1$s - date, %2$s - date.
+#: src/Pro/Admin/Entries/Page.php:703
+msgid "between %1$s and %2$s"
+msgstr "%1$s ve %2$s arasında"
+
+#. translators: %s - WPForms Builder page.
+#: src/Pro/Admin/Entries/Page.php:776
+msgid "Whoops, you haven't created a form yet. Want to <a href=\"%s\">give it a go</a>?"
+msgstr "Hay aksi, henüz bir form oluşturmadınız. <a href=\"%s\">Denemek ister misiniz</a>?"
+
+#: src/Pro/Admin/Entries/Page.php:898
+#: src/Pro/Admin/Entries/Page.php:1415
+msgid "Storing entry information has been disabled for this form."
+msgstr "Bu form için girdi bilgilerinin saklanması devre dışı bırakıldı."
+
+#: src/Pro/Admin/Entries/Page.php:899
+msgid "It looks like you don't have any form entries just yet - check back soon!"
+msgstr "Görünene bakılırsa henüz herhangi bir form girdiniz yok - en kısa zamanda tekrar kontrol edin!"
+
+#. translators: %s - number of entries found.
+#: src/Pro/Admin/Entries/Page.php:933
+msgid "Found <strong>%s entry</strong>"
+msgid_plural "Found <strong>%s entries</strong>"
+msgstr[0] "<strong>%s girdi</strong> bulundu"
+msgstr[1] "<strong>%s girdi</strong> bulundu"
+
+#: src/Pro/Admin/Entries/Page.php:1061
+msgid "Entry Meta"
+msgstr "Kayıt Üst veri"
+
+#: src/Pro/Admin/Entries/Page.php:1187
+#: src/Pro/Admin/Entries/Page.php:1295
+msgid "Template"
+msgstr "Şablon"
+
+#: src/Pro/Admin/Entries/Page.php:1193
+msgid "Select Form"
+msgstr "Form Seçin"
+
+#: src/Pro/Admin/Entries/Page.php:1207
+msgid "All Entries"
+msgstr "Tüm Girdiler"
+
+#: src/Pro/Admin/Entries/Page.php:1221
+msgid "Edit This Template"
+msgstr "Bu Şablonu Düzenle"
+
+#: src/Pro/Admin/Entries/Page.php:1221
+msgid "Edit This Form"
+msgstr "Bu Formu Düzenle"
+
+#: src/Pro/Admin/Entries/Page.php:1228
+msgid "Preview Template"
+msgstr "Şablonu Ön İzle"
+
+#: src/Pro/Admin/Entries/Page.php:1228
+msgid "Preview Form"
+msgstr "Formu Ön İzle"
+
+#: src/Pro/Admin/Entries/Page.php:1235
+msgid "Export Filtered"
+msgstr "Filtrelenmişleri Dışa Aktar"
+
+#: src/Pro/Admin/Entries/Page.php:1235
+msgid "Export All"
+msgstr "Tümünü Dışa Aktar"
+
+#: src/Pro/Admin/Entries/Page.php:1241
+msgid "Mark All Read"
+msgstr "Tümünü Okundu Olarak İşaretle"
+
+#: src/Pro/Admin/Entries/Page.php:1249
+msgid "Trash All"
+msgstr "Tümünü Çöp Kutusuna Gönder"
+
+#: src/Pro/Admin/Entries/Page.php:1276
+msgid "Open form selector"
+msgstr "Form seçiciyi aç"
+
+#. translators: %d - number of form entries.
+#: src/Pro/Admin/Entries/Page.php:1363
+msgid "See %d new entry"
+msgid_plural "See %d new entries"
+msgstr[0] "%d yeni girdiyi gör"
+msgstr[1] "%d yeni girdileri gör"
+
+#: src/Pro/Admin/Entries/PageOptions.php:64
+msgid "Number of entries per page:"
+msgstr "Sayfa başına girdi sayısı:"
+
+#: src/Pro/Admin/Entries/Table/Facades/Columns.php:148
+msgid "Entry Type"
+msgstr "Girdi Türü"
+
+#: src/Pro/Admin/Entries/Table/Facades/Columns.php:157
+msgid "Unique User ID"
+msgstr "Eşsiz Kullanıcı Kimliği"
+
+#: src/Pro/Admin/Pages/Addons.php:164
+msgid "WPForms Addons"
+msgstr "WPForms Modülleri"
+
+#: src/Pro/Admin/Pages/Addons.php:167
+msgid "Refresh Addons"
+msgstr "Modülleri Yenile"
+
+#: src/Pro/Admin/Pages/Addons.php:172
+msgid "Search Addons"
+msgstr "Modüllerde Ara"
+
+#: src/Pro/Admin/Pages/Addons.php:192
+msgid "Activated Addons"
+msgstr "Etkinleştirilen Modüller"
+
+#: src/Pro/Admin/Pages/Addons.php:204
+msgid "All Addons"
+msgstr "Tüm Eklentiler"
+
+#: src/Pro/Admin/Pages/Addons.php:214
+msgid "Sorry, we didn't find any addons that match your criteria."
+msgstr "Üzgünüz, kriterlerinize uygun hiçbir modül bulamadık."
+
+#: src/Pro/Admin/Pages/Addons.php:231
+msgid "There was an issue retrieving Addons for this site. Please click on the button above to refresh."
+msgstr "Bu site için Modülleri geri getirirken bir sorun meydana geldi. Yenilemek için lütfen yukarıdaki düğmeye tıklayın."
+
+#: src/Pro/Admin/Pages/Addons.php:237
+msgid "In order to get access to Addons, you need to resolve your license key errors."
+msgstr "Modüllere erişim sağlamak için lisans anahtarı hatalarınızı çözmeniz gerekiyor."
+
+#: src/Pro/Admin/Pages/Addons.php:243
+msgid "Addons have successfully been refreshed."
+msgstr "Modüller başarılı bir şekilde yenilendi."
+
+#: src/Pro/Admin/Pages/Addons.php:383
+msgid "Upgrade Now"
+msgstr "Şimdi Yükseltin"
+
+#: src/Pro/Admin/Pages/Addons.php:393
+#: src/Pro/Admin/Pages/Addons.php:395
+msgid "Activated"
+msgstr "Etkinleştirildi"
+
+#: src/Pro/Admin/Pages/Addons.php:393
+#: src/Pro/Admin/Pages/Addons.php:397
+msgid "Deactivated"
+msgstr "Etkisizleştirildi"
+
+#: src/Pro/Admin/Pages/Addons.php:412
+msgid "Install Addon"
+msgstr "Modülü Yükle"
+
+#. translators: %1$s - WPForms Pro URL; %2$s - WPForms Pro purchase link.
+#: src/Pro/Admin/PluginList.php:607
+msgid "<a href=\"%1$s\">Activate WPForms Pro</a> to receive features, updates, and support. Don't have a license? <a target=\"_blank\" href=\"%2$s\" rel=\"noopener noreferrer\">Purchase one now</a>."
+msgstr "<a href=\"%1$s\">Özellikleri, güncellemeleri ve desteği almak için WPForms Pro</a>'yu etkinleştirin. Lisansınız yok mu? <a target=\"_blank\" href=\"%2$s\" rel=\"noopener noreferrer\">Şimdi bir tane satın alın</a>."
+
+#. translators: %1$s - WPForms Pro URL; %2$s - WPForms Pro purchase link.
+#: src/Pro/Admin/PluginList.php:619
+msgid "<a href=\"%1$s\">Activate</a> your license to access this update, new features, and support. Don't have a license? <a target=\"_blank\" href=\"%2$s\" rel=\"noopener noreferrer\">Purchase one now</a>."
+msgstr "<a href=\"%1$s\">Bu güncellemeye, yeni özelliklere ve desteğe erişmek için lisansınızı</a> etkinleştirin. Lisansınız yok mu? <a target=\"_blank\" href=\"%2$s\" rel=\"noopener noreferrer\">Şimdi bir tane satın alın</a>."
+
+#: src/Pro/Admin/PluginList.php:643
+msgid "Your WPForms Pro license is expired."
+msgstr "WPForms Pro lisansınızın süresi doldu."
+
+#: src/Pro/Admin/PluginList.php:644
+msgid "Your WPForms Pro license is disabled."
+msgstr "WPForms Pro lisansınız devre dışı bırakıldı."
+
+#: src/Pro/Admin/PluginList.php:645
+msgid "Your WPForms Pro license is invalid."
+msgstr "WPForms Pro lisansınız geçersiz."
+
+#: src/Pro/Admin/PluginList.php:646
+msgid "Your WPForms Pro license has no activations left."
+msgstr "WPForms Pro lisansınızın aktivasyon hakkı kalmadı."
+
+#: src/Pro/Admin/PluginList.php:647
+msgid "Your WPForms Pro license needs support."
+msgstr "WPForms Pro lisansınızın desteğe ihtiyacı var."
+
+#. translators: %s - WPForms Pro key support link.
+#: src/Pro/Admin/PluginList.php:654
+msgid "Before you can activate this key, we'd like to check in with you. Please <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">reach out to support here.</a>"
+msgstr "Bu anahtarı etkinleştirmeden önce sizinle iletişime geçmek istiyoruz. Lütfen <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">buradan destek ekibine ulaşın.</a>"
+
+#. translators: %s - WPForms Pro renew link.
+#: src/Pro/Admin/PluginList.php:665
+msgid "<a target=\"_blank\" href=\"%1$s\" rel=\"noopener noreferrer\">Renew now</a> to receive new features, updates, and support."
+msgstr "Yeni özellikler, güncellemeler ve destek almak için <a target=\"_blank\" href=\"%1$s\" rel=\"noopener noreferrer\">Şimdi yenileyin</a>."
+
+#. translators: %1$s - WPForms Pro Changelog link; %2$s - WPForms Pro latest version.
+#: src/Pro/Admin/PluginList.php:696
+msgid "There is a new version of WPForms available. <a class=\"thickbox open-plugin-details-modal\" href=\"%1$s\" rel=\"noopener noreferrer\">View version %2$s details</a>"
+msgstr "WPForms'un yeni bir sürümü mevcut. <a class=\"thickbox open-plugin-details-modal\" href=\"%1$s\" rel=\"noopener noreferrer\">%2$s sürümünün ayrıntılarını görüntüleyin</a>"
+
+#. translators: %1$s - WPForms Pro upgrade URL; %2$s - Update now link aria-label attribute.
+#: src/Pro/Admin/PluginList.php:711
+msgid "or <a href=\"%1$s\" class=\"update-link\" aria-label=\"%2$s\">update now</a>."
+msgstr "veya <a href=\"%1$s\" class=\"update-link\" aria-label=\"%2$s\">şimdi güncelleyin</a>."
+
+#: src/Pro/Admin/PluginList.php:716
+msgid "Update Now"
+msgstr "Şimdi Güncelle"
+
+#. translators: 1: Plugin name, 2: Version number.
+#: src/Pro/Admin/PluginList.php:784
+msgid "View %1$s version %2$s details"
+msgstr "%1$s sürümünün %2$s ayrıntılarını görüntüle"
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Link attributes, 4: Version number, 5: Components.
+#: src/Pro/Admin/PluginList.php:825
+msgid "Sorry, the %1$s addon can't be updated to <a href=\"%2$s\" %3$s>version %4$s</a> because it requires %5$s."
+msgstr "Üzgünüm, %1$s modülü için %5$s gerektiğinden dolayı <a href=\"%2$s\" %3$s>%4$s sürümü</a> güncellenemiyor."
+
+#. translators: 1: Details URL, 2: Additional link attributes, 3: Version number.
+#: src/Pro/Admin/PluginList.php:846
+msgid "If no update is available, try <a href=\"%1$s\">checking for new plugin updates</a>."
+msgstr "Eğer güncelleme yoksa, <a href=\"%1$s\">yeni eklenti güncellemelerini kontrol etmeyi</a> deneyin."
+
+#. translators: 1:URL to Update PHP page.
+#: src/Pro/Admin/PluginList.php:862
+msgid "Learn more about <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">updating PHP</a>."
+msgstr "<a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">PHP'nin güncellenmesi</a> hakkında daha fazla bilgi edinin."
+
+#. translators: %s: Plugin name.
+#: src/Pro/Admin/PluginList.php:907
+msgid "Update %s now"
+msgstr "Şimdi %s güncelle"
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number, 5: Update URL, 6: Additional link attributes.
+#: src/Pro/Admin/PluginList.php:915
+msgid "There is a new version of %1$s available. <a href=\"%2$s\" %3$s>View version %4$s details</a>%5$s."
+msgstr "%1$s eklentisinin yeni bir sürümü mevcut. <a href=\"%2$s\" %3$s>%4$s sürümünün ayrıntılarını görüntüleyin</a>%5$s."
+
+#: src/Pro/Admin/PluginListDisabler.php:72
+msgid "WPForms license is not valid."
+msgstr "WPForms lisansı geçerli değil."
+
+#. translators: %1$s - capability being granted, %2$s - capability(s) required for a capability being granted, %3$s - role a capability is granted to.
+#: src/Pro/Admin/Settings/Access.php:77
+msgid "In order to give %1$s access, %2$s access is also required."
+msgstr "%1$s erişimi vermek için, %2$s erişimi de gereklidir."
+
+#. translators: %1$s - capability being granted, %2$s - capability(s) required for a capability being granted, %3$s - role a capability is granted to.
+#: src/Pro/Admin/Settings/Access.php:77
+msgid "Would you like to also grant %2$s access to %3$s?"
+msgstr "%3$s rolüne de %2$s erişimi vermek ister misiniz?"
+
+#. translators: %1$s - capability being granted, %2$s - capability(s) required for a capability being granted, %3$s - role a capability is granted to.
+#: src/Pro/Admin/Settings/Access.php:79
+msgid "In order to remove %1$s access, %2$s access is also required to be removed."
+msgstr "%1$s erişimini kaldırmak için, %2$s erişiminin de kaldırılması gerekmektedir."
+
+#. translators: %1$s - capability being granted, %2$s - capability(s) required for a capability being granted, %3$s - role a capability is granted to.
+#: src/Pro/Admin/Settings/Access.php:79
+msgid "Would you like to also remove %2$s access from %3$s?"
+msgstr "%3$s rolünden de %2$s erişimini kaldırmak ister misiniz?"
+
+#: src/Pro/Admin/Settings/Access.php:101
+msgid "Can create new forms."
+msgstr "Yeni formlar oluşturabilirler."
+
+#: src/Pro/Admin/Settings/Access.php:110
+msgid "View Forms"
+msgstr "Formları Görüntüle"
+
+#: src/Pro/Admin/Settings/Access.php:114
+msgid "Can view forms created by <strong>themselves</strong>."
+msgstr "<strong>kendileri</strong> tarafından oluşturulan formları görüntüleyebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:122
+msgid "Can view forms created by <strong>others</strong>."
+msgstr "<strong>diğerleri</strong> tarafından oluşturulan formları görüntüleyebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:131
+msgid "Edit Forms"
+msgstr "Form düzenleme"
+
+#: src/Pro/Admin/Settings/Access.php:135
+msgid "Can edit forms created by <strong>themselves</strong>."
+msgstr "<strong>kendileri</strong> tarafından oluşturulan formları düzenleyebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:143
+msgid "Can edit forms created by <strong>others</strong>."
+msgstr "<strong>diğerleri</strong> tarafından oluşturulan formları düzenleyebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:152
+msgid "Delete Forms"
+msgstr "Formları Sil"
+
+#: src/Pro/Admin/Settings/Access.php:156
+msgid "Can delete forms created by <strong>themselves</strong>."
+msgstr "<strong>kendileri</strong> tarafından oluşturulan formları silebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:164
+msgid "Can delete forms created by <strong>others</strong>."
+msgstr "<strong>diğerleri</strong> tarafından oluşturulan formları silebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:190
+msgid "Can view entries of forms created by <strong>themselves</strong>."
+msgstr "<strong>kendileri</strong> tarafından oluşturulan formların girdilerini görüntüleyebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:198
+msgid "Can view entries of forms created by <strong>others</strong>."
+msgstr "<strong>diğerleri</strong> tarafından oluşturulan formların girdilerini görüntüleyebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:207
+msgid "Edit Entries"
+msgstr "Girdileri Düzenle"
+
+#: src/Pro/Admin/Settings/Access.php:211
+msgid "Can edit entries of forms created by <strong>themselves</strong>."
+msgstr "<strong>kendileri</strong> tarafından oluşturulan formların girdilerini düzenleyebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:219
+msgid "Can edit entries of forms created by <strong>others</strong>."
+msgstr "<strong>diğerleri</strong> tarafından oluşturulan formların girdilerini düzenleyebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:228
+msgid "Delete Entries"
+msgstr "Girdileri Sil"
+
+#: src/Pro/Admin/Settings/Access.php:232
+msgid "Can delete entries of forms created by <strong>themselves</strong>."
+msgstr "<strong>kendileri</strong> tarafından oluşturulan formların girdilerini silebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:240
+msgid "Can delete entries of forms created by <strong>others</strong>."
+msgstr "<strong>diğerleri</strong> tarafından oluşturulan formların girdilerini silebilirler."
+
+#: src/Pro/Admin/Settings/Access.php:264
+#: src/Pro/Admin/Settings/Access.php:287
+msgid "Access"
+msgstr "Erişim"
+
+#: src/Pro/Admin/Settings/Access.php:266
+msgid "Save Settings"
+msgstr "Ayarları Kaydet"
+
+#. translators: %s - WPForms.com access control link.
+#: src/Pro/Admin/Settings/Access.php:290
+msgid "By default, all permissions are provided only to administrator users. Please see our <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Access Controls documentation</a> for full details."
+msgstr "Varsayılan olarak tüm izinler yalnızca yönetici kullanıcılara sağlanır. Tüm ayrıntılar için lütfen <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Erişim Kontrolleri dokümantasyonumuza</a> bakın."
+
+#: src/Pro/Admin/Settings/Access.php:348
+msgid "Forms"
+msgstr "Formlar"
+
+#: src/Pro/Admin/Settings/Access.php:348
+msgid "Select the user roles that are allowed to manage forms."
+msgstr "Formları yönetmesine izin verilen kullanıcı rollerini seçin."
+
+#: src/Pro/Admin/Settings/Access.php:376
+msgid "Select the user roles that are allowed to manage entries."
+msgstr "Girdileri yönetmesine izin verilen kullanıcı rollerini seçin."
+
+#: src/Pro/Admin/SiteHealth.php:54
+msgid "not detected"
+msgstr "bulunamadı"
+
+#. translators: %s - license status.
+#: src/Pro/Admin/SiteHealth.php:66
+msgid "Your WPForms license is %s"
+msgstr "WPForms lisansınız %s"
+
+#: src/Pro/Admin/SiteHealth.php:71
+msgid "Security"
+msgstr "Güvenlik"
+
+#: src/Pro/Admin/SiteHealth.php:76
+msgid "You have access to updates, addons, new features, and more."
+msgstr "Güncellemelere, modüllere, yeni özelliklere ve daha fazlasına erişim sahibisiniz."
+
+#: src/Pro/Admin/SiteHealth.php:98
+msgid "A valid license is required for following benefits. Please read carefully."
+msgstr "Aşağıdaki faydalar için geçerli bir lisans gereklidir. Lütfen dikkatlice okuyun."
+
+#: src/Pro/Admin/SiteHealth.php:99
+msgid "Plugin and Addon Updates"
+msgstr "Eklenti ve Modül Güncellemeleri"
+
+#: src/Pro/Admin/SiteHealth.php:100
+msgid "New Features"
+msgstr "Yeni Özellikler"
+
+#: src/Pro/Admin/SiteHealth.php:101
+msgid "New Addons and Integrations"
+msgstr "Yeni Modüller ve Entegrasyonlar"
+
+#: src/Pro/Admin/SiteHealth.php:102
+msgid "WordPress Compatibility Updates"
+msgstr "WordPress Uyumluluk Güncellemeleri"
+
+#: src/Pro/Admin/SiteHealth.php:103
+msgid "Marketing and Payment Integration Compatibility Updates"
+msgstr "Pazarlama ve Ödeme Entegrasyonu Uyumluluk Güncellemeleri"
+
+#: src/Pro/Admin/SiteHealth.php:104
+msgid "Security Improvements"
+msgstr "Güvenlik İyileştirmeleri"
+
+#: src/Pro/Admin/SiteHealth.php:105
+msgid "World Class Support"
+msgstr "Dünya Sınıfında Destek"
+
+#: src/Pro/Admin/SiteHealth.php:106
+msgid "Plugin and Addon Access"
+msgstr "Eklenti ve Modül Erişimi"
+
+#: src/Pro/Admin/SiteHealth.php:111
+msgid "Login to your WPForms account to update"
+msgstr "Güncellemek için WPForms hesabınıza giriş yapın"
+
+#: src/Pro/Admin/SiteHealth.php:133
+msgid "Total entries"
+msgstr "Toplam girdi"
+
+#: src/Pro/Admin/SiteHealth.php:150
+msgid "License status"
+msgstr "Lisans durumu"
+
+#: src/Pro/Admin/SiteHealth.php:155
+msgid "License key type"
+msgstr "Lisans anaahtarı türü"
+
+#: src/Pro/Admin/SiteHealth.php:160
+msgid "License key location"
+msgstr "Lisans anahtarı konumu"
+
+#: src/Pro/AntiSpam/CountryFilter.php:87
+msgid "Enable country filter"
+msgstr "Ülke filtresini etkinleştir"
+
+#: src/Pro/AntiSpam/CountryFilter.php:91
+msgid "Allow or deny entries from the countries you select."
+msgstr "Seçtiğiniz ülkeden girdilere izin verin veya reddedin."
+
+#: src/Pro/AntiSpam/CountryFilter.php:98
+msgid "Country Filter"
+msgstr "Ülke Filtresi"
+
+#: src/Pro/AntiSpam/CountryFilter.php:111
+msgid "Allow"
+msgstr "İzin Ver"
+
+#: src/Pro/AntiSpam/CountryFilter.php:112
+msgid "Deny"
+msgstr "Reddet"
+
+#: src/Pro/AntiSpam/CountryFilter.php:118
+msgid "entries from"
+msgstr "şuradan gelen girdileri"
+
+#: src/Pro/AntiSpam/CountryFilter.php:144
+msgid "Country Filter Message"
+msgstr "Ülke Filtre Mesajı"
+
+#: src/Pro/AntiSpam/CountryFilter.php:149
+msgid "Displayed if a visitor from a restricted country tries to submit your form."
+msgstr "Kısıtlanmış bir ülkeden bir ziyaretçinin formunuzu göndermeyi denemesi durumunda görüntülenir."
+
+#: src/Pro/AntiSpam/CountryFilter.php:160
+msgid "Restrict form entries based on customizable filters or conditions."
+msgstr "Kişiselleştirilebilir filtreler ve koşullar bazında form girdilerini kısıtlayın."
+
+#: src/Pro/AntiSpam/CountryFilter.php:161
+msgid "Filtering"
+msgstr "Filtreleme"
+
+#: src/Pro/AntiSpam/CountryFilter.php:536
+msgid "Sorry, this form does not accept submissions from your country."
+msgstr "Üzgünüz, bu form sizin ülkenizden girdileri kabul etmemektedir."
+
+#: src/Pro/AntiSpam/KeywordFilter.php:87
+msgid "Enable keyword filter"
+msgstr "Anahtar sözcük filtresini etkinleştir"
+
+#: src/Pro/AntiSpam/KeywordFilter.php:91
+msgid "Block entries that contain one or more keywords you define."
+msgstr "Sizin tanımladığınız bir veya daha fazla anahtar sözcüğü içeren girdileri engelleyin."
+
+#. translators: %s - number of phrases.
+#: src/Pro/AntiSpam/KeywordFilter.php:100
+msgid "Your keyword filter contains %s phrase(s)."
+msgstr "Anahtar sözcük filtreniz %s ifade(ler)ini içeriyor."
+
+#: src/Pro/AntiSpam/KeywordFilter.php:104
+msgid "Collapse keyword list."
+msgstr "Anahtar sözcük listesini daralt."
+
+#: src/Pro/AntiSpam/KeywordFilter.php:105
+msgid "Edit keyword list."
+msgstr "Anahtar sözcük listesini düzenleyin."
+
+#: src/Pro/AntiSpam/KeywordFilter.php:111
+msgid "Keyword Filter List"
+msgstr "Anahtar Sözcük Filtresi Listesi"
+
+#: src/Pro/AntiSpam/KeywordFilter.php:111
+msgid "Keywords that will be blocked if they are found in a form entry."
+msgstr "Form girdisinde bulunması halinde engellenecek anahtar sözcükler."
+
+#: src/Pro/AntiSpam/KeywordFilter.php:114
+msgid "Each word or phrase should be on its own line."
+msgstr "Her kelime veya cümle, kendi satırında olmalıdır."
+
+#: src/Pro/AntiSpam/KeywordFilter.php:119
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+#: src/Pro/AntiSpam/KeywordFilter.php:133
+msgid "Keyword Filter Message"
+msgstr "Anahtar Sözcük Filtresi Mesajı"
+
+#: src/Pro/AntiSpam/KeywordFilter.php:137
+msgid "Displayed if a visitor tries to submit an entry that contains a blocked keyword."
+msgstr "Bir ziyaretçinin engellenmiş bir anahtar sözcük içeren bir girdi göndermeyi denemesi halinde görüntülenir."
+
+#: src/Pro/AntiSpam/KeywordFilter.php:423
+msgid "Sorry, your message can't be submitted because it contains prohibited words."
+msgstr "Üzgünüz, mesajınız gönderilemiyor çünkü içerisinde yasaklanmış kelimeler mevcut."
+
+#: src/Pro/AntiSpam/SpamEntry.php:280
+#: src/Pro/AntiSpam/SpamEntry.php:689
+msgid "Spam"
+msgstr "Spam"
+
+#: src/Pro/AntiSpam/SpamEntry.php:317
+msgid "Entry successfully unmarked as spam."
+msgstr "Girdinin spam işareti başarıyla kaldırıldı."
+
+#. translators: %s - antispam method.
+#: src/Pro/AntiSpam/SpamEntry.php:364
+msgid "This entry was marked as spam by %s."
+msgstr "Bu girdi %starafından spam olarak işaretlendi."
+
+#. translators: %d - number of days.
+#: src/Pro/AntiSpam/SpamEntry.php:397
+msgid "%d days"
+msgstr "%d gün"
+
+#. translators: %s - number of days wrapped in the link to the settings page.
+#: src/Pro/AntiSpam/SpamEntry.php:407
+msgid "Spam entries older than %s are automatically deleted."
+msgstr "%s eski istenmeyen girdiler otomatik olarak silinir."
+
+#: src/Pro/AntiSpam/SpamEntry.php:598
+msgid "Marked as not spam."
+msgstr "Spam değil olarak işaretlendi."
+
+#: src/Pro/AntiSpam/SpamEntry.php:666
+msgid "Not Spam"
+msgstr "Spam değil"
+
+#: src/Pro/AntiSpam/SpamEntry.php:746
+msgid "Empty Spam"
+msgstr "Spam Kayıtlarını Boşalt"
+
+#. translators: %1$s - WPForms.com license help URL.
+#: src/Pro/Emails/LicenseBanner.php:154
+msgid "Have questions? <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn why you should always use the latest version of WPForms</a>."
+msgstr "Sorularınız mı var? <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Neden daima WPForms'un en son sürümünü kullanmanız gerektiğini öğrenin</a>."
+
+#: src/Pro/Emails/LicenseBanner.php:172
+msgid "Heads Up! Your License is Invalid"
+msgstr "Dikkat! Lisansınız Geçersiz"
+
+#: src/Pro/Emails/LicenseBanner.php:174
+msgid "Your key either no longer exists or the user associated with the key has been deleted. Please use a different key to continue receiving automatic updates."
+msgstr "Anahtarınız artık mevcut değil veya anahtarla ilişkilendirilen kullanıcı silinmiş. Otomatik güncellemeleri almaya devam etmek için lütfen farklı bir anahtar kullanın."
+
+#: src/Pro/Emails/LicenseBanner.php:180
+msgid "Purchase a New License"
+msgstr "Yeni Bir Lisans Satın Alın"
+
+#: src/Pro/Emails/LicenseBanner.php:189
+msgid "Heads Up! Your License Has Expired"
+msgstr "Dikkat! Lisansınızın Süresi Sona Erdi"
+
+#: src/Pro/Emails/LicenseBanner.php:191
+msgid "Without an active license, you lose access to plugin updates and new features. Renew your license today so you don’t miss out!"
+msgstr "Etkin bir lisans olmadan eklenti güncellemelerine ve yeni özelliklere erişimi kaybedersiniz. Fırsatları kaçırmamak için lisansınızı bugün yenileyin!"
+
+#: src/Pro/Emails/LicenseBanner.php:197
+msgid "Renew Your License Now"
+msgstr "Lisansınızı Şimdi Yenileyin"
+
+#: src/Pro/Emails/LicenseBanner.php:206
+msgid "Heads Up! Your License Will Expire Soon"
+msgstr "Dikkat! Lisansınızın Süresi Yakında Sona Erecek"
+
+#: src/Pro/Emails/LicenseBanner.php:208
+msgid "Without an active license, you will lose access to plugin updates and new features. Enable automatic renewal today so you don’t miss out!"
+msgstr "Etkin bir lisans olmadan eklenti güncellemelerine ve yeni özelliklere erişimi kaybedersiniz. Fırsatları kaçırmamak için otomatik yenilemeyi bugün etkinleştirin!"
+
+#: src/Pro/Emails/LicenseBanner.php:214
+msgid "Turn on Automatic Renewal"
+msgstr "Otomatik Yenilemeyi Aç"
+
+#: src/Pro/Forms/Fields/Camera/Field.php:194
+msgid "Remove file"
+msgstr ""
+
+#. translators: %s - allowed file size in MB.
+#. translators: $s - allowed file size in MB.
+#: src/Pro/Forms/Fields/Camera/Field.php:638
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1812
+msgid "File exceeds max size allowed (%s)."
+msgstr "Dosya, izin verilen maksimum boyutu aşıyor (%s)."
+
+#: src/Pro/Forms/Fields/Camera/Field.php:662
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1835
+msgid "File must have an extension."
+msgstr "Dosyanın bir uzantısının olması zorunludur."
+
+#: src/Pro/Forms/Fields/Camera/Field.php:733
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1719
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini."
+msgstr "Yüklenen dosya, php.ini içerisindeki upload_max_filesize direktifini aşıyor."
+
+#: src/Pro/Forms/Fields/Camera/Field.php:734
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1720
+msgid "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form."
+msgstr "Yüklenen dosya, HTML formu içerisinde belirtilen MAX_FILE_SIZE direktifini aşıyor."
+
+#: src/Pro/Forms/Fields/Camera/Field.php:735
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1721
+msgid "The uploaded file was only partially uploaded."
+msgstr "Yüklenen dosya yalnızca kısmen yüklenmişti."
+
+#: src/Pro/Forms/Fields/Camera/Field.php:736
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1722
+msgid "No file was uploaded."
+msgstr "Hiçbir dosya yüklenmedi."
+
+#: src/Pro/Forms/Fields/Camera/Field.php:738
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1724
+msgid "Missing a temporary folder."
+msgstr "Bir geçici dosya eksik."
+
+#: src/Pro/Forms/Fields/Camera/Field.php:739
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1725
+msgid "Failed to write file to disk."
+msgstr "Dosyayı diske yazma başarısız oldu."
+
+#: src/Pro/Forms/Fields/Camera/Field.php:740
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1726
+msgid "File upload stopped by extension."
+msgstr "Dosya yükleme, uzantı ile durduruldu."
+
+#. translators: %s - error text.
+#: src/Pro/Forms/Fields/Camera/Field.php:745
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1731
+msgid "File upload error. %s"
+msgstr "Dosya yükleme hatası. %s"
+
+#: src/Pro/Forms/Fields/Camera/Field.php:1153
+msgid "Camera access denied or not available. Please check your browser permissions"
+msgstr ""
+
+#: src/Pro/Forms/Fields/Camera/Field.php:1154
+msgid "Camera or microphone access denied or not available. Please check your browser permissions"
+msgstr ""
+
+#: src/Pro/Forms/Fields/Camera/Field.php:1155
+msgid "Video recording is not supported in your browser."
+msgstr ""
+
+#: src/Pro/Forms/Fields/CreditCard/Field.php:109
+msgid "Card Number"
+msgstr "Kart Numarası"
+
+#: src/Pro/Forms/Fields/CreditCard/Field.php:132
+msgid "Security Code"
+msgstr "Güvenlik kodu"
+
+#: src/Pro/Forms/Fields/CreditCard/Field.php:153
+msgid "Name on Card"
+msgstr "Kart Üzerindeki İsim"
+
+#: src/Pro/Forms/Fields/CreditCard/Field.php:167
+msgid "Expiration"
+msgstr "Son Kullanma Tarihi"
+
+#: src/Pro/Forms/Fields/CreditCard/Field.php:308
+#: src/Pro/Forms/Fields/CreditCard/Frontend.php:62
+msgid "This page is insecure. Credit Card field should be used for testing purposes only."
+msgstr "Bu sayfa güvenli değil. Kredi Kartı alanı yalnızca test amaçları doğrultusunda kullanılmalıdır."
+
+#: src/Pro/Forms/Fields/CreditCard/Frontend.php:189
+msgid "Expiration month"
+msgstr "Sona erdiği ay"
+
+#: src/Pro/Forms/Fields/CreditCard/Frontend.php:218
+msgid "Expiration year"
+msgstr "Sona erdiği yıl"
+
+#: src/Pro/Forms/Fields/CustomCaptcha/Builder.php:80
+msgid "Custom Captcha field should contain at least one not empty question."
+msgstr "Özel Captcha alanı, boş olmayan en az bir soru içermelidir."
+
+#: src/Pro/Forms/Fields/CustomCaptcha/Field.php:325
+#: src/Pro/Forms/Fields/CustomCaptcha/Field.php:378
+msgid "Incorrect answer"
+msgstr "Yanlış cevap"
+
+#: src/Pro/Forms/Fields/CustomCaptcha/Field.php:358
+msgid "Incorrect operation"
+msgstr "Yanlış işlem"
+
+#. translators: %1$s - URL to the documentation.
+#: src/Pro/Forms/Fields/CustomCaptcha/Field.php:424
+msgid "WPForms 1.8.7 core includes Custom Captcha. The Custom Captcha addon will only work on WPForms 1.8.6 and earlier versions. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn More</a>"
+msgstr "WPForms 1.8.7 çekirdeği Özel Captcha'yı içerir. Özel Captcha modülü yalnızca WPForms 1.8.6 ve önceki sürümlerde çalışacaktır. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Daha Fazla Bilgi Edinin</a>"
+
+#: src/Pro/Forms/Fields/CustomCaptcha/Frontend.php:83
+msgid "Incorrect answer."
+msgstr "Yanlış cevap."
+
+#: src/Pro/Forms/Fields/DateTime/Field.php:174
+msgid "Time"
+msgstr "Zaman"
+
+#: src/Pro/Forms/Fields/DateTime/Field.php:468
+msgid "Clear Date"
+msgstr "Tarihi Sil"
+
+#: src/Pro/Forms/Fields/DateTime/Field.php:552
+msgid "MM"
+msgstr "AA"
+
+#: src/Pro/Forms/Fields/DateTime/Field.php:553
+msgid "DD"
+msgstr "GG"
+
+#: src/Pro/Forms/Fields/DateTime/Field.php:554
+msgid "YYYY"
+msgstr "YYYY"
+
+#: src/Pro/Forms/Fields/DateTime/Frontend.php:70
+msgid "Day"
+msgstr "Gün"
+
+#: src/Pro/Forms/Fields/DateTime/Frontend.php:71
+msgid "Month"
+msgstr "Ay"
+
+#: src/Pro/Forms/Fields/DateTime/Frontend.php:72
+msgid "Year"
+msgstr "Yıl"
+
+#: src/Pro/Forms/Fields/EntryPreview/Field.php:955
+msgid "Preview not available"
+msgstr "Ön izleme mevcut değil"
+
+#: src/Pro/Forms/Fields/EntryPreview/Field.php:1098
+msgid "Updating preview…"
+msgstr "Ön izleme güncelleniyor…"
+
+#: src/Pro/Forms/Fields/EntryPreview/Field.php:1126
+msgid "Page breaks are required for entry previews to work. If you'd like to remove page breaks, you'll have to first remove the entry preview field."
+msgstr "Girdi ön izlemelerinin çalışması için sayfa sonları gereklidir. Sayfa sonlarını kaldırmak isterseniz ilk önce girdi ön izleme alanını kaldırmanız gerekecektir."
+
+#: src/Pro/Forms/Fields/EntryPreview/Field.php:1128
+msgid "You can't hide the previous button because it is required for the entry preview field on this page."
+msgstr "Önceki düğmeyi gizleyemezsiniz çünkü bu sayfadaki girdi ön izlemesi alanı için bu gereklidir."
+
+#: src/Pro/Forms/Fields/EntryPreview/Field.php:1148
+msgid "Show entry preview after confirmation message"
+msgstr "Doğrulama mesajı sonrasında girdi ön izlemesini göster"
+
+#: src/Pro/Forms/Fields/EntryPreview/Field.php:1162
+msgid "Preview Style"
+msgstr "Ön İzleme Biçemi"
+
+#: src/Pro/Forms/Fields/FileUpload/Field.php:274
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1469
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1524
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1552
+msgid "Something went wrong, please try again."
+msgstr "Bir şeyler ters gitti, lütfen tekrar deneyin."
+
+#: src/Pro/Forms/Fields/FileUpload/Field.php:275
+msgid "This file was not uploaded."
+msgstr "Bu dosya yüklenmedi."
+
+#: src/Pro/Forms/Fields/FileUpload/Field.php:284
+msgid "File exceeds the max size allowed."
+msgstr "Dosya, izin verilen maksimum boyutu aşıyor."
+
+#. translators: %s - max allowed file size by a server.
+#: src/Pro/Forms/Fields/FileUpload/Field.php:286
+msgid "File exceeds the upload limit allowed (%s)."
+msgstr "Dosya, izin verilen yükleme sınırını (%s) aşıyor."
+
+#: src/Pro/Forms/Fields/FileUpload/Field.php:290
+msgid "File upload is in progress. Please submit the form once uploading is completed."
+msgstr "Dosya yükleme devam ediyor. Lütfen yükleme tamamlandığında formu gönderin."
+
+#: src/Pro/Forms/Fields/FileUpload/Field.php:899
+msgid "File(s) not uploaded. Remove and re-attach file(s)."
+msgstr "Dosya(lar) karşıya yüklenmedi. Dosyayı (dosyaları) kaldırıp tekrar ekleyin."
+
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1437
+msgid "Something went wrong while removing the file."
+msgstr "Dosya kaldırılırken bir şeyler ters gitti."
+
+#: src/Pro/Forms/Fields/FileUpload/Field.php:1654
+msgid "Incorrect usage of this operation."
+msgstr "Bu operasyon yanlış kullanıldı."
+
+#: src/Pro/Forms/Fields/Layout/Builder.php:57
+msgid "Enter text for the Layout field label. It will help identify your layout block inside the form builder, but will not be displayed in the form."
+msgstr "Yerleşim alanı etiketi için metin girin. Form oluşturucu içerisinde yerleşim bloğunuzu belirlemenize yardımcı olur ama formda görüntülenmez."
+
+#: src/Pro/Forms/Fields/Layout/Builder.php:68
+#: src/Pro/Forms/Fields/Repeater/Builder.php:219
+msgid "Display"
+msgstr "Görünüm"
+
+#: src/Pro/Forms/Fields/Layout/Builder.php:80
+msgid "Rows - fields are ordered from left to right"
+msgstr "Satırlar - alanlar soldan sağa doğru sıralanır"
+
+#: src/Pro/Forms/Fields/Layout/Builder.php:81
+msgid "Columns - fields are ordered from top to bottom"
+msgstr "Sütunlar - alanlar yukarıdan aşağıya doğru sıralanır"
+
+#: src/Pro/Forms/Fields/Layout/Field.php:84
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:101
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:334
+msgid "Layout"
+msgstr "Yerleşim"
+
+#: src/Pro/Forms/Fields/Layout/Field.php:85
+msgid "column, row"
+msgstr "sütun, satır"
+
+#. translators: %1$s - current step in multipage form, %2$d - total number of pages.
+#: src/Pro/Forms/Fields/Pagebreak/Field.php:212
+msgid "Step %1$s of %2$d"
+msgstr "Adım %1$s / %2$d"
+
+#: src/Pro/Forms/Fields/Pagebreak/Field.php:290
+msgid "Previous"
+msgstr "Önceki"
+
+#. translators: %1$s - current step in multi-page form, %2$s - total number of pages.
+#: src/Pro/Forms/Fields/Pagebreak/Frontend.php:184
+msgid "Step %1$s of %2$s"
+msgstr "Adım %1$s / %2$s"
+
+#: src/Pro/Forms/Fields/Password/Field.php:91
+msgid "Password"
+msgstr "Şifre"
+
+#: src/Pro/Forms/Fields/Password/Field.php:115
+msgid "Confirm Password"
+msgstr "Şifreyi Doğrula"
+
+#: src/Pro/Forms/Fields/Password/Field.php:239
+msgid "Show Password"
+msgstr ""
+
+#: src/Pro/Forms/Fields/Password/Field.php:240
+msgid "Hide Password"
+msgstr ""
+
+#: src/Pro/Forms/Fields/Password/Field.php:322
+msgid "Field values do not match."
+msgstr "Alan değerleri eşleşmiyor."
+
+#: src/Pro/Forms/Fields/Phone/Field.php:54
+msgid "Phone number"
+msgstr "Telefon numarası"
+
+#. translators: %1$s - rating value, %2$s - rating scale.
+#: src/Pro/Forms/Fields/Rating/Field.php:217
+msgid "Rate %1$d out of %2$d"
+msgstr "Puan %1$d / %2$d"
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:68
+msgid "Field size cannot be changed when used in a repeater."
+msgstr "Tekrarlayıcıda kullanıldığında alan boyutu değiştirilemez."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:69
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:337
+msgid "When a field is placed inside a column, the field size always equals the column width."
+msgstr "Bir alan, bir sütun içerisine yerleştirildiğinde alan boyutu her zaman sütun genişliğine eşit olur."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:72
+msgid "Not Allowed"
+msgstr "İzin Verilmiyor"
+
+#. translators: %s - Field name.
+#: src/Pro/Forms/Fields/Repeater/Builder.php:74
+msgid "The %s field can’t be placed inside a Repeater field."
+msgstr "%s alanı Tekrarlayan alanının içine yerleştirilemez."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:75
+msgid "Only one field is allowed in each column when the Display option is set to Rows."
+msgstr "Görünüm seçeneği Satırlar olarak ayarlandığında her sütunda yalnızca bir alana izin verilir."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:76
+msgid "You can’t change Display to Rows because only one field per column is allowed."
+msgstr "Sütun başına yalnızca bir alana izin verildiğinden dolayı Görünümü Satırlar olarak değiştiremezsiniz."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:77
+msgid "Conditional Logic cannot be enabled when the field is inside a Repeater."
+msgstr "Alan bir Tekrarlayıcının içindeyken Koşullu Mantık etkinleştirilemez."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:78
+msgid "Conditional Logic has been disabled because this field has been placed inside a Repeater."
+msgstr "Bu alan bir Tekrarlayıcının içine yerleştirildiğinden dolayı Koşullu Mantık devre dışı bırakıldı."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:79
+msgid "Calculation cannot be enabled when the field is inside a Repeater."
+msgstr "Alan bir Tekrarlayıcının içindeyken hesaplama etkinleştirilemez."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:80
+msgid "Calculation has been disabled because this field has been placed inside a Repeater."
+msgstr "Bu alan bir Tekrarlayıcının içine yerleştirildiğinden dolayı hesaplama devre dışı bırakıldı."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:81
+msgid "When a field is placed inside a Repeater field, Calculation is disabled."
+msgstr "Tekrarlayan alanın içine bir alan yerleştirildiğinde Hesaplama devre dışı bırakılır."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:82
+msgid "Are you sure you want to delete the Repeater field? Deleting this field will also delete the fields inside it."
+msgstr "Tekrarlayan alanı silmek istediğinizden emin misiniz? Bu alanın silinmesi içindeki alanların da silinmesine neden olacaktır."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:83
+msgid "Conversational Forms cannot be enabled because your form contains a Repeater field."
+msgstr "Formunuz bir Tekrarlayan alanı içerdiğinden dolayı İletişim Formları etkinleştirilemiyor."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:84
+msgid "The Repeater field cannot be used when Conversational Forms is enabled."
+msgstr "İletişim Formları etkinleştirildiğinde Tekrarlayan alan kullanılamaz."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:96
+msgid "Lead Forms cannot be enabled because your form contains a Repeater field."
+msgstr "Formunuz bir Tekrarlayan alanı içerdiğinden dolayı Potansiyel Müşteri Formları etkinleştirilemiyor."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:103
+msgid "The Repeater field cannot be used when Lead Forms is enabled."
+msgstr "Potansiyel Müşteri Formları etkinleştirildiğinde Tekrarlayan alan kullanılamaz."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:106
+msgid "Are you sure you want to move this field?"
+msgstr "Bu alanı taşımak istediğinizden emin misiniz?"
+
+#. translators: %s - Addon name.
+#: src/Pro/Forms/Fields/Repeater/Builder.php:109
+msgid "It's currently mapped to %s, which will be reset if you add this field to a repeater."
+msgstr "Şu anda %s ile eşleşmiştir ve bu alanı bir tekrarlayıcıya eklerseniz sıfırlanacaktır."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:140
+msgid "Enter text for the repeater field label. Repeater labels are more like headings and can be hidden in the Advanced Settings."
+msgstr "Tekrarlayan alan etiketi için metin girin. Tekrarlayıcı etiketleri, daha çok başlıklara benzer ve Gelişmiş Ayarlarda gizlenebilir."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:220
+msgid "Choose whether you want your fields to be repeated as single rows or as a block of fields."
+msgstr "Alanlarınızın tek satır olarak mı yoksa alan bloğu olarak mı tekrarlanmasını istediğinizi seçin."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:260
+msgid "Button Type"
+msgstr "Buton Türü"
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:261
+msgid "Select the type of buttons to use for the repeater field."
+msgstr "Tekrarlayan alan için kullanılacak buton türünü seçin."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:273
+msgid "Buttons with icons"
+msgstr "Simgeli butonlar"
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:274
+msgid "Buttons"
+msgstr "Butonlar"
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:275
+msgid "Icons with text"
+msgstr "Metin içeren simgeler"
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:276
+msgid "Icons"
+msgstr "Simgeler"
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:277
+msgid "Plain text"
+msgstr "Düz metin"
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:316
+msgid "Button Labels"
+msgstr "Buton Etiketleri"
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:317
+msgid "Enter text for the repeater field buttons."
+msgstr "Tekrarlayan alan butonları için metin girin."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:333
+#: src/Pro/Forms/Fields/Repeater/Builder.php:348
+msgid "Add Label"
+msgstr "Etiket Ekle"
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:377
+msgid "Limit"
+msgstr "Limit"
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:378
+msgid "Set the minimum and maximum number of times the field can be repeated."
+msgstr "Alanın tekrarlanabileceği minimum ve maksimum sayıyı ayarlayın."
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:395
+msgid "Minimum"
+msgstr "Minimum"
+
+#: src/Pro/Forms/Fields/Repeater/Builder.php:411
+msgid "Maximum"
+msgstr "Maksimum"
+
+#: src/Pro/Forms/Fields/Repeater/Field.php:146
+msgid "Repeater"
+msgstr "Tekrarlayıcı"
+
+#: src/Pro/Forms/Fields/Repeater/Field.php:147
+msgid "repeater, row, column"
+msgstr "tekrarlayıcı, satır, sütun"
+
+#: src/Pro/Forms/Fields/Repeater/Field.php:164
+msgid "Add"
+msgstr "Ekle"
+
+#: src/Pro/Forms/Fields/Repeater/Field.php:165
+msgid "Remove"
+msgstr "Kaldır"
+
+#: src/Pro/Forms/Fields/Richtext/Field.php:663
+msgid "Uploaded to this form"
+msgstr "Bu forma yükleyin"
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:101
+msgid "Select a Layout."
+msgstr "Bir Yerleşim Düzeni seçin."
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:109
+msgid "Select a predefined layout."
+msgstr "Önceden tanımlanmış bir yerleşim düzeni seçin."
+
+#. translators: %1$s - WPForms.com URL to a related doc.
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:316
+msgid "We’ve added a new field to help you build advanced form layouts more easily. Give the Layout Field a try! Layout CSS classes are still supported. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn More</a>"
+msgstr "Gelişmiş form yerleşimlerini daha kolay bir şekilde oluşturmanıza yardımcı olmak için yeni bir alan ekledik. Yerleşim Alanına bir şans verin! Yerleşim CSS sınıfları hala desteklenmektedir. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Daha Fazla Bilgi Edinin</a>"
+
+#. translators: %s - field name.
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:333
+msgid "The %s field can’t be placed inside a Layout field."
+msgstr "%s alanı bir Yerleşim alanı içerisine yerleştirilemez."
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:335
+msgid "Got it!"
+msgstr "Tamamdır!"
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:336
+msgid "Field size cannot be changed when used in a layout."
+msgstr "Bir yerleşimde kullanılıyorken alan boyutu değiştirilemez."
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:338
+msgid "Don’t Show Again"
+msgstr "Bir Daha Gösterme"
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:339
+msgid "Layouts Have Moved!"
+msgstr "Yerleşimler Taşındı!"
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:341
+msgid "Conversational Forms cannot be enabled because your form contains a Layout field."
+msgstr "Formunuz bir Yerleşim alanı içerdiğinden, İletişimsel Formlar etkinleştirilemez."
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:342
+msgid "The Layout field cannot be used when Conversational Forms is enabled."
+msgstr "İletişim Formları etkinleştirildiğinde Yerleşim alanı kullanılamaz."
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:343
+msgid "Are you sure you want to delete the Layout field? Deleting this field will also delete the fields inside it."
+msgstr "Yerleşim alanını silmek istediğinizden emin misiniz? Bu alanı silmek, içerisindeki alanları da silecektir."
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:344
+msgid "Cannot be enabled because the Layout field contains Conditional Logic."
+msgstr "Yerleşim alanı Koşullu Mantık içerdiğinden dolayı etkinleştirilemiyor."
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:345
+msgid "Conditional Logic has been disabled because the Layout field contains Conditional Logic."
+msgstr "Koşullu Mantık devre dışı bırakıldı çünkü Yerleşim alanı Koşullu Mantık içeriyor."
+
+#: src/Pro/Forms/Fields/Traits/Layout/Builder.php:367
+msgid "Add Fields"
+msgstr "Alan Ekle"
+
+#: src/Pro/Integrations/Elementor/StockPhotos.php:175
+#: src/Pro/Integrations/Gutenberg/StockPhotos.php:175
+msgid "Can't download file."
+msgstr "Dosya indirilemiyor."
+
+#: src/Pro/Integrations/Elementor/StockPhotos.php:191
+#: src/Pro/Integrations/Gutenberg/StockPhotos.php:191
+msgid "Can't unzip file."
+msgstr "Sıkıştırılmış dosya açılamıyor."
+
+#: src/Pro/Integrations/Elementor/StockPhotos.php:201
+#: src/Pro/Integrations/Gutenberg/StockPhotos.php:201
+msgid "Can't move unzipped files."
+msgstr "Sıkıştırılmamış dosyalar taşınamıyor."
+
+#: src/Pro/Integrations/Elementor/StockPhotos.php:229
+#: src/Pro/Integrations/Gutenberg/StockPhotos.php:229
+msgid "Can't create the stock photos storage directory."
+msgstr "Stok fotoğrafı depolama dizini oluşturulamadı."
+
+#: src/Pro/Integrations/LiteConnect/Admin.php:278
+msgid "Entry Restore Complete"
+msgstr "Girdi Geri Yükleme Tamamlandı"
+
+#. translators: %d - number of imported entries.
+#: src/Pro/Integrations/LiteConnect/Admin.php:325
+msgid "%d entry has been successfully imported."
+msgid_plural "%d entries have been successfully imported."
+msgstr[0] "%d girdi başarılı bir şekilde içe aktarıldı."
+msgstr[1] "%d girdi başarılı bir şekilde içe aktarıldı."
+
+#. translators: %d - number of imported entries.
+#: src/Pro/Integrations/LiteConnect/Admin.php:339
+msgid "%d entry was not imported."
+msgid_plural "%d entries were not imported."
+msgstr[0] "%d girdi içe aktarılmadı."
+msgstr[1] "%d girdi içe aktarılmadı."
+
+#: src/Pro/Integrations/LiteConnect/Admin.php:351
+msgid "No entries were imported."
+msgstr "Hiçbir girdi içe aktarılmadı."
+
+#. translators: %s - WPForms Logs admin page URL.
+#: src/Pro/Integrations/LiteConnect/Admin.php:357
+msgid "<a href=\"%s\">View log</a> for details."
+msgstr "ayrıntılar için <a href=\"%s\">logu görüntüleyin</a>."
+
+#: src/Pro/Integrations/LiteConnect/Admin.php:383
+msgid "Unfortunately, there were some issues during the entries importing process. Don't worry - data is not lost. Please try again later."
+msgstr "Maalesef girdi içe aktarma prosesi sırasında bazı sorunlar meydana geldi. Endişelenmeyin - veri kaybı yaşanmadı. Lütfen daha sonra tekrar deneyin."
+
+#. translators: %d - backed up entries count.
+#: src/Pro/Integrations/LiteConnect/Admin.php:550
+msgid "%d form entry has been backed up"
+msgid_plural "%d form entries have been backed up"
+msgstr[0] "%d form girdisi yedeklendi"
+msgstr[1] "%d form girdisi yedeklendi"
+
+#. translators: %s - time when Lite Connect was enabled.
+#: src/Pro/Integrations/LiteConnect/Admin.php:563
+msgid "since you enabled Lite Connect on %s"
+msgstr "%s itibariyle Lite Connect'i etkinleştirdiğinizden beri"
+
+#: src/Pro/Integrations/LiteConnect/Integration.php:159
+msgid "The form no longer exists"
+msgstr "Form artık mevcut değil"
+
+#: src/Pro/Integrations/LiteConnect/Integration.php:160
+msgid "Unknown"
+msgstr "Bilinmiyor"
+
+#: src/Pro/Integrations/LiteConnect/Integration.php:487
+msgid "Your form entries have been restored successfully!"
+msgstr "Form girdileriniz başarılı bir şekilde geri yüklendi!"
+
+#. translators: %1$s - WPForms Entries Overview admin page URL.
+#: src/Pro/Integrations/LiteConnect/Integration.php:494
+msgid "You can view your form entries inside the WordPress Dashboard from the <a href=\"%s\" rel=\"noreferrer noopener\" target=\"_blank\">Entries Overview report</a>."
+msgstr "Form girdilerinizi WordPress Panosunda <a href=\"%s\" rel=\"noreferrer noopener\" target=\"_blank\">Girdilere Genel Bakış raporu</a> içerisinden görüntüleyebilirsiniz."
+
+#. translators: %s - resume page URL.
+#: src/Pro/Migrations/Upgrade143.php:252
+msgid "WPForms database upgrade is incomplete, click <a href=\"%s\">here</a> to resume."
+msgstr "WPForms veri tabanı güncellemesi tamamlanmamış, devam etmek için <a href=\"%s\">buraya</a> tıklayın."
+
+#. translators: %s - entries upgrade page URL.
+#: src/Pro/Migrations/Upgrade143.php:255
+msgid "WPForms needs to upgrade the database, click <a href=\"%s\">here</a> to start the upgrade."
+msgstr "WPForms tarafından veri tabanının yükseltilmesi gerekiyor, yükseltme işlemini başlatmak için <a href=\"%s\">buraya</a> tıklayın."
+
+#: src/Pro/Migrations/Upgrade143.php:287
+msgid "WPForms needs to upgrade the database, click the button below to begin."
+msgstr "WPForms'un veri tabanını yükseltmesi gerekiyor, başlamak için aşağıdaki düğmeye tıklayın."
+
+#: src/Pro/Migrations/Upgrade143.php:288
+msgid "Run Upgrade"
+msgstr "Yükseltmeyi Çalıştırın"
+
+#: src/Pro/Migrations/Upgrade143.php:291
+msgid "WPForms database upgrade is incomplete, click the button below to resume."
+msgstr "WPForms veri tabanı yükseltmesi tamamlanmamış, devam etmek için aşağıdaki düğmeye tıklayın."
+
+#: src/Pro/Migrations/Upgrade143.php:292
+msgid "Resume Upgrade"
+msgstr "Yükseltmeye Devam Et"
+
+#: src/Pro/Migrations/Upgrade143.php:297
+msgid "Upgrade"
+msgstr "Yükselt"
+
+#: src/Pro/Migrations/Upgrade143.php:299
+msgid "Please do not leave this page or close the browser while the upgrade is in progress."
+msgstr "Yükseltme işlemi devam ediyorken lütfen bu sayfadan ayrılmayın veya tarayıcıyı kapatmayın."
+
+#. translators: %1$s - total number of entries upgraded, %2$s - total number of entries on site.
+#: src/Pro/Migrations/Upgrade143.php:307
+msgid "Updated %1$s of %2$s entries."
+msgstr "%1$s / %2$s girdi güncellendi."
+
+#: src/Pro/Migrations/Upgrade143.php:319
+msgid "No updates are currently needed."
+msgstr "Şu anda hiçbir güncellemeye ihtiyaç yok."
+
+#: src/Pro/SmartTags/SmartTags.php:28
+msgid "Entry Details URL"
+msgstr "Girdi Ayrıntıları URL'si"
+
+#: assets/js/admin/builder/admin-builder.js:3406
+msgid "Disabled because this field is set to Read-Only in the Advanced tab."
+msgstr ""

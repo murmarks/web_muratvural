@@ -1,0 +1,540 @@
+# Translation of Plugins - Enable Media Replace - Stable (latest release) in Turkish
+# This file is distributed under the same license as the Plugins - Enable Media Replace - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-08-03 09:13:57+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: tr\n"
+"Project-Id-Version: Plugins - Enable Media Replace - Stable (latest release)\n"
+
+#: classes/ViewController.php:105
+msgid "This error is shown because you try to move the image to another folder, which already has this file"
+msgstr "Bu hata, görseli zaten bu dosyayı içeren başka bir klasöre taşımaya çalıştığınız için gösteriliyor"
+
+#: classes/ViewController.php:123
+msgid "Path: %s is not within basedir reported as: %s"
+msgstr "Yol: %s, temel dizin olarak bildirilen: %s içinde değil"
+
+#: views/success.php:26
+msgid "( %s ) or %s click here to continue %s"
+msgstr "( %s ) veya %s devam etmek için buraya tıklayın %s"
+
+#: views/success.php:25
+msgid "You will be redirect to the image screen in a few seconds."
+msgstr "Bir kaç saniye içinde görsel ekranına yönlendirileceksiniz."
+
+#: views/success.php:23
+msgid "Try the %sShortPixel Image Optimizer%s plugin!"
+msgstr "%sShortPixel Image Optimizer%s eklentisini deneyin!"
+
+#: views/success.php:21
+msgid "Did you know that you can also optimize the images on your website to make them load faster?"
+msgstr "Web sitenizdeki görselleri daha hızlı yüklenmeleri için optimize edebileceğinizi biliyor muydunuz?"
+
+#: views/success.php:19
+msgid "Your image has been successfully replaced!"
+msgstr "Görseliniz başarıyla değiştirildi!"
+
+#: views/success.php:17
+msgid "Your image has been replaced!"
+msgstr "Görseliniz değiştirildi!"
+
+#: views/screen.php:231
+msgid "File is offloaded and can't be moved to other directory"
+msgstr "Dosya dışarıya taşındığı için başka bir klasöre taşınamaz"
+
+#: views/screen.php:172
+msgid "Options"
+msgstr "Seçenekler"
+
+#: views/screen.php:68
+msgid "\t\t\tYou are about to replace %s in your media library. This will be %spermanent%s. %s You can click on the new image panel and select a file from your computer. You can also drag and drop a file into this window"
+msgstr "\t\t\tOrtam kütüphanenizdeki %s dosyasını değiştirmek üzeresiniz. Bu işlem %skalıcı%s olacaktır. %s Yeni görüntü paneline tıklayıp bilgisayarınızdan bir dosya seçebilirsiniz. Ayrıca bu pencereye bir dosya sürükleyip bırakabilirsiniz."
+
+#: views/screen.php:41
+msgid "Drop File"
+msgstr "Dosyayı bırak"
+
+#: views/prepare-remove-background.php:71
+msgid "Replace this image with another one instead!"
+msgstr "Bunun yerine bu resmi başka bir resimle değiştirin!"
+
+#: views/error.php:30
+msgid "If you need help, please see the plugin %sdocumentation%s. It contains clear solutions to most of the problems you may encounter when using our plugin."
+msgstr "Yardıma ihtiyacınız varsa lütfen eklenti %sbelgelerini%s inceleyin. Eklentimizi kullanırken karşılaşabileceğiniz çoğu soruna yönelik net çözümler içermektedir."
+
+#: views/error.php:26
+msgid "You can return to %s previous page %s"
+msgstr "%s Önceki sayfaya %s dönebilirsiniz"
+
+#: views/error.php:18
+msgid "An error occured"
+msgstr "Bir hata oluştu"
+
+#: classes/ViewController.php:141
+msgid "An unknown error has occured"
+msgstr "Bilinmeyen bir hata oluştu"
+
+#: classes/ViewController.php:137
+msgid "Replacement Image could not be downloaded or does not exist"
+msgstr "İkame görsel indirilemedi veya mevcut değil."
+
+#: classes/ViewController.php:132
+msgid "This can happen when the window is open for a long time and/or there has been a timeout.  You can go back to previous screen and try again. If this happens each time when replacing, contact us"
+msgstr "Bu, pencere uzun süre açık kaldığında ve/veya bir zaman aşımı olduğunda meydana gelebilir. Önceki ekrana dönüp tekrar deneyebilirsiniz. Bu, değiştirme sırasında her seferinde oluyorsa, bizimle iletişime geçin"
+
+#: classes/ViewController.php:131
+msgid "Fail to validate form nonce. Please try again"
+msgstr "Nonce doğrulanırken hata oluştu. Lütfen tekrar deneyin"
+
+#: classes/ViewController.php:114
+msgid "Error updating WordPress post in the database"
+msgstr "Veritabanında WordPress yazısını güncellerken hata oluştu"
+
+#: classes/ViewController.php:111
+msgid "Copying replacement file to destination failed"
+msgstr "İkame görseli hedefe kopyalarken hata oluştu"
+
+#: classes/ViewController.php:108
+msgid "Something went wrong while writing the file or directory"
+msgstr "Dosya ya da klasörü yazarken bir şeyler ters gitti"
+
+#: classes/ViewController.php:104
+msgid "The target file already exists in this directory. Please try another name / directory"
+msgstr "Hedef dosya klasörde zaten mevcut. Lütfen başka bir isim / klasör seçin"
+
+#: classes/ViewController.php:101
+msgid "The upload from your browser seem to have failed"
+msgstr "Tarayıcınızdan yükleme başarısız oldu"
+
+#: classes/ViewController.php:98
+msgid "The file upload has been rejected for security reason. WordPress might not allow uploading this extension or filetype"
+msgstr "Dosya yüklemesi güvenlik nedeniyle reddedildi. WordPress bu uzantıyı veya dosya türünü yüklemeye izin vermiyor olabilir"
+
+#: classes/ViewController.php:95
+msgid "Updating the WordPress attachment failed"
+msgstr "WordPress ek dosyasını güncelleme başarısız oldu"
+
+#: classes/ViewController.php:92
+msgid "The custom time format submitted is invalid"
+msgstr "Gönderilen özel zaman biçimi geçersiz"
+
+#: classes/ViewController.php:89
+msgid "The form submitted is missing various fields"
+msgstr "Gönderilen formda çeşitli alanlar eksik"
+
+#: classes/ViewController.php:86
+msgid "You don't have permission to edit this image"
+msgstr "Bu görseli düzenleme izniniz yok"
+
+#: classes/ViewController.php:83
+msgid "You don't have permission to upload images. Please refer to your administrator"
+msgstr "Görsel yükeme izniniz yok. Lütfen yöneticinize başvurun"
+
+#: classes/uihelper.php:426
+msgid "Current"
+msgstr "Geçerli"
+
+#: classes/uihelper.php:421
+msgid "Click here to upload or drop file in area"
+msgstr "Yüklemek için buraya tıklayın ya da alanın içine dosyayı sürükleyin"
+
+#: classes/uihelper.php:418
+msgid "New"
+msgstr "Yeni"
+
+#: classes/external/wp-offload.php:49 classes/external/wp-offload.php:59
+msgid "Your S3-Offload plugin version doesn't seem to be compatible. Please upgrade the S3-Offload plugin"
+msgstr "S3-Offload eklentiniz uyumlu görünmüyor. Lütfen S3-Offload eklentinizi yükseltin"
+
+#: classes/api.php:75
+msgid "No permission for user"
+msgstr "Kullanıcının izini yok"
+
+#: views/prepare-remove-background.php:121
+msgid "Replace"
+msgstr "Değiştir"
+
+#: classes/uihelper.php:426 views/prepare-remove-background.php:120
+msgid "Preview"
+msgstr "Ön izle"
+
+#: views/prepare-remove-background.php:108
+msgid "Opacity:"
+msgstr "Opaklık:"
+
+#: views/prepare-remove-background.php:98
+msgid "Background Color:"
+msgstr "Arka plan rengi:"
+
+#: views/prepare-remove-background.php:94
+msgid "If you select this option, the image will have a solid color background and you can choose the color code from the color picker below."
+msgstr "Bu seçeneği seçerseniz görselin düz bir arka planı olacak ve renk kodu aşağıdaki renk seçiciden seçilecektir."
+
+#: views/prepare-remove-background.php:91
+msgid "Solid background"
+msgstr "Düz arka plan"
+
+#: views/prepare-remove-background.php:85
+msgid "Returns a transparent background if it is a PNG image, or a white one if it is a JPG image."
+msgstr "Eğer PNG bir görsel ise şeffaf bir arka plan, JPG ise beyaz arka plan döndürür."
+
+#: views/prepare-remove-background.php:82
+msgid "Transparent/white background"
+msgstr "Şeffaf/beyaz arka plan"
+
+#: views/prepare-remove-background.php:78
+msgid "If a CDN is used, remember to clear the cache for this image!"
+msgstr "Eğer bir CDN kullanılyıorsa bu görsel için ön belleği temizlemeyi unutmayın!"
+
+#: views/prepare-remove-background.php:75
+msgid "Background Removal Options"
+msgstr "Arka plan kaldırma seçenekleri"
+
+#: views/prepare-remove-background.php:64
+msgid "Report bad background removal"
+msgstr "Kötü arka plan kaldırmalarını rapor edin"
+
+#: views/prepare-remove-background.php:56
+msgid "Remove Media Background"
+msgstr "Ortam arka planını kaldır"
+
+#: views/prepare-remove-background.php:33
+msgid "Hello! %s This is a report of a background removal that did not go well %s Url: {url} %s Settings : {settings} %s Thank you! %s"
+msgstr "Merhaba! %s Bu, arka plan kaldırma işleminin iyi gitmediğine dair bir rapordur %s URL: {url} %s Ayarlar: {settings} %s Teşekkürler! %s"
+
+#: views/prepare-remove-background.php:32
+msgid "Bad remove of background report"
+msgstr "Kötü arka plan kaldırma raporu"
+
+#: views/screen.php:226
+msgid "Place the newly uploaded file in this folder: "
+msgstr "Yeni yüklenmiş dosyayı şu klasöre yerleştir: "
+
+#: views/screen.php:146
+msgid "Note: This option requires you to upload a file of the same type (%s) as the file you want to replace. The attachment name will remain the same (%s) regardless of what the file you upload is called. If a CDN is used, remember to clear the cache for this image!"
+msgstr "Not: Bu seçenek, değiştirmek istediğiniz dosyayla aynı türde (%s) bir dosya yüklemenizi gerektirir. Yüklediğiniz dosyanın adından bağımsız olarak ek dosyanın adı aynı kalacaktır (%s). Bir CDN kullanılıyorsa, bu görselin önbelleğini temizlemeyi unutmayın!"
+
+#: views/screen.php:124
+msgid "Remove the background after replacing this image!"
+msgstr "Görseli değiştirdikten sonra arka planı kaldır!"
+
+#: views/screen.php:120
+msgid "New! Click here to remove the background of this image!"
+msgstr "Yeni! Bu görselin arka planını kaldırmak için buraya tıklayın!"
+
+#: views/screen.php:76
+msgid "The replacement file does not have the same file type. This can lead to unexpected issues ( %s )"
+msgstr "Yeni görsel dosyası aynı türde değil. Bu beklenmedik sorunlara yol açabilir (%s)"
+
+#: views/screen.php:59
+msgid "Select Replacement Media"
+msgstr "Değiştirilecek ortamı seçin"
+
+#: views/do-replace-background.php:56
+msgid "Temp file does not exist"
+msgstr "Geçici dosya mevcut değil"
+
+#: views/do-replace-background.php:16
+msgid "Error while sending form (no key). Please try again."
+msgstr "Form gönderilirken hata oluştu (anahtar yok). Lütfen tekrar deneyin."
+
+#: classes/uihelper.php:516
+msgid "%s New Beta Feature! %s %s Enable Media Replace now gives you the ability to remove the background of any image. Try it out in the Media Library: hover over an image and click on Remove Background. Or just click on Remove background from the image editing window! %s  "
+msgstr "%s Yeni beta özelliği! %s %s Enable Media Replace artık size herhangi bir görselin arka planını kaldırma kabiliyet sunuyor. Bunu ortam kütüphanesinde deneyin: imleci herhangi bir görselin üzerine getirin ve Arka Planı Kaldır'a tıklayın. Veya görseli düzenleme ekranında Arka planı kaldır'a tıklayın! %s  "
+
+#: classes/uihelper.php:465
+msgid "Removing background..."
+msgstr "Arka plan kaldırılıyor..."
+
+#: classes/emr-plugin.php:580
+msgid "Remove  background"
+msgstr "Arka planı kaldır."
+
+#: classes/emr-plugin.php:534
+msgid "To remove the background, click the link."
+msgstr "Arka planı kaldırmak için bağlantıya tıklayın."
+
+#: classes/emr-plugin.php:464
+msgid "To remove the background, click the link and select the options."
+msgstr "Arka planı kaldırmak için bağlantıya tıklayın ve seçenekleri seçin."
+
+#: classes/emr-plugin.php:171 classes/emr-plugin.php:464
+#: classes/emr-plugin.php:532 classes/emr-plugin.php:534
+msgid "Remove background"
+msgstr "Arka planı kaldır"
+
+#: classes/api.php:228
+msgid "Download failed"
+msgstr "Dosyaları indir"
+
+#: classes/api.php:217
+msgid "This file seems not available anymore. Please try again"
+msgstr "Bu dosya artık mevcut değil gibi görünüyor. Lütfen tekrar deneyin"
+
+#: classes/api.php:193
+msgid "The background could not be removed in a reasonable amount of time. The file might be too big, or the API could be busy. Please try again later!"
+msgstr "Arka plan kabul edilebilir bir süre içerisinde kaldırılamadı. Dosya çok büyük olabilir veya API meşgul olabilir. Lütfen tekrar deneyin!"
+
+#: classes/api.php:68
+msgid "No attachment ID given"
+msgstr "Ek kimliği belirtilmedi"
+
+#: build/shortpixel/notices/src/NoticeModel.php:290
+msgid "Dismiss this notice"
+msgstr "Bu notu görmezden gel"
+
+#: views/upsell.php:146
+msgid "Get Pro"
+msgstr "Pro'yu edin"
+
+#: views/upsell.php:139
+msgid "Envira Gallery activated!"
+msgstr "Envira Gallery etkinleştirildi!"
+
+#: views/upsell.php:137
+msgid "Activate"
+msgstr "Etkinleştir"
+
+#: views/upsell.php:135
+msgid "Install now"
+msgstr "Şimdi kur"
+
+#: views/upsell.php:126
+msgid "Create beautiful, fast-loading photo & video galleries for your site in minutes."
+msgstr "Siteniz için güzel veya hızlı yüklenen fotoğraf ve video galerilerini dakikalar içinde oluşturun."
+
+#: views/upsell.php:94
+msgid "Shortpixel Adaptive Images activated!"
+msgstr "Shortpixel Adaptive Images etkinleştirildi!"
+
+#: views/upsell.php:80
+msgid "In Minutes"
+msgstr "Dakikalar içinde"
+
+#: views/upsell.php:79
+msgid "Start Serving %s Optimized, %s Nextgen images %s From a global CDN"
+msgstr "%s Optimize edilmiş,%s yeni nesil görselleri%s küresel bir CDN'den sunmaya başlayın"
+
+#: views/upsell.php:75
+msgid "ShortPixel Adaptive Images"
+msgstr "ShortPixel Adaptive Images"
+
+#: views/upsell.php:60
+msgid "Shortpixel activated!"
+msgstr "Shortpixel etkinleştirildi!"
+
+#: views/upsell.php:57 views/upsell.php:91
+msgid "ACTIVATE"
+msgstr "ETKİNLEŞTİR"
+
+#: views/upsell.php:53 views/upsell.php:87
+msgid "INSTALL NOW"
+msgstr "ŞİMDİ KUR"
+
+#: views/upsell.php:46
+msgid "Optimize all images %s automatically"
+msgstr "Tüm görselleri %s otomatik olarak optimize et"
+
+#: views/upsell.php:44
+msgid "Is your website slow?"
+msgstr "Web siteniz yavaş mı?"
+
+#: views/upsell.php:42
+msgid "ShortPixel Image Optimizer"
+msgstr "ShortPixel Image Optimizer"
+
+#: views/do-replace-background.php:21
+msgid "Error in request. Please try again"
+msgstr "İstekte hata. Lütfen tekrar deneyin"
+
+#: views/screen.php:206
+msgid "Now"
+msgstr "Şimdi"
+
+#: views/screen.php:190
+msgid "Replace the date with the current date %s(%s)%s"
+msgstr "Tarihi mevcut tarihle değiştir %s(%s)%s"
+
+#: views/screen.php:149
+msgid "If you replace the file with a different filetype, this file might become unreadable and / or cause unexpected issues"
+msgstr "Eğer dosyayı başka bir türle değiştirirseniz dosya okunamaz hale gelebilir ve / veya beklenmedik sorunlara neden olabilir"
+
+#: classes/ViewController/ReplaceViewController.php:38
+#: views/do-replace-background.php:27
+msgid "You do not have permission to upload files for this author."
+msgstr "Bu yazar için dosya yüklemeye izniniz yok."
+
+#: classes/external/upgrader_skin.php:81
+msgid "There was an error installing the addon. Please try again."
+msgstr "Eklenti kurulurken bir hata oluştu. Lütfen tekrar deneyin."
+
+#: classes/emr-plugin.php:316
+msgid "Installing ..."
+msgstr "Kuruluyor..."
+
+#: views/screen.php:163
+msgid "Note: If you enable this option, the name and type of the file you are uploading will replace the old file. All links pointing to the current file (%s) will be updated to point to the new file name. (If other websites link directly to the file, those links will no longer work. Be careful!)"
+msgstr "Not: Bu seçeneği etkinleştirirseniz, yüklediğiniz dosyanın adı ve türü eski dosyanın yerine geçecektir. Geçerli dosyaya (%s) işaret eden tüm bağlantılar yeni dosya adına yönlendirilecektir. (Eğer başka web siteleri dosyaya doğrudan bağlantı veriyorsa bu bağlantılar çalışmayacaktır. Dikkatli olun!)"
+
+#: build/shortpixel/notices/src/NoticeModel.php:281
+msgid "Hide Details"
+msgstr "Detayları gizle"
+
+#: build/shortpixel/notices/src/NoticeModel.php:277
+msgid "See Details"
+msgstr "Detayları göster"
+
+#: classes/emr-plugin.php:620
+msgid "Replaced By"
+msgstr "Şunun tarafından değiştirildi"
+
+#: views/screen.php:196
+msgid "Custom Date"
+msgstr "Özel tarih"
+
+#: views/screen.php:192
+msgid "Set a Custom Date"
+msgstr "Özel tarih belirle"
+
+#: views/screen.php:191
+msgid "Keep the date %s(%s)%s"
+msgstr "Tarihi olduğu gibi bırak %s(%s)%s"
+
+#: views/screen.php:188
+msgid "When replacing the media, do you want to:"
+msgstr "Ortamı değiştirirken, şunu istiyor musunuz:"
+
+#: views/screen.php:131
+msgid "Replacement Options"
+msgstr "Değiştirme seçenekleri"
+
+#: views/screen.php:80
+msgid "The replacement file type does not seem to be allowed by WordPress. This can lead to unexpected issues"
+msgstr "Değiştirilecek dosya WordPress tarafından kabul edilmiyor gibi görünüyor. Bu beklenmedik sorunlara yol açabilir"
+
+#: views/screen.php:73
+msgid "%s f %s exceeds the maximum upload size for this site."
+msgstr "%s f %s bu site için izin verilen azami dosya boyutunu aşıyor."
+
+#: views/screen.php:72
+msgid "Maximum file size: <strong>%s</strong>"
+msgstr "Azami dosya boyutu: <strong>%s</strong>"
+
+#: views/do-replace-background.php:85
+msgid "File successfully replaced"
+msgstr "Dosya başarıyla değiştirildi"
+
+#: build/shortpixel/log/src/DebugItem.php:35
+msgid "[Data]"
+msgstr "[Data]"
+
+#: views/prepare-remove-background.php:122 views/screen.php:243
+msgid "Cancel"
+msgstr "İptal"
+
+#: views/screen.php:242
+msgid "Upload"
+msgstr "Yükle"
+
+#: views/screen.php:165
+msgid "Please note that if you upload a new image, only the embeds/links of the original size image will be replaced in your posts."
+msgstr "Yeni bir görsel yüklediğinizde yazılarınzıda sadece orijinal boyuttaki görselin bağlantılarının değiştirileceğini unutmayın."
+
+#: views/screen.php:160
+msgid "Replace the file, use the new file name, and update all links"
+msgstr "Dosyayı değiştir, yeni dosya adını kullan ve tüm bağlantıları güncelle"
+
+#: views/screen.php:142
+msgid "Just replace the file"
+msgstr "Sadece dosyayı değiştir"
+
+#: views/screen.php:62
+msgid "NOTE: You are about to replace the media file \"%s\". There is no undo. Think about it!"
+msgstr "NOT: \"%s\" ortam dosyasını değiştirmek üzeresiniz. Bunun geri dönüşü yoktur. Tekrar düşünün!"
+
+#: views/screen.php:43
+msgid "Replace Media Upload"
+msgstr "Ortam yüklemesini değiştir"
+
+#: classes/emr-plugin.php:609
+msgid "Revised"
+msgstr "Gözden geçirilmiş"
+
+#: classes/emr-plugin.php:606
+msgid "M j, Y @ H:i"
+msgstr "M j, Y @ H:i"
+
+#: classes/emr-plugin.php:489 views/screen.php:208
+msgid "Original"
+msgstr "Orijinal"
+
+#: classes/emr-plugin.php:479
+msgid "Thumbnails were not generated"
+msgstr "Küçük resimler oluşturulmadı"
+
+#: classes/emr-plugin.php:453 classes/emr-plugin.php:524
+msgid "To replace the current file, click the link and upload a replacement file."
+msgstr "Mevcut dosyayı değiştirmek için bağlantıya tıklayın ve değiştirilecek dosyayı yükleyin."
+
+#: classes/emr-plugin.php:453 classes/emr-plugin.php:524
+msgid "Upload a new file"
+msgstr "Yeni dosya yükle"
+
+#: classes/emr-plugin.php:170 classes/emr-plugin.php:522
+#: classes/emr-plugin.php:576
+msgid "Replace media"
+msgstr "Ortamı değiştir"
+
+#: classes/emr-plugin.php:438
+msgid "Replaced Thumbnails Preview"
+msgstr "Küçük resim ön izlemeleri değiştirildi"
+
+#: classes/emr-plugin.php:435
+msgid "Replace Media"
+msgstr "Ortamı değiştir"
+
+#: build/shortpixel/replacer/src/Replacer.php:174
+msgid "There was an issue with updating your image URLS: Search and replace have different amount of values. Aborting updating thumbnails"
+msgstr "Görsel adreslerini değiştirirken sorunlar oluştu: Ara ve değiştirin farklı değerleri var. Küçük resimleri güncelleme iptal edildi"
+
+#: build/shortpixel/replacer/src/Replacer.php:97
+msgid "Fail Safe :: Source Location returned empty string. Not replacing content"
+msgstr "Hata Güvenli: Kaynak konum boş bir metin döndürdü. İçerik değiştirilmedi"
+
+#: build/shortpixel/replacer/src/Replacer.php:90
+msgid "Fail Safe :: Source Location seems to be a directory."
+msgstr "Hata Güvenli :: Kaynak konum bir klasör gibi görünüyor."
+
+#: views/screen.php:28
+msgid "You do not have permission to upload files."
+msgstr "Dosyaları yüklemek için izniniz yok."
+
+#. Author URI of the plugin
+#: enable-media-replace.php
+msgid "https://shortpixel.com"
+msgstr "https://shortpixel.com"
+
+#. Author of the plugin
+#: enable-media-replace.php
+msgid "ShortPixel"
+msgstr "ShortPixel"
+
+#. Description of the plugin
+#: enable-media-replace.php
+msgid "Enable replacing media files by uploading a new file in the \"Edit Media\" section of the WordPress Media Library."
+msgstr "WordPress ortam kütüphanesinde \"Ortamı Dzüenle\" bölümünde yeni dosya yüklemeyi sağlayarak ortam değiştirmeyi etkinleştirir."
+
+#. Plugin URI of the plugin
+#: enable-media-replace.php
+msgid "https://wordpress.org/plugins/enable-media-replace/"
+msgstr "https://wordpress.org/plugins/enable-media-replace/"
+
+#. Plugin Name of the plugin
+#: enable-media-replace.php views/error.php:15 views/success.php:15
+msgid "Enable Media Replace"
+msgstr "Enable Media Replace"
