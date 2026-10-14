@@ -1,0 +1,29 @@
+
+01-11-2025 09:20:41 [muratvural.online][info] Posts query: array (
+  'has_thumb' => false,
+  'type' => true,
+  'status' => 'post',
+  'category' => 0,
+  'date_start' => 0,
+  'date_end' => 0,
+)
+01-11-2025 09:20:41 [muratvural.online][info] Posts query: array (
+  'has_thumb' => true,
+  'type' => true,
+  'status' => 'post',
+  'category' => 0,
+  'date_start' => 0,
+  'date_end' => 0,
+)
+-------------------------------
+01-11-2025 09:21:00 [muratvural.online][info] START generate in mode:  find
+01-11-2025 09:21:00 [muratvural.online][info] Posts query: array (
+  'has_thumb' => '0',
+  'type' => true,
+  'status' => 'post',
+  'category' => 0,
+  'date_start' => 0,
+  'date_end' => 0,
+)
+01-11-2025 09:21:00 [muratvural.online][info] Queried posts IDs:  
+-------------------------------

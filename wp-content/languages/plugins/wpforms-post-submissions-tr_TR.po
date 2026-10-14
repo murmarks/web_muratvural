@@ -1,0 +1,186 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-11-07T08:51:10+00:00\n"
+"PO-Revision-Date: 2025-11-07T08:51:10+00:00\n"
+"Language: \n"
+
+#. Plugin Name of the plugin
+msgid "WPForms Post Submissions"
+msgstr "WPForms Gönderi Gönderimleri"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://wpforms.com"
+msgstr "https://wpforms.com"
+
+#. Description of the plugin
+msgid "Post Submissions with WPForms."
+msgstr "WPForms ile Gönderi Gönderimleri."
+
+#. Author of the plugin
+msgid "WPForms"
+msgstr "WPForms"
+
+#: src/Plugin.php:148
+msgid "Some of the Field Options for the selected field will be disabled to prevent changes as long as the field is being used as the Post Featured Image."
+msgstr "Seçilen alan için Alan Seçeneklerinden bazıları, alan Gönderi Öne Çıkan Görseli olarak kullanıldığı sürece değişiklik yapılmasını önlemek için devre dışı bırakılacaktır."
+
+#: src/Plugin.php:150
+msgid "This field is being used to upload the Post Featured Image. Some Field Options cannot be changed. You can change the Post Featured Image upload field by going to <strong>Settings » Post Submissions.</strong>"
+msgstr "Bu alan, Gönderi Öne Çıkan Görselini yüklemek için kullanılır. Bazı Alan Seçenekleri değiştirilemez. Öne Çıkan Görsel yükleme alanını, <strong>Ayarlar » Gönderi Gönderimleri</strong> bölümüne giderek değiştirebilirsiniz."
+
+#: src/Plugin.php:525
+#: src/Plugin.php:545
+msgid "Post Submissions"
+msgstr "Gönderi Gönderimleri"
+
+#: src/Plugin.php:554
+msgid "Enable Post Submissions"
+msgstr "Gönderi Gönderilerini Etkinleştir"
+
+#: src/Plugin.php:565
+#: src/Template.php:76
+msgid "Post Title"
+msgstr "Gönderi Başlığı"
+
+#: src/Plugin.php:568
+#: src/Plugin.php:581
+#: src/Plugin.php:594
+#: src/Plugin.php:607
+#: src/Plugin.php:700
+msgid "--- Select Field ---"
+msgstr "--- Alan Seçin ---"
+
+#: src/Plugin.php:578
+#: src/Template.php:83
+msgid "Post Content"
+msgstr "Gönderi İçeriği"
+
+#: src/Plugin.php:591
+#: src/Template.php:101
+msgid "Post Excerpt"
+msgstr "Gönderi Alıntısı"
+
+#: src/Plugin.php:604
+msgid "Post Featured Image"
+msgstr "Gönderi Öne Çıkan Görseli"
+
+#: src/Plugin.php:627
+msgid "Post Type"
+msgstr "Gönderi Türü"
+
+#: src/Plugin.php:640
+msgid "Post Status"
+msgstr "Gönderi Durumu"
+
+#: src/Plugin.php:642
+msgid "Select the default status used for new posts."
+msgstr "Yeni gönderiler için kullanılan varsayılan durumu seçin."
+
+#: src/Plugin.php:658
+msgid "Current User"
+msgstr "Mevcut Kullanıcı"
+
+#: src/Plugin.php:672
+msgid "Post Author"
+msgstr "Gönderi Yazarı"
+
+#: src/Plugin.php:674
+msgid "Select the post author used for new posts. Selecting Current User will use the current WordPress user that submits the form."
+msgstr "Yeni gönderiler için kullanılan gönderi yazarını seçin. Mevcut Kullanıcı seçildiğinde, formu gönderen mevcut WordPress kullanıcısı kullanılacaktır."
+
+#: src/Plugin.php:676
+msgid "--- Select User ---"
+msgstr "--- Kullanıcı seç ---"
+
+#: src/Plugin.php:682
+msgid "Custom Post Meta"
+msgstr "Özel Gönderi Metası"
+
+#: src/Plugin.php:695
+msgid "Enter meta key..."
+msgstr "Meta anahtarı girin..."
+
+#. translators: %d - field ID.
+#: src/Plugin.php:707
+msgid "Field #%d"
+msgstr "%d Nolu Alan"
+
+#: src/Template.php:21
+msgid "Blog Post Submission Form"
+msgstr "Blog Gönderisi Gönderim Formu"
+
+#: src/Template.php:23
+msgid "User-submitted content made easy. Allow your users to submit guest blog posts in WordPress. You can add and remove fields as needed."
+msgstr "Kullanıcı tarafından gönderilen içerik artık kolaylaştı. Kullanıcılarınızın WordPress konuk blog gönderileri göndermesine izin verin. Alanları gerektiği gibi ekleyebilir ve kaldırabilirsiniz."
+
+#: src/Template.php:29
+msgid "Don&#39;t Forget"
+msgstr "Unutmayın"
+
+#: src/Template.php:30
+msgid "Additional post submission options are available in the settings panel."
+msgstr "Ayarlar panelinde ek gönderi gönderme seçenekleri mevcuttur."
+
+#: src/Template.php:39
+msgid "Author Details"
+msgstr "Yazar Ayrıntıları"
+
+#: src/Template.php:40
+msgid "Please enter your contact details, so we can give you proper credit for this blog post."
+msgstr "Lütfen iletişim bilgilerinizi girin, böylece bu blog yazısı için size uygun şekilde atıf sağlayabilelim."
+
+#: src/Template.php:46
+msgid "Name"
+msgstr "Adı Soyadı"
+
+#: src/Template.php:54
+msgid "Email"
+msgstr "E-posta"
+
+#: src/Template.php:61
+msgid "Short Author Bio"
+msgstr "Kısa Yazar Biyografisi"
+
+#: src/Template.php:62
+msgid "Please keep it below 300 characters."
+msgstr "Lütfen 300 karakterin altında tutun."
+
+#: src/Template.php:69
+msgid "Create a Blog Post"
+msgstr "Bir Blog Gönderisi Oluşturun"
+
+#: src/Template.php:70
+msgid "Please submit your guest blog posts by using the fields below."
+msgstr "Lütfen misafir blog yazılarınızı aşağıdaki alanları kullanarak gönderin."
+
+#: src/Template.php:91
+msgid "Featured Image"
+msgstr "Öne Çıkan Görsel"
+
+#: src/Template.php:92
+msgid "Please make sure the dimensions are (600 x 300px)."
+msgstr "Lütfen boyutların (600 x 300px) olduğundan emin olun."
+
+#: src/Template.php:108
+msgid "Category"
+msgstr "Kategori"
+
+#: src/Template.php:111
+msgid "First Choice"
+msgstr "İlk Seçim"
+
+#: src/Template.php:125
+msgid "Submit"
+msgstr "Gönder"
+
+#: src/Template.php:126
+msgid "Sending..."
+msgstr "Gönderiliyor..."

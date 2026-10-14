@@ -1,0 +1,746 @@
+# Copyright (C) 2023 Brizy.io
+# This file is distributed under the To be announced.
+msgid ""
+msgstr ""
+"Project-Id-Version: Brizy Pro 2.4.29\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/brizy-pro\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-14T12:01:06+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: brizy-pro\n"
+
+#. Plugin Name of the plugin
+msgid "Brizy Pro"
+msgstr "Brizy Pro"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://brizy.io/"
+msgstr "https://brizy.io/"
+
+#. Description of the plugin
+msgid "Extended functionality for the Brizy WordPress builder plugin."
+msgstr "Funcionalidades estendidas para o plugin construtor do WordPress Brizy."
+
+#. Author of the plugin
+msgid "Brizy.io"
+msgstr "Brizy.io"
+
+#: admin/integrations.php:33
+#: admin/integrations.php:50
+msgid "Integrations"
+msgstr "Integrações"
+
+#: admin/license.php:80
+msgid "Brizy Pro does not support multisite license anymore."
+msgstr "O Brizy Pro não suporta mais a licença de multisite."
+
+#: admin/license.php:89
+#: admin/wp-cli.php:59
+msgid "License was successfully deactivated!"
+msgstr "Licença desativada com sucesso!"
+
+#: admin/license.php:119
+msgid "Deactivate"
+msgstr "Desativar"
+
+#: admin/license.php:119
+#: admin/license.php:165
+msgid "Activate"
+msgstr "Ativar"
+
+#: admin/license.php:130
+msgid "License"
+msgstr "Licença"
+
+#: admin/license.php:161
+msgid "Welcome to %s!"
+msgstr "Bem-vindo ao %s!"
+
+#: admin/license.php:163
+msgid "Please activate your license to get feature updates, premium support and unlimited access to the template library."
+msgstr "Por favor, ative sua licença para obter atualizações de recursos, suporte premium e acesso ilimitado à biblioteca de modelos."
+
+#: admin/license.php:179
+msgid "Please provide a license key."
+msgstr "Por favor, forneça uma chave de licença."
+
+#: admin/license.php:198
+msgid "License successfully activated."
+msgstr "Licença ativada com sucesso."
+
+#: admin/license.php:213
+msgid "No license was found in your installation"
+msgstr "Nenhuma licença foi encontrada na sua instalação"
+
+#: admin/license.php:281
+msgid "Please provide license key."
+msgstr "Por favor, forneça a chave de licença."
+
+#: admin/license.php:295
+msgid "The remote server response code is %s."
+msgstr "O código de resposta do servidor remoto é %s."
+
+#: admin/license.php:301
+msgid "An error occurred on json decode response. The json last error is: %s"
+msgstr "Ocorreu um erro na resposta da decodificação json. O último erro json é: %s"
+
+#: admin/license.php:303
+msgid "Empty body was returned by the remote server."
+msgstr "O corpo vazio foi retornado pelo servidor remoto."
+
+#: admin/license.php:308
+msgid "The response of the remote server has an unexpected format"
+msgstr "A resposta do servidor remoto tem um formato inesperado"
+
+#: admin/license.php:369
+msgid "On a multisite installation the plugin must be network activated!"
+msgstr "Em uma instalação multisite, o plugin deve ser ativado em rede!"
+
+#: admin/login.php:23
+#: admin/login.php:67
+#: admin/login.php:127
+msgid "Something went wrong. Please refresh the page and try again."
+msgstr "Algo deu errado. Por favor, atualize a página e tente novamente."
+
+#: admin/login.php:33
+msgid "The current registration type is not supported. Please change it in network settings(Allow new registrations)."
+msgstr "O tipo de registro atual não é suportado. Por favor, mude nas configurações de rede (Permitir novos registros)."
+
+#: admin/login.php:48
+#: admin/login.php:60
+msgid "Registration complete. Please check your email, then visit the login page."
+msgstr "Registro completo. Por favor, verifique seu e-mail e depois visite a página de login."
+
+#: admin/login.php:52
+msgid "Registration on this site has been disabled."
+msgstr "O registro neste site foi desativado."
+
+#: admin/login.php:75
+msgid "You Have Successfully Logged in!"
+msgstr "Você entrou com sucesso!"
+
+#: admin/login.php:136
+msgid "The password reset link has been sent successfully on your email."
+msgstr "O link de redefinição de senha foi enviado com sucesso para o seu e-mail."
+
+#: admin/membership/membership.php:46
+msgctxt "post type general name"
+msgid "Roles"
+msgstr "Funções"
+
+#: admin/membership/membership.php:47
+msgctxt "post type singular name"
+msgid "Role"
+msgstr "Função"
+
+#: admin/membership/membership.php:48
+msgctxt "admin menu"
+msgid "Roles"
+msgstr "Funções"
+
+#: admin/membership/membership.php:49
+msgctxt "add new on admin bar"
+msgid "Role"
+msgstr "Função"
+
+#: admin/membership/membership.php:50
+msgctxt "add new post type role"
+msgid "Add Role"
+msgstr "Adicionar Função"
+
+#: admin/membership/membership.php:51
+msgid "Add New Role"
+msgstr "Adicionar Nova Função"
+
+#: admin/membership/membership.php:52
+msgid "New Role"
+msgstr "Nova Função"
+
+#: admin/membership/membership.php:53
+msgid "Edit Role"
+msgstr "Editar Função"
+
+#: admin/membership/membership.php:54
+msgid "View Role"
+msgstr "Ver Função"
+
+#: admin/membership/membership.php:55
+msgid "Roles"
+msgstr "Funções"
+
+#: admin/membership/membership.php:56
+msgid "Search Role"
+msgstr "Pesquisar Função"
+
+#: admin/membership/membership.php:57
+msgid "Parent Role:"
+msgstr "Função Principal:"
+
+#: admin/membership/membership.php:58
+msgid "No Roles found."
+msgstr "Nenhuma Função encontrada."
+
+#: admin/membership/membership.php:59
+msgid "No Roles found in Trash."
+msgstr "Nenhuma Função encontrada na Lixeira."
+
+#: admin/membership/membership.php:66
+msgid "roles"
+msgstr "funções"
+
+#: admin/membership/membership.php:88
+msgid "Enter Role Name"
+msgstr "Digite o Nome da Função"
+
+#: admin/membership/membership.php:133
+#: admin/membership/membership.php:136
+msgid "Role updated."
+msgstr "Função atualizada."
+
+#: admin/membership/membership.php:134
+msgid "Custom field updated."
+msgstr "Campo personalizado atualizado."
+
+#: admin/membership/membership.php:135
+msgid "Custom field deleted."
+msgstr "Campo personalizado excluído."
+
+#: admin/membership/membership.php:137
+msgid "Role published."
+msgstr "Função publicada."
+
+#: admin/membership/membership.php:138
+msgid "Role saved."
+msgstr "Função salva."
+
+#: admin/membership/membership.php:139
+msgid "Role submitted."
+msgstr "Função enviada."
+
+#: admin/settings.php:21
+msgid "Limited Access"
+msgstr "Acesso Limitado"
+
+#: admin/updater.php:256
+msgid "On last check of the license status a HTTP error occured: server response code is %s. Please try to force updates in the update page of the dashboard."
+msgstr "Na última verificação do status da licença, ocorreu um erro HTTP: o código de resposta do servidor é %s. Por favor, tente forçar as atualizações na página de atualizações do painel."
+
+#: admin/updater.php:261
+msgid "An error occurred on json decode response, please try to force updates in the update page of the dashboard."
+msgstr "Ocorreu um erro na resposta da decodificação json, por favor, tente forçar as atualizações na página de atualizações do painel."
+
+#: admin/views/integrations/view.php:10
+#: admin/views/integrations/view.php:75
+msgid "Select All"
+msgstr "Selecionar Tudo"
+
+#: admin/views/integrations/view.php:15
+#: admin/views/integrations/view.php:79
+msgid "App"
+msgstr "Aplicativo"
+
+#: admin/views/integrations/view.php:19
+#: admin/views/integrations/view.php:82
+msgid "Details"
+msgstr "Detalhes"
+
+#: admin/views/integrations/view.php:31
+msgid "Select Account"
+msgstr "Selecionar Conta"
+
+#: admin/views/integrations/view.php:42
+msgid "Are you sure you want to completely remove the selected accounts? All the features that use this integration will stop working!"
+msgstr "Tem certeza de que deseja remover completamente as contas selecionadas? Todas as funcionalidades que usam essa integração deixarão de funcionar!"
+
+#: admin/views/integrations/view.php:44
+msgid "Delete"
+msgstr "Excluir"
+
+#: admin/views/integrations/view.php:50
+msgid "Show more details"
+msgstr "Mostrar mais detalhes"
+
+#: admin/views/integrations/view.php:92
+msgid "Are you sure you want to completely remove the selected account? All the features that use these integrations will stop working!"
+msgstr "Tem certeza de que deseja remover completamente a conta selecionada? Todas as funcionalidades que usam essas integrações deixarão de funcionar!"
+
+#: admin/views/integrations/view.php:97
+msgid "Add new accounts directly in the %s builder."
+msgstr "Adicione novas contas diretamente no construtor %s."
+
+#: admin/views/license.php:7
+msgid "Your License Key"
+msgstr "Sua Chave de Licença"
+
+#: admin/views/white-label.php:3
+#: admin/white-label.php:265
+#: admin/white-label.php:266
+msgid "White Label"
+msgstr "Marca Branca"
+
+#: admin/views/white-label.php:7
+msgid "General"
+msgstr "Geral"
+
+#: admin/views/white-label.php:15
+msgid "Dismiss this notice."
+msgstr "Dispensar este aviso."
+
+#: admin/views/white-label.php:68
+msgid "Change"
+msgstr "Alterar"
+
+#: admin/views/white-label.php:78
+msgid "Are you sure you want to reset to the default values?"
+msgstr "Tem certeza de que deseja redefinir para os valores padrão?"
+
+#: admin/views/white-label.php:79
+msgid "Reset"
+msgstr "Redefinir"
+
+#: admin/views/white-label.php:85
+msgid "These options are visible only in your current session.<br>Logout to make them disappear from the sidebar."
+msgstr "Essas opções são visíveis apenas nesta sessão atual. <br> Faça logout para que elas desapareçam da barra lateral."
+
+#: admin/white-label.php:105
+msgid "Description"
+msgstr "Descrição"
+
+#: admin/white-label.php:218
+#: admin/white-label.php:241
+msgid "Settings saved."
+msgstr "Configurações salvas."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number.
+#: admin/white-label.php:423
+msgid "There is a new version(%1$s) of %2$s available."
+msgstr "Há uma nova versão(%1$s) do %2$s disponível."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number.
+#: admin/white-label.php:430
+msgid "There is a new version(%1$s) of %2$s available. <em>Automatic update is unavailable for this plugin.</em>"
+msgstr "Há uma nova versão(%1$s) do %2$s disponível. <em>Atualização automática não está disponível para este plugin.</em>"
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number, 5: Update URL, 6: Additional link attributes.
+#: admin/white-label.php:438
+msgid "There is a new version(%1$s) of %2$s available. Please <a href=\"%3$s\" %4$s>update now</a>."
+msgstr "Há uma nova versão(%1$s) do %2$s disponível. Por favor, <a href=\"%3$s\" %4$s>atualize agora</a>."
+
+#. translators: 1: Nome do Plugin, 2: URL de detalhes, 3: Atributos de link adicionais, 4: Número da versão 5: URL para a página de atualização do PHP.
+#: admin/white-label.php:451
+msgid "There is a new version(%1$s) of %2$s available, but it doesn&#8217;t work with your version of PHP. <a href=\"%3$s\">Saiba mais sobre como atualizar o PHP</a>."
+msgstr "Existe uma nova versão (%1$s) do %2$s disponível, mas ela não funciona com a sua versão do PHP. <a href=\"%3$s\">Saiba mais sobre a atualização do PHP</a>."
+
+#: admin/wp-cli.php:172
+msgid "White label was successfully installed!"
+msgstr "O rótulo branco foi instalado com sucesso!"
+
+#: admin/wp-cli.php:192
+msgid "There is no white label on this installation."
+msgstr "Não há rótulo branco nesta instalação."
+
+#: admin/wp-cli.php:205
+msgid "White label was successfully removed!"
+msgstr "O rótulo branco foi removido com sucesso!"
+
+#: admin/wp-cli.php:269
+msgid "The fields have been updated successfully!"
+msgstr "Os campos foram atualizados com sucesso!"
+
+#: content/placeholders/breadcrumbs.php:25
+msgid "Home"
+msgstr "Início"
+
+#: content/placeholders/breadcrumbs.php:26
+msgid "Archive by Category \"%s\""
+msgstr "Arquivo por categoria \"%s\""
+
+#: content/placeholders/breadcrumbs.php:27
+msgid "Search Results for \"%s\" Query"
+msgstr "Resultados da pesquisa para a consulta \"%s\""
+
+#: content/placeholders/breadcrumbs.php:28
+msgid "Posts Tagged \"%s\""
+msgstr "Postagens marcadas como \"%s\""
+
+#: content/placeholders/breadcrumbs.php:29
+msgid "Articles Posted by %s"
+msgstr "Artigos postados por %s"
+
+#: content/placeholders/breadcrumbs.php:30
+msgid "Error 404"
+msgstr "Erro 404"
+
+#: content/placeholders/breadcrumbs.php:31
+msgid "Page %s"
+msgstr "Página %s"
+
+#: content/placeholders/breadcrumbs.php:32
+msgid "Comment Page %s"
+msgstr "Página de comentários %s"
+
+#: content/placeholders/comments.php:109
+msgid "Name"
+msgstr "Nome"
+
+#: content/placeholders/comments.php:117
+msgid "Email"
+msgstr "E-mail"
+
+#: content/placeholders/comments.php:125
+msgid "Website"
+msgstr "Website"
+
+#: content/placeholders/comments.php:137
+msgid "Required fields are marked %s"
+msgstr "Campos obrigatórios são marcados com %s"
+
+#: content/placeholders/comments.php:138
+msgctxt "noun"
+msgid "Your review"
+msgstr "Sua avaliação"
+
+#: content/placeholders/comments.php:138
+msgctxt "noun"
+msgid "Comment"
+msgstr "Comentário"
+
+#: content/placeholders/comments.php:156
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "Você deve estar %1$slogado%2$s para postar um comentário."
+
+#: content/placeholders/comments.php:165
+msgid "Logged in as %1$s. %2$sLog out?%3$s"
+msgstr "Logado como %1$s. %2$sSair?%3$s"
+
+#: content/placeholders/comments.php:167
+msgid "Log out of this account"
+msgstr "Sair desta conta"
+
+#: content/placeholders/comments.php:174
+msgid "Your email address will not be published."
+msgstr "Seu endereço de e-mail não será publicado."
+
+#: content/placeholders/comments.php:184
+msgid "Your rating"
+msgstr "Sua avaliação"
+
+#: content/placeholders/comments.php:186
+msgid "Rate&hellip;"
+msgstr "Avaliar&hellip;"
+
+#: content/placeholders/comments.php:187
+msgid "Perfect"
+msgstr "Perfeito"
+
+#: content/placeholders/comments.php:188
+msgid "Good"
+msgstr "Bom"
+
+#: content/placeholders/comments.php:189
+msgid "Average"
+msgstr "Médio"
+
+#: content/placeholders/comments.php:190
+msgid "Not that bad"
+msgstr "Não tão ruim"
+
+#: content/placeholders/comments.php:191
+msgid "Very poor"
+msgstr "Muito ruim"
+
+#: content/placeholders/excerpt.php:58
+msgid "There is no excerpt because this is a protected post."
+msgstr "Não há um resumo porque esta é uma postagem protegida."
+
+#: content/placeholders/featured-img.php:163
+#: content/providers/wp.php:246
+msgid "Featured Image"
+msgstr "Imagem em destaque"
+
+#: content/placeholders/post-loop-tags.php:37
+msgid "All"
+msgstr "Todos"
+
+#: content/providers/woocommerce.php:9
+msgid "Review link"
+msgstr "Link de avaliação"
+
+#: content/providers/woocommerce.php:92
+msgid "Single sale badge"
+msgstr "Distintivo de venda única"
+
+#: content/providers/woocommerce.php:101
+#: content/providers/woocommerce.php:269
+msgid "Sale!"
+msgstr "Oferta!"
+
+#: content/providers/woocommerce.php:109
+msgid "Upsells"
+msgstr "Vendas adicionais"
+
+#: content/providers/woocommerce.php:117
+msgid "Reviews Title"
+msgstr "Título das avaliações"
+
+#. translators: 1: número de avaliações, 2: nome do produto
+#: content/providers/woocommerce.php:125
+#: templates/comments.php:38
+msgid "%1$s avaliação para %2$s"
+msgid_plural "%1$s avaliações para %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: content/providers/woocommerce.php:131
+msgid "Reviews"
+msgstr "Avaliações"
+
+#: content/providers/woocommerce.php:161
+msgid "You may also like&hellip;"
+msgstr "Você também pode gostar&hellip;"
+
+#: content/providers/woocommerce.php:180
+msgid "Related products"
+msgstr "Produtos relacionados"
+
+#: content/providers/woocommerce.php:200
+msgid "SKU"
+msgstr "SKU"
+
+#: content/providers/woocommerce.php:206
+msgctxt "Categoria de meta de produto Woocommerce"
+msgid "Categoria"
+msgid_plural "Categorias"
+msgstr[0] ""
+msgstr[1] ""
+
+#: content/providers/woocommerce.php:211
+msgctxt "Tag de meta de produto Woocommerce"
+msgid "Tag"
+msgid_plural "Tags"
+msgstr[0] ""
+msgstr[1] ""
+
+#: content/providers/woocommerce.php:342
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#: content/providers/woocommerce.php:350
+msgid "View cart"
+msgstr "Ver carrinho"
+
+#: content/providers/woocommerce.php:354
+msgid "Checkout"
+msgstr "Finalizar compra"
+
+#: content/providers/woocommerce.php:390
+msgid "Product"
+msgstr "Produto"
+
+#: content/providers/woocommerce.php:404
+msgid "Price"
+msgstr "Preço"
+
+#: content/providers/woocommerce.php:425
+msgid "Remove this item"
+msgstr "Remover este item"
+
+#: content/providers/woocommerce.php:475
+msgid "No products in the cart."
+msgstr "Nenhum produto no carrinho."
+
+#: content/providers/wp.php:79
+msgid "Post Title"
+msgstr "Título da postagem"
+
+#: content/providers/wp.php:88
+msgid "Post Content"
+msgstr "Conteúdo da postagem"
+
+#: content/providers/wp.php:90
+msgid "Post Excerpt"
+msgstr "Resumo da postagem"
+
+#: content/providers/wp.php:92
+msgid "Post Date"
+msgstr "Data da postagem"
+
+#: content/providers/wp.php:96
+msgid "Post Time"
+msgstr "Hora da postagem"
+
+#: content/providers/wp.php:100
+msgid "Post ID"
+msgstr "ID da postagem"
+
+#: content/providers/wp.php:104
+msgid "Post Comments Count"
+msgstr "Contagem de comentários da postagem"
+
+#: content/providers/wp.php:110
+msgid "Author Name"
+msgstr "Nome do autor"
+
+#: content/providers/wp.php:119
+msgid "Author Bio"
+msgstr "Biografia do autor"
+
+#: content/providers/wp.php:123
+msgid "Author Email"
+msgstr "E-mail do autor"
+
+#: content/providers/wp.php:127
+msgid "Author Website"
+msgstr "Website do autor"
+
+#: content/providers/wp.php:131
+msgid "Site Title"
+msgstr "Título do site"
+
+#: content/providers/wp.php:135
+msgid "Site Tagline"
+msgstr "Slogan do site"
+
+#: content/providers/wp.php:139
+msgid "Archive Title"
+msgstr "Título do arquivo"
+
+#: content/providers/wp.php:143
+msgid "Archive Description"
+msgstr "Descrição do arquivo"
+
+#: content/providers/wp.php:147
+msgid "Username"
+msgstr "Nome de usuário"
+
+#: content/providers/wp.php:158
+msgid "User Role"
+msgstr "Função do usuário"
+
+#: content/providers/wp.php:170
+msgid "User First Name"
+msgstr "Primeiro nome do usuário"
+
+#: content/providers/wp.php:179
+msgid "User Last Name"
+msgstr "Último nome do usuário"
+
+#: content/providers/wp.php:188
+msgid "User Nickname"
+msgstr "Apelido do usuário"
+
+#: content/providers/wp.php:197
+msgid "User Display Name"
+msgstr "Nome de exibição do usuário"
+
+#: content/providers/wp.php:208
+msgid "User Email"
+msgstr "E-mail do usuário"
+
+#: content/providers/wp.php:219
+msgid "User Website"
+msgstr "Website do usuário"
+
+#: content/providers/wp.php:230
+msgid "User Description"
+msgstr "Descrição do usuário"
+
+#: content/providers/wp.php:247
+msgid "Site logo"
+msgstr "Logotipo do site"
+
+#: content/providers/wp.php:248
+msgid "Author Profile Picture"
+msgstr "Foto de perfil do autor"
+
+#: content/providers/wp.php:251
+msgid "User Avatar"
+msgstr "Avatar do usuário"
+
+#: content/providers/wp.php:261
+msgid "Post URL"
+msgstr "URL da postagem"
+
+#: content/providers/wp.php:269
+msgid "Author URL"
+msgstr "URL do autor"
+
+#: content/providers/wp.php:277
+msgid "Comments URL"
+msgstr "URL dos comentários"
+
+#: content/providers/wp.php:285
+msgid "Site URL"
+msgstr "URL do site"
+
+#: content/providers/wp.php:289
+msgid "Login Url"
+msgstr "URL de login"
+
+#: content/providers/wp.php:293
+msgid "Logout Url"
+msgstr "URL de logout"
+
+#: content/providers/wp.php:304
+msgid "Lost Password Url"
+msgstr "URL de recuperação de senha"
+
+#: content/providers/wp.php:316
+msgid "User registration URL"
+msgstr "URL de registro do usuário"
+
+#: content/providers/wp.php:320
+msgid "User Profile"
+msgstr "Perfil do usuário"
+
+#: content/providers/wp.php:327
+msgid "Archive URL"
+msgstr "URL do arquivo"
+
+#: content/providers/wp.php:394
+msgid "Post Navigation"
+msgstr "Navegação da postagem"
+
+#: main.php:365
+msgid "Dynamic content"
+msgstr "Conteúdo dinâmico"
+
+#. translators: %s: título da postagem
+#: templates/comments.php:49
+msgctxt "título dos comentários"
+msgid "Uma resposta para &ldquo;%s&rdquo;"
+msgstr "Uma resposta para &ldquo;%s&rdquo;"
+
+#. translators: 1: número de comentários, 2: título da postagem
+#: templates/comments.php:53
+msgctxt "título dos comentários"
+msgid "%1$s resposta para &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s respostas para &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/comments.php:82
+msgid "Anterior"
+msgstr "Anterior"
+
+#: templates/comments.php:83
+msgid "Próximo"
+msgstr "Próximo"
+
+#: templates/comments.php:88
+msgid "Não há avaliações ainda."
+msgstr "Não há avaliações ainda."
+
+#: templates/comments.php:95
+msgid "Somente clientes logados que compraram este produto podem deixar uma avaliação."
+msgstr "Apenas clientes logados que compraram este produto podem deixar uma avaliação."
+
+#: templates/comments.php:99
+msgid "Os comentários estão fechados."
+msgstr "Os comentários estão fechados."

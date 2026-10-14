@@ -1,0 +1,982 @@
+# Copyright (C) 2024 WP Sheet Editor
+# This file is distributed under the same license as the WP Sheet Editor - Automations plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Sheet Editor - Automations 1.0.7-beta.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/automations\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-07-05T13:56:51+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+
+#. Plugin Name of the plugin
+msgid "WP Sheet Editor - Automations"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wpsheeteditor.com/?utm_source=wp-admin&utm_medium=plugins-list&utm_campaign=automations"
+msgstr ""
+
+#. Description of the plugin
+msgid "Automate tasks in the spreadsheet app to make you more productive. Schedule exports, imports, bulk edits/formulas/php functions, manual edits in the cells, and more. Run tasks once or recurringly. This is an extension and not a standalone plugin."
+msgstr ""
+
+#. Author of the plugin
+#: modules/core/views/job-completed-email.php:56
+#: modules/exports/views/export-completed.php:19
+msgid "WP Sheet Editor"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://wpsheeteditor.com/?utm_source=wp-admin&utm_medium=plugins-list&utm_campaign=automations"
+msgstr ""
+
+#: automations.php:69
+msgid "Please update the WP Sheet Editor plugin and all its extensions to the latest version. The features of the plugin \""
+msgstr ""
+
+#: automations.php:177
+#: modules/core/core.php:129
+msgid "Automations"
+msgstr ""
+
+#: automations.php:199
+msgid "Deactivate everything. Use the REST API only"
+msgstr ""
+
+#: automations.php:200
+msgid "If you activate this option we will deactivate all the spreadsheets, settings pages, and the entire plugin will become invisible to the user. Only the REST API will remain active. This is useful for advanced scenarios when you only use our REST API to keep websites synchronized with external spreadsheets or systems. When this option is active, our settings page will moved under the general settings menu because our sheet editor menu will be removed"
+msgstr ""
+
+#: modules/bulk-edits/bulk-edits.php:64
+#: modules/exports/exports.php:76
+#: modules/imports/imports.php:275
+msgid "Details"
+msgstr ""
+
+#: modules/bulk-edits/bulk-edits.php:65
+msgid "Column"
+msgstr ""
+
+#: modules/bulk-edits/bulk-edits.php:66
+msgid "Type of edit"
+msgstr ""
+
+#: modules/bulk-edits/bulk-edits.php:71
+#: modules/exports/exports.php:80
+#: modules/imports/imports.php:316
+msgid "Edit details"
+msgstr ""
+
+#: modules/bulk-edits/bulk-edits.php:106
+msgid "View scheduled bulk edits"
+msgstr ""
+
+#: modules/bulk-edits/bulk-edits.php:137
+#: modules/bulk-edits/views/scheduled-bulk-edits-modal.php:5
+msgid "Scheduled bulk edits"
+msgstr ""
+
+#: modules/bulk-edits/bulk-edits.php:137
+msgid "Bulk edit completed"
+msgstr ""
+
+#: modules/bulk-edits/views/scheduled-bulk-edits-modal.php:7
+msgid "You haven't scheduled bulk edits yet."
+msgstr ""
+
+#: modules/bulk-edits/views/scheduled-bulk-edits-modal.php:8
+msgid "Schedule a new bulk edit"
+msgstr ""
+
+#: modules/bulk-edits/views/scheduled-bulk-edits-modal.php:14
+#: modules/exports/views/scheduled-exports-modal.php:14
+#: modules/imports/imports.php:386
+#: modules/imports/views/scheduled-imports-modal.php:14
+#: modules/save-rows/views/save-later-popup.php:11
+#: modules/save-rows/views/scheduled-save-rows-modal.php:13
+msgid "Close"
+msgstr ""
+
+#: modules/core/core.php:108
+msgid "<p>The export has been scheduled. You can close this popup. <a data-wpse-remodal-target=\"vgse_scheduled_exports_modal\">View scheduled exports</a>.</p>"
+msgstr ""
+
+#: modules/core/core.php:109
+msgid "<p>The import has been scheduled. You can close this popup. <a data-wpse-remodal-target=\"vgse_scheduled_imports_modal\">View scheduled imports</a>.</p>"
+msgstr ""
+
+#: modules/core/core.php:110
+msgid "<p>The changes have been scheduled. You can close this popup. <a data-wpse-remodal-target=\"vgse_scheduled_save_rows_modal\">View scheduled changes</a>.</p>"
+msgstr ""
+
+#: modules/core/core.php:111
+msgid "<p>The bulk edit has been scheduled. You can close this popup. <a data-wpse-remodal-target=\"vgse_scheduled_bulk_edits_modal\">View scheduled bulk edits</a>.</p>"
+msgstr ""
+
+#: modules/core/core.php:112
+#: modules/save-rows/save-rows.php:37
+msgid "Modified cells"
+msgstr ""
+
+#: modules/core/core.php:113
+msgid "The export has been edited successfully"
+msgstr ""
+
+#: modules/core/core.php:114
+msgid "The bulk edit has been edited successfully"
+msgstr ""
+
+#: modules/core/core.php:115
+msgid "The import has been edited successfully"
+msgstr ""
+
+#: modules/core/core.php:116
+msgid "Are you sure you want to delete this scheduled job and all its related files?"
+msgstr ""
+
+#: modules/core/core.php:135
+msgid "Imports: How many rows to process per batch?"
+msgstr ""
+
+#: modules/core/core.php:136
+#: modules/core/core.php:143
+#: modules/core/core.php:150
+#: modules/core/core.php:157
+msgid "If you leave this empty, we'll use the values defined in the \"speed and performance\" tab. Use this option if you want to have different settings for the automation/background jobs vs the manual operations performed in the spreadsheet interface."
+msgstr ""
+
+#: modules/core/core.php:142
+msgid "Exports: How many rows to process per batch?"
+msgstr ""
+
+#: modules/core/core.php:149
+msgid "Bulk edits: How many rows to process per batch?"
+msgstr ""
+
+#: modules/core/core.php:156
+msgid "Save cells: How many rows to process per batch?"
+msgstr ""
+
+#: modules/core/core.php:162
+msgid "Enable the debugging mode for the log?"
+msgstr ""
+
+#: modules/core/core.php:163
+msgid "By default, we create a log file containing information in a friendly format, so anyone can read it. If you activate this option, we'll add more information that can be used by developers or WP Sheet Editor's support team to troubleshoot issues."
+msgstr ""
+
+#: modules/core/core.php:169
+msgid "How often should we update the log in the scheduled jobs table?"
+msgstr ""
+
+#: modules/core/core.php:170
+msgid "If you leave this empty, we'll update the log every 30 seconds."
+msgstr ""
+
+#: modules/core/core.php:175
+msgid "Should we import all the rows from external sources always?"
+msgstr ""
+
+#: modules/core/core.php:176
+msgid "By default, when you configure an ongoing import from Google Sheets or from a FTP server, we import all the rows from the external location the first time, but the next imports will only include the modified rows which provides multiple benefits: the imports will finish much faster and you will use fewer server resources on your WordPress site. But you can enable this option if you want to process all the rows always, maybe because you're going to add duplicate rows in Google Sheets/FTP and you don't want them to be excluded."
+msgstr ""
+
+#: modules/core/core.php:182
+msgid "Imports: How long can an import batch run before we consider it as stuck?"
+msgstr ""
+
+#: modules/core/core.php:183
+msgid "If you leave this empty, we'll consider the batch that's been in progress for more than 15 minutes as \"stuck\" and consider it eligible for a retry if it's possible to retry. But if your server is configured to allow batches to run for longer, the batch might be running correctly during our check. You should enter a number higher than the max execution time set in the PHP settings. Enter 0 to disable the retries."
+msgstr ""
+
+#: modules/core/core.php:258
+msgid "Run this in the future?"
+msgstr ""
+
+#: modules/core/core.php:258
+msgid "We will save the configuration, run it in the date and time that you select, and send you an email when the scheduled process finishes."
+msgstr ""
+
+#: modules/core/core.php:261
+msgid "Select the date and time"
+msgstr ""
+
+#: modules/core/core.php:261
+msgid "We'll schedule the process to start in the select date and time. Please ensure that your WP Cron runs every minute to improve the accuracy of the schedules. Ask your hosting provider if you don't know how"
+msgstr ""
+
+#: modules/core/core.php:266
+msgid "Notify this email address when the process finishes"
+msgstr ""
+
+#: modules/core/core.php:266
+msgid "Enter multiple addresses separated with commas. We'll send an email notification to those addreses with the results. The email will be sent from your WordPress site. If you don't receive the email, please configure a SMTP plugin on your site to improve the email deliverability. The email deliverability depends on your hosting provider or SMTP server that you're using"
+msgstr ""
+
+#: modules/core/core.php:273
+msgid "Run once"
+msgstr ""
+
+#: modules/core/core.php:274
+msgid "Run in recurring intervals"
+msgstr ""
+
+#: modules/core/core.php:282
+msgid "Run every"
+msgstr ""
+
+#: modules/core/core.php:283
+msgid "Enter a number"
+msgstr ""
+
+#: modules/core/core.php:285
+#: modules/core/core.php:722
+msgid "Minute(s)"
+msgstr ""
+
+#: modules/core/core.php:286
+#: modules/core/core.php:723
+msgid "Hour(s)"
+msgstr ""
+
+#: modules/core/core.php:287
+msgid "Days(s)"
+msgstr ""
+
+#: modules/core/core.php:288
+msgid "Weeks(s)"
+msgstr ""
+
+#: modules/core/core.php:289
+msgid "Months(s)"
+msgstr ""
+
+#: modules/core/core.php:296
+#: modules/core/views/scheduled-jobs-table.php:5
+msgid "Name"
+msgstr ""
+
+#: modules/core/core.php:296
+msgid "This will help you identify the scheduled jobs later"
+msgstr ""
+
+#: modules/core/core.php:420
+msgid "Unable to connect to FTP server"
+msgstr ""
+
+#: modules/core/core.php:424
+msgid "Unable to log in to FTP server"
+msgstr ""
+
+#. translators: 1: context 2: exception message
+#: modules/core/core.php:445
+msgid "Process failed via %1$s: %2$s"
+msgstr ""
+
+#. translators: %s: exception message
+#: modules/core/core.php:448
+msgid "Process failed: %s"
+msgstr ""
+
+#. translators: %s: amount of time
+#: modules/core/core.php:461
+msgid "Scheduled exports: Process marked as failed after %s seconds. Unknown error occurred. Check server, PHP and database error logs to diagnose cause."
+msgstr ""
+
+#: modules/core/core.php:693
+msgid "This means the job is scheduled for a future date and it will be executed automatically in the future."
+msgstr ""
+
+#: modules/core/core.php:694
+msgid "This means the job was successfully executed and it won't run again. If this is a real-time sync, the first full run has been completed and it's listening and monitoring for changes right now."
+msgstr ""
+
+#: modules/core/core.php:695
+msgid "This means the job will no longer be used for anything, it's archived for historical purposes only and it can be deleted once you no longer need to review its log."
+msgstr ""
+
+#: modules/core/core.php:696
+msgid "This means that the job is running at this moment, it's processing all its related batches."
+msgstr ""
+
+#: modules/core/core.php:697
+msgid "This means that the job has been cancelled and removed from the schedule, it won't run again and it won't be used for anything"
+msgstr ""
+
+#: modules/core/core.php:698
+msgid "This means that there was an error when executing this job and it was marked as failed so you review the log to find out what happened, you can edit the job and manually schedule it to run again when you fix the issue."
+msgstr ""
+
+#: modules/core/core.php:699
+msgid "The job was temporarily paused and removed from the schedule. It will not run on its originally scheduled date but can be resumed later. If the original date hasn't passed, it will execute on the original date when resumed. If the original date has already passed, it will be rescheduled to run at the time of resumption. If the job was paused during a batch, the current batch will continue to be processed. However, the next batch will not be processed until the job is resumed."
+msgstr ""
+
+#: modules/core/core.php:700
+msgid "The job will be returned to its previous state before it was archived. If the previous state was scheduled and the date has not passed yet, it will be automatically rescheduled to run on the same date. However, if the previously scheduled date has already passed, it will run immediately. If the job was archived during execution, it will resume from where it left off. If the job was a real-time sync, it will resume its function of listening and monitoring for changes."
+msgstr ""
+
+#: modules/core/core.php:708
+msgid "Scheduled"
+msgstr ""
+
+#: modules/core/core.php:709
+msgid "Completed"
+msgstr ""
+
+#: modules/core/core.php:710
+msgid "Archived"
+msgstr ""
+
+#: modules/core/core.php:711
+msgid "In progress"
+msgstr ""
+
+#: modules/core/core.php:712
+msgid "Cancelled"
+msgstr ""
+
+#: modules/core/core.php:713
+msgid "Failed"
+msgstr ""
+
+#: modules/core/core.php:714
+msgid "Paused"
+msgstr ""
+
+#: modules/core/core.php:724
+msgid "Day(s)"
+msgstr ""
+
+#: modules/core/core.php:725
+msgid "Week(s)"
+msgstr ""
+
+#: modules/core/core.php:726
+msgid "Month(s)"
+msgstr ""
+
+#: modules/core/core.php:804
+msgid "This job has been paused. Reason: %s"
+msgstr ""
+
+#: modules/core/core.php:987
+msgid "This job has been resumed. Reason: %s"
+msgstr ""
+
+#: modules/core/rest-general.php:530
+msgid "Changes saved successfully"
+msgstr ""
+
+#: modules/core/rest-job-actions.php:25
+msgid "The user requested to retry the last batch that failed or was stuck processing for more than 30 minutes. So we'll schedule another run of the same batch to start in 1 minute."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:28
+#: modules/core/rest-job-actions.php:53
+msgid "The job has been scheduled."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:38
+msgid "Only one-time jobs can be executed again. This is a recurring job."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:41
+msgid "Only jobs that already completed a run can run again."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:44
+msgid "The user requested to run this one-time job one more time. So we'll schedule another run to start in 1 minute."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:65
+msgid "Scheduled job: Running ahead of schedule because the user clicked on the button \"Execute next run\"."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:70
+msgid "The batch will run in the background for the next few seconds. You can review the log file in a couple of minutes to see what's changed"
+msgstr ""
+
+#: modules/core/rest-job-actions.php:75
+msgid "The job is completed."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:86
+msgid "Scheduled job: The process was cancelled by the user %s manually. The next scheduled batch won't be executed."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:89
+msgid "The scheduled job has been cancelled."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:99
+msgid "The job was restored by the user %s manually."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:102
+#: modules/core/rest-job-actions.php:115
+msgid "The job has been restored."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:112
+msgid "The job was archived by the user %s manually."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:127
+#: modules/core/rest-job-actions.php:173
+msgid "Manual action by the user %s"
+msgstr ""
+
+#: modules/core/rest-job-actions.php:134
+msgid "The job has been resumed."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:155
+msgid "The job date has been edited by the same user who created the job originally, so the job has been stopped and it will start again on the new date: %s"
+msgstr ""
+
+#: modules/core/rest-job-actions.php:158
+msgid "The job has been edited by the same user who created the job originally. Modified parameter(s): %s"
+msgstr ""
+
+#: modules/core/rest-job-actions.php:165
+msgid "The job has been updated."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:176
+#: modules/core/rest-job-actions.php:210
+msgid "The scheduled job has been deleted."
+msgstr ""
+
+#: modules/core/rest-job-actions.php:200
+msgid "The log is empty."
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:66
+msgid "%1$s: Starting to process batch %2$d"
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:166
+msgid "%1$s: Process failed. The request returned an error. We'll retry every %2$d minutes. %3$s."
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:207
+msgid "%1$s: Batch %2$d processed successfully. %3$d of %4$d rows have been processed so far."
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:235
+msgid "%s: The process has finished successfully"
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:260
+msgid "Missing parameters."
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:263
+msgid "You dont have enough permissions to load rows."
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:288
+msgid "Untitled"
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:297
+msgid "Every %s"
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:326
+msgid "%s: This is a one-time job. So we will not schedule another run."
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:339
+msgid "%1$s: This is a recurring job and it is scheduled to start again on : %2$s"
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:345
+msgid "%1$s: The next batch will be scheduled on %2$s."
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:356
+msgid "%s: We will not notify any user because the email notification is not enabled in the scheduled job settings."
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:363
+msgid "%s: We will not notify any user because this job doesn't require an email notification."
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:396
+msgid "No"
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:396
+msgid "It will run every: %s"
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:402
+msgid "%1$s: Variables prepared for the notification %2$s"
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:407
+msgid "%1$s: Email notification sent to %2$s"
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:528
+msgid "%1$s: A one-time job has been scheduled and it will start on %2$s"
+msgstr ""
+
+#: modules/core/rest-scheduler-base.php:530
+msgid "%1$s: A recurring job has been scheduled and it will start on %2$s and it will repeat every %3$d %4$s"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:5
+#: modules/exports/views/export-completed.php:3
+msgid "Hi there,"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:9
+msgid ""
+"This is an automated email sent from your WordPress site: %s,\r\n"
+"to notify you that a scheduled job has been completed. Here are the details:"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:24
+msgid "View the Google Sheet"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:26
+#: modules/exports/views/export-completed.php:7
+msgid "Click here to download the file"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:31
+#: modules/exports/views/export-completed.php:8
+msgid "Spreadsheet:"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:33
+msgid "Job name:"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:35
+#: modules/exports/views/export-completed.php:10
+msgid "Completed on:"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:37
+msgid "Total items processed:"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:39
+msgid "Is this a recurring job?"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:42
+#: modules/exports/views/export-completed.php:13
+msgid "File path:"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:46
+#: modules/core/views/scheduled-jobs-table.php:40
+#: modules/exports/views/export-completed.php:14
+msgid "View the log"
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:50
+msgid "The files are deleted automatically after %d hours."
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:53
+#: modules/exports/views/export-completed.php:17
+msgid "You can view the log to understand what happened in every step of the process."
+msgstr ""
+
+#: modules/core/views/job-completed-email.php:55
+#: modules/exports/views/export-completed.php:18
+msgid "Best regards,"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:6
+msgid "Status"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:7
+msgid "Recurring"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:8
+msgid "Created"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:9
+msgid "Previous run"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:10
+msgid "Next run"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:11
+msgid "Actions"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:24
+#: modules/core/views/scheduled-jobs-table.php:25
+msgid "%s ago"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:26
+msgid "In %s"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:46
+msgid "Run this again"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:51
+msgid "Run the next batch right now. If the process is in progress, this will run the next batch right now and the other batches will be rescheduled relative to this batch until the process finishes, but the future recurring dates won't be rescheduled and they'll still use the original dates"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:60
+msgid "Resume the process if you paused it previously. If you resume before the original schedule date, we'll use the original date. If you resume after the original date, we'll reschedule the next batch to run right now"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:68
+msgid "Pause the process."
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:71
+msgid "Stop the process completely. If the process was in progress, the next batch won't be executed. If the process was finished and waiting for the next recurring date, it won't start again. The log file will still exist."
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:76
+msgid "Edit the scheduled job."
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:82
+msgid "Archive the job"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:86
+msgid "Restore the job"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:90
+msgid "We'll delete the scheduled job and all the related files, including the log files and csv files created through this scheduled job. If you don't want to delete the files yet, you should archive the job"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:104
+msgid "Schedule settings"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:110
+msgid "Save"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:112
+msgid "Cancel"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:121
+msgid "This file contains everything that's happened in the process and you can use it to find any errors or issues that might be causing the process to stall, you can also send this file to the support team of WP Sheet Editor if you experience issues."
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:121
+msgid "Download log file"
+msgstr ""
+
+#: modules/core/views/scheduled-jobs-table.php:123
+msgid "The log is reloaded every %d seconds"
+msgstr ""
+
+#: modules/exports/exports.php:55
+msgid "Exported columns:"
+msgstr ""
+
+#: modules/exports/exports.php:77
+msgid "Columns"
+msgstr ""
+
+#: modules/exports/exports.php:78
+msgid "Rows per page"
+msgstr ""
+
+#: modules/exports/exports.php:104
+msgid "View scheduled exports"
+msgstr ""
+
+#: modules/exports/exports.php:123
+#: modules/exports/views/scheduled-exports-modal.php:5
+msgid "Scheduled exports"
+msgstr ""
+
+#: modules/exports/exports.php:123
+msgid "Export completed"
+msgstr ""
+
+#: modules/exports/views/export-completed.php:4
+msgid ""
+"This is an automated email sent from your WordPress site: %s,\r\n"
+"to notify you that a scheduled export has been completed. Here are the details:"
+msgstr ""
+
+#: modules/exports/views/export-completed.php:9
+msgid "Export name:"
+msgstr ""
+
+#: modules/exports/views/export-completed.php:11
+msgid "Total items exported:"
+msgstr ""
+
+#: modules/exports/views/export-completed.php:12
+msgid "Is this a recurring export?"
+msgstr ""
+
+#: modules/exports/views/export-completed.php:16
+msgid "The export files are deleted automatically after %d hours."
+msgstr ""
+
+#: modules/exports/views/scheduled-exports-modal.php:7
+msgid "You haven't scheduled exports yet."
+msgstr ""
+
+#: modules/exports/views/scheduled-exports-modal.php:8
+msgid "Schedule a new export"
+msgstr ""
+
+#: modules/imports/external-source-abstract.php:109
+msgid "Next"
+msgstr ""
+
+#: modules/imports/external-source-abstract.php:141
+msgid "%1$s: We were unable to retrieve new data from the external source (%2$s) for the next import. We'll retry every %3$d minutes. Error: %4$s."
+msgstr ""
+
+#: modules/imports/external-source-abstract.php:294
+msgid "This import has been configured to move the items to the trash in WordPress when they have been deleted in the external source (%1$s). We detected these items that were removed from your external source and will be moved to the trash in WordPress: %2$s."
+msgstr ""
+
+#: modules/imports/external-source-abstract.php:322
+msgid "%1$s: The data from the external source (%2$s) has been refreshed. We found %3$d row(s) initially, we excluded %4$d row(s) that haven't changed since the previous imports, and %5$d row(s) remaining will be imported."
+msgstr ""
+
+#: modules/imports/external-source-abstract.php:328
+msgid "%1$s: The data from the external source (%2$s) has been refreshed. We found %3$d rows in the external source."
+msgstr ""
+
+#: modules/imports/external-source-abstract.php:366
+msgid "%1$s: The process has finished successfully early because the external source (%2$s) contains 0 rows that need to be imported."
+msgstr ""
+
+#: modules/imports/external-source-abstract.php:408
+msgid "Move items to the trash in WordPress when they are deleted in the external source?"
+msgstr ""
+
+#: modules/imports/external-source-abstract.php:408
+msgid "By default, if a row has been removed in your external file, the item won't be deleted or moved to the trash in WordPress. We delete from WordPress only when you set the \"Status\" column with a value \"delete\" in the external file or move to the trash when you set \"Status\" with a value \"trash\". You can activate this option if you want to move to the trash in WordPress all the rows that were deleted in the external source file. We move them to the trash instead of fully deleting to give you the chance to restore if you make a mistake."
+msgstr ""
+
+#: modules/imports/external-source-ftp.php:16
+msgid "Please verify that you've entered the complete file path and that your server connection details are accurate. We encountered an issue retrieving the FTP file contents."
+msgstr ""
+
+#: modules/imports/external-source-ftp.php:18
+msgid "The FTP file seems to be empty."
+msgstr ""
+
+#: modules/imports/external-source-ftp.php:42
+msgid "FTP Connection"
+msgstr ""
+
+#: modules/imports/external-source-ftp.php:44
+msgid "Error: Your server is missing the PHP extension \"ftp\", which is required to make FTP connections with other servers. Please ask your hosting provider to install the PHP extension."
+msgstr ""
+
+#: modules/imports/external-source-ftp.php:46
+msgid "You haven't registered any FTP servers yet. For security reasons, you must add your FTP server information in your wp-config.php file. Please copy the code below and add it to your wp-config.php file and replace the sample value of every parameter with your real details, and reload this page afterwards."
+msgstr ""
+
+#: modules/imports/external-source-ftp.php:77
+msgid "FTP file path"
+msgstr ""
+
+#: modules/imports/external-source-url.php:16
+msgid "Please verify that you've entered the complete file path and that your server connection details are accurate. We encountered an issue retrieving the file contents."
+msgstr ""
+
+#: modules/imports/external-source-url.php:18
+msgid "The file seems to be empty."
+msgstr ""
+
+#: modules/imports/external-source-url.php:33
+msgid "Download"
+msgstr ""
+
+#: modules/imports/imports.php:89
+msgid "No job found to retry"
+msgstr ""
+
+#: modules/imports/imports.php:94
+msgid "The last retry was made less than an hour ago for job ID %s, skipping"
+msgstr ""
+
+#: modules/imports/imports.php:99
+msgid "A stuck action has been found for job ID %s and it will be retried"
+msgstr ""
+
+#: modules/imports/imports.php:104
+msgid "No stuck action found for job ID %s, so no retry needed at this moment."
+msgstr ""
+
+#: modules/imports/imports.php:173
+msgid "Retry the last batch that failed or is stuck processing."
+msgstr ""
+
+#: modules/imports/imports.php:276
+msgid "Data source"
+msgstr ""
+
+#: modules/imports/imports.php:278
+msgid "N/A"
+msgstr ""
+
+#: modules/imports/imports.php:281
+msgid "File"
+msgstr ""
+
+#: modules/imports/imports.php:292
+msgid "Columns that will be saved"
+msgstr ""
+
+#: modules/imports/imports.php:293
+msgid "Type of update"
+msgstr ""
+
+#: modules/imports/imports.php:296
+msgid "Create new items and update existing items"
+msgstr ""
+
+#: modules/imports/imports.php:298
+msgid "Import all rows as new"
+msgstr ""
+
+#: modules/imports/imports.php:300
+msgid "Only create new items, ignore existing items"
+msgstr ""
+
+#: modules/imports/imports.php:302
+msgid "Update existing items, ignore new items"
+msgstr ""
+
+#: modules/imports/imports.php:308
+msgid "How do we find existing items to update?"
+msgstr ""
+
+#: modules/imports/imports.php:313
+msgid "Separator"
+msgstr ""
+
+#: modules/imports/imports.php:339
+msgid "View scheduled imports"
+msgstr ""
+
+#: modules/imports/imports.php:369
+msgid "Scheduled import"
+msgstr ""
+
+#: modules/imports/imports.php:369
+msgid "Import completed"
+msgstr ""
+
+#: modules/imports/views/scheduled-imports-modal.php:5
+msgid "Scheduled imports"
+msgstr ""
+
+#: modules/imports/views/scheduled-imports-modal.php:7
+msgid "You haven't scheduled imports yet."
+msgstr ""
+
+#: modules/imports/views/scheduled-imports-modal.php:8
+msgid "Schedule a new import"
+msgstr ""
+
+#: modules/save-rows/save-rows.php:131
+#: modules/save-rows/views/save-later-popup.php:4
+msgid "Save later"
+msgstr ""
+
+#: modules/save-rows/save-rows.php:148
+msgid "View scheduled changes"
+msgstr ""
+
+#: modules/save-rows/save-rows.php:182
+#: modules/save-rows/views/scheduled-save-rows-modal.php:5
+msgid "Scheduled cell changes"
+msgstr ""
+
+#: modules/save-rows/save-rows.php:182
+msgid "Saving completed"
+msgstr ""
+
+#: modules/save-rows/views/save-later-popup.php:5
+msgid "You can use this option if you want to save the modified cells later or recurringly."
+msgstr ""
+
+#: modules/save-rows/views/save-later-popup.php:9
+msgid "Schedule the changes"
+msgstr ""
+
+#: modules/save-rows/views/save-later-popup.php:10
+msgid "Save now"
+msgstr ""
+
+#: modules/save-rows/views/scheduled-save-rows-modal.php:7
+msgid "You haven't scheduled cell changes yet."
+msgstr ""
+
+#: views/welcome-page-content.php:4
+msgid "Thank you for installing our plugin."
+msgstr ""
+
+#: views/welcome-page-content.php:5
+msgid "This plugin provides a lot of automation features to our spreadsheet editor, that will save you a lot of time. The goal is to allow you to save all the actions and execute them automatically for you, this includes the following:"
+msgstr ""
+
+#: views/welcome-page-content.php:7
+msgid "Save the modified cells in the spreadsheet at a later date or in a recurring schedule"
+msgstr ""
+
+#: views/welcome-page-content.php:8
+msgid "Run bulk edits/actions on any data set later or recurringly"
+msgstr ""
+
+#: views/welcome-page-content.php:9
+msgid "Automatically run any export at a later date or recurringly"
+msgstr ""
+
+#: views/welcome-page-content.php:10
+msgid "Automatically import data at a later date or recurringly"
+msgstr ""
+
+#: views/welcome-page-content.php:11
+msgid "And more"
+msgstr ""
+
+#: views/welcome-page-content.php:14
+msgid "What's next?"
+msgstr ""
+
+#: views/welcome-page-content.php:18
+msgid "This plugin works with any premium spreadsheet editor of WP Sheet Editor. Please install any of the main plugins to be able to use this automations extension."
+msgstr ""
+
+#: views/welcome-page-content.php:20
+msgid "Please make sure that you have configured your cron jobs as <a href=\"https://wpsheeteditor.com/automations-installation-setup/#2-_Set_up_WordPress_cron_jobs\" target=\"_blank\">described in this guide</a>."
+msgstr ""
+
+#: views/welcome-page-content.php:21
+msgid "Everything is ready. Now you can enjoy all the automation features when you're using the spreadsheet editor. You'll see the options when you're saving cells, bulk editing, exporting, or importing."
+msgstr ""

@@ -1,0 +1,170 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-11-07T20:51:02+00:00\n"
+"PO-Revision-Date: 2025-11-07T20:51:02+00:00\n"
+"Language: \n"
+
+#. Plugin Name of the plugin
+msgid "WPForms Form Pages"
+msgstr "WPForms Form Sayfaları"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://wpforms.com"
+msgstr "https://wpforms.com"
+
+#. Description of the plugin
+msgid "Create Form Pages with WPForms."
+msgstr "WPForms ile Form Sayfaları oluşturun."
+
+#. Author of the plugin
+msgid "WPForms"
+msgstr "WPForms"
+
+#: src/Admin/Builder.php:60
+msgid "Form Pages cannot be enabled if Conversational Forms is enabled at the same time."
+msgstr "Aynı anda İletişimsel Formlar etkinleştirilirse, Form Sayfaları etkinleştirilemez."
+
+#: src/Admin/Builder.php:61
+msgid "OK"
+msgstr "Tamam"
+
+#: src/Admin/Builder.php:62
+#: src/Admin/Builder.php:356
+#: src/Frontend.php:457
+msgid "Form Logo"
+msgstr "Form Logosu"
+
+#: src/Admin/Builder.php:63
+msgid "Select or Upload Form Custom Logo"
+msgstr "Form Özel Logosunu Seçin veya Yükleyin"
+
+#: src/Admin/Builder.php:64
+msgid "Use this image"
+msgstr "Bu resmi kullan"
+
+#: src/Admin/Builder.php:108
+#: src/Admin/Builder.php:128
+msgid "Form Pages"
+msgstr "Form Sayfaları"
+
+#: src/Admin/Builder.php:131
+msgid "Preview Form Page"
+msgstr "Form Sayfasını Ön İzleyin"
+
+#. translators: %s - Permalink Settings page URL.
+#: src/Admin/Builder.php:143
+msgid "Heads up! To use Form Pages, please configure your site's permalinks on the WordPress <a href=\"%s\">Permalink Settings</a> page."
+msgstr "Dikkat! Form Sayfalarını kullanmak için lütfen sitenizin kalıcı bağlantılarını WordPress <a href=\"%s\">Kalıcı Bağlantı Ayarları</a> sayfasından yapılandırın."
+
+#: src/Admin/Builder.php:163
+msgid "Enable Form Page Mode"
+msgstr "Form Sayfası Modunu Etkinleştir"
+
+#: src/Admin/Builder.php:173
+msgid "Form Page Title"
+msgstr "Form Sayfası Başlığı"
+
+#: src/Admin/Builder.php:181
+msgid "Message"
+msgstr "Mesaj"
+
+#: src/Admin/Builder.php:186
+msgid "This content will be displayed below the Form Page Title, above the form."
+msgstr "Bu içerik, formun üstündeki Form Sayfası Başlığının altında görüntülenecektir."
+
+#: src/Admin/Builder.php:196
+msgid "Permalink"
+msgstr "Kalıcı bağlantı"
+
+#: src/Admin/Builder.php:201
+msgid "This is the URL for your form page. Avoid using only numbers, as it may cause issues with WordPress."
+msgstr "Bu, form sayfanızın URL'sidir. WordPress'te sorunlara neden olabileceğinden yalnızca sayı kullanmaktan kaçının."
+
+#: src/Admin/Builder.php:211
+msgid "Header Logo"
+msgstr "Başlık Logosu"
+
+#: src/Admin/Builder.php:216
+msgid "This is a custom logo."
+msgstr "Bu özel bir logodur."
+
+#: src/Admin/Builder.php:225
+msgid "Footer Text"
+msgstr "Altbilgi Metni"
+
+#: src/Admin/Builder.php:227
+msgid "This content is neither created nor endorsed by WPForms."
+msgstr "Bu içerik, WPForms tarafından oluşturulmamış ve desteklenmemiştir."
+
+#: src/Admin/Builder.php:236
+msgid "Hide WPForms Branding"
+msgstr "WPForms Markasını Gizle"
+
+#: src/Admin/Builder.php:246
+msgid "Color Scheme"
+msgstr "Renk Şeması"
+
+#: src/Admin/Builder.php:250
+msgid "The accent color used for the page background, submit button, and other form elements."
+msgstr "Sayfa arka planı, gönder butonu ve diğer form öğeleri için kullanılan vurgu rengi."
+
+#: src/Admin/Builder.php:259
+msgid "Style"
+msgstr "Biçem"
+
+#: src/Admin/Builder.php:265
+msgid "Modern Design"
+msgstr "Modern Tasarım"
+
+#: src/Admin/Builder.php:269
+msgid "Classic Design"
+msgstr "Klasik Tasarım"
+
+#: src/Admin/Builder.php:272
+msgid "Modern: Wider form, rounded corners, darker background"
+msgstr "Modern: Daha geniş form, yuvarlanmış köşeler, daha koyu arka plan"
+
+#: src/Admin/Builder.php:272
+msgid "Classic: Narrower form, square corners, lighter background"
+msgstr "Klasik: Daha dar form, kare köşeler, daha açık arka plan"
+
+#: src/Admin/Builder.php:379
+msgid "Upload Image"
+msgstr "Görsel Yükle"
+
+#: src/Admin/Builder.php:402
+msgid "View"
+msgstr "Görüntüle"
+
+#: src/Admin/Overview.php:109
+msgid "View Form Page"
+msgstr "Form Sayfasını Görüntüle"
+
+#: src/Admin/Overview.php:110
+msgid "Form Page Preview"
+msgstr "Form Sayfası Önizlemesi"
+
+#: src/Frontend.php:515
+msgid "Heads up!"
+msgstr "Dikkat et!"
+
+#: src/Frontend.php:516
+msgid "You're viewing a preview of a form template."
+msgstr "Bir form şablonunun ön izlemesini görüntülüyorsunuz."
+
+#. translators: %s - time period, e.g., 24 hours.
+#: src/Frontend.php:524
+msgid "Entries are automatically deleted after %s."
+msgstr "%s sonrasında girdiler otomatik olarak silinir."
+
+#: src/Frontend.php:564
+msgid "created with"
+msgstr "şununla oluşturuldu:"

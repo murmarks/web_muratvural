@@ -1,0 +1,3262 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-07-10T06:15:29+00:00\n"
+"PO-Revision-Date: 2025-07-10T06:15:29+00:00\n"
+"Language: \n"
+
+#. Plugin Name of the plugin
+msgid "WP Mail SMTP Pro"
+msgstr "WP Mail SMTP Pro"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://wpmailsmtp.com/"
+msgstr "https://wpmailsmtp.com/"
+
+#. Description of the plugin
+msgid "Reconfigures the <code>wp_mail()</code> function to use Gmail/Mailgun/SendGrid/SMTP instead of the default <code>mail()</code> and creates an options page to manage the settings."
+msgstr "<code>wp_mail()</code> işlevini, varsayılan <code>mail()</code> yerine Gmail/Mailgun/SendGrid/SMTP seçeneklerini kullanacak şekilde yeniden yapılandırır ve ayarları yönetmek için bir seçenekler sayfası oluşturur."
+
+#. Author of the plugin
+#: src/Pro/Admin/DashboardWidget.php:223
+#: src/Pro/Admin/DashboardWidget.php:514
+#: src/Pro/Emails/Logs/Webhooks/Providers/Sendinblue/Subscriber.php:58
+#: src/Pro/Emails/Logs/Webhooks/Providers/SparkPost/Subscriber.php:58
+msgid "WP Mail SMTP"
+msgstr "WP Mail SMTP"
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:108
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:146
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:73
+#: src/Pro/Emails/Logs/Importers/ImporterAbstract.php:96
+#: src/Pro/Emails/Logs/Logs.php:1066
+#: src/Pro/Emails/Logs/Reports/Admin.php:458
+#: src/Pro/Emails/Logs/Resend.php:40
+#: src/Pro/Emails/Logs/Resend.php:97
+#: src/Pro/Emails/Logs/Webhooks/Webhooks.php:370
+#: src/Pro/Emails/Logs/Webhooks/Webhooks.php:417
+msgid "Access rejected."
+msgstr "Erişim reddedildi."
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:112
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:150
+#: src/Pro/Emails/Logs/Logs.php:783
+#: src/Pro/Emails/Logs/Logs.php:1070
+#: src/Pro/Emails/Logs/Reports/Admin.php:462
+#: src/Pro/Emails/Logs/Resend.php:44
+#: src/Pro/Emails/Logs/Resend.php:101
+#: src/Pro/Emails/Logs/Webhooks/Webhooks.php:363
+#: src/Pro/Emails/Logs/Webhooks/Webhooks.php:410
+#: src/Pro/Multisite.php:888
+msgid "You don't have the capability to perform this action."
+msgstr "Bu eylemi gerçekleştirecek kapasiteye sahip değilsiniz."
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:117
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:155
+#: src/Pro/Emails/Logs/Logs.php:788
+msgid "Required parameters are missing."
+msgstr "Gerekli parametreler eksik."
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:162
+msgid "Connection not found."
+msgstr "Bağlantı bulunamadı."
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:214
+msgid "Connection was successfully deleted."
+msgstr "Bağlantı başarıyla silindi."
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:221
+msgid "There was an error while processing your request, and connection were not deleted. Please try again."
+msgstr "İsteğiniz işlenirken bir hata oluştu ve bağlantı silinmedi. Lütfen tekrar deneyin."
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:228
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:530
+#: src/Pro/Alerts/Admin/SettingsTab.php:508
+#: src/Pro/Emails/Control/Admin/SettingsTab.php:137
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:457
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:415
+msgid "Settings were successfully saved."
+msgstr "Ayarlar başarılı bir şekilde kaydedildi."
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:270
+msgid "Additional Connections"
+msgstr "Ek Bağlantılar"
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:273
+#: src/Pro/Providers/AmazonSES/Options.php:286
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:194
+msgid "Add New"
+msgstr "Yeni Ekle"
+
+#. translators: %s - Additional Connections documentation page URL.
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:282
+msgid "Create additional connections to set a backup for your Primary Connection or to configure Smart Routing. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn More</a>."
+msgstr "Birincil Bağlantınız için bir yedekleme ayarlamak veya Akıllı Yönlendirmeyi yapılandırmak için ek bağlantılar oluşturun. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Daha Fazla Bilgi Edinin</a>."
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:308
+msgid "Back to All Connections"
+msgstr "Tüm Bağlantılara Geri Dön"
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:333
+msgid "Saved Connections"
+msgstr "Kayıtlı Bağlantılar"
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:370
+msgid "Get Started"
+msgstr "Başlayın"
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:419
+msgid "<b>Warning!</b> You’re editing your backup mailer."
+msgstr "<b>Uyarı!</b> Yedek posta göndericinizi düzenliyorsunuz."
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:432
+msgid "Connection Nickname"
+msgstr "Bağlantı Takma Adı"
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:443
+msgid "Use as Primary Connection"
+msgstr "Birincil Bağlantı Olarak Kullanın"
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:456
+msgid "Delete Connection"
+msgstr "Bağlantıyı Sil"
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:472
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:686
+msgid "Something went wrong"
+msgstr "Bir şeyler ters gitti"
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:474
+msgid "You are trying to access an additional connection that is no longer available or never existed."
+msgstr "Artık mevcut olmayan veya hiç var olmayan ek bir bağlantıya erişmeye çalışıyorsunuz."
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:477
+msgid "Please use the \"Back to All Connections\" button to return to the list of all available connections."
+msgstr "Mevcut tüm bağlantıların listesine geri dönmek için lütfen \"Tüm Bağlantılara Dön\" tuşunu kullanın."
+
+#: src/Pro/AdditionalConnections/Admin/SettingsTab.php:495
+msgid "Something goes wrong. Missed connection ID parameter."
+msgstr "Bir şeyler ters gidiyor. Eksik bağlantı kimliği parametresi."
+
+#: src/Pro/AdditionalConnections/Admin/TestTab.php:61
+#: src/Pro/Emails/Logs/Resend.php:179
+msgid "Connection"
+msgstr "Bağlantı"
+
+#: src/Pro/AdditionalConnections/Admin/TestTab.php:77
+msgid "Choose which connection you'd like to use to send a test email."
+msgstr "Test e-postası göndermek için hangi bağlantıyı kullanmak istediğinizi seçin."
+
+#: src/Pro/Admin/DashboardWidget.php:200
+#: src/Pro/Emails/Logs/Reports/Admin.php:187
+msgid "Confirmed sent emails"
+msgstr "Onaylanan gönderilen e-postalar"
+
+#: src/Pro/Admin/DashboardWidget.php:201
+#: src/Pro/Emails/Logs/Reports/Admin.php:188
+msgid "Sent emails"
+msgstr "Gönderilen e-postalar"
+
+#: src/Pro/Admin/DashboardWidget.php:202
+#: src/Pro/Emails/Logs/Reports/Admin.php:189
+msgid "Unconfirmed sent emails"
+msgstr "Onaylanmayan gönderilen e-postalar"
+
+#: src/Pro/Admin/DashboardWidget.php:203
+#: src/Pro/Emails/Logs/Reports/Admin.php:190
+msgid "Failed emails"
+msgstr "Başarısız e-postalar"
+
+#: src/Pro/Admin/DashboardWidget.php:313
+msgid "Error icon"
+msgstr "Hata simgesi"
+
+#. translators: 1: Number of failed emails, 2: Timespan.
+#: src/Pro/Admin/DashboardWidget.php:321
+msgid "We detected %1$d failed email in the last %2$d days."
+msgid_plural "We detected %1$d failed emails in the last %2$d days."
+msgstr[0] "Son %2$d günde %1$d başarısız e-posta tespit ettik."
+msgstr[1] "Son %2$d günde %1$d başarısız e-posta tespit ettik."
+
+#. translators: %s - URL to WP Mail SMTP -> Settings -> Alerts Admin page..
+#: src/Pro/Admin/DashboardWidget.php:333
+msgid "<a href=\"%s\">Enable Email Alerts</a> and get instant notifications when they fail."
+msgstr "<a href=\"%s\">E-posta Uyarılarını etkinleştirin</a> ve başarısız olduklarında anlık bildirimler alın."
+
+#: src/Pro/Admin/DashboardWidget.php:354
+msgid "Dismiss email alert block"
+msgstr "E-posta uyarı bloğunu reddet"
+
+#: src/Pro/Admin/DashboardWidget.php:375
+msgid "Pattie the WP Mail SMTP mascot"
+msgstr "WP Mail SMTP maskotu Pattie"
+
+#: src/Pro/Admin/DashboardWidget.php:376
+msgid "Enable Email Logs to View Stats"
+msgstr "İstatistikleri Görüntülemek için E-posta Günlüklerini Etkinleştir"
+
+#: src/Pro/Admin/DashboardWidget.php:377
+msgid "Automatically keep track of every email sent from your WordPress site and view valuable statistics right here in your dashboard."
+msgstr "WordPress sitenizden gönderilen her e-postayı otomatik olarak takip edin ve değerli istatistikleri doğrudan kontrol panelinizde görüntüleyin."
+
+#: src/Pro/Admin/DashboardWidget.php:379
+msgid "Enable Email Logging"
+msgstr "E-posta Günlüklemeyi Etkinleştir"
+
+#: src/Pro/Admin/DashboardWidget.php:382
+#: src/Pro/Admin/DashboardWidget.php:637
+msgid "Learn More"
+msgstr "Daha Fazla Öğren"
+
+#: src/Pro/Admin/DashboardWidget.php:409
+msgid "View Full Log"
+msgstr "Tüm Günlüğü Görüntüle"
+
+#: src/Pro/Admin/DashboardWidget.php:435
+msgid "Select timespan"
+msgstr "Zaman aralığını seçin"
+
+#. translators: %d - Number of days.
+#: src/Pro/Admin/DashboardWidget.php:439
+msgid "Last %d day"
+msgid_plural "Last %d days"
+msgstr[0] "Son %d gün"
+msgstr[1] "Son %d gün"
+
+#: src/Pro/Admin/DashboardWidget.php:456
+#: src/Pro/Emails/Logs/Reports/Admin.php:185
+#: src/Pro/Emails/Logs/Reports/Admin.php:286
+msgid "All Emails"
+msgstr "Tüm E-postalar"
+
+#: src/Pro/Admin/DashboardWidget.php:457
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:183
+msgid "Confirmed Emails"
+msgstr "Onaylanmış E-postalar"
+
+#: src/Pro/Admin/DashboardWidget.php:458
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:190
+msgid "Unconfirmed Emails"
+msgstr "Onaylanmamış E-postalar"
+
+#: src/Pro/Admin/DashboardWidget.php:459
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:198
+msgid "Failed Emails"
+msgstr "Başarısız E-postalar"
+
+#: src/Pro/Admin/DashboardWidget.php:464
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:176
+msgid "Sent Emails"
+msgstr "Gönderilmiş E-postalar"
+
+#: src/Pro/Admin/DashboardWidget.php:468
+msgid "Select email type"
+msgstr "E-posta türünü seçin"
+
+#: src/Pro/Admin/DashboardWidget.php:497
+msgid "Graph Style"
+msgstr "Grafik Biçemi"
+
+#: src/Pro/Admin/DashboardWidget.php:501
+msgid "Bar"
+msgstr "Bar"
+
+#: src/Pro/Admin/DashboardWidget.php:505
+msgid "Line"
+msgstr "Çizgi"
+
+#: src/Pro/Admin/DashboardWidget.php:510
+msgid "Color Scheme"
+msgstr "Renk Şeması"
+
+#: src/Pro/Admin/DashboardWidget.php:518
+msgid "WordPress"
+msgstr "WordPress"
+
+#: src/Pro/Admin/DashboardWidget.php:522
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+#: src/Pro/Admin/DashboardWidget.php:556
+msgid "No email logs for selected period."
+msgstr "Seçilen dönem için hiçbir e-posta kaydı yok."
+
+#: src/Pro/Admin/DashboardWidget.php:603
+msgid "Table cell icon"
+msgstr "Tablo hücresi simgesi"
+
+#: src/Pro/Admin/DashboardWidget.php:631
+msgid "Recommended Plugin:"
+msgstr "Tavsiye Edilen Eklenti:"
+
+#: src/Pro/Admin/DashboardWidget.php:633
+msgid "WPForms"
+msgstr "WPForms"
+
+#: src/Pro/Admin/DashboardWidget.php:635
+msgid "Install"
+msgstr "Yükle"
+
+#: src/Pro/Admin/DashboardWidget.php:640
+msgid "Dismiss recommended plugin block"
+msgstr "Önerilen eklenti bloğunu yoksay"
+
+#: src/Pro/Admin/DashboardWidget.php:659
+msgid "No email logs yet"
+msgstr "Henüz e-posta günlüğü yok"
+
+#: src/Pro/Admin/DashboardWidget.php:660
+msgid "Please check back tomorrow."
+msgstr "Lütfen yarın tekrar kontrol edin."
+
+#. translators: %d number of total emails sent.
+#: src/Pro/Admin/DashboardWidget.php:1190
+msgid "%d total"
+msgstr "%d toplam"
+
+#. translators: %d number of confirmed emails sent.
+#: src/Pro/Admin/DashboardWidget.php:1197
+msgid "%d confirmed"
+msgstr "%d onaylandı"
+
+#. translators: %d number of unconfirmed emails sent.
+#: src/Pro/Admin/DashboardWidget.php:1204
+msgid "%d unconfirmed"
+msgstr "%d onaylanmadı"
+
+#. translators: %d number of failed email sent attempts.
+#: src/Pro/Admin/DashboardWidget.php:1211
+msgid "%d failed"
+msgstr "%d başarısız oldu"
+
+#. translators: %d number of sent emails.
+#: src/Pro/Admin/DashboardWidget.php:1223
+msgid "%d sent"
+msgstr "%d gönderildi"
+
+#: src/Pro/Admin/Pages/MiscTab.php:27
+msgid "Max emails per minute"
+msgstr "Dakikada maksimum e-posta sayısı"
+
+#: src/Pro/Admin/Pages/MiscTab.php:28
+msgid "Max emails per hour"
+msgstr "Saat başına maksimum e-posta sayısı"
+
+#: src/Pro/Admin/Pages/MiscTab.php:29
+msgid "Max emails per day"
+msgstr "Günlük maksimum e-posta sayısı"
+
+#: src/Pro/Admin/Pages/MiscTab.php:30
+msgid "Max emails per week"
+msgstr "Haftada maksimum e-posta sayısı"
+
+#: src/Pro/Admin/Pages/MiscTab.php:31
+msgid "Max emails per month"
+msgstr "Ayda maksimum e-posta sayısı"
+
+#: src/Pro/Admin/Pages/MiscTab.php:38
+msgid "Email Rate Limiting"
+msgstr "E-posta Oran Sınırlaması"
+
+#. translators: %1$s - Documentation URL.
+#: src/Pro/Admin/Pages/MiscTab.php:56
+msgid "Limit the number of emails this site will send in each time interval (per minute, hour, day, week and month). Emails that will cross those set limits will be queued and sent as soon as your limits allow. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn More</a>"
+msgstr "Bu sitenin her zaman aralığında (dakika, saat, gün, hafta ve ay başına) göndereceği e-posta sayısını sınırlayın. Belirlenen sınırları aşan e-postalar sıraya konacak ve sınırlarınız izin verdiği anda gönderilecektir. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Daha Fazla Bilgi Edinin</a>"
+
+#. translators: %s: enqueued email count.
+#: src/Pro/Admin/Pages/MiscTab.php:151
+msgid "Currently there is %s email in the queue."
+msgid_plural "Currently there are %s emails in the queue."
+msgstr[0] "Şu anda sırada %s e-posta var."
+msgstr[1] "Şu anda sırada %s e-posta var."
+
+#. translators: %1$s - WP Mail SMTP Pro URL; %2$s - WP Mail SMTP Pro purchase link.
+#: src/Pro/Admin/PluginsList.php:329
+msgid "<a href=\"%1$s\">Activate WP Mail SMTP Pro</a> to receive features, updates, and support. Don't have a license? <a target=\"_blank\" href=\"%2$s\" rel=\"noopener noreferrer\">Purchase one now</a>."
+msgstr "<a href=\"%1$s\">Özellikler, güncellemeler ve destek almak için WP Mail SMTP Pro'yu</a> etkinleştirin. Lisansınız yok mu? <a target=\"_blank\" href=\"%2$s\" rel=\"noopener noreferrer\">Şimdi bir tane satın alın</a>."
+
+#. translators: %1$s - WP Mail SMTP Pro URL; %2$s - WP Mail SMTP Pro purchase link.
+#: src/Pro/Admin/PluginsList.php:341
+msgid "<a href=\"%1$s\">Activate</a> your license to access this update, new features, and support. Don't have a license? <a target=\"_blank\" href=\"%2$s\" rel=\"noopener noreferrer\">Purchase one now</a>."
+msgstr "<a href=\"%1$s\">Bu güncellemeye, yeni özelliklere ve desteğe erişmek için lisansınızı</a> etkinleştirin. Lisansınız yok mu? <a target=\"_blank\" href=\"%2$s\" rel=\"noopener noreferrer\">Şimdi bir tane satın alın</a>."
+
+#. translators: %s - WP Mail SMTP Pro renew link.
+#: src/Pro/Admin/PluginsList.php:362
+msgid "<strong style=\"color: #e72f0a\">Your WP Mail SMTP Pro license is expired.</strong> <a target=\"_blank\" href=\"%s\" rel=\"noopener noreferrer\">Renew now</a> to receive new features, updates, and support."
+msgstr "<strong style=\"color: #e72f0a\">WP Mail SMTP Pro lisansınızın süresi doldu. Yeni özellikler, güncellemeler ve destek almak için</strong> <a target=\"_blank\" href=\"%s\" rel=\"noopener noreferrer\">şimdi yenileyin</a>."
+
+#. translators: %1$s - WPMailSMTP.com account area URL; %2$s - WPMailSMTP.com pricing page URL.
+#: src/Pro/Admin/PluginsList.php:388
+msgid "<strong style=\"color: #e72f0a\">Your WP Mail SMTP Pro license has no site activations left.</strong> You can update the list of your sites or upgrade the license in the <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Account area</a>. Or you can <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">purchase a new license key</a>."
+msgstr "<strong style=\"color: #e72f0a\">WP Mail SMTP Pro lisansınızda site aktivasyonu kalmadı.</strong> Sitelerinizin listesini güncelleyebilir veya lisansı <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Hesap alanından</a> yükseltebilirsiniz. Diğer bir seçenek olarak, <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">yeni bir lisans anahtarı satın alabilirsiniz</a>."
+
+#. translators: %1$s - WP Mail SMTP Pro Changelog link; %2$s - WP Mail SMTP Pro latest version.
+#: src/Pro/Admin/PluginsList.php:431
+msgid "There is a new version of WP Mail SMTP Pro available. <a target=\"_blank\" href=\"%1$s\" rel=\"noopener noreferrer\">View version %2$s details</a>."
+msgstr "WP Mail SMTP Pro'nun yeni bir sürümü mevcut. <a target=\"_blank\" href=\"%1$s\" rel=\"noopener noreferrer\">Sürümün ayrıntılarını %2$s görüntüle</a>."
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:131
+#: src/Pro/Emails/Logs/Logs.php:479
+#: src/Pro/Providers/Providers.php:237
+msgid "OK"
+msgstr "Tamam"
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:132
+#: src/Pro/Emails/Logs/Logs.php:483
+#: src/Pro/Providers/Providers.php:253
+msgid "Heads up!"
+msgstr "Dikkat et!"
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:133
+msgid "Alerts settings have changed. Please save the settings before you can perform a test."
+msgstr "Uyarı ayarları değişmiştir. Test yapmadan önce lütfen ayarları kaydedin."
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:184
+msgid "Alerts"
+msgstr "Uyarılar"
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:186
+msgid "Configure at least one of these integrations to receive notifications when email fails to send from your site. Alert notifications will contain the following important data: email subject, email Send To address, the error message, and helpful links to help you fix the issue."
+msgstr "Sitenizden e-posta gönderilemediğinde bildirim almak için bu entegrasyonlardan en az birini yapılandırın. Uyarı bildirimleri şu önemli verileri içerecektir: e-posta konusu, e-posta Alıcı adresi, hata mesajı ve sorunu düzeltmenize yardımcı olacak faydalı bağlantılar."
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:195
+msgid "Notify when"
+msgstr "Şu olduğunda bildir"
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:205
+msgid "The initial email sending request fails"
+msgstr "İlk e-posta gönderme isteği başarısız oluyor"
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:213
+msgid "This option is always enabled and will notify you about instant email sending failures."
+msgstr "Bu seçenek her zaman etkinleştirilmiş durumdadır ve anlık e-posta gönderme hataları konusunda sizi bilgilendirecektir."
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:230
+msgid "The deliverability verification process detects a hard bounce"
+msgstr "Teslim edilebilirlik doğrulama süreci bir geri dönüş tespit ediyor"
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:237
+msgid "Get notified about emails that were successfully sent, but have hard bounced on delivery attempt. A hard bounce is an email that has failed to deliver for permanent reasons, such as the recipient's email address being invalid."
+msgstr "Başarılı bir şekilde gönderilen ancak teslimat denemesinde geri dönen e-postalar hakkında bildirim alın. Geri dönen e-posta, alıcının e-posta adresinin geçersiz olması gibi kalıcı nedenlerle teslim edilemeyen e-postadır."
+
+#. translators: %s - Alert title.
+#: src/Pro/Alerts/Admin/SettingsTab.php:269
+msgid "%s Alerts"
+msgstr "%s Uyarı"
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:323
+msgid "Alert Tests sent successfully."
+msgstr "Uyarı Testleri başarıyla gönderildi."
+
+#. translators: %1$s - Default success notice; %2$d. number of minutes until new email alerts can be sent.
+#: src/Pro/Alerts/Admin/SettingsTab.php:336
+msgid "%1$s Any additional email alerts from this site are paused for %2$d minutes."
+msgstr "%1$s Bu siteden gelen her türlü ek e-posta uyarısı %2$d dakika süreyle duraklatılır."
+
+#. translators: %d - number of minutes until new email alerts can be sent.
+#: src/Pro/Alerts/Admin/SettingsTab.php:369
+msgid "Any additional email alerts from this site are paused for %d minutes. You can still test other types of alerts."
+msgstr "Bu siteden gelen her türlü ek e-posta uyarısı %d dakika süreyle duraklatılır. Diğer uyarı türlerini hâlâ test edebilirsiniz."
+
+#. translators: %d - number of minutes until new email alerts can be sent.
+#: src/Pro/Alerts/Admin/SettingsTab.php:398
+msgid "Any additional push notifications alerts from this site are paused for %d minutes. You can still test other types of alerts."
+msgstr "Bu siteden gelen herhangi bir ek anlık bildirim uyarısı %d dakika duraklatılır. Diğer uyarı türlerini yine de test edebilirsiniz."
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:433
+msgid "Email Log has to be enabled for hard bounce detection to work."
+msgstr "Geri dönüş tespitinin çalışması için E-posta Günlüğünün etkinleştirilmesi gerekir."
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:441
+msgid "Please enable Email Log"
+msgstr "Lütfen E-posta Günlüğünü etkinleştirin"
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:444
+msgid "Your Primary Connection mailer doesn't support delivery verification. If you want to enable this option, please switch to a transactional mailer like SendLayer."
+msgstr "Birincil Bağlantı posta göndericiniz teslimat doğrulamasını desteklemiyor. Bu seçeneği etkinleştir istiyorsanız lütfen SendLayer gibi işleme dayalı bir posta göndericisine geçin."
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:465
+msgid "Save Settings"
+msgstr "Ayarları Kaydet"
+
+#: src/Pro/Alerts/Admin/SettingsTab.php:468
+msgid "Test Alerts"
+msgstr "Test Uyarıları"
+
+#: src/Pro/Alerts/Alerts.php:288
+msgid "WP Mail SMTP Alerts Test"
+msgstr "WP Mail SMTP Uyarı Testi"
+
+#: src/Pro/Alerts/Alerts.php:289
+msgid "This is a test error message triggered from the WP Mail SMTP Alerts settings"
+msgstr "WP Mail SMTP Uyarıları ayarlarıyla tetiklenen bir test hatası iletisidir"
+
+#: src/Pro/Alerts/Providers/CustomWebhook/Handler.php:97
+msgid "Custom Webhook alert requests were processed."
+msgstr "Özel Web Kancası uyarı istekleri işlendi."
+
+#: src/Pro/Alerts/Providers/CustomWebhook/Handler.php:117
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:138
+#: src/Pro/Alerts/Providers/Push/Handler.php:132
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:138
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:150
+msgid "Your Site Failed to Send an Email"
+msgstr "Siteniz E-posta Gönderirken Başarısız Oldu"
+
+#: src/Pro/Alerts/Providers/CustomWebhook/Handler.php:121
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:142
+#: src/Pro/Alerts/Providers/Push/Handler.php:136
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:142
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:154
+msgid "Your Site failed to send an email via the Primary connection, but the email was sent successfully via the Backup connection"
+msgstr "Siteniz Birincil bağlantı yoluyla bir E-posta gönderirken başarısız oldu, ancak e-posta Yedek bağlantı aracılığıyla başarıyla gönderildi"
+
+#: src/Pro/Alerts/Providers/CustomWebhook/Handler.php:125
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:146
+#: src/Pro/Alerts/Providers/Push/Handler.php:140
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:146
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:158
+msgid "Your Site failed to send an email via Primary and Backup connection"
+msgstr "Siteniz Birincil ve Yedek bağlantı yoluyla bir E-posta gönderirken başarısız oldu"
+
+#: src/Pro/Alerts/Providers/CustomWebhook/Handler.php:129
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:150
+#: src/Pro/Alerts/Providers/Push/Handler.php:144
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:150
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:162
+#: src/Pro/Alerts/Providers/TwilioSMS/Handler.php:176
+msgid "An email failed to be delivered"
+msgstr "Bir e-posta teslim edilemedi"
+
+#. translators: %s - Documentation link.
+#: src/Pro/Alerts/Providers/CustomWebhook/Options.php:33
+msgid "Paste in the webhook URL you’d like to use to receive alerts when email sending fails. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read our documentation on setting up webhook alerts</a>."
+msgstr "E-posta gönderimi başarısız olduğunda uyarı almak için kullanmak istediğiniz web kancası URL'sini yapıştırın. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Web kancası uyarılarının</a>ayarlanması ile ilgili belgelerimizi okuyun."
+
+#: src/Pro/Alerts/Providers/CustomWebhook/Options.php:56
+msgid "Webhook"
+msgstr "Web kancası"
+
+#: src/Pro/Alerts/Providers/CustomWebhook/Options.php:58
+msgid "Add Another Webhook URL"
+msgstr "Başka Bir Web Kancası URL'si Ekleyin"
+
+#: src/Pro/Alerts/Providers/CustomWebhook/Options.php:109
+#: src/Pro/Alerts/Providers/DiscordWebhook/Options.php:109
+#: src/Pro/Alerts/Providers/SlackWebhook/Options.php:109
+#: src/Pro/Alerts/Providers/TeamsWebhook/Options.php:109
+msgid "Webhook URL"
+msgstr "Web kancası URL'si"
+
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:109
+msgid "Discord Webhook alert request was sent."
+msgstr "Discord Webhook uyarı isteği gönderildi."
+
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:112
+msgid "Alert: Discord Webhook."
+msgstr "Uyarı: Discord Webhook."
+
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:164
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:169
+msgid "Website"
+msgstr "Web sitesi"
+
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:169
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:182
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:178
+msgid "Website URL"
+msgstr "Web sitesi URL'si"
+
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:174
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:195
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:187
+msgid "To email addresses"
+msgstr "E-posta adreslerine"
+
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:179
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:208
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:196
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:247
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:235
+#: src/Pro/Emails/Logs/Admin/Table.php:210
+#: src/Pro/Emails/Logs/Export/Export.php:129
+#: src/Pro/Emails/Logs/Reports/Table.php:60
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:66
+msgid "Subject"
+msgstr "Konu"
+
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:187
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:224
+#: src/Pro/Emails/Logs/EmailsCollection.php:114
+msgid "Error Message"
+msgstr "Hata Mesajı"
+
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:236
+msgid "Need more help?"
+msgstr "Daha fazla yardıma mı ihtiyacınız var?"
+
+#: src/Pro/Alerts/Providers/DiscordWebhook/Handler.php:237
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:291
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:263
+msgid "Read our troubleshooting guide"
+msgstr "Sorun sorun giderme kılavuzumuzu okuyun"
+
+#. translators: %s - Documentation link.
+#: src/Pro/Alerts/Providers/DiscordWebhook/Options.php:33
+msgid "Paste in the Discord webhook URL you'd like to use to receive alerts when email sending fails. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read our documentation on setting up Discord alerts</a>."
+msgstr "E-posta gönderimi başarısız olduğunda uyarı almak için kullanmak istediğiniz Discord webhook URL'sini yapıştırın. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Discord uyarılarının ayarlanması hakkındaki belgelerimizi okuyun</a>."
+
+#: src/Pro/Alerts/Providers/DiscordWebhook/Options.php:56
+msgid "Discord"
+msgstr "Discord"
+
+#: src/Pro/Alerts/Providers/DiscordWebhook/Options.php:58
+#: src/Pro/Alerts/Providers/SlackWebhook/Options.php:58
+#: src/Pro/Alerts/Providers/TeamsWebhook/Options.php:58
+msgid "Add Another Webhook"
+msgstr "Başka Bir Web Kancası Ekle"
+
+#: src/Pro/Alerts/Providers/Email/Handler.php:131
+msgid "An Email alert request was sent."
+msgstr "Bir E-posta uyarı isteği gönderildi."
+
+#. translators: %s - Documentation link.
+#: src/Pro/Alerts/Providers/Email/Options.php:33
+msgid "Enter the email addresses (3 max) you’d like to use to receive alerts when email sending fails. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read our documentation on setting up email alerts</a>."
+msgstr "E-posta gönderimi başarısız olduğunda uyarı almak için kullanmak istediğiniz e-posta adreslerini (en fazla 3) girin. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">E-posta uyarılarının ayarlanması ile ilgili belgelerimizi okuyun</a>."
+
+#. translators: %s - Plugin general settings page link.
+#: src/Pro/Alerts/Providers/Email/Options.php:62
+#: src/Pro/Alerts/Providers/Push/Options.php:62
+msgid "This integration will not work without a valid WP Mail SMTP license key. <a href=\"%s\">Please verify your license key</a>."
+msgstr "Bu entegrasyon, geçerli bir WP Mail SMTP lisans anahtarı olmadan çalışmayacaktır. <a href=\"%s\">Lütfen</a>lisans anahtarınızı doğrulayın."
+
+#: src/Pro/Alerts/Providers/Email/Options.php:81
+#: src/Pro/Providers/AmazonSES/IdentitiesTable.php:115
+msgid "Email"
+msgstr "E-posta"
+
+#: src/Pro/Alerts/Providers/Email/Options.php:83
+msgid "Add Another Email Address"
+msgstr "Başka Bir E-posta Adresi Ekle"
+
+#: src/Pro/Alerts/Providers/Email/Options.php:135
+msgid "Send To"
+msgstr "Şuna Gönder"
+
+#: src/Pro/Alerts/Providers/Push/Handler.php:101
+msgid "Push notifications alert request was sent."
+msgstr "Anlık bildirim uyarı isteği gönderildi."
+
+#: src/Pro/Alerts/Providers/Push/Handler.php:104
+msgid "Alert: Push notifications."
+msgstr "Uyarı: Anlık bildirimler."
+
+#: src/Pro/Alerts/Providers/Push/Handler.php:127
+msgid "Email sending failed"
+msgstr "E-posta gönderimi başarısız"
+
+#. translators: %s - Documentation link.
+#: src/Pro/Alerts/Providers/Push/Options.php:33
+msgid "To receive push notifications on this device, you'll need to allow our plugin to send notifications via this browser. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read our documentation on setting up Push Notification alerts</a>."
+msgstr "Bu cihazda anlık bildirimler almak için eklentimizin bu tarayıcı üzerinden bildirim göndermesine izin vermeniz gerekir. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Anlık Bildirim uyarılarının ayarlanması hakkındaki belgelerimizi okuyun</a>."
+
+#: src/Pro/Alerts/Providers/Push/Options.php:81
+msgid "Push Notifications"
+msgstr "Anlık Bildirimler"
+
+#: src/Pro/Alerts/Providers/Push/Options.php:83
+msgid "Enable push notifications on this device"
+msgstr "Bu cihazda anlık bildirimleri etkinleştir"
+
+#: src/Pro/Alerts/Providers/Push/Options.php:151
+msgid "current"
+msgstr "mevcut"
+
+#: src/Pro/Alerts/Providers/Push/Options.php:152
+msgid "Connection Name"
+msgstr "Bağlantı Adı"
+
+#: src/Pro/Alerts/Providers/Push/Provider.php:451
+msgid "This browser doesn't support push notifications"
+msgstr "Bu tarayıcı anlık bildirimleri desteklemiyor"
+
+#. translators: %s - Plugin general settings page link.
+#: src/Pro/Alerts/Providers/Push/Provider.php:455
+msgid "Push notifications are disabled on this browser, <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">please follow this guide to enable them</a>"
+msgstr "Bu tarayıcıda anlık bildirimler devre dışı bırakıldı, <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">bunları etkinleştirmek için lütfen bu kılavuzu takip edin</a>"
+
+#: src/Pro/Alerts/Providers/Push/Provider.php:474
+msgid "Error loading service worker"
+msgstr "Hizmet çalışanı yüklenirken hata oluştu"
+
+#: src/Pro/Alerts/Providers/Push/Provider.php:475
+msgid "Error fetching push notification subscription"
+msgstr "Anlık bildirim aboneliği alınırken hata oluştu"
+
+#: src/Pro/Alerts/Providers/Push/Provider.php:476
+msgid "Error subscribing to push notifications"
+msgstr "Anlık bildirimlere abone olurken hata oluştu"
+
+#: src/Pro/Alerts/Providers/Push/Provider.php:477
+msgid "Error unsubscribing from push notifications"
+msgstr "Anlık bildirim aboneliğinden ayrılırken hata oluştu"
+
+#: src/Pro/Alerts/Providers/Push/Provider.php:478
+msgid "API request error"
+msgstr "API isteği hatası"
+
+#: src/Pro/Alerts/Providers/Push/Provider.php:622
+msgid "WP Mail SMTP Alerts"
+msgstr "WP Mail SMTP Uyarıları"
+
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:109
+msgid "Slack Webhook alert request was sent."
+msgstr "Slack Web Kancası uyarı isteği gönderildi."
+
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:112
+msgid "Alert: Slack Webhook."
+msgstr "Uyarı: Slack Web Kancası."
+
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:224
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:208
+msgid "Error message"
+msgstr "Hata mesajı"
+
+#. translators: %s - Email Log ID.
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:238
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:221
+msgid "Email Log [#%s]"
+msgstr "E-posta Günlüğü [#%s]"
+
+#. translators: %s - Debug Event ID.
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:246
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:229
+msgid "Debug Event [#%s]"
+msgstr "Hata Ayıklama Olayı [#%s]"
+
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:269
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:245
+msgid "WP Mail SMTP settings"
+msgstr "WP Mail SMTP ayarları"
+
+#. translators: %s - Troubleshooting guide link.
+#: src/Pro/Alerts/Providers/SlackWebhook/Handler.php:282
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:254
+msgid ""
+"Need more help?\n"
+" %s."
+msgstr ""
+"Daha fazla yardıma mı ihtiyacınız var?\n"
+" %s."
+
+#. translators: %s - Documentation link.
+#: src/Pro/Alerts/Providers/SlackWebhook/Options.php:33
+msgid "Paste in the Slack webhook URL you’d like to use to receive alerts when email sending fails. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read our documentation on setting up Slack alerts</a>."
+msgstr "E-posta gönderimi başarısız olduğunda uyarı almak için kullanmak istediğiniz Slack web kancası URL'sini yapıştırın. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Slack uyarıları</a>ayarı ile ilgili belgelerimizi okuyun."
+
+#: src/Pro/Alerts/Providers/SlackWebhook/Options.php:56
+msgid "Slack"
+msgstr "Slack"
+
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:122
+msgid "Microsoft Teams Webhook alert request was sent."
+msgstr "Microsoft Teams Web kancası uyarı isteği gönderildi."
+
+#: src/Pro/Alerts/Providers/TeamsWebhook/Handler.php:125
+msgid "Alert: Microsoft Teams Webhook."
+msgstr "Uyarı: Microsoft Teams Web Kancası."
+
+#. translators: %s - Documentation link.
+#: src/Pro/Alerts/Providers/TeamsWebhook/Options.php:33
+msgid "Paste in the Microsoft Teams webhook URL you’d like to use to receive alerts when email sending fails. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read our documentation on setting up Microsoft Teams alerts</a>."
+msgstr "E-posta gönderimi başarısız olduğunda uyarı almak için kullanmak istediğiniz Microsoft Teams web kancası URL'sini yapıştırın. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Teams uyarılarını ayarlama hakkındaki belgelerimizi okuyun</a>."
+
+#: src/Pro/Alerts/Providers/TeamsWebhook/Options.php:56
+msgid "Microsoft Teams"
+msgstr "Microsoft Teams"
+
+#: src/Pro/Alerts/Providers/TwilioSMS/Handler.php:135
+msgid "Twilio SMS alert request was sent."
+msgstr "Twilio SMS uyarı isteği gönderildi."
+
+#: src/Pro/Alerts/Providers/TwilioSMS/Handler.php:138
+msgid "Alert: Twilio SMS."
+msgstr "Uyarı: Twilio SMS."
+
+#: src/Pro/Alerts/Providers/TwilioSMS/Handler.php:164
+msgid "Your Site Failed to Send an Email."
+msgstr "Siteniz E-posta Gönderirken Başarısız Oldu."
+
+#: src/Pro/Alerts/Providers/TwilioSMS/Handler.php:168
+#: src/Pro/MailCatcherTrait.php:79
+msgid "Your Site failed to send an email via the Primary connection, but the email was sent successfully via the Backup connection."
+msgstr "Siteniz Birincil bağlantı aracılığıyla bir E-posta gönderemedi, ancak Yedek bağlantı aracılığıyla e-posta başarıyla gönderildi."
+
+#: src/Pro/Alerts/Providers/TwilioSMS/Handler.php:172
+#: src/Pro/MailCatcherTrait.php:93
+msgid "Your Site failed to send an email via Primary and Backup connection."
+msgstr "Siteniz Birincil ve Yedek bağlantı aracılığıyla bir e-posta gönderemedi."
+
+#. translators: %s - email subject.
+#: src/Pro/Alerts/Providers/TwilioSMS/Handler.php:184
+msgid "Subject: “%s”."
+msgstr "Konu: \"%s\"."
+
+#. translators: %s - Email Log ID.
+#: src/Pro/Alerts/Providers/TwilioSMS/Handler.php:191
+msgid "Email Log [#%s]."
+msgstr "E-posta Günlüğü [#%s]."
+
+#. translators: %s - Documentation link.
+#: src/Pro/Alerts/Providers/TwilioSMS/Options.php:33
+msgid "To receive SMS alerts, you’ll need a Twilio account. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read our documentation</a> to learn how to set up Twilio SMS, then enter your connection details below."
+msgstr "SMS uyarıları almak için bir Twilio hesabına ihtiyacınız olacak. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Twilio SMS'i nasıl kuracağınızı öğrenmek için</a> belgelerimizi okuyun, ardından bağlantı ayrıntılarınızı aşağıya girin."
+
+#: src/Pro/Alerts/Providers/TwilioSMS/Options.php:56
+msgid "SMS via Twilio"
+msgstr "Twilio üzerinden SMS"
+
+#: src/Pro/Alerts/Providers/TwilioSMS/Options.php:58
+msgid "Add Another Account"
+msgstr "Başka Bir Hesap Ekle"
+
+#: src/Pro/Alerts/Providers/TwilioSMS/Options.php:118
+msgid "Twilio Account ID"
+msgstr "Twilio Hesap Kimliği"
+
+#: src/Pro/Alerts/Providers/TwilioSMS/Options.php:147
+msgid "Twilio Auth Token"
+msgstr "Twilio Auth Tokeni"
+
+#: src/Pro/Alerts/Providers/TwilioSMS/Options.php:176
+msgid "From Phone Number"
+msgstr "Kimden Telefon Numarası"
+
+#: src/Pro/Alerts/Providers/TwilioSMS/Options.php:205
+msgid "To Phone Number"
+msgstr "Kime Telefon Numarası"
+
+#: src/Pro/BackupConnections/Admin/SettingsTab.php:52
+#: src/Pro/BackupConnections/Admin/SettingsTab.php:84
+msgid "Backup Connection"
+msgstr "Yedekleme Bağlantısı"
+
+#. translators: %s - Backup Connections documentation page URL.
+#: src/Pro/BackupConnections/Admin/SettingsTab.php:57
+msgid "Don’t worry about losing emails. Add an additional connection, then set it as your Backup Connection. Emails that fail to send with the Primary Connection will be sent via the selected Backup Connection. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn More</a>."
+msgstr "E-postaları kaybetme konusunda endişelenmeyin. Ek bir bağlantı ekleyin, ardından bunu Yedek Bağlantınız olarak ayarlayın. Birincil Bağlantı ile gönderilemeyen e-postalar, seçilen Yedek Bağlantı aracılığıyla gönderilecektir. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Daha Fazla Bilgi Edinin</a>."
+
+#: src/Pro/BackupConnections/Admin/SettingsTab.php:91
+msgid "None"
+msgstr "Yok"
+
+#. translators: %s - Additional connections settings page url.
+#: src/Pro/BackupConnections/Admin/SettingsTab.php:108
+msgid "Once you add an <a href=\"%s\">additional connection</a>, you can select it here."
+msgstr "Bir <a href=\"%s\">ek bağlantı</a> eklediğinizde, bunu buradan seçebilirsiniz."
+
+#: src/Pro/BackupConnections/Admin/SettingsTab.php:125
+msgid "Choose which connection you’d like to use as your Backup Connection."
+msgstr "Yedek Bağlantınız olarak hangi bağlantıyı kullanmak istediğinizi seçin."
+
+#: src/Pro/ConditionalLogic/ConditionalLogicSettings.php:154
+msgid "Contains"
+msgstr "İçerik"
+
+#: src/Pro/ConditionalLogic/ConditionalLogicSettings.php:158
+msgid "Does not contain"
+msgstr "İçermiyor"
+
+#: src/Pro/ConditionalLogic/ConditionalLogicSettings.php:162
+msgid "Is"
+msgstr ":"
+
+#: src/Pro/ConditionalLogic/ConditionalLogicSettings.php:166
+msgid "Is not"
+msgstr "Değil"
+
+#: src/Pro/ConditionalLogic/ConditionalLogicSettings.php:170
+msgid "Starts with"
+msgstr "ile başlar"
+
+#: src/Pro/ConditionalLogic/ConditionalLogicSettings.php:174
+msgid "Ends with"
+msgstr "ile biter"
+
+#: src/Pro/ConditionalLogic/ConditionalLogicSettings.php:235
+msgid "Create new rule"
+msgstr "Yeni kural oluştur"
+
+#: src/Pro/ConditionalLogic/ConditionalLogicSettings.php:235
+msgctxt "Conditional Logic: new rule logic."
+msgid "And"
+msgstr "Ve"
+
+#: src/Pro/ConditionalLogic/ConditionalLogicSettings.php:237
+msgid "Delete rule"
+msgstr "Kuralı sil"
+
+#: src/Pro/ConditionalLogic/ConditionalLogicSettings.php:246
+msgctxt "Conditional Logic: new rule logic."
+msgid "or"
+msgstr "veya"
+
+#: src/Pro/ConditionalLogic/ConditionalLogicSettings.php:252
+msgid "Add New Group"
+msgstr "Yeni Grup Ekle"
+
+#: src/Pro/Emails/Control/Admin/SettingsTab.php:33
+msgid "Email Controls"
+msgstr "E-posta Kontrolleri"
+
+#: src/Pro/Emails/Control/Admin/SettingsTab.php:35
+msgid "WordPress, by default, will send out emails for many events on your site. Using the toggles below, you can decide exactly which emails you'd like enabled."
+msgstr "WordPress varsayılan olarak sitenizdeki birçok etkinlik için e-posta gönderecektir. Aşağıdaki düğmeleri kullanarak tam olarak hangi e-postaların etkinleştirilmesini istediğinize karar verebilirsiniz."
+
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:43
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:57
+msgid "Email Log"
+msgstr "E-posta Günlüğü"
+
+#. translators: %1$s - number of email logs found; %2$s - filtered status.
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:108
+msgid "Found <strong>%1$s %2$s email log</strong>"
+msgid_plural "Found <strong>%1$s %2$s email logs</strong>"
+msgstr[0] "<strong>%1$s %2$s E-posta günlüğü</strong> bulundu"
+msgstr[1] "<strong>%1$s %2$s E-posta günlüğü</strong> bulundu"
+
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:137
+#: src/Pro/Emails/Logs/Reports/Table.php:342
+msgid "Search Emails"
+msgstr "E-posta Adreslerinde Ara"
+
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:209
+msgid "Email Address"
+msgstr "E-posta Adresi"
+
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:210
+msgid "is"
+msgstr "sadece"
+
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:214
+msgid "Subject or Headers"
+msgstr "Konu veya Başlıklar"
+
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:215
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:220
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:225
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:230
+msgid "contains"
+msgstr "içerir"
+
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:219
+#: src/Pro/Emails/Logs/EmailsCollection.php:113
+msgid "Content"
+msgstr "İçerik"
+
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:229
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:292
+#: src/Pro/Emails/Logs/Admin/Table.php:213
+#: src/Pro/Emails/Logs/EmailsCollection.php:115
+#: src/Pro/Emails/Logs/Export/Export.php:174
+msgid "Source"
+msgstr "Kaynak"
+
+#. translators: %1$s - field name; %2$s - verb; %3$s - term.
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:235
+msgid "where %1$s %2$s \"%3$s\""
+msgstr "burada %1$s %2$s \"%3$s\""
+
+#. translators: %s - Date.
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:271
+msgid "on %s"
+msgstr "%s tarihinde"
+
+#. translators: %1$s - Date. %2$s - Date.
+#: src/Pro/Emails/Logs/Admin/ArchivePage.php:277
+msgid "between %1$s and %2$s"
+msgstr "%1$s ve %2$s arasında"
+
+#: src/Pro/Emails/Logs/Admin/PageAbstract.php:59
+msgid "Email Log is Not Enabled"
+msgstr "E-posta Günlüğü Etkinleştirilmemiş"
+
+#: src/Pro/Emails/Logs/Admin/PageAbstract.php:62
+msgid "Emails sent when logging is disabled are not stored in the database and will not display when enabled. "
+msgstr "Günlükleme devre dışı bırakıldığında, gönderilen e-postalar veritabanında saklanmaz ve etkinleştirildiğinde görüntülenmez. "
+
+#: src/Pro/Emails/Logs/Admin/PageAbstract.php:66
+#: src/Pro/Emails/Logs/Reports/Admin.php:373
+msgid "Enable Email Log"
+msgstr "E-posta Günlüğünü Etkinleştir"
+
+#: src/Pro/Emails/Logs/Admin/PageAbstract.php:102
+msgid "Email Logging is Not Installed Correctly"
+msgstr "E-posta Günlüğü Doğru Bir Şekilde Yüklenmedi"
+
+#. translators: %1$s - create missing tables link; %2$s - contact support link.
+#: src/Pro/Emails/Logs/Admin/PageAbstract.php:109
+#: src/Pro/Emails/Logs/Reports/Admin.php:414
+msgid "WP Mail SMTP is using custom database tables for some of its features. In order to work properly, the custom tables should be created, and it seems they are missing. Please try to <a href=\"%1$s\">create the missing DB tables by clicking on this link</a>. If this issue persists, please <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">contact our support</a> and provide the error message below:"
+msgstr "WP Mail SMTP, bazı özellikleri için özel veritabanı tabloları kullanıyor. Düzgün çalışması için özel tabloların oluşturulması gerekir ve görünüşe göre eksikler. Lütfen <a href=\"%1$s\">bu bağlantıya tıklayarak eksik DB tablolarını oluşturmayı deneyin</a>. Bu sorun devam ederse, lütfen <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">desteğimizle iletişime geçin</a> ve aşağıdaki hata mesajını sağlayın:"
+
+#. translators: %1$s - create missing tables link; %2$s - contact support link.
+#: src/Pro/Emails/Logs/Admin/PageAbstract.php:126
+#: src/Pro/Emails/Logs/Reports/Admin.php:431
+msgid "WP Mail SMTP is using custom database tables for some of its features. In order to work properly, the custom tables should be created, and it seems they are missing. Please try to <a href=\"%1$s\">create the missing DB tables by clicking on this link</a>. If this issue persists, please <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">contact our support</a>."
+msgstr "WP Mail SMTP, bazı özellikleri için özel DB tabloları kullanıyor. Düzgün çalışması için özel tablolar oluşturulmalı ve görünüşe göre bu tablolar eksik. Lütfen bu bağlantıya</a>tıklayarak eksik DB tablolarını <a href=\"%1$s\">oluşturmaya çalışın. Bu sorun devam ederse, lütfen <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">destek ekibimizle iletişime geçin</a>."
+
+#: src/Pro/Emails/Logs/Admin/PageAbstract.php:141
+msgid "Right now all sent emails are not logged."
+msgstr "Şu anda gönderilen tüm e-postalar günlüğe kaydedilmedi."
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:82
+msgid "WP Mail SMTP - Email Details"
+msgstr "WP Mail SMTP - E-posta Ayrıntıları"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:109
+msgid "Normal view"
+msgstr "Normal görünüm"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:111
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:157
+msgid "Compact view"
+msgstr "Kompakt görünüm"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:152
+#: src/Pro/Providers/Providers.php:243
+msgid "Close"
+msgstr "Kapat"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:153
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:521
+msgid "Print"
+msgstr "Yazdır"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:174
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:172
+msgid "Created"
+msgstr "Oluşturuldu"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:189
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:185
+#: src/Pro/Emails/Logs/Admin/Table.php:211
+msgid "From"
+msgstr "Şu tarihten"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:197
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:214
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:193
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:208
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:735
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:753
+#: src/Pro/Emails/Logs/Admin/Table.php:398
+#: src/Pro/Emails/Logs/Admin/Table.php:424
+#: src/Pro/Emails/Logs/Admin/Table.php:498
+#: src/Pro/Emails/Logs/Admin/Table.php:524
+#: src/Pro/Emails/Logs/Admin/Table.php:542
+#: src/Pro/Emails/Logs/Admin/Table.php:562
+#: src/Pro/Emails/Logs/Admin/Table.php:591
+#: src/Pro/Emails/Logs/Export/AbstractData.php:173
+#: src/Pro/Emails/Logs/Export/AbstractData.php:193
+msgid "N/A"
+msgstr "Yok"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:206
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:200
+#: src/Pro/Emails/Logs/Admin/Table.php:212
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:82
+msgid "To"
+msgstr "Şu tarihe"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:228
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:220
+#: src/Pro/Emails/Logs/Export/Export.php:166
+msgid "Carbon Copy (CC)"
+msgstr "Karbon Kopya (CC)"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:240
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:230
+#: src/Pro/Emails/Logs/Export/Export.php:167
+msgid "Blind Carbon Copy (BCC)"
+msgstr "Kör Karbon Kopya (BCC)"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:253
+#: src/Pro/Emails/Logs/Export/Export.php:165
+#: src/Pro/Providers/AmazonSES/IdentitiesTable.php:84
+msgid "Status"
+msgstr "Durum"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:263
+#: src/Pro/Emails/Logs/Admin/Table.php:214
+#: src/Pro/Emails/Logs/Export/Export.php:169
+msgid "Mailer"
+msgstr "Posta Gönderici"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:273
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:375
+#: src/Pro/Emails/Logs/Admin/Table.php:472
+msgid "(backup)"
+msgstr "(yedek)"
+
+#: src/Pro/Emails/Logs/Admin/PrintPreview.php:309
+msgid "Print preview email content"
+msgstr "Baskı önizleme e-posta içeriği"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:94
+msgid "Enable Log"
+msgstr "Günlüğü Etkinleştir"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:110
+msgid "Keep a record of basic details for all emails sent from your site."
+msgstr "Sitenizden gönderilen tüm e-postalar için temel ayrıntıların kaydını tutun."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:114
+msgid "This will allow you to view both general information (date sent, subject, email status) and technical information (all the headers, including TO, CC, BCC) for all sent emails."
+msgstr "Gönderilen tüm e-postalar için hem genel bilgileri (gönderim tarihi, konu, e-posta durumu) hem de teknik bilgileri (ALICI, CC, BCC dahil tüm başlıklar) görüntülemenize izin verecektir."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:128
+msgid "Log Email Content"
+msgstr "E-posta İçeriğini Günlüğe Kaydet"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:144
+msgid "Keep a record of all content for all emails sent from your site."
+msgstr "Sitenizden gönderilen tüm e-postalar için tüm içeriğin kaydını tutun."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:148
+msgid "Email content may contain personal information, such as plain text passwords. Please carefully consider before enabling this option, as it will store all sent email content to your site’s database."
+msgstr "E-posta içeriği, düz metin parolaları gibi kişisel bilgiler içerebilir. Gönderilen tüm e-posta içeriğini sitenizin veritabanında saklayacağı için lütfen bu seçeneği etkinleştirmeden önce dikkatlice düşünün."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:150
+msgid "This option has to be enabled if you want to <strong>resend emails</strong> from our Email Log."
+msgstr "E-posta Günlüğümüzden <strong>e-postaları yeniden göndermek</strong> istiyorsanız, bu seçeneğin etkinleştirilmesi gerekir."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:164
+msgid "Save Attachments"
+msgstr "Ekleri Kaydet"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:180
+msgid "Save the sent attachments to the Email Log."
+msgstr "Gönderilen ekleri E-posta Günlüğüne kaydedin."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:184
+msgid "All sent attachments will be saved to your WordPress uploads folder. If your site sends a lot of big unique attachments, this could potentially cause some disk space issue."
+msgstr "Gönderilen tüm ekler, WordPress yüklemeler klasörünüze kaydedilecektir. Siteniz çok sayıda büyük eşsiz ek gönderiyorsa, bu potansiyel olarak bazı disk alanı sorunlarına neden olabilir."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:198
+msgid "Open Email Tracking"
+msgstr "E-posta Takibini Aç"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:214
+msgid "Track when an email is opened."
+msgstr "Bir e-postanın ne zaman açıldığını takip edin."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:218
+msgid "This will allow you to see which emails were opened by the recipients."
+msgstr "Alıcılar tarafından hangi e-postaların açıldığını görmenizi sağlar."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:232
+msgid "Click Link Tracking"
+msgstr "Bağlantı Takibine tıkla"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:248
+msgid "Track clicked links in emails."
+msgstr "E-postalardaki tıklanan bağlantıları takip edin."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:252
+msgid "This will allow you to see which links were clicked in the sent emails."
+msgstr "Gönderilen e-postalarda hangi bağlantılara tıklandığını görmenizi sağlar."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:269
+msgid "Log Retention Period"
+msgstr "Günlük Tutma Süresi"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:276
+msgid "Forever"
+msgstr "Sonsuza kadar"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:283
+msgid "Email logs older than the selected period will be permanently deleted from the database."
+msgstr "Seçilen süreden daha eski olan e-posta günlükleri veritabanından kalıcı olarak silinecektir."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:348
+msgid "Webhooks Status"
+msgstr "Web Kancaları Durumu"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:353
+msgid "Subscribed."
+msgstr "Abone olundu."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:356
+msgid "Webhooks subscription was created."
+msgstr "Web kancaları aboneliği oluşturuldu."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:361
+msgid "If you need to change the values of your constants, click the Unsubscribe button below. After completing your changes, return to this page and click the Subscribe button to re-enable the delivery verification webhooks."
+msgstr "Sabitlerinizin değerlerini değiştirmeniz gerekirse, aşağıdaki Abonelikten Çık tuşuna tıklayın. Değişikliklerinizi tamamladıktan sonra, bu sayfaya geri dönün ve teslim doğrulama web kancalarını yeniden etkinleştirmek için Abone Ol tuşuna tıklayın."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:368
+msgid "Unsubscribe"
+msgstr "Abonelikten Ayrıl"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:371
+msgid "Subscription is broken."
+msgstr "Abonelik bozuldu."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:373
+msgid "Potential reasons:"
+msgstr "Potansiyel nedenler:"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:375
+msgid "Website domain was changed."
+msgstr "Web sitesi alan adı değiştirildi."
+
+#. translators: %s - mailer title.
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:379
+msgid "Subscription was removed or modified manually in %s account."
+msgstr "Abonelik , %s hesabında manuel olarak kaldırıldı veya değiştirildi."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:387
+msgid "Resubscribe"
+msgstr "Yeniden abone ol"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:390
+msgid "Failed."
+msgstr "Başarısız Oldu."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:393
+msgid "Automatic creation of webhooks subscription for email deliverability status verification has failed."
+msgstr "E-posta teslim edilebilirlik durumu doğrulaması için web kancaları aboneliğinin otomatik oluşturulması başarısız oldu."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:397
+msgid "Please fix the errors below and try to subscribe again."
+msgstr "Lütfen aşağıdaki hataları düzeltin ve tekrar abone olmayı deneyin."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:402
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:413
+msgid "Subscribe"
+msgstr "Abone ol"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:405
+msgid "Unsubscribed."
+msgstr "Abonelikten ayrılan."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:408
+msgid "The subscription was manually removed. If you want to use webhooks for email deliverability status verification, please perform the \"Subscribe\" action."
+msgstr "Abonelik manuel olarak kaldırıldı. E-posta teslim durumu doğrulaması için web kancalarını kullanmak istiyorsanız, lütfen \"Abone Ol\" eylemini gerçekleştirin."
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:472
+msgid "1 Day"
+msgstr "1 Gün"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:473
+msgid "1 Week"
+msgstr "1 Hafta"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:474
+msgid "1 Month"
+msgstr "1 Ay"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:475
+msgid "6 Months"
+msgstr "6 Ay"
+
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:476
+msgid "1 Year"
+msgstr "1 Yıl"
+
+#. translators: %d - days count.
+#: src/Pro/Emails/Logs/Admin/SettingsTab.php:490
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] "%d Gün"
+msgstr[1] "%d Gün"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:64
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:484
+#: src/Pro/Emails/Logs/Admin/Table.php:301
+msgid "View Email"
+msgstr "E-posta Görüntüle"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:81
+msgid "Back to Email Log"
+msgstr "E-posta Günlüğüne Geri Dön"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:166
+msgid "Email Details"
+msgstr "E-posta Ayrıntıları"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:261
+msgid "Technical Details"
+msgstr "Teknik Ayrıntılar"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:270
+msgid "Toggle panel: Technical Details"
+msgstr "Panele geçiş yap: Teknik Ayrıntılar"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:280
+msgid "Hide Technical Details"
+msgstr "Teknik Ayrıntıları Gizle"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:283
+#: src/Pro/Emails/Logs/Export/Export.php:168
+msgid "Headers"
+msgstr "Başlıklar"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:300
+#: src/Pro/SiteHealth.php:201
+msgid "Error"
+msgstr "Hata"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:325
+msgid "Log Details"
+msgstr "Günlük Ayrıntıları"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:335
+#: src/Pro/Emails/Logs/Admin/Table.php:85
+#: src/Pro/Emails/Logs/Admin/Table.php:261
+#: src/Pro/Emails/Logs/Email.php:443
+msgid "Delivered"
+msgstr "Teslim Edilmiş"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:338
+#: src/Pro/Emails/Logs/Admin/Table.php:86
+#: src/Pro/Emails/Logs/Admin/Table.php:263
+#: src/Pro/Emails/Logs/Email.php:441
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:85
+#: src/Pro/Emails/Logs/Reports/Table.php:64
+#: src/Pro/Providers/Providers.php:232
+msgid "Sent"
+msgstr "Gönderilmiş"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:341
+#: src/Pro/Emails/Logs/Admin/Table.php:265
+#: src/Pro/Emails/Logs/Email.php:442
+msgid "Waiting for confirmation"
+msgstr "Onay bekliyor"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:344
+#: src/Pro/Emails/Logs/Admin/Table.php:267
+#: src/Pro/Emails/Logs/Email.php:440
+msgid "Not Sent"
+msgstr "Gönderilmedi"
+
+#. translators: %s - Sent status text (like Delivered or Not Sent, ...)
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:354
+msgid "Status: %s"
+msgstr "Durum: %s"
+
+#. translators: %s - name of the mailer.
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:380
+msgid "Mailer: %s"
+msgstr "Posta Gönderici: %s"
+
+#. translators: %s - number of attachments.
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:394
+msgid "Attachments: %s"
+msgstr "Ekler: %s"
+
+#. translators: %s - ID of an email log.
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:404
+msgid "Log ID: %s"
+msgstr "Günlük No: %s"
+
+#. translators: %s - whether email was opened.
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:414
+msgid "Opened: %s"
+msgstr "Açıldı: %s"
+
+#. translators: %s - whether one of email links was clicked.
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:425
+msgid "Clicked: %s"
+msgstr "Tıklandı: %s"
+
+#. translators: %s - email source.
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:436
+msgid "Source: %s"
+msgstr "Kaynak: %s"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:461
+msgid "Delete Log"
+msgstr "Günlüğü Sil"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:526
+msgid "Export (CSV)"
+msgstr "Dışa Aktar (CSV)"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:531
+msgid "Export (XLSX)"
+msgstr "Dışa Aktar (XLSX)"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:536
+msgid "Export (EML)"
+msgstr "Dışa Aktar (EML)"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:544
+#: src/Pro/Emails/Logs/Admin/Table.php:625
+#: src/Pro/Providers/AmazonSES/Identity.php:220
+#: src/Pro/Providers/Providers.php:233
+msgid "Resend"
+msgstr "Yeniden gönder"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:564
+msgid "Re-check email status"
+msgstr "E-posta durumunu yeniden kontrol edin"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:580
+msgid "Actions"
+msgstr "Eylemler"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:630
+#: src/Pro/Emails/Logs/Export/Export.php:133
+msgid "Attachments"
+msgstr "Ekler"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:688
+msgid "You are trying to access an email log entry that is no longer available or never existed."
+msgstr "Artık mevcut olmayan veya hiç var olmamış bir e-posta günlüğü girdisine erişmeye çalışıyorsunuz."
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:691
+msgid "Please use the \"Back to Email Log\" button to return to the list of all saved emails."
+msgstr "Kayıtlı tüm e-postaların listesine geri dönmek için lütfen \" E-posta Günlüğüne Dön\" tuşunu kullanın."
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:739
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:757
+#: src/Pro/Emails/Logs/Admin/Table.php:546
+#: src/Pro/Emails/Logs/Admin/Table.php:566
+#: src/Pro/Emails/Logs/Export/AbstractData.php:177
+#: src/Pro/Emails/Logs/Export/AbstractData.php:197
+#: src/Pro/Emails/Logs/Logs.php:484
+#: src/Pro/Providers/Providers.php:244
+#: src/Pro/Providers/Providers.php:254
+msgid "Yes"
+msgstr "Evet"
+
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:740
+#: src/Pro/Emails/Logs/Admin/SinglePage.php:758
+#: src/Pro/Emails/Logs/Admin/Table.php:547
+#: src/Pro/Emails/Logs/Admin/Table.php:567
+#: src/Pro/Emails/Logs/Export/AbstractData.php:178
+#: src/Pro/Emails/Logs/Export/AbstractData.php:198
+msgid "No"
+msgstr "Hayır"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:87
+msgid "Awaiting Confirmation"
+msgstr "Onay Bekleniyor"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:88
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:123
+#: src/Pro/Emails/Logs/Reports/Table.php:70
+msgid "Failed"
+msgstr "Başarısız Oldu"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:153
+msgid "All"
+msgstr "Hepsi"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:215
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:86
+msgid "CC"
+msgstr "CC"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:216
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:90
+msgid "BCC"
+msgstr "BCC"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:219
+#: src/Pro/Emails/Logs/Export/Export.php:172
+msgid "Opened"
+msgstr "Açıldı"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:223
+#: src/Pro/Emails/Logs/Export/Export.php:173
+msgid "Clicked"
+msgstr "Tıklandı"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:226
+msgid "Date Sent"
+msgstr "Tarih Gönderildi"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:291
+msgid "View Log"
+msgstr "Günlüğü Görüntüle"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:310
+#: src/Pro/Emails/Logs/Admin/Table.php:624
+#: src/Pro/Providers/AmazonSES/Identity.php:229
+msgid "Delete"
+msgstr "Sil"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:626
+msgid "Re-check status"
+msgstr "Durumu yeniden kontrol edin"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:901
+msgid "No emails found."
+msgstr "Hiçbir e-posta bulunamadı."
+
+#: src/Pro/Emails/Logs/Admin/Table.php:903
+msgid "No emails have been logged for now."
+msgstr "Şimdilik hiçbir e-posta günlüğe kaydedilmedi."
+
+#: src/Pro/Emails/Logs/Admin/Table.php:938
+#: src/Pro/Emails/Logs/Export/Admin.php:233
+#: src/Pro/Emails/Logs/Reports/Table.php:396
+msgid "Select a date range"
+msgstr "Bir tarih aralığı seçin"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:942
+#: src/Pro/Emails/Logs/Reports/Table.php:400
+msgid "Filter"
+msgstr "Filtre"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:954
+msgid "Delete All Logs"
+msgstr "Tüm Logları Sil"
+
+#: src/Pro/Emails/Logs/Admin/Table.php:966
+msgid "Re-check All Email Statuses"
+msgstr "Tüm E-posta Durumlarını Yeniden Kontrol Edin"
+
+#: src/Pro/Emails/Logs/CanResendEmailTrait.php:41
+msgid "Email can't be resent with empty content."
+msgstr "E-posta boş içerikle tekrar gönderilemez."
+
+#: src/Pro/Emails/Logs/DeliveryVerification/AbstractDeliveryVerifier.php:84
+msgid "Unable to find email connection."
+msgstr "E-posta bağlantısı bulunamadı."
+
+#: src/Pro/Emails/Logs/DeliveryVerification/AbstractDeliveryVerifier.php:91
+msgid "Unable to find mailer options."
+msgstr "Posta gönderici seçenekleri bulunamıyor."
+
+#: src/Pro/Emails/Logs/DeliveryVerification/AbstractDeliveryVerifier.php:148
+msgid "Unable to verify email delivery status."
+msgstr "E-posta teslim durumu doğrulanamıyor."
+
+#: src/Pro/Emails/Logs/DeliveryVerification/AbstractDeliveryVerifier.php:196
+#: src/Pro/Emails/Logs/Webhooks/Events/Failed.php:51
+#: src/Pro/Tasks/Logs/VerifySentStatusTaskAbstract.php:173
+msgid "The email failed to be delivered. No specific reason was provided by the API."
+msgstr "E-posta teslim edilemedi. API tarafından belirli bir neden sağlanmadı."
+
+#: src/Pro/Emails/Logs/DeliveryVerification/DeliveryVerification.php:90
+msgid "Unable to find email."
+msgstr "E-posta bulunamıyor."
+
+#: src/Pro/Emails/Logs/DeliveryVerification/DeliveryVerification.php:99
+msgid "Invalid mailer."
+msgstr "Geçersiz posta gönderici."
+
+#: src/Pro/Emails/Logs/DeliveryVerification/DeliveryVerification.php:117
+msgid "Invalid verifier."
+msgstr "Geçersiz doğrulayıcı."
+
+#: src/Pro/Emails/Logs/EmailsCollection.php:111
+msgid "Email Addresses"
+msgstr "E-posta Adresleri"
+
+#: src/Pro/Emails/Logs/EmailsCollection.php:112
+msgid "Subject & Headers"
+msgstr "Konu ve Başlıklar"
+
+#: src/Pro/Emails/Logs/Export/Admin.php:112
+msgid "Export Email Logs"
+msgstr "E-posta Günlüklerini Dışa Aktar"
+
+#: src/Pro/Emails/Logs/Export/Admin.php:117
+msgid "Export Type"
+msgstr "Dışa Aktarma Türü"
+
+#: src/Pro/Emails/Logs/Export/Admin.php:122
+msgid "Common Information"
+msgstr "Ortak Bilgiler"
+
+#: src/Pro/Emails/Logs/Export/Admin.php:127
+msgid "Additional Information"
+msgstr "Ek Bilgiler"
+
+#: src/Pro/Emails/Logs/Export/Admin.php:132
+#: src/Pro/Emails/Logs/Reports/Table.php:377
+msgid "Custom Date Range"
+msgstr "Özel Tarih Aralığı"
+
+#: src/Pro/Emails/Logs/Export/Admin.php:137
+msgid "Search"
+msgstr "Ara"
+
+#: src/Pro/Emails/Logs/Export/Admin.php:145
+msgid "Download Export File"
+msgstr "Dışa Aktarım Dosyasını İndir"
+
+#: src/Pro/Emails/Logs/Export/Admin.php:152
+#: src/Pro/Emails/Logs/Logs.php:485
+#: src/Pro/Providers/Providers.php:242
+#: src/Pro/Providers/Providers.php:256
+msgid "Cancel"
+msgstr "İptal"
+
+#. translators: %1$d - email log ID; %2$s - error message.
+#: src/Pro/Emails/Logs/Export/EMLData.php:39
+msgid "Email #%1$s was skipped. Reason: %2$s."
+msgstr "E-posta #%1$s atlandı. Neden: %2$s."
+
+#: src/Pro/Emails/Logs/Export/Export.php:64
+#: src/Pro/Emails/Logs/Export/Export.php:73
+msgid "An error occurred while preparing your export file. Please recheck export settings and try again."
+msgstr "Dışa aktarma dosyanız hazırlanırken bir hata oluştu. Lütfen dışa aktarma ayarlarını yeniden kontrol edin ve tekrar deneyin."
+
+#: src/Pro/Emails/Logs/Export/Export.php:65
+msgid "You don't have enough capabilities to complete this request."
+msgstr "Bu isteği tamamlamak için yeterli yetkinliğiniz yok."
+
+#: src/Pro/Emails/Logs/Export/Export.php:66
+msgid "Unknown request."
+msgstr "Bilinmeyen istek."
+
+#: src/Pro/Emails/Logs/Export/Export.php:67
+msgid "Incorrect email ID has been specified."
+msgstr "Yanlış e-posta kimliği belirtildi."
+
+#: src/Pro/Emails/Logs/Export/Export.php:68
+msgid "Export file cannot be retrieved from the file system."
+msgstr "Dışa aktarma dosyası, dosya sisteminden alınamaz."
+
+#: src/Pro/Emails/Logs/Export/Export.php:69
+msgid "Export file is empty."
+msgstr "Dışa aktarma dosyası boş."
+
+#: src/Pro/Emails/Logs/Export/Export.php:74
+msgid "Generating a list of email logs according to your filters."
+msgstr "Filtrelerinize göre bir e-posta günlükleri listesi oluşturuluyor."
+
+#: src/Pro/Emails/Logs/Export/Export.php:75
+msgid "This can take a while. Please wait."
+msgstr "Bu biraz süre alabilir. Lütfen bekleyin."
+
+#: src/Pro/Emails/Logs/Export/Export.php:76
+msgid "No email logs found after applying your filters."
+msgstr "Filtreleriniz uygulandıktan sonra hiçbir e-posta günlüğü bulunamadı."
+
+#: src/Pro/Emails/Logs/Export/Export.php:77
+msgid "The file was generated successfully."
+msgstr "Dosya başarılı bir şekilde oluşturuldu."
+
+#: src/Pro/Emails/Logs/Export/Export.php:78
+msgid "The file was generated partially. Please check below notices."
+msgstr "Dosya kısmen oluşturuldu. Lütfen aşağıdaki bildirimleri kontrol edin."
+
+#: src/Pro/Emails/Logs/Export/Export.php:79
+msgid "If the download does not start automatically"
+msgstr "İndirmenin otomatik olarak başlamaması halinde"
+
+#: src/Pro/Emails/Logs/Export/Export.php:80
+msgid "click here"
+msgstr "buraya tıklayın"
+
+#: src/Pro/Emails/Logs/Export/Export.php:126
+msgid "To Address"
+msgstr "Kime Adresi"
+
+#: src/Pro/Emails/Logs/Export/Export.php:127
+msgid "From Address"
+msgstr "Kimden Adresi"
+
+#: src/Pro/Emails/Logs/Export/Export.php:128
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:78
+msgid "From Name"
+msgstr "Form Adı"
+
+#: src/Pro/Emails/Logs/Export/Export.php:130
+msgid "Body"
+msgstr "Gövde"
+
+#: src/Pro/Emails/Logs/Export/Export.php:131
+msgid "Created Date"
+msgstr "Düzenlenme Tarihi"
+
+#: src/Pro/Emails/Logs/Export/Export.php:132
+msgid "Number of Attachments"
+msgstr "Eklenti Sayısı"
+
+#: src/Pro/Emails/Logs/Export/Export.php:170
+msgid "Error Details"
+msgstr "Hata Detayları"
+
+#: src/Pro/Emails/Logs/Export/Export.php:171
+msgid "Email log ID"
+msgstr "E-posta Günlüğü Kimliği"
+
+#: src/Pro/Emails/Logs/Export/Export.php:196
+msgid "Export in CSV (.csv)"
+msgstr "CSV (.csv) olarak dışa aktar"
+
+#: src/Pro/Emails/Logs/Export/Export.php:200
+msgid "Export in Microsoft Excel (.xlsx)"
+msgstr "Microsoft Excel (.xlsx) olarak Dışa Aktar"
+
+#: src/Pro/Emails/Logs/Export/Export.php:201
+msgid "Export in EML (.eml)"
+msgstr "EML (.eml) olarak dışa aktar"
+
+#. translators: %s - Error code.
+#: src/Pro/Emails/Logs/Export/File.php:175
+msgid "An error occurred when creating a zip file. Error code: %s."
+msgstr "Bir zip dosyası oluşturulurken bir hata oluştu. Hata kodu: %s."
+
+#: src/Pro/Emails/Logs/Export/File.php:366
+msgid "Your WP site is not using the direct file system method, which is needed for this export."
+msgstr "WP siteniz, bu dışa aktarma için gerekli olan doğrudan dosya sistemi yöntemini kullanmıyor."
+
+#: src/Pro/Emails/Logs/Export/File.php:380
+msgid "Something went wrong while opening the export file for writing."
+msgstr "Yazma için dışa aktarma dosyası açılırken bir şeyler ters gitti."
+
+#: src/Pro/Emails/Logs/Export/File.php:395
+msgid "Something went wrong while writing to the export file."
+msgstr "Dışa aktarma dosyasına yazılırken bir şeyler ters gitti."
+
+#: src/Pro/Emails/Logs/Export/Handler.php:250
+msgid "No Email Logs found. It looks like the Email Logs database table is missing."
+msgstr "Hiçbir E-posta Günlüğü bulunamadı. E-posta Günlükleri veritabanı tablosu eksik gibi görünüyor."
+
+#: src/Pro/Emails/Logs/Importers/ImporterAbstract.php:100
+msgid "Import process rejected."
+msgstr "İçe aktarma işlemi reddedildi."
+
+#: src/Pro/Emails/Logs/Importers/ImporterAbstract.php:111
+msgid "Import operation failed."
+msgstr "İçe aktarma işlemi başarısız oldu."
+
+#: src/Pro/Emails/Logs/Importers/ImporterTabAbstract.php:107
+msgid "Import Summary:"
+msgstr "Özeti İçe Aktar:"
+
+#: src/Pro/Emails/Logs/Importers/ImporterTabAbstract.php:111
+msgid "Successfully imported:"
+msgstr "Başarılı bir şekilde içe aktarıldı:"
+
+#: src/Pro/Emails/Logs/Importers/ImporterTabAbstract.php:114
+msgid "Failed to import:"
+msgstr "İçe aktarılamadı:"
+
+#: src/Pro/Emails/Logs/Importers/ImporterTabAbstract.php:117
+msgid "Failed attachment imports:"
+msgstr "Başarısız ek içe aktarma:"
+
+#: src/Pro/Emails/Logs/Importers/ImporterTabAbstract.php:151
+msgid "Import Email Logs"
+msgstr "E-posta Günlüklerini İçe Aktar"
+
+#: src/Pro/Emails/Logs/Importers/ImporterTabAbstract.php:164
+msgid "We found records that need to be imported. Click the import button to get started."
+msgstr "İçe aktarılması gereken kayıtlar bulduk. Başlamak için içe aktar tuşuna tıklayın."
+
+#: src/Pro/Emails/Logs/Importers/ImporterTabAbstract.php:177
+msgid "Importing:"
+msgstr "İçe Aktarıyor:"
+
+#: src/Pro/Emails/Logs/Importers/ImporterTabAbstract.php:199
+msgid "Import"
+msgstr "İçe aktar"
+
+#. translators: %d -Number of logs to be imported; %s the URL link to the importer page.
+#: src/Pro/Emails/Logs/Importers/WPMailLogging/Importer.php:159
+msgid "Do you want to import email logs from WP Mail Logging? You have %1$d email logs available for import to WP Mail SMTP. <a href=\"%2$s\">Get started</a>."
+msgstr "WP Mail Logging'den e-posta günlüklerini içe aktarmak ister misiniz? WP Mail SMTP'te aktarmak için %1$d e-posta günlükleriniz mevcut. <a href=\"%2$s\">Başlayın</a>."
+
+#: src/Pro/Emails/Logs/Importers/WPMailLogging/Tab.php:93
+msgid "Successful import. All email logs were successfully imported."
+msgstr "Başarılı içe aktarma. Tüm e-posta günlükleri başarıyla içe aktarıldı."
+
+#: src/Pro/Emails/Logs/Importers/WPMailLogging/Tab.php:94
+msgid "Some items failed to import."
+msgstr "Bazı öğeler içe aktarılamadı."
+
+#: src/Pro/Emails/Logs/Importers/WPMailLogging/Tab.php:95
+msgid "Import failed!"
+msgstr "İçe aktarma başarısız oldu!"
+
+#: src/Pro/Emails/Logs/Importers/WPMailLogging/Tab.php:109
+#: src/Pro/Emails/Logs/Importers/WPMailLogging/Tab.php:145
+msgid "WP Mail Logging Importer"
+msgstr "WP Posta Günlü Kaydı İçe Aktarıcı"
+
+#. translators: Date time of the last import operation.
+#: src/Pro/Emails/Logs/Importers/WPMailLogging/Tab.php:173
+msgid "You recently imported email logs on %s. Performing this action again will import all email logs from the WP Mail Logging plugin and might result in duplicate logs."
+msgstr "Yakın zamanda %süzerinden e-posta günlüklerini içe aktardınız. Bu işlemi tekrar gerçekleştirdiğinizde tüm e-posta günlükleri WP Mail Logging eklentisinden içe aktarılır ve yinelenen günlüklerin ortaya çıkmasına neden olabilir."
+
+#. translators: %d - Number of logs to be imported.
+#: src/Pro/Emails/Logs/Importers/WPMailLogging/Tab.php:205
+msgid "We found %d WP Mail Logging email logs available for import to WP Mail SMTP. Do you want to import them?"
+msgstr "WP Mail SMTP için içe aktarılabilecek %d WP Mail Günlükleme e-posta günlükleri bulduk. Onları içe aktarmak ister misiniz?"
+
+#: src/Pro/Emails/Logs/Logs.php:220
+msgid "Number of log entries per page:"
+msgstr "Sayfa başına günlük girdi sayısı:"
+
+#: src/Pro/Emails/Logs/Logs.php:478
+msgid "Are you sure that you want to delete this email log? This action cannot be undone."
+msgstr "Bu e-posta günlüğünü silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+
+#: src/Pro/Emails/Logs/Logs.php:480
+#: src/Pro/Providers/Providers.php:239
+msgid "Icon"
+msgstr "Simge"
+
+#: src/Pro/Emails/Logs/Logs.php:481
+msgid "Are you sure you want to permanently delete all email logs?"
+msgstr "Tüm e-posta günlüklerini kalıcı olarak silmek istediğinizden emin misiniz?"
+
+#: src/Pro/Emails/Logs/Logs.php:482
+msgid "Are you sure you want to re-check the statuses of all pending email logs?"
+msgstr "Bekleyen tüm e-posta günlüklerinin durumlarını yeniden kontrol etmek istediğinizden emin misiniz?"
+
+#: src/Pro/Emails/Logs/Logs.php:486
+#: src/Pro/Providers/Providers.php:240
+msgid "An error occurred!"
+msgstr "Bir hata oluştu!"
+
+#: src/Pro/Emails/Logs/Logs.php:506
+msgid "Queuing emails..."
+msgstr "E-postalar sıraya alınıyor..."
+
+#: src/Pro/Emails/Logs/Logs.php:513
+msgid "Sending email..."
+msgstr "E-posta gönderiliyor..."
+
+#: src/Pro/Emails/Logs/Logs.php:514
+#: src/Pro/Emails/Logs/Resend.php:58
+msgid "Invalid recipients email addresses."
+msgstr "Geçersiz alıcı e-posta adresleri."
+
+#: src/Pro/Emails/Logs/Logs.php:840
+msgid "Email Log entry was successfully deleted."
+msgstr "E-posta Günlüğü girdisi başarıyla silindi."
+
+#: src/Pro/Emails/Logs/Logs.php:847
+msgid "Email Log entries were successfully deleted."
+msgstr "E-posta Günlüğü girdileri başarıyla silindi."
+
+#: src/Pro/Emails/Logs/Logs.php:854
+msgid "There was an error while processing your request, and no email log entries were deleted. Please try again."
+msgstr "İsteğiniz işlenirken bir hata oluştu ve hiçbir e-posta günlüğü girdisi silinmedi. Lütfen tekrar deneyin."
+
+#: src/Pro/Emails/Logs/Logs.php:1089
+msgid "All email log entries were deleted successfully."
+msgstr "Tüm e-posta günlüğü girdileri başarıyla silindi."
+
+#. translators: %s - WPDB error message.
+#: src/Pro/Emails/Logs/Logs.php:1094
+msgid "There was an issue while trying to delete all email log entries. Error message: %s"
+msgstr "Tüm e-posta günlüğü girişleri silinmeye çalışılırken bir sorun oluştu. Hata mesajı: %s"
+
+#: src/Pro/Emails/Logs/Providers/Common.php:187
+#: src/Pro/Emails/Logs/Providers/SMTP.php:161
+msgid "Unknown error."
+msgstr "Bilinmeyen hata."
+
+#: src/Pro/Emails/Logs/RecheckDeliveryStatus.php:108
+#: src/Pro/Emails/Logs/RecheckDeliveryStatus.php:182
+msgid "Re-checking email status was added to queue."
+msgstr "E-posta durumunun yeniden kontrol edilmesi sıraya eklendi."
+
+#: src/Pro/Emails/Logs/RecheckDeliveryStatus.php:133
+msgid "Email delivery status was updated."
+msgstr "E-posta teslim durumu güncellendi."
+
+#: src/Pro/Emails/Logs/RecheckDeliveryStatus.php:135
+msgid "Unable to verify the email status at this time. Please try again later."
+msgstr "E-posta durumu şu anda doğrulanamıyor. Lütfen daha sonra tekrar deneyin."
+
+#: src/Pro/Emails/Logs/RecheckDeliveryStatus.php:153
+msgid "Invalid request!"
+msgstr "Geçersiz istek!"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:186
+#: src/Pro/Emails/Logs/Reports/Admin.php:284
+msgid "Search Results"
+msgstr "Arama Sonuçları"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:191
+msgid "Opened emails"
+msgstr "Açılan e-postalar"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:192
+msgid "Clicked links"
+msgstr "Tıklanan bağlantılar"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:226
+msgid "Number of items per page:"
+msgstr "Sayfa başına öğe sayısı :"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:293
+msgid "total"
+msgstr "toplam"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:297
+msgid "sent"
+msgstr "gönderilen"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:301
+msgid "confirmed"
+msgstr "onaylanan"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:304
+msgid "unconfirmed"
+msgstr "onaylanmamış"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:308
+msgid "failed"
+msgstr "başarısız Oldu"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:312
+msgid "open count"
+msgstr "açma sayısı"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:317
+msgid "click count"
+msgstr "tıklama sayısı"
+
+#. translators: %1$d - items count; %2$s - search term.
+#: src/Pro/Emails/Logs/Reports/Admin.php:336
+msgid "Found <strong>%1$d item</strong> where the subject contains <i>%2$s</i>"
+msgid_plural "Found <strong>%1$d items</strong> where the subject contains <i>%2$s</i>"
+msgstr[0] "Konunun <i>%2$s</i> içerdiği <strong>%1$d öğe</strong> bulundu"
+msgstr[1] "Konunun <i>%2$s</i> içerdiği <strong>%1$d öğe</strong> bulundu"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:366
+msgid "Email Log Required"
+msgstr "E-posta Günlüğü Gerekli"
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:369
+msgid "Email Reports provide valuable insights by aggregating data from the Email Log, allowing you to measure the success of your emails."
+msgstr "E-posta Raporları, E-posta Günlüğündeki verileri toplayarak değerli fikirler sağlar ve e-postalarınızın başarısını ölçmenize olanak tanır."
+
+#: src/Pro/Emails/Logs/Reports/Admin.php:408
+msgid "Email Reports are Not Installed Correctly"
+msgstr "E-posta Raporları Doğru Yüklenmemiş"
+
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:60
+msgid "Hi there,"
+msgstr "Merhaba,"
+
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:63
+msgid "Let’s see how your emails performed in the past week."
+msgstr "Geçen hafta e-postalarınızın nasıl performans gösterdiğini görelim."
+
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:71
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:168
+msgid "Total Emails"
+msgstr "Toplam E-posta"
+
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:97
+#: src/Pro/Emails/Logs/Reports/Table.php:66
+msgid "Confirmed"
+msgstr "Onaylanan"
+
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:109
+#: src/Pro/Emails/Logs/Reports/Table.php:67
+msgid "Unconfirmed"
+msgstr "Onaylanmamış"
+
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:140
+msgid "Last Week’s Top Emails"
+msgstr "Geçen Haftanın En Üst Sıradaki E-postaları"
+
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:145
+msgid "View All Emails"
+msgstr "Tüm E-postaları Görüntüle"
+
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:206
+msgid "Opened Emails"
+msgstr "Açılan E-postalar"
+
+#: src/Pro/Emails/Logs/Reports/Emails/Summary.php:219
+msgid "Clicked Links"
+msgstr "Tıklanan Bağlantılar"
+
+#: src/Pro/Emails/Logs/Reports/Table.php:61
+msgid "Total"
+msgstr "Toplam"
+
+#: src/Pro/Emails/Logs/Reports/Table.php:73
+msgid "Open Count"
+msgstr "Açma Sayısı"
+
+#: src/Pro/Emails/Logs/Reports/Table.php:77
+msgid "Click Count"
+msgstr "Say'a Tıkla"
+
+#: src/Pro/Emails/Logs/Reports/Table.php:80
+msgid "Graph"
+msgstr "Grafik"
+
+#: src/Pro/Emails/Logs/Reports/Table.php:307
+msgid "No email reports are available."
+msgstr "Hiçbir e-posta raporu yok."
+
+#: src/Pro/Emails/Logs/Reports/Table.php:374
+msgid "Last 7 days"
+msgstr "Son 7 gün"
+
+#: src/Pro/Emails/Logs/Reports/Table.php:375
+msgid "Last 14 days"
+msgstr "Son 14 gün"
+
+#: src/Pro/Emails/Logs/Reports/Table.php:376
+msgid "Last 30 days"
+msgstr "Son 30 gün"
+
+#: src/Pro/Emails/Logs/Resend.php:50
+msgid "Email ID must be specified."
+msgstr "E-posta Kimliği belirtilmelidir."
+
+#: src/Pro/Emails/Logs/Resend.php:56
+msgid "Email recipients must be specified."
+msgstr "E-posta alıcıları belirtilmelidir."
+
+#: src/Pro/Emails/Logs/Resend.php:67
+msgid "Invalid email ID."
+msgstr "Geçersiz e-posta kimliği."
+
+#: src/Pro/Emails/Logs/Resend.php:73
+msgid "Email was successfully sent!"
+msgstr "E-posta başarıyla gönderildi!"
+
+#. translators: %s - Error message.
+#: src/Pro/Emails/Logs/Resend.php:78
+msgid "Email sending error. <br>%s"
+msgstr "E-posta gönderme hatası. <br>%s"
+
+#: src/Pro/Emails/Logs/Resend.php:107
+msgid "Email ID's must be specified."
+msgstr "E-posta kimlikleri belirtilmelidir."
+
+#: src/Pro/Emails/Logs/Resend.php:114
+msgid "Emails were added to the send queue. If these selected emails have their email content, they will be resent shortly."
+msgstr "E-postalar gönderme sırasına eklendi. Seçilen bu e-postaların kendi e-posta içerikleri varsa, kısa süre sonra yeniden gönderilirler."
+
+#: src/Pro/Emails/Logs/Resend.php:163
+msgid "Are you sure you want to resend selected emails?"
+msgstr "Seçilen e-postaları yeniden göndermek istediğinizden emin misiniz?"
+
+#: src/Pro/Emails/Logs/Resend.php:165
+msgid "Are you sure you want to resend this email?"
+msgstr "Bu e-postayı yeniden göndermek istediğinizden emin misiniz?"
+
+#: src/Pro/Emails/Logs/Resend.php:172
+msgid "Email recipients (separate with a comma)"
+msgstr "E-posta alıcıları (virgülle ayırın)"
+
+#. translators: %1$s - mailer name; %2$s - action; %3$s - error message.
+#: src/Pro/Emails/Logs/Webhooks/AbstractProvider.php:276
+msgid "Webhooks subscription. Mailer: %1$s. Action: %2$s. Error: %3$s."
+msgstr "Web kancaları aboneliği. Posta Gönderici: %1$s. Eylem: %2$s. Hata: %3$s."
+
+#: src/Pro/Emails/Logs/Webhooks/Providers/Mailgun/Processor.php:49
+msgid "Invalid webhook signature."
+msgstr "Geçersiz web kancası imzası."
+
+#: src/Pro/Emails/Logs/Webhooks/Providers/Mailjet/Subscriber.php:251
+msgid "Mailjet webhook registration limit reached."
+msgstr "Mailjet webhook kayıt sınırına ulaşıldı."
+
+#: src/Pro/Emails/Logs/Webhooks/Webhooks.php:374
+msgid "The email log is disabled. Please first enable the email log."
+msgstr "E-posta günlüğü devre dışı bırakıldı. Lütfen önce e-posta günlüğünü etkinleştirin."
+
+#: src/Pro/Emails/Logs/Webhooks/Webhooks.php:383
+msgid "Mailer setup is not completed. Please complete your mailer configuration first."
+msgstr "Posta göndericisi kurulumu tamamlanmadı. Lütfen önce posta göndericisi yapılandırmasını tamamlayın."
+
+#: src/Pro/Emails/Logs/Webhooks/Webhooks.php:399
+msgid "Subscription created successfully."
+msgstr "Abonelik başarıyla oluşturuldu."
+
+#: src/Pro/Emails/Logs/Webhooks/Webhooks.php:426
+msgid "The subscription was not created yet."
+msgstr "Abonelik henüz oluşturulmadı."
+
+#: src/Pro/Emails/Logs/Webhooks/Webhooks.php:437
+msgid "Subscription removed successfully."
+msgstr "Abonelik başarıyla kaldırıldı."
+
+#. translators: %1$s - error message; %2$s - error code.
+#: src/Pro/Emails/Logs/Webhooks/Webhooks.php:507
+msgid "Seems that the REST API on your website is disabled. For correct work of email deliverability status verification via webhooks, REST API must be enabled. Please enable your REST API or whitelist \"/wp-mail-smtp/v1\" endpoint. The REST API request failed due to an error: %1$s (%2$s)."
+msgstr "Görünüşe göre web sitenizdeki REST API devre dışı bırakıldı. Web kancaları aracılığıyla e-posta teslim edilebilirlik durumu doğrulamasının doğru çalışması için REST API etkinleştirilmelidir. Lütfen REST API'nizi veya beyaz liste \"/wp-mail-smtp/v1\" uç noktanızı etkinleştirin. REST API isteği bir hata nedeniyle başarısız oldu: %1$s (%2$s)."
+
+#: src/Pro/License/License.php:162
+#: src/Pro/Providers/Providers.php:276
+msgid "Something went wrong. Please try again later."
+msgstr "Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin."
+
+#: src/Pro/License/License.php:244
+msgid "Renew License"
+msgstr "Lisansı Yenile"
+
+#: src/Pro/License/License.php:250
+msgid "Verify Key"
+msgstr "Anahtarı Doğrula"
+
+#: src/Pro/License/License.php:254
+msgid "Remove Key"
+msgstr "Anahtarı Kaldır"
+
+#. translators: %1$s - WP Mail SMTP account dashboard url; %2$s - pricing page url.
+#: src/Pro/License/License.php:267
+msgid "Your license key can be found in your <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">WP Mail SMTP Account Dashboard</a>. Don't have a license?  <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up today!</a>"
+msgstr "Lisans anahtarınız, <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">WP Mail SMTP Hesap Panosu</a>içerisinde bulunabilir. Lisansınız yok mu?  <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">Bugün hesap oluşturun!</a>"
+
+#. translators: $s - license type.
+#: src/Pro/License/License.php:282
+msgid "Your license key level is %s."
+msgstr "Lisans anahtarı seviyeniz %s."
+
+#: src/Pro/License/License.php:287
+#: src/Pro/License/License.php:304
+#: src/Pro/License/License.php:360
+msgid "If your license has been upgraded or is incorrect, then please <a href=\"#\" id=\"wp-mail-smtp-setting-license-key-refresh\">force a refresh</a>."
+msgstr "Lisansınız yükseltildiyse veya hatalıysa, lütfen <a href=\"#\" id=\"wp-mail-smtp-setting-license-key-refresh\">yenilemeye zorlayın</a>."
+
+#: src/Pro/License/License.php:297
+msgid "<b>Your license has expired.</b> An active license is needed to access some of the Pro features, plugin updates (including security improvements), and our world class support!"
+msgstr "<b>Lisansınızın süresi doldu.</b> Bazı Pro özelliklerine, eklenti güncellemelerine (güvenlik iyileştirmeleri dahil) ve birinci sınıf desteğimize erişmek için aktif bir lisans gerekir!"
+
+#: src/Pro/License/License.php:314
+msgid "<b>Your license key has been disabled.</b> Please use a different key to continue receiving automatic updates."
+msgstr "<b>Lisans anahtarınız devre dışı bırakıldı.</b> Otomatik güncellemeleri almaya devam edebilmek için lütfen farklı bir anahtar kullanın."
+
+#: src/Pro/License/License.php:321
+msgid "<b>Your license key is invalid.</b> The key no longer exists or the user associated with the key has been deleted. Please use a different key to continue receiving automatic updates."
+msgstr "<b>Lisans anahtarınız geçersiz.</b> Anahtar artık mevcut değil veya anahtarla ilişkili kullanıcı silinmiş. Otomatik güncellemeleri almaya devam edebilmek için lütfen farklı bir anahtar kullanın."
+
+#. translators: %1$s - WPMailSMTP.com account area URL; %2$s - WPMailSMTP.com pricing page URL.
+#: src/Pro/License/License.php:329
+msgid "<b>Sorry, but this license has no site activations left.</b> You can update the list of your sites or upgrade the license in the <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Account area</a>. Or you can <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">purchase a new license key</a>."
+msgstr "<b>Üzgünüz, ancak bu lisansın site aktivasyonu kalmadı.</b> Sitelerinizin listesini güncelleyebilir veya lisansı <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Hesap alanından</a> yükseltebilirsiniz. Diğer bir seçenek olarak, <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">yeni bir lisans anahtarı satın alabilirsiniz</a>."
+
+#: src/Pro/License/License.php:460
+msgid "There was an error connecting to the remote key API. Please try again later."
+msgstr "Uzak anahtar API'sına bağlanma sırasında bir hata oluştu. Lütfen tekrar deneyin."
+
+#: src/Pro/License/License.php:481
+msgid "Congratulations! This site is now receiving automatic updates."
+msgstr "Tebrikler! Bu site artık otomatik güncellemeler alıyor."
+
+#: src/Pro/License/License.php:580
+#: src/Pro/License/License.php:731
+#: src/Pro/License/License.php:1013
+msgid "There was an error connecting to the remote server. Please try again later."
+msgstr "Uzak sunucuya bağlanırken bir hata oluştu. Lütfen daha sonra tekrar deneyiniz."
+
+#: src/Pro/License/License.php:608
+#: src/Pro/License/License.php:855
+msgid "Your license key for WP Mail SMTP Pro is invalid. The key no longer exists or the user associated with the key has been deleted. Please use a different key to continue receiving automatic updates."
+msgstr "WP Mail SMTP Pro için lisans anahtarınız geçersiz. Anahtar artık mevcut değil veya anahtarla ilişkili kullanıcı silinmiş. Otomatik güncellemeleri almaya devam edebilmek için lütfen farklı bir anahtar kullanın."
+
+#: src/Pro/License/License.php:621
+msgid "Your license key for WP Mail SMTP Pro has expired. Please renew your license key on WPMailSMTP.com to continue receiving automatic updates."
+msgstr "WP Mail SMTP Pro için lisans anahtarınızın süresi doldu. Otomatik güncellemeleri almaya devam edebilmek için lütfen WPMailSMTP.com üzerinden lisans anahtarınızı yenileyin."
+
+#: src/Pro/License/License.php:634
+#: src/Pro/License/License.php:846
+msgid "Your license key for WP Mail SMTP Pro has been disabled. Please use a different key to continue receiving automatic updates."
+msgstr "WP Mail SMTP Pro için lisans anahtarınız devre dışı bırakıldı. Otomatik güncellemeleri almaya devam etmek için lütfen farklı bir anahtar kullanın."
+
+#. translators: %1$s - WPMailSMTP.com account area URL; %2$s - WPMailSMTP.com pricing page URL.
+#: src/Pro/License/License.php:650
+msgid "Sorry, but this license has no site activations left. You can update the list of your sites or upgrade the license in the <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Account area</a>. Or you can <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">purchase a new license key</a>."
+msgstr "Üzgünüz, ancak bu lisansın site aktivasyonu kalmadı. Sitelerinizin listesini güncelleyebilir veya lisansı <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Hesap alanından</a> yükseltebilirsiniz. Diğer bir seçenek olarak, <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">yeni bir lisans anahtarı satın alabilirsiniz</a>."
+
+#: src/Pro/License/License.php:693
+msgid "Your key has been refreshed successfully."
+msgstr "Anahtarınız başarılı bir şekilde yenilenmiştir."
+
+#: src/Pro/License/License.php:753
+msgid "You have deactivated the key from this site successfully."
+msgstr "Bu siteden anahtarı başarılı bir şekilde devre dışı bıraktınız."
+
+#. translators: %s - plugin settings page URL.
+#: src/Pro/License/License.php:802
+#: src/Pro/License/License.php:997
+msgid "Please <a href=\"%s\">enter and activate</a> your license key for WP Mail SMTP Pro to enable automatic updates."
+msgstr "Otomatik güncellemeleri etkinleştirmek için lütfen WP Mail SMTP Pro lisans anahtarınızı <a href=\"%s\">girin ve etkinleştirin</a>."
+
+#. translators: %s - WPMailSMTP.com login page URL.
+#: src/Pro/License/License.php:825
+#: src/Pro/License/License.php:1021
+msgid "Your license key for WP Mail SMTP Pro has expired. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Please click here to renew your license key and continue receiving automatic updates.</a>"
+msgstr "WP Mail SMTP Pro için lisans anahtarınızın süresi doldu. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Lisans anahtarınızı yenilemek ve otomatik güncellemeleri almaya devam edebilmek için lütfen buraya tıklayın.</a>"
+
+#. translators: %1$s - WPMailSMTP.com account area URL; %2$s - WPMailSMTP.com pricing page URL.
+#: src/Pro/License/License.php:868
+msgid "<b>Your WP Mail SMTP Pro license has no site activations left.</b> You can update the list of your sites or upgrade the license in the <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Account area</a>. Or you can <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">purchase a new license key</a>."
+msgstr "<b>WP Mail SMTP Pro lisansınızda site aktivasyonu kalmadı.</b> Sitelerinizin listesini güncelleyebilir veya lisansı <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Hesap alanından</a>yükseltebilirsiniz. Diğer bir seçenek olarak, <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">yeni bir lisans anahtar satın alabilirsiniz</a>."
+
+#. translators: %s - plugin settings page URL.
+#: src/Pro/License/License.php:1039
+msgid "Your license key for WP Mail SMTP Pro has been disabled. Please <a href=\"%s\">enter and activate</a> a different key for WP Mail SMTP Pro to continue receiving automatic updates."
+msgstr "WP Mail SMTP Pro için lisans anahtarınız devre dışı bırakıldı. Otomatik güncellemeleri almaya devam edebilmek için lütfen farklı bir WP Mail SMTP Pro anahtarı <a href=\"%s\">girin ve etkinleştirin</a>."
+
+#. translators: %s - plugin settings page URL.
+#: src/Pro/License/License.php:1055
+msgid "Your license key for WP Mail SMTP Pro is invalid. Please <a href=\"%s\">enter and activate</a> a different key for WP Mail SMTP Pro to continue receiving automatic updates."
+msgstr "WP Mail SMTP Pro için lisans anahtarınız geçersiz. Otomatik güncellemeleri almaya devam edebilmek için lütfen farklı bir WP Mail SMTP Pro anahtarı <a href=\"%s\">girin ve etkinleştirin</a>."
+
+#. translators: %1$s - WPMailSMTP.com account area URL; %2$s - WPMailSMTP.com pricing page URL.
+#: src/Pro/License/License.php:1071
+msgid "Your WP Mail SMTP Pro license has no site activations left. You can update the list of your sites or upgrade the license in the <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Account area</a>. Or you can <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">purchase a new license key</a>."
+msgstr "WP Mail SMTP Pro lisansınızda site aktivasyonu kalmadı. Sitelerinizin listesini güncelleyebilir veya lisansı <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Hesap alanından</a> yükseltebilirsiniz. Diğer bir seçenek olarak, <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">yeni bir lisans anahtarı satın alabilirsiniz</a>."
+
+#: src/Pro/License/License.php:1103
+msgid "Your WP Mail SMTP Pro license is active and valid."
+msgstr "WP Mail SMTP Pro lisansınız aktif ve geçerli."
+
+#: src/Pro/MailCatcherTrait.php:86
+msgid "Primary connection"
+msgstr "Birincil bağlantı"
+
+#: src/Pro/MailCatcherTrait.php:89
+msgid "Backup connection"
+msgstr "Yedek bağlantı"
+
+#: src/Pro/Multisite.php:241
+msgid "The results could not be loaded."
+msgstr "Sonuçlar yüklenemedi."
+
+#: src/Pro/Multisite.php:242
+msgid "Loading more results..."
+msgstr "Daha fazla sonuç yükleniyor..."
+
+#: src/Pro/Multisite.php:243
+msgid "No results found."
+msgstr "Sonuç bulunamadı."
+
+#: src/Pro/Multisite.php:244
+msgid "Searching..."
+msgstr "Aranıyor..."
+
+#: src/Pro/Multisite.php:279
+msgid "Multisite"
+msgstr "Çoklu site"
+
+#: src/Pro/Multisite.php:286
+msgid "Settings control"
+msgstr "Ayarların kontrolü"
+
+#: src/Pro/Multisite.php:294
+msgid "Make the plugin settings global network-wide"
+msgstr "Eklenti ayarlarını ağ genelinde küresel hale getirin"
+
+#: src/Pro/Multisite.php:298
+msgid "If disabled, each subsite of this multisite will have its own WP Mail SMTP settings page that has to be configured separately."
+msgstr "Devre dışı bırakılırsa, bu çoklu sitenin her alt sitesi, ayrı olarak yapılandırılması gereken kendi WP Mail SMTP ayarları sayfasına sahip olacaktır."
+
+#: src/Pro/Multisite.php:300
+msgid "If enabled, these global settings will manage email sending for all subsites of this multisite."
+msgstr "Etkinleştirilirse bu global ayarlar, bu çoklu sitenin tüm alt siteleri için e-posta gönderimini yönetecektir."
+
+#. Translators: %s - Network admin email address.
+#: src/Pro/Multisite.php:418
+msgid "Sorry, you are not allowed to access the WP Mail SMTP settings for individual network subsite. The network-wide setting is enabled, so the plugin settings are only accessible in the network admin dashboard. Please contact your network admin: %s."
+msgstr "Üzgünüz, bireysel ağ alt sitesi için WP Mail SMTP ayarlarına erişmenize izin verilmiyor. Ağ genelinde ayar etkinleştirildi, böylece eklenti ayarlarına yalnızca ağ yöneticici panosundan erişilebilir. Lütfen ağ yöneticinizle iletişime geçin: %s."
+
+#: src/Pro/Multisite.php:685
+msgid "Clear these errors"
+msgstr "Bu hataları temizle"
+
+#: src/Pro/Multisite.php:759
+msgid "Site"
+msgstr "Site"
+
+#: src/Pro/Pro.php:646
+msgid "Go to WP Mail SMTP Settings page"
+msgstr "WP Mail SMTP Ayarlar sayfasına gidin"
+
+#: src/Pro/Pro.php:647
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: src/Pro/Pro.php:655
+msgid "Go to WPMailSMTP.com support page"
+msgstr "WPMailSMTP.com destek sayfasına gidin"
+
+#: src/Pro/Pro.php:656
+msgid "Support"
+msgstr "Destek"
+
+#: src/Pro/Pro.php:663
+msgid "Go to WPMailSMTP.com documentation page"
+msgstr "WPMailSMTP.com dokümantasyon sayfasına gidin"
+
+#: src/Pro/Pro.php:664
+msgid "Docs"
+msgstr "Belgeler"
+
+#: src/Pro/Pro.php:758
+msgid "There was an error while processing the authentication request. The connection was not found. Please try again."
+msgstr "Kimlik doğrulama isteği işlenirken bir hata oluştu. Bağlantı bulunamadı. Lütfen tekrar deneyin."
+
+#: src/Pro/Pro.php:766
+msgid "There was an error while processing the authentication request. The authorization code is missing. Please try again."
+msgstr "Kimlik doğrulama isteği işlenirken bir hata oluştu. Yetkilendirme kodu eksik. Lütfen tekrar deneyin."
+
+#: src/Pro/Pro.php:774
+msgid "There was an error while processing the authentication request. The nonce is invalid. Please try again."
+msgstr "Kimlik doğrulama isteği işlenirken bir hata oluştu. Nonce geçersiz. Lütfen tekrar deneyin."
+
+#: src/Pro/Pro.php:781
+msgid "There was an error while processing the authentication request. Please recheck your Client ID and Client Secret and try again."
+msgstr "Kimlik doğrulama isteği işlenirken bir hata oluştu. Lütfen Müşteri Kimliğinizi ve Müşteri Sırrınızı tekrar kontrol edin ve tekrar deneyin."
+
+#: src/Pro/Pro.php:788
+msgid "There was an error while processing the authentication request. Please make sure that you have Client ID and Client Secret both valid and saved."
+msgstr "Kimlik doğrulama isteği işlenirken bir hata oluştu. Lütfen hem İstemci Kimliğinizin hem de İstemci Sırrınızın geçerli ve kayıtlı olduğundan emin olun."
+
+#. translators: %s - error code, returned by Zoho API.
+#: src/Pro/Pro.php:796
+msgid "There was an error while processing the authentication request: %s. Please try again."
+msgstr "Kimlik doğrulama isteği işlenirken bir hata oluştu: %s. Lütfen tekrar deneyin."
+
+#: src/Pro/Pro.php:803
+msgid "There was an error while processing the authentication request. Please recheck your Region, Client ID and Client Secret and try again."
+msgstr "Kimlik doğrulama isteği işlenirken bir hata oluştu. Lütfen Bölgenizi, Müşteri Kimliğinizi ve Müşteri Sırrınızı tekrar kontrol edin ve tekrar deneyin."
+
+#: src/Pro/Pro.php:811
+msgid "There was an error while processing the authentication request."
+msgstr "Kimlik doğrulama isteği işleme alınırken bir hata oluştu."
+
+#: src/Pro/Pro.php:820
+msgid "You have successfully linked the current site with your Microsoft API project. Now you can start sending emails through Outlook."
+msgstr "Mevcut siteyi Microsoft API projenize başarıyla bağladınız. Artık Outlook üzerinden e-posta göndermeye başlayabilirsiniz."
+
+#: src/Pro/Pro.php:827
+msgid "You have successfully linked the current site with your Zoho Mail API project. Now you can start sending emails through Zoho Mail."
+msgstr "Mevcut siteyi Zoho Mail API projenize başarıyla bağladınız. Artık Zoho Mail aracılığıyla e-posta göndermeye başlayabilirsiniz."
+
+#: src/Pro/Pro.php:834
+msgid "You have successfully connected your site with your Gmail account. This site will now send emails via your Gmail account."
+msgstr "Sitenizi Gmail hesabınıza başarıyla bağladınız. Bu site artık Gmail hesabınız üzerinden e-posta gönderecektir."
+
+#: src/Pro/Pro.php:841
+msgid "You have successfully connected your site with your Outlook account. This site will now send emails via your Outlook account."
+msgstr "Sitenizi Outlook hesabınıza başarıyla bağladınız. Bu site artık Outlook hesabınız üzerinden e-postalar gönderecek."
+
+#: src/Pro/Pro.php:871
+msgid "Auto-updates are not available."
+msgstr "Otomatik güncellemeler mevcut değil."
+
+#: src/Pro/Pro.php:1134
+#: src/Pro/Providers/Providers.php:319
+#: src/Pro/Providers/Providers.php:363
+msgid "Please provide a valid email address."
+msgstr "Lütfen geçerli bir e-posta adresi girin."
+
+#: src/Pro/Pro.php:1136
+msgid "Please provide a domain."
+msgstr "Lütfen bir alan adı sağlayın."
+
+#: src/Pro/Pro.php:1216
+msgid "You don't have the permission to perform this action."
+msgstr "Bu eylemi gerçekleştirmek için izniniz yok."
+
+#: src/Pro/Pro.php:1222
+msgid "Please enter a valid license key!"
+msgstr "Lütfen geçerli bir lisans anahtarı girin!"
+
+#: src/Pro/Pro.php:1232
+msgid "License functionality missing!"
+msgstr "Lisans işlevselliği eksik!"
+
+#: src/Pro/Pro.php:1295
+msgid "Inactive &mdash; You are already using WP Mail SMTP Pro"
+msgstr "Etkin değil &mdash; Zaten WP Mail SMTP Pro kullanıyorsunuz"
+
+#: src/Pro/ProductApi/CredentialsGenerator.php:74
+msgid "Max number of attempts to generate credentials has been reached."
+msgstr "Kimlik bilgilerini oluşturmak için maksimum deneme sayısına ulaşıldı."
+
+#: src/Pro/ProductApi/CredentialsGenerator.php:78
+msgid "Credentials generation already started by another request."
+msgstr "Kimlik bilgileri oluşturma işlemi başka bir istek tarafından zaten başlatıldı."
+
+#: src/Pro/ProductApi/CredentialsGenerator.php:111
+msgid "Invalid response for credentials generation."
+msgstr "Kimlik bilgileri oluşturma için geçersiz yanıt."
+
+#: src/Pro/Providers/AmazonSES/Auth.php:134
+msgid "US East (N. Virginia)"
+msgstr "ABD Doğu (K. Virginia)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:135
+msgid "US East (Ohio)"
+msgstr "ABD Doğu (Ohio)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:136
+msgid "US West (N. California)"
+msgstr "ABD Batı (K. Kaliforniya)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:137
+msgid "US West (Oregon)"
+msgstr "ABD Batı (Oregon)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:138
+msgid "EU (Ireland)"
+msgstr "AB (İrlanda)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:139
+msgid "EU (London)"
+msgstr "AB (Londra)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:140
+msgid "EU (Paris)"
+msgstr "AB (Paris)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:141
+msgid "EU (Frankfurt)"
+msgstr "AB (Frankfurt)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:142
+msgid "EU (Stockholm)"
+msgstr "AB (Stockholm)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:143
+msgid "EU (Milan)"
+msgstr "AB (Milano)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:144
+msgid "Asia Pacific (Mumbai)"
+msgstr "Asya Pasifik (Mumbai)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:145
+msgid "Asia Pacific (Tokyo)"
+msgstr "Asya Pasifik (Tokyo)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:146
+msgid "Asia Pacific (Seoul)"
+msgstr "Asya Pasifik (Seul)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:147
+msgid "Asia Pacific (Osaka)"
+msgstr "Asya Pasifik (Osaka)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:148
+msgid "Asia Pacific (Singapore)"
+msgstr "Asya Pasifik (Singapur)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:149
+msgid "Asia Pacific (Sydney)"
+msgstr "Asya Pasifik (Sidney)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:150
+msgid "Africa (Cape Town)"
+msgstr "Afrika (Cape Town)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:151
+msgid "Canada (Central)"
+msgstr "Kanada (Merkez)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:152
+msgid "Middle East (Bahrain)"
+msgstr "Orta Doğu (Bahreyn)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:153
+msgid "South America (São Paulo)"
+msgstr "Güney Amerika (Sao Paulo)"
+
+#: src/Pro/Providers/AmazonSES/Auth.php:154
+msgid "GovCloud (US-West)"
+msgstr "GovCloud (ABD-Batı)"
+
+#. translators: %s - domain name.
+#: src/Pro/Providers/AmazonSES/Auth.php:471
+msgid "It looks like DKIM is not enabled for this domain. Please visit AWS SES console and enable DKIM for %s."
+msgstr "Bu alan adı için DKIM etkinleştirilmemiş gibi görünüyor. Lütfen AWS SES konsolunu ziyaret edin ve %siçin DKIM'i etkinleştirin."
+
+#: src/Pro/Providers/AmazonSES/IdentitiesTable.php:82
+msgid "Sender"
+msgstr "Gönderen"
+
+#: src/Pro/Providers/AmazonSES/IdentitiesTable.php:83
+msgid "Type"
+msgstr "Tür"
+
+#: src/Pro/Providers/AmazonSES/IdentitiesTable.php:85
+msgid "Action"
+msgstr "Eylem"
+
+#: src/Pro/Providers/AmazonSES/IdentitiesTable.php:118
+msgid "Domain"
+msgstr "Alan Adı"
+
+#: src/Pro/Providers/AmazonSES/IdentitiesTable.php:237
+msgid "No registered SES identities found."
+msgstr "Kayıtlı hiçbir SES kimliği bulunamadı."
+
+#: src/Pro/Providers/AmazonSES/Identity.php:202
+msgid "Delete this domain"
+msgstr "Bu alan adını sil"
+
+#: src/Pro/Providers/AmazonSES/Identity.php:203
+msgid "Delete this email"
+msgstr "Bu e-postayı sil"
+
+#: src/Pro/Providers/AmazonSES/Identity.php:209
+#: src/Pro/Providers/AmazonSES/Identity.php:213
+msgid "View DNS"
+msgstr "DNS'yi görüntüle"
+
+#: src/Pro/Providers/AmazonSES/Identity.php:216
+msgid "Resend a verification email to this address"
+msgstr "Bu adrese bir doğrulama e-postasını yeniden gönderin"
+
+#: src/Pro/Providers/AmazonSES/Mailer.php:76
+msgid "An email request was sent to the Amazon SES API."
+msgstr "Amazon SES API'sine bir e-posta isteği gönderildi."
+
+#: src/Pro/Providers/AmazonSES/Mailer.php:99
+msgid "Amazon SES request failed (empty response)."
+msgstr "Amazon SES isteği başarısız oldu (boş yanıt)."
+
+#: src/Pro/Providers/AmazonSES/Mailer.php:103
+msgid "Something went wrong. Please try again."
+msgstr "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+
+#: src/Pro/Providers/AmazonSES/Options.php:38
+msgid "Amazon SES"
+msgstr "Amazon SES"
+
+#: src/Pro/Providers/AmazonSES/Options.php:39
+msgid "Amazon SES is a transactional email provider that allows you to send email via its API. We recommend this mailer for existing users of Amazon Web Services because the setup steps are a little more complicated than other mailers."
+msgstr "Amazon SES, API'si aracılığıyla e-posta göndermenize olanak tanıyan, işlemsel bir e-posta sağlayıcısıdır. Kurulum adımlarının diğer posta göndericilere göre biraz daha karmaşık olmasından dolayı bu posta göndericisini mevcut Amazon Web Services kullanıcıları için öneriyoruz."
+
+#. translators: %s - WPMailSMTP.com URL.
+#: src/Pro/Providers/AmazonSES/Options.php:43
+msgid "To get started, read our <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Amazon SES documentation</a>."
+msgstr "Başlamak için <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Amazon SES belgelerimizi</a> okuyun."
+
+#: src/Pro/Providers/AmazonSES/Options.php:57
+msgid "The Amazon SES mailer will be a good choice for technically advanced users who already have experience working with Amazon's web services.<br><br>If you aren't sure whether this mailer sounds like the right fit for your site, then we recommend considering one of our other mailer options."
+msgstr "Amazon SES posta göndericisi, Amazon'un web hizmetleriyle çalışma deneyimi olan teknik açıdan ileri düzey kullanıcılar için iyi bir seçim olacaktır.<br><br>Bu posta göndericinin sitenize uygun olup olmadığından emin değilseniz, o zaman diğer posta gönderici seçeneklerimizden birini değerlendirmenizi öneririz."
+
+#: src/Pro/Providers/AmazonSES/Options.php:104
+msgid "Access Key ID"
+msgstr "Erişim Anahtarı Kimliği"
+
+#: src/Pro/Providers/AmazonSES/Options.php:121
+msgid "Secret Access Key"
+msgstr "Gizli Erişim Anahtarı"
+
+#: src/Pro/Providers/AmazonSES/Options.php:140
+msgid "Remove Secret Access Key"
+msgstr "Gizli Erişim Anahtarını Kaldır"
+
+#: src/Pro/Providers/AmazonSES/Options.php:153
+msgid "Closest Region"
+msgstr "En Yakın Bölge"
+
+#: src/Pro/Providers/AmazonSES/Options.php:172
+msgid "--- Select region ---"
+msgstr "--- Bölge seçin ---"
+
+#: src/Pro/Providers/AmazonSES/Options.php:179
+msgid "The closest Amazon SES region to your website was preselected."
+msgstr "Web sitesi sitenize en yakın Amazon SES bölgesi önceden seçilmiştir."
+
+#: src/Pro/Providers/AmazonSES/Options.php:181
+msgid "Please select the Amazon SES API region which is the closest to where your website is hosted."
+msgstr "Lütfen web sitenizin barındırıldığı yere en yakın olan Amazon SES API bölgesini seçin."
+
+#: src/Pro/Providers/AmazonSES/Options.php:183
+msgid "This can help to decrease network latency between your site and Amazon SES, which will speed up email sending."
+msgstr "Siteniz ile Amazon SES arasındaki ağ gecikmesini azaltmaya yardımcı olabilir ve böylece e-posta göndermeyi hızlandırır."
+
+#: src/Pro/Providers/AmazonSES/Options.php:186
+msgid "To access this section, please click the Save Settings button."
+msgstr "Bu bölüme erişmek için lütfen Ayarları Kaydet tuşuna tıklayın."
+
+#: src/Pro/Providers/AmazonSES/Options.php:196
+msgid "SES Identities"
+msgstr "SES Kimlikleri"
+
+#: src/Pro/Providers/AmazonSES/Options.php:271
+msgid "Here are the domains and email addresses that have been verified and can be used as the From Email address."
+msgstr "İşte doğrulanmış olan ve Gönderen E-posta adresi olarak kullanılabilecek etki alanları ve e-posta adresleri."
+
+#: src/Pro/Providers/AmazonSES/Options.php:277
+msgid "No registered domains or emails."
+msgstr "Kayıtlı alan adı veya e-posta yok."
+
+#: src/Pro/Providers/AmazonSES/Options.php:278
+msgid "You will not be able to send emails until you verify at least one domain or email address."
+msgstr "En az bir alan adı veya e-posta adresi doğrulamadan e-posta gönderemezsiniz."
+
+#: src/Pro/Providers/AmazonSES/Options.php:284
+msgid "Add new SES identity"
+msgstr "Yeni SES kimliği ekle"
+
+#: src/Pro/Providers/AmazonSES/Options.php:309
+msgid "Enter the domain name to verify it on Amazon SES and generate the required DNS CNAME records."
+msgstr "Amazon SES üzerinde doğrulamak ve gerekli DNS CNAME kayıtlarını oluşturmak için alan adını girin."
+
+#: src/Pro/Providers/AmazonSES/Options.php:312
+msgid "Enter a valid email address. A verification email will be sent to the email address you entered."
+msgstr "Geçerli bir e-posta adresi girin. Girdiğiniz e-posta adresine bir doğrulama e-postası gönderilecektir."
+
+#: src/Pro/Providers/AmazonSES/Options.php:316
+msgid "Verify Domain"
+msgstr "Alan Adını Doğrula"
+
+#: src/Pro/Providers/AmazonSES/Options.php:318
+msgid "Verify Email Address"
+msgstr "E-posta Adresini Doğrula"
+
+#: src/Pro/Providers/AmazonSES/Options.php:321
+msgid "Please enter a domain"
+msgstr "Lütfen bir alan alanı girin"
+
+#: src/Pro/Providers/AmazonSES/Options.php:322
+msgid "Please enter a valid email address"
+msgstr "Lütfen geçerli bir e-posta adresi girin"
+
+#: src/Pro/Providers/AmazonSES/Options.php:325
+msgid "Verify"
+msgstr "Doğrula"
+
+#: src/Pro/Providers/AmazonSES/Options.php:343
+msgid "Verify SES identity"
+msgstr "SES kimliğini doğrula"
+
+#: src/Pro/Providers/AmazonSES/Options.php:355
+msgid "To access this section, please add an Access Key ID and Secret Access Key, select the Closest Region, then click the Save Settings button."
+msgstr "Bu bölüme erişmek için lütfen bir Erişim Anahtarı Kimliği ve Gizli Erişim Anahtarı ekleyin, En Yakın Bölge'yi seçin ve ardından Ayarları Kaydet tuşuna tıklayın."
+
+#: src/Pro/Providers/AmazonSES/Options.php:446
+msgid "Add the following CNAME records to your domain's DNS settings:"
+msgstr "Aşağıdaki CNAME kayıtlarını alanınızın DNS ayarlarına ekleyin:"
+
+#: src/Pro/Providers/AmazonSES/Options.php:452
+msgid "Name"
+msgstr "İsim"
+
+#: src/Pro/Providers/AmazonSES/Options.php:455
+msgid "Value"
+msgstr "Değer"
+
+#. translators: %s - URL to Amazon SES documentation.
+#: src/Pro/Providers/AmazonSES/Options.php:481
+msgid "For information on how to add CNAME DNS records, <br><a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">please refer to the Amazon SES documentation</a>."
+msgstr "CNAME DNS kayıtlarının nasıl ekleneceği hakkında bilgi için <br><a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">lütfen Amazon SES belgelerine bakın</a>."
+
+#: src/Pro/Providers/AmazonSES/Options.php:520
+msgid "Please add this TXT record to your domain's DNS settings:"
+msgstr "Lütfen bu TXT kaydını alanınızın DNS ayarlarına ekleyin:"
+
+#: src/Pro/Providers/AmazonSES/Options.php:522
+msgid "Name:"
+msgstr "İsim:"
+
+#: src/Pro/Providers/AmazonSES/Options.php:527
+msgid "Value:"
+msgstr "Değer:"
+
+#. translators: %s - URL to Amazon SES documentation.
+#: src/Pro/Providers/AmazonSES/Options.php:534
+msgid "For information on how to add TXT DNS records, please <br><a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">refer to the Amazon SES documentation</a>."
+msgstr "TXT DNS kayıtlarının nasıl ekleneceği hakkında bilgi için lütfen <br><a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Amazon SES belgelerine bakın</a>."
+
+#: src/Pro/Providers/Gmail/Auth.php:145
+msgid "Google authorization error. Missing required arguments."
+msgstr "Google yetkilendirme hatası. Gerekli bağımsız değişkenler eksik."
+
+#. Translators: %1$s the error code passed from Google.
+#: src/Pro/Providers/Gmail/Auth.php:184
+msgid "Google authorization error. %1$s"
+msgstr "Google yetkilendirme hatası. %1$s"
+
+#: src/Pro/Providers/Gmail/Mailer.php:81
+msgid "An email request was sent to the Gmail API."
+msgstr "Gmail API'ye bir e-posta isteği gönderildi."
+
+#: src/Pro/Providers/Gmail/Mailer.php:125
+msgid "One-Click Setup for Google Mailer requires authorization. Perform authorization before sending emails."
+msgstr "Google Mailer Tek Tıkla Kurulum için yetkilendirme gerekir. E-posta göndermeden önce yetkilendirmeyi gerçekleştirin."
+
+#: src/Pro/Providers/Gmail/Mailer.php:143
+msgid "One-Click Setup for Google Mailer requires an active license. Verify your license before sending emails."
+msgstr "Google Mailer Tek Tıkla Kurulum için etkin bir lisans gerekir. E-posta göndermeden önce lisansınızı doğrulayın."
+
+#: src/Pro/Providers/Gmail/Mailer.php:164
+msgid "The email message ID is missing."
+msgstr "E-posta mesajı kimliği eksik."
+
+#: src/Pro/Providers/Gmail/Options.php:38
+msgid "Google / Gmail"
+msgstr "Google / Gmail"
+
+#. translators: %s - URL to our Gmail doc.
+#: src/Pro/Providers/Gmail/Options.php:41
+msgid "Our Gmail mailer works with any Gmail or Google Workspace account via the Google API. You can send WordPress emails from your main email address or a Gmail alias, and it's more secure than connecting to Gmail using SMTP credentials. We now have a One-Click Setup, which simply asks you to authorize your Google account to use our app and takes care of everything for you. Alternatively, you can connect manually, which involves several steps that are more technical than other mailer options, so we created a detailed guide to walk you through the process.<br><br>To get started, read our <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Gmail documentation</a>."
+msgstr "Gmail posta göndericimiz, Google API aracılığıyla herhangi bir Gmail veya Google Workspace hesabıyla çalışır. WordPress e-postalarını ana e-posta adresi veya Gmail takma adınızdan gönderebilirsiniz ve bu SMTP kimlik bilgilerini kullanarak Gmail'e bağlanmaktan daha güvenlidir. Artık sizden uygulamamızı kullanması ve sizin için her şeyle ilgilenmesi için Google hesabınıza yetki vermenizini isteyen Tek Tıkla Kurulum'a sahibiz. Bunun yerine manuel olarak da bağlanabilirsiniz; bu yöntem, diğer posta gönderici seçeneklerinden daha teknik olan birkaç adımı içerir. Dolayısıyla, süreç boyunca size yol gösterecek ayrıntılı bir kılavuz hazırladık.<br><br>Başlamak için <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Gmail belgelerimizi</a> okuyun."
+
+#: src/Pro/Providers/Gmail/Options.php:55
+msgid "The Gmail mailer works well for sites that send low numbers of emails. However, Gmail's API has rate limitations and a number of additional restrictions that can lead to challenges during setup.<br><br>If you expect to send a high volume of emails, or if you find that your web host is not compatible with the Gmail API restrictions, then we recommend considering a different mailer option."
+msgstr "Gmail posta göndericisi, az sayıda e-posta gönderen sitelerde iyi çalışır. Ancak Gmail'in API'sinde hız sınırlamaları ve kurulum sırasında zorluklara yol açabilecek bir dizi ek kısıtlama vardır.<br><br>Çok sayıda e-posta göndermeyi düşünüyorsanız veya web hostunuzun Gmail API kısıtlamalarıyla uyumlu olmadığını fark ederseniz, farklı bir posta gönderici seçeneğini değerlendirmenizi öneririz."
+
+#: src/Pro/Providers/Gmail/Options.php:94
+#: src/Pro/Providers/Outlook/OneClick/Options.php:79
+msgid "One-Click Setup"
+msgstr "Tek Tıkla Kurulum"
+
+#: src/Pro/Providers/Gmail/Options.php:108
+msgid "Provides a quick and easy way to connect to Google that doesn't require creating your own app."
+msgstr "Kendi uygulamanızı oluşturmanızı gerektirmeden Google'a bağlanmanın hızlı ve kolay bir yolunu sunar."
+
+#: src/Pro/Providers/Gmail/Options.php:130
+#: src/Pro/Providers/Outlook/OneClick/Options.php:115
+#: src/Pro/Providers/Outlook/Options.php:159
+#: src/Pro/Providers/Zoho/Options.php:198
+msgid "Authorization"
+msgstr "Yetkilendirme"
+
+#. translators: %1$s - WPMailSMTP.com renew URL.
+#: src/Pro/Providers/Gmail/Options.php:156
+#: src/Pro/Providers/Outlook/OneClick/Options.php:141
+msgid "One-Click Setup requires an active license. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Renew your license</a> and reconnect your authorization."
+msgstr "Tek Tıkla Kurulum için etkin bir lisans gerekir. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Lisansınızı yenileyin</a> ve yetkilendirmenizi yeniden bağlayın."
+
+#: src/Pro/Providers/Gmail/Options.php:178
+#: src/Pro/Providers/Outlook/OneClick/Options.php:163
+msgid "One-Click Setup requires an active license. You can renew your license above to proceed with this One-Click Setup."
+msgstr "Tek Tıkla Kurulum, etkin bir lisans gerektirir. Bu Tek Tıkla Kuruluma devam etmek için lisansınızı yukarıda yenileyebilirsiniz."
+
+#: src/Pro/Providers/Gmail/Options.php:184
+#: src/Pro/Providers/Outlook/OneClick/Options.php:169
+msgid "One-Click Setup requires an active license. Verify your license above to proceed with this One-Click Setup."
+msgstr "Tek Tıkla Kurulum için etkin bir lisans gerekir. Bu Tek Tıkla Kuruluma devam etmek için lisansınızı yukarıda doğrulayın."
+
+#: src/Pro/Providers/Gmail/Options.php:188
+#: src/Pro/Providers/Outlook/OneClick/Options.php:173
+msgid "One-Click Setup requires an active license. You can verify your license above to proceed with this One-Click Setup."
+msgstr "Tek Tıkla Kurulum için etkin bir lisans gerekir. Bu Tek Tıkla Kuruluma devam etmek için lisansınızı yukarıda doğrulayabilirsiniz."
+
+#: src/Pro/Providers/Gmail/Options.php:215
+msgid "Sign in with Google"
+msgstr "Google ile giriş yapın"
+
+#: src/Pro/Providers/Gmail/Options.php:221
+#: src/Pro/Providers/Outlook/OneClick/Options.php:206
+msgid "Reconnect"
+msgstr "Yeniden bağlan"
+
+#: src/Pro/Providers/Gmail/Options.php:224
+#: src/Pro/Providers/Gmail/Options.php:246
+#: src/Pro/Providers/Outlook/OneClick/Options.php:209
+#: src/Pro/Providers/Outlook/OneClick/Options.php:231
+#: src/Pro/Providers/Outlook/Options.php:196
+#: src/Pro/Providers/Zoho/Options.php:235
+msgid "Remove OAuth Connection"
+msgstr "oAuth Bağlantısını Kaldır"
+
+#. translators: %1$s - email address, as received from Google API.
+#: src/Pro/Providers/Gmail/Options.php:233
+#: src/Pro/Providers/Gmail/Options.php:255
+msgid "Connected as %1$s"
+msgstr "%1$s olarak bağlandı"
+
+#: src/Pro/Providers/Gmail/Options.php:241
+msgid "Your Google account connection has expired. Please reconnect your account."
+msgstr "Google hesabı bağlantınızın süresi doldu. Lütfen hesabınızı yeniden bağlayın."
+
+#. translators: %s - URL to Google Gmail alias documentation page.
+#: src/Pro/Providers/Gmail/Options.php:266
+msgid "If you want to use a different From Email address you can set up a Google email alias. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Follow these instructions</a> and then select the From Email at the top of this page."
+msgstr "Farklı bir Gönderen E-posta adresi kullanmak istiyorsanız, bir Google e-posta takma adı oluşturabilirsiniz. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Bu talimatlara uyun</a> ve ardından bu sayfanın üst kısmındaki Gönderen E-posta'yı seçin."
+
+#: src/Pro/Providers/Gmail/Options.php:280
+#: src/Pro/Providers/Outlook/OneClick/Options.php:248
+#: src/Pro/Providers/Outlook/Options.php:212
+msgid "You can also send emails with different From Email addresses, by disabling the Force From Email setting and using registered aliases throughout your WordPress site as the From Email addresses."
+msgstr "Gönderen E-posta Zorla ayarını devre dışı bırakarak ve WordPress sitenizin tamamında Gönderen E-posta adresleri olarak kayıtlı takma adlar kullanarak farklı Gönderen E-posta adresleriyle de e-postalar gönderebilirsiniz."
+
+#: src/Pro/Providers/Gmail/Options.php:283
+msgid "Removing the OAuth connection will give you an ability to redo the OAuth connection or link to another Google account."
+msgstr "OAuth bağlantısını kaldırmak, size OAuth bağlantısını yeniden kurma veya başka bir Google hesabına bağlanma becerisi sağlar."
+
+#: src/Pro/Providers/Gmail/Options.php:288
+#: src/Pro/Providers/Outlook/OneClick/Options.php:256
+msgid "You need to save settings before you can proceed."
+msgstr "Devam etmeden önce ayarları kaydetmeniz gerekir."
+
+#: src/Pro/Providers/Gmail/Provider.php:210
+#: src/Pro/Providers/Gmail/Provider.php:240
+#: src/Pro/Providers/Gmail/Provider.php:261
+#: src/Pro/Providers/Outlook/Provider.php:223
+#: src/Pro/Providers/Outlook/Provider.php:253
+#: src/Pro/Providers/Outlook/Provider.php:274
+msgid "Action Required!"
+msgstr "Eylem Gerekiyor!"
+
+#. translators: %1$s - WPMailSMTP.com renew URL.
+#: src/Pro/Providers/Gmail/Provider.php:214
+msgid "One-Click Setup for Google Mailer requires an active license. Emails are currently not being sent. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Renew your license</a> and reconnect your authorization."
+msgstr "Google Mailer Tek Tıkla Kurulum için etkin bir lisans gerektir. E-postalar şu anda gönderilmiyor. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Lisansınızı yenileyin</a> ve yetkilendirmenizi yeniden bağlayın."
+
+#. translators: %1$s - URL to plugin settings page.
+#: src/Pro/Providers/Gmail/Provider.php:244
+msgid "One-Click Setup for Google Mailer requires an active license. Emails are currently not being sent. <a href=\"%1$s\">Verify your license</a> and reconnect your authorization."
+msgstr "Google Mailer Tek Tıkla Kurulum için etkin bir lisans gerekir. E-postalar şu anda gönderilmiyor. <a href=\"%1$s\">Lisansınızı doğrulayın</a> ve yetkilendirmenizi yeniden bağlayın."
+
+#. translators: %1$s - URL to plugin settings page.
+#: src/Pro/Providers/Gmail/Provider.php:265
+msgid "Your Google account connection has expired. Please <a href=\"%1$s\">reconnect</a> your authorization."
+msgstr "Google hesabı bağlantınızın süresi doldu. Lütfen yetkilendirmenizi <a href=\"%1$s\">yeniden bağlayın</a>."
+
+#. translators: %1$s is an argument name.
+#: src/Pro/Providers/Gmail/Provider.php:300
+msgid "The %1$s authenticate parameter is missing"
+msgstr "%1$s kimlik doğrulama parametresi eksik"
+
+#: src/Pro/Providers/Gmail/Provider.php:317
+msgid "Invalid one time token sent"
+msgstr "Geçersiz tek seferlik token gönderildi"
+
+#: src/Pro/Providers/Outlook/AttachmentsUploader.php:94
+msgid "The attachment file size can't be calculated."
+msgstr "Ek dosya boyutu hesaplanamıyor."
+
+#: src/Pro/Providers/Outlook/AttachmentsUploader.php:121
+msgid "Attachment file not found."
+msgstr "Ek dosyası bulunamadı."
+
+#: src/Pro/Providers/Outlook/AttachmentsUploader.php:141
+msgid "Regular attachment upload failed."
+msgstr "Standart ekin karşıya yüklemesi başarısız oldu."
+
+#: src/Pro/Providers/Outlook/AttachmentsUploader.php:204
+msgid "Large attachment upload failed."
+msgstr "Büyük ekin karşıya yüklemesi başarısız oldu."
+
+#: src/Pro/Providers/Outlook/AttachmentsUploader.php:242
+msgid "Upload session creation failed."
+msgstr "Karşıya yükleme oturumu oluşturulamadı."
+
+#: src/Pro/Providers/Outlook/AttachmentsUploader.php:248
+msgid "Upload session creation failed. The response is invalid, missing the \"uploadUrl\" field."
+msgstr "Karşıya yükleme oturumu oluşturulamadı. Yanıt geçersiz, \"uploadUrl\" alanı eksik."
+
+#: src/Pro/Providers/Outlook/AttachmentsUploader.php:289
+msgid "Upload URL has expired."
+msgstr "Karşıya yükleme URL'sinin süresi doldu."
+
+#: src/Pro/Providers/Outlook/AttachmentsUploader.php:300
+msgid "Last part of the file upload failed."
+msgstr "Dosya karşıya yükleme işleminin son kısmı başarısız oldu."
+
+#: src/Pro/Providers/Outlook/AttachmentsUploader.php:305
+msgid "File chunk upload failed."
+msgstr "Dosya parçasının karşıya yüklemesi başarısız oldu."
+
+#: src/Pro/Providers/Outlook/AttachmentsUploader.php:315
+msgid "File chunk upload failed. The response is invalid, missing the \"nextExpectedRanges\" field."
+msgstr "Dosya parçasının karşıya yüklemesi başarısız oldu. Yanıt geçersiz, \"nextExpectedRanges\" alanı eksik."
+
+#: src/Pro/Providers/Outlook/Mailer.php:634
+msgid "An email request was sent to the Microsoft Graph API."
+msgstr "Microsoft Graph API'ye bir e-posta isteği gönderildi."
+
+#: src/Pro/Providers/Outlook/Mailer.php:709
+msgid "Outlook attachment upload failed."
+msgstr "Outlook ekinin karşıya yüklemesi başarısız oldu."
+
+#: src/Pro/Providers/Outlook/Mailer.php:747
+msgid "Note: this issue could also be caused by hitting the total message size limit. If you are using big attachments, please remove the existing Outlook mailer OAuth connection in WP Mail SMTP settings and connect it again. We recently added support for bigger attachments, but the oAuth re-connection is required."
+msgstr "Not: Bu sorun, toplam mesaj boyutu sınırına ulaşılmasından da kaynaklanabilir. Büyük ekler kullanıyorsanız, lütfen WP Mail SMTP ayarlarından mevcut Outlook posta göndericisi OAuth bağlantısını kaldırın ve yeniden bağlayın. Yakın zamanda daha büyük ekler için destek ekledik, ancak oAuth'un yeniden bağlanması gerekli."
+
+#. translators: %1$s - exception message.
+#: src/Pro/Providers/Outlook/OneClick/Auth.php:146
+msgid "Failed to refresh access token. %1$s"
+msgstr "Erişim tokeninin yenilenmesi başarısız oldu. %1$s"
+
+#: src/Pro/Providers/Outlook/OneClick/Auth.php:253
+msgid "Microsoft authorization error. Authorization code is empty."
+msgstr "Microsoft yetkilendirme hatası. Yetkilendirme kodu boş."
+
+#. translators: %1$s - exception message.
+#: src/Pro/Providers/Outlook/OneClick/Auth.php:285
+msgid "Failed to obtain access token. %1$s"
+msgstr "Erişim tokeni alınamadı. %1$s"
+
+#: src/Pro/Providers/Outlook/OneClick/Options.php:93
+msgid "Provides a quick and easy way to connect to Microsoft that doesn't require creating your own app."
+msgstr "Kendi uygulamanızı oluşturmanızı gerektirmeden Microsoft'a bağlanmanın hızlı ve kolay bir yolunu sağlar."
+
+#: src/Pro/Providers/Outlook/OneClick/Options.php:200
+msgid "Sign in with Microsoft"
+msgstr "Microsoft ile oturum açın"
+
+#. translators: %s - Display name and email, as received from Microsoft API.
+#. translators: %s - Display name and email, as received from oAuth provider.
+#: src/Pro/Providers/Outlook/OneClick/Options.php:218
+#: src/Pro/Providers/Outlook/OneClick/Options.php:240
+#: src/Pro/Providers/Outlook/Options.php:205
+#: src/Pro/Providers/Zoho/Options.php:244
+msgid "Connected as %s"
+msgstr "%s olarak bağlandı"
+
+#: src/Pro/Providers/Outlook/OneClick/Options.php:226
+msgid "Your Microsoft account connection has expired. Please reconnect your account."
+msgstr "Microsoft hesabınızın bağlantısı sona erdi. Lütfen hesabınızı yeniden bağlayın."
+
+#: src/Pro/Providers/Outlook/OneClick/Options.php:251
+#: src/Pro/Providers/Outlook/Options.php:215
+msgid "Removing the OAuth connection will give you an ability to redo the OAuth connection or link to another Microsoft account."
+msgstr "OAuth bağlantısının kaldırılması size OAuth bağlantısını yeniden kurma veya başka bir Microsoft hesabına bağlanma olanağı sağlar."
+
+#: src/Pro/Providers/Outlook/Options.php:36
+msgid "365 / Outlook"
+msgstr "365 / Outlook"
+
+#. translators: %s - URL to Outlook doc.
+#: src/Pro/Providers/Outlook/Options.php:39
+msgid "The Microsoft 365 / Outlook mailer is a great choice if you already use Microsoft's email services (Outlook, Office 365, Microsoft 365, or Hotmail). Due to the fairly complex manual Microsoft App configuration, we recommend the One-Click Setup, which will get you up and running in just a few seconds.<br><br>To get started, read our <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft 365 / Outlook documentation</a>."
+msgstr "Microsoft'un e-posta hizmetlerini (Outlook, Office 365, Microsoft 365 veya Hotmail) zaten kullanıyorsanız, Microsoft 365 / Outlook e-posta gönderici harika bir seçimdir. Oldukça karmaşık manuel Microsoft Uygulama yapılandırmasından dolayı sizi sadece birkaç saniye içinde çalışır hale getirecek Tek Tıkla Kurulumu öneririz.<br><br>Başlamak için <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft 365 / Outlook belgelerimizi</a> okuyun."
+
+#: src/Pro/Providers/Outlook/Options.php:90
+msgid "Application ID"
+msgstr "Uygulama Kimlik Numarası"
+
+#: src/Pro/Providers/Outlook/Options.php:105
+msgid "Application Password"
+msgstr "Uygulama Şifresi"
+
+#: src/Pro/Providers/Outlook/Options.php:123
+msgid "Remove Application Password"
+msgstr "Uygulama Şifresini Kaldır"
+
+#: src/Pro/Providers/Outlook/Options.php:135
+#: src/Pro/Providers/Zoho/Options.php:174
+msgid "Redirect URI"
+msgstr "Yeniden Yönlendirme URI'sı"
+
+#: src/Pro/Providers/Outlook/Options.php:143
+#: src/Pro/Providers/Zoho/Options.php:182
+msgid "Copy URL to clipboard"
+msgstr "URL'yi panoya kopyala"
+
+#: src/Pro/Providers/Outlook/Options.php:148
+msgid "This is the page on your site that you will be redirected to after you have authenticated with Microsoft."
+msgstr "Microsoft ile kimlik doğrulaması yaptıktan sonra siteniz üzerinde bu sayfaya yeniden yönlendirileceksiniz."
+
+#: src/Pro/Providers/Outlook/Options.php:150
+msgid "You need to copy this URL into \"Authentication > Redirect URIs\" web field for your application on Microsoft Azure site for your project there."
+msgstr "Buradaki projeniz ile ilgili olarak Microsoft Azure sitesi üzerindeki uygulamanız için \"Kimlik Doğrulama > Yeniden Yönlendirme URI'leri\" web alanına bu URL'yi kopyalamanız gerekmektedir."
+
+#: src/Pro/Providers/Outlook/Options.php:187
+msgid "Allow plugin to send emails using your Microsoft account"
+msgstr "Eklentinin Microsoft hesabınızı kullanarak e-posta göndermesine izin verin"
+
+#: src/Pro/Providers/Outlook/Options.php:190
+#: src/Pro/Providers/Zoho/Options.php:229
+msgid "Click the button above to confirm authorization."
+msgstr "Yetkilendirmeyi onaylamak için yukarıdaki tuşa tıkla."
+
+#: src/Pro/Providers/Outlook/Options.php:223
+msgid "To access this section, please add an Application ID and Application Password, then click the Save Settings button."
+msgstr "Bu bölüme erişmek için lütfen bir Uygulama Kimliği ve Uygulama Şifresi ekleyin ve ardından Ayarları Kaydet tuşuna tıklayın."
+
+#. translators: %1$s - WPMailSMTP.com renew URL.
+#: src/Pro/Providers/Outlook/Provider.php:227
+msgid "One-Click Setup for Microsoft Outlook requires an active license. Emails are currently not being sent. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Renew your license</a> and reconnect your authorization."
+msgstr "Microsoft Outlook Tek Tıkla Kurulum için etkin bir lisans gerekir. E-postalar şu anda gönderilmiyor. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Lisansınızı yenileyin</a> ve yetkilendirmenizi yeniden bağlayın."
+
+#. translators: %1$s - URL to plugin settings page.
+#: src/Pro/Providers/Outlook/Provider.php:257
+msgid "One-Click Setup for Microsoft Outlook requires an active license. Emails are currently not being sent. <a href=\"%1$s\">Verify your license</a> and reconnect your authorization."
+msgstr "Microsoft Outlook Tek Tıkla Kurulum için etkin bir lisans gerekir. E-postalar şu anda gönderilmiyor. <a href=\"%1$s\">Lisansınızı doğrulayın</a> ve yetkilendirmenizi yeniden bağlayın."
+
+#. translators: %1$s - URL to plugin settings page.
+#: src/Pro/Providers/Outlook/Provider.php:278
+msgid "Your Microsoft account connection has expired. Please <a href=\"%1$s\">reconnect</a> your authorization."
+msgstr "Microsoft hesabınızın bağlantısı sona erdi. Lütfen yetkilendirmenizi <a href=\"%1$s\">yeniden bağlayın</a>."
+
+#: src/Pro/Providers/Providers.php:230
+msgid "Sending..."
+msgstr "Gönderiliyor..."
+
+#: src/Pro/Providers/Providers.php:231
+msgid "Loading..."
+msgstr "Yükleniyor..."
+
+#: src/Pro/Providers/Providers.php:234
+msgid "Are you sure you want to delete this email address? You will need to add and verify it again if you want to use it in the future."
+msgstr "Bu e-posta adresini silmek istediğinizden emin misiniz? Gelecekte kullanmak isterseniz tekrar eklemeniz ve doğrulamanız gerekecek."
+
+#: src/Pro/Providers/Providers.php:235
+msgid "Something went wrong, please reload the page and try again."
+msgstr "Bir şeyler ters gitti, lütfen sayfayı yeniden yükleyin ve tekrar deneyin."
+
+#: src/Pro/Providers/Providers.php:236
+msgid "Please make sure that the email address is valid."
+msgstr "Lütfen e-posta adresinin geçerli olduğundan emin olun."
+
+#: src/Pro/Providers/Providers.php:241
+msgid "Resend failed!"
+msgstr "Yeniden gönderme başarısız oldu!"
+
+#: src/Pro/Providers/Providers.php:245
+msgid "Done"
+msgstr "Tamam"
+
+#: src/Pro/Providers/Providers.php:246
+msgid "Are you sure you want to delete this domain? You will need to add and verify it again if you want to use it in the future."
+msgstr "Bu alan adını silmek istediğinizden emin misiniz? Gelecekte kullanmak isterseniz tekrar eklemeniz ve doğrulamanız gerekecek."
+
+#: src/Pro/Providers/Providers.php:247
+msgid "Add verified domain"
+msgstr "Doğrulanmış alan adı ekle"
+
+#: src/Pro/Providers/Providers.php:248
+msgid "The AWS SES identities could not load because of an error."
+msgstr "AWS SES kimlikleri bir hata nedeniyle yüklenemedi."
+
+#: src/Pro/Providers/Providers.php:255
+msgid "Yes, Delete"
+msgstr "Evet, Sil"
+
+#: src/Pro/Providers/Providers.php:257
+msgid "You're about to delete a connection. Are you sure you want to proceed?"
+msgstr "Bir bağlantıyı silmek üzeresiniz. Devam etmek istediğinizden emin misiniz?"
+
+#: src/Pro/Providers/Providers.php:258
+msgid "You're about to delete your Backup Connection. Are you sure you want to proceed?"
+msgstr "Yedek Bağlantınızı silmek üzeresiniz. Devam etmek istediğinizden emin misiniz?"
+
+#: src/Pro/Providers/Providers.php:259
+msgid "You're about to delete a connection that is used in Smart Routing. Are you sure you want to proceed? You will need to reconfigure your Smart Routing rules."
+msgstr "Akıllı Yönlendirmede kullanılan bir bağlantıyı silmek üzeresiniz. Devam etmek istediğinizden emin misiniz? Akıllı Yönlendirme kurallarınızı yeniden yapılandırmanız gerekecek."
+
+#: src/Pro/Providers/Providers.php:260
+msgid "Are you sure you want to use this additional connection as your new primary connection? Your existing primary connection will be moved to the additional connections list."
+msgstr "Bu ek bağlantıyı yeni birincil bağlantınız olarak kullanmak istediğinizden emin misiniz? Mevcut birincil bağlantınız ek bağlantılar listesine taşınacaktır."
+
+#: src/Pro/Providers/Providers.php:321
+#: src/Pro/Providers/Providers.php:365
+#: src/Pro/Providers/Providers.php:403
+msgid "Please provide a domain name."
+msgstr "Lütfen bir alanı adı girin."
+
+#. translators: %s - email address.
+#: src/Pro/Providers/Providers.php:333
+msgid "Please check inbox of <code>%s</code> address for a verification email."
+msgstr "Doğrulama e-postası için lütfen <code>%s</code> adresinin gelen kutusunu kontrol edin."
+
+#. translators: %s - actual email address.
+#: src/Pro/Providers/Providers.php:376
+msgid "Email address <code>%s</code> was successfully deleted."
+msgstr "<code>%s</code> e-posta adresi başarıyla silindi."
+
+#. translators: %s - actual domain name.
+#: src/Pro/Providers/Providers.php:378
+msgid "Domain <code>%s</code> was successfully deleted."
+msgstr "<code>%s</code> alan adı başarıyla silindi."
+
+#: src/Pro/Providers/Providers.php:458
+msgid "The additional connection has been successfully switched to the primary connection."
+msgstr "Ek bağlantı başarıyla birincil bağlantıya geçirildi."
+
+#: src/Pro/Providers/Zoho/Mailer.php:367
+msgid "An email request was sent to the Zoho Mail API."
+msgstr "Zoho Mail API'ye bir e-posta isteği gönderildi."
+
+#: src/Pro/Providers/Zoho/Options.php:57
+msgid "Zoho Mail"
+msgstr "Zoho Mail"
+
+#. translators: %1$s - URL to Zoho Mail page, %2$s - URL to Zoho Mail documentation page on WP Mail SMTP.
+#: src/Pro/Providers/Zoho/Options.php:60
+msgid "<a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Zoho Mail</a> allows you to create secure email accounts for your business without providing your credit card details. It's easy to connect to Zoho Mail using its API. This allows you to send WordPress emails from your Zoho Mail address.<br><br>To get started, read our <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">Zoho Mail documentation</a>."
+msgstr "<a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Zoho Mail</a>, kredi kartı bilgilerinizi vermeden işletmeniz için güvenli e-posta hesapları oluşturmanıza olanak tanır. API'sini kullanarak Zoho Mail'e bağlanmak kolaydır. Zoho Mail adresinizden WordPress e-postaları göndermenizi mümkün kılar.<br><br>Başlamak için <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">Zoho Mail belgelerimizi okuyun</a>."
+
+#: src/Pro/Providers/Zoho/Options.php:108
+msgid "Region"
+msgstr "Bölge"
+
+#: src/Pro/Providers/Zoho/Options.php:120
+msgid "The data center location used by your Zoho account"
+msgstr "Zoho hesabınız tarafından kullanılan veri merkezi konumu"
+
+#: src/Pro/Providers/Zoho/Options.php:129
+msgid "Client ID"
+msgstr "İstemci Kimliği"
+
+#: src/Pro/Providers/Zoho/Options.php:144
+msgid "Client Secret"
+msgstr "İstemci Gizli Anahtarı"
+
+#: src/Pro/Providers/Zoho/Options.php:162
+msgid "Remove Client Secret"
+msgstr "İstemci Gizliliğini Kaldır"
+
+#: src/Pro/Providers/Zoho/Options.php:187
+msgid "This is the page on your site that you will be redirected to after you have authenticated with Zoho Mail."
+msgstr "Zoho Mail ile kimlik doğrulaması yaptıktan sonra siteniz üzerinde bu sayfaya yeniden yönlendirileceksiniz."
+
+#: src/Pro/Providers/Zoho/Options.php:189
+msgid "You need to copy this URL into \"Client Details > Authorized Redirect URIs\" web field for your application on Zoho Developer Console."
+msgstr "Zoho Geliştirici Console'daki uygulamanız için \"Müşteri Bilgileri > Yetkilendirilmiş Yeniden Yönlendirme URI'leri\" web alanına bu URL'yi kopyalamanız gerekmektedir."
+
+#: src/Pro/Providers/Zoho/Options.php:226
+msgid "Allow plugin to send emails using your Zoho Mail account"
+msgstr "Eklentinin Zoho Mail hesabınızı kullanarak e-posta göndermesine izin ver"
+
+#: src/Pro/Providers/Zoho/Options.php:251
+msgid "Removing the OAuth connection will give you the ability to redo the OAuth connection or link to another Zoho Mail account."
+msgstr "OAuth bağlantısının kaldırılması size OAuth bağlantısını yeniden kurma veya başka bir Zoho Mail hesabına bağlanma olanağı sağlar."
+
+#: src/Pro/Providers/Zoho/Options.php:259
+msgid "To access this section, please add a Domain, Client ID and Client Secret, then click the Save Settings button."
+msgstr "Bu bölüme erişmek için lütfen bir Alan Adı, Müşteri Kimliği ve Müşteri Gizli Anahtarı ekleyin ve ardından Ayarları Kaydet tuşuna tıklayın."
+
+#: src/Pro/SiteHealth.php:55
+msgid "Is WP Mail SMTP Pro license active and valid?"
+msgstr "WP Mail SMTP Pro lisansı aktif ve geçerli mi?"
+
+#: src/Pro/SiteHealth.php:91
+msgid "Pro install date"
+msgstr "Lite yükleme tarihi"
+
+#: src/Pro/SiteHealth.php:98
+msgid "Email log entries"
+msgstr "E-posta günlüğü girdileri"
+
+#: src/Pro/SiteHealth.php:125
+msgid "WP Mail SMTP Pro license is active and valid"
+msgstr "WP Mail SMTP Pro lisansı aktif ve geçerli"
+
+#: src/Pro/SiteHealth.php:135
+msgid "View license setting"
+msgstr "Lisans ayarı görüntüle"
+
+#: src/Pro/SiteHealth.php:145
+msgid "WP Mail SMTP Pro license is invalid"
+msgstr "WP Mail SMTP Pro lisansı geçersiz"
+
+#: src/Pro/SiteHealth.php:167
+msgid "Your site can communicate with wpmailsmtp.com"
+msgstr "Siteniz wpmailsmtp.com ile iletişim kurabilir"
+
+#: src/Pro/SiteHealth.php:175
+msgid "Communicating with the wpmailsmtp.com servers is used to check for new plugin versions, and to verify license keys."
+msgstr "wpmailsmtp.com sunucularıyla iletişim, yeni eklenti sürümlerini kontrol etmek ve lisans anahtarlarını doğrulamak için kullanılır."
+
+#: src/Pro/SiteHealth.php:195
+msgid "Could not reach wpmailsmtp.com"
+msgstr "wpmailsmtp.com'a ulaşılamadı"
+
+#. translators: %s - The error returned by the lookup.
+#: src/Pro/SiteHealth.php:203
+msgid "Your site is unable to reach wpmailsmtp.com, and returned the error: %s"
+msgstr "Siteniz wpmailsmtp.com'a ulaşamıyor ve şu hatayı verdi: %s"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:70
+msgid "Message"
+msgstr "Mesaj"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:74
+msgid "From Email"
+msgstr "Gönderen E-Posta Adresi"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:94
+msgid "Reply-To"
+msgstr "Şuna Yanıtla"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:98
+msgid "Header Name"
+msgstr "Başlık Adı"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:102
+msgid "Header Value"
+msgstr "Başlık Değeri"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:106
+msgid "Initiator"
+msgstr "Başlatıcı"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:191
+msgid "Smart Routing"
+msgstr "Akıllı Yönlendirme"
+
+#. translators: %s - Smart Routing documentation page URL.
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:202
+msgid "Send emails from different additional connections based on your configured conditions. Emails that do not match any of the conditions below will be sent via your Primary Connection. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn More</a>."
+msgstr "Yapılandırdığınız koşullara bağlı olarak farklı ek bağlantılardan e-postalar gönderin. Aşağıdaki koşullardan herhangi birine uymayan e-postalar, Birincil Bağlantınız aracılığıyla gönderilecektir. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Daha Fazla Bilgi Edinin</a>."
+
+#. translators: %s - Additional connections settings page url.
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:231
+msgid "You need to configure at least one <a href=\"%s\">additional connection</a> before you can use Smart Routing."
+msgstr "Akıllı Yönlendirmeyi kullanabilmeniz için en az bir <a href=\"%s\">ek bağlantı</a> yapılandırmanız gerekir."
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:254
+msgid "Enable Smart Routing"
+msgstr "Akıllı Yönlendirmeyi Etkinleştir"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:272
+msgid "Light bulb icon"
+msgstr "Ampul simgesi"
+
+#. translators: %s - Primary Connection settings page URL.
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:278
+msgid "Friendly reminder, your <u><b><a href=\"%s\">Primary Connection</a></b></u> will be used for all emails that do not match the conditions above."
+msgstr "Dostça bir hatırlatma, <u><b><a href=\"%s\">Birincil Bağlantınız</a></b></u>, yukarıdaki koşullara uymayan tüm e-postalar için kullanılacaktır."
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:313
+msgid "Send with"
+msgstr "ile gönder"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:315
+msgid "if the following conditions are met..."
+msgstr "aşağıdaki koşullar sağlanırsa..."
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:320
+msgid "Arrow Up"
+msgstr "Yukarı Ok"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:323
+msgid "Arrow Down"
+msgstr "Aşağı Ok"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:338
+msgid "These conditions will not be met because the connection no longer exists. Please select another connection."
+msgstr "Bağlantı artık mevcut olmadığından bu koşullar karşılanmayacaktır. Lütfen başka bir bağlantı seçin."
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:379
+msgid "-- Select a Connection --"
+msgstr "-- Bir Bağlantı Seçin --"
+
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:434
+msgid "WP Core"
+msgstr "WP Core"
+
+#. translators: %s - theme name.
+#: src/Pro/SmartRouting/Admin/SettingsTab.php:441
+msgid "Theme (%s)"
+msgstr "Tema (%s)"
+
+#. translators: %d - The number of tries.
+#: src/Pro/Tasks/Logs/VerifySentStatusTaskAbstract.php:109
+msgid "The email sent status verification timed-out after %d tries. No information on email status (delivered/failed) was provided by the mailer API."
+msgstr "%d denemeden sonra e-posta gönderildi durumu doğrulaması zaman aşımına uğradı. Posta Gönderici API tarafından e-posta durumu (teslim edildi/başarısız oldu) hakkında hiçbir bilgi verilmedi."

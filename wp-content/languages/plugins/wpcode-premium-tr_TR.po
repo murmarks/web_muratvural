@@ -1,0 +1,1951 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-16T09:00:11+00:00\n"
+"PO-Revision-Date: 2025-01-16T09:00:11+00:00\n"
+"Language: \n"
+
+#. Plugin Name of the plugin
+msgid "WPCode Pro"
+msgstr "WPCod Pro"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.wpcode.com/"
+msgstr "https://www.wpcode.com/"
+
+#. Description of the plugin
+msgid "Easily add code snippets in WordPress. Insert scripts to the header and footer, add PHP code snippets with conditional logic, insert ads pixel, custom content, and more."
+msgstr "WordPress'e kolayca kod parçacıkları ekleyin. Üstbilgi ve altbilgiye komut dosyaları ekleyin, koşullu mantıkla PHP kod parçacıkları ekleyin, reklam pikseli, özel içerik ve daha fazlasını ekleyin."
+
+#. Author of the plugin
+msgid "WPCode"
+msgstr "WPCode"
+
+#: includes/pro/admin/admin-ajax-handlers.php:154
+#: includes/pro/class-wpcode-snippet-block.php:189
+msgid "Inactive"
+msgstr "Devre dışı"
+
+#. Translators: The name of the global auto-insert location for a snippet loaded in the edit-post metabox.
+#: includes/pro/admin/admin-ajax-handlers.php:168
+msgid "Global location: %s"
+msgstr "Global konum: %s"
+
+#: includes/pro/admin/admin-ajax-handlers.php:174
+msgid "Auto-insert disabled"
+msgstr "Otomatik ekleme devre dışı bırakıldı"
+
+#: includes/pro/admin/admin-ajax-handlers.php:181
+msgid "Page location:"
+msgstr "Sayfa konumu:"
+
+#: includes/pro/admin/admin-ajax-handlers.php:196
+msgid "Insert number:"
+msgstr "Sayıyı girin:"
+
+#: includes/pro/admin/admin-ajax-handlers.php:262
+msgid "From:"
+msgstr "Şu tarihten:"
+
+#: includes/pro/admin/admin-ajax-handlers.php:263
+msgid "To:"
+msgstr "Şu tarihe:"
+
+#: includes/pro/admin/admin-ajax-handlers.php:293
+msgid "Please enter a license key."
+msgstr "Lütfen bir lisans anahtarı girin."
+
+#: includes/pro/admin/admin-ajax-handlers.php:330
+msgid "You do not have permission to install addons."
+msgstr "Modülleri yüklemek için izniniz yok."
+
+#: includes/pro/admin/admin-ajax-handlers.php:340
+msgid "No addon slug provided."
+msgstr "Hiçbir modül kısa adı sağlanmadı."
+
+#: includes/pro/admin/admin-ajax-handlers.php:352
+msgid "Could not install addon."
+msgstr "Modül yüklenemedi."
+
+#: includes/pro/admin/admin-ajax-handlers.php:359
+msgid "Addon installed successfully."
+msgstr "Modül başarıyla yüklendi."
+
+#. Translators: 1 - Opening HTML strong tag, 2 - The short plugin name ("WPCode"), 3 - "Pro", 4 - Closing HTML strong tag.
+#: includes/pro/admin/class-wpcode-addons.php:110
+msgid "The following addons cannot be used, because they require %1$s%2$s %3$s%4$s to work:"
+msgstr "Aşağıdaki modüller kullanılamaz, çünkü %1$s%2$s %3$s%4$s'nun çalışmasını gerektiriyorlar:"
+
+#: includes/pro/admin/class-wpcode-admin-page-loader-pro.php:91
+#: includes/pro/admin/class-wpcode-admin-page-loader-pro.php:122
+msgid "Go to WPCode.com Support page"
+msgstr "WPCode.com Destek sayfasına gidin"
+
+#: includes/pro/admin/class-wpcode-admin-page-loader-pro.php:92
+#: includes/pro/admin/class-wpcode-admin-page-loader-pro.php:123
+msgid "Support"
+msgstr "Destek"
+
+#: includes/pro/admin/class-wpcode-admin-page-loader-pro.php:111
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: includes/pro/admin/class-wpcode-ai-handler.php:64
+msgid "Please describe what snippet you want to generate."
+msgstr "Lütfen hangi kod parçacığını oluşturmak istediğinizi açıklayın."
+
+#: includes/pro/admin/class-wpcode-ai-handler.php:115
+msgid "Please describe the changes that you want to make to your snippet."
+msgstr "Lütfen kod parçacığında yapmak istediğiniz değişiklikleri açıklayın."
+
+#: includes/pro/admin/class-wpcode-ai-handler.php:122
+msgid "No code to modify has been detected, please use the Generate button from the Add new snippet menu if you wish to generate a new snippet."
+msgstr "Değiştirilecek bir kod tespit edilemedi, yeni bir kod parçacığı oluşturmak istiyorsanız lütfen Yeni kod parçacığı ekle menüsündeki Oluştur butonunu kullanın."
+
+#: includes/pro/admin/class-wpcode-ai-handler.php:186
+#: includes/pro/admin/class-wpcode-ai-handler.php:195
+msgid "Could not connect to the AI server."
+msgstr "AI sunucusuna bağlanılamadı."
+
+#: includes/pro/admin/class-wpcode-license.php:175
+#: includes/pro/admin/class-wpcode-license.php:323
+#: includes/pro/admin/class-wpcode-license.php:405
+msgid "There was an error connecting to the remote key API. Please try again later."
+msgstr "Uzak anahtar API'sına bağlanma sırasında bir hata oluştu. Lütfen tekrar deneyin."
+
+#. translators: %s is the error message.
+#: includes/pro/admin/class-wpcode-license.php:191
+msgid "Error message: %s"
+msgstr "Hata mesajı: %s"
+
+#: includes/pro/admin/class-wpcode-license.php:203
+msgid "Congratulations! Your WPCode license is activated & this site is now receiving automatic updates."
+msgstr "Tebrikler! WPCode lisansınız etkinleştirildi ve bu site artık otomatik güncellemeler alıyor."
+
+#: includes/pro/admin/class-wpcode-license.php:428
+msgid "You have deactivated the key from this site successfully."
+msgstr "Bu siteden anahtarı başarılı bir şekilde devre dışı bıraktınız."
+
+#. translators: %s - plugin settings page URL.
+#: includes/pro/admin/class-wpcode-license.php:482
+msgid "Please <a href=\"%s\">enter and activate</a> your license key for WPCode to enable automatic updates."
+msgstr "Otomatik güncellemeleri etkinleştirmek için lütfen <a href=\"%s\">WPCode lisans anahtarınızı girin ve etkinleştirin</a>."
+
+#: includes/pro/admin/class-wpcode-license.php:530
+msgid "Heads up! Your WPCode license has expired."
+msgstr "Dikkat! WPCode lisansınızın süresi doldu."
+
+#: includes/pro/admin/class-wpcode-license.php:531
+msgid "An active license is needed to create new snippets and edit existing snippets. It also provides access to new features & plugin updates (including security improvements), and our world class support!"
+msgstr "Yeni kod parçacıkları oluşturmak ve mevcut kod parçacıklarını düzenlemek için aktif bir lisans gereklidir. Bu ayrıca yeni özelliklere ve eklenti güncellemelerine (güvenlik iyileştirmeleri dahil) ve birinci sınıf desteğimize erişim sağlar!"
+
+#: includes/pro/admin/class-wpcode-license.php:533
+msgid "Renew Now"
+msgstr "Şimdi Yenile"
+
+#: includes/pro/admin/class-wpcode-license.php:535
+msgid "Learn More"
+msgstr "Daha Fazla Öğren"
+
+#: includes/pro/admin/class-wpcode-license.php:550
+msgid "Your license key for WPCode has been disabled. Please use a different key to continue receiving automatic updates."
+msgstr "WPCode için lisans anahtarınız devre dışı bırakıldı. Otomatik güncellemeleri almaya devam etmek için lütfen farklı bir anahtar kullanın."
+
+#: includes/pro/admin/class-wpcode-license.php:558
+msgid "Your license key for WPCode is invalid. The key no longer exists or the user associated with the key has been deleted. Please use a different key to continue receiving automatic updates."
+msgstr "WPCode için lisans anahtarınız geçersiz. Anahtar artık mevcut değil veya anahtarla ilişkili kullanıcı silindi. Otomatik güncellemeleri almaya devam etmek için lütfen farklı bir anahtar kullanın."
+
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:56
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1126
+#: includes/pro/class-wpcode-admin-bar-info-pro.php:222
+#: includes/pro/class-wpcode-testing-mode.php:753
+#: includes/pro/class-wpcode-testing-mode.php:775
+msgid "Header"
+msgstr "Başlık"
+
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:70
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1127
+#: includes/pro/class-wpcode-admin-bar-info-pro.php:224
+#: includes/pro/class-wpcode-testing-mode.php:754
+#: includes/pro/class-wpcode-testing-mode.php:776
+msgid "Footer"
+msgstr "Alt Bilgi"
+
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:85
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1128
+#: includes/pro/class-wpcode-admin-bar-info-pro.php:223
+#: includes/pro/class-wpcode-testing-mode.php:755
+#: includes/pro/class-wpcode-testing-mode.php:777
+msgid "Body"
+msgstr "Gövde"
+
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:108
+msgid "Choose the snippets you want to run on this page. Please note: only active snippets will be executed."
+msgstr "Bu sayfada çalıştırmak istediğiniz snippet'leri seçin. Lütfen unutmayın: yalnızca etkin snippet'ler yürütülecektir."
+
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:113
+msgid "Select snippets"
+msgstr "Snippet'leri seç"
+
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:119
+msgid "Search snippets"
+msgstr "Snippet'lerde ara"
+
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:125
+msgid "Load more snippets"
+msgstr "Daha fazla snippet yükle"
+
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:132
+msgid "+ Choose Snippet"
+msgstr "+ Snippet'i Seç"
+
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:135
+msgid "Add New Snippet"
+msgstr "Yeni Kod Parçacığı Ekle"
+
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:154
+msgid "No snippets selected."
+msgstr "Seçili kod parçacığı yok."
+
+#. Translators: placeholder for the name of the section (header or footer).
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:177
+msgid "Add scripts below to the %s section of this page."
+msgstr "Aşağıdaki betikleri bu sayfanın %s bölümüne ekleyin."
+
+#. Translators: placeholder for the name of the section (header or footer).
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:188
+msgid "Disable global %s scripts on this page"
+msgstr "Bu sayfada genel %s betikleri devre dışı bırak"
+
+#. Translators: placeholder for the name of the section (header or footer).
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:199
+msgid "%s - any device type"
+msgstr "%s - herhangi bir cihaz türü"
+
+#. Translators: placeholder for the name of the section (header or footer).
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:212
+msgid "%s - desktop only"
+msgstr "%s - yalnızca masaüstü"
+
+#. Translators: placeholder for the name of the section (header or footer).
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:225
+msgid "%s - mobile only"
+msgstr "%s - yalnızca mobil"
+
+#: includes/pro/admin/class-wpcode-metabox-snippets-pro.php:358
+msgid "As you make changes to your page scripts and save, you will get a list of previous versions with all the changes made in each revision. You can compare revisions to the current version or see changes as they have been saved by going through each revision. Any of the revisions can then be restored as needed without interfering with your post/page."
+msgstr "Sayfa betiklerinizde değişiklik yapıp kaydettiğinizde, her revizyonda yapılan tüm değişikliklerle birlikte önceki sürümlerin bir listesini alırsınız. Revizyonları mevcut sürümle karşılaştırabilir veya her bir revizyonu gözden geçirerek kaydedilen değişiklikleri görebilirsiniz. Revizyonlardan herhangi biri daha sonra gönderinize/sayfanıza müdahale etmeden gerektiğinde geri yüklenebilir."
+
+#. Translators: %s is the filename.
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:120
+msgid "WPCode has detected a physical %s file in the root folder of your WordPress installation. In order to manage the file with WPCode you will need to remove the physical file from your server."
+msgstr "WPCode, WordPress kurulumunuzun kök klasöründe fiziksel bir %s dosyası tespit etti. Dosyayı WPCode ile yönetmek için fiziksel dosyayı sunucunuzdan kaldırmanız gerekecektir."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:136
+msgid "File saved successfully."
+msgstr "Dosya başarıyla kaydedildi."
+
+#. translators: %d is the line number.
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:205
+msgid "Line %d: The first field should be a domain name and it's currently empty."
+msgstr "Satır %d: İlk alan bir alan adı olmalıdır ve şu anda boştur."
+
+#. translators: %1$d is the line number, %2$s is the domain name.
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:213
+msgid "Line %1$d: The first field should be a valid domain name and it's currently \"%2$s\"."
+msgstr "Satır %1$d: İlk alan geçerli bir alan adı olmalıdır ve şu anda \"%2$s\" şeklindedir."
+
+#. translators: %d is the line number.
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:221
+msgid "Line %d: The second field should be a publisher's account ID and it's currently empty."
+msgstr "Satır %d: İkinci alan bir yayıncının hesap kimliği (ID) olmalıdır ve şu anda boştur."
+
+#. translators: %1$s is the line number, %2$s is the account ID.
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:228
+msgid "Line %1$d: The second field should be a valid publisher's account ID and it's currently \"%2$s\"."
+msgstr "Satır %1$d: İkinci alan geçerli bir yayıncı hesap kimliği (ID) olmalıdır ve şu anda \"%2$s\" şeklindedir."
+
+#. translators: %s is the line number.
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:236
+msgid "Line %d: The third field should be either DIRECT or RESELLER and it's currently empty."
+msgstr "Satır %d: Üçüncü alan DIRECT veya RESELLER olmalıdır ve şu anda boştur."
+
+#. translators: %d is the line number %s is the invalid field.
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:245
+msgid "Line %1$d: The third field should be either DIRECT or RESELLER and it's currently \"%2$s\"."
+msgstr "Satır %1$d: Üçüncü alan DIRECT veya RESELLER olmalıdır ve şu anda \"%2$s\" şeklindedir."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:254
+msgid "We detected the following validation errors in your file, please fix them to avoid disruptions:"
+msgstr "Dosyanızda aşağıdaki doğrulama hatalarını tespit ettik, lütfen aksaklıkları önlemek için bunları düzeltin:"
+
+#. translators: %d is the line number.
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:300
+msgid "Line %d: The line should have a colon."
+msgstr "Satır %d: Satırda bir sütun olmalıdır."
+
+#. translators: %1$d is the line number, %2$s is the invalid field.
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:309
+msgid "Line %1$d: The first part of the line should be either User-agent or Allow or Disallow or Sitemap and it's currently \"%2$s\"."
+msgstr "Satır %1$d: Satırın ilk kısmı User-agent veya Allow veya Disallow veya Sitemap olmalıdır ve şu anda \"%2$s\" şeklindedir."
+
+#. translators: %d is the line number.
+#: includes/pro/admin/pages/class-wpcode-admin-page-file-editor-pro.php:315
+msgid "Line %d: The second part of the line should not be empty."
+msgstr "Satır %d: Satırın ikinci kısmı boş olmamalıdır."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-headers-footers-pro.php:29
+msgid "As you make changes to your code and save, you will get a list of previous versions with all the changes made in each revision. You can compare revisions to the current version or see changes as they have been saved by going through each revision. Any of the revisions can then be restored as needed."
+msgstr "Kodunuzda değişiklik yapıp kaydettiğinizde, her revizyonda yapılan tüm değişikliklerle birlikte önceki sürümlerin bir listesini alırsınız. Revizyonları geçerli sürümle karşılaştırabilir veya her bir revizyonu gözden geçirerek kaydedilen değişiklikleri görebilirsiniz. Revizyonlardan herhangi biri gerektiğinde geri yüklenebilir."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-headers-footers-pro.php:34
+msgid "Code Revisions"
+msgstr "Kod Revizyonları"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-headers-footers-pro.php:36
+msgid "Easily switch back to a previous version of your global scripts."
+msgstr "Global betiklerinizin önceki bir sürümüne kolayca geri dönün."
+
+#. Translators: Used for displaying the updated date, in the format Date at time, eg: August 15, 2022 at 10:32.
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:111
+msgid "%1$s at %2$s"
+msgstr "%1$s saat %2$s"
+
+#. Translators: the date at which a cloud snippet has been updated.
+#. Translators: date when revision was updated.
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:118
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:884
+#: includes/pro/admin/pages/trait-wpcode-revisions-display.php:91
+msgid "Updated on %s"
+msgstr "%s tarihinde güncellendi"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:124
+msgid "Are you sure you want to delete this snippet?"
+msgstr "Bu kod parçacığını silmek istediğinizden emin misiniz?"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:125
+msgid "This will delete the snippet from your library, if the snippet is used locally that snippet will not be affected."
+msgstr "Bu, kod parçacığını kütüphanenizden silecektir, eğer kod parçacığı yerel olarak kullanılıyorsa bu kod parçacığı etkilenmeyecektir."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:126
+msgid "Delete snippet"
+msgstr "Kod parçacığını sil"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:143
+msgid "Use snippet"
+msgstr "Kod parçacığını kullan"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:166
+#: includes/pro/class-wpcode-error-notifications.php:147
+#: includes/pro/class-wpcode-snippet-block.php:121
+msgid "Edit snippet"
+msgstr "Kod parçacığını düzenle"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:167
+msgid "Used"
+msgstr "Kullanılmış"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:190
+msgid "Preview"
+msgstr "Ön izleme"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:225
+msgid "Delete snippet from library"
+msgstr "Kütüphaneden kod parçacığı sil"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:247
+msgid "Your library is currently empty, as you create and save snippets to your personal library, they will show up here."
+msgstr "Kütüphaneniz şu anda boş, siz kod parçacıkları oluşturup kişisel kitaplığınıza kaydettikçe burada görünecektir."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:260
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:332
+msgid "Your site is not connected to the WPCode Library"
+msgstr "Siteniz WPCode Kütüphanesine bağlı değil"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:261
+msgid "Connect your WPCode account and access your Library snippets in the plugin."
+msgstr "WPCode hesabınızı bağlayın ve eklentideki Kütüphane kod parçacıklarınıza erişin."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:263
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:335
+msgid "Connect to the WPCode Library"
+msgstr "WPCode Kütüphanesine Bağlanın"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:281
+msgid "Preview Snippet"
+msgstr "Kod Parçacığını Önizle"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:285
+msgid "Code Preview"
+msgstr "Kod Önizlemesi"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:290
+msgid "Use Snippet"
+msgstr "Kod Parçacığını Kullan"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:292
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:112
+msgid "Edit in Library"
+msgstr "Kütüphanede Düzenle"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:319
+msgid "You don't have any favorites yet, as you add snippets to your favorites list, they will show up here."
+msgstr "Henüz herhangi bir favoriniz yok, favoriler listenize kod parçacıkları ekledikçe burada görünecekler."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-library-pro.php:333
+msgid "Connect your WPCode account and access your favourite snippets in the plugin."
+msgstr "WPCode hesabınızı bağlayın ve eklentideki favori kod parçacıklarınıza erişin."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-pixel-pro.php:16
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:145
+msgid "Install Addon Now"
+msgstr "Modülü Şimdi Yükleyin"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-pixel-pro.php:17
+msgid "The Conversion Pixels Addon is not installed"
+msgstr "Conversion Pixels Modülü yüklü değil"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-pixel-pro.php:19
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:147
+#: includes/pro/conditional-logic/class-wpcode-conditional-location.php:66
+msgid "Activate Addon"
+msgstr "Modülü Etkinleştir"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-pixel-pro.php:20
+msgid "The Conversion Pixels Addon is not active"
+msgstr "Conversion Pixels Modülü etkin değil"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-pixel-pro.php:26
+msgid "Install the plugin now to start tracking pixels from popular platforms such as Facebook, Google Ads, Pinterest and TikTok with WooCommerce, Easy Digital Downloads and MemberPress."
+msgstr "WooCommerce, Easy Digital Downloads ve MemberPress ile Facebook, Google Ads, Pinterest ve TikTok gibi popüler platformlardan pikselleri izlemeye başlamak için eklentiyi şimdi yükleyin."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-pixel-pro.php:44
+msgid "Conversion Pixels Addon is not available on your plan"
+msgstr "Conversion Pixels Modülü planınızda mevcut değil"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-pixel-pro.php:47
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:329
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:146
+#: includes/pro/conditional-logic/class-wpcode-conditional-location.php:59
+msgid "Upgrade Now"
+msgstr "Şimdi Yükseltin"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:84
+msgid "Revisions"
+msgstr "Revizyonlar"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:218
+msgid "The link you followed has expired."
+msgstr "Takip ettiğiniz bağlantının süresi dolmuştur."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:224
+msgid "Invalid revision id."
+msgstr "Geçersiz revizyon kimliği(ID)."
+
+#. Translators: The placeholder gets replaced with the title of the snippet.
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:369
+msgid "Compare Revisions of \"%s\""
+msgstr "\"%s\" Revizyonlarını Karşılaştırın"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:379
+msgid "Go back to editor"
+msgstr "Editöre geri dön"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:406
+msgid "Compare any two revisions"
+msgstr "Herhangi iki revizyonu karşılaştır"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:411
+msgid "Previous"
+msgstr "Önceki"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:424
+msgid "Next"
+msgstr "İleri"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:736
+msgid "Auto Insert Enabled"
+msgstr "Otomatik Ekleme Etkin"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:739
+msgid "Shortcode only"
+msgstr "Yalnızca kısa kod"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:763
+msgid "Rules Enabled"
+msgstr "Etkinleştirilmiş Kurallar"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:763
+msgid "Rules Disabled"
+msgstr "Devre Dışı Bırakılmış Kurallar"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:777
+msgid "Start"
+msgstr "Başlangıç"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:777
+msgid "End"
+msgstr "Sonlandır"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:797
+msgid "Show"
+msgstr "Göster"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:797
+msgid "Hide"
+msgstr "Gizle"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:798
+msgid "this code snippet if"
+msgstr "bu kod parçacığını şu durumda:"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:809
+msgid "AND"
+msgstr "VE"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:813
+msgid "OR"
+msgstr "VEYA"
+
+#. Translators: time since the revision has been updated.
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:878
+#: includes/pro/admin/pages/trait-wpcode-revisions-display.php:60
+#: includes/pro/admin/pages/trait-wpcode-revisions-display.php:85
+msgid "Updated %s ago"
+msgstr "%s önce güncellendi"
+
+#. Translators: Placeholder gets replaced by the name of the author.
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:908
+msgid "Revision by %s"
+msgstr "%s tarafından revizyon"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:919
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:923
+msgid "Restore this revision"
+msgstr "Bu revizyonu geri getir"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:967
+msgid "Title"
+msgstr "Başlık"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:976
+msgid "Code Type"
+msgstr "Kod Türü"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:986
+msgid "Code"
+msgstr "Kod"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:994
+msgid "Auto Insert"
+msgstr "Otomatik Ekle"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1004
+msgid "Shortcode Attributes"
+msgstr "Kısa Kod Özellikleri"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1014
+#: includes/pro/conditional-logic/class-wpcode-conditional-location.php:86
+msgid "Location"
+msgstr "Konum"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1024
+msgid "Insert Number"
+msgstr "Numara Ekle"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1034
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:169
+msgid "Custom Shortcode"
+msgstr "Özel Kısa Kod"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1044
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:48
+msgid "Device Type"
+msgstr "Cihaz Türü"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1054
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:37
+msgid "Schedule"
+msgstr "Planla"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1064
+msgid "Tags"
+msgstr "Etiketler"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1074
+msgid "Priority"
+msgstr "Öncelik"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1084
+msgid "Note"
+msgstr "Not"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1094
+msgid "Smart Conditional Logic"
+msgstr "Akıllı Koşullu Mantık"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1105
+msgid "Location-specific setting"
+msgstr "Konuma özel ayar"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1153
+msgid "Header Scripts"
+msgstr "Üst Bilgi Betikleri"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1154
+msgid "Footer Scripts"
+msgstr "Alt Bilgi Betikleri"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1155
+msgid "Body Scripts"
+msgstr "Gövde Betikleri"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1156
+msgid "Custom Code Snippets"
+msgstr "Özel Kod Parçacıkları"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1160
+msgid "Disable Global Scripts"
+msgstr "Küresel Betikleri Devre Dışı Bırak"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1161
+msgid "Any Device Type"
+msgstr "Herhangi Bir Cihaz Türü"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1162
+msgid "Desktop Only"
+msgstr "Yalnızca Masaüstü"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1163
+msgid "Mobile Only"
+msgstr "Yalnızca Mobil"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1179
+msgid "Loaded Snippets"
+msgstr "Yüklü Kod Parçacıkları"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1214
+msgid "Enabled"
+msgstr "Etkinleştirildi"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1214
+msgid "Disabled"
+msgstr "Devre dışı bırakıldı"
+
+#. Translators: %s: Label of the auto-insert location selected for the snippet.
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1237
+msgid "Snippet: %s"
+msgstr "Kod Parçacığı: %s"
+
+#. Translators: %s: Label of the auto-insert location selected for the snippet.
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1244
+msgid "Location: %s"
+msgstr "Konum: %s"
+
+#. Translators: %s: CSS selector
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1274
+msgid "CSS selector: %s"
+msgstr "CSS seçici: %s"
+
+#. Translators: %s: CSS selector
+#: includes/pro/admin/pages/class-wpcode-admin-page-revisions.php:1281
+msgid "Element Index: %s"
+msgstr "Öğe Dizini: %s"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:71
+msgid "Network Settings"
+msgstr "Ağ Ayarları"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:106
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:115
+msgid "License Key"
+msgstr "Lisans Anahtarı"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:128
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:153
+msgid "Install the WPCode Multisite Addon to manage snippets across the whole network."
+msgstr "Tüm ağdaki kod parçacıklarını yönetmek için WPCode Multisite Modülünü yükleyin."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:158
+msgid "The WPCode Multisite addon is available on the Elite plan."
+msgstr "WPCode Multisite eklentisi, Elite planında mevcuttur."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:160
+msgid "Please activate your license key below to get started."
+msgstr "Başlamak için lütfen aşağıdan lisans anahtarınızı etkinleştirin."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:167
+msgid "Multisite Addon"
+msgstr "Multisite Eklentisi"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:200
+msgid "Verify Key"
+msgstr "Anahtarı Doğrula"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:201
+msgid "Deactivate Key"
+msgstr "Anahtarı Etkisizleştir"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:202
+msgid "Force Deactivate Key"
+msgstr "Zorla Anahtarı Etkisizleştir"
+
+#. translators: %s: the license type
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:207
+msgid "Your license key level is %s."
+msgstr "Lisans anahtarı seviyeniz %s."
+
+#. translators: %1$s: opening link tag, %2$s: closing link tag
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:216
+msgid "You can find your license key in your %1$sWPCode account%2$s."
+msgstr "Lisans anahtarınızı %1$sWPCode hesabınızda%2$s bulabilirsiniz."
+
+#. translators: %1$s and %2$s are <u> tags.
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:320
+msgid "Improve the way you and your team manage your snippets with the WPCode Access Control settings. Enable other users on your site to manage different types of snippets or configure Conversion Pixels settings and update configuration files. This feature is available on the %1$sWPCode Pro%2$s plan or higher."
+msgstr "WPCode Erişim Kontrolü ayarları ile sizin ve ekibinizin kod parçacıklarını yönetme şeklini geliştirin. Sitenizdeki diğer kullanıcıların farklı kod parçacığı türlerini yönetmesine veya Conversion Pixels ayarlarını yapılandırmasına ve yapılandırma dosyalarını güncellemesine olanak tanıyın. Bu özellik %1$sWPCode Pro%2$s veya daha yüksek bir planda kullanılabilir."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:326
+msgid "Access Control is not available on your plan"
+msgstr "Erişim Kontrolü, planınızda mevcut değil"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:334
+msgid "Save time and improve website management with your team"
+msgstr "Ekibinizle birlikte zamandan tasarruf edin ve web sitesi yönetimini iyileştirin"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:335
+msgid "Delegate snippet management to other users with full control"
+msgstr "Kod parçacığı yönetimini tam kontrol ile diğer kullanıcılara devredin"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:336
+msgid "Enable other users to set up ads & 3rd party services"
+msgstr "Diğer kullanıcıların reklam ve 3. taraf hizmetleri kurmasını sağlayın"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:337
+msgid "Choose if PHP snippets should be enabled on the site"
+msgstr "PHP kod parçacıklarının sitede etkinleştirilip etkinleştirilmeyeceğini seçin"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:350
+msgid "We encountered an error activating your license key"
+msgstr "Lisans anahtarınızı etkinleştirirken bir hatayla karşılaştık"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:364
+msgid "Email Notifications"
+msgstr "E-posta Bildirimleri"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-settings-pro.php:366
+msgid "Receive email notifications when snippets throw errors or are automatically deactivated."
+msgstr "Snippet'ler hata verdiğinde veya otomatik olarak devre dışı bırakıldığında e-posta bildirimleri alın."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:45
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:104
+msgid "Save to Library"
+msgstr "Kütüphaneye Kaydet"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:67
+msgid "Publish Changes"
+msgstr "Değişiklikleri Yayınla"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:102
+msgid "Are you sure you want to save the snippet?"
+msgstr "Kod parçacığını kaydetmek istediğinizden emin misiniz?"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:103
+msgid "Any changes you made to the snippet in another site or on the cloud will be overwritten."
+msgstr "Başka bir sitede veya bulutta kod parçacığı üzerinde yaptığınız tüm değişikliklerin üzerine yazılacaktır."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:105
+msgid "Connect with WPCode Cloud Library to Save Snippets"
+msgstr "Kod Parçacıklarını Kaydetmek için WPCode Bulut Kütüphanesi ile Bağlantı Kurun"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:106
+msgid "Before we can save your snippets, you must connect with WPCode Library, so we can securely save snippets in your account."
+msgstr "Kod parçacıklarınızı kaydedebilmemiz için önce WPCode Kütüphanesi ile bağlantı kurmanız gerekir, böylece kod parçacıklarını hesabınıza güvenli bir şekilde kaydedebiliriz."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:107
+msgid "Connect with WPCode Library"
+msgstr "WPCode Kütüphanesi ile bağlantı kurun"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:108
+msgid "You have unsaved changes"
+msgstr "Kaydedilmemiş değişiklikleriniz mevcut"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:109
+msgid "Please make sure all your changes are saved before saving the snippet in the library."
+msgstr "Lütfen kod parçacıklarınızı kütüphaneye kaydetmeden önce tüm değişikliklerinizin kaydedildiğinden emin olun."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:110
+msgid "Save Changes Now"
+msgstr "Değişiklikleri Şimdi Kaydet"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:111
+#: includes/pro/class-wpcode-testing-mode.php:514
+msgid "OK"
+msgstr "Tamam"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:115
+msgid "Save snippet?"
+msgstr "Kod parçacığı kaydedilsin mi?"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:116
+msgid "In order to load the block editor we need to first save your snippet, do you want to save your snippet now?"
+msgstr "Blok düzenleyiciyi yüklemek için önce kod parçacığınızı kaydetmemiz gerekiyor, kod parçacığınızı şimdi kaydetmek istiyor musunuz?"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:117
+msgid "Yes"
+msgstr "Evet"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:118
+msgid "No"
+msgstr "Hayır"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:119
+msgid "Blocks content will be deleted"
+msgstr "Blok içeriği silinecek"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:120
+msgid "Please note that changing the code type will erase your blocks content when you save the snippet with the new code type. Switch back to Blocks Snippet if you want to keep the blocks content."
+msgstr "Kod türünü değiştirdiğinizde, kod parçacığını yeni kod türüyle kaydettiğinizde blok içeriğinizin silineceğini lütfen unutmayın. Blok içeriğini korumak istiyorsanız Blok Kod Parçacığına geri dönün."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:121
+msgid "Please add your license key in the WPCode settings panel to unlock all Pro features"
+msgstr "Tüm Pro özelliklerinin kilidini açmak için lütfen lisans anahtarınızı WPCode ayarlar paneline ekleyin"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:123
+msgid "Add license key"
+msgstr "Lisans anahtarı ekle"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:125
+msgid "Writing code..."
+msgstr "Kod yazmak..."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:126
+msgid "Setting auto-insert location to"
+msgstr "Otomatik ekleme konumunu şu şekilde ayarlama:"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:127
+msgid "Configuring conditional logic for"
+msgstr "Şunlar için koşullu mantık yapılandırma:"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:128
+msgid "Done!"
+msgstr "Tamamlandı!"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:129
+msgid "Describe the changes that you want to make to your snippet..."
+msgstr "Kod parçacığınızda yapmak istediğiniz değişiklikleri açıklayın..."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:132
+msgid "Please add your license key in order to use the AI integration for WPCode. Please note that the AI generation is only available on Pro and higher plans."
+msgstr "WPCode için AI entegrasyonunu kullanmak için lütfen lisans anahtarınızı ekleyin. Yapay zeka ile oluşturmanın yalnızca Pro ve üzeri planlarda mevcut olduğunu lütfen unutmayın."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:140
+#: includes/pro/admin/pages/trait-wpcode-revisions-display.php:28
+msgid "Add License Key"
+msgstr "Lisans Anahtarı Ekle"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:142
+msgid "AI Snippet Generation is a Pro Feature"
+msgstr "Yapay Zeka Kod Parçacığı Oluşturma Bir Pro Özelliktir"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:143
+msgid "AI Snippet Generation is not available on your plan, please upgrade to Pro or higher in order to get access to the WPCode AI Generation integration."
+msgstr "AI İle Kod Parçacığı Oluşturma, planınızda mevcut değildir. WPCode AI Generation entegrasyonuna erişmek için lütfen Pro veya daha yüksek bir sürüme yükseltin."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:163
+msgid "Shortcode name"
+msgstr "Kısa kod adı"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:174
+msgid "Use this field to define a custom shortcode name instead of the id-based one."
+msgstr "Kimlik tabanlı olan yerine özel bir kısa kod adı tanımlamak için bu alanı kullanın."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:284
+msgid "Any device type"
+msgstr "Herhangi bir cihaz türü"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:285
+msgid "Desktop only"
+msgstr "Yalnızca masaüstü"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:286
+msgid "Mobile only"
+msgstr "Yalnızca mobil"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:305
+msgid "Schedule snippet"
+msgstr "Kod parçacığını zamanla"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:332
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:334
+msgid "View file"
+msgstr "Dosyayı görüntüle"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:336
+msgid "The physical file for the snippet is only generated when the snippet is active."
+msgstr "Kod parçacığı için fiziksel dosya yalnızca kod parçacığı etkin olduğunda oluşturulur."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:343
+msgid "Load as file"
+msgstr "Dosya olarak yükleyin"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:372
+msgid "Edit with Block Editor"
+msgstr "Blok Düzenleyici ile Düzenle"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:373
+msgid "Click the button above to load the block editor in which you can create and edit blocks for your snippet."
+msgstr "Kod parçacıklarınız için bloklar oluşturabileceğiniz ve düzenleyebileceğiniz blok düzenleyiciyi yüklemek için yukarıdaki butona tıklayın."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:375
+msgid "The block editor is not supported on your site. Please upgrade to WordPress 5.0 or higher to use this feature."
+msgstr "Blok düzenleyici sitenizde desteklenmiyor. Bu özelliği kullanmak için lütfen WordPress 5.0 veya üstüne yükseltin."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:383
+msgid "Please wait..."
+msgstr "Lütfen bekleyin..."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:421
+msgid "Describe what your snippet should do here..."
+msgstr "Kod parçacıklarınızın burada ne yapması gerektiğini açıklayın..."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:425
+msgid "Generate"
+msgstr "Oluştur"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:426
+msgid "Generating..."
+msgstr "Oluşturuluyor..."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:427
+msgid "Generated"
+msgstr "Oluşturuldu"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:434
+msgid "The WPCode AI snippet generator can make mistakes, please always check the generated code and the configuration before activating a generated snippet."
+msgstr "WPCode AI kod parçacığı oluşturucu hata yapabilir, lütfen oluşturulan bir kod parçacığını etkinleştirmeden önce her zaman oluşturulan kodu ve yapılandırmayı kontrol edin."
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:487
+msgctxt "Used to highlight a new feature"
+msgid "New"
+msgstr "Yeni"
+
+#: includes/pro/admin/pages/class-wpcode-admin-page-snippet-manager-pro.php:498
+msgid "Connect to Library"
+msgstr "Kütüphaneye Bağlan"
+
+#: includes/pro/admin/pages/trait-wpcode-revisions-display.php:22
+msgid "Code Revisions is a Pro Feature"
+msgstr "Kod Revizyonları Bir Pro Özelliğidir"
+
+#: includes/pro/admin/pages/trait-wpcode-revisions-display.php:25
+msgid "Please add your license key in the WPCode settings panel to unlock all Pro features."
+msgstr "Tüm Pro özelliklerinin kilidini açmak için lütfen lisans anahtarınızı WPCode ayarlar paneline ekleyin."
+
+#: includes/pro/admin/pages/trait-wpcode-revisions-display.php:32
+msgid "Go to your WPCode Account"
+msgstr "WPCode Hesabınıza gidin"
+
+#: includes/pro/admin/pages/trait-wpcode-revisions-display.php:50
+msgid "Current Version"
+msgstr "Mevcut Sürüm"
+
+#: includes/pro/admin/pages/trait-wpcode-revisions-display.php:54
+msgid "Not saved"
+msgstr "Kaydedilmedi"
+
+#: includes/pro/admin/pages/trait-wpcode-revisions-display.php:101
+msgid "Compare"
+msgstr "Karşılaştır"
+
+#. Translators: The placeholder gets replaced with the extra number of revisions available.
+#: includes/pro/admin/pages/trait-wpcode-revisions-display.php:132
+msgid "%d Other Revision"
+msgid_plural "%d Other Revisions"
+msgstr[0] "%d Başka Revizyon"
+msgstr[1] "%d Başka Revizyon"
+
+#: includes/pro/admin/snippets-table.php:29
+msgid "Scheduled"
+msgstr "Planlanmış"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:43
+msgid "Anywhere"
+msgstr "Herhangi bir yerde"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:46
+msgid "Before HTML Element"
+msgstr "HTML Bileşeninden Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:47
+msgid "Insert snippet before the HTML element specified by the CSS selector."
+msgstr "CSS seçici tarafından belirtilen HTML bileşeninden önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:50
+msgid "After HTML Element"
+msgstr "HTML Bileşeninden Sonra"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:51
+msgid "Insert snippet after the HTML element specified by the CSS selector."
+msgstr "CSS seçici tarafından belirtilen HTML bileşeninden sonra snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:54
+msgid "At the start of HTML Element"
+msgstr "HTML Bileşeninin başlangıcında"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:55
+msgid "Insert snippet before the content of the HTML element specified by CSS selector."
+msgstr "CSS seçici tarafından belirtilen HTML bileşeni içeriğinden önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:58
+msgid "At the end of HTML Element"
+msgstr "HTML Bileşeninin sonunda"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:59
+msgid "Insert snippet after the content of the HTML element specified by CSS selector."
+msgstr "CSS seçici tarafından belirtilen HTML bileşeni içeriğinden sonra snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:62
+msgid "Replace HTML Element"
+msgstr "HTML Bileşenini Değiştir"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:63
+msgid "Completely replace the HTML element specified by the CSS selector with the output of this snippet."
+msgstr "CSS seçici tarafından belirtilen HTML bileşenini bu snippet'in çıktısıyla tamamen değiştirin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:348
+msgid "CSS Selector"
+msgstr "CSS Seçici"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:352
+msgid "Element index"
+msgstr "Öğe dizini"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:353
+msgid "All"
+msgstr "Hepsi"
+
+#. translators: %1$s is the opening <a> tag, %2$s is the closing </a> tag.
+#: includes/pro/auto-insert/class-wpcode-auto-insert-anywhere.php:357
+msgid "You can target any HTML element using a CSS selector and the index of the element (if multiple elements are present on the page). By default, all elements will be targeted. You can find more info on how to use CSS selectors in %1$sthis article%2$s."
+msgstr "Bir CSS seçici ve öğenin dizinini (sayfada birden fazla öğe varsa) kullanarak herhangi bir HTML öğesini hedefleyebilirsiniz. Varsayılan olarak, tüm öğeler hedeflenecektir. CSS seçicilerinin nasıl kullanılacağı hakkında daha fazla bilgiyi %1$sbu makalede%2$s bulabilirsiniz."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-content.php:37
+msgid "Content"
+msgstr "İçerik"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-content.php:41
+msgid "Insert After # Words"
+msgstr "# Kelimeden Sonra Ekle"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-content.php:42
+msgid "Insert snippet after a minimum number of words."
+msgstr "Belirli bir minimum sayıda kelimeden sonra kod parçacığını ekle."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-content.php:45
+msgid "Insert Every # Words"
+msgstr "Her # Kelimede Ekle"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-content.php:46
+msgid "Insert snippet every # number of words."
+msgstr "Her # kelime sonrasında bir kod parçacığı ekle."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:39
+msgid "Before the Purchase Button"
+msgstr "Satın Alma Butonundan Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:40
+msgid "Insert snippet before the EDD purchase button."
+msgstr "EDD satın alma butonundan önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:43
+msgid "After the Purchase Button"
+msgstr "Satın Alma Butonundan Sonra"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:44
+msgid "Insert snippet after the EDD purchase button."
+msgstr "EDD satın alma butonundan sonra snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:47
+msgid "Before the Single Download"
+msgstr "Tekli İndirmeden Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:48
+msgid "Insert snippet before the single EDD download content."
+msgstr "Tekli EDD indirme içeriğinden önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:51
+msgid "After the Single Download"
+msgstr "Tekli İndirmeden Sonra"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:52
+msgid "Insert snippet after the single EDD download content."
+msgstr "Tekli EDD indirme içeriğinden sonra snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:55
+msgid "Before the Cart"
+msgstr "Sepetten Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:56
+msgid "Insert snippet before the EDD cart."
+msgstr "EDD sepetinden önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:59
+msgid "After the Cart"
+msgstr "Sepetten Sonra"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:60
+msgid "Insert snippet after the EDD cart."
+msgstr "EDD sepetinden sonra snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:63
+msgid "Before the Checkout Cart"
+msgstr "Ödeme Sepetinden Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:64
+msgid "Insert snippet before the EDD cart on the checkout page."
+msgstr "Ödeme sayfasında EDD sepetinden önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:67
+msgid "After the Checkout Cart"
+msgstr "Ödeme Sepetinden Sonra"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:68
+msgid "Insert snippet after the EDD cart on the checkout page."
+msgstr "Ödeme sayfasında EDD sepetinden sonra snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:71
+msgid "Before the Checkout Form"
+msgstr "Ödeme Formundan önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:72
+msgid "Insert snippet before the EDD checkout form on the checkout page."
+msgstr "Ödeme sayfasında EDD ödeme formundan önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:75
+msgid "After the Checkout Form"
+msgstr "Ödeme Formundan sonra"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:76
+msgid "Insert snippet after the EDD checkout form on the checkout page"
+msgstr "Ödeme sayfasında EDD ödeme formundan sonra snippet ekleyin"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:84
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:79
+msgid "Easy Digital Downloads Page Rules is a Pro Feature"
+msgstr "Easy Digital Downloads Sayfa Kuralları bir Pro Özelliğidir"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:85
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:77
+#: includes/pro/auto-insert/class-wpcode-auto-insert-woocommerce.php:97
+#: includes/pro/class-wpcode-smart-tags-pro.php:314
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:150
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:80
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:99
+#: includes/pro/conditional-logic/class-wpcode-conditional-page.php:43
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:108
+#: includes/pro/conditional-logic/class-wpcode-conditional-snippet.php:64
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:115
+msgid "Please add your license key in the Settings Panel to unlock all pro features."
+msgstr "Tüm pro özelliklerin kilidini açmak için lütfen lisans anahtarınızı Ayarlar Paneline ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:92
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:84
+#: includes/pro/auto-insert/class-wpcode-auto-insert-woocommerce.php:104
+#: includes/pro/class-wpcode-smart-tags-pro.php:315
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:157
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:87
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:106
+#: includes/pro/conditional-logic/class-wpcode-conditional-page.php:50
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:115
+#: includes/pro/conditional-logic/class-wpcode-conditional-snippet.php:71
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:122
+msgid "Add License Key Now"
+msgstr "Lisans Anahtarını Şimdi Ekleyin"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:96
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:91
+msgid "Easy Digital Downloads is Not Installed"
+msgstr "Easy Digital Downloads Yüklü Değil"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:97
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:92
+msgid "Please install and activate Easy Digital Downloads to use this feature."
+msgstr "Bu özelliği kullanmak için lütfen Easy Digital Downloads'ı yükleyin ve etkinleştirin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-edd.php:99
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:94
+msgid "Install Easy Digital Downloads Now"
+msgstr "Easy Digital Downloads'ı Şimdi Yükleyin"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:39
+msgid "Before the Registration Form"
+msgstr "Kayıt Formundan Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:40
+msgid "Insert snippet before the MemberPress registration form used for checkout."
+msgstr "Ödeme için kullanılan MemberPress kayıt formundan önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:43
+msgid "Before Checkout Submit Button"
+msgstr "Ödeme Gönder Butonundan Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:44
+msgid "Insert snippet right before the MemberPress checkout submit button."
+msgstr "MemberPress ödeme gönder butonundan hemen önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:47
+msgid "Before Checkout Coupon Field"
+msgstr "Ödeme Kupon Alanından Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:48
+msgid "Insert snippet before the MemberPress checkout coupon field."
+msgstr "MemberPress ödeme kuponu alanından önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:51
+msgid "Before Account First Name"
+msgstr "Hesap Adından Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:52
+msgid "Insert snippet to the Home tab of the MemberPress Account page before First Name field."
+msgstr "MemberPress Hesabı sayfasının Ana Sayfa sekmesine, İsim alanından önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:55
+msgid "Before Subscriptions Content"
+msgstr "Abonelik İçeriğinden Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:56
+msgid "Insert snippet at the beginning of the Subscriptions tab on the MemberPress Account page."
+msgstr "MemberPress Hesabı sayfasında Abonelikler sekmesinin başına snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:59
+msgid "Before Login Form Submit"
+msgstr "Giriş Formunu Göndermeden Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:60
+msgid "Insert snippet before the Remember Me checkbox on the MemberPress Login page."
+msgstr "MemberPress Giriş Sayfasında Beni Hatırla onay kutusundan önce snippet ekleyin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:63
+msgid "Before the Unauthorized Message"
+msgstr "Yetkisiz İletiden Önce"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:64
+msgid "Insert a snippet before the notice that access to the content is unauthorized. "
+msgstr "İçeriğe erişimin izinsiz olduğunu belirten bildirimden önce bir snippet ekleyin. "
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:67
+msgid "After the Unauthorized Message"
+msgstr "Yetkisiz İletiden Sonra"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:68
+msgid "Insert a snippet after the notice that access to the content is unauthorized. "
+msgstr "İçeriğe erişimin izinsiz olduğunu belirten bildirimden sonra bir snippet ekleyin. "
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:76
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:98
+msgid "MemberPress Page Rules is a Pro Feature"
+msgstr "MemberPress Sayfa Kuralları bir Pro Özelliğidir"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:88
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:112
+msgid "MemberPress is Not Installed"
+msgstr "MemberPress Yüklü Değil"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:89
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:113
+msgid "Please install and activate MemberPress to use this feature."
+msgstr "Bu özelliği kullanmak için lütfen MemberPress'i kurun ve etkinleştirin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-memberpress.php:91
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:115
+msgid "Install MemberPress Now"
+msgstr "MemberPress'i Şimdi Yükleyin"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-woocommerce.php:96
+msgid "WooCommerce Locations are a PRO feature"
+msgstr "WooCommerce Konumları bir PRO özelliğidir"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-woocommerce.php:108
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:128
+msgid "WooCommerce Is Not Installed"
+msgstr "WooCommerce Yüklü Değil"
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-woocommerce.php:109
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:129
+msgid "Please install and activate WooCommerce to use this feature."
+msgstr "Bu özelliği kullanmak için lütfen WooCommerce'i yükleyin ve etkinleştirin."
+
+#: includes/pro/auto-insert/class-wpcode-auto-insert-woocommerce.php:111
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:131
+msgid "Install WooCommerce Now"
+msgstr "WooCommerce'i Şimdi Yükleyin"
+
+#: includes/pro/class-wpcode-access-logic.php:197
+msgid "PHP Snippets have been disabled on this website."
+msgstr "PHP Kod Parçacıkları bu web sitesinde devre dışı bırakılmış halde."
+
+#. translators: %d is the total number of global scripts.
+#: includes/pro/class-wpcode-admin-bar-info-pro.php:131
+msgid "Page Scripts (%d)"
+msgstr "Sayfa Betikleri (%d)"
+
+#. translators: %d is the total number of global scripts.
+#: includes/pro/class-wpcode-admin-bar-info-pro.php:162
+msgid "Custom Code Snippets (%d)"
+msgstr "Özel Kod Parçacıkları (%d)"
+
+#. Translators: %1$s - site domain, %2$s - snippet id.
+#: includes/pro/class-wpcode-error-notifications.php:63
+msgid "[%1$s] Error detected in snippet #%2$d"
+msgstr "[%1$s] #%2$d kod parçacığında hata algılandı"
+
+#. Translators: %s - snippet title.
+#: includes/pro/class-wpcode-error-notifications.php:117
+msgid "An error has been detected in your snippet \"%s\"."
+msgstr "\"%s\" kod parçacığınızda bir hata tespit edildi."
+
+#: includes/pro/class-wpcode-error-notifications.php:125
+msgid "The error occurred at the following URL:"
+msgstr "Aşağıdaki URL'de hata meydana geldi:"
+
+#: includes/pro/class-wpcode-error-notifications.php:130
+msgid "Full Error message:"
+msgstr "Tam Hata mesajı:"
+
+#: includes/pro/class-wpcode-error-notifications.php:149
+msgid "View error logs"
+msgstr "Hata günlüklerini görüntüle"
+
+#. Translators: %1$s - site domain, %2$s - snippet id.
+#: includes/pro/class-wpcode-error-notifications.php:178
+msgid "[%1$s] Snippet #%2$s was deactivated"
+msgstr "[%1$s] Kod Parçacığı #%2$s devre dışı bırakıldı"
+
+#: includes/pro/class-wpcode-error-notifications.php:194
+msgid "Your snippet has been automatically deactivated"
+msgstr "Kod parçacığınız otomatik olarak devre dışı bırakıldı"
+
+#: includes/pro/class-wpcode-my-library.php:96
+msgid "Invalid request"
+msgstr "Geçersiz istek"
+
+#: includes/pro/class-wpcode-my-library.php:107
+msgid "Missing authorization data"
+msgstr "Eksik yetkilendirme verisi"
+
+#: includes/pro/class-wpcode-my-library.php:117
+msgid "Invalid authorization data"
+msgstr "Geçersiz yetkilendirme verisi"
+
+#: includes/pro/class-wpcode-my-library.php:131
+msgid "Loading new snippets timed out, please try again."
+msgstr "Yeni kod parçacıklarının yüklenmesi zaman aşımına uğradı, lütfen tekrar deneyin."
+
+#: includes/pro/class-wpcode-my-library.php:144
+msgid "Snippet already updated."
+msgstr "Kod parçacığı zaten güncellendi."
+
+#: includes/pro/class-wpcode-my-library.php:161
+msgid "Snippet updated."
+msgstr "Kod parçacığı güncellendi."
+
+#: includes/pro/class-wpcode-my-library.php:294
+#: includes/pro/class-wpcode-my-library.php:349
+msgid "Not allowed"
+msgstr "İzin verilmez"
+
+#: includes/pro/class-wpcode-my-library.php:295
+msgid "You do not have permission to save snippets to the library."
+msgstr "Kod parçacıklarını kütüphaneye kaydetme izniniz yok."
+
+#: includes/pro/class-wpcode-my-library.php:303
+msgid "You need to be authenticated to save snippets to the library."
+msgstr "Parçacıkları kütüphaneye kaydetmek için kimliğinizin doğrulanması gerekir."
+
+#: includes/pro/class-wpcode-my-library.php:313
+msgid "Snippet not found."
+msgstr "Kod parçacığı bulunamadı."
+
+#: includes/pro/class-wpcode-my-library.php:322
+msgid "Snippet saved to the library."
+msgstr "Kod parçacığı kütüphaneye kaydedildi."
+
+#: includes/pro/class-wpcode-my-library.php:332
+msgid "Something went wrong. Please try again."
+msgstr "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+
+#: includes/pro/class-wpcode-my-library.php:350
+msgid "You do not have permission to delete snippets from the library."
+msgstr "Kütüphaneden kod parçacıklarını silme izniniz yok."
+
+#: includes/pro/class-wpcode-my-library.php:361
+msgid "Invalid snippet ID"
+msgstr "Geçersiz kod parçacığı kimliği (ID)"
+
+#: includes/pro/class-wpcode-my-library.php:362
+msgid "Missing parameter in the request, please reload the page and try again."
+msgstr "İstekte eksik parametre mevcut, lütfen sayfayı yeniden yükleyin ve tekrar deneyin."
+
+#: includes/pro/class-wpcode-my-library.php:379
+msgid "We encountered an error deleting the snippet"
+msgstr "Kod parçacığını silerken bir hatayla karşılaştık"
+
+#: includes/pro/class-wpcode-my-library.php:380
+msgid "The request to the Library site to delete the snippet has not been sucessful, please try again in a few minutes as this might be a temporary error."
+msgstr "Kod parçacığını silmek için Kütüphane sitesine yapılan istek başarılı olmadı, bu geçici bir hata olabileceğinden lütfen birkaç dakika içinde tekrar deneyin."
+
+#: includes/pro/class-wpcode-smart-tags-pro.php:313
+msgid "Smart Tags are a Premium feature"
+msgstr "Akıllı Etiketler bir Premium özelliğidir"
+
+#: includes/pro/class-wpcode-snippet-block-editor.php:169
+msgid "The block editor is not available on your website, please disable any snippet or plugin preventing the Block Editor from being loaded and try again."
+msgstr "Blok düzenleyici web sitenizde kullanılamıyor, lütfen Blok Düzenleyicinin yüklenmesini engelleyen herhangi bir kod parçacığını veya eklentiyi devre dışı bırakın ve tekrar deneyin."
+
+#: includes/pro/class-wpcode-snippet-block-editor.php:172
+msgid "Return to Snippet"
+msgstr "Kod Parçacığına Geri Dön"
+
+#: includes/pro/class-wpcode-snippet-block-editor.php:175
+msgid "Block Editor Not Available"
+msgstr "Blok Düzenleyici Mevcut Değil"
+
+#: includes/pro/class-wpcode-snippet-block.php:115
+msgid "The selected snippet is inactive. It will only be executed once activated."
+msgstr "Seçilen kod parçacığı etkin değil. Yalnızca etkinleştirildiğinde yürütülecektir."
+
+#: includes/pro/class-wpcode-snippet-block.php:183
+msgid "Choose a snippet and insert it in the current post."
+msgstr "Bir kod parçacığı seçin ve geçerli gönderiye ekleyin."
+
+#: includes/pro/class-wpcode-snippet-block.php:184
+msgid "Select a snippet"
+msgstr "Bir kod parçacığı seçin"
+
+#: includes/pro/class-wpcode-snippet-block.php:185
+msgid "Loading..."
+msgstr "Yükleniyor..."
+
+#: includes/pro/class-wpcode-snippet-block.php:186
+msgid "Choose snippet"
+msgstr "Kod parçacığı seçin"
+
+#: includes/pro/class-wpcode-snippet-block.php:187
+msgid "Attributes"
+msgstr "Nitelikler"
+
+#: includes/pro/class-wpcode-snippet-block.php:188
+msgid "Snippet Settings"
+msgstr "Kod Parçacığı Ayarları"
+
+#: includes/pro/class-wpcode-snippet-block.php:190
+msgid "You do not have permissions to manage snippets."
+msgstr "Kod parçacıklarını yönetme izniniz yok."
+
+#: includes/pro/class-wpcode-snippet-block.php:192
+msgid "snippet"
+msgstr "Kod parçacığı"
+
+#: includes/pro/class-wpcode-snippet-block.php:193
+msgid "code"
+msgstr "kod"
+
+#: includes/pro/class-wpcode-snippet-block.php:194
+msgid "template"
+msgstr "şablon"
+
+#: includes/pro/class-wpcode-snippet-execute-pro.php:25
+msgid "Blocks Snippet"
+msgstr "Bloklar Kod Parçacığı"
+
+#: includes/pro/class-wpcode-testing-mode.php:503
+msgid "Disable testing mode?"
+msgstr "Test modu devre dışı bırakılsın mı?"
+
+#: includes/pro/class-wpcode-testing-mode.php:504
+msgid "Are you sure you want to disable testing mode? You can either publish the changes you made in testing mode to all site visitors or discard all changes."
+msgstr "Test modunu devre dışı bırakmak istediğinizden emin misiniz? Test modunda yaptığınız değişiklikleri tüm site ziyaretçilerine yayınlayabilir veya tüm değişiklikleri iptal edebilirsiniz."
+
+#: includes/pro/class-wpcode-testing-mode.php:505
+msgid "Updated Snippets:"
+msgstr "Güncellenmiş Kod Parçacıkları:"
+
+#: includes/pro/class-wpcode-testing-mode.php:506
+msgid "No unsaved changes currently in testing mode."
+msgstr "Şu anda test modunda kaydedilmemiş değişiklik yok."
+
+#: includes/pro/class-wpcode-testing-mode.php:507
+msgid "Save & Publish Changes"
+msgstr "Değişiklikleri Kaydet ve Yayınla"
+
+#: includes/pro/class-wpcode-testing-mode.php:508
+msgid "Cancel"
+msgstr "İptal"
+
+#: includes/pro/class-wpcode-testing-mode.php:509
+msgid "Discard all changes"
+msgstr "Tüm değişiklikleri iptal et"
+
+#: includes/pro/class-wpcode-testing-mode.php:510
+msgid "Enabling Testing Mode"
+msgstr "Test Modu Etkinleştiriliyor"
+
+#: includes/pro/class-wpcode-testing-mode.php:511
+msgid "Disabling Testing Mode"
+msgstr "Test Modu Devre Dışı Bırakılıyor"
+
+#: includes/pro/class-wpcode-testing-mode.php:512
+#: includes/pro/class-wpcode-testing-mode.php:1034
+msgid "Testing Mode Enabled"
+msgstr "Test Modu Etkinleştirildi"
+
+#: includes/pro/class-wpcode-testing-mode.php:513
+msgid "Testing Mode is activated. Changes to WPCode Snippets, Header & Footer or Page Scripts are only visible to users with the capability to manage WPCode Snippets. To exit Testing Mode, use the toggle located at the top right. Before deactivation, you will have the option to publish or discard the changes."
+msgstr "Test Modu etkinleştirildi. WPCode Kod Parçacıklarına, Üst bilgi ve Alt bilgi veya Sayfa Betiklerine yapılan değişiklikler yalnızca WPCode Kod Parçacıklarını yönetme yetkisine sahip kullanıcılar tarafından görülebilir. Test Modundan çıkmak için sağ üstte bulunan kaydırmalı düğmeyi kullanın. Değişiklikleri devre dışı bırakmadan önce, değişiklikleri yayınlama veya iptal etme seçeneğiniz olacaktır."
+
+#: includes/pro/class-wpcode-testing-mode.php:516
+msgid "Loading testing mode changes..."
+msgstr "Test modu değişiklikleri yükleniyor..."
+
+#: includes/pro/class-wpcode-testing-mode.php:517
+msgid "Disable Testing Mode"
+msgstr "Test Modunu Devre Dışı Bırak"
+
+#: includes/pro/class-wpcode-testing-mode.php:518
+msgid "Global Header & Footer changes:"
+msgstr "Küresel Üstbilgi ve Altbilgi değişiklikleri:"
+
+#: includes/pro/class-wpcode-testing-mode.php:519
+msgid "Page Scripts changes:"
+msgstr "Sayfa Betiklerindeki değişiklikler:"
+
+#: includes/pro/class-wpcode-testing-mode.php:520
+msgid "Are you sure?"
+msgstr "Emin misiniz?"
+
+#: includes/pro/class-wpcode-testing-mode.php:521
+msgid "By clicking \"Confirm\" all the changes made in testing mode to this snippet will be published for all users. Other changes made in testing mode will not be affected."
+msgstr "\"Onayla\" butonuna tıklandığında, test modunda bu kod parçacığı üzerinde yapılan tüm değişiklikler tüm kullanıcılar için yayınlanacaktır. Test modunda yapılan diğer değişiklikler etkilenmeyecektir."
+
+#: includes/pro/class-wpcode-testing-mode.php:778
+msgid "Page Snippets"
+msgstr "Sayfa Kod Parçacıkları"
+
+#: includes/pro/class-wpcode-testing-mode.php:1060
+msgid "Please note that even though Testing Mode is enabled, changes made to conversion pixels will be published immediately."
+msgstr "Test Modu etkin olsa bile dönüşüm piksellerinde (conversion pixels) yapılan değişikliklerin hemen yayınlanacağını lütfen unutmayın."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:37
+msgid "Device"
+msgstr "Cihaz"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:49
+msgid "Target either desktop or mobile devices."
+msgstr "Masaüstü veya mobil cihazları hedefleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:53
+msgid "Desktop"
+msgstr "Masaüstü"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:57
+msgid "Mobile"
+msgstr "Mobil"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:64
+msgid "Browser Type"
+msgstr "Tarayıcı Türü"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:65
+msgid "Target specific visitor web browsers."
+msgstr "Belirli ziyaretçi web tarayıcılarını hedefleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:69
+msgid "Chrome"
+msgstr "Chrome"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:73
+msgid "Firefox"
+msgstr "Firefox"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:77
+msgid "Safari"
+msgstr "Safari"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:81
+msgid "Opera"
+msgstr "Opera"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:85
+msgid "IE"
+msgstr "IE"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:89
+msgid "Edge"
+msgstr "Edge"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:96
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:128
+#: includes/pro/conditional-logic/class-wpcode-conditional-page.php:34
+msgid "Is one of"
+msgstr "Şunlardan biri"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:97
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:129
+#: includes/pro/conditional-logic/class-wpcode-conditional-page.php:35
+msgid "Is not one of"
+msgstr "Şunlardan biri değil"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:101
+msgid "Operating System"
+msgstr "İşletim Sistemi"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:102
+msgid "Target operating systems like Windows, Mac OS or Linux."
+msgstr "Windows, Mac OS veya Linux gibi işletim sistemlerini hedefleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:106
+msgid "Windows"
+msgstr "Windows"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:110
+msgid "Mac"
+msgstr "Mac"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:114
+msgid "Linux"
+msgstr "Linux"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:118
+msgid "Android"
+msgstr "Android"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:122
+msgid "iOS"
+msgstr "iOS"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:134
+msgid "Cookie Name"
+msgstr "Çerez Adı"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:135
+msgid "Load or hide a snippet by cookie name."
+msgstr "Çerez adına göre bir kod parçacığını yükleyin veya gizleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:140
+msgid "Cookie Value"
+msgstr "Çerez Değeri"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:141
+msgid "Load or hide a snippet by cookie value."
+msgstr "Çerez değerine göre bir kod parçacığı yükleyin veya gizleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-device.php:149
+msgid "Device Rules are a Pro Feature"
+msgstr "Cihaz Kuralları bir Pro Özelliğidir"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:48
+msgid "EDD Page"
+msgstr "EDD Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:49
+msgid "Load the snippet on specific Easy Digital Downloads pages."
+msgstr "Kod parçacığını belirli Easy Digital Downloads sayfalarına yükleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:53
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:62
+msgid "Checkout Page"
+msgstr "Ödeme Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:57
+msgid "Success Page"
+msgstr "Başarı Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:61
+msgid "Single Download Page"
+msgstr "Tekli İndirme Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:65
+msgid "Download Category Page"
+msgstr "Kategori Sayfasını İndir"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:69
+msgid "Download Tag Page"
+msgstr "Etiket Sayfasını İndir"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-edd.php:97
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:119
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:135
+msgid " (Not Installed)"
+msgstr " (Yüklü Değil)"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-location.php:41
+msgid "Limit loading the snippet based on the visitor's country."
+msgstr "Kod parçacığının yüklenmesini, ziyaretçinin ülkesine göre sınırlayın."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-location.php:47
+msgid "Continent"
+msgstr "Kıta"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-location.php:48
+msgid "Target entire continents with ease."
+msgstr "Tüm kıtaları kolaylıkla hedefleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-location.php:56
+msgid "Location Rules are a Pro Feature"
+msgstr "Konum Kuralları bir Pro Özelliğidir"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-location.php:57
+msgid "The WPCode Location addon is not available on your current plan. Upgrade to Pro or higher level today and get access to the WPCode Location addon."
+msgstr "WPCode Location modülü mevcut planınızda mevcut değil. Bugün Pro veya daha yüksek bir seviyeye yükseltin ve WPCode Location modülüne erişin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-location.php:63
+msgid "The WPCode Location Addon is not Active"
+msgstr "WPCode Konum Eklentisi Etkin Değil"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-location.php:64
+msgid "The WPCode Location addon that is included in your plan is required in order to use this feature."
+msgstr "Bu özelliği kullanmak için planınıza dahil olan WPCode Location modülü gereklidir."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-location.php:86
+msgctxt "The addon is not active."
+msgid "(Addon)"
+msgstr "(Modül)"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:57
+msgid "MemberPress Page"
+msgstr "MemberPress Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:58
+msgid "Load the snippet on specific MemberPress pages."
+msgstr "Kod parçacığını belirli MemberPress sayfalarına yükleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:62
+msgid "Registration Page"
+msgstr "Kayıt Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:66
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:66
+msgid "Thank You Page"
+msgstr "Teşekkür Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:70
+msgid "Account Page"
+msgstr "Hesap Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:74
+msgid "Login Page"
+msgstr "Giriş Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:81
+msgid "MemberPress User"
+msgstr "MemberPress Kullanıcısı"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:82
+msgid "Check if the current user has a specific MemberPress subscription active."
+msgstr "Geçerli kullanıcının belirli bir MemberPress aboneliğinin etkin olup olmadığını kontrol edin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:88
+msgid "Is active on"
+msgstr "Şunda aktif:"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:89
+msgid "Is not active on"
+msgstr "Şunda aktif değil:"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:91
+msgid "Choose membership"
+msgstr "Üyelik seçin"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-memberpress.php:109
+msgid "MemberPress Active Membership Rules is a Pro Feature"
+msgstr "MemberPress Aktif Üyelik Kuralları bir Pro Özelliğidir"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-page.php:26
+msgid "Post/Page"
+msgstr "Gönderi/Sayfa"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-page.php:27
+msgid "Pick specific posts or pages to load the snippet on."
+msgstr "Snippet'i yüklemek için belirli gönderileri veya sayfaları seçin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-page.php:42
+msgid "Post specific rules are a Pro Feature"
+msgstr "Gönderiye özel kurallar bir Pro Özelliğidir"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:48
+msgid "Date"
+msgstr "Tarih"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:49
+msgid "Check whether today is before or after a date."
+msgstr "Bugünün bir tarihten önce mi sonra mı olduğunu kontrol edin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:54
+msgid "Date & Time"
+msgstr "Tarih ve Saat"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:55
+msgid "Get more specific by also including a specific time."
+msgstr "Belirli bir zaman da ekleyerek daha spesifik hale getirin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:60
+msgid "Day of the Week"
+msgstr "Haftanın Günü"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:61
+msgid "Load the snippet on specific days of the week."
+msgstr "Kod parçacıklarını haftanın belirli günlerinde yükleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:65
+msgid "Monday"
+msgstr "Pazartesi"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:69
+msgid "Tuesday"
+msgstr "Salı"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:73
+msgid "Wednesday"
+msgstr "Çarşamba"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:77
+msgid "Thursday"
+msgstr "Perşembe"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:81
+msgid "Friday"
+msgstr "Cuma"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:85
+msgid "Saturday"
+msgstr "Cumartesi"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:89
+msgid "Sunday"
+msgstr "Pazar"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:97
+msgid "Current time"
+msgstr "Geçerli zaman"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:98
+msgid "Check whether it's before or after a specific time"
+msgstr "Belirli bir saatten önce mi sonra mı olduğunu kontrol edin"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-schedule.php:107
+msgid "Scheduling rules are a Pro Feature"
+msgstr "Planlama kuralları bir Pro Özelliğidir"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-snippet.php:37
+msgid "Snippet"
+msgstr "Kod parçacığı"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-snippet.php:48
+#: includes/pro/integrations/class-wpcode-elementor-widget-snippet.php:82
+msgid "WPCode Snippet"
+msgstr "WPCode Snippet"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-snippet.php:49
+msgid "Load this snippet based on another snippet being loaded."
+msgstr "Yüklenmekte olan başka bir kod parçacığına göre bu kod parçacığını yükleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-snippet.php:55
+msgid "Is loaded"
+msgstr "Yüklü"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-snippet.php:56
+msgid "Is not loaded"
+msgstr "Yüklü değil"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-snippet.php:63
+msgid "Snippet Loaded Rules are a Pro Feature"
+msgstr "Kod Parçacığı Yüklü Kuralları bir Pro Özelliğidir"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:57
+msgid "WooCommerce Page"
+msgstr "WooCommerce Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:58
+msgid "Load the snippet on specific WooCommerce pages."
+msgstr "Kod parçacıklarını belirli WooCommerce sayfalarına yükleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:70
+msgid "Cart Page"
+msgstr "Sepet Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:74
+msgid "Single Product Page"
+msgstr "Tekli Ürün Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:78
+msgid "Shop Page"
+msgstr "Alışveriş Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:82
+msgid "Product Category Page"
+msgstr "Ürün Kategorisi Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:86
+msgid "Product Tag Page"
+msgstr "Ürün Etiketi Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:90
+msgid "My Account Page"
+msgstr "Hesabım Sayfası"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:97
+msgid "WooCommerce Cart"
+msgstr "WooCommerce Sepeti"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:98
+msgid "Load the snippet based on the WooCommerce Cart Contents."
+msgstr "Kod Parçacığını WooCommerce Sepet İçeriğine göre yükleyin."
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:104
+msgid "Contains"
+msgstr "İçerik"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:105
+msgid "Does Not Contain"
+msgstr "İçermiyor"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:107
+msgid "Select a product"
+msgstr "Bir ürün seçin"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:114
+msgid "WooCommerce Page Rules is a Pro Feature"
+msgstr "WooCommerce Sayfa Kuralları bir Pro Özelliğidir"
+
+#: includes/pro/conditional-logic/class-wpcode-conditional-woocommerce.php:125
+msgid "WooCommerce Cart Rules is a Pro Feature"
+msgstr "WooCommerce Sepet Kuralları Bir Pro Özelliktir"
+
+#. translators: %s - link to the site.
+#: includes/pro/emails/templates/footer-default.php:39
+msgid "Sent from %s"
+msgstr "%s üzerinden gönderildi"
+
+#. translators: %s: WPCode.
+#: includes/pro/integrations/class-wpcode-elementor-widget-snippet.php:33
+msgid "%s Snippet"
+msgstr "%s Kod parçacığı"
+
+#: includes/pro/integrations/class-wpcode-elementor-widget-snippet.php:90
+msgid "Choose Snippet"
+msgstr "Kod Parçacığı Seçin"
+
+#: includes/pro/integrations/loader.php:72
+msgid "Invalid snippet ID."
+msgstr "Geçersiz kod parçacığı kimliği (ID)."

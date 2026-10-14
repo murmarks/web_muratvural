@@ -1,0 +1,746 @@
+# Copyright (C) 2023 Brizy.io
+# This file is distributed under the To be announced.
+msgid ""
+msgstr ""
+"Project-Id-Version: Brizy Pro 2.4.29\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/brizy-pro\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-14T12:01:06+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: brizy-pro\n"
+
+#. Plugin Name of the plugin
+msgid "Brizy Pro"
+msgstr "Brizy Pro"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://brizy.io/"
+msgstr "https://brizy.io/"
+
+#. Description of the plugin
+msgid "Extended functionality for the Brizy WordPress builder plugin."
+msgstr "Brizy WordPress yapılandırıcı eklentisi için genişletilmiş işlevsellik."
+
+#. Author of the plugin
+msgid "Brizy.io"
+msgstr "Brizy.io"
+
+#: admin/integrations.php:33
+#: admin/integrations.php:50
+msgid "Integrations"
+msgstr "Entegrasyonlar"
+
+#: admin/license.php:80
+msgid "Brizy Pro does not support multisite license anymore."
+msgstr "Brizy Pro artık çoklu site lisansını desteklemiyor."
+
+#: admin/license.php:89
+#: admin/wp-cli.php:59
+msgid "License was successfully deactivated!"
+msgstr "Lisans başarıyla devre dışı bırakıldı!"
+
+#: admin/license.php:119
+msgid "Deactivate"
+msgstr "Devre dışı bırak"
+
+#: admin/license.php:119
+#: admin/license.php:165
+msgid "Activate"
+msgstr "Etkinleştir"
+
+#: admin/license.php:130
+msgid "License"
+msgstr "Lisans"
+
+#: admin/license.php:161
+msgid "Welcome to %s!"
+msgstr "%s'a hoş geldiniz!"
+
+#: admin/license.php:163
+msgid "Please activate your license to get feature updates, premium support and unlimited access to the template library."
+msgstr "Özellik güncellemeleri, premium destek ve şablon kütüphanesine sınırsız erişim için lütfen lisansınızı etkinleştirin."
+
+#: admin/license.php:179
+msgid "Please provide a license key."
+msgstr "Lütfen bir lisans anahtarı sağlayın."
+
+#: admin/license.php:198
+msgid "License successfully activated."
+msgstr "Lisans başarıyla etkinleştirildi."
+
+#: admin/license.php:213
+msgid "No license was found in your installation"
+msgstr "Kurulumunuzda lisans bulunamadı"
+
+#: admin/license.php:281
+msgid "Please provide license key."
+msgstr "Lütfen lisans anahtarı sağlayın."
+
+#: admin/license.php:295
+msgid "The remote server response code is %s."
+msgstr "Uzak sunucu yanıt kodu: %s."
+
+#: admin/license.php:301
+msgid "An error occurred on json decode response. The json last error is: %s"
+msgstr "Json decode yanıtında bir hata oluştu. Json son hatası: %s"
+
+#: admin/license.php:303
+msgid "Empty body was returned by the remote server."
+msgstr "Uzak sunucu boş bir yanıt döndürdü."
+
+#: admin/license.php:308
+msgid "The response of the remote server has an unexpected format"
+msgstr "Uzak sunucunun yanıtı beklenmeyen bir formatta"
+
+#: admin/license.php:369
+msgid "On a multisite installation the plugin must be network activated!"
+msgstr "Çoklu site kurulumunda eklenti ağ üzerinde etkinleştirilmelidir!"
+
+#: admin/login.php:23
+#: admin/login.php:67
+#: admin/login.php:127
+msgid "Something went wrong. Please refresh the page and try again."
+msgstr "Bir şeyler ters gitti. Lütfen sayfayı yenileyin ve tekrar deneyin."
+
+#: admin/login.php:33
+msgid "The current registration type is not supported. Please change it in network settings(Allow new registrations)."
+msgstr "Geçerli kayıt türü desteklenmiyor. Lütfen ağ ayarlarında değiştirin (Yeni kayıtlara izin ver)."
+
+#: admin/login.php:48
+#: admin/login.php:60
+msgid "Registration complete. Please check your email, then visit the login page."
+msgstr "Kayıt tamamlandı. Lütfen e-postanızı kontrol edin, ardından giriş sayfasını ziyaret edin."
+
+#: admin/login.php:52
+msgid "Registration on this site has been disabled."
+msgstr "Bu siteye kayıt devre dışı bırakıldı."
+
+#: admin/login.php:75
+msgid "You Have Successfully Logged in!"
+msgstr "Başarıyla giriş yaptınız!"
+
+#: admin/login.php:136
+msgid "The password reset link has been sent successfully on your email."
+msgstr "Şifre sıfırlama bağlantısı başarıyla e-postanıza gönderildi."
+
+#: admin/membership/membership.php:46
+msgctxt "post type general name"
+msgid "Roles"
+msgstr "Roller"
+
+#: admin/membership/membership.php:47
+msgctxt "post type singular name"
+msgid "Role"
+msgstr "Rol"
+
+#: admin/membership/membership.php:48
+msgctxt "admin menu"
+msgid "Roles"
+msgstr "Roller"
+
+#: admin/membership/membership.php:49
+msgctxt "add new on admin bar"
+msgid "Role"
+msgstr "Rol"
+
+#: admin/membership/membership.php:50
+msgctxt "add new post type role"
+msgid "Add Role"
+msgstr "Rol Ekle"
+
+#: admin/membership/membership.php:51
+msgid "Add New Role"
+msgstr "Yeni Rol Ekle"
+
+#: admin/membership/membership.php:52
+msgid "New Role"
+msgstr "Yeni Rol"
+
+#: admin/membership/membership.php:53
+msgid "Edit Role"
+msgstr "Rolü Düzenle"
+
+#: admin/membership/membership.php:54
+msgid "View Role"
+msgstr "Rolü Görüntüle"
+
+#: admin/membership/membership.php:55
+msgid "Roles"
+msgstr "Roller"
+
+#: admin/membership/membership.php:56
+msgid "Search Role"
+msgstr "Rol Ara"
+
+#: admin/membership/membership.php:57
+msgid "Parent Role:"
+msgstr "Üst Rol:"
+
+#: admin/membership/membership.php:58
+msgid "No Roles found."
+msgstr "Rol bulunamadı."
+
+#: admin/membership/membership.php:59
+msgid "No Roles found in Trash."
+msgstr "Çöp Kutusunda Rol bulunamadı."
+
+#: admin/membership/membership.php:66
+msgid "roles"
+msgstr "roller"
+
+#: admin/membership/membership.php:88
+msgid "Enter Role Name"
+msgstr "Rol Adını Girin"
+
+#: admin/membership/membership.php:133
+#: admin/membership/membership.php:136
+msgid "Role updated."
+msgstr "Rol güncellendi."
+
+#: admin/membership/membership.php:134
+msgid "Custom field updated."
+msgstr "Özel alan güncellendi."
+
+#: admin/membership/membership.php:135
+msgid "Custom field deleted."
+msgstr "Özel alan silindi."
+
+#: admin/membership/membership.php:137
+msgid "Role published."
+msgstr "Rol yayınlandı."
+
+#: admin/membership/membership.php:138
+msgid "Role saved."
+msgstr "Rol kaydedildi."
+
+#: admin/membership/membership.php:139
+msgid "Role submitted."
+msgstr "Rol gönderildi."
+
+#: admin/settings.php:21
+msgid "Limited Access"
+msgstr "Sınırlı Erişim"
+
+#: admin/updater.php:256
+msgid "On last check of the license status a HTTP error occured: server response code is %s. Please try to force updates in the update page of the dashboard."
+msgstr "Son lisans durumu kontrolünde bir HTTP hatası oluştu: sunucu yanıt kodu %s. Lütfen kontrol panelinin güncelleme sayfasında güncellemeleri zorlamayı deneyin."
+
+#: admin/updater.php:261
+msgid "An error occurred on json decode response, please try to force updates in the update page of the dashboard."
+msgstr "Json decode yanıtında bir hata oluştu, lütfen kontrol panelinin güncelleme sayfasında güncellemeleri zorlamayı deneyin."
+
+#: admin/views/integrations/view.php:10
+#: admin/views/integrations/view.php:75
+msgid "Select All"
+msgstr "Tümünü Seç"
+
+#: admin/views/integrations/view.php:15
+#: admin/views/integrations/view.php:79
+msgid "App"
+msgstr "Uygulama"
+
+#: admin/views/integrations/view.php:19
+#: admin/views/integrations/view.php:82
+msgid "Details"
+msgstr "Detaylar"
+
+#: admin/views/integrations/view.php:31
+msgid "Select Account"
+msgstr "Hesabı Seç"
+
+#: admin/views/integrations/view.php:42
+msgid "Are you sure you want to completely remove the selected accounts? All the features that use this integration will stop working!"
+msgstr "Seçilen hesapları tamamen kaldırmak istediğinizden emin misiniz? Bu entegrasyonu kullanan tüm özellikler çalışmayı durduracaktır!"
+
+#: admin/views/integrations/view.php:44
+msgid "Delete"
+msgstr "Sil"
+
+#: admin/views/integrations/view.php:50
+msgid "Show more details"
+msgstr "Daha fazla detay göster"
+
+#: admin/views/integrations/view.php:92
+msgid "Are you sure you want to completely remove the selected account? All the features that use these integrations will stop working!"
+msgstr "Seçili hesabı tamamen kaldırmak istediğinizden emin misiniz? Bu entegrasyonları kullanan tüm özellikler çalışmayı durduracaktır!"
+
+#: admin/views/integrations/view.php:97
+msgid "Add new accounts directly in the %s builder."
+msgstr "Yeni hesapları doğrudan %s yapılandırıcısına ekleyin."
+
+#: admin/views/license.php:7
+msgid "Your License Key"
+msgstr "Lisans Anahtarınız"
+
+#: admin/views/white-label.php:3
+#: admin/white-label.php:265
+#: admin/white-label.php:266
+msgid "White Label"
+msgstr "Beyaz Etiket"
+
+#: admin/views/white-label.php:7
+msgid "General"
+msgstr "Genel"
+
+#: admin/views/white-label.php:15
+msgid "Dismiss this notice."
+msgstr "Bu bildirimi kapat."
+
+#: admin/views/white-label.php:68
+msgid "Change"
+msgstr "Değiştir"
+
+#: admin/views/white-label.php:78
+msgid "Are you sure you want to reset to the default values?"
+msgstr "Varsayılan değerlere sıfırlamak istediğinizden emin misiniz?"
+
+#: admin/views/white-label.php:79
+msgid "Reset"
+msgstr "Sıfırla"
+
+#: admin/views/white-label.php:85
+msgid "These options are visible only in your current session.<br>Logout to make them disappear from the sidebar."
+msgstr "Bu seçenekler yalnızca mevcut oturumunuzda görünür. <br>Kenar çubuğundan kaybolmaları için çıkış yapın."
+
+#: admin/white-label.php:105
+msgid "Description"
+msgstr "Açıklama"
+
+#: admin/white-label.php:218
+#: admin/white-label.php:241
+msgid "Settings saved."
+msgstr "Ayarlar kaydedildi."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number.
+#: admin/white-label.php:423
+msgid "There is a new version(%1$s) of %2$s available."
+msgstr "%2$s'ın yeni bir sürümü (%1$s) mevcut."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number.
+#: admin/white-label.php:430
+msgid "There is a new version(%1$s) of %2$s available. <em>Automatic update is unavailable for this plugin.</em>"
+msgstr "%2$s'ın yeni bir sürümü (%1$s) mevcut. <em>Bu eklenti için otomatik güncelleme kullanılamaz.</em>"
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number, 5: Update URL, 6: Additional link attributes.
+#: admin/white-label.php:438
+msgid "There is a new version(%1$s) of %2$s available. Please <a href=\"%3$s\" %4$s>update now</a>."
+msgstr "%2$s'ın yeni bir sürümü (%1$s) mevcut. Lütfen <a href=\"%3$s\" %4$s>şimdi güncelle</a>."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number 5: URL to Update PHP page.
+#: admin/white-label.php:451
+msgid "There is a new version(%1$s) of %2$s available, but it doesn&#8217;t work with your version of PHP. <a href=\"%3$s\">Learn more about updating PHP</a>."
+msgstr "%2$s'ın yeni bir sürümü (%1$s) mevcut, ancak PHP sürümünüzle çalışmıyor. <a href=\"%3$s\">PHP güncelleme hakkında daha fazla bilgi edinin</a>."
+
+#: admin/wp-cli.php:172
+msgid "White label was successfully installed!"
+msgstr "Beyaz etiket başarıyla yüklendi!"
+
+#: admin/wp-cli.php:192
+msgid "There is no white label on this installation."
+msgstr "Bu kurulumda beyaz etiket yok."
+
+#: admin/wp-cli.php:205
+msgid "White label was successfully removed!"
+msgstr "Beyaz etiket başarıyla kaldırıldı!"
+
+#: admin/wp-cli.php:269
+msgid "The fields have been updated successfully!"
+msgstr "Alanlar başarıyla güncellendi!"
+
+#: content/placeholders/breadcrumbs.php:25
+msgid "Home"
+msgstr "Ana Sayfa"
+
+#: content/placeholders/breadcrumbs.php:26
+msgid "Archive by Category \"%s\""
+msgstr "\"%s\" Kategorisine Göre Arşiv"
+
+#: content/placeholders/breadcrumbs.php:27
+msgid "Search Results for \"%s\" Query"
+msgstr "\"%s\" Sorgusu için Arama Sonuçları"
+
+#: content/placeholders/breadcrumbs.php:28
+msgid "Posts Tagged \"%s\""
+msgstr "\"%s\" Etiketli Gönderiler"
+
+#: content/placeholders/breadcrumbs.php:29
+msgid "Articles Posted by %s"
+msgstr "%s tarafından yayınlanan makaleler"
+
+#: content/placeholders/breadcrumbs.php:30
+msgid "Error 404"
+msgstr "Hata 404"
+
+#: content/placeholders/breadcrumbs.php:31
+msgid "Page %s"
+msgstr "Sayfa %s"
+
+#: content/placeholders/breadcrumbs.php:32
+msgid "Comment Page %s"
+msgstr "Yorum Sayfa %s"
+
+#: content/placeholders/comments.php:109
+msgid "Name"
+msgstr "Ad"
+
+#: content/placeholders/comments.php:117
+msgid "Email"
+msgstr "E-posta"
+
+#: content/placeholders/comments.php:125
+msgid "Website"
+msgstr "Web Sitesi"
+
+#: content/placeholders/comments.php:137
+msgid "Required fields are marked %s"
+msgstr "Zorunlu alanlar işaretlenmiş %s"
+
+#: content/placeholders/comments.php:138
+msgctxt "noun"
+msgid "Your review"
+msgstr "İncelemeniz"
+
+#: content/placeholders/comments.php:138
+msgctxt "noun"
+msgid "Comment"
+msgstr "Yorum"
+
+#: content/placeholders/comments.php:156
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "Bir yorum göndermek için %1$s giriş yapmış olmalısınız %2$s."
+
+#: content/placeholders/comments.php:165
+msgid "Logged in as %1$s. %2$sLog out?%3$s"
+msgstr "%1$s olarak giriş yaptı. %2$sÇıkış yapın?%3$s"
+
+#: content/placeholders/comments.php:167
+msgid "Log out of this account"
+msgstr "Bu hesaptan çıkış yap"
+
+#: content/placeholders/comments.php:174
+msgid "Your email address will not be published."
+msgstr "E-posta adresiniz yayınlanmayacak."
+
+#: content/placeholders/comments.php:184
+msgid "Your rating"
+msgstr "Değerlendirmeniz"
+
+#: content/placeholders/comments.php:186
+msgid "Rate&hellip;"
+msgstr "Puan&hellip;"
+
+#: content/placeholders/comments.php:187
+msgid "Perfect"
+msgstr "Mükemmel"
+
+#: content/placeholders/comments.php:188
+msgid "Good"
+msgstr "İyi"
+
+#: content/placeholders/comments.php:189
+msgid "Average"
+msgstr "Ortalama"
+
+#: content/placeholders/comments.php:190
+msgid "Not that bad"
+msgstr "Kötü değil"
+
+#: content/placeholders/comments.php:191
+msgid "Very poor"
+msgstr "Çok kötü"
+
+#: content/placeholders/excerpt.php:58
+msgid "There is no excerpt because this is a protected post."
+msgstr "Bu korumalı bir yazı olduğu için özet bulunmamaktadır."
+
+#: content/placeholders/featured-img.php:163
+#: content/providers/wp.php:246
+msgid "Featured Image"
+msgstr "Öne Çıkan Resim"
+
+#: content/placeholders/post-loop-tags.php:37
+msgid "All"
+msgstr "Hepsi"
+
+#: content/providers/woocommerce.php:9
+msgid "Review link"
+msgstr "İnceleme bağlantısı"
+
+#: content/providers/woocommerce.php:92
+msgid "Single sale badge"
+msgstr "Tek satış rozeti"
+
+#: content/providers/woocommerce.php:101
+#: content/providers/woocommerce.php:269
+msgid "Sale!"
+msgstr "İndirim!"
+
+#: content/providers/woocommerce.php:109
+msgid "Upsells"
+msgstr "Ek Ürünler"
+
+#: content/providers/woocommerce.php:117
+msgid "Reviews Title"
+msgstr "İnceleme Başlığı"
+
+#. translators: 1: reviews count 2: product name
+#: content/providers/woocommerce.php:125
+#: templates/comments.php:38
+msgid "%1$s review for %2$s"
+msgid_plural "%1$s reviews for %2$s"
+msgstr[0] "%2$s için %1$s inceleme"
+msgstr[1] "%2$s için %1$s inceleme"
+
+#: content/providers/woocommerce.php:131
+msgid "Reviews"
+msgstr "İncelemeler"
+
+#: content/providers/woocommerce.php:161
+msgid "You may also like&hellip;"
+msgstr "Bunları da beğenebilirsiniz&hellip;"
+
+#: content/providers/woocommerce.php:180
+msgid "Related products"
+msgstr "İlgili ürünler"
+
+#: content/providers/woocommerce.php:200
+msgid "SKU"
+msgstr "Stok Kodu"
+
+#: content/providers/woocommerce.php:206
+msgctxt "Woocommerce Product Meta Category"
+msgid "Category"
+msgid_plural "Kategoriler"
+msgstr[0] "Kategori"
+msgstr[1] "Kategoriler"
+
+#: content/providers/woocommerce.php:211
+msgctxt "Woocommerce Product Meta Tag"
+msgid "Tag"
+msgid_plural "Etiketler"
+msgstr[0] "Etiket"
+msgstr[1] "Etiketler"
+
+#: content/providers/woocommerce.php:342
+msgid "Subtotal"
+msgstr "Ara Toplam"
+
+#: content/providers/woocommerce.php:350
+msgid "View cart"
+msgstr "Sepeti görüntüle"
+
+#: content/providers/woocommerce.php:354
+msgid "Checkout"
+msgstr "Ödeme"
+
+#: content/providers/woocommerce.php:390
+msgid "Product"
+msgstr "Ürün"
+
+#: content/providers/woocommerce.php:404
+msgid "Price"
+msgstr "Fiyat"
+
+#: content/providers/woocommerce.php:425
+msgid "Remove this item"
+msgstr "Bu öğeyi kaldır"
+
+#: content/providers/woocommerce.php:475
+msgid "No products in the cart."
+msgstr "Sepette ürün yok."
+
+#: content/providers/wp.php:79
+msgid "Post Title"
+msgstr "Yazı Başlığı"
+
+#: content/providers/wp.php:88
+msgid "Post Content"
+msgstr "Yazı İçeriği"
+
+#: content/providers/wp.php:90
+msgid "Post Excerpt"
+msgstr "Yazı Özeti"
+
+#: content/providers/wp.php:92
+msgid "Post Date"
+msgstr "Yazı Tarihi"
+
+#: content/providers/wp.php:96
+msgid "Post Time"
+msgstr "Yazı Saati"
+
+#: content/providers/wp.php:100
+msgid "Post ID"
+msgstr "Yazı ID'si"
+
+#: content/providers/wp.php:104
+msgid "Post Comments Count"
+msgstr "Yazı Yorum Sayısı"
+
+#: content/providers/wp.php:110
+msgid "Author Name"
+msgstr "Yazar Adı"
+
+#: content/providers/wp.php:119
+msgid "Author Bio"
+msgstr "Yazar Biyografisi"
+
+#: content/providers/wp.php:123
+msgid "Author Email"
+msgstr "Yazar E-posta"
+
+#: content/providers/wp.php:127
+msgid "Author Website"
+msgstr "Yazar Web Sitesi"
+
+#: content/providers/wp.php:131
+msgid "Site Title"
+msgstr "Site Başlığı"
+
+#: content/providers/wp.php:135
+msgid "Site Tagline"
+msgstr "Site Sloganı"
+
+#: content/providers/wp.php:139
+msgid "Archive Title"
+msgstr "Arşiv Başlığı"
+
+#: content/providers/wp.php:143
+msgid "Archive Description"
+msgstr "Arşiv Açıklaması"
+
+#: content/providers/wp.php:147
+msgid "Username"
+msgstr "Kullanıcı Adı"
+
+#: content/providers/wp.php:158
+msgid "User Role"
+msgstr "Kullanıcı Rolü"
+
+#: content/providers/wp.php:170
+msgid "User First Name"
+msgstr "Kullanıcı Adı"
+
+#: content/providers/wp.php:179
+msgid "User Last Name"
+msgstr "Kullanıcı Soyadı"
+
+#: content/providers/wp.php:188
+msgid "User Nickname"
+msgstr "Kullanıcı Takma Adı"
+
+#: content/providers/wp.php:197
+msgid "User Display Name"
+msgstr "Kullanıcı Görünen Adı"
+
+#: content/providers/wp.php:208
+msgid "User Email"
+msgstr "Kullanıcı E-posta"
+
+#: content/providers/wp.php:219
+msgid "User Website"
+msgstr "Kullanıcı Web Sitesi"
+
+#: content/providers/wp.php:230
+msgid "User Description"
+msgstr "Kullanıcı Açıklaması"
+
+#: content/providers/wp.php:247
+msgid "Site logo"
+msgstr "Site logosu"
+
+#: content/providers/wp.php:248
+msgid "Author Profile Picture"
+msgstr "Yazar Profil Resmi"
+
+#: content/providers/wp.php:251
+msgid "User Avatar"
+msgstr "Kullanıcı Avatarı"
+
+#: content/providers/wp.php:261
+msgid "Post URL"
+msgstr "Gönderi URL"
+
+#: content/providers/wp.php:269
+msgid "Author URL"
+msgstr "Yazar URL"
+
+#: content/providers/wp.php:277
+msgid "Comments URL"
+msgstr "Yorumlar URL"
+
+#: content/providers/wp.php:285
+msgid "Site URL"
+msgstr "Site URL"
+
+#: content/providers/wp.php:289
+msgid "Login Url"
+msgstr "Giriş URL"
+
+#: content/providers/wp.php:293
+msgid "Logout Url"
+msgstr "Çıkış URL"
+
+#: content/providers/wp.php:304
+msgid "Lost Password Url"
+msgstr "Şifremi Unuttum URL"
+
+#: content/providers/wp.php:316
+msgid "User registration URL"
+msgstr "Kullanıcı Kayıt URL"
+
+#: content/providers/wp.php:320
+msgid "User Profile"
+msgstr "Kullanıcı Profili"
+
+#: content/providers/wp.php:327
+msgid "Archive URL"
+msgstr "Arşiv URL"
+
+#: content/providers/wp.php:394
+msgid "Post Navigation"
+msgstr "Gönderi Gezinme"
+
+#: main.php:365
+msgid "Dynamic content"
+msgstr "Dinamik içerik"
+
+#. translators: %s: post title
+#: templates/comments.php:49
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "Bir Yanıt &ldquo;%s&rdquo;"
+
+#. translators: 1: number of comments, 2: post title
+#: templates/comments.php:53
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s Yanıt &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s Yanıtlar &ldquo;%2$s&rdquo;"
+
+#: templates/comments.php:82
+msgid "Previous"
+msgstr "Önceki"
+
+#: templates/comments.php:83
+msgid "Next"
+msgstr "Sonraki"
+
+#: templates/comments.php:88
+msgid "There are no reviews yet."
+msgstr "Henüz bir inceleme yok."
+
+#: templates/comments.php:95
+msgid "Only logged in customers who have purchased this product may leave a review."
+msgstr "Yalnızca bu ürünü satın almış giriş yapmış müşteriler inceleme bırakabilir."
+
+#: templates/comments.php:99
+msgid "Comments are closed."
+msgstr "Yorumlar kapatıldı."

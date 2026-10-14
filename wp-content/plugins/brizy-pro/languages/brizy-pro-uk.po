@@ -1,0 +1,746 @@
+# Copyright (C) 2023 Brizy.io
+# This file is distributed under the To be announced.
+msgid ""
+msgstr ""
+"Project-Id-Version: Brizy Pro 2.4.29\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/brizy-pro\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-14T12:01:06+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: brizy-pro\n"
+
+#. Plugin Name of the plugin
+msgid "Brizy Pro"
+msgstr "Brizy Pro"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://brizy.io/"
+msgstr "https://brizy.io/"
+
+#. Description of the plugin
+msgid "Extended functionality for the Brizy WordPress builder plugin."
+msgstr "Розширені можливості для плагіна будівництва Brizy для WordPress."
+
+#. Author of the plugin
+msgid "Brizy.io"
+msgstr "Brizy.io"
+
+#: admin/integrations.php:33
+#: admin/integrations.php:50
+msgid "Integrations"
+msgstr "Інтеграції"
+
+#: admin/license.php:80
+msgid "Brizy Pro does not support multisite license anymore."
+msgstr "Brizy Pro більше не підтримує ліцензії для багатосайтових інсталяцій."
+
+#: admin/license.php:89
+#: admin/wp-cli.php:59
+msgid "License was successfully deactivated!"
+msgstr "Ліцензія успішно вимкнена!"
+
+#: admin/license.php:119
+msgid "Deactivate"
+msgstr "Вимкнути"
+
+#: admin/license.php:119
+#: admin/license.php:165
+msgid "Activate"
+msgstr "Активувати"
+
+#: admin/license.php:130
+msgid "License"
+msgstr "Ліцензія"
+
+#: admin/license.php:161
+msgid "Welcome to %s!"
+msgstr "Ласкаво просимо до %s!"
+
+#: admin/license.php:163
+msgid "Please activate your license to get feature updates, premium support and unlimited access to the template library."
+msgstr "Будь ласка, активуйте свою ліцензію, щоб отримати оновлення функціоналу, преміальну підтримку та необмежений доступ до бібліотеки шаблонів."
+
+#: admin/license.php:179
+msgid "Please provide a license key."
+msgstr "Будь ласка, надайте ключ ліцензії."
+
+#: admin/license.php:198
+msgid "License successfully activated."
+msgstr "Ліцензію успішно активовано."
+
+#: admin/license.php:213
+msgid "No license was found in your installation"
+msgstr "Ліцензії не знайдено в вашій інсталяції"
+
+#: admin/license.php:281
+msgid "Please provide license key."
+msgstr "Будь ласка, надайте ключ ліцензії."
+
+#: admin/license.php:295
+msgid "The remote server response code is %s."
+msgstr "Код відпові"
+
+#: admin/license.php:301
+msgid "An error occurred on json decode response. The json last error is: %s"
+msgstr "Виникла помилка при розшифровці json-відповіді. Остання помилка json: %s"
+
+#: admin/license.php:303
+msgid "Empty body was returned by the remote server."
+msgstr "Порожній вміст повернув віддалений сервер."
+
+#: admin/license.php:308
+msgid "The response of the remote server has an unexpected format"
+msgstr "Відповідь віддаленого сервера має неочікуваний формат"
+
+#: admin/license.php:369
+msgid "On a multisite installation the plugin must be network activated!"
+msgstr "На багатосайтовій інсталяції плагін повинен бути активований в мережі!"
+
+#: admin/login.php:23
+#: admin/login.php:67
+#: admin/login.php:127
+msgid "Something went wrong. Please refresh the page and try again."
+msgstr "Щось пішло не так. Будь ласка, оновіть сторінку і спробуйте знову."
+
+#: admin/login.php:33
+msgid "The current registration type is not supported. Please change it in network settings(Allow new registrations)."
+msgstr "Поточний тип реєстрації не підтримується. Будь ласка, змініть його в налаштуваннях мережі (Дозволити нові реєстрації)."
+
+#: admin/login.php:48
+#: admin/login.php:60
+msgid "Registration complete. Please check your email, then visit the login page."
+msgstr "Реєстрація завершена. Будь ласка, перевірте свою електронну пошту, а потім відвідайте сторінку входу."
+
+#: admin/login.php:52
+msgid "Registration on this site has been disabled."
+msgstr "Реєстрація на цьому сайті вимкнена."
+
+#: admin/login.php:75
+msgid "You Have Successfully Logged in!"
+msgstr "Ви успішно увійшли!"
+
+#: admin/login.php:136
+msgid "The password reset link has been sent successfully on your email."
+msgstr "Посилання на скидання пароля успішно відправлено на вашу електронну пошту."
+
+#: admin/membership/membership.php:46
+msgctxt "post type general name"
+msgid "Roles"
+msgstr "Ролі"
+
+#: admin/membership/membership.php:47
+msgctxt "post type singular name"
+msgid "Role"
+msgstr "Роль"
+
+#: admin/membership/membership.php:48
+msgctxt "admin menu"
+msgid "Roles"
+msgstr "Ролі"
+
+#: admin/membership/membership.php:49
+msgctxt "add new on admin bar"
+msgid "Role"
+msgstr "Роль"
+
+#: admin/membership/membership.php:50
+msgctxt "add new post type role"
+msgid "Add Role"
+msgstr "Додати роль"
+
+#: admin/membership/membership.php:51
+msgid "Add New Role"
+msgstr "Додати нову роль"
+
+#: admin/membership/membership.php:52
+msgid "New Role"
+msgstr "Нова роль"
+
+#: admin/membership/membership.php:53
+msgid "Edit Role"
+msgstr "Редагувати роль"
+
+#: admin/membership/membership.php:54
+msgid "View Role"
+msgstr "Перегляд ролі"
+
+#: admin/membership/membership.php:55
+msgid "Roles"
+msgstr "Ролі"
+
+#: admin/membership/membership.php:56
+msgid "Search Role"
+msgstr "Пошук ролі"
+
+#: admin/membership/membership.php:57
+msgid "Parent Role:"
+msgstr "Батьківська роль:"
+
+#: admin/membership/membership.php:58
+msgid "No Roles found."
+msgstr "Ролі не знайдено."
+
+#: admin/membership/membership.php:59
+msgid "No Roles found in Trash."
+msgstr "Ролі не знайдено в кошику."
+
+#: admin/membership/membership.php:66
+msgid "roles"
+msgstr "ролі"
+
+#: admin/membership/membership.php:88
+msgid "Enter Role Name"
+msgstr "Введіть назву ролі"
+
+#: admin/membership/membership.php:133
+#: admin/membership/membership.php:136
+msgid "Role updated."
+msgstr "Роль оновлено."
+
+#: admin/membership/membership.php:134
+msgid "Custom field updated."
+msgstr "Спеціальне поле оновлено."
+
+#: admin/membership/membership.php:135
+msgid "Custom field deleted."
+msgstr "Спеціальне поле видалено."
+
+#: admin/membership/membership.php:137
+msgid "Role published."
+msgstr "Роль опубліковано."
+
+#: admin/membership/membership.php:138
+msgid "Role saved."
+msgstr "Роль збережено."
+
+#: admin/membership/membership.php:139
+msgid "Role submitted."
+msgstr "Роль подано."
+
+#: admin/settings.php:21
+msgid "Limited Access"
+msgstr "Обмежений доступ"
+
+#: admin/updater.php:256
+msgid "On last check of the license status a HTTP error occured: server response code is %s. Please try to force updates in the update page of the dashboard."
+msgstr "При останньої перевірці статусу ліцензії виникла помилка HTTP: код відповіді сервера - %s. Будь ласка, спробуйте вимусити оновлення на сторінці оновлення інформації в інтерфейсі панелі керування."
+
+#: admin/updater.php:261
+msgid "An error occurred on json decode response, please try to force updates in the update page of the dashboard."
+msgstr "Виникла помилка при розшифровці json-відповіді. Будь ласка, спробуйте вимусити оновлення на сторінці оновлення інтерфейсу панелі керування."
+
+#: admin/views/integrations/view.php:10
+#: admin/views/integrations/view.php:75
+msgid "Select All"
+msgstr "Вибрати все"
+
+#: admin/views/integrations/view.php:15
+#: admin/views/integrations/view.php:79
+msgid "App"
+msgstr "Додаток"
+
+#: admin/views/integrations/view.php:19
+#: admin/views/integrations/view.php:82
+msgid "Details"
+msgstr "Деталі"
+
+#: admin/views/integrations/view.php:31
+msgid "Select Account"
+msgstr "Вибрати обліковий запис"
+
+#: admin/views/integrations/view.php:42
+msgid "Are you sure you want to completely remove the selected accounts? All the features that use this integration will stop working!"
+msgstr "Ви впевнені, що хочете повністю видалити вибрані облікові записи? Всі функції, які використовують цю інтеграцію, припинять працювати!"
+
+#: admin/views/integrations/view.php:44
+msgid "Delete"
+msgstr "Видалити"
+
+#: admin/views/integrations/view.php:50
+msgid "Show more details"
+msgstr "Показати більше деталей"
+
+#: admin/views/integrations/view.php:92
+msgid "Are you sure you want to completely remove the selected account? All the features that use these integrations will stop working!"
+msgstr "Ви впевнені, що хочете повністю видалити вибраний обліковий запис? Всі функції, які використовують ці інтеграції, припинять працювати!"
+
+#: admin/views/integrations/view.php:97
+msgid "Add new accounts directly in the %s builder."
+msgstr "Додавайте нові облікові записи безпосередньо в будівельник %s."
+
+#: admin/views/license.php:7
+msgid "Your License Key"
+msgstr "Ваш ключ ліцензії"
+
+#: admin/views/white-label.php:3
+#: admin/white-label.php:265
+#: admin/white-label.php:266
+msgid "White Label"
+msgstr "Білого лейбла"
+
+#: admin/views/white-label.php:7
+msgid "General"
+msgstr "Загальне"
+
+#: admin/views/white-label.php:15
+msgid "Dismiss this notice."
+msgstr "Закрити це повідомлення."
+
+#: admin/views/white-label.php:68
+msgid "Change"
+msgstr "Змінити"
+
+#: admin/views/white-label.php:78
+msgid "Are you sure you want to reset to the default values?"
+msgstr "Ви впевнені, що хочете скинути на значення за замовчуванням?"
+
+#: admin/views/white-label.php:79
+msgid "Reset"
+msgstr "Скинути"
+
+#: admin/views/white-label.php:85
+msgid "These options are visible only in your current session.<br>Logout to make them disappear from the sidebar."
+msgstr "Ці опції видимі лише в поточній сесії. <br>Вийдіть, щоб вони зникли з бічної панелі."
+
+#: admin/white-label.php:105
+msgid "Description"
+msgstr "Опис"
+
+#: admin/white-label.php:218
+#: admin/white-label.php:241
+msgid "Settings saved."
+msgstr "Налаштування збережено."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number.
+#: admin/white-label.php:423
+msgid "There is a new version(%1$s) of %2$s available."
+msgstr "Доступна нова версія (%1$s) %2$s."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number.
+#: admin/white-label.php:430
+msgid "There is a new version(%1$s) of %2$s available. <em>Automatic update is unavailable for this plugin.</em>"
+msgstr "Доступна нова версія (%1$s) %2$s. <em>Автоматичне оновлення недоступне для цього плагіна.</em>"
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number, 5: Update URL, 6: Additional link attributes.
+#: admin/white-label.php:438
+msgid "There is a new version(%1$s) of %2$s available. Please <a href=\"%3$s\" %4$s>update now</a>."
+msgstr "Доступна нова версія (%1$s) %2$s. Будь ласка, <a href=\"%3$s\" %4$s>оновіть зараз</a>."
+
+#. translators: 1: Plugin name, 2: Details URL, 3: Additional link attributes, 4: Version number 5: URL to Update PHP page.
+#: admin/white-label.php:451
+msgid "There is a new version(%1$s) of %2$s available, but it doesn&#8217;t work with your version of PHP. <a href=\"%3$s\">Learn more about updating PHP</a>."
+msgstr "Доступна нова версія (%1$s) %2$s, але вона не працює з вашою версією PHP. <a href=\"%3$s\">Дізнайтеся більше про оновлення PHP</a>."
+
+#: admin/wp-cli.php:172
+msgid "White label was successfully installed!"
+msgstr "Білий лейбл успішно встановлено!"
+
+#: admin/wp-cli.php:192
+msgid "There is no white label on this installation."
+msgstr "На цій установці немає білого лейбла."
+
+#: admin/wp-cli.php:205
+msgid "White label was successfully removed!"
+msgstr "Білий лейбл успішно видалено!"
+
+#: admin/wp-cli.php:269
+msgid "The fields have been updated successfully!"
+msgstr "Поля були успішно оновлені!"
+
+#: content/placeholders/breadcrumbs.php:25
+msgid "Home"
+msgstr "Головна"
+
+#: content/placeholders/breadcrumbs.php:26
+msgid "Archive by Category \"%s\""
+msgstr "Архів за категорією \"%s\""
+
+#: content/placeholders/breadcrumbs.php:27
+msgid "Search Results for \"%s\" Query"
+msgstr "Результати пошуку для запиту \"%s\""
+
+#: content/placeholders/breadcrumbs.php:28
+msgid "Posts Tagged \"%s\""
+msgstr "Пости з тегом \"%s\""
+
+#: content/placeholders/breadcrumbs.php:29
+msgid "Articles Posted by %s"
+msgstr "Статті, опубліковані %s"
+
+#: content/placeholders/breadcrumbs.php:30
+msgid "Error 404"
+msgstr "Помилка 404"
+
+#: content/placeholders/breadcrumbs.php:31
+msgid "Page %s"
+msgstr "Сторінка %s"
+
+#: content/placeholders/breadcrumbs.php:32
+msgid "Comment Page %s"
+msgstr "Сторінка коментарів %s"
+
+#: content/placeholders/comments.php:109
+msgid "Name"
+msgstr "Ім'я"
+
+#: content/placeholders/comments.php:117
+msgid "Email"
+msgstr "Електронна пошта"
+
+#: content/placeholders/comments.php:125
+msgid "Website"
+msgstr "Веб-сайт"
+
+#: content/placeholders/comments.php:137
+msgid "Required fields are marked %s"
+msgstr "Обов'язкові поля позначені %s"
+
+#: content/placeholders/comments.php:138
+msgctxt "noun"
+msgid "Your review"
+msgstr "Ваш відгук"
+
+#: content/placeholders/comments.php:138
+msgctxt "noun"
+msgid "Comment"
+msgstr "Коментар"
+
+#: content/placeholders/comments.php:156
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "Ви повинні %1$sувійти%2$s, щоб залишити коментар."
+
+#: content/placeholders/comments.php:165
+msgid "Logged in as %1$s. %2$sLog out?%3$s"
+msgstr "Увійшли як %1$s. %2$sВийти?%3$s"
+
+#: content/placeholders/comments.php:167
+msgid "Log out of this account"
+msgstr "Вийти з цього облікового запису"
+
+#: content/placeholders/comments.php:174
+msgid "Your email address will not be published."
+msgstr "Ваша електронна адреса не буде опублікована."
+
+#: content/placeholders/comments.php:184
+msgid "Your rating"
+msgstr "Ваш рейтинг"
+
+#: content/placeholders/comments.php:186
+msgid "Rate&hellip;"
+msgstr "Оцініть&hellip;"
+
+#: content/placeholders/comments.php:187
+msgid "Perfect"
+msgstr "Ідеально"
+
+#: content/placeholders/comments.php:188
+msgid "Good"
+msgstr "Добре"
+
+#: content/placeholders/comments.php:189
+msgid "Average"
+msgstr "Середнє"
+
+#: content/placeholders/comments.php:190
+msgid "Not that bad"
+msgstr "Не так погано"
+
+#: content/placeholders/comments.php:191
+msgid "Very poor"
+msgstr "Дуже погано"
+
+#: content/placeholders/excerpt.php:58
+msgid "There is no excerpt because this is a protected post."
+msgstr "Немає уривку, оскільки це захищений запис."
+
+#: content/placeholders/featured-img.php:163
+#: content/providers/wp.php:246
+msgid "Featured Image"
+msgstr "Рекомендоване зображення"
+
+#: content/placeholders/post-loop-tags.php:37
+msgid "All"
+msgstr "Всі"
+
+#: content/providers/woocommerce.php:9
+msgid "Review link"
+msgstr "Посилання на відгук"
+
+#: content/providers/woocommerce.php:92
+msgid "Single sale badge"
+msgstr "Знак єдиного продажу"
+
+#: content/providers/woocommerce.php:101
+#: content/providers/woocommerce.php:269
+msgid "Sale!"
+msgstr "Розпродаж!"
+
+#: content/providers/woocommerce.php:109
+msgid "Upsells"
+msgstr "Додаткові пропозиції"
+
+#: content/providers/woocommerce.php:117
+msgid "Reviews Title"
+msgstr "Назва відгуків"
+
+#. translators: 1: reviews count 2: product name
+#: content/providers/woocommerce.php:125
+#: templates/comments.php:38
+msgid "%1$s review for %2$s"
+msgid_plural "%1$s reviews for %2$s"
+msgstr[0] "%1$s відгук для %2$s"
+msgstr[1] "%1$s відгуки для %2$s"
+
+#: content/providers/woocommerce.php:131
+msgid "Reviews"
+msgstr "Відгуки"
+
+#: content/providers/woocommerce.php:161
+msgid "You may also like&hellip;"
+msgstr "Вам також може сподобатися&hellip;"
+
+#: content/providers/woocommerce.php:180
+msgid "Related products"
+msgstr "Споріднені товари"
+
+#: content/providers/woocommerce.php:200
+msgid "SKU"
+msgstr "Артикул"
+
+#: content/providers/woocommerce.php:206
+msgctxt "Woocommerce Product Meta Category"
+msgid "Category"
+msgid_plural "Categories"
+msgstr[0] "Категорія"
+msgstr[1] "Категорії"
+
+#: content/providers/woocommerce.php:211
+msgctxt "Woocommerce Product Meta Tag"
+msgid "Tag"
+msgid_plural "Tags"
+msgstr[0] "Тег"
+msgstr[1] "Теги"
+
+#: content/providers/woocommerce.php:342
+msgid "Subtotal"
+msgstr "Підсумок"
+
+#: content/providers/woocommerce.php:350
+msgid "View cart"
+msgstr "Переглянути кошик"
+
+#: content/providers/woocommerce.php:354
+msgid "Checkout"
+msgstr "Оформити замовлення"
+
+#: content/providers/woocommerce.php:390
+msgid "Product"
+msgstr "Товар"
+
+#: content/providers/woocommerce.php:404
+msgid "Price"
+msgstr "Ціна"
+
+#: content/providers/woocommerce.php:425
+msgid "Remove this item"
+msgstr "Видалити цей товар"
+
+#: content/providers/woocommerce.php:475
+msgid "No products in the cart."
+msgstr "Немає товарів у кошику."
+
+#: content/providers/wp.php:79
+msgid "Post Title"
+msgstr "Заголовок запису"
+
+#: content/providers/wp.php:88
+msgid "Post Content"
+msgstr "Зміст запису"
+
+#: content/providers/wp.php:90
+msgid "Post Excerpt"
+msgstr "Уривок запису"
+
+#: content/providers/wp.php:92
+msgid "Post Date"
+msgstr "Дата запису"
+
+#: content/providers/wp.php:96
+msgid "Post Time"
+msgstr "Час запису"
+
+#: content/providers/wp.php:100
+msgid "Post ID"
+msgstr "Ідентифікатор запису"
+
+#: content/providers/wp.php:104
+msgid "Post Comments Count"
+msgstr "Кількість коментарів до запису"
+
+#: content/providers/wp.php:110
+msgid "Author Name"
+msgstr "Ім'я автора"
+
+#: content/providers/wp.php:119
+msgid "Author Bio"
+msgstr "Біографія автора"
+
+#: content/providers/wp.php:123
+msgid "Author Email"
+msgstr "Email автора"
+
+#: content/providers/wp.php:127
+msgid "Author Website"
+msgstr "Веб-сайт автора"
+
+#: content/providers/wp.php:131
+msgid "Site Title"
+msgstr "Заголовок сайту"
+
+#: content/providers/wp.php:135
+msgid "Site Tagline"
+msgstr "Слоган сайту"
+
+#: content/providers/wp.php:139
+msgid "Archive Title"
+msgstr "Заголовок архіву"
+
+#: content/providers/wp.php:143
+msgid "Archive Description"
+msgstr "Опис архіву"
+
+#: content/providers/wp.php:147
+msgid "Username"
+msgstr "Ім'я користувача"
+
+#: content/providers/wp.php:158
+msgid "User Role"
+msgstr "Роль користувача"
+
+#: content/providers/wp.php:170
+msgid "User First Name"
+msgstr "Ім'я користувача"
+
+#: content/providers/wp.php:179
+msgid "User Last Name"
+msgstr "Прізвище користувача"
+
+#: content/providers/wp.php:188
+msgid "User Nickname"
+msgstr "Нік користувача"
+
+#: content/providers/wp.php:197
+msgid "User Display Name"
+msgstr "Відображене ім'я користувача"
+
+#: content/providers/wp.php:208
+msgid "User Email"
+msgstr "Email користувача"
+
+#: content/providers/wp.php:219
+msgid "User Website"
+msgstr "Веб-сайт користувача"
+
+#: content/providers/wp.php:230
+msgid "User Description"
+msgstr "Опис користувача"
+
+#: content/providers/wp.php:247
+msgid "Site logo"
+msgstr "Логотип сайту"
+
+#: content/providers/wp.php:248
+msgid "Author Profile Picture"
+msgstr "Зображення профілю автора"
+
+#: content/providers/wp.php:251
+msgid "User Avatar"
+msgstr "Аватар користувача"
+
+#: content/providers/wp.php:261
+msgid "Post URL"
+msgstr "URL запису"
+
+#: content/providers/wp.php:269
+msgid "Author URL"
+msgstr "URL автора"
+
+#: content/providers/wp.php:277
+msgid "Comments URL"
+msgstr "URL коментарів"
+
+#: content/providers/wp.php:285
+msgid "Site URL"
+msgstr "URL сайту"
+
+#: content/providers/wp.php:289
+msgid "Login Url"
+msgstr "URL входу"
+
+#: content/providers/wp.php:293
+msgid "Logout Url"
+msgstr "URL виходу"
+
+#: content/providers/wp.php:304
+msgid "Lost Password Url"
+msgstr "URL відновлення пароля"
+
+#: content/providers/wp.php:316
+msgid "User registration URL"
+msgstr "URL реєстрації користувача"
+
+#: content/providers/wp.php:320
+msgid "User Profile"
+msgstr "Профіль користувача"
+
+#: content/providers/wp.php:327
+msgid "Archive URL"
+msgstr "URL архіву"
+
+#: content/providers/wp.php:394
+msgid "Post Navigation"
+msgstr "Навігація по записах"
+
+#: main.php:365
+msgid "Dynamic content"
+msgstr "Динамічний контент"
+
+#. translators: %s: post title
+#: templates/comments.php:49
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "Один відгук до &ldquo;%s&rdquo;"
+
+#. translators: 1: number of comments, 2: post title
+#: templates/comments.php:53
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s відгук до &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s відгуки до &ldquo;%2$s&rdquo;"
+
+#: templates/comments.php:82
+msgid "Previous"
+msgstr "Попередній"
+
+#: templates/comments.php:83
+msgid "Next"
+msgstr "Наступний"
+
+#: templates/comments.php:88
+msgid "There are no reviews yet."
+msgstr "Поки що немає відгуків."
+
+#: templates/comments.php:95
+msgid "Only logged in customers who have purchased this product may leave a review."
+msgstr "Залишити відгук можуть лише авторизовані користувачі, які придбали цей товар."
+
+#: templates/comments.php:99
+msgid "Comments are closed."
+msgstr "Коментарі вимкнені."

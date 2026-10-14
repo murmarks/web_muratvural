@@ -1,0 +1,69 @@
+<?php
+/**
+ * @package   Essential_Grid
+ * @author    ThemePunch <info@themepunch.com>
+ * @link      https://www.essential-grid.com/
+ * @copyright 2025 ThemePunch
+ */
+
+if( !defined( 'ABSPATH') ) exit();
+
+class Essential_Grid_WordPress_Fix {
+	
+	public function __construct(){
+		//Since WP 4.2, terms may split and receive new IDs if you update them, if they have the same handle on two or more Custom Post Types or tag/categorie
+		add_action( 'split_shared_term', ['Essential_Grid_WordPress_Fix', 'split_terms_fix'], 10, 4 );
+	}
+	
+	/**
+	 * Search all Grids and change the term IDs set in the selected terms if needed
+	 * @since: 2.1.0
+	 **/
+	static function split_terms_fix( $old_term_id, $new_term_id, $term_taxonomy_id, $taxonomy ){
+		$r = apply_filters('essgrid_split_terms_fix', ['old_term_id' => $old_term_id, 'new_term_id' => $new_term_id, 'term_taxonomy_id' => $term_taxonomy_id, 'taxonomy' => $taxonomy]);
+		
+		$base = new Essential_Grid_Base();
+		
+		$grids = Essential_Grid_Db::get_entity('grids')->get_grids();
+		foreach($grids as $grid){
+			
+			$selected = esg_json_decode( $grid->postparams, [] );
+			$post_category = $base->getVar($selected, 'post_category');
+			list( $cats, $taxes ) = $base->getPreparedCatAndTaxData( $post_category );
+			
+			$cont = false;
+			if(!empty($cats)){
+				foreach($cats as $cat){
+
+					//ID needs to be changed
+					if($r['old_term_id'] == $cat && in_array($r['taxonomy'], $taxes)){
+					
+						foreach($taxes as $t){
+							//replace all occuring old term id with the new term id and then Save the Grid
+							$post_category = str_replace($t.'_'.$r['old_term_id'], $t.'_'.$r['new_term_id'], $post_category);
+						}
+						
+						$selected['post_category'] = $post_category;
+						$grid->postparams = $selected;
+						$grid->params = esg_json_decode( $grid->params, [] );
+						$grid->layers = esg_json_decode( $grid->layers, [] );
+
+						//cast to array as update_create_grid expects an array
+						$new_grid = (array) $grid;
+						
+						Essential_Grid_Admin::update_create_grid($new_grid);
+						
+						//now delete grid cache so that changes take effect immediately
+						Essential_Grid_Base::clear_transients('ess_grid_trans_full_grid_' . $grid->id);
+						
+						$cont = true;
+					}
+					if($cont) break;
+				}
+			}
+		}
+	}
+	
+}
+
+$esg_wp_fix = new Essential_Grid_WordPress_Fix();
