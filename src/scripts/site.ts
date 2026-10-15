@@ -64,24 +64,64 @@ const rememberLang = (a: HTMLAnchorElement) => {
     localStorage.setItem(LANG_KEY, a.dataset.langLink ?? '');
   } catch {}
 };
-langLinks.forEach((a) => a.addEventListener('click', () => rememberLang(a)));
+
 /*
- * Sabit üst çubuk sayfa çok kaydırıldıktan sonra bazı tarayıcılarda tıklamayı alamayabiliyor
- * (tıklama alttaki katmana gidiyor). Tıklama dil düğmesinin üstüne düştüyse hedef ne olursa olsun o dile geçilir.
+ * Dil değişirken yeni sayfa sunucudan gelene kadar eski sayfa ekranda kalır ve tıklama işe yaramamış gibi görünür.
+ * Bu yüzden basılır basılmaz: seçilen dil düğmede seçili olur, üstte sarı bir çizgi akar,
+ * sağ üstte "… yükleniyor" yazar, sayfa hafifçe kararır. Yeni sayfa gelince hepsi kendiliğinden gider.
  */
-document.addEventListener(
-  'click',
-  (e) => {
-    if (e.defaultPrevented || e.button !== 0 || ov?.classList.contains('open')) return;
-    if ((e.target as Element | null)?.closest?.('[data-lang-link]')) return;
-    const hit = langLinks.find((a) => {
-      const r = a.getBoundingClientRect();
-      return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
-    });
-    if (!hit) return;
-    e.preventDefault();
-    rememberLang(hit);
-    location.assign(hit.href);
-  },
-  true,
+let note: HTMLElement | null = null;
+let clearT = 0;
+const clearSwitching = () => {
+  clearTimeout(clearT);
+  document.documentElement.classList.remove('switching');
+  note?.remove();
+  note = null;
+  langLinks.forEach((x) => x.setAttribute('aria-current', String(x.dataset.langLink === document.documentElement.lang)));
+};
+const showSwitching = (a: HTMLAnchorElement) => {
+  langLinks.forEach((x) => x.setAttribute('aria-current', String(x === a)));
+  note?.remove();
+  note = document.createElement('div');
+  note.className = 'lang-note mono';
+  note.setAttribute('role', 'status');
+  note.lang = a.dataset.langLink ?? '';
+  note.innerHTML = `<i aria-hidden="true"></i><span></span>`;
+  note.querySelector('span')!.textContent = a.dataset.loading ?? '';
+  document.body.append(note);
+  document.documentElement.classList.add('switching');
+  // gezinme durdurulursa (Esc, durdur düğmesi) sayfa kararmış kalmasın
+  clearT = window.setTimeout(clearSwitching, 15000);
+};
+langLinks.forEach((a) =>
+  a.addEventListener('click', (e) => {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if (a.getAttribute('aria-current') === 'true') return void e.preventDefault(); // zaten bu dildesiniz
+    rememberLang(a);
+    showSwitching(a);
+  }),
 );
+// geri tuşuyla bu sayfaya dönülürse (tarayıcı sayfayı olduğu gibi saklamış olabilir) yükleniyor hali kalkar
+addEventListener('pageshow', (e) => {
+  if (e.persisted) clearSwitching();
+});
+
+/*
+ * Diğer dil sayfasını önceden indirme: Chrome ve Edge bunu sayfadaki kurallarla (speculationrules) kendisi yapar.
+ * Diğer tarayıcılarda sayfa boşa çıkınca aynı adresler indirilir; dil düğmesine basılınca sayfa hazır olur.
+ */
+if (!HTMLScriptElement.supports?.('speculationrules')) {
+  const warm = () =>
+    langLinks
+      .filter((a) => a.getAttribute('aria-current') !== 'true')
+      .forEach((a) => {
+        const l = document.createElement('link');
+        l.rel = 'prefetch';
+        l.href = a.href;
+        if (l.relList.supports?.('prefetch')) document.head.append(l);
+        else fetch(a.href, { priority: 'low' } as RequestInit).catch(() => {});
+      });
+  const idle = window.requestIdleCallback ?? ((f: () => void) => setTimeout(f, 1500));
+  if (document.readyState === 'complete') idle(warm);
+  else addEventListener('load', () => idle(warm), { once: true });
+}

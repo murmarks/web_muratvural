@@ -198,6 +198,71 @@ button {
   text-transform: uppercase;
 }
 
+/* dil değişirken (site.ts): üstte akan sarı çizgi, sağ üstte "… yükleniyor", sayfa hafifçe kararır */
+html.switching {
+  cursor: progress;
+}
+html.switching body::before {
+  content: '';
+  position: fixed;
+  z-index: 120;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  height: 3px;
+  background: var(--amber);
+  box-shadow: 0 0 12px var(--amber);
+  transform: translateX(-40vw);
+  animation: langbar 1.1s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+}
+@keyframes langbar {
+  to {
+    transform: translateX(100vw);
+  }
+}
+html.switching main,
+html.switching .contact {
+  opacity: 0.4;
+  transition: opacity 0.25s;
+}
+.lang-note {
+  position: fixed;
+  z-index: 120;
+  top: calc(var(--bar-h) + env(safe-area-inset-top, 0px));
+  right: var(--gr);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: var(--amber);
+  color: var(--on-amber);
+  font: 500 0.7rem/1 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
+  animation: notein 0.25s ease-out;
+}
+.lang-note i {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes notein {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
 /* menü perdesi: kapalıyken hiçbir tıklamayı tutmaz (kapanış bitince sayfadan da kalkar) */
 .overlay {
   position: fixed;
@@ -499,7 +564,14 @@ button {
 }
 @media (prefers-reduced-motion: reduce) {
   .grain,
-  .marq {
+  .marq,
+  .lang-note,
+  .lang-note i {
+    animation: none;
+  }
+  html.switching body::before {
+    width: 100vw;
+    transform: none;
     animation: none;
   }
   .overlay {

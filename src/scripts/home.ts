@@ -120,6 +120,12 @@ const litBio = (p: number) => {
 
 /* hareket */
 const shade = $('.stage .shade'), focus = $('.stage .focus');
+
+/** Sayfa ekrandayken çalıştırır; dil düğmesi için arka planda hazırlanan sayfada, ziyaretçi o sayfaya geçince. */
+function onShow(run: () => void) {
+  if ((document as Document & { prerendering?: boolean }).prerendering) document.addEventListener('prerenderingchange', run, { once: true });
+  else run();
+}
 const allOn = () => {
   clist.forEach((li) => li.classList.add('on'));
   $$('[data-count]').forEach((b) => (b.textContent = b.dataset.count ?? ''));
@@ -164,21 +170,43 @@ if (reduce) {
   if (focus) focus.style.opacity = '0';
 } else {
   gsap.registerPlugin(ScrollTrigger);
-  // perde açılır; ışık lideri bulur
-  gsap.to('.cur.l, .cur.r', { scaleX: 0, duration: 1.6, ease: 'expo.inOut', delay: 0.2 });
-  if (shade) gsap.fromTo(shade, { '--r': '3%' }, { '--r': '9%', duration: 2, ease: 'expo.out', delay: 0.9 });
-  gsap.from('.s1 h1 > span', { yPercent: 70, opacity: 0, duration: 1.2, stagger: 0.12, ease: 'expo.out', delay: 0.9 });
-  gsap.from('.s1 .kicker, .s1 .sub', { opacity: 0, duration: 1, delay: 1.3 });
+  /*
+   * Geniş ve kısa ekranda fotoğraf genişliğe göre büyüdüğü için başlığın ikinci satırı ilk ekranın altında kalır
+   * (CSS: .s1). O zaman ikinci satır ilk ekranda hiç görünmez (yarısı kesik durmasın), kaydırınca gelir.
+   */
+  const s1 = $('.s1')!;
+  const heroTall = !narrow.matches && s1.offsetHeight > innerHeight + 1;
+  // perde açılır; ışık lideri bulur. Sayfa dil düğmesi için arka planda hazırlandıysa, ekrana gelince başlar.
+  onShow(() => {
+    gsap.to('.cur.l, .cur.r', { scaleX: 0, duration: 1.6, ease: 'expo.inOut', delay: 0.2 });
+    if (shade) gsap.fromTo(shade, { '--r': '3%' }, { '--r': '9%', duration: 2, ease: 'expo.out', delay: 0.9 });
+    gsap.from(heroTall ? '.s1 h1 .one' : '.s1 h1 > span', { yPercent: 70, opacity: 0, duration: 1.2, stagger: 0.12, ease: 'expo.out', delay: 0.9 });
+    gsap.from('.s1 .kicker, .s1 .sub', { opacity: 0, duration: 1, delay: 1.3 });
+  });
 
   const mm = gsap.matchMedia();
   mm.add('(min-width: 861px)', () => {
-    // 1: ışık liderden bütün ekibe yayılır, renk geri gelir; ikinci satır ışığın renginde dolar
-    gsap
-      .timeline({ scrollTrigger: { trigger: '.s1', start: 'top top', end: '+=100%', scrub: 1, pin: true } })
+    /*
+     * 1: ışık liderden bütün ekibe yayılır, renk geri gelir; başlığın ikinci satırı ışığın renginde dolar.
+     * İkinci satır ilk ekranın altındaysa (heroTall): ışık fotoğrafın tamamı görünürken yayılır,
+     * ikinci satır kaydırınca ekrana girerken belirir ve dolar.
+     */
+    const fill = { color: '#f2a900', webkitTextStroke: '0px', duration: 0.6 };
+    if (heroTall) gsap.set('.s1 h1 .two', { opacity: 0, yPercent: 40 });
+    const hero = gsap
+      .timeline({ scrollTrigger: { trigger: s1, start: 'top top', end: heroTall ? '+=70%' : '+=100%', scrub: 1, pin: true } })
       .to(shade, { '--r': '120%', ease: 'power1.in', duration: 1 })
-      .to(focus, { opacity: 0, ease: 'none', duration: 0.8 }, '<.2')
-      .to('.s1 h1 .two', { color: '#f2a900', webkitTextStroke: '0px', duration: 0.6 }, '<.2')
-      .to({}, { duration: 0.3 });
+      .to(focus, { opacity: 0, ease: 'none', duration: 0.8 }, '<.2');
+    if (heroTall)
+      gsap.to('.s1 h1 .two', {
+        ...fill,
+        opacity: 1,
+        yPercent: 0,
+        ease: 'none',
+        scrollTrigger: { trigger: '.s1 h1 .two', pinnedContainer: s1, start: 'top bottom', end: 'bottom 72%', scrub: 1 },
+      });
+    else hero.to('.s1 h1 .two', fill, '<.2');
+    hero.to({}, { duration: 0.3 });
 
     // 2: dört rakam, her biri kanıtıyla
     const scenes = $$('.scene'), ticks = $$('.s2 .ticks2 i');
@@ -222,7 +250,7 @@ if (reduce) {
   });
   mm.add('(max-width: 860px)', () => {
     allOn();
-    gsap.timeline({ delay: 2.6 }).to(shade, { '--r': '120%', duration: 2.4, ease: 'power2.inOut' }).to(focus, { opacity: 0, duration: 1.6 }, '<.4');
+    onShow(() => gsap.timeline({ delay: 2.6 }).to(shade, { '--r': '120%', duration: 2.4, ease: 'power2.inOut' }).to(focus, { opacity: 0, duration: 1.6 }, '<.4'));
   });
 
   /*

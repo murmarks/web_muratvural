@@ -2,12 +2,20 @@
 
 /* 1 · fotoğraf: perde ve ışık */
 .s1 {
-  /* başlık iki satır, bölüm başlıklarıyla aynı boyda; fotoğraf kalan yüksekliğe göre boyutlanır */
+  /*
+   * Başlık iki satır, bölüm başlıklarıyla aynı boyda.
+   * Fotoğraf sayfanın geri kalanı gibi ekran genişliğiyle büyür; kenarları alttaki rakamlar bölümüyle aynı hizada (4vw).
+   * Yalnız ekran kısaysa, fotoğrafın tamamı ve başlığın ilk satırı ilk ekrana sığacak kadar büyür
+   * (fotoğraf kırpılmaz); ikinci satır kaydırınca gelir.
+   */
   --h1: clamp(2.3rem, 5.6vw, 5.6rem);
-  --stage-w: min(92vw, calc((100svh - 12.5rem - 1.9 * var(--h1)) * 2.249));
+  --stage-w: min(calc(100cqw - 8vw), calc((100svh - 9rem - var(--h1)) * 2.249));
+  container-type: inline-size;
   position: relative;
   min-height: 100svh;
   display: grid;
+  /* sütun hep ekran genişliğinde: tek satıra sığdırılan başlık sütunu genişletip sayfayı yana taşırmasın */
+  grid-template-columns: minmax(0, 1fr);
   align-content: center;
   justify-items: center;
   padding-block: 5rem 2.4rem;
