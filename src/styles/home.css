@@ -240,14 +240,18 @@
 .clist li {
   padding: 0.3rem 0;
   border-bottom: 1px solid var(--line);
-  color: var(--dim);
+  color: rgba(243, 240, 234, 0.18);
   font: 500 0.82rem/1.3 var(--mono);
   letter-spacing: 0.04em;
-  transition: color 0.3s;
+  transition: color 0.45s;
   break-inside: avoid;
 }
 .clist li.on {
   color: var(--fg);
+}
+.clist li.now {
+  color: var(--amber);
+  transition: none;
 }
 .slides {
   display: grid;
@@ -267,8 +271,6 @@
   height: auto;
   border-radius: 2px;
   box-shadow: 0 0 0 1px var(--line);
-  /* slaytların kendi renkleri sayfanın koyu tonlarına uydurulur */
-  filter: grayscale(1) sepia(0.12) contrast(1.1) brightness(0.74);
 }
 .slides figcaption {
   margin-top: 0.5rem;

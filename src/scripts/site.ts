@@ -7,7 +7,15 @@ const LANG_KEY = 'site-lang';
 const ov = document.getElementById('overlay');
 const openB = document.querySelector<HTMLButtonElement>('[data-open]');
 if (ov && openB) {
+  let hideT = 0;
   const setMenu = (open: boolean) => {
+    clearTimeout(hideT);
+    if (open) {
+      ov.hidden = false;
+      void ov.offsetWidth; // perde açılış geçişi kapalı halden başlasın
+    } else {
+      hideT = window.setTimeout(() => (ov.hidden = true), 850);
+    }
     ov.classList.toggle('open', open);
     ov.setAttribute('aria-hidden', String(!open));
     ov.toggleAttribute('inert', !open);

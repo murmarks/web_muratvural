@@ -20,12 +20,14 @@ export interface Photo {
  * Eğitim videolarından alınmış arşiv kareleri hep 1200×751 boyutunda (Antalya salonu ve 3.x eğitim sayfaları).
  * Netlikleri düşük olduğu için "arşiv" görünümüyle (daha belirgin gren, renk ayarı yok) gösterilir.
  */
-const isArchiveFrame = ([w, h]: [number, number]) => w === 1200 && h === 751;
+const isArchiveFrame = ([w, h]: Size) => w === 1200 && h === 751;
 
 /** Küçük bir kolajdan büyütülmüş kareler (Vietnam, Phano semineri): onlar da arşiv görünümüyle gösterilir. */
 const enlarged = new Set(['vietnam-1', 'vietnam-2', 'vietnam-3']);
 
-const SIZES = sizes as unknown as Record<string, [number, number]>;
+/** [genişlik, yükseklik, içerik özeti] */
+type Size = [number, number, string];
+const SIZES = sizes as unknown as Record<string, Size>;
 
 /** `photo('kosovo')`, `photo('services/a1_1')` */
 export function photo(name: string, cap?: string): Photo {
@@ -34,8 +36,8 @@ export function photo(name: string, cap?: string): Photo {
   const slash = name.lastIndexOf('/');
   const dir = name.slice(0, slash + 1), base = name.slice(slash + 1);
   return {
-    src: `/photos/${name}.webp`,
-    th: `/photos/${dir}t/${base}.webp`,
+    src: `/photos/${name}.webp?v=${size[2]}`,
+    th: `/photos/${dir}t/${base}.webp?v=${size[2]}`,
     w: size[0],
     h: size[1],
     lo: isArchiveFrame(size) || enlarged.has(name),
