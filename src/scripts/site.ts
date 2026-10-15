@@ -50,10 +50,30 @@ document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((b) =>
 );
 
 /* dil: ziyaretçinin seçimi saklanır, kök adres (/) bir sonraki ziyarette bu dili açar */
-document.querySelectorAll<HTMLAnchorElement>('[data-lang-link]').forEach((a) =>
-  a.addEventListener('click', () => {
-    try {
-      localStorage.setItem(LANG_KEY, a.dataset.langLink ?? '');
-    } catch {}
-  }),
+const langLinks = [...document.querySelectorAll<HTMLAnchorElement>('[data-lang-link]')];
+const rememberLang = (a: HTMLAnchorElement) => {
+  try {
+    localStorage.setItem(LANG_KEY, a.dataset.langLink ?? '');
+  } catch {}
+};
+langLinks.forEach((a) => a.addEventListener('click', () => rememberLang(a)));
+/*
+ * Sabit üst çubuk sayfa çok kaydırıldıktan sonra bazı tarayıcılarda tıklamayı alamayabiliyor
+ * (tıklama alttaki katmana gidiyor). Tıklama dil düğmesinin üstüne düştüyse hedef ne olursa olsun o dile geçilir.
+ */
+document.addEventListener(
+  'click',
+  (e) => {
+    if (e.defaultPrevented || e.button !== 0 || ov?.classList.contains('open')) return;
+    if ((e.target as Element | null)?.closest?.('[data-lang-link]')) return;
+    const hit = langLinks.find((a) => {
+      const r = a.getBoundingClientRect();
+      return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+    });
+    if (!hit) return;
+    e.preventDefault();
+    rememberLang(hit);
+    location.assign(hit.href);
+  },
+  true,
 );

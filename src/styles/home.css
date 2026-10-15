@@ -2,7 +2,9 @@
 
 /* 1 · fotoğraf: perde ve ışık */
 .s1 {
-  --stage-w: min(92vw, calc((100svh - 17rem) * 2.249));
+  /* başlık iki satır, bölüm başlıklarıyla aynı boyda; fotoğraf kalan yüksekliğe göre boyutlanır */
+  --h1: clamp(2.3rem, 5.6vw, 5.6rem);
+  --stage-w: min(92vw, calc((100svh - 12.5rem - 1.9 * var(--h1)) * 2.249));
   position: relative;
   min-height: 100svh;
   display: grid;
@@ -83,15 +85,18 @@
 .s1 h1 {
   width: var(--stage-w);
   margin: 1.4rem 0 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 0.3em;
   white-space: nowrap;
-  /* iki satır tek satırda, sahnenin genişliğini tam doldurur: --fit betikte ölçülür, yoksa yaklaşık değer */
-  font: 900 var(--fit, clamp(1.6rem, 4.2vw, 5.6rem)) / 0.9 var(--display);
+  /* her zaman iki satır; uzun satır (en çok ~14 harf genişliği) fotoğrafın genişliğini hiç aşmaz */
+  font: 900 min(var(--h1), calc(var(--stage-w) / 14)) / 0.9 var(--display);
   font-stretch: 125%;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+}
+.s1 h1 span {
+  display: block;
+}
+.s1 h1 .two {
+  margin-top: 0.08em;
 }
 .s1 h1 .two {
   color: transparent;
@@ -262,6 +267,8 @@
   height: auto;
   border-radius: 2px;
   box-shadow: 0 0 0 1px var(--line);
+  /* slaytların kendi renkleri sayfanın koyu tonlarına uydurulur */
+  filter: grayscale(1) sepia(0.12) contrast(1.1) brightness(0.74);
 }
 .slides figcaption {
   margin-top: 0.5rem;

@@ -26,37 +26,27 @@ function drawDots(p: number) {
 drawDots(1);
 const clist = $$('[data-clist] li');
 
-/* ana başlık: masaüstünde iki satır tek satırda sahne genişliğini doldurur; telefonda her satır kendi başına genişliği doldurur */
+/* ana başlık, telefonda: iki satır, her satır kendi boyunda ekran genişliğini doldurur (masaüstü boyutu CSS'te) */
 const h1 = $('.s1 h1'), one = $('.s1 h1 .one'), two = $('.s1 h1 .two');
+const narrow = matchMedia('(max-width: 860px)');
 function fitTitle() {
   if (!h1 || !one || !two) return;
-  const W = h1.clientWidth;
-  if (!W) return;
-  h1.style.removeProperty('--fit');
   h1.style.removeProperty('--fit1');
   h1.style.removeProperty('--fit2');
+  const W = h1.clientWidth;
+  if (!narrow.matches || !W) return;
   // 100px'te metnin kendi genişliği ölçülür (kutunun değil), sonra orantıyla büyütülür
-  const textW = (el: HTMLElement) => {
-    const r = document.createRange();
-    r.selectNodeContents(el);
-    return r.getBoundingClientRect().width;
-  };
   const probe = (el: HTMLElement) => {
     const prev = el.style.fontSize;
     el.style.fontSize = '100px';
-    const w = textW(el);
+    const r = document.createRange();
+    r.selectNodeContents(el);
+    const w = r.getBoundingClientRect().width;
     el.style.fontSize = prev;
     return w;
   };
-  if (getComputedStyle(h1).display === 'flex') {
-    h1.style.fontSize = '100px';
-    const w1 = textW(one), w2 = textW(two), gap = parseFloat(getComputedStyle(h1).columnGap) || 30;
-    h1.style.fontSize = '';
-    h1.style.setProperty('--fit', `${Math.min(((W - 2) / (w1 + w2 + gap)) * 100, 150).toFixed(2)}px`);
-  } else {
-    h1.style.setProperty('--fit1', `${(((W - 2) / probe(one)) * 100).toFixed(2)}px`);
-    h1.style.setProperty('--fit2', `${(((W - 2) / probe(two)) * 100).toFixed(2)}px`);
-  }
+  h1.style.setProperty('--fit1', `${(((W - 2) / probe(one)) * 100).toFixed(2)}px`);
+  h1.style.setProperty('--fit2', `${(((W - 2) / probe(two)) * 100).toFixed(2)}px`);
 }
 fitTitle();
 document.fonts?.ready.then(fitTitle);
@@ -159,16 +149,17 @@ if (reduce) {
 
     // 2: dört rakam, her biri kanıtıyla
     const scenes = $$('.scene'), ticks = $$('.s2 .ticks2 i');
-    const tl = gsap.timeline({ scrollTrigger: { trigger: '.s2', start: 'top top', end: '+=260%', scrub: 0.8, pin: true } });
+    const tl = gsap.timeline({ scrollTrigger: { trigger: '.s2', start: 'top top', end: '+=320%', scrub: 0.8, pin: true } });
     const dotsP = { p: 0 }, listP = { p: 0 };
     scenes.forEach((s, i) => {
       const b = $('[data-count]', s)!, to = Number(b.dataset.count), o = { v: 0 };
       if (i) tl.to(scenes[i - 1], { autoAlpha: 0, y: -40, duration: 0.25 }).fromTo(s, { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.35 }, '>');
-      tl.fromTo(o, { v: 0 }, { v: to, duration: 0.7, ease: 'power1.out', onUpdate: () => { b.textContent = String(Math.round(o.v)); } }, i ? '<' : 0)
+      // ülke sayısı listeyle birlikte, ülkeler tek tek göründükçe artar
+      tl.fromTo(o, { v: 0 }, { v: to, duration: i === 2 ? 1.7 : 0.7, ease: i === 2 ? 'none' : 'power1.out', onUpdate: () => { b.textContent = String(Math.round(o.v)); } }, i ? '<' : 0)
         .call(() => ticks.forEach((tk, k) => tk.classList.toggle('on', k <= i)), undefined, '<');
       if (i === 0) tl.fromTo('.ruler .roles span', { scaleX: 0 }, { scaleX: 1, stagger: 0.12, duration: 0.3 }, '<');
       if (i === 1) tl.fromTo(dotsP, { p: 0 }, { p: 1, duration: 0.7, onUpdate: () => drawDots(dotsP.p) }, '<');
-      if (i === 2) tl.fromTo(listP, { p: 0 }, { p: 1, duration: 0.7, onUpdate: () => { const k = Math.round(clist.length * listP.p); clist.forEach((li, j) => li.classList.toggle('on', j < k)); } }, '<');
+      if (i === 2) tl.fromTo(listP, { p: 0 }, { p: 1, duration: 1.7, ease: 'none', onUpdate: () => { const k = Math.round(clist.length * listP.p); clist.forEach((li, j) => li.classList.toggle('on', j < k)); } }, '<');
       if (i === 3) tl.from('.slides figure', { y: 30, autoAlpha: 0, stagger: 0.08, duration: 0.3 }, '<');
       tl.to({}, { duration: 0.45 });
     });
@@ -195,8 +186,14 @@ if (reduce) {
   });
 
   // 4: çubuklar ölçeğine göre uzar
-  gsap.from('.gantt .barx', { scaleX: 0, duration: 1.1, stagger: 0.12, ease: 'expo.out', scrollTrigger: { trigger: '.gantt', start: 'top 75%' } });
-  gsap.from('.gantt .meta', { opacity: 0, duration: 0.6, stagger: 0.12, delay: 0.5, scrollTrigger: { trigger: '.gantt', start: 'top 75%' } });
+  // her görev kendi satırı ekrana girince, sırayla
+  $$('.gantt .row').forEach((row) => {
+    const tlr = gsap.timeline({ scrollTrigger: { trigger: row, start: 'top 82%' } });
+    tlr.from($$('.who > *', row), { opacity: 0, y: 14, duration: 0.6, stagger: 0.1, ease: 'power2.out' })
+      .from($('.barx', row), { scaleX: 0, duration: 1.4, ease: 'power3.out' }, 0.15);
+    const meta = $('.meta', row);
+    if (meta) tlr.from(meta, { opacity: 0, duration: 0.6 }, '-=0.5');
+  });
   $$('.h2').forEach((h) => gsap.from(h, { yPercent: 30, opacity: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: h, start: 'top 88%' } }));
   gsap.from('.area', { y: 40, opacity: 0, stagger: 0.08, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: '.areas', start: 'top 85%' } });
   gsap.from('.lit img', { y: 40, opacity: 0, duration: 1.4, ease: 'expo.out', scrollTrigger: { trigger: '.lit', start: 'top 75%' } });
