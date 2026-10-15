@@ -1,0 +1,183 @@
+/* Hakkında: büyük başlık ve giriş, yanında fotoğrafıyla metin, tam genişlikte özgeçmiş şeması. */
+.about {
+  padding-block: calc(var(--bar-h) + 1.6rem + env(safe-area-inset-top, 0px)) 7rem;
+  display: grid;
+  gap: clamp(3rem, 6vw, 5.5rem);
+}
+.about .crumbs {
+  margin-bottom: calc(-1 * clamp(2rem, 4.5vw, 4rem));
+}
+.about .crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+.about .crumbs li + li::before {
+  content: '/';
+  margin-right: 0.5rem;
+  opacity: 0.5;
+}
+.about .crumbs a {
+  text-decoration: none;
+}
+.about .crumbs a:hover {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.about .crumbs [aria-current] {
+  color: var(--amber);
+}
+
+/* başlık ve giriş; yanında ana sayfadaki gibi ışıklı portre */
+.ab-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: end;
+}
+.ab-head {
+  display: grid;
+  gap: 1.2rem;
+  min-width: 0;
+}
+.about .lit {
+  display: grid;
+  justify-items: center;
+  align-items: end;
+  padding-top: 3rem;
+  background: radial-gradient(42% 46% at 50% 40%, rgba(242, 169, 0, 0.16), transparent 70%), radial-gradient(60% 70% at 50% 45%, #1d1c1f, transparent 72%);
+}
+.about .lit img {
+  width: min(100%, 26rem);
+  height: auto;
+}
+.about .lit .desk {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--muted), transparent);
+}
+.ab-head .lbl {
+  margin: 0;
+  color: var(--amber);
+}
+.ab-head h1 {
+  margin: 0;
+  font: 900 clamp(2.3rem, 5.6vw, 5.6rem) / 0.92 var(--display);
+  font-stretch: 112%;
+  text-transform: uppercase;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.lede-xl {
+  margin: 0.6rem 0 0;
+  font: 500 clamp(1.15rem, 1.75vw, 1.6rem) / 1.42 var(--display);
+  color: var(--fg);
+  max-width: 54ch;
+  text-wrap: pretty;
+}
+.lede-xl b {
+  font-weight: 700;
+}
+
+/* metin ve yanındaki fotoğraflar */
+.ch {
+  display: grid;
+  grid-template-columns: minmax(0, 66ch) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: start;
+}
+.txt {
+  display: grid;
+  gap: 1.1rem;
+  min-width: 0;
+}
+.txt p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.7;
+}
+.txt b {
+  color: var(--fg);
+  font-weight: 600;
+}
+.txt h2 {
+  margin: 0 0 0.4rem;
+  padding-left: 0.8rem;
+  border-left: 3px solid var(--amber);
+  font: 800 clamp(1.3rem, 2vw, 1.7rem) / 1.15 var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+.figs {
+  display: grid;
+  gap: 2.4rem;
+  position: sticky;
+  top: calc(var(--bar-h) + 1.5rem + env(safe-area-inset-top, 0px));
+}
+.fig {
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  justify-items: center;
+  /* fotoğraf sütunun genişliğini ve ekranın yüksekliğini aşmaz, kendi boyundan büyümez (.ph) */
+  container-type: inline-size;
+  padding: 10px;
+}
+.ch > .fig {
+  position: sticky;
+  top: calc(var(--bar-h) + 1.5rem + env(safe-area-inset-top, 0px));
+}
+.about .ph {
+  width: min(100cqw, calc((100svh - var(--bar-h) - 5rem) * var(--ar)), var(--nw));
+}
+.about .vf {
+  --c: rgba(243, 240, 234, 0.4);
+  --l: 12px;
+  --w: 1px;
+  inset: -7px;
+}
+/* özgeçmiş şeması: tam genişlik, ekran yüksekliğiyle sınırlı değil (yazıları okunabilsin); tıklayınca kendi boyunda açılır */
+.fig.wide .ph {
+  width: min(100cqw, var(--nw));
+  display: block;
+  cursor: zoom-in;
+}
+.fig.wide .ph img {
+  filter: none;
+}
+
+@media (max-width: 960px) {
+  .ab-top {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .about .lit {
+    order: -1;
+    padding-top: 1rem;
+  }
+  .about .lit img {
+    width: min(70%, 18rem);
+  }
+  .ch {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ch > .fig,
+  .figs {
+    position: static;
+  }
+  .figs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+@media (max-width: 560px) {
+  .figs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

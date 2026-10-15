@@ -7,6 +7,23 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = <T extends Element = HTMLElement>(s: string, root: ParentNode = document) => root.querySelector<T>(s);
 const $$ = <T extends Element = HTMLElement>(s: string, root: ParentNode = document) => [...root.querySelectorAll<T>(s)];
 
+/*
+ * Sayfa içi bağlantılar (menüdeki "Rakamlarla" gibi): sabitlenen bölüm kaydırma boyunca ekranda kalır,
+ * tarayıcı onu o anki yerinde bulur. Aşağıdan gelince bu, bölümün sonu (son sahne) olur.
+ * Sabitlenen bölümler buraya kendi başlangıçlarına gitme yolunu kaydeder; bağlantı onu kullanır.
+ */
+const pinJump = new Map<string, () => void>();
+document.addEventListener('click', (e) => {
+  const a = (e.target as Element).closest<HTMLAnchorElement>('a[href*="#"]');
+  if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  const url = new URL(a.href);
+  const jump = url.pathname === location.pathname && pinJump.get(url.hash);
+  if (!jump) return;
+  e.preventDefault();
+  jump();
+  if (location.hash !== url.hash) history.pushState(null, '', url.hash);
+});
+
 /* 800 nokta: her biri bir kişi */
 const cv = $<HTMLCanvasElement>('[data-dots]');
 const cx = cv?.getContext('2d');
@@ -222,10 +239,17 @@ if (reduce) {
       }
       if (i === 0) tl.fromTo('.ruler .roles span', { scaleX: 0 }, { scaleX: 1, stagger: 0.12, duration: 0.3 }, 's0');
       if (i === 3) tl.from('.slides figure', { y: 30, autoAlpha: 0, stagger: 0.08, duration: 0.3 }, 's3');
-      tl.to({}, { duration: 0.45 });
+      tl.addLabel(`in${i}`).to({}, { duration: 0.45 });
     });
     // zaman çizelgesinin her birimi yarım ekran kaydırma: yıllar ve slaytlar önceki hızında kalır
-    ScrollTrigger.create({ animation: tl, trigger: '.s2', start: 'top top', end: `+=${Math.round(tl.duration() * 50)}%`, scrub: 0.8, pin: true });
+    const numST = ScrollTrigger.create({ animation: tl, trigger: '.s2', start: 'top top', end: `+=${Math.round(tl.duration() * 50)}%`, scrub: 0.8, pin: true });
+    // menüden ya da başka sayfadan "Rakamlarla"ya gelince: ilk sahne, yıl sayısı ve çizgisi dolmuş hâlde
+    const toNumbers = () => {
+      tl.time(tl.labels.in0);
+      scrollTo({ top: numST.start + (numST.end - numST.start) * tl.progress(), behavior: 'instant' });
+    };
+    pinJump.set('#numbers', toNumbers);
+    if (location.hash === '#numbers') requestAnimationFrame(toNumbers);
 
     // 3: her seferinde bir yer; kaydırma her yerin her fotoğrafından geçer
     fieldST = ScrollTrigger.create({
@@ -241,6 +265,7 @@ if (reduce) {
     return () => {
       allOn();
       fieldST = null;
+      pinJump.delete('#numbers');
     };
   });
   mm.add('(max-width: 860px)', () => {

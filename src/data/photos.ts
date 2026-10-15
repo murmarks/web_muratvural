@@ -22,8 +22,11 @@ export interface Photo {
  */
 const isArchiveFrame = ([w, h]: Size) => w === 1200 && h === 751;
 
-/** Küçük bir kolajdan büyütülmüş kareler (Vietnam, Phano semineri): onlar da arşiv görünümüyle gösterilir. */
-const enlarged = new Set(['vietnam-1', 'vietnam-2', 'vietnam-3']);
+/**
+ * Küçük bir kolajdan büyütülmüş kareler (Vietnam, Phano semineri) ve eski bir kompakt makinenin karesi
+ * (Hakkında sayfasındaki kürsü fotoğrafı): onlar da arşiv görünümüyle gösterilir.
+ */
+const enlarged = new Set(['vietnam-1', 'vietnam-2', 'vietnam-3', 'about/podium']);
 
 /** [genişlik, yükseklik, içerik özeti] */
 type Size = [number, number, string];

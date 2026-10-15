@@ -101,7 +101,7 @@ export const serviceHref = (lang: Locale, path: string) => `/${lang}/services/${
 /** Eski WordPress adresleri → yeni adresler (astro.config.mjs içinde kullanılır). Eski site İngilizceydi. */
 export function legacyServiceRedirects(): Record<string, string> {
   const lang = 'en' satisfies Locale;
-  const map: Record<string, string> = { '/menu': `/${lang}/services/`, '/our-services': `/${lang}/services/` };
+  const map: Record<string, string> = { '/menu': `/${lang}/services/`, '/our-services': `/${lang}/services/`, '/dr-murat-vural': `/${lang}/about/` };
   for (const s of flatServices) map[`/menu-${s.wp}`] = serviceHref(lang, s.path);
   return map;
 }

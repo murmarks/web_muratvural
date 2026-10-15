@@ -1,0 +1,88 @@
+---
+/**
+ * Hakkında: eski sitedeki "Dr. Murat Vural Kimdir?" sayfası, yeni tasarımda.
+ * Başlık ve ilk paragraf büyük, yanında ana sayfadaki ışıklı portre; kariyer metninin yanında kürsü fotoğrafı, ardından tam genişlikte özgeçmiş şeması;
+ * "Bugün" bölümünün yanında Vietnam fotoğrafları. Metin src/data/about.ts dosyasında.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { locales, useT, type Locale } from '../../i18n';
+import { about } from '../../data/about';
+import { heroPhotos } from '../../data/home';
+import type { Photo } from '../../data/photos';
+import { inline } from '../../lib/inline';
+import '../../styles/about.css';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang }, props: { lang } }));
+}
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const a = about[lang];
+const { podium, career, vietnam, map } = a.photos;
+const { portrait } = heroPhotos;
+const description = a.lede.replace(/<[^>]+>/g, '').slice(0, 180);
+const ph = (p: Photo) => `--ar:${(p.w / p.h).toFixed(4)};--nw:${p.w}px`;
+---
+
+<BaseLayout lang={lang} title={a.title} description={description}>
+  <article class="about wrap">
+    <nav class="crumbs mono" aria-label={t('here')}>
+      <ol>
+        <li><a href={`/${lang}/`}>{t('home')}</a></li>
+        <li aria-current="page">{t('founder')}</li>
+      </ol>
+    </nav>
+
+    <div class="ab-top">
+      <header class="ab-head">
+        <p class="mono lbl">{t('founder')}</p>
+        <h1>{a.title}</h1>
+        <p class="lede-xl" set:html={inline(a.lede)} />
+      </header>
+      <div class="lit" aria-hidden="true">
+        <img src={portrait.src} alt="" width={portrait.w} height={portrait.h} fetchpriority="high" />
+        <div class="desk"></div>
+      </div>
+    </div>
+
+    <section class="ch">
+      <div class="txt">{a.career.map((p) => <p set:html={inline(p)} />)}</div>
+      <figure class="fig">
+        <div class:list={['ph', { lo: podium.lo }]} style={ph(podium)}>
+          <img src={podium.src} alt={podium.cap} width={podium.w} height={podium.h} loading="lazy" decoding="async" />
+          <i class="vf"></i>
+        </div>
+      </figure>
+    </section>
+
+    <figure class="fig wide">
+      <a class="ph" style={ph(career)} href={career.src} target="_blank" rel="noopener" aria-label={`${career.cap} · ${t('openFull')}`}>
+        <img src={career.src} alt={career.cap} width={career.w} height={career.h} loading="lazy" decoding="async" />
+        <i class="vf"></i>
+      </a>
+    </figure>
+
+    <section class="ch" aria-labelledby="today-h">
+      <div class="txt">
+        <h2 id="today-h">{a.todayTitle}</h2>
+        {a.today.map((p) => <p set:html={inline(p)} />)}
+      </div>
+      <div class="figs">
+        {
+          [vietnam, map].map((p) => (
+            <figure class="fig">
+              <div class:list={['ph', { lo: p.lo }]} style={ph(p)}>
+                <img src={p.src} alt={p.cap} width={p.w} height={p.h} loading="lazy" decoding="async" />
+                <i class="vf" />
+              </div>
+            </figure>
+          ))
+        }
+      </div>
+    </section>
+  </article>
+</BaseLayout>

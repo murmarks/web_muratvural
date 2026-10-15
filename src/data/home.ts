@@ -96,4 +96,13 @@ export const areaPhotos: Record<string, Photo[]> = {
   d: ['d_1', 'd2_4', 'd1_4', 'd1_1', 'd4_1', 'd2_1'].map((n) => servicePhoto(n)),
 };
 
+/**
+ * Ana başlık: iki satır. Sayfa her açılışta bunlardan birini rastgele gösterir (bir önceki açılıştakini tekrar etmez).
+ * Yeni bir başlık eklemek için listeye bir satır daha eklemek yeter.
+ */
+export const heroTitles: { one: Text; two: Text }[] = [
+  { one: T('New markets.', 'Yeni pazarlar.'), two: T('Strong teams.', 'Güçlü ekipler.') },
+  { one: T('Different flags.', 'Farklı bayraklar.'), two: T('One team.', 'Tek ekip.') },
+];
+
 export const heroPhotos = { color: photo('team-color'), focus: photo('team-focus'), portrait: photo('portrait') };

@@ -1,5 +1,5 @@
 ---
-/** Menü: sarı perde açılır. Bölümler ana sayfada; hizmetler kendi sayfasında; iletişim her sayfanın sonunda. */
+/** Menü: sarı perde açılır. Bölümler ana sayfada; hizmetler ve hakkında kendi sayfalarında; iletişim her sayfanın sonunda. */
 import { useT, type Locale } from '../i18n';
 
 interface Props {
@@ -13,7 +13,7 @@ const items = [
   { href: `${home}#field`, label: t('field') },
   { href: `${home}#career`, label: t('career') },
   { href: `/${lang}/services/`, label: t('services') },
-  { href: `${home}#founder`, label: t('founder') },
+  { href: `/${lang}/about/`, label: t('founder') },
   { href: '#contact', label: t('contact') },
 ];
 ---
