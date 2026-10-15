@@ -127,41 +127,22 @@ function onShow(run: () => void) {
   else run();
 }
 const allOn = () => {
-  clist.forEach((li) => li.classList.add('on'));
+  clist.forEach((li) => {
+    li.classList.add('on');
+    li.classList.remove('now');
+  });
   $$('[data-count]').forEach((b) => (b.textContent = b.dataset.count ?? ''));
   drawDots(1);
 };
 
-/*
- * ülkeler: sahne açılınca tek tek, sayaç her ülkede bir artar.
- * Kaydırmaya değil zamana bağlı: ziyaretçi hızlı geçse de sıra görünür.
- */
-const COUNTRY_STEP = 0.13;
+/* ülkeler: kaydırdıkça tek tek yanar, sayaç her ülkede bir artar; sıra sürerken son yanan ülke sarıdır */
 const cNum = clist[0]?.closest('.scene')?.querySelector<HTMLElement>('[data-count]');
-const cState = { k: 0 };
-let cRun: gsap.core.Tween | null = null;
-// son gelen ülke bir an sarı yanar: sıranın nerede olduğu görünür
-const showCountries = (k: number, running = false) => {
+const showCountries = (k: number) => {
   clist.forEach((li, j) => {
     li.classList.toggle('on', j < k);
-    li.classList.toggle('now', running && j === k - 1);
+    li.classList.toggle('now', k < clist.length && j === k - 1);
   });
   if (cNum) cNum.textContent = String(k);
-};
-const playCountries = () => {
-  if (cRun?.isActive() || cState.k >= clist.length) return;
-  cRun = gsap.to(cState, {
-    k: clist.length,
-    duration: (clist.length - cState.k) * COUNTRY_STEP,
-    ease: 'none',
-    onUpdate: () => showCountries(Math.ceil(cState.k), true),
-    onComplete: () => showCountries(clist.length),
-  });
-};
-const resetCountries = () => {
-  cRun?.kill();
-  cState.k = 0;
-  showCountries(0);
 };
 
 if (reduce) {
@@ -208,28 +189,43 @@ if (reduce) {
     else hero.to('.s1 h1 .two', fill, '<.2');
     hero.to({}, { duration: 0.3 });
 
-    // 2: dört rakam, her biri kanıtıyla
+    /*
+     * 2: dört rakam, her biri kanıtıyla. Hepsi kaydırmaya bağlı: kaydırma durunca durur, yukarı çıkınca geri silinir.
+     * 800 nokta ve 19 ülke kaydırmayla doğru orantılı, sahne tam göründükten sonra ve okunacak kadar uzun bir kaydırmada dolar.
+     */
+    const DOTS_LEN = 2, COUNTRIES_LEN = 2.2;
     const scenes = $$('.scene'), ticks = $$('.s2 .ticks2 i');
-    const tl = gsap.timeline({ scrollTrigger: { trigger: '.s2', start: 'top top', end: '+=320%', scrub: 0.8, pin: true } });
-    const dotsP = { p: 0 };
-    resetCountries();
+    // alttaki dört çizgi, kaydırmanın hangi sahnede olduğunu gösterir (iki yönde de)
+    const tl = gsap.timeline({
+      paused: true,
+      onUpdate: () => {
+        let at = 0;
+        scenes.forEach((_, i) => { if (tl.time() >= tl.labels[`s${i}`]) at = i; });
+        ticks.forEach((tk, k) => tk.classList.toggle('on', k <= at));
+      },
+    });
+    const dotsP = { p: 0 }, cP = { k: 0 };
+    drawDots(0);
+    showCountries(0);
     scenes.forEach((s, i) => {
       const b = $('[data-count]', s)!, to = Number(b.dataset.count), o = { v: 0 };
-      if (i) tl.to(scenes[i - 1], { autoAlpha: 0, y: -40, duration: 0.25 }).fromTo(s, { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.35 }, '>');
-      if (i === 2) {
-        // ülkeler zamanla gelir (yukarıda); bu sahne kaydırmada okunacak kadar yer kaplar
-        tl.addLabel('countries', '<')
-          .call(() => (tl.time() >= tl.labels.countries ? playCountries() : resetCountries()), undefined, 'countries')
-          .to({}, { duration: 1.7 }, 'countries');
+      if (i) tl.to(scenes[i - 1], { autoAlpha: 0, y: -40, duration: 0.25 }).addLabel(`s${i}`).fromTo(s, { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.35 }, `s${i}`);
+      else tl.addLabel('s0', 0);
+      if (i === 1) {
+        // noktalar ve sayaç birlikte dolar
+        b.textContent = '0';
+        tl.fromTo(dotsP, { p: 0 }, { p: 1, duration: DOTS_LEN, ease: 'none', onUpdate: () => { drawDots(dotsP.p); b.textContent = String(Math.round(to * dotsP.p)); } }, '>');
+      } else if (i === 2) {
+        tl.fromTo(cP, { k: 0 }, { k: clist.length, duration: COUNTRIES_LEN, ease: 'none', onUpdate: () => showCountries(Math.round(cP.k)) }, '>');
       } else {
-        tl.fromTo(o, { v: 0 }, { v: to, duration: 0.7, ease: 'power1.out', onUpdate: () => { b.textContent = String(Math.round(o.v)); } }, i ? '<' : 0);
+        tl.fromTo(o, { v: 0 }, { v: to, duration: 0.7, ease: 'power1.out', onUpdate: () => { b.textContent = String(Math.round(o.v)); } }, `s${i}`);
       }
-      tl.call(() => ticks.forEach((tk, k) => tk.classList.toggle('on', k <= i)), undefined, '<');
-      if (i === 0) tl.fromTo('.ruler .roles span', { scaleX: 0 }, { scaleX: 1, stagger: 0.12, duration: 0.3 }, '<');
-      if (i === 1) tl.fromTo(dotsP, { p: 0 }, { p: 1, duration: 0.7, onUpdate: () => drawDots(dotsP.p) }, '<');
-      if (i === 3) tl.from('.slides figure', { y: 30, autoAlpha: 0, stagger: 0.08, duration: 0.3 }, '<');
+      if (i === 0) tl.fromTo('.ruler .roles span', { scaleX: 0 }, { scaleX: 1, stagger: 0.12, duration: 0.3 }, 's0');
+      if (i === 3) tl.from('.slides figure', { y: 30, autoAlpha: 0, stagger: 0.08, duration: 0.3 }, 's3');
       tl.to({}, { duration: 0.45 });
     });
+    // zaman çizelgesinin her birimi yarım ekran kaydırma: yıllar ve slaytlar önceki hızında kalır
+    ScrollTrigger.create({ animation: tl, trigger: '.s2', start: 'top top', end: `+=${Math.round(tl.duration() * 50)}%`, scrub: 0.8, pin: true });
 
     // 3: her seferinde bir yer; kaydırma her yerin her fotoğrafından geçer
     fieldST = ScrollTrigger.create({
@@ -243,7 +239,6 @@ if (reduce) {
       },
     });
     return () => {
-      cRun?.kill();
       allOn();
       fieldST = null;
     };
@@ -254,33 +249,32 @@ if (reduce) {
   });
 
   /*
-   * 4: kariyer: görevler birer birer gelir, çubuk kendi süresi kadar uzar.
-   * Satırlar ekrana birlikte girse de (hızlı kaydırma, uzun ekran) her biri öncekinden ROW_GAP saniye sonra başlar.
-   * Ekranın üstünde kalmış satır sıra beklemez, hemen görünür.
+   * Bundan sonrası da kaydırmaya bağlı: kaydırdıkça gelir, durunca durur, yukarı çıkınca geri silinir.
+   * 4: kariyer: her satır ekrana girerken gelir, çubuk kendi süresi kadar uzar; satırlar yukarıdan aşağıya sırayla.
    */
-  const ROW_GAP = 0.75;
-  let rowFree = 0;
+  const SCRUB = 0.6;
   $$('.gantt .row').forEach((row) => {
-    const tlr = gsap.timeline({ paused: true });
-    tlr.from($$('.who > *', row), { opacity: 0, y: 14, duration: 0.55, stagger: 0.09, ease: 'power2.out' })
-      .from($('.barx', row), { scaleX: 0, duration: 1.1, ease: 'power3.out' }, 0.2);
+    const tlr = gsap.timeline({ scrollTrigger: { trigger: row, start: 'top 92%', end: 'top 58%', scrub: SCRUB } });
+    tlr.from($$('.who > *', row), { opacity: 0, y: 14, duration: 0.5, stagger: 0.1, ease: 'none' })
+      // çubuk soldan açılır (sıkıştırılmaz): kaydırma ortada durunca içindeki yazı bozuk görünmez
+      .fromTo($('.barx', row), { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1, ease: 'none' }, 0.15);
     const meta = $('.meta', row);
-    if (meta) tlr.from(meta, { opacity: 0, duration: 0.5 }, '-=0.35');
-    ScrollTrigger.create({
-      trigger: row,
-      start: 'top 85%',
-      once: true,
-      onEnter: () => {
-        if (row.getBoundingClientRect().bottom < 0) return void tlr.progress(1);
-        const now = gsap.ticker.time, at = Math.max(now, rowFree);
-        rowFree = at + ROW_GAP;
-        gsap.delayedCall(at - now, () => tlr.play());
-      },
-    });
+    if (meta) tlr.from(meta, { opacity: 0, duration: 0.4, ease: 'none' }, '-=0.3');
   });
-  $$('.h2').forEach((h) => gsap.from(h, { yPercent: 30, opacity: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: h, start: 'top 88%' } }));
-  gsap.from('.area', { y: 40, opacity: 0, stagger: 0.08, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: '.areas', start: 'top 85%' } });
-  gsap.from('.lit img', { y: 40, opacity: 0, duration: 1.4, ease: 'expo.out', scrollTrigger: { trigger: '.lit', start: 'top 75%' } });
+  $$('.h2').forEach((h) => gsap.from(h, { yPercent: 30, opacity: 0, ease: 'none', scrollTrigger: { trigger: h, start: 'top 96%', end: 'top 72%', scrub: SCRUB } }));
+  $$('.area').forEach((a) => gsap.from(a, { y: 40, opacity: 0, ease: 'none', scrollTrigger: { trigger: a, start: 'top 96%', end: 'top 76%', scrub: SCRUB } }));
+  gsap.from('.lit img', { y: 40, opacity: 0, ease: 'none', scrollTrigger: { trigger: '.lit', start: 'top 92%', end: 'top 55%', scrub: SCRUB } });
+  // hizmet alanı açılıp kapanınca alttaki bölümler kayar; kaydırma noktaları yeniden ölçülür
+  const areasEl = $('.areas');
+  if (areasEl) {
+    let areasH = areasEl.offsetHeight, wait = 0;
+    new ResizeObserver(() => {
+      if (areasEl.offsetHeight === areasH) return;
+      areasH = areasEl.offsetHeight;
+      clearTimeout(wait);
+      wait = window.setTimeout(() => ScrollTrigger.refresh(), 250);
+    }).observe(areasEl);
+  }
   if (bio && words.length) {
     bio.classList.add('dim');
     litBio(0);
