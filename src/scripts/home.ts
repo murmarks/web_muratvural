@@ -26,6 +26,43 @@ function drawDots(p: number) {
 drawDots(1);
 const clist = $$('[data-clist] li');
 
+/* ana başlık: masaüstünde iki satır tek satırda sahne genişliğini doldurur; telefonda her satır kendi başına genişliği doldurur */
+const h1 = $('.s1 h1'), one = $('.s1 h1 .one'), two = $('.s1 h1 .two');
+function fitTitle() {
+  if (!h1 || !one || !two) return;
+  const W = h1.clientWidth;
+  if (!W) return;
+  h1.style.removeProperty('--fit');
+  h1.style.removeProperty('--fit1');
+  h1.style.removeProperty('--fit2');
+  // 100px'te metnin kendi genişliği ölçülür (kutunun değil), sonra orantıyla büyütülür
+  const textW = (el: HTMLElement) => {
+    const r = document.createRange();
+    r.selectNodeContents(el);
+    return r.getBoundingClientRect().width;
+  };
+  const probe = (el: HTMLElement) => {
+    const prev = el.style.fontSize;
+    el.style.fontSize = '100px';
+    const w = textW(el);
+    el.style.fontSize = prev;
+    return w;
+  };
+  if (getComputedStyle(h1).display === 'flex') {
+    h1.style.fontSize = '100px';
+    const w1 = textW(one), w2 = textW(two), gap = parseFloat(getComputedStyle(h1).columnGap) || 30;
+    h1.style.fontSize = '';
+    h1.style.setProperty('--fit', `${Math.min(((W - 2) / (w1 + w2 + gap)) * 100, 150).toFixed(2)}px`);
+  } else {
+    h1.style.setProperty('--fit1', `${(((W - 2) / probe(one)) * 100).toFixed(2)}px`);
+    h1.style.setProperty('--fit2', `${(((W - 2) / probe(two)) * 100).toFixed(2)}px`);
+  }
+}
+fitTitle();
+document.fonts?.ready.then(fitTitle);
+let fitW = 0;
+if (h1) new ResizeObserver(() => { if (h1.clientWidth !== fitW) { fitW = h1.clientWidth; fitTitle(); } }).observe(h1);
+
 /* sahadan: her yer kendi fotoğraflarıyla; kaydırdıkça bütün fotoğraflar sırayla gelir */
 const pics = $('[data-pics]');
 const figs = pics ? ([...pics.children] as HTMLElement[]) : [];
@@ -112,12 +149,12 @@ if (reduce) {
 
   const mm = gsap.matchMedia();
   mm.add('(min-width: 861px)', () => {
-    // 1: ışık liderden bütün ekibe yayılır, renk geri gelir
+    // 1: ışık liderden bütün ekibe yayılır, renk geri gelir; ikinci satır ışığın renginde dolar
     gsap
       .timeline({ scrollTrigger: { trigger: '.s1', start: 'top top', end: '+=100%', scrub: 1, pin: true } })
       .to(shade, { '--r': '120%', ease: 'power1.in', duration: 1 })
       .to(focus, { opacity: 0, ease: 'none', duration: 0.8 }, '<.2')
-      .to('.s1 h1 .two', { color: '#f3f0ea', webkitTextStroke: '0px', duration: 0.6 }, '<.2')
+      .to('.s1 h1 .two', { color: '#f2a900', webkitTextStroke: '0px', duration: 0.6 }, '<.2')
       .to({}, { duration: 0.3 });
 
     // 2: dört rakam, her biri kanıtıyla

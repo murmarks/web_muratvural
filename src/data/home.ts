@@ -9,17 +9,24 @@ type Text = Record<Locale, string>;
 const T = (en: string, tr: string): Text => ({ en, tr });
 
 /** Sahadan: her yer kendi fotoğraflarıyla. Altyazı "Ülke, Şehir" biçiminde. */
-export interface Place { country: Text; city: Text; what: Text; photos: Photo[] }
+export interface Place {
+  country: Text;
+  city: Text;
+  /** şehir adı yabancıysa büyük harfe o dilin kurallarıyla çevrilir (Ho Chi Minh City → CITY, CİTY değil) */
+  cityLang?: Locale;
+  what: Text;
+  photos: Photo[];
+}
 export const places: Place[] = [
-  { country: T('Kosovo', 'Kosova'), city: T('Pristina', 'Priştine'), what: T('Pharmaceutical training for the medical doctors in the team', 'Ekipteki hekimlere ilaç eğitimi'), photos: ['kosovo-b', 'kosovo-1', 'kosovo', 'kosovo-3'].map((n) => photo(n)) },
-  { country: T('Moldova', 'Moldova'), city: T('Chișinău', 'Kişinev'), what: T('Field managers training', 'Saha müdürleri eğitimi'), photos: [photo('moldova')] },
-  { country: T('Azerbaijan', 'Azerbaycan'), city: T('Baku', 'Bakü'), what: T('Annual basic sciences training for the field teams', 'Saha ekiplerine yıllık temel bilimler eğitimi'), photos: [photo('azerbaijan'), photo('azerbaijan-2')] },
-  { country: T('Georgia', 'Gürcistan'), city: T('Tbilisi', 'Tiflis'), what: T('Training seminar for medical doctors', 'Hekimler için eğitim semineri'), photos: [photo('georgia')] },
-  { country: T('Croatia', 'Hırvatistan'), city: T('Zagreb', 'Zagreb'), what: T('Training seminar for medical doctors', 'Hekimler için eğitim semineri'), photos: [photo('croatia')] },
-  { country: T('Bosnia and Herzegovina', 'Bosna-Hersek'), city: T('Sarajevo', 'Saraybosna'), what: T('Working with the local team at the office', 'Yerel ekiple ofiste çalışma'), photos: [photo('bosnia')] },
+  { country: T('Kosovo', 'Kosova'), city: T('Pristina', 'Priştine'), what: T('Pharmaceutical training for the physicians on the team', 'Ekipteki hekimlere ilaç eğitimi'), photos: [photo('kosovo-1')] },
+  { country: T('Moldova', 'Moldova'), city: T('Chișinău', 'Kişinev'), what: T('Training for field managers', 'Saha müdürleri eğitimi'), photos: [photo('moldova')] },
+  { country: T('Azerbaijan', 'Azerbaycan'), city: T('Baku', 'Bakü'), what: T('Annual basic-science training for the field teams', 'Saha ekiplerine yıllık temel bilimler eğitimi'), photos: [photo('azerbaijan')] },
+  { country: T('Georgia', 'Gürcistan'), city: T('Tbilisi', 'Tiflis'), what: T('Training seminar for physicians', 'Hekimler için eğitim semineri'), photos: [photo('georgia')] },
+  { country: T('Croatia', 'Hırvatistan'), city: T('Zagreb', 'Zagreb'), what: T('Training seminar for physicians', 'Hekimler için eğitim semineri'), photos: [photo('croatia')] },
+  { country: T('Bosnia and Herzegovina', 'Bosna-Hersek'), city: T('Sarajevo', 'Saraybosna'), what: T('With the local team at the office', 'Yerel ekiple ofiste çalışma'), photos: [photo('bosnia')] },
   { country: T('Libya', 'Libya'), city: T('Tripoli', 'Trablus'), what: T('Pharmacy visit in the field', 'Sahada eczane ziyareti'), photos: [photo('libya')] },
-  { country: T('Türkiye', 'Türkiye'), city: T('Antalya', 'Antalya'), what: T('Sales techniques training for the field teams', 'Saha ekiplerine satış teknikleri eğitimi'), photos: ['antalya-1', 'antalya-2', 'antalya-3', 'antalya-4'].map((n) => photo(n)) },
-  { country: T('Vietnam', 'Vietnam'), city: T('Ho Chi Minh City', 'Ho Chi Minh City'), what: T('Southeast Asia operations and product registration', 'Güneydoğu Asya operasyonları ve ürün ruhsatlandırma'), photos: [photo('vietnam')] },
+  { country: T('Türkiye', 'Türkiye'), city: T('Antalya', 'Antalya'), what: T('Sales techniques training for the field teams', 'Saha ekiplerine satış teknikleri eğitimi'), photos: ['antalya-1', 'antalya-3', 'antalya-4'].map((n) => photo(n)) },
+  { country: T('Vietnam', 'Vietnam'), city: T('Ho Chi Minh City', 'Ho Chi Minh City'), cityLang: 'en', what: T('Training seminar for the Phano pharmacy chain', 'Phano eczane zinciri için eğitim semineri'), photos: ['vietnam-1', 'vietnam-2', 'vietnam-3'].map((n) => photo(n)) },
 ];
 
 /** Aynı satış teknikleri slaytı, anlatıldığı beş dilde */
@@ -41,13 +48,24 @@ export const countryNames: Record<string, Text> = {
   Bulgaria: T('Bulgaria', 'Bulgaristan'),
 };
 
-export interface Role { years: number; company: string; /** şirket adının dili (büyük harfe çevirirken İ/I doğru olsun) */ companyLang?: Locale; role: Text; detail: Text; people?: number; countries: string[]; from: number; to: number }
+/**
+ * Şirket adı: marka kısmı ve sayfanın dilinde yazılan tür eki (İlaç / Pharmaceuticals).
+ * `lang`, markanın büyük harfe çevrilirken hangi dilin kurallarına uyacağını söyler (İ/I);
+ * verilmezse sayfanın dili kullanılır (Bilim: Türkçe sayfada BİLİM, İngilizce sayfada BILIM).
+ */
+export interface Company { brand: string; lang?: Locale; kind?: Text }
+const pharma = T('Pharmaceuticals', 'İlaç');
+const nutrifarma: Company = { brand: 'NutriFarma H.P. Inc.', lang: 'en' };
+const bilim: Company = { brand: 'Bilim', kind: pharma };
+const worldMedicine: Company = { brand: 'World Medicine', lang: 'en', kind: pharma };
+
+export interface Role { years: number; company: Company; role: Text; detail: Text; people?: number; countries: string[]; from: number; to: number }
 const roles: Omit<Role, 'from' | 'to'>[] = [
-  { years: 3, company: 'NutriFarma H.P. Inc.', companyLang: 'en', role: T('Marketing Planning Manager', 'Pazarlama Planlama Müdürü'), detail: T('Annual business plan, marketing and advertising, international relations', 'Yıllık iş planı, pazarlama ve reklam, uluslararası ilişkiler'), countries: ['Turkey'] },
-  { years: 1, company: 'Bilim İlaç', companyLang: 'tr', role: T('Business Development Manager', 'İş Geliştirme Müdürü'), detail: T('New partnerships, training foreign teams, international logistics and registrations', 'Yeni iş birlikleri, yabancı ekiplerin eğitimi, uluslararası lojistik ve ruhsatlandırma'), countries: ['Turkey'] },
-  { years: 3, company: 'Bilim İlaç', companyLang: 'tr', role: T('International Marketing Manager', 'Uluslararası Pazarlama Müdürü'), people: 350, detail: T('Managing the country sales and marketing teams', 'Ülke satış ve pazarlama ekiplerinin yönetimi'), countries: ['Croatia', 'Georgia', 'Kosovo', 'Libya', 'Turkmenistan', 'Moldova', 'Yemen', 'Azerbaijan', 'Bosnia'] },
-  { years: 7, company: 'World Medicine', companyLang: 'en', role: T('International Sales & Marketing Director', 'Uluslararası Satış ve Pazarlama Direktörü'), people: 800, detail: T('Managing the country sales and marketing teams', 'Ülke satış ve pazarlama ekiplerinin yönetimi'), countries: ['Vietnam', 'Ukraine', 'Georgia', 'Kosovo', 'Libya', 'Turkmenistan', 'Kyrgyzstan', 'Tajikistan', 'Armenia', 'Moldova', 'Yemen', 'Azerbaijan', 'Bosnia', 'Uzbekistan', 'Belarus', 'Kazakhstan', 'Iraq', 'Bulgaria'] },
-  { years: 6, company: 'World Medicine', companyLang: 'en', role: T('World Regional Director', 'Dünya Bölge Direktörü'), detail: T('Southeast Asia operations, supervising product registration', 'Güneydoğu Asya operasyonları, ürün ruhsatlandırma yönetimi'), countries: ['Vietnam'] },
+  { years: 3, company: nutrifarma, role: T('Marketing Planning Manager', 'Pazarlama Planlama Müdürü'), detail: T('Annual business plan, marketing and advertising, international relations', 'Yıllık iş planı, pazarlama ve reklam, uluslararası ilişkiler'), countries: ['Turkey'] },
+  { years: 1, company: bilim, role: T('Business Development Manager', 'İş Geliştirme Müdürü'), detail: T('New partnerships, training of foreign teams, international logistics and registrations', 'Yeni iş birlikleri, yabancı ekiplerin eğitimi, uluslararası lojistik ve ruhsatlandırma'), countries: ['Turkey'] },
+  { years: 3, company: bilim, role: T('International Marketing Manager', 'Uluslararası Pazarlama Müdürü'), people: 350, detail: T('Managing the country sales and marketing teams', 'Ülke satış ve pazarlama ekiplerinin yönetimi'), countries: ['Croatia', 'Georgia', 'Kosovo', 'Libya', 'Turkmenistan', 'Moldova', 'Yemen', 'Azerbaijan', 'Bosnia'] },
+  { years: 7, company: worldMedicine, role: T('International Sales & Marketing Director', 'Uluslararası Satış ve Pazarlama Direktörü'), people: 800, detail: T('Building sales and marketing organisations from scratch and running them', 'Satış ve pazarlama organizasyonlarının sıfırdan kurulması ve yönetimi'), countries: ['Vietnam', 'Ukraine', 'Georgia', 'Kosovo', 'Libya', 'Turkmenistan', 'Kyrgyzstan', 'Tajikistan', 'Armenia', 'Moldova', 'Yemen', 'Azerbaijan', 'Bosnia', 'Uzbekistan', 'Belarus', 'Kazakhstan', 'Iraq', 'Bulgaria'] },
+  { years: 6, company: worldMedicine, role: T('World Regional Director', 'Dünya Bölge Direktörü'), detail: T('Southeast Asia operations, supervising product registrations', 'Güneydoğu Asya operasyonları, ürün ruhsatlarının yönetimi'), countries: ['Vietnam'] },
 ];
 /** Kariyer, yirmi yıllık çizgide yerleriyle (1. yıldan 20. yıla) */
 export const career: Role[] = (() => {
@@ -57,7 +75,7 @@ export const career: Role[] = (() => {
 export const careerYears = career.reduce((s, r) => s + r.years, 0);
 
 /** Çalışılan şirketler, ilk görüldükleri sırayla */
-export const companies = [...new Map(career.map((r) => [r.company, { name: r.company, lang: r.companyLang }])).values()];
+export const companies = [...new Set(career.map((r) => r.company))];
 
 /** Türkiye dışında çalışılan ülkeler, ilk görüldükleri sırayla */
 export const abroad = [...new Set(career.flatMap((r) => r.countries))].filter((c) => c !== 'Turkey');

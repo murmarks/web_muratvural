@@ -22,6 +22,9 @@ export interface Photo {
  */
 const isArchiveFrame = ([w, h]: [number, number]) => w === 1200 && h === 751;
 
+/** Küçük bir kolajdan büyütülmüş kareler (Vietnam, Phano semineri): onlar da arşiv görünümüyle gösterilir. */
+const enlarged = new Set(['vietnam-1', 'vietnam-2', 'vietnam-3']);
+
 const SIZES = sizes as unknown as Record<string, [number, number]>;
 
 /** `photo('kosovo')`, `photo('services/a1_1')` */
@@ -35,7 +38,7 @@ export function photo(name: string, cap?: string): Photo {
     th: `/photos/${dir}t/${base}.webp`,
     w: size[0],
     h: size[1],
-    lo: isArchiveFrame(size),
+    lo: isArchiveFrame(size) || enlarged.has(name),
     cap,
   };
 }

@@ -86,8 +86,9 @@
   display: flex;
   justify-content: space-between;
   gap: 0.3em;
-  flex-wrap: wrap;
-  font: 900 clamp(2.1rem, 5.05vw, 6.4rem) / 0.9 var(--display);
+  white-space: nowrap;
+  /* iki satır tek satırda, sahnenin genişliğini tam doldurur: --fit betikte ölçülür, yoksa yaklaşık değer */
+  font: 900 var(--fit, clamp(1.6rem, 4.2vw, 5.6rem)) / 0.9 var(--display);
   font-stretch: 125%;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -811,12 +812,20 @@
     flex-direction: column;
     gap: 0.3rem;
   }
+  /* telefonda iki satır; her satır kendi boyunda genişliği doldurur, kelimeler bölünmez */
   .s1 h1 {
-    font-size: 10.2vw;
     display: block;
+    font-size: 7vw;
   }
   .s1 h1 span {
     display: block;
+  }
+  .s1 h1 .one {
+    font-size: var(--fit1, 6.4vw);
+  }
+  .s1 h1 .two {
+    font-size: var(--fit2, 13.6vw);
+    margin-top: 0.14em;
   }
   .scroll-hint {
     display: none;

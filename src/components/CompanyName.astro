@@ -1,0 +1,13 @@
+---
+/** Şirket adı: marka kendi dilinin büyük harf kurallarıyla, tür eki (İlaç / Pharmaceuticals) sayfanın dilinde. */
+import type { Locale } from '../config/site';
+import type { Company } from '../data/home';
+
+interface Props {
+  company: Company;
+  lang: Locale;
+}
+const { company: c, lang } = Astro.props;
+---
+
+<span lang={c.lang ?? lang}>{c.brand}</span>{c.kind && <>{' '}<span lang={lang}>{c.kind[lang]}</span></>}
