@@ -4,12 +4,13 @@
 .s1 {
   /*
    * Başlık iki satır, bölüm başlıklarıyla aynı boyda.
-   * Fotoğraf sayfanın geri kalanı gibi ekran genişliğiyle büyür; kenarları alttaki rakamlar bölümüyle aynı hizada (4vw).
-   * Yalnız ekran kısaysa, fotoğrafın tamamı ve başlığın ilk satırı ilk ekrana sığacak kadar büyür
-   * (fotoğraf kırpılmaz); ikinci satır kaydırınca gelir.
+   * Fotoğraf her ekranda sayfanın geri kalanı gibi ekran genişliğiyle büyür; kenarları alttaki rakamlar bölümüyle
+   * aynı hizada (4vw). Ekran yüksekliğine göre daraltılmaz (kısa ekranda daralıp alttaki bölümlerden dar kalıyordu);
+   * fotoğraf kırpılmaz, ekrana sığmayan başlık satırları kaydırınca gelir (home.ts).
+   * Tek sınır: 21:9 gibi çok yayvan ekranda fotoğrafın kendisi ekrandan uzun olmasın.
    */
   --h1: clamp(2.3rem, 5.6vw, 5.6rem);
-  --stage-w: min(calc(100cqw - 8vw), calc((100svh - 9rem - var(--h1)) * 2.249));
+  --stage-w: min(calc(100cqw - 8vw), calc((100svh - 3rem) * 2.249));
   container-type: inline-size;
   position: relative;
   min-height: 100svh;

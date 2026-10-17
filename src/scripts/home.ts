@@ -169,16 +169,23 @@ if (reduce) {
 } else {
   gsap.registerPlugin(ScrollTrigger);
   /*
-   * Geniş ve kısa ekranda fotoğraf genişliğe göre büyüdüğü için başlığın ikinci satırı ilk ekranın altında kalır
-   * (CSS: .s1). O zaman ikinci satır ilk ekranda hiç görünmez (yarısı kesik durmasın), kaydırınca gelir.
+   * Fotoğraf her ekranda alttaki bölümler kadar geniştir (CSS: .s1), yüksekliğe göre daraltılmaz.
+   * Ekran kısaysa başlığın satırları ilk ekranın altında kalır: altta kalan satır ilk ekranda hiç görünmez
+   * (yarısı kesik durmasın), kaydırınca gelir. Fotoğrafın altı da ekrana sığmıyorsa sayfa önce o kadar kayar,
+   * ışık fotoğrafın tamamı görünürken yayılır.
    */
-  const s1 = $('.s1')!;
-  const heroTall = !narrow.matches && s1.offsetHeight > innerHeight + 1;
+  const s1 = $('.s1')!, stage = $('.stage')!;
+  const lines = $$<HTMLElement>('.s1 h1 > span');
+  const below = (el: Element) => !narrow.matches && el.getBoundingClientRect().bottom + scrollY > innerHeight + 1;
+  const late = lines.filter(below);
+  const heroTall = late.length > 0;
+  const pinShift = narrow.matches ? 0 : Math.max(0, Math.ceil(stage.getBoundingClientRect().bottom + scrollY + 12 - innerHeight));
   // perde açılır; ışık lideri bulur. Sayfa dil düğmesi için arka planda hazırlandıysa, ekrana gelince başlar.
   onShow(() => {
     gsap.to('.cur.l, .cur.r', { scaleX: 0, duration: 1.6, ease: 'expo.inOut', delay: 0.2 });
     if (shade) gsap.fromTo(shade, { '--r': '3%' }, { '--r': '9%', duration: 2, ease: 'expo.out', delay: 0.9 });
-    gsap.from(heroTall ? '.s1 h1 .one' : '.s1 h1 > span', { yPercent: 70, opacity: 0, duration: 1.2, stagger: 0.12, ease: 'expo.out', delay: 0.9 });
+    const early = lines.filter((l) => !late.includes(l));
+    if (early.length) gsap.from(early, { yPercent: 70, opacity: 0, duration: 1.2, stagger: 0.12, ease: 'expo.out', delay: 0.9 });
     gsap.from('.s1 .kicker, .s1 .sub', { opacity: 0, duration: 1, delay: 1.3 });
   });
 
@@ -186,24 +193,26 @@ if (reduce) {
   mm.add('(min-width: 861px)', () => {
     /*
      * 1: ışık liderden bütün ekibe yayılır, renk geri gelir; başlığın ikinci satırı ışığın renginde dolar.
-     * İkinci satır ilk ekranın altındaysa (heroTall): ışık fotoğrafın tamamı görünürken yayılır,
-     * ikinci satır kaydırınca ekrana girerken belirir ve dolar.
+     * Başlığın satırları ilk ekranın altındaysa (heroTall): ışık fotoğrafın tamamı görünürken yayılır,
+     * altta kalan satırlar kaydırınca ekrana girerken belirir; ikinci satır o sırada dolar.
      */
+    const two = $('.s1 h1 .two')!;
     const fill = { color: '#f2a900', webkitTextStroke: '0px', duration: 0.6 };
-    if (heroTall) gsap.set('.s1 h1 .two', { opacity: 0, yPercent: 40 });
+    if (heroTall) gsap.set(late, { opacity: 0, yPercent: 40 });
     const hero = gsap
-      .timeline({ scrollTrigger: { trigger: s1, start: 'top top', end: heroTall ? '+=70%' : '+=100%', scrub: 1, pin: true } })
+      .timeline({ scrollTrigger: { trigger: s1, start: `top top-=${pinShift}`, end: `+=${heroTall ? 70 : 100}%`, scrub: 1, pin: true } })
       .to(shade, { '--r': '120%', ease: 'power1.in', duration: 1 })
       .to(focus, { opacity: 0, ease: 'none', duration: 0.8 }, '<.2');
-    if (heroTall)
-      gsap.to('.s1 h1 .two', {
-        ...fill,
+    late.forEach((l) =>
+      gsap.to(l, {
+        ...(l === two ? fill : {}),
         opacity: 1,
         yPercent: 0,
         ease: 'none',
-        scrollTrigger: { trigger: '.s1 h1 .two', pinnedContainer: s1, start: 'top bottom', end: 'bottom 72%', scrub: 1 },
-      });
-    else hero.to('.s1 h1 .two', fill, '<.2');
+        scrollTrigger: { trigger: l, pinnedContainer: s1, start: 'top bottom', end: 'bottom 72%', scrub: 1 },
+      }),
+    );
+    if (!late.includes(two)) hero.to(two, fill, '<.2');
     hero.to({}, { duration: 0.3 });
 
     /*

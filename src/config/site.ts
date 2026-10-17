@@ -26,9 +26,9 @@ export const site = {
    */
   brand: 'personal' as 'personal' | 'pebuc',
   contact: {
-    email: 'contact@pebuc.site',
-    whatsapp: '+84779278114',
-    whatsappLabel: '(+84) 77 92 78 114',
+    email: 'contact@muratvural.com',
+    whatsapp: '+84934000150',
+    whatsappLabel: '+84 934 000 150',
     timeZone: 'UTC+07:00',
   },
 };
