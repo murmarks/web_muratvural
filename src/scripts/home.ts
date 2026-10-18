@@ -106,11 +106,16 @@ function setSlot(i: number, k: number) {
 }
 
 let fieldST: ScrollTrigger | null = null;
+/** efektli gösterimde geçiş sürerken kaydırmayı tutan dinleyicileri kaldırır */
+let unhold = () => {};
+/** efektli gösterimde listeden ya da küçük resimden seçilen fotoğrafa tek geçişle gider */
+let fxJump: ((slot: number) => void) | null = null;
 /** efektli gösterimde fotoğrafın kaydırma payının başı yerinde durduğu kısımdır; ortası değil başı hedeflenir */
 let slotAim = 0.5;
 function jumpPlace(i: number, k = 0) {
   if (!fieldST) return setSlot(i, k);
   const s0 = SLOTS.findIndex((x) => x[0] === i && x[1] === k);
+  fxJump?.(s0);
   const y = fieldST.start + (fieldST.end - fieldST.start) * ((s0 + slotAim) / SLOTS.length);
   scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
 }
@@ -279,28 +284,96 @@ if (reduce) {
     const viewer = $('[data-viewer]');
     const fx = viewer?.dataset.fx ? fieldFx(viewer, viewer.dataset.fx as FxMode) : null;
     if (fx) {
-      // 3 (efektli): fotoğraflar arasındaki geçiş kaydırmayla ilerler; ilk fotoğraf bölüm ekrana girerken gelir
-      slotAim = 0.2;
-      const st = { pos: 0, enter: 0 };
+      /*
+       * 3 (efektli): kaydırma hangi fotoğrafın gösterileceğini seçer, geçiş ise kendi hızında oynar.
+       * Sahibinin isteği: hızlı kaydırınca efekt bir kırpışma gibi kaçmasın. Geçiş oynarken sayfa olduğu yerde
+       * bekler (tekerlek, dokunma ve klavye kaydırması tutulur), bitince kaydırma her zamanki hızıyla sürer.
+       */
+      slotAim = 0.15;
+      const N = SLOTS.length;
+      const D = 1.4; // bir geçişin süresi (sn)
+      const v = { lo: 0, hi: 0, t: 0, enter: 0, sp: 0 };
+      let at = 0, target = 0, inside = false;
+      let run: gsap.core.Tween | null = null;
       const paint = () => {
-        const r = fx.render(st.pos, st.enter);
+        const r = fx.render(v);
         ambs.forEach((im, j) => (im.style.opacity = String(j === r.from && j === r.to ? 1 : j === r.from ? 1 - r.t : j === r.to ? r.t : 0)));
         if (r.place !== cur.place || r.photo !== cur.photo) {
           if (r.place !== cur.place) placeItems.forEach((li, j) => li.classList.toggle('on', j === r.place));
           showAlt(figs[r.place], r.photo);
         }
       };
-      gsap.fromTo(st, { enter: 0 }, { enter: 1, ease: 'none', onUpdate: paint, scrollTrigger: { trigger: viewer, start: 'top 85%', end: 'top top', scrub: 0.6 } });
-      const tw = gsap.fromTo(st, { pos: 0 }, { pos: SLOTS.length - 0.001, ease: 'none', onUpdate: paint });
+      // ilk fotoğraf: bölüm ekrana girerken kendi hızında gelir, yukarı dönülünce kendi hızında çekilir
+      const enterTw = gsap.to(v, { enter: 1, duration: D, ease: 'power1.inOut', paused: true, onUpdate: paint, onComplete: () => step(), onReverseComplete: paint });
+      const enterST = ScrollTrigger.create({ trigger: viewer, start: 'top 70%', onEnter: () => enterTw.play(), onLeaveBack: () => enterTw.reverse() });
+      // sıradaki fotoğrafa geç; kaydırma birkaç fotoğraf birden atladıysa (kaydırma çubuğu, listeden seçim) doğrudan oraya
+      const step = (direct = false) => {
+        if (run || enterTw.isActive() || target === at) return;
+        const to = direct || Math.abs(target - at) > 2 ? target : at + Math.sign(target - at);
+        const fwd = to > at;
+        v.lo = Math.min(at, to);
+        v.hi = Math.max(at, to);
+        v.t = fwd ? 0 : 1;
+        run = gsap.to(v, {
+          t: fwd ? 1 : 0,
+          duration: D,
+          ease: 'power1.inOut',
+          onUpdate: paint,
+          onComplete: () => {
+            at = to;
+            Object.assign(v, { lo: to, hi: to, t: 0 });
+            run = null;
+            paint();
+            step();
+          },
+        });
+      };
       fieldST = ScrollTrigger.create({
-        animation: tw,
         trigger: viewer,
         start: 'top top',
-        end: () => `+=${innerHeight * 0.6 * SLOTS.length}`,
+        end: () => `+=${innerHeight * 0.5 * N}`,
         pin: true,
-        scrub: 0.6,
+        onUpdate: (s) => {
+          v.sp = s.progress * N;
+          target = Math.min(N - 1, Math.floor(v.sp));
+          // bölüme aşağıdan girilince ya da sayfa bölümün ortasında açılınca o konumun fotoğrafı animasyonsuz yerinde durur
+          if (s.isActive && !inside && !run && target !== at && (s.direction < 0 || Math.abs(target - at) > 2)) {
+            enterTw.progress(1).pause();
+            at = target;
+            Object.assign(v, { lo: at, hi: at, t: 0 });
+          }
+          inside = s.isActive;
+          if (run || enterTw.isActive()) return;
+          if (target !== at) step();
+          else paint();
+        },
         onRefresh: () => fx.measure(),
       });
+      // geçiş sürerken sayfa bekler; bölümün dışında hiçbir şey tutulmaz
+      const busy = () => !!fieldST?.isActive && (!!run || enterTw.isActive());
+      const hold = (e: Event) => { if (busy() && e.cancelable) e.preventDefault(); };
+      const KEYS = new Set([' ', 'ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End']);
+      const holdKey = (e: KeyboardEvent) => {
+        if (KEYS.has(e.key) && !(e.target as Element).closest?.('input, textarea, select, [contenteditable]')) hold(e);
+      };
+      addEventListener('wheel', hold, { passive: false });
+      addEventListener('touchmove', hold, { passive: false });
+      addEventListener('keydown', holdKey);
+      fxJump = (slot) => {
+        target = slot;
+        step(true);
+      };
+      unhold = () => {
+        removeEventListener('wheel', hold);
+        removeEventListener('touchmove', hold);
+        removeEventListener('keydown', holdKey);
+        run?.kill();
+        enterTw.kill();
+        enterST.kill();
+        fxJump = null;
+        unhold = () => {};
+      };
+      paint();
     } else fieldST = ScrollTrigger.create({
       trigger: '[data-viewer]',
       start: 'top top',
@@ -313,6 +386,7 @@ if (reduce) {
     });
     return () => {
       allOn();
+      unhold();
       fx?.destroy();
       slotAim = 0.5;
       fieldST = null;
@@ -322,6 +396,34 @@ if (reduce) {
   mm.add('(max-width: 860px)', () => {
     allOn();
     onShow(() => gsap.timeline({ delay: 2.6 }).to(shade, { '--r': '120%', duration: 2.4, ease: 'power2.inOut' }).to(focus, { opacity: 0, duration: 1.6 }, '<.4'));
+    // 3, telefonda tül: her yerin fotoğrafı ekrana girerken kendi hızında iner; küçük resimle değişince yenisi iner
+    if ($('[data-viewer]')?.dataset.fx !== 'tul') return;
+    const img = (f: HTMLElement) => $<HTMLImageElement>('.shots > .ph.on img', f);
+    const drape = (el: HTMLElement | null) => el && gsap.fromTo(el, { '--dp': 1 }, { '--dp': 0, duration: 1.4, ease: 'power1.inOut', overwrite: true });
+    const shown = new Set<HTMLElement>();
+    const last = new Map<HTMLElement, number>(); // yerin şu an gösterilen fotoğrafı
+    const sts = figs.map((f) => {
+      gsap.set($$('.shots > .ph img', f), { '--dp': 1 });
+      return ScrollTrigger.create({
+        trigger: f,
+        start: 'top 78%',
+        onEnter: () => (shown.add(f), last.set(f, Number($('[data-alt][aria-current="true"]', f)?.dataset.alt ?? 0)), drape(img(f))),
+        onLeaveBack: () => (shown.delete(f), gsap.to($$('.shots > .ph img', f), { '--dp': 1, duration: 0.8, ease: 'power1.inOut', overwrite: true })),
+      });
+    });
+    const onPhoto = (e: Event) => {
+      const f = e.currentTarget as HTMLElement;
+      const k = (e as CustomEvent<number>).detail;
+      if (!shown.has(f) || last.get(f) === k) return;
+      last.set(f, k);
+      drape(img(f));
+    };
+    figs.forEach((f) => f.addEventListener('photo', onPhoto));
+    return () => {
+      sts.forEach((st) => st.kill());
+      figs.forEach((f) => f.removeEventListener('photo', onPhoto));
+      $$('.s3 .shots > .ph img').forEach((el) => el.style.removeProperty('--dp'));
+    };
   });
 
   /*

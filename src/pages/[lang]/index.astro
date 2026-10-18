@@ -14,6 +14,7 @@ import { locales, useT, type Locale } from '../../i18n';
 import { serviceHref, services } from '../../data/services';
 import { abroad, areaIntro, areaPhotos, career, careerYears, companies, countryNames, heroPhotos, heroTitles, places, slides } from '../../data/home';
 import { inline } from '../../lib/inline';
+import { site } from '../../config/site';
 import '../../styles/home.css';
 
 export function getStaticPaths() {
@@ -30,6 +31,8 @@ const plus = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-
 const { color, focus, portrait } = heroPhotos;
 const peopleMax = Math.max(...career.map((r) => r.people ?? 0));
 const titles = heroTitles.map((h) => [h.one[lang], h.two[lang]]);
+// sahadan fotoğrafların efekti: ayardan; önizleme derlemesinde FX ortam değişkeniyle değiştirilebilir
+const fx = process.env.FX || site.fieldEffect;
 ---
 
 <BaseLayout lang={lang}>
@@ -113,7 +116,7 @@ const titles = heroTitles.map((h) => [h.one[lang], h.two[lang]]);
       <h2 class="h2" id="field-h" set:html={t('fieldTitle')} />
       <p class="lede">{t('fieldNote')}</p>
     </div>
-    <div class="viewer" data-viewer data-fx={process.env.FX || undefined}>
+    <div class="viewer" data-viewer data-fx={fx === 'none' ? undefined : fx}>
       <div class="amb" aria-hidden="true">{places.map((pl, i) => <img src={pl.photos[0].th} alt="" class:list={{ on: i === 0 }} loading="lazy" />)}</div>
       <div class="pics" data-pics>
         {

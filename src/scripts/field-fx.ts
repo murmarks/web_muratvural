@@ -1,7 +1,7 @@
 /**
  * Sahadan fotoğraflarına efekt: düzen aynı kalır, fotoğraf WebGL ile çizilir.
- * Kaydırma konumu iki fotoğraf arasındaki geçişin ne kadar ilerlediğini söyler; geçiş kaydırmayla ilerler,
- * kaydırma durunca durur, yukarı çıkınca geri sarar.
+ * Kaydırma hangi fotoğrafın gösterileceğini seçer; iki fotoğraf arasındaki geçiş ise kendi hızında oynar
+ * (sahibinin isteği: hızlı kaydırınca efekt bir kırpışma gibi kaçmasın). Zamanlama home.ts'de.
  *
  * Seçenekler (viewer'daki data-fx):
  *  - tul:    yeni fotoğraf tül gibi dalgalanarak iner, önce saydamdır, sonra düzleşip yerine oturur
@@ -142,6 +142,14 @@ void main() {
   gl_FragColor = vec4(clamp(c, 0.0, 1.0) * alpha, alpha);
 }`;
 
+export interface View {
+  lo: number;
+  hi: number;
+  t: number;
+  enter: number;
+  sp: number;
+}
+
 interface Item {
   el: HTMLElement;
   place: number;
@@ -221,7 +229,7 @@ export function fieldFx(viewer: HTMLElement, mode: FxMode) {
     });
   };
 
-  let last = { pos: 0, enter: 1 };
+  let last: View = { lo: 0, hi: 0, t: 0, enter: 1, sp: 0 };
   // resim çizilemezse (başka kaynaktan gelen dosya vb.) efekt kapanır, fotoğraflar her zamanki gibi görünür
   const fail = () => {
     delete viewer.dataset.fxOn;
@@ -247,7 +255,7 @@ export function fieldFx(viewer: HTMLElement, mode: FxMode) {
         return fail();
       }
       it.tex = t;
-      render(last.pos, last.enter);
+      render(last);
     }, fail);
   };
   items.forEach(load);
@@ -273,29 +281,27 @@ export function fieldFx(viewer: HTMLElement, mode: FxMode) {
   };
 
   /**
-   * pos: 0…N arası sürekli konum (kaçıncı fotoğrafta, ne kadar ilerlemiş). Her fotoğrafın kaydırma payının
-   * ilk %55'inde fotoğraf yerinde durur, kalanında bir sonrakine geçilir.
-   * enter: bölüm ekrana girerken ilk fotoğrafın gelişi (0…1).
+   * v.lo / v.hi: geçişin iki ucundaki fotoğraf (sıra numarası), v.t: geçişin ilerleyişi (0 lo, 1 hi yerinde).
+   * Geçiş zamanla oynar (home.ts), kaydırma hızına bağlı değildir. v.enter: bölüm ekrana girerken ilk fotoğrafın gelişi.
+   * v.sp: kaydırma konumu (fotoğraf birimiyle); fotoğraf yerinde dururken kaydırdıkça çok hafif yaklaşır.
    */
-  const render = (pos: number, enter: number) => {
-    last = { pos, enter };
-    const N = items.length;
-    const s = Math.min(N - 1, Math.max(0, Math.floor(pos)));
-    const t = s < N - 1 ? smooth((pos - s - 0.55) / 0.45) : 0;
-    const A = items[s], B = t > 0 ? items[s + 1] : null;
-    const eA = (1 - t) * (s === 0 ? enter : 1);
-    const ph = pos * 3;
+  const render = (v: View) => {
+    last = { ...v };
+    const A = items[v.lo], B = v.hi !== v.lo ? items[v.hi] : null;
+    const t = B ? v.t : 0;
+    const ph = v.sp * 3 + t * 2;
+    const z = (i: number) => 1 + 0.03 * Math.min(1, Math.max(0, v.sp - i));
 
     gl.viewport(0, 0, cv.width, cv.height);
     gl.clearColor(0, 0, 0, 0);
     gl.clear(gl.COLOR_BUFFER_BIT);
     gl.uniform2f(U.uView, W, H);
-    // yerinde dururken kaydırdıkça %3'e kadar yaklaşır; bir sonraki fotoğraf yine tam kadrajla gelir
-    const z = 1 + 0.03 * Math.min(1, Math.max(0, pos - s));
-    draw(A, s === 0 && t === 0 ? enter : eA, s === 0 && t === 0 ? 1 : -1, ph, z);
-    if (B) draw(B, t, 1, ph);
+    if (B) {
+      draw(A, 1 - t, -1, ph, z(v.lo));
+      draw(B, t, 1, ph, z(v.hi));
+    } else draw(A, v.lo === 0 ? v.enter : 1, 1, ph, z(v.lo));
 
-    const frameOp = s === 0 ? enter : 1;
+    const frameOp = !B && v.lo === 0 ? smooth(v.enter * 1.6) : 1;
     placeBox(under, A.rect, B?.rect ?? null, t, frameOp);
     placeBox(over, A.rect, B?.rect ?? null, t, frameOp);
 
@@ -311,11 +317,11 @@ export function fieldFx(viewer: HTMLElement, mode: FxMode) {
   };
 
   measure();
-  const ro = new ResizeObserver(() => { measure(); render(last.pos, last.enter); });
+  const ro = new ResizeObserver(() => { measure(); render(last); });
   ro.observe(pics);
   return {
     render,
-    measure: () => { measure(); render(last.pos, last.enter); },
+    measure: () => { measure(); render(last); },
     destroy() {
       ro.disconnect();
       cv.remove();

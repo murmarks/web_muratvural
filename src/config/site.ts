@@ -25,6 +25,12 @@ export const site = {
    * ikisi de kodda durur, hangisinin görüneceği buradan seçilir.
    */
   brand: 'personal' as 'personal' | 'pebuc',
+  /**
+   * Ana sayfadaki "Sahada" fotoğraflarının efekti (bilgisayar ekranında). 'tul' seçildi (2026-10-18);
+   * 'isik', 'panjur', 'odak' denenmiş diğer seçenekler; 'none' eski sade gösterim.
+   * Derlerken FX ortam değişkeni bunu geçersiz kılar (önizleme için).
+   */
+  fieldEffect: 'tul' as 'tul' | 'isik' | 'panjur' | 'odak' | 'none',
   contact: {
     email: 'contact@muratvural.com',
     whatsapp: '+84934000150',

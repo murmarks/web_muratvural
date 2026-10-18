@@ -476,6 +476,26 @@
   color: var(--muted);
 }
 
+/* sahadan fotoğrafların çerçevesi, efekt çizilmediğinde de (telefon, WebGL yok): köşe işaretleri yerine paspartu */
+.s3 .vf {
+  display: none;
+}
+.s3 .shots > .ph {
+  isolation: isolate;
+}
+.s3 .shots > .ph::before {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  z-index: -1;
+  background: var(--bg-2);
+  border: 1px solid rgba(242, 169, 0, 0.38);
+  box-shadow: 0 50px 90px -40px #000;
+}
+.s3 .shots > .ph img {
+  box-shadow: 0 0 0 1px rgba(243, 240, 234, 0.16);
+}
+
 /*
  * 3 · efektli gösterim (viewer'da data-fx): fotoğrafı WebGL çizer, geçişler kaydırmaya bağlıdır.
  * Sayfadaki asıl fotoğraflar yerinde kalır (ölçü, erişilebilirlik ve betiksiz durum için) ama görünmez.
@@ -510,14 +530,8 @@
 .fx-over {
   z-index: 3;
 }
-/* tül: yumuşak gölge, arkasında hafif bir ışık; kenarda ince çizgi */
-[data-fx-on='tul'] .fx-under {
-  box-shadow: 0 50px 100px -40px #000, 0 0 90px -20px rgba(243, 230, 205, 0.1);
-}
-[data-fx-on='tul'] .fx-over {
-  box-shadow: 0 0 0 1px rgba(243, 240, 234, 0.1);
-}
-/* ışık: koyu paspartu, dışta sarı, içte krem ince çizgi */
+/* tül ve ışık: koyu paspartu, dışta ince sarı, içte krem çizgi */
+[data-fx-on='tul'] .fx-under::before,
 [data-fx-on='isik'] .fx-under::before {
   content: '';
   position: absolute;
@@ -526,6 +540,7 @@
   border: 1px solid rgba(242, 169, 0, 0.38);
   box-shadow: 0 50px 90px -40px #000;
 }
+[data-fx-on='tul'] .fx-over,
 [data-fx-on='isik'] .fx-over {
   box-shadow: 0 0 0 1px rgba(243, 240, 234, 0.16);
 }
@@ -973,7 +988,12 @@
   }
   .place-fig .shots {
     height: auto;
-    padding: 8px;
+    padding: 14px;
+  }
+  /* tül (telefonda): fotoğraf ekrana girerken ince bir tül gibi yukarıdan iner; --dp 1 gizli, 0 yerinde */
+  .s3 .shots > .ph img {
+    -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20300'%20preserveAspectRatio='none'%3E%3ClinearGradient%20id='g'%20gradientUnits='userSpaceOnUse'%20x1='0'%20y1='0'%20x2='0'%20y2='205'%3E%3Cstop%20offset='.7'%20stop-color='%23fff'/%3E%3Cstop%20offset='1'%20stop-color='%23fff'%20stop-opacity='.4'/%3E%3C/linearGradient%3E%3Cpath%20fill='url(%23g)'%20d='M0%200H100V196C88%20204%2076%20188%2062%20195S36%20206%2022%20196%206%20191%200%20198Z'/%3E%3C/svg%3E") 0 calc(var(--dp, 0) * 100%) / 100% 300% no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20300'%20preserveAspectRatio='none'%3E%3ClinearGradient%20id='g'%20gradientUnits='userSpaceOnUse'%20x1='0'%20y1='0'%20x2='0'%20y2='205'%3E%3Cstop%20offset='.7'%20stop-color='%23fff'/%3E%3Cstop%20offset='1'%20stop-color='%23fff'%20stop-opacity='.4'/%3E%3C/linearGradient%3E%3Cpath%20fill='url(%23g)'%20d='M0%200H100V196C88%20204%2076%20188%2062%20195S36%20206%2022%20196%206%20191%200%20198Z'/%3E%3C/svg%3E") 0 calc(var(--dp, 0) * 100%) / 100% 300% no-repeat;
   }
   .capbar {
     width: 100%;
