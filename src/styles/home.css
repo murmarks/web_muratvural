@@ -476,6 +476,84 @@
   color: var(--muted);
 }
 
+/*
+ * 3 · efektli gösterim (viewer'da data-fx): fotoğrafı WebGL çizer, geçişler kaydırmaya bağlıdır.
+ * Sayfadaki asıl fotoğraflar yerinde kalır (ölçü, erişilebilirlik ve betiksiz durum için) ama görünmez.
+ */
+[data-fx-on] .shots > .ph {
+  visibility: visible;
+  opacity: 0;
+  transition: none;
+}
+[data-fx-on] .vf,
+[data-fx-on] .ph::after {
+  display: none;
+}
+[data-fx-on] .place-fig,
+[data-fx-on] .amb img {
+  transition: none;
+}
+.fx-cv {
+  position: absolute;
+  left: -56px;
+  top: -56px;
+  width: calc(100% + 112px);
+  height: calc(100% + 112px);
+  pointer-events: none;
+  z-index: 2;
+}
+.fx-under,
+.fx-over {
+  position: absolute;
+  pointer-events: none;
+}
+.fx-over {
+  z-index: 3;
+}
+/* tül: yumuşak gölge, arkasında hafif bir ışık; kenarda ince çizgi */
+[data-fx-on='tul'] .fx-under {
+  box-shadow: 0 50px 100px -40px #000, 0 0 90px -20px rgba(243, 230, 205, 0.1);
+}
+[data-fx-on='tul'] .fx-over {
+  box-shadow: 0 0 0 1px rgba(243, 240, 234, 0.1);
+}
+/* ışık: koyu paspartu, dışta sarı, içte krem ince çizgi */
+[data-fx-on='isik'] .fx-under::before {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  background: var(--bg-2);
+  border: 1px solid rgba(242, 169, 0, 0.38);
+  box-shadow: 0 50px 90px -40px #000;
+}
+[data-fx-on='isik'] .fx-over {
+  box-shadow: 0 0 0 1px rgba(243, 240, 234, 0.16);
+}
+/* panjur: derin gölge, altında kısa sarı çizgi */
+[data-fx-on='panjur'] .fx-under {
+  box-shadow: 0 50px 90px -40px #000;
+}
+[data-fx-on='panjur'] .fx-over::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: min(40%, 9rem);
+  height: 2px;
+  background: var(--amber);
+}
+/* odak: yuvarlak köşe, ince çizgi */
+[data-fx-on='odak'] .fx-under,
+[data-fx-on='odak'] .fx-over {
+  border-radius: 7px;
+}
+[data-fx-on='odak'] .fx-under {
+  box-shadow: 0 50px 90px -40px #000;
+}
+[data-fx-on='odak'] .fx-over {
+  box-shadow: 0 0 0 1px rgba(243, 240, 234, 0.14);
+}
+
 /* 4 · ölçekli kariyer */
 .s4 {
   padding-block: 7rem 6rem;

@@ -2,6 +2,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { showAlt } from './gallery';
+import { fieldFx, type FxMode } from './field-fx';
 
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = <T extends Element = HTMLElement>(s: string, root: ParentNode = document) => root.querySelector<T>(s);
@@ -105,13 +106,27 @@ function setSlot(i: number, k: number) {
 }
 
 let fieldST: ScrollTrigger | null = null;
-function jumpPlace(i: number) {
-  if (!fieldST) return setSlot(i, 0);
-  const s0 = SLOTS.findIndex((x) => x[0] === i);
-  const y = fieldST.start + (fieldST.end - fieldST.start) * ((s0 + 0.5) / SLOTS.length);
+/** efektli gösterimde fotoğrafın kaydırma payının başı yerinde durduğu kısımdır; ortası değil başı hedeflenir */
+let slotAim = 0.5;
+function jumpPlace(i: number, k = 0) {
+  if (!fieldST) return setSlot(i, k);
+  const s0 = SLOTS.findIndex((x) => x[0] === i && x[1] === k);
+  const y = fieldST.start + (fieldST.end - fieldST.start) * ((s0 + slotAim) / SLOTS.length);
   scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
 }
 $$<HTMLButtonElement>('[data-jump]').forEach((b) => b.addEventListener('click', () => jumpPlace(Number(b.dataset.jump))));
+// efektli gösterimde küçük resme tıklayınca o fotoğrafın kaydırma yerine gidilir (fotoğrafı kaydırma çizer)
+pics?.addEventListener(
+  'click',
+  (e) => {
+    const b = (e.target as Element).closest<HTMLElement>('[data-alt]');
+    const fig = b?.closest<HTMLElement>('[data-place]');
+    if (!b || !fig || !pics.closest('[data-fx-on]')) return;
+    e.stopPropagation();
+    jumpPlace(Number(fig.dataset.place), Number(b.dataset.alt));
+  },
+  true,
+);
 
 /* hizmet alanları: akordiyon */
 $$('.area').forEach((li) => {
@@ -261,7 +276,32 @@ if (reduce) {
     if (location.hash === '#numbers') requestAnimationFrame(toNumbers);
 
     // 3: her seferinde bir yer; kaydırma her yerin her fotoğrafından geçer
-    fieldST = ScrollTrigger.create({
+    const viewer = $('[data-viewer]');
+    const fx = viewer?.dataset.fx ? fieldFx(viewer, viewer.dataset.fx as FxMode) : null;
+    if (fx) {
+      // 3 (efektli): fotoğraflar arasındaki geçiş kaydırmayla ilerler; ilk fotoğraf bölüm ekrana girerken gelir
+      slotAim = 0.2;
+      const st = { pos: 0, enter: 0 };
+      const paint = () => {
+        const r = fx.render(st.pos, st.enter);
+        ambs.forEach((im, j) => (im.style.opacity = String(j === r.from && j === r.to ? 1 : j === r.from ? 1 - r.t : j === r.to ? r.t : 0)));
+        if (r.place !== cur.place || r.photo !== cur.photo) {
+          if (r.place !== cur.place) placeItems.forEach((li, j) => li.classList.toggle('on', j === r.place));
+          showAlt(figs[r.place], r.photo);
+        }
+      };
+      gsap.fromTo(st, { enter: 0 }, { enter: 1, ease: 'none', onUpdate: paint, scrollTrigger: { trigger: viewer, start: 'top 85%', end: 'top top', scrub: 0.6 } });
+      const tw = gsap.fromTo(st, { pos: 0 }, { pos: SLOTS.length - 0.001, ease: 'none', onUpdate: paint });
+      fieldST = ScrollTrigger.create({
+        animation: tw,
+        trigger: viewer,
+        start: 'top top',
+        end: () => `+=${innerHeight * 0.6 * SLOTS.length}`,
+        pin: true,
+        scrub: 0.6,
+        onRefresh: () => fx.measure(),
+      });
+    } else fieldST = ScrollTrigger.create({
       trigger: '[data-viewer]',
       start: 'top top',
       end: () => `+=${innerHeight * 0.42 * SLOTS.length}`,
@@ -273,6 +313,8 @@ if (reduce) {
     });
     return () => {
       allOn();
+      fx?.destroy();
+      slotAim = 0.5;
       fieldST = null;
       pinJump.delete('#numbers');
     };

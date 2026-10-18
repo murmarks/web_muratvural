@@ -113,7 +113,7 @@ const titles = heroTitles.map((h) => [h.one[lang], h.two[lang]]);
       <h2 class="h2" id="field-h" set:html={t('fieldTitle')} />
       <p class="lede">{t('fieldNote')}</p>
     </div>
-    <div class="viewer" data-viewer>
+    <div class="viewer" data-viewer data-fx={process.env.FX || undefined}>
       <div class="amb" aria-hidden="true">{places.map((pl, i) => <img src={pl.photos[0].th} alt="" class:list={{ on: i === 0 }} loading="lazy" />)}</div>
       <div class="pics" data-pics>
         {
