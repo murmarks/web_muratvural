@@ -1,0 +1,167 @@
+---
+/**
+ * Seçenek 3 · Rota: bölgenin nokta haritası (800 noktanın dili). Çalışılan ülkeler biraz daha açık.
+ * Kaydırdıkça kamera batıdan doğuya şehirden şehre gider, yol sarı çizgiyle çizilir;
+ * o şehrin fotoğrafı sağda açılır, ince bir çizgi şehri fotoğrafa bağlar.
+ */
+import type { Locale } from '../../config/site';
+import { useT } from '../../i18n';
+import { westToEast } from '../../data/field';
+import Pin from '../Pin.astro';
+import FieldMobile from './FieldMobile.astro';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const slots = westToEast.flatMap((pl, i) => pl.photos.map((p) => ({ p, i })));
+const cityNames = westToEast.map((pl) => ({ key: pl.key, name: pl.city[lang], lang: pl.cityLang ?? lang }));
+---
+
+<section class="s3 fv fv-rota" id="field" aria-labelledby="field-h" data-field="rota">
+  <div class="wrap head">
+    <h2 class="h2" id="field-h" set:html={t('fieldTitle')} />
+    <p class="lede">{t('fieldNote')}</p>
+  </div>
+  <div class="fr-stage" data-fstage data-cities={JSON.stringify(cityNames)}>
+    <canvas class="fr-map" data-fmap aria-hidden="true"></canvas>
+    <svg class="fr-lead" aria-hidden="true"><line data-flead x1="0" y1="0" x2="0" y2="0"></line></svg>
+    <div class="fr-side">
+      <div class="fr-pics">
+        {
+          slots.map(({ p, i }, s) => (
+            <figure class:list={['fr-f', { on: s === 0 }]} data-fs={s} data-place={i}>
+              <div class:list={['ph', { lo: p.lo }]} style={`--ar:${(p.w / p.h).toFixed(4)};--nw:${p.w}px`}>
+                <img src={p.src} alt={`${westToEast[i].country[lang]}, ${westToEast[i].city[lang]}: ${westToEast[i].what[lang]}`} width={p.w} height={p.h} loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          ))
+        }
+      </div>
+      <div class="fr-caps">
+        {
+          westToEast.map((pl, i) => (
+            <div class:list={['fr-cap', { on: i === 0 }]} data-ft={i}>
+              <Pin />
+              <span class="fr-pl">{pl.country[lang]}, <span lang={pl.cityLang}>{pl.city[lang]}</span></span>
+              <span class="fr-what">{pl.what[lang]}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <FieldMobile lang={lang} variant="rota" />
+</section>
+
+<style is:global>
+  .fr-stage {
+    position: relative;
+    height: 100svh;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .fr-map {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .fr-stage::after {
+    /* harita kenarlarda sayfanın zeminine karışır */
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      linear-gradient(var(--bg), transparent 18%, transparent 82%, var(--bg)),
+      linear-gradient(90deg, var(--bg), transparent 10%, transparent 90%, var(--bg));
+  }
+  .fr-lead {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+  }
+  .fr-lead line {
+    stroke: rgba(242, 169, 0, 0.55);
+    stroke-width: 1;
+  }
+  .fr-side {
+    position: absolute;
+    top: calc(var(--bar-h) + 1.5rem);
+    bottom: 2rem;
+    right: max(var(--gr), 4vw);
+    width: 52vw;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 1.2rem;
+  }
+  .fr-pics {
+    display: grid;
+    min-height: 0;
+  }
+  .fr-f {
+    grid-area: 1 / 1;
+    margin: 0;
+    display: grid;
+    place-items: end center;
+    min-height: 0;
+    container-type: size;
+    visibility: hidden;
+  }
+  .fr-f.on {
+    visibility: visible;
+  }
+  .fr-f .ph img {
+    box-shadow: 0 40px 90px -30px #000, 0 0 0 1px rgba(243, 240, 234, 0.14);
+  }
+  .fr-caps {
+    display: grid;
+    justify-self: center;
+    width: var(--cw, 100%);
+    min-width: min(100%, 26rem);
+  }
+  .fr-cap {
+    grid-area: 1 / 1;
+    display: grid;
+    grid-template-columns: 1.1rem minmax(0, 1fr);
+    gap: 0.25rem 0.8rem;
+    align-items: center;
+    visibility: hidden;
+  }
+  .fr-cap.on {
+    visibility: visible;
+  }
+  .fr-cap .pin {
+    color: var(--amber);
+  }
+  .fr-pl {
+    font: 800 clamp(1.15rem, 1.8vw, 1.6rem) / 1.05 var(--display);
+    font-stretch: 112%;
+    text-transform: uppercase;
+  }
+  .fr-what {
+    grid-column: 2;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .fr-ll {
+    grid-row: 1;
+    grid-column: 3;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    color: var(--dim);
+  }
+  @media (max-width: 860px) {
+    .fr-stage {
+      display: none;
+    }
+  }
+</style>

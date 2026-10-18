@@ -1,0 +1,209 @@
+---
+/**
+ * Seçenek 1 · Manşet: rakam sahnelerinin dili. Solda büyük ülke adı, koordinat ve şehir; sağda fotoğraf.
+ * Kaydırdıkça yeni fotoğraf aşağıdan yukarı perde gibi açılır, yazı yukarı kayıp yenisine yer verir.
+ */
+import type { Locale } from '../../config/site';
+import { useT } from '../../i18n';
+import { dms, fieldPlaces } from '../../data/field';
+import Pin from '../Pin.astro';
+import FieldMobile from './FieldMobile.astro';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const slots = fieldPlaces.flatMap((pl, i) => pl.photos.map((p, k) => ({ p, i, k })));
+// en uzun kelimeye göre: ülke adı sütuna sığar
+const fs = (s: string) => {
+  const L = Math.max(...s.split(/[\s-]+/).map((w) => w.length));
+  return `min(5.6vw, ${(27 / (L * 0.72)).toFixed(2)}vw, 6.6rem)`;
+};
+---
+
+<section class="s3 fv fv-manset" id="field" aria-labelledby="field-h" data-field="manset">
+  <div class="wrap head">
+    <h2 class="h2" id="field-h" set:html={t('fieldTitle')} />
+    <p class="lede">{t('fieldNote')}</p>
+  </div>
+  <div class="fm-stage" data-fstage>
+    <div class="fm-text">
+      {
+        fieldPlaces.map((pl, i) => (
+          <div class:list={['fm-t', { on: i === 0 }]} data-ft={i}>
+            <p class="fm-ll mono">{dms(pl.ll, lang)}</p>
+            <h3 class="fm-c" style={`font-size:${fs(pl.country[lang])}`}>{pl.country[lang]}</h3>
+            <p class="fm-city" lang={pl.cityLang}>{pl.city[lang]}</p>
+            <p class="fm-what">{pl.what[lang]}</p>
+            {pl.photos.length > 1 && <div class="fm-ticks" aria-hidden="true">{pl.photos.map((_, k) => <i class:list={{ on: k === 0 }} />)}</div>}
+          </div>
+        ))
+      }
+    </div>
+    <div class="fm-pics">
+      {
+        slots.map(({ p, i, k }, s) => (
+          <figure class:list={['fm-f', { on: s === 0 }]} data-fs={s} data-place={i} data-k={k}>
+            <div class:list={['ph', { lo: p.lo }]} style={`--ar:${(p.w / p.h).toFixed(4)};--nw:${p.w}px`}>
+              <img src={p.src} alt={`${fieldPlaces[i].country[lang]}, ${fieldPlaces[i].city[lang]}: ${fieldPlaces[i].what[lang]}`} width={p.w} height={p.h} loading="lazy" decoding="async" />
+            </div>
+          </figure>
+        ))
+      }
+    </div>
+    <ol class="fm-index mono" aria-label={t('places')}>
+      {
+        fieldPlaces.map((pl, i) => (
+          <li class:list={{ on: i === 0 }}>
+            <button type="button" data-fjump={i}>
+              <Pin />
+              {pl.country[lang]}
+            </button>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+  <FieldMobile lang={lang} variant="manset" />
+</section>
+
+<style is:global>
+  .fv-manset .fm-stage {
+    position: relative;
+    height: 100svh;
+    display: grid;
+    grid-template-columns: minmax(0, 31vw) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    column-gap: clamp(2rem, 4vw, 5rem);
+    padding: calc(var(--bar-h) + 1.6rem) max(var(--gr), 4vw) 1.8rem max(var(--gl), 4vw);
+    overflow: hidden;
+  }
+  .fm-text {
+    display: grid;
+    align-items: center;
+    min-height: 0;
+  }
+  .fm-t {
+    grid-area: 1 / 1;
+    visibility: hidden;
+  }
+  .fm-t.on {
+    visibility: visible;
+  }
+  .fm-ll {
+    margin: 0 0 1.4rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    color: var(--amber);
+  }
+  .fm-c {
+    margin: 0;
+    font-weight: 800;
+    font-stretch: 112%;
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--fg);
+    overflow-wrap: normal;
+  }
+  .fm-city {
+    margin: 0.5rem 0 0;
+    font: 800 clamp(1.4rem, 2.3vw, 2.4rem) / 1 var(--display);
+    font-stretch: 112%;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(243, 240, 234, 0.55);
+  }
+  .fm-what {
+    margin: 2rem 0 0;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--line);
+    max-width: 26ch;
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+  .fm-ticks {
+    display: flex;
+    gap: 6px;
+    margin-top: 1.2rem;
+  }
+  .fm-ticks i {
+    width: 26px;
+    height: 2px;
+    background: var(--line);
+    transition: background 0.3s;
+  }
+  .fm-ticks i.on {
+    background: var(--amber);
+  }
+  .fm-pics {
+    position: relative;
+    display: grid;
+    min-height: 0;
+  }
+  .fm-f {
+    grid-area: 1 / 1;
+    margin: 0;
+    display: grid;
+    place-items: center start;
+    min-height: 0;
+    container-type: size;
+    visibility: hidden;
+  }
+  .fm-f.on,
+  .fm-f.was {
+    visibility: visible;
+  }
+  .fm-f .ph img {
+    box-shadow: 0 50px 90px -40px #000, 0 0 0 1px rgba(243, 240, 234, 0.1);
+  }
+  .fm-index {
+    grid-column: 1 / -1;
+    list-style: none;
+    margin: 1.4rem 0 0;
+    padding: 1rem 0 0;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    flex-wrap: wrap;
+  }
+  .fm-index button {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font: 500 0.68rem/1 var(--mono);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dim);
+    transition: color 0.25s;
+  }
+  .fm-index .pin svg {
+    width: 0.6rem;
+    height: 0.75rem;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .fm-index button:hover {
+    color: var(--fg);
+  }
+  .fm-index li.on button {
+    color: var(--fg);
+  }
+  .fm-index li.on .pin svg {
+    opacity: 1;
+    color: var(--amber);
+  }
+  @media (max-width: 860px) {
+    .fv-manset .fm-stage {
+      display: none;
+    }
+  }
+</style>

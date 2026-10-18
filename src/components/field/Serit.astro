@@ -1,0 +1,146 @@
+---
+/**
+ * Seçenek 2 · Şerit: bütün fotoğraflar tek yatay şeritte, aynı yükseklikte ve kendi oranlarıyla.
+ * Aşağı kaydırma şeridi sola akıtır; ortaya gelen fotoğraf aydınlanır, diğerleri loş kalır.
+ * Her yerin adı fotoğraf grubunun üstündeki çizgide, ne yapıldığı altında.
+ */
+import type { Locale } from '../../config/site';
+import { useT } from '../../i18n';
+import { dms, fieldPlaces } from '../../data/field';
+import Pin from '../Pin.astro';
+import FieldMobile from './FieldMobile.astro';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+
+<section class="s3 fv fv-serit" id="field" aria-labelledby="field-h" data-field="serit">
+  <div class="wrap head">
+    <h2 class="h2" id="field-h" set:html={t('fieldTitle')} />
+    <p class="lede">{t('fieldNote')}</p>
+  </div>
+  <div class="fs-stage" data-fstage>
+    <div class="fs-track" data-ftrack>
+      {
+        fieldPlaces.map((pl, i) => (
+          <div class="fs-g" data-place={i}>
+            <div class="fs-lab">
+              <Pin />
+              <span class="fs-pl">{pl.country[lang]}, <span lang={pl.cityLang}>{pl.city[lang]}</span></span>
+              <span class="fs-ll mono">{dms(pl.ll, lang)}</span>
+            </div>
+            <div class="fs-row">
+              {pl.photos.map((p) => (
+                <div class:list={['fs-p', 'ph', { lo: p.lo }]} style={`--ar:${(p.w / p.h).toFixed(4)};--nh:${p.h}px`} data-fp>
+                  <img src={p.src} alt={`${pl.country[lang]}, ${pl.city[lang]}: ${pl.what[lang]}`} width={p.w} height={p.h} loading="lazy" decoding="async" />
+                </div>
+              ))}
+            </div>
+            <p class="fs-what">{pl.what[lang]}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="fs-bar" aria-hidden="true"><i data-fbar></i></div>
+  </div>
+  <FieldMobile lang={lang} variant="serit" />
+</section>
+
+<style is:global>
+  .fs-stage {
+    position: relative;
+    height: 100svh;
+    overflow: hidden;
+    display: grid;
+    align-content: center;
+    padding-top: var(--bar-h);
+    --h: min(54svh, 40vw);
+  }
+  .fs-track {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(3rem, 7vw, 8rem);
+    width: max-content;
+    padding-inline: 50vw;
+    will-change: transform;
+  }
+  .fs-g {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+  }
+  .fs-lab {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  .fs-lab .pin {
+    color: var(--amber);
+  }
+  .fs-lab .pin svg {
+    width: 0.8rem;
+    height: 1rem;
+    display: block;
+  }
+  .fs-pl {
+    font: 800 1.05rem/1 var(--display);
+    font-stretch: 112%;
+    text-transform: uppercase;
+    color: var(--fg);
+  }
+  .fs-ll {
+    margin-left: auto;
+    padding-left: 1.5rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    color: var(--dim);
+  }
+  .fs-row {
+    display: flex;
+    gap: 14px;
+    align-items: flex-end;
+  }
+  .fv-serit .fs-p {
+    /* aynı yükseklik, kendi oranı; çekildiğinden büyük gösterilmez */
+    height: min(var(--h), var(--nh));
+    width: auto;
+    aspect-ratio: var(--ar);
+    max-width: none;
+    margin-top: calc(var(--h) - min(var(--h), var(--nh)));
+    filter: brightness(var(--b, 0.42)) saturate(var(--s, 0.55));
+  }
+  .fs-what {
+    margin: 0.2rem 0 0;
+    max-width: 34ch;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.45;
+    opacity: var(--o, 0.35);
+  }
+  .fs-bar {
+    position: absolute;
+    left: max(var(--gl), 4vw);
+    right: max(var(--gr), 4vw);
+    bottom: 2.4rem;
+    height: 1px;
+    background: var(--line);
+  }
+  .fs-bar i {
+    position: absolute;
+    inset: 0;
+    background: var(--amber);
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  @media (max-width: 860px) {
+    .fs-stage {
+      display: none;
+    }
+  }
+</style>

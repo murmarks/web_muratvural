@@ -2,6 +2,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { showAlt } from './gallery';
+import { fieldVariants } from './field';
 
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = <T extends Element = HTMLElement>(s: string, root: ParentNode = document) => root.querySelector<T>(s);
@@ -261,7 +262,9 @@ if (reduce) {
     if (location.hash === '#numbers') requestAnimationFrame(toNumbers);
 
     // 3: her seferinde bir yer; kaydırma her yerin her fotoğrafından geçer
-    fieldST = ScrollTrigger.create({
+    const fv = fieldVariants[$('[data-field]')?.dataset.field ?? ''];
+    const undoField = fv?.desktop();
+    if (!fv) fieldST = ScrollTrigger.create({
       trigger: '[data-viewer]',
       start: 'top top',
       end: () => `+=${innerHeight * 0.42 * SLOTS.length}`,
@@ -273,13 +276,16 @@ if (reduce) {
     });
     return () => {
       allOn();
+      undoField?.();
       fieldST = null;
       pinJump.delete('#numbers');
     };
   });
   mm.add('(max-width: 860px)', () => {
     allOn();
+    const undoField = fieldVariants[$('[data-field]')?.dataset.field ?? '']?.mobile?.();
     onShow(() => gsap.timeline({ delay: 2.6 }).to(shade, { '--r': '120%', duration: 2.4, ease: 'power2.inOut' }).to(focus, { opacity: 0, duration: 1.6 }, '<.4'));
+    return () => undoField?.();
   });
 
   /*
@@ -316,4 +322,7 @@ if (reduce) {
   }
   // yazı tipleri yüklenince ölçüler değişir
   document.fonts?.ready.then(() => ScrollTrigger.refresh());
+  // sayfa bir bölümün adresiyle (#field gibi) açılınca: sabitlenen bölümler yer açtıktan sonra o bölüme git
+  const hashEl = location.hash && location.hash !== '#numbers' ? document.querySelector(location.hash) : null;
+  if (hashEl) addEventListener('load', () => requestAnimationFrame(() => { ScrollTrigger.refresh(); hashEl.scrollIntoView({ behavior: 'instant' }); }));
 }

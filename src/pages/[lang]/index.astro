@@ -15,6 +15,11 @@ import { serviceHref, services } from '../../data/services';
 import { abroad, areaIntro, areaPhotos, career, careerYears, companies, countryNames, heroPhotos, heroTitles, places, slides } from '../../data/home';
 import { inline } from '../../lib/inline';
 import '../../styles/home.css';
+import { fieldVariant } from '../../data/field';
+import Manset from '../../components/field/Manset.astro';
+import Serit from '../../components/field/Serit.astro';
+import Rota from '../../components/field/Rota.astro';
+import Baski from '../../components/field/Baski.astro';
 
 export function getStaticPaths() {
   return locales.map((lang) => ({ params: { lang }, props: { lang } }));
@@ -108,6 +113,11 @@ const titles = heroTitles.map((h) => [h.one[lang], h.two[lang]]);
     <div class="ticks2" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
   </section>
 
+  {fieldVariant === 'manset' && <Manset lang={lang} />}
+  {fieldVariant === 'serit' && <Serit lang={lang} />}
+  {fieldVariant === 'rota' && <Rota lang={lang} />}
+  {fieldVariant === 'baski' && <Baski lang={lang} />}
+  {fieldVariant === 'current' && (
   <section class="s3" id="field" aria-labelledby="field-h">
     <div class="wrap head">
       <h2 class="h2" id="field-h" set:html={t('fieldTitle')} />
@@ -153,6 +163,7 @@ const titles = heroTitles.map((h) => [h.one[lang], h.two[lang]]);
       </ol>
     </div>
   </section>
+  )}
 
   <section class="s4 wrap" id="career" aria-labelledby="career-h">
     <div class="head">

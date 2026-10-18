@@ -1,0 +1,176 @@
+---
+/**
+ * Seçenek 4 · Baskı: her fotoğraf kenar boşluklu bir kâğıt baskı. Kaydırdıkça yenisi masaya, öncekilerin üstüne konur;
+ * alttakiler hafifçe kararır, kenarları görünür kalır. Eski makinelerin düşük çözünürlüğü baskıda doğal durur.
+ * Solda yerin adı ve ne yapıldığı.
+ */
+import type { Locale } from '../../config/site';
+import { useT } from '../../i18n';
+import { dms, fieldPlaces } from '../../data/field';
+import Pin from '../Pin.astro';
+import FieldMobile from './FieldMobile.astro';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useT(lang);
+const slots = fieldPlaces.flatMap((pl, i) => pl.photos.map((p) => ({ p, i })));
+// her baskının masadaki duruşu: hafif açı ve kayma (sabit, her açılışta aynı)
+const ROT = [-2.4, 1.9, -1.1, 2.6, -0.7, 1.4, -2.1, 0.9, -1.6, 2.2, -0.9, 1.6, -2.3];
+const DX = [-14, 18, -6, 10, -20, 8, 16, -10, 4, -16, 12, -4, 6];
+const DY = [6, -10, 12, -4, 8, -12, 2, 10, -8, 4, -6, 12, -2];
+---
+
+<section class="s3 fv fv-baski" id="field" aria-labelledby="field-h" data-field="baski">
+  <div class="wrap head">
+    <h2 class="h2" id="field-h" set:html={t('fieldTitle')} />
+    <p class="lede">{t('fieldNote')}</p>
+  </div>
+  <div class="fb-stage" data-fstage>
+    <div class="fb-text">
+      {
+        fieldPlaces.map((pl, i) => (
+          <div class:list={['fb-t', { on: i === 0 }]} data-ft={i}>
+            <Pin />
+            <p class="fb-pl">{pl.country[lang]}</p>
+            <p class="fb-city" lang={pl.cityLang}>{pl.city[lang]}</p>
+            <p class="fb-what">{pl.what[lang]}</p>
+            <p class="fb-ll mono">{dms(pl.ll, lang)}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="fb-table">
+      {
+        slots.map(({ p, i }, s) => (
+          <figure class="fb-pr" data-fs={s} data-place={i} style={`--r:${ROT[s % ROT.length]}deg;--dx:${DX[s % DX.length]}px;--dy:${DY[s % DY.length]}px`}>
+            <div class="fb-paper" style={`--ar:${(p.w / p.h).toFixed(4)};--nw:${p.w}px;--nh:${p.h}px`}>
+              <img src={p.src} alt={`${fieldPlaces[i].country[lang]}, ${fieldPlaces[i].city[lang]}: ${fieldPlaces[i].what[lang]}`} width={p.w} height={p.h} loading="lazy" decoding="async" />
+            </div>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+  <FieldMobile lang={lang} variant="baski" />
+</section>
+
+<style is:global>
+  .fb-stage {
+    position: relative;
+    height: 100svh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 24vw) minmax(0, 1fr);
+    gap: clamp(2rem, 4vw, 5rem);
+    padding: calc(var(--bar-h) + 1.5rem) max(var(--gr), 4vw) 2.5rem max(var(--gl), 4vw);
+    isolation: isolate;
+  }
+  .fb-stage::before {
+    /* masanın üstüne düşen ışık */
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(48% 62% at 60% 52%, rgba(243, 230, 205, 0.07), transparent 70%);
+  }
+  .fb-text {
+    display: grid;
+    align-items: center;
+  }
+  .fb-t {
+    grid-area: 1 / 1;
+    visibility: hidden;
+  }
+  .fb-t.on {
+    visibility: visible;
+  }
+  .fb-t .pin {
+    color: var(--amber);
+  }
+  .fb-t .pin svg {
+    width: 1rem;
+    height: 1.25rem;
+  }
+  .fb-pl {
+    margin: 0.9rem 0 0;
+    font: 800 clamp(1.8rem, 2.9vw, 3rem) / 0.95 var(--display);
+    font-stretch: 112%;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+  }
+  .fb-city {
+    margin: 0.35rem 0 0;
+    font: 500 0.78rem/1.3 var(--mono);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+  .fb-what {
+    margin: 1.6rem 0 0;
+    color: var(--text);
+    font-size: 1.02rem;
+    line-height: 1.45;
+    max-width: 24ch;
+  }
+  .fb-ll {
+    margin: 1.4rem 0 0;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    color: var(--dim);
+  }
+  .fb-table {
+    position: relative;
+    display: grid;
+    min-height: 0;
+    container-type: size;
+  }
+  .fb-pr {
+    grid-area: 1 / 1;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 0;
+    pointer-events: none;
+    transform: translate(var(--dx), var(--dy)) rotate(var(--r));
+  }
+  .fb-paper {
+    /* baskı: kâğıt kenarı fotoğrafın çevresinde eşit; fotoğraf çekildiğinden büyük gösterilmez */
+    --pad: clamp(10px, 1.1vw, 16px);
+    width: min(calc(92cqw - 2 * var(--pad)), calc((92cqh - 2 * var(--pad)) * var(--ar)), var(--nw));
+    aspect-ratio: var(--ar);
+    box-sizing: content-box;
+    padding: var(--pad);
+    background: #e9e3d6;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(0, 0, 0, 0.06));
+    box-shadow:
+      0 1px 1px rgba(0, 0, 0, 0.5),
+      0 6px 14px -6px rgba(0, 0, 0, 0.7),
+      0 40px 70px -30px rgba(0, 0, 0, 0.95);
+    filter: brightness(var(--dim-b, 1));
+    position: relative;
+  }
+  .fb-paper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+  }
+  .fb-paper::after {
+    /* kâğıt ve emülsiyon dokusu */
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.16;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @media (max-width: 860px) {
+    .fb-stage {
+      display: none;
+    }
+  }
+</style>
