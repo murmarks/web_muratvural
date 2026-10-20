@@ -319,6 +319,8 @@ export function fieldFx(viewer: HTMLElement, mode: FxMode) {
   measure();
   const ro = new ResizeObserver(() => { measure(); render(last); });
   ro.observe(pics);
+  // bir yerin fotoğraf alanı, yazısı değişirse de boy değiştirebilir; ölçüler hep güncel kalsın
+  figs.forEach((f) => ro.observe(f.querySelector('.shots')!));
   return {
     render,
     measure: () => { measure(); render(last); },

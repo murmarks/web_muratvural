@@ -379,7 +379,13 @@
   gap: 1rem 2rem;
   flex-wrap: wrap;
   justify-self: center;
-  width: max(var(--cw, 100%), min(100%, 30rem));
+  /*
+   * yazı fotoğrafın genişliğini alır, ama hiçbir zaman içeriğinden dar olmaz: dar bir fotoğrafta satıra
+   * bölünüp yükselmez. Böylece fotoğraf değişince yazının yüksekliği, dolayısıyla fotoğrafın yeri ve boyu değişmez.
+   */
+  width: var(--cw, 100%);
+  min-width: fit-content;
+  max-width: 100%;
 }
 .capbar .pl {
   display: grid;
