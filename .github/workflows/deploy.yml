@@ -1,14 +1,17 @@
-# source dalına her push'ta siteyi derler ve dist/ çıktısını main dalına yazar.
-# main dalı her yayında tek bir commit'e sıfırlanır (önceki sürümün üzerine yazılır);
-# eski bir sürüme dönmek için source dalındaki ilgili commit'ten yeniden derlemek yeterli.
-# Son adım, yeni main'i Hostinger'ın bağlı olduğu wmmurvur/wMV deposunun main dalına da gönderir.
+# Siteyi derler ve dist/ çıktısını yayın dalına yazar. Aynı dosya iki dalda da çalışır:
+#   source     → main     → wmmurvur/wMV main     (canlı site, pebuc.site)
+#   dev_source → dev_main → wmmurvur/wMV dev_main (deneme sitesi, dev.pebuc.site)
+# Böylece dev_source onaylanıp source'un üzerine yazıldığında bu dosya değişmeden canlı yayını yapar.
+# Yayın dalı her yayında tek bir commit'e sıfırlanır (önceki sürümün üzerine yazılır);
+# eski bir sürüme dönmek için kaynak dalındaki ilgili commit'ten yeniden derlemek yeterli.
+# Son adım, yeni yayın dalını Hostinger'ın bağlı olduğu wmmurvur/wMV deposuna da gönderir.
 # Bu adım ayrı bir dosyada (main'de) durmuyor: GitHub, bir iş akışının GITHUB_TOKEN ile yaptığı
 # gönderimden yeni bir iş akışı başlatmaz, o yüzden main'deki bir dosya kendiliğinden hiç çalışmazdı.
-name: Derle ve main'e yayınla
+name: Derle ve yayınla
 
 on:
   push:
-    branches: [source]
+    branches: [source, dev_source]
   workflow_dispatch:
 
 permissions:
@@ -16,11 +19,14 @@ permissions:
 
 env:
   # Hostinger senkronu (sahibi 2026-10-14'te açtı). 'false' yapılırsa wMV'ye gönderim durur;
-  # 'true' olunca her yayından sonra main dalı wMV'ye gider ve Hostinger onu yayınlar.
+  # 'true' olunca her yayından sonra yayın dalı wMV'ye gider ve Hostinger onu yayınlar.
   SYNC_TO_WMV: 'true'
+  # dev_source'tan derlenince dev_main'e, source'tan derlenince main'e yazılır
+  PUBLISH_BRANCH: ${{ github.ref_name == 'dev_source' && 'dev_main' || 'main' }}
+  IS_DEV: ${{ github.ref_name == 'dev_source' && 'true' || 'false' }}
 
 concurrency:
-  group: deploy-main
+  group: deploy-${{ github.ref_name }}
   cancel-in-progress: true
 
 jobs:
@@ -38,18 +44,26 @@ jobs:
       - run: npm run check
       - run: npm run build
 
-      - name: dist/ çıktısını main dalına gönder
+      # Deneme sitesi arama motorlarına kapalı: robots.txt her şeyi yasaklar,
+      # sunucu her yanıta "noindex" başlığı ekler. Canlı site bundan etkilenmez.
+      - name: Deneme sitesini arama motorlarına kapat
+        if: env.IS_DEV == 'true'
+        run: |
+          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+          printf '\n<IfModule mod_headers.c>\n  Header set X-Robots-Tag "noindex, nofollow"\n</IfModule>\n' >> dist/.htaccess
+
+      - name: dist/ çıktısını yayın dalına gönder
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: main
+          publish_branch: ${{ env.PUBLISH_BRANCH }}
           publish_dir: ./dist
           force_orphan: true
           user_name: github-actions[bot]
           user_email: 41898283+github-actions[bot]@users.noreply.github.com
           full_commit_message: "Yayın: ${{ github.sha }}"
 
-      - name: main dalını wMV'ye gönder (Hostinger)
+      - name: Yayın dalını wMV'ye gönder (Hostinger)
         if: env.SYNC_TO_WMV == 'true'
         env:
           TARGET_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
@@ -59,10 +73,10 @@ jobs:
             echo "::error::TARGET_REPO_TOKEN tanımlı değil (Settings > Secrets and variables > Actions)"
             exit 1
           fi
-          git fetch --depth 1 origin main
+          git fetch --depth 1 origin "$PUBLISH_BRANCH"
           # checkout'un bu depo için bıraktığı yetki başlığı wMV'ye gitmesin
           git config --local --unset-all http.https://github.com/.extraheader || true
           AUTH=$(printf 'x-access-token:%s' "$TARGET_TOKEN" | base64 -w 0)
-          # main her yayında tek commit'e sıfırlandığı için wMV'nin main'i de zorla güncellenir
+          # yayın dalı her yayında tek commit'e sıfırlandığı için wMV'deki aynı adlı dal da zorla güncellenir
           git -c http.extraheader="AUTHORIZATION: basic $AUTH" \
-            push --force https://github.com/wmmurvur/wMV.git FETCH_HEAD:refs/heads/main
+            push --force https://github.com/wmmurvur/wMV.git "FETCH_HEAD:refs/heads/$PUBLISH_BRANCH"
