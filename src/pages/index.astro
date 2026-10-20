@@ -4,10 +4,12 @@
  * Sıra: 1) ziyaretçinin daha önce seçtiği dil, 2) site.ts'deki dil modu (sabit ya da bölgesel), 3) varsayılan dil.
  * JavaScript yoksa iki dilin bağlantısı görünür.
  */
-import { locales, site } from '../config/site';
+import { locales, site, theme, themeColor } from '../config/site';
 import { localeNames, useT } from '../i18n';
 
 const t = useT(site.defaultLocale);
+// yönlendirme anında görünen sayfa, sitenin temasıyla aynı renkte (beyaz/siyah parlama olmasın)
+const c = theme === 'light' ? { fg: '#16140f', link: '#8f5e00' } : { fg: '#f3f0ea', link: '#f2a900' };
 ---
 
 <!doctype html>
@@ -17,7 +19,7 @@ const t = useT(site.defaultLocale);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{site.brand === 'pebuc' ? 'PeBuC' : t('siteName')}</title>
     <meta name="description" content={t('metaDescription')} />
-    <meta name="theme-color" content="#0b0b0c" />
+    <meta name="theme-color" content={themeColor} />
     {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(`/${l}/`, Astro.site)} />)}
     <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -40,10 +42,10 @@ const t = useT(site.defaultLocale);
       }
       location.replace('/' + l + '/' + location.hash);
     </script>
-    <style>
-      body { margin: 0; min-height: 100svh; display: grid; place-content: center; gap: 1rem; background: #0b0b0c; color: #f3f0ea; font: 500 1.1rem/1.4 system-ui, sans-serif; text-align: center; }
+    <style define:vars={{ bg: themeColor, fg: c.fg, link: c.link }}>
+      body { margin: 0; min-height: 100svh; display: grid; place-content: center; gap: 1rem; background: var(--bg); color: var(--fg); font: 500 1.1rem/1.4 system-ui, sans-serif; text-align: center; }
       nav { display: flex; gap: 1rem; justify-content: center; }
-      a { color: #f2a900; }
+      a { color: var(--link); }
     </style>
   </head>
   <body>

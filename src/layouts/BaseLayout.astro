@@ -10,7 +10,7 @@ import '@fontsource/jetbrains-mono/latin-500.css';
 import '@fontsource/jetbrains-mono/latin-ext-500.css';
 import archivoLatin from '@fontsource-variable/archivo/files/archivo-latin-wdth-normal.woff2?url';
 import '../styles/global.css';
-import { site } from '../config/site';
+import { site, theme, themeColor } from '../config/site';
 import { locales, switchLocalePath, useT, type Locale } from '../i18n';
 import SiteHeader from '../components/SiteHeader.astro';
 import MenuOverlay from '../components/MenuOverlay.astro';
@@ -45,14 +45,14 @@ const speculation = JSON.stringify({
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} data-theme={theme}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{fullTitle}</title>
     <script is:inline>document.documentElement.classList.add('js')</script>
     <meta name="description" content={desc} />
-    <meta name="theme-color" content="#0b0b0c" />
+    <meta name="theme-color" content={themeColor} />
     <link rel="canonical" href={canonical} />
     {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(switchLocalePath(here, l), Astro.site)} />)}
     <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />

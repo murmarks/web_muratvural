@@ -29,6 +29,9 @@ document.addEventListener('click', (e) => {
 const cv = $<HTMLCanvasElement>('[data-dots]');
 const cx = cv?.getContext('2d');
 const DOTS = Number(cv?.dataset.n ?? 800), COLS = 40, ROWS = Math.ceil(DOTS / COLS);
+// renkler temadan (global.css): yanan nokta sarı, yanmayan zeminin üstünde silik
+const css = (v: string) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const dotOn = css('--amber') || '#f2a900', dotOff = css('--dot-off') || 'rgba(243,240,234,.13)';
 function drawDots(p: number) {
   if (!cv || !cx) return;
   const w = cv.width, h = cv.height, sx = w / COLS, sy = h / ROWS, n = Math.round(DOTS * p);
@@ -37,7 +40,7 @@ function drawDots(p: number) {
     const c = i % COLS, r = Math.floor(i / COLS);
     cx.beginPath();
     cx.arc(c * sx + sx / 2, r * sy + sy / 2, Math.min(sx, sy) * 0.3, 0, Math.PI * 2);
-    cx.fillStyle = i < n ? '#f2a900' : 'rgba(243,240,234,.13)';
+    cx.fillStyle = i < n ? dotOn : dotOff;
     cx.fill();
   }
 }
@@ -217,7 +220,8 @@ if (reduce) {
      * altta kalan satırlar kaydırınca ekrana girerken belirir; ikinci satır o sırada dolar.
      */
     const two = $('.s1 h1 .two')!;
-    const fill = { color: '#f2a900', webkitTextStroke: '0px', duration: 0.6 };
+    // koyu temada ikinci satır sarıyla dolar; açıkta siyahla dolar ve altından sarı kalem çizgisi geçer (--hl)
+    const fill = { color: css('--h1-fill') || '#f2a900', webkitTextStroke: '0px', '--hl': '100%', duration: 0.6 };
     if (heroTall) gsap.set(late, { opacity: 0, yPercent: 40 });
     const hero = gsap
       .timeline({ scrollTrigger: { trigger: s1, start: `top top-=${pinShift}`, end: `+=${heroTall ? 70 : 100}%`, scrub: 1, pin: true } })

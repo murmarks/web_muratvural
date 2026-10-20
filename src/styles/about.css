@@ -32,7 +32,7 @@
   text-underline-offset: 0.2em;
 }
 .about .crumbs [aria-current] {
-  color: var(--amber);
+  color: var(--amber-ink);
 }
 
 /* başlık ve giriş; yanında ana sayfadaki gibi ışıklı portre */
@@ -52,7 +52,7 @@
   justify-items: center;
   align-items: end;
   padding-top: 3rem;
-  background: radial-gradient(42% 46% at 50% 40%, rgba(242, 169, 0, 0.16), transparent 70%), radial-gradient(60% 70% at 50% 45%, #1d1c1f, transparent 72%);
+  background: radial-gradient(42% 46% at 50% 40%, var(--lit-glow), transparent 70%), radial-gradient(60% 70% at 50% 45%, var(--lit-spot), transparent 72%);
 }
 .about .lit img {
   width: min(100%, 26rem);
@@ -65,7 +65,7 @@
 }
 .ab-head .lbl {
   margin: 0;
-  color: var(--amber);
+  color: var(--amber-ink);
 }
 .ab-head h1 {
   margin: 0;
@@ -138,7 +138,7 @@
   width: min(100cqw, calc((100svh - var(--bar-h) - 5rem) * var(--ar)), var(--nw));
 }
 .about .vf {
-  --c: rgba(243, 240, 234, 0.4);
+  --c: var(--soft-line);
   --l: 12px;
   --w: 1px;
   inset: -7px;

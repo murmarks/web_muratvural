@@ -1,5 +1,10 @@
 /*
- * Sahne: sitenin ortak görsel dili. Bilerek yalnızca koyu (sinema salonu gibi); vurgu rengi sarı.
+ * Sahne: sitenin ortak görsel dili; vurgu rengi sarı. İki tema var, hangisinin görüneceği
+ * src/config/site.ts içindeki `theme` ayarından gelir (<html data-theme>):
+ * - koyu: sinema salonu. Sarı, karanlıkta parlayan yazı rengidir.
+ * - açık: gün ışığında kâğıt. Sarı yazı kâğıtta okunmaz; büyük vurgular siyah yazının altında
+ *   sarı fosforlu kalem çizgisi olur, küçük vurgular koyu altın renginde yazılır.
+ *   Fotoğraflar kâğıda basılmış baskı gibi: yumuşak gölge, açık paspartu.
  * Her fotoğraf aynı muameleyi görür: bütün olarak, çekildiğinden büyük olmadan, ince bir kenar,
  * film greni ve ana fotoğrafta vizör köşeleri. Fotoğrafın üstüne yazı konmaz.
  */
@@ -14,12 +19,78 @@
   --line: rgba(243, 240, 234, 0.12);
   --amber: #f2a900;
   --on-amber: #0b0b0c;
+  /* sarı yazı: küçük (etiket, numara) ve büyük (rakam, başlık) */
+  --amber-ink: var(--amber);
+  --amber-lg: var(--amber);
+  --focus: var(--amber);
+  --hover: rgba(243, 240, 234, 0.05);
+  --unlit: rgba(243, 240, 234, 0.18);
+  --dot-off: rgba(243, 240, 234, 0.13);
+  --soft-line: rgba(243, 240, 234, 0.4);
+  --photo-edge: rgba(243, 240, 234, 0.12);
+  --photo-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.95);
+  --deep-shadow: 0 50px 90px -40px #000;
+  /* sahadan fotoğrafların paspartusu */
+  --mat: var(--bg-2);
+  --mat-line: rgba(242, 169, 0, 0.38);
+  --mat-edge: rgba(243, 240, 234, 0.16);
+  /* ana sayfa: liderin çevresi (ışık dışı), rakamlar sahnesinin ortası, sahadaki fotoğrafın arkasındaki renk, kurucunun ışığı */
+  --shade: rgba(11, 11, 12, 0.6);
+  --glow: #17171a;
+  --amb-filter: blur(60px) saturate(1.25) brightness(0.3);
+  --amb-op: 1;
+  --lit-glow: rgba(242, 169, 0, 0.16);
+  --lit-spot: #1d1c1f;
+  --h1-fill: var(--amber);
   --display: 'Archivo Variable', 'Archivo', 'Arial Narrow', system-ui, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
   --gl: max(16px, env(safe-area-inset-left, 0px));
   --gr: max(16px, env(safe-area-inset-right, 0px));
   --bar-h: 4.4rem;
   color-scheme: dark;
+}
+:root[data-theme='light'] {
+  --bg: #f5f2ec;
+  --bg-2: #fbfaf6;
+  --bg-3: #fffefb;
+  --fg: #16140f;
+  --text: #3b3831;
+  --muted: #625d53;
+  --dim: #7a746a;
+  --line: rgba(22, 20, 15, 0.14);
+  --amber-ink: #8f5e00;
+  --amber-lg: #bd7d00;
+  --focus: #8f5e00;
+  --hover: rgba(22, 20, 15, 0.05);
+  --unlit: rgba(22, 20, 15, 0.22);
+  --dot-off: rgba(22, 20, 15, 0.12);
+  --soft-line: rgba(22, 20, 15, 0.32);
+  --photo-edge: rgba(22, 20, 15, 0.1);
+  --photo-shadow: 0 2px 4px -1px rgba(40, 30, 10, 0.12), 0 30px 50px -30px rgba(40, 28, 8, 0.5);
+  --deep-shadow: 0 2px 6px -2px rgba(40, 30, 10, 0.15), 0 40px 70px -36px rgba(40, 28, 8, 0.55);
+  --mat: #fcfbf8;
+  --mat-line: rgba(214, 150, 0, 0.6);
+  --mat-edge: rgba(22, 20, 15, 0.1);
+  /* liderin çevresi açıkta da kararır: ışık fotoğrafın içinde, sayfa kâğıt rengi kalır */
+  --shade: rgba(22, 20, 15, 0.55);
+  --glow: #fcfaf6;
+  --amb-filter: blur(70px) saturate(1.6) brightness(1.35);
+  --amb-op: 0.45;
+  --lit-glow: rgba(242, 169, 0, 0.24);
+  --lit-spot: #fffdf9;
+  --h1-fill: var(--fg);
+  color-scheme: light;
+}
+/* açık temada sarı vurgu: siyah yazının altında fosforlu kalem çizgisi */
+:root[data-theme='light'] .h2 em {
+  color: var(--fg);
+  background: linear-gradient(var(--amber), var(--amber)) 0 86% / 100% 0.34em no-repeat;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding-inline: 0.04em;
+}
+:root[data-theme='light'] .grain {
+  opacity: 0.035;
 }
 
 *,
@@ -52,7 +123,7 @@ button {
   color: inherit;
 }
 :focus-visible {
-  outline: 2px solid var(--amber);
+  outline: 2px solid var(--focus);
   outline-offset: 3px;
 }
 ::selection {
@@ -123,7 +194,7 @@ button {
 }
 .h2 em {
   font-style: normal;
-  color: var(--amber);
+  color: var(--amber-lg);
 }
 .lede {
   margin: 0;
@@ -333,7 +404,7 @@ html.switching .contact {
   height: 100%;
   object-fit: contain;
   filter: contrast(1.04) saturate(0.94);
-  box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(243, 240, 234, 0.12);
+  box-shadow: var(--photo-shadow), 0 0 0 1px var(--photo-edge);
   border-radius: 2px;
 }
 .ph::after {
@@ -370,7 +441,7 @@ html.switching .contact {
     linear-gradient(var(--c), var(--c)) bottom right / var(--w) var(--l) no-repeat;
 }
 .gal .vf {
-  --c: rgba(243, 240, 234, 0.4);
+  --c: var(--soft-line);
   --l: 12px;
   --w: 1px;
   inset: -7px;

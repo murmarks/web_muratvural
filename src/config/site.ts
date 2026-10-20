@@ -31,6 +31,11 @@ export const site = {
    * Derlerken FX ortam değişkeni bunu geçersiz kılar (önizleme için).
    */
   fieldEffect: 'tul' as 'tul' | 'isik' | 'panjur' | 'odak' | 'none',
+  /**
+   * Sitenin teması: 'light' açık zemin (2026-10-20'de dev dallarında denenmeye başlandı), 'dark' ilk koyu tasarım.
+   * İkisi de kodda durur (src/styles/global.css). Derlerken THEME ortam değişkeni bunu geçersiz kılar (önizleme için).
+   */
+  theme: 'light' as Theme,
   contact: {
     email: 'contact@muratvural.com',
     whatsapp: '+84934000150',
@@ -38,5 +43,11 @@ export const site = {
     timeZone: 'UTC+07:00',
   },
 };
+
+export type Theme = 'light' | 'dark';
+/** Derlemede kullanılan tema: THEME ortam değişkeni varsa o, yoksa site.theme. */
+export const theme: Theme = process.env.THEME === 'dark' || process.env.THEME === 'light' ? process.env.THEME : site.theme;
+/** Tarayıcı çubuğunun rengi, sayfa zemini ile aynı. */
+export const themeColor = theme === 'light' ? '#f5f2ec' : '#0b0b0c';
 
 export const isLocale = (x: unknown): x is Locale => (locales as readonly unknown[]).includes(x);
