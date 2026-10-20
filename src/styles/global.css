@@ -623,6 +623,101 @@ html.switching .contact {
   text-transform: uppercase;
 }
 
+/*
+ * Açık tema: kâğıt üstünde fotoğraf işlemsiz kalınca yapıştırılmış gibi görünür. Her fotoğraf duvara asılmış
+ * bir baskı gibi açık bir paspartuya oturur: dışta ince bir çizgi, altında uzun yumuşak gölge.
+ * Galeri fotoğraflarının köşe işaretleri paspartunun dışına, baskı kesim işareti gibi sarı çizilir.
+ * Önizlemeler küçük baskılar: ince paspartu, seçili olmayanlar soluk.
+ */
+:root[data-theme='light'] {
+  --mat-w: 8px;
+  --print-shadow: 0 1px 3px rgba(40, 30, 10, 0.12), 0 34px 56px -28px rgba(40, 28, 8, 0.48);
+}
+:root[data-theme='light'] .gal .ph img,
+:root[data-theme='light'] .fig .ph img {
+  border-radius: 0;
+  box-shadow: 0 0 0 var(--mat-w) var(--mat), 0 0 0 calc(var(--mat-w) + 1px) var(--mat-edge), var(--print-shadow);
+}
+:root[data-theme='light'] .gal .vf,
+:root[data-theme='light'] .fig .vf {
+  --c: var(--mat-line);
+  --l: 14px;
+  --w: 1px;
+  inset: calc(-1 * var(--mat-w) - 9px);
+}
+:root[data-theme='light'] .gal .shots {
+  padding: calc(var(--mat-w) + 12px);
+}
+:root[data-theme='light'] .alts {
+  gap: 0.75rem;
+  padding: 4px 4px 0;
+}
+:root[data-theme='light'] .alts img {
+  border-radius: 0;
+  box-shadow: 0 0 0 3px var(--mat), 0 0 0 4px var(--mat-edge), 0 6px 10px -6px rgba(40, 28, 8, 0.45);
+}
+:root[data-theme='light'] .alts button {
+  opacity: 0.72;
+  filter: grayscale(0.55);
+  outline-offset: 6px;
+  transition: opacity 0.25s, filter 0.25s, outline-color 0.25s;
+}
+:root[data-theme='light'] .alts button:hover {
+  opacity: 1;
+  filter: none;
+}
+:root[data-theme='light'] .alts button[aria-current='true'] {
+  opacity: 1;
+  filter: none;
+  outline-width: 1.5px;
+}
+:root[data-theme='light'] .gcap::before {
+  width: 0.45rem;
+  height: 0.45rem;
+}
+
+/*
+ * Kurucu portresi (ana sayfa ve Hakkında): açık zeminde portrenin arkasında kemerli bir pano; omuzları panonun içinde, başı kemerin üstüne taşar.
+ * Pano kumu andıran sıcak bir ton, dışında ince sarı bir kemer çizgisi; ışık panonun içinden gelir.
+ */
+.lit .arch {
+  display: none;
+}
+:root[data-theme='light'] .lit {
+  background: none;
+}
+:root[data-theme='light'] .lit img {
+  grid-area: 1 / 1;
+  z-index: 1;
+}
+:root[data-theme='light'] .lit .arch {
+  display: block;
+  grid-area: 1 / 1;
+  justify-self: center;
+  align-self: end;
+  position: relative;
+  width: min(74%, 19.5rem);
+  height: 80%;
+  translate: 9% 0;
+  border-radius: 999px 999px 0 0;
+  background: radial-gradient(60% 45% at 50% 30%, rgba(242, 169, 0, 0.32), transparent 75%), linear-gradient(#efe4cd, #ddccab);
+  box-shadow: inset 0 -30px 40px -30px rgba(80, 55, 10, 0.25);
+}
+:root[data-theme='light'] .lit .arch::after {
+  content: '';
+  position: absolute;
+  inset: -12px -12px 0;
+  border: 1px solid var(--mat-line);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+}
+:root[data-theme='light'] .lit .desk {
+  grid-row: 2;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--fg) 20%, var(--fg) 80%, transparent);
+  opacity: 0.55;
+}
+
 @media (max-width: 860px) {
   .brand .full { display: none; }
   .brand .short { display: inline; }

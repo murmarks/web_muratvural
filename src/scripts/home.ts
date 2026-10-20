@@ -202,7 +202,9 @@ if (reduce) {
   const below = (el: Element) => !narrow.matches && el.getBoundingClientRect().bottom + scrollY > innerHeight + 1;
   const late = lines.filter(below);
   const heroTall = late.length > 0;
-  const pinShift = narrow.matches ? 0 : Math.max(0, Math.ceil(stage.getBoundingClientRect().bottom + scrollY + 12 - innerHeight));
+  // açık temada fotoğrafın paspartusu da ekrana sığsın (--stage-mat; koyu temada 0)
+  const mat = parseFloat(getComputedStyle(s1).getPropertyValue('--stage-mat')) || 0;
+  const pinShift = narrow.matches ? 0 : Math.max(0, Math.ceil(stage.getBoundingClientRect().bottom + scrollY + 12 + mat - innerHeight));
   // perde açılır; ışık lideri bulur. Sayfa dil düğmesi için arka planda hazırlandıysa, ekrana gelince başlar.
   onShow(() => {
     gsap.to('.cur.l, .cur.r', { scaleX: 0, duration: 1.6, ease: 'expo.inOut', delay: 0.2 });

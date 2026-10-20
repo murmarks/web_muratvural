@@ -153,6 +153,14 @@
   filter: none;
 }
 
+/* açık tema: fotoğrafların paspartusu ve köşe işaretleri için yer (portrenin kemeri global.css'te) */
+:root[data-theme='light'] .fig {
+  padding: calc(var(--mat-w) + 12px);
+}
+:root[data-theme='light'] .about .lit {
+  background: none;
+}
+
 @media (max-width: 960px) {
   .ab-top {
     grid-template-columns: minmax(0, 1fr);

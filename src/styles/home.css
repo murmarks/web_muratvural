@@ -933,7 +933,68 @@
   margin-bottom: 0.2rem;
 }
 
+/*
+ * Açık tema incelikleri (koyu temada siyah zemin çerçeve gerektirmiyordu; kâğıtta gerektiriyor).
+ * 1 · ana fotoğraf: geniş açık paspartu, dışta ince sarı çizgi, altında uzun gölge; perde paspartunun renginde açılır.
+ *     Fotoğrafın kendisi alttaki bölümlerle aynı hizada kalır, paspartu kenar boşluğuna taşar.
+ */
+:root[data-theme='light'] .s1 {
+  --stage-mat: 14px;
+}
+:root[data-theme='light'] .stage {
+  background: var(--mat);
+  box-shadow: 0 0 0 var(--stage-mat) var(--mat), 0 0 0 calc(var(--stage-mat) + 1px) var(--mat-line), var(--deep-shadow);
+}
+:root[data-theme='light'] .cur {
+  background: var(--mat);
+}
+:root[data-theme='light'] .s1 .kicker {
+  margin-bottom: calc(0.8rem + var(--stage-mat));
+}
+:root[data-theme='light'] .s1 h1 {
+  margin-top: calc(1.4rem + var(--stage-mat));
+}
+/* 2 · rakamlar: ışığı sol üstten alan, kenarlara doğru koyulaşan kâğıt; sahne önceki bölümden ayrılır */
+:root[data-theme='light'] .s2 {
+  background: radial-gradient(75% 70% at 28% 45%, #fdfcf9, #ece6da 100%);
+}
+/* 2 · slaytlar: ekran gibi, ince koyu çerçeve içinde; altında gölge, açıklamanın önünde sarı kare */
+:root[data-theme='light'] .slides img {
+  border: 5px solid #1d1b17;
+  border-radius: 5px;
+  background: #1d1b17;
+  box-shadow: 0 0 0 1px rgba(22, 20, 15, 0.25), 0 22px 32px -22px rgba(40, 28, 8, 0.6);
+}
+:root[data-theme='light'] .slides figcaption {
+  margin-top: 0.7rem;
+  color: var(--text);
+}
+:root[data-theme='light'] .slides figcaption::before {
+  content: '';
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-right: 0.45rem;
+  background: var(--amber);
+  vertical-align: 0.05em;
+}
+/* 3 · yer listesindeki küçük fotoğraflar: küçük baskılar */
+:root[data-theme='light'] .places .th img {
+  border-radius: 0;
+  box-shadow: 0 0 0 2px var(--mat), 0 0 0 3px var(--mat-edge), 0 5px 9px -5px rgba(40, 28, 8, 0.45);
+  opacity: 0.7;
+  filter: grayscale(0.5);
+  transition: opacity 0.25s, filter 0.25s;
+}
+:root[data-theme='light'] .places li.on .th img,
+:root[data-theme='light'] .places button:hover .th img {
+  opacity: 1;
+  filter: none;
+}
 @media (max-width: 860px) {
+  :root[data-theme='light'] .s1 {
+    --stage-mat: 8px;
+  }
   .s1 {
     --stage-w: 100%;
     min-height: 0;

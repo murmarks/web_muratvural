@@ -44,6 +44,7 @@ const ph = (p: Photo) => `--ar:${(p.w / p.h).toFixed(4)};--nw:${p.w}px`;
         <p class="lede-xl" set:html={inline(a.lede)} />
       </header>
       <div class="lit" aria-hidden="true">
+        <span class="arch"></span>
         <img src={portrait.src} alt="" width={portrait.w} height={portrait.h} fetchpriority="high" />
         <div class="desk"></div>
       </div>
