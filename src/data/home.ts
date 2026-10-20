@@ -20,10 +20,10 @@ export interface Place {
 export const places: Place[] = [
   { country: T('Kosovo', 'Kosova'), city: T('Pristina', 'Priştine'), what: T('Pharmaceutical training for the physicians on the team', 'Ekipteki hekimlere ilaç eğitimi'), photos: [photo('kosovo-1')] },
   { country: T('Moldova', 'Moldova'), city: T('Chișinău', 'Kişinev'), what: T('Training for field managers', 'Saha müdürleri eğitimi'), photos: [photo('moldova')] },
-  { country: T('Azerbaijan', 'Azerbaycan'), city: T('Baku', 'Bakü'), what: T('Annual basic-science training for the field teams', 'Saha ekiplerine yıllık temel bilimler eğitimi'), photos: [photo('azerbaijan')] },
+  { country: T('Bosnia and Herzegovina', 'Bosna-Hersek'), city: T('Sarajevo', 'Saraybosna'), what: T('With the local team at the office', 'Yerel ekiple ofiste çalışma'), photos: [photo('bosnia')] },
   { country: T('Georgia', 'Gürcistan'), city: T('Tbilisi', 'Tiflis'), what: T('Training seminar for physicians', 'Hekimler için eğitim semineri'), photos: [photo('georgia')] },
   { country: T('Croatia', 'Hırvatistan'), city: T('Zagreb', 'Zagreb'), what: T('Training seminar for physicians', 'Hekimler için eğitim semineri'), photos: [photo('croatia')] },
-  { country: T('Bosnia and Herzegovina', 'Bosna-Hersek'), city: T('Sarajevo', 'Saraybosna'), what: T('With the local team at the office', 'Yerel ekiple ofiste çalışma'), photos: [photo('bosnia')] },
+  { country: T('Azerbaijan', 'Azerbaycan'), city: T('Baku', 'Bakü'), what: T('Annual basic-science training for the field teams', 'Saha ekiplerine yıllık temel bilimler eğitimi'), photos: [photo('azerbaijan')] },
   { country: T('Libya', 'Libya'), city: T('Tripoli', 'Trablus'), what: T('Pharmacy visit in the field', 'Sahada eczane ziyareti'), photos: [photo('libya')] },
   { country: T('Türkiye', 'Türkiye'), city: T('Antalya', 'Antalya'), what: T('Sales techniques training for the field teams', 'Saha ekiplerine satış teknikleri eğitimi'), photos: ['antalya-1', 'antalya-3', 'antalya-4'].map((n) => photo(n)) },
   { country: T('Vietnam', 'Vietnam'), city: T('Ho Chi Minh City', 'Ho Chi Minh City'), cityLang: 'en', what: T('Training seminar for the Phano pharmacy chain', 'Phano eczane zinciri için eğitim semineri'), photos: ['vietnam-1', 'vietnam-2', 'vietnam-3'].map((n) => photo(n)) },
