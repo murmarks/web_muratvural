@@ -1,0 +1,25 @@
+# GEÇİCİ: dev sitesi kontrolü. İş bitince silinecek.
+name: Dev kontrol (gecici)
+on:
+  push:
+    branches: [dev_source]
+    paths: ['.github/workflows/diag-check.yml']
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for i in $(seq 1 40); do curl -s https://dev.muratvural.com/tr/ | grep -q 'canvas class="backdrop"' && curl -s "https://dev.muratvural.com/ayarlar.txt" | grep -q ucus_yogunlugu && { echo "dev yeni sürümde ($i)"; break; }; sleep 10; done
+          for u in / /tr/ /en/services/ /ayarlar.txt; do curl -s -o /dev/null -w "$u %{http_code}\n" https://dev.muratvural.com$u; done
+          curl -sI "https://dev.muratvural.com/ayarlar.txt?t=1" | grep -i -E "cache|content-type|HTTP"
+          mkdir -p /tmp/pw && cd /tmp/pw && npm init -y >/dev/null && npm i playwright@1.56.1 >/dev/null 2>&1
+          cat > c.cjs <<'JS'
+          const { chromium } = require('playwright');
+          (async () => { const b = await chromium.launch({ channel: 'chrome' }); const p = await b.newPage({ viewport: { width: 1536, height: 864 } });
+            const errs = []; p.on('pageerror', (e) => errs.push(e.message));
+            await p.goto('https://dev.muratvural.com/tr/services/?ayar', { waitUntil: 'commit' });
+            await p.waitForSelector('.bd-panel', { timeout: 30000 }).then(() => console.log('panel açıldı'), () => console.log('PANEL YOK'));
+            console.log('değerler', await p.evaluate(() => [...document.querySelectorAll('.bd-panel input[type=range]')].map((i) => i.dataset.key + '=' + i.value).join(' ')));
+            console.log('hatalar', JSON.stringify(errs)); await b.close(); })();
+          JS
+          node c.cjs
