@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en" data-theme="dark" data-astro-cid-ibpinaeu><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex"><meta name="theme-color" content="#0b0b0c"><style>html.mv-bekle body{visibility:hidden}</style><script>(function(){const V = {"site":{"tema":"koyu","dil":"otomatik"},"zemin":{"kayma":25},"harita":{"acik":true,"noktalar":35,"sari":80,"ucus_yogunlugu":40},"toz":{"acik":true,"gorunurluk":70,"yogunluk":65}};
+const renk = {"light":"#f5f2ec","dark":"#0b0b0c"};
+
+  const h = document.documentElement, KEY = 'mv-ayar';
+  const al = (s, sec, k) => (s && s[sec] && s[sec][k] !== undefined ? s[sec][k] : V[sec][k]);
+  window.mvAl = al;
+  window.mvSayfa = (s) => {
+    const acik = al(s, 'site', 'tema') === 'acik';
+    h.dataset.theme = acik ? 'light' : 'dark';
+    h.toggleAttribute('data-backdrop', !!(al(s, 'harita', 'acik') || al(s, 'toz', 'acik')));
+    const m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.content = acik ? renk.light : renk.dark;
+  };
+  let c = null, t = null;
+  try { c = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+  // ayar paneli bu sekmede açıksa kaydedilmemiş önizleme sayfadan sayfaya sürer
+  try { if (sessionStorage.getItem('mv-panel') === '1') t = JSON.parse(sessionStorage.getItem('mv-taslak') || 'null'); } catch (e) {}
+  if (t) window.mvPanel = true;
+  window.mvSayfa(t || c);
+  window.mvAyarOnbellek = c;
+  window.mvTaslak = t;
+  window.mvAyar = fetch('/ayar.php?t=' + Date.now(), { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : null))
+    .catch(() => null)
+    .then((s) => {
+      if (!s || typeof s !== 'object' || Array.isArray(s)) return null;
+      try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {}
+      return s;
+    });
+  if (!c && !t) {
+    h.classList.add('mv-bekle');
+    const ac = () => h.classList.remove('mv-bekle');
+    setTimeout(ac, 900);
+    window.mvAyar.then((s) => { if (s) window.mvSayfa(s); ac(); });
+  } else window.mvAyar.then((s) => { if (s && !window.mvPanel) window.mvSayfa(s); });
+})();</script><title>404 · Dr. Murat Vural</title><link rel="icon" type="image/png" href="/favicon.png"><link rel="stylesheet" href="/_astro/global.DVPFBWpA.css"><style>.nf[data-astro-cid-ibpinaeu]{align-content:center;gap:2rem;max-width:48rem;min-height:100svh;display:grid}.code[data-astro-cid-ibpinaeu]{font:900 clamp(6rem, 20vw, 12rem) / .8 var(--display);color:var(--amber-lg);margin:0;font-stretch:125%}h1[data-astro-cid-ibpinaeu]{font:800 1.6rem/1.1 var(--display);text-transform:uppercase;margin:0}section[data-astro-cid-ibpinaeu] p[data-astro-cid-ibpinaeu]{color:var(--muted);margin:.4rem 0 0}.links[data-astro-cid-ibpinaeu] a[data-astro-cid-ibpinaeu]{color:var(--fg)}
+</style><script type="module" src="/_astro/page.B3sWyS9n.js"></script></head><body data-astro-cid-ibpinaeu><main class="nf wrap" data-astro-cid-ibpinaeu><p class="code" data-astro-cid-ibpinaeu>404</p><section lang="en" data-astro-cid-ibpinaeu><h1 data-astro-cid-ibpinaeu>Page not found</h1><p data-astro-cid-ibpinaeu>The address may have changed or been removed.</p><p class="links mono" data-astro-cid-ibpinaeu><a href="/en/" data-astro-cid-ibpinaeu>Home</a> · <a href="/en/services/" data-astro-cid-ibpinaeu>Services</a><span class="sr" data-astro-cid-ibpinaeu>(English)</span></p></section><section lang="tr" data-astro-cid-ibpinaeu><h1 data-astro-cid-ibpinaeu>Sayfa bulunamadı</h1><p data-astro-cid-ibpinaeu>Adres değişmiş ya da kaldırılmış olabilir.</p><p class="links mono" data-astro-cid-ibpinaeu><a href="/tr/" data-astro-cid-ibpinaeu>Ana sayfa</a> · <a href="/tr/services/" data-astro-cid-ibpinaeu>Hizmetler</a><span class="sr" data-astro-cid-ibpinaeu>(Türkçe)</span></p></section></main></body></html>

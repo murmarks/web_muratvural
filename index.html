@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en" data-theme="dark" style="--dbg: #0b0b0c;--lbg: #f5f2ec;" data-astro-cid-lcdefpme><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dr. Murat Vural</title><meta name="description" content="Physician; twenty years as a manager and trainer in the international pharmaceutical industry. Dr. Murat Vural helps companies set up in new markets, improve performance, train their teams and run remote support."><meta name="theme-color" content="#0b0b0c"><link rel="alternate" hreflang="en" href="https://muratvural.com/en/"><link rel="alternate" hreflang="tr" href="https://muratvural.com/tr/"><link rel="alternate" hreflang="x-default" href="https://muratvural.com/"><link rel="icon" type="image/png" href="/favicon.png"><style>html.mv-bekle body{visibility:hidden}</style><script>(function(){const V = {"site":{"tema":"koyu","dil":"otomatik"},"zemin":{"kayma":25},"harita":{"acik":true,"noktalar":35,"sari":80,"ucus_yogunlugu":40},"toz":{"acik":true,"gorunurluk":70,"yogunluk":65}};
+const renk = {"light":"#f5f2ec","dark":"#0b0b0c"};
+
+  const h = document.documentElement, KEY = 'mv-ayar';
+  const al = (s, sec, k) => (s && s[sec] && s[sec][k] !== undefined ? s[sec][k] : V[sec][k]);
+  window.mvAl = al;
+  window.mvSayfa = (s) => {
+    const acik = al(s, 'site', 'tema') === 'acik';
+    h.dataset.theme = acik ? 'light' : 'dark';
+    h.toggleAttribute('data-backdrop', !!(al(s, 'harita', 'acik') || al(s, 'toz', 'acik')));
+    const m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.content = acik ? renk.light : renk.dark;
+  };
+  let c = null, t = null;
+  try { c = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+  // ayar paneli bu sekmede açıksa kaydedilmemiş önizleme sayfadan sayfaya sürer
+  try { if (sessionStorage.getItem('mv-panel') === '1') t = JSON.parse(sessionStorage.getItem('mv-taslak') || 'null'); } catch (e) {}
+  if (t) window.mvPanel = true;
+  window.mvSayfa(t || c);
+  window.mvAyarOnbellek = c;
+  window.mvTaslak = t;
+  window.mvAyar = fetch('/ayar.php?t=' + Date.now(), { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : null))
+    .catch(() => null)
+    .then((s) => {
+      if (!s || typeof s !== 'object' || Array.isArray(s)) return null;
+      try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {}
+      return s;
+    });
+  if (!c && !t) {
+    h.classList.add('mv-bekle');
+    const ac = () => h.classList.remove('mv-bekle');
+    setTimeout(ac, 900);
+    window.mvAyar.then((s) => { if (s) window.mvSayfa(s); ac(); });
+  } else window.mvAyar.then((s) => { if (s && !window.mvPanel) window.mvSayfa(s); });
+})();</script><script>(function(){const locales = ["en","tr"];
+const def = "en";
+const regional = {"tr":{"timeZones":["Europe/Istanbul"],"languages":["tr"]}};
+
+      // ilk açılış dili panelde seçilir (window.mvAl: AyarHead): 'otomatik' bölgesel kurala bakar, 'tr'/'en' herkesi o dilde açar
+      const git = (s) => {
+        let l = def;
+        const mod = window.mvAl(s, 'site', 'dil');
+        if (locales.includes(mod)) l = mod;
+        else {
+          let tz = '';
+          try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+          const langs = (navigator.languages || [navigator.language || '']).map((x) => String(x).slice(0, 2).toLowerCase());
+          for (const [k, r] of Object.entries(regional)) {
+            if (r.timeZones.includes(tz) || langs.some((x) => r.languages.includes(x))) { l = k; break; }
+          }
+        }
+        location.replace('/' + l + '/' + location.hash);
+      };
+      let secilen = null;
+      try { secilen = localStorage.getItem('site-lang'); } catch (e) {}
+      // ziyaretçi dili kendisi değiştirdiyse her zaman onun seçimi
+      if (locales.includes(secilen)) location.replace('/' + secilen + '/' + location.hash);
+      else {
+        // sunucudaki güncel ayar beklenir; gelmezse tarayıcıdaki son ayar, o da yoksa varsayılan
+        let gitti = false;
+        const bir = (s) => { if (!gitti) { gitti = true; git(s || window.mvAyarOnbellek); } };
+        window.mvAyar.then(bir);
+        setTimeout(() => bir(null), 1500);
+      }
+    })();</script><style>body{background:var(--dbg);color:#f3f0ea;text-align:center;place-content:center;gap:1rem;min-height:100svh;margin:0;font:500 1.1rem/1.4 system-ui,sans-serif;display:grid}nav[data-astro-cid-lcdefpme]{justify-content:center;gap:1rem;display:flex}a[data-astro-cid-lcdefpme]{color:#f2a900}html[data-theme=light] body{background:var(--lbg);color:#16140f}html[data-theme=light] a[data-astro-cid-lcdefpme]{color:#8f5e00}
+</style><script type="module" src="/_astro/page.B3sWyS9n.js"></script></head><body style="--dbg: #0b0b0c;--lbg: #f5f2ec;" data-astro-cid-lcdefpme><p style="--dbg: #0b0b0c;--lbg: #f5f2ec;" data-astro-cid-lcdefpme>Choose a language</p><nav style="--dbg: #0b0b0c;--lbg: #f5f2ec;" data-astro-cid-lcdefpme><a href="/en/" hreflang="en" lang="en" style="--dbg: #0b0b0c;--lbg: #f5f2ec;" data-astro-cid-lcdefpme>English</a><a href="/tr/" hreflang="tr" lang="tr" style="--dbg: #0b0b0c;--lbg: #f5f2ec;" data-astro-cid-lcdefpme>Türkçe</a></nav></body></html>
