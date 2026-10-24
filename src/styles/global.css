@@ -208,8 +208,20 @@ html[data-backdrop] body {
 .ap-bas strong {
   font-weight: 600;
 }
+.ap.kucuk > :not(.ap-bas) {
+  display: none;
+}
+.ap.kucuk .ap-bas {
+  border-bottom: 0;
+}
+/* kaydırıcı sürüklenirken panel saydamlaşır: arkadaki sayfa değişirken görünür */
+.ap:has(input[type='range']:active) {
+  opacity: 0.25;
+  transition: opacity 0.2s;
+}
 .ap-x {
   padding: 0 4px;
+  margin-left: 6px;
   border: 0;
   background: none;
   color: var(--muted);

@@ -45,7 +45,7 @@ let kayitli: Ayar = duzelt(window.mvAyarOnbellek);
 let taslak: Ayar = kopya(kayitli);
 let sunucuOkundu = false;
 
-const bas = `<header class="ap-bas"><strong>Site ayarları</strong><button type="button" class="ap-x" data-cik aria-label="Kapat">×</button></header>`;
+const bas = `<header class="ap-bas"><strong>Site ayarları</strong><span><button type="button" class="ap-x" data-kucult aria-label="Küçült" aria-expanded="true">–</button><button type="button" class="ap-x" data-cik aria-label="Kapat">×</button></span></header>`;
 const not = (msg: string, tur: '' | 'iyi' | 'kotu' = '') => {
   const p = box.querySelector<HTMLElement>('.ap-not');
   if (!p) return;
@@ -128,6 +128,12 @@ function ciz() {
   </footer>`;
   const g = box.querySelector('.ap-govde');
   if (g) g.scrollTop = kaydir;
+  if (box.classList.contains('kucuk')) {
+    const k = box.querySelector('[data-kucult]')!;
+    k.textContent = '+';
+    k.setAttribute('aria-label', 'Büyüt');
+    k.setAttribute('aria-expanded', 'false');
+  }
   durum();
 }
 
@@ -180,7 +186,13 @@ box.addEventListener('change', async (e) => {
 box.addEventListener('click', async (e) => {
   const b = (e.target as HTMLElement).closest('button');
   if (!b) return;
-  if (b.dataset.v !== undefined) {
+  if (b.hasAttribute('data-kucult')) {
+    // sayfayı görmek için panel başlığına kadar küçülür
+    const k = box.classList.toggle('kucuk');
+    b.textContent = k ? '+' : '–';
+    b.setAttribute('aria-label', k ? 'Büyüt' : 'Küçült');
+    b.setAttribute('aria-expanded', String(!k));
+  } else if (b.dataset.v !== undefined) {
     degistir(b.dataset.sec!, b.dataset.key!, b.dataset.v);
     b.parentElement!.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
     durum();
