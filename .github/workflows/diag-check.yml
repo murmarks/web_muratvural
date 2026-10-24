@@ -1,0 +1,18 @@
+# GEÇİCİ: dev sitesinde PHP kontrolü. İş bitince silinecek.
+name: Dev kontrol (gecici)
+on:
+  push:
+    branches: [dev_source]
+    paths: ['.github/workflows/diag-check.yml']
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          J=/tmp/cj; U=https://dev.muratvural.com
+          curl -s -c $J -b $J -o /dev/null $U/tr/
+          for i in $(seq 1 40); do c=$(curl -s -c $J -b $J -o /tmp/o -w '%{http_code}' "$U/ayar.php?durum"); grep -q '"php"' /tmp/o && { echo "php yanıt verdi ($i)"; break; }; echo "deneme $i: $c $(head -c 120 /tmp/o)"; sleep 10; done
+          echo; cat /tmp/o; echo
+          curl -s -c $J -b $J -D - "$U/ayar.php?t=1" | head -20; echo
+          curl -s -c $J -b $J -X POST -H 'content-type: application/json' -d '{"sifre":"yanlis"}' -w ' %{http_code}\n' $U/ayar.php
+          curl -s -c $J -b $J -X POST -H 'content-type: application/json' -d '{"sifre":"murvur"}' -w ' %{http_code}\n' $U/ayar.php
