@@ -10,36 +10,21 @@ jobs:
     steps:
       - run: |
           U=https://dev.muratvural.com
-          for i in $(seq 1 40); do curl -s "$U/tr/?t=$i" | grep -q 'mv-bekle' && { echo "dev yeni sürümde ($i)"; break; }; sleep 10; done
-          for u in / /tr/ /en/services/ /ayar.php /ayarlar.txt; do curl -s -o /dev/null -w "$u %{http_code}\n" "$U$u"; done
+          for i in $(seq 1 40); do curl -s "$U/ayar.php?t=$i" | grep -q '^{' && { echo "GET {} ($i)"; break; }; sleep 10; done
+          curl -s "$U/ayar.php?t=x"; echo
           mkdir -p /tmp/pw && cd /tmp/pw && npm init -y >/dev/null && npm i playwright@1.56.1 >/dev/null 2>&1
           cat > c.cjs <<'JS'
           const { chromium } = require('playwright');
           const U = 'https://dev.muratvural.com';
-          const post = (p, body) => p.evaluate((b) => fetch('/ayar.php', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(b) }).then(async (r) => r.status + ' ' + (await r.text())), body);
           (async () => {
-            const b = await chromium.launch({ channel: 'chrome' });
-            const c = await b.newContext({ viewport: { width: 1536, height: 864 }, locale: 'en-US', timezoneId: 'Asia/Ho_Chi_Minh' });
-            const p = await c.newPage(); const errs = []; p.on('pageerror', (e) => errs.push(e.message));
-            await p.goto(U + '/tr/?ayar', { waitUntil: 'commit' });
-            await p.waitForSelector('.ap-kilit', { timeout: 40000 }).then(() => console.log('panel kilitli açıldı'), () => console.log('PANEL YOK'));
-            await p.fill('.ap-kilit input', 'yanlis'); await p.click('.ap-kilit button'); await p.waitForTimeout(2500);
-            console.log('yanlış şifre:', await p.textContent('.ap-not'));
-            await p.fill('.ap-kilit input', 'murvur'); await p.click('.ap-kilit button');
-            await p.waitForSelector('.ap-govde', { timeout: 15000 }).then(() => console.log('doğru şifre: ayarlar açıldı'), () => console.log('AYARLAR AÇILMADI'));
-            await p.click('.ap-sec button[data-v=acik]'); await p.waitForTimeout(800);
-            console.log('önizleme teması:', await p.evaluate(() => document.documentElement.dataset.theme));
-            // sunucuya kaydet: açık tema + Türkçe, sonra yeni ziyaretçi
-            console.log('kaydet:', await post(p, { sifre: 'murvur', ayar: { site: { tema: 'acik', dil: 'tr' } } }));
-            const c2 = await b.newContext({ viewport: { width: 1536, height: 864 }, locale: 'en-US', timezoneId: 'Asia/Ho_Chi_Minh' });
-            const q = await c2.newPage(); q.on('pageerror', (e) => errs.push('q ' + e.message));
-            await q.goto(U + '/', { waitUntil: 'commit' }); await q.waitForURL(/\/(tr|en)\//, { timeout: 40000 }).catch(() => {}); await q.waitForTimeout(2500);
-            console.log('yeni ziyaretçi (İngilizce tarayıcı, Vietnam):', new URL(q.url()).pathname, await q.evaluate(() => document.documentElement.dataset.theme));
-            // eski haline: kayıt boş = varsayılanlar
-            console.log('sıfırla:', await post(p, { sifre: 'murvur', ayar: {} }));
-            await q.goto(U + '/tr/?x=1', { waitUntil: 'commit' }); await q.waitForTimeout(4000);
-            console.log('sıfırdan sonra ziyaretçi teması:', await q.evaluate(() => document.documentElement.dataset.theme));
-            console.log('GET:', await q.evaluate(() => fetch('/ayar.php?t=' + Date.now()).then((r) => r.text())));
+            const b = await chromium.launch({ channel: 'chrome' }); const errs = [];
+            for (const [loc, tz] of [['en-US', 'Asia/Ho_Chi_Minh'], ['tr-TR', 'Asia/Ho_Chi_Minh'], ['en-US', 'Europe/Istanbul']]) {
+              const c = await b.newContext({ viewport: { width: 1536, height: 864 }, locale: loc, timezoneId: tz });
+              const q = await c.newPage(); q.on('pageerror', (e) => errs.push(e.message));
+              await q.goto(U + '/', { waitUntil: 'commit' }); await q.waitForURL(/\/(tr|en)\//, { timeout: 40000 }).catch(() => {}); await q.waitForTimeout(2500);
+              console.log(loc, tz, '→', new URL(q.url()).pathname, await q.evaluate(() => [document.documentElement.dataset.theme, document.documentElement.className]));
+              await c.close();
+            }
             console.log('hatalar', JSON.stringify(errs)); await b.close();
           })();
           JS

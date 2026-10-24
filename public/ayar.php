@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
     $f = dosya();
     $s = $f && is_file($f) ? json_decode((string) @file_get_contents($f), true) : null;
-    echo json_encode(is_array($s) ? $s : new stdClass(), JSON_UNESCAPED_UNICODE);
+    echo json_encode(is_array($s) ? (object) $s : new stdClass(), JSON_UNESCAPED_UNICODE); // boş kayıt da {} olarak gider
     exit;
 }
 
@@ -90,11 +90,11 @@ if ($ayar === null) cevap(400, ['hata' => 'ayar']);
 $f = dosya();
 if (!$f) cevap(500, ['hata' => 'kayit_yeri']);
 
-$json = json_encode($ayar, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+$json = json_encode((object) $ayar, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 if (is_file($f)) @copy($f, $f . '.onceki'); // bir önceki kayıt da saklanır
 $gecici = $f . '.' . getmypid() . '.tmp';
 if (@file_put_contents($gecici, $json, LOCK_EX) === false || !@rename($gecici, $f)) {
     @unlink($gecici);
     cevap(500, ['hata' => 'yazilamadi']);
 }
-cevap(200, ['tamam' => true, 'ayar' => $ayar]);
+cevap(200, ['tamam' => true, 'ayar' => (object) $ayar]);
