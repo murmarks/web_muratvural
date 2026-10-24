@@ -1,0 +1,31 @@
+# GEÇİCİ tanı iş akışı: dil düğmesi takılması. İş bitince silinecek.
+name: Dil gecisi tani (gecici)
+on:
+  push:
+    branches: [dev_source]
+    paths: ['.github/workflows/diag-lang.yml', '.github/diag/**']
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sunucu yanıtları (curl)
+        run: |
+          for i in 1 2 3; do for p in /tr/ /en/; do for sp in none prefetch 'prefetch;prerender'; do
+            H=(); [ "$sp" != none ] && H=(-H "Sec-Purpose: $sp")
+            curl -s -o /dev/null "${H[@]}" -w "$p sp=$sp code=%{http_code} ttfb=%{time_starttransfer}s total=%{time_total}s http=%{http_version}\n" https://dev.pebuc.site$p
+          done; done; done
+          echo ---; curl -sI https://dev.pebuc.site/tr/
+          echo ---; curl -sI -H 'Sec-Purpose: prefetch;prerender' https://dev.pebuc.site/en/
+          echo ---; google-chrome --version
+      - name: Gerçek Chrome ile düğme
+        run: |
+          sudo apt-get install -y xdotool imagemagick bc >/dev/null 2>&1
+          Xvfb :99 -screen 0 1440x900x24 >/dev/null 2>&1 & sleep 2
+          export DISPLAY=:99
+          bash .github/diag/lang.sh 8 1 gec-hover1
+          bash .github/diag/lang.sh 2 0.3 erken
+          bash .github/diag/lang.sh 15 3 gec-hover3
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: diag, path: /tmp/shot-*.png }
