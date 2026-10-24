@@ -36,6 +36,11 @@ export const site = {
    * İkisi de kodda durur (src/styles/global.css). Derlerken THEME ortam değişkeni bunu geçersiz kılar (önizleme için).
    */
   theme: 'dark' as Theme,
+  /**
+   * Sayfanın arkasındaki hareketli zemin (src/scripts/backdrop.ts): 'harita' noktalı dünya haritası ve çalışılan ülkeler,
+   * 'toz' projektör ışığında süzülen toz. İkisi birlikte ya da biri seçilebilir; boş liste düz zemin.
+   */
+  backdrop: ['harita', 'toz'] as ('harita' | 'toz')[],
   contact: {
     email: 'contact@muratvural.com',
     whatsapp: '+84934000150',
