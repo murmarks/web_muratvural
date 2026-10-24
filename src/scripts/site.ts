@@ -95,7 +95,10 @@ const showSwitching = (a: HTMLAnchorElement) => {
   // yeni sayfa 8 saniyede gelmezse istek bir kez daha gönderilir; sayfa hiçbir zaman sessizce eski dilde bırakılmaz.
   // Ziyaretçi gezinmeyi kendisi durdurursa (Esc, durdur düğmesi) sayfa kararmış kalmasın diye 25 sn sonra hal kalkar.
   clearTimeout(retryT);
-  retryT = window.setTimeout(() => location.assign(a.href), 8000);
+  retryT = window.setTimeout(() => {
+    window.stop(); // takılan isteği bırak, aynı adrese yeniden git
+    location.assign(a.href);
+  }, 8000);
   clearT = window.setTimeout(clearSwitching, 25000);
 };
 langLinks.forEach((a) =>
