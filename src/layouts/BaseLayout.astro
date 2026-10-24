@@ -33,15 +33,12 @@ const desc = description ?? t('metaDescription');
 const here = Astro.url.pathname;
 const canonical = new URL(here, Astro.site);
 /*
- * Aynı sayfanın diğer dillerdeki adresleri. Chrome ve Edge bunları sayfa açılınca önceden indirir,
- * fare dil düğmesine gelince arka planda hazırlar: dil değiştirmek beklemeden olur.
- * Bunu desteklemeyen tarayıcılarda site.ts sayfa boştayken aynı adresleri indirir.
+ * Diğer dil sayfası önceden indirilmez (speculationrules / prefetch yok, 2026-10-24).
+ * Hostinger'ın önündeki hCDN ilk ziyarette tarayıcıyı "Checking your browser" sayfasıyla sınar;
+ * önceden indirilen sayfa bu sınavdan geçemiyor ve Chrome dil düğmesine basılınca o yarım kalan
+ * indirmeyi beklerken takılıyordu (sayfa Türkçe kalıyor, yenileyince düzeliyordu).
+ * Dil düğmesi artık her tarayıcıda sıradan bir bağlantı gibi açılır.
  */
-const otherLangs = locales.filter((l) => l !== lang).map((l) => switchLocalePath(here, l));
-const speculation = JSON.stringify({
-  prefetch: [{ urls: otherLangs, eagerness: 'immediate' }],
-  prerender: [{ urls: otherLangs, eagerness: 'moderate' }],
-});
 ---
 
 <!doctype html>
@@ -66,7 +63,6 @@ const speculation = JSON.stringify({
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL(image, Astro.site)} />
     <meta property="og:locale" content={t('ogLocale')} />
-    <script type="speculationrules" is:inline set:html={speculation} />
     <slot name="head" />
   </head>
   <body>

@@ -13,12 +13,16 @@ export const site = {
   /**
    * Ziyaretçi henüz dil seçmediyse sitenin hangi dilde açılacağı:
    * - 'fixed': herkes `defaultLocale` ile açar.
-   * - 'regional': aşağıdaki `regional` kurallarına göre (Türkiye'den gelen Türkçe, diğerleri İngilizce).
-   * Statik sitede ülke, tarayıcının saat dilimi ve dilinden tahmin edilir.
+   * - 'regional': ziyaretçinin bulunduğu yere göre: Türkiye'de Türkçe, başka her yerde `defaultLocale` (İngilizce).
+   * Statik sitede sunucu ziyaretçinin ülkesini bilmez; yer, cihazın saat diliminden anlaşılır
+   * (Türkiye'deki her cihaz Europe/Istanbul kullanır, başka hiçbir ülke kullanmaz). Ziyaretçiye soru sorulmaz,
+   * dışarıya istek gitmez, sayfa beklemez. VPN saat dilimini değiştirmez; yurt dışındaki Türk ziyaretçi İngilizce görür.
+   * `languages`: tarayıcı dili de hesaba katılsın istenirse (ör. ['tr'] yurt dışındaki Türkçe tarayıcıları da Türkçe açar).
+   * Ziyaretçi dil düğmesiyle bir kez seçtiyse site sonraki ziyaretlerde hep o dilde açılır; bu kurallar yalnızca ilk ziyarette geçer.
    */
   languageMode: 'regional' as 'fixed' | 'regional',
   regional: {
-    tr: { timeZones: ['Europe/Istanbul'], languages: ['tr'] },
+    tr: { timeZones: ['Europe/Istanbul', 'Asia/Istanbul', 'Turkey'], languages: [] },
   } as Partial<Record<Locale, { timeZones: string[]; languages: string[] }>>,
   /**
    * Görünen marka. 'personal' = Dr. Murat Vural. 'pebuc' eski PeBuC adını ve logosunu geri getirir;

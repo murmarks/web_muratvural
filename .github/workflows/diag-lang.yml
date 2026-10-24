@@ -9,26 +9,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Alan adları
+      - name: Bot kontrolü (curl, Chrome kimliğiyle)
         continue-on-error: true
         run: |
           set +e
-          for h in pebuc.site www.pebuc.site dev.pebuc.site muratvural.com www.muratvural.com dev.muratvural.com; do
-            echo "$h: A=[$(dig +short @8.8.8.8 $h | tr '\n' ' ')] SOA=[$(dig +short SOA @8.8.8.8 $h)]"
-            for p in / /tr/ /en/; do curl -s -o /tmp/b -w "  $p code=%{http_code} ttfb=%{time_starttransfer}s total=%{time_total}s size=%{size_download} redirect=%{redirect_url}\n" https://$h$p; echo "    title: $(grep -o '<title>[^<]*' /tmp/b | head -1) | fx: $(grep -o 'speculationrules' /tmp/b | head -1) theme: $(grep -o 'data-theme=\"[a-z]*\"' /tmp/b | head -1)"; done
-          done
-          echo ---; curl -sI https://muratvural.com/tr/
-          echo ---; curl -sI -H 'Sec-Purpose: prefetch' https://muratvural.com/en/
+          UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36'
+          for h in muratvural.com dev.muratvural.com; do for sp in none prefetch 'prefetch;prerender'; do
+            H=(); [ "$sp" != none ] && H=(-H "Sec-Purpose: $sp")
+            curl -s -o /tmp/b -A "$UA" -H 'Accept: text/html' "${H[@]}" -w "$h /en/ sp=$sp code=%{http_code} total=%{time_total}s size=%{size_download}" https://$h/en/; echo " title: $(grep -o '<title>[^<]*' /tmp/b | head -1)"
+          done; done
       - name: Gerçek Chrome ile düğme
         continue-on-error: true
         run: |
           sudo apt-get update -qq >/dev/null 2>&1; sudo apt-get install -y xdotool imagemagick bc >/dev/null 2>&1
           Xvfb :99 -screen 0 1440x900x24 >/dev/null 2>&1 & sleep 2
           export DISPLAY=:99
-          for H0 in muratvural.com dev.muratvural.com; do export H0
+          for i in $(seq 1 60); do curl -s https://dev.muratvural.com/tr/ | grep -q speculationrules || { echo "dev yeni sürümde ($i)"; break; }; sleep 10; done
+          for H0 in dev.muratvural.com dev.muratvural.com muratvural.com; do export H0
           bash .github/diag/lang.sh 8 1 gec-$H0
-          bash .github/diag/lang.sh 2.5 0.3 erken-$H0
           done
+          export H0=dev.muratvural.com; bash .github/diag/lang.sh 5 0.2 erken-$H0
       - uses: actions/upload-artifact@v4
         if: always()
         with: { name: diag, path: /tmp/shot-*.png }

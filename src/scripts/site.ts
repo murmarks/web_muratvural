@@ -72,8 +72,10 @@ const rememberLang = (a: HTMLAnchorElement) => {
  */
 let note: HTMLElement | null = null;
 let clearT = 0;
+let retryT = 0;
 const clearSwitching = () => {
   clearTimeout(clearT);
+  clearTimeout(retryT);
   document.documentElement.classList.remove('switching');
   note?.remove();
   note = null;
@@ -90,8 +92,11 @@ const showSwitching = (a: HTMLAnchorElement) => {
   note.querySelector('span')!.textContent = a.dataset.loading ?? '';
   document.body.append(note);
   document.documentElement.classList.add('switching');
-  // gezinme durdurulursa (Esc, durdur düğmesi) sayfa kararmış kalmasın
-  clearT = window.setTimeout(clearSwitching, 15000);
+  // yeni sayfa 8 saniyede gelmezse istek bir kez daha gönderilir; sayfa hiçbir zaman sessizce eski dilde bırakılmaz.
+  // Ziyaretçi gezinmeyi kendisi durdurursa (Esc, durdur düğmesi) sayfa kararmış kalmasın diye 25 sn sonra hal kalkar.
+  clearTimeout(retryT);
+  retryT = window.setTimeout(() => location.assign(a.href), 8000);
+  clearT = window.setTimeout(clearSwitching, 25000);
 };
 langLinks.forEach((a) =>
   a.addEventListener('click', (e) => {
@@ -105,23 +110,3 @@ langLinks.forEach((a) =>
 addEventListener('pageshow', (e) => {
   if (e.persisted) clearSwitching();
 });
-
-/*
- * Diğer dil sayfasını önceden indirme: Chrome ve Edge bunu sayfadaki kurallarla (speculationrules) kendisi yapar.
- * Diğer tarayıcılarda sayfa boşa çıkınca aynı adresler indirilir; dil düğmesine basılınca sayfa hazır olur.
- */
-if (!HTMLScriptElement.supports?.('speculationrules')) {
-  const warm = () =>
-    langLinks
-      .filter((a) => a.getAttribute('aria-current') !== 'true')
-      .forEach((a) => {
-        const l = document.createElement('link');
-        l.rel = 'prefetch';
-        l.href = a.href;
-        if (l.relList.supports?.('prefetch')) document.head.append(l);
-        else fetch(a.href, { priority: 'low' } as RequestInit).catch(() => {});
-      });
-  const idle = window.requestIdleCallback ?? ((f: () => void) => setTimeout(f, 1500));
-  if (document.readyState === 'complete') idle(warm);
-  else addEventListener('load', () => idle(warm), { once: true });
-}
