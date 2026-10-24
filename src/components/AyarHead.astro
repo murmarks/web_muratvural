@@ -1,0 +1,43 @@
+---
+/**
+ * Her sayfanın başında, sayfa çizilmeden: panelden kaydedilen tema ve zemin ayarı uygulanır (src/config/ayar.ts).
+ * Ayarlar tarayıcıda saklanır, her açılışta sunucudan (ayar.php) yenisi istenir; değiştiyse hemen uygulanır.
+ * Tarayıcıda hiç ayar yoksa (siteye ilk giriş) sayfa ayar gelene kadar en çok 0,9 saniye gizli bekler,
+ * böylece site sahibinin seçtiği tema yanlış renkte bir an görünüp değişmez.
+ * window.mvAyar: sunucudan gelen ayarın sözü (dil yönlendirmesi, zemin ve panel bunu bekler).
+ */
+import { VARSAYILAN } from '../config/ayar';
+import { themeColors } from '../config/site';
+---
+
+<style is:inline>html.mv-bekle body{visibility:hidden}</style>
+<script is:inline define:vars={{ V: VARSAYILAN, renk: themeColors }}>
+  const h = document.documentElement, KEY = 'mv-ayar';
+  const al = (s, sec, k) => (s && s[sec] && s[sec][k] !== undefined ? s[sec][k] : V[sec][k]);
+  window.mvAl = al;
+  window.mvSayfa = (s) => {
+    const acik = al(s, 'site', 'tema') === 'acik';
+    h.dataset.theme = acik ? 'light' : 'dark';
+    h.toggleAttribute('data-backdrop', !!(al(s, 'harita', 'acik') || al(s, 'toz', 'acik')));
+    const m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.content = acik ? renk.light : renk.dark;
+  };
+  let c = null;
+  try { c = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+  window.mvSayfa(c);
+  window.mvAyarOnbellek = c;
+  window.mvAyar = fetch('/ayar.php?t=' + Date.now(), { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : null))
+    .catch(() => null)
+    .then((s) => {
+      if (!s || typeof s !== 'object' || Array.isArray(s)) return null;
+      try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {}
+      return s;
+    });
+  if (!c) {
+    h.classList.add('mv-bekle');
+    const ac = () => h.classList.remove('mv-bekle');
+    setTimeout(ac, 900);
+    window.mvAyar.then((s) => { if (s) window.mvSayfa(s); ac(); });
+  } else window.mvAyar.then((s) => { if (s && !window.mvPanel) window.mvSayfa(s); });
+</script>

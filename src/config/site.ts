@@ -11,7 +11,7 @@ export const site = {
   /** Hiçbir kural uymazsa açılan dil. */
   defaultLocale: 'en' as Locale,
   /**
-   * Ziyaretçi henüz dil seçmediyse sitenin hangi dilde açılacağı:
+   * Ziyaretçi henüz dil seçmediyse sitenin hangi dilde açılacağının varsayılanı (site sahibi panelden değiştirir):
    * - 'fixed': herkes `defaultLocale` ile açar.
    * - 'regional': aşağıdaki `regional` kurallarına göre (Türkiye'den gelen Türkçe, diğerleri İngilizce).
    * Statik sitede ülke, tarayıcının saat dilimi ve dilinden tahmin edilir.
@@ -32,15 +32,12 @@ export const site = {
    */
   fieldEffect: 'tul' as 'tul' | 'isik' | 'panjur' | 'odak' | 'none',
   /**
-   * Sitenin teması: 'dark' koyu tasarım (canlıda bu). 'light' açık zemin: 2026-10-20'de denendi, sonraya bırakıldı (2026-10-24).
-   * İkisi de kodda durur (src/styles/global.css). Derlerken THEME ortam değişkeni bunu geçersiz kılar (önizleme için).
+   * Sitenin varsayılan teması: 'dark' koyu tasarım. 'light' açık zemin (2026-10-20'de denendi).
+   * İkisi de kodda durur (src/styles/global.css). Site sahibi temayı ayar panelinden (?ayar) değiştirir;
+   * panelde kayıt yoksa ya da "Varsayılanlar"a basılınca bu geçer. Diğer panel varsayılanları: src/config/ayar.ts.
+   * Derlerken THEME ortam değişkeni bunu geçersiz kılar (önizleme için).
    */
   theme: 'dark' as Theme,
-  /**
-   * Sayfanın arkasındaki hareketli zemin (src/scripts/backdrop.ts): 'harita' noktalı dünya haritası ve çalışılan ülkeler,
-   * 'toz' projektör ışığında süzülen toz. İkisi birlikte ya da biri seçilebilir; boş liste düz zemin.
-   */
-  backdrop: ['harita', 'toz'] as ('harita' | 'toz')[],
   contact: {
     email: 'contact@muratvural.com',
     whatsapp: '+84934000150',
@@ -53,6 +50,7 @@ export type Theme = 'light' | 'dark';
 /** Derlemede kullanılan tema: THEME ortam değişkeni varsa o, yoksa site.theme. */
 export const theme: Theme = process.env.THEME === 'dark' || process.env.THEME === 'light' ? process.env.THEME : site.theme;
 /** Tarayıcı çubuğunun rengi, sayfa zemini ile aynı. */
-export const themeColor = theme === 'light' ? '#f5f2ec' : '#0b0b0c';
+export const themeColors: Record<Theme, string> = { light: '#f5f2ec', dark: '#0b0b0c' };
+export const themeColor = themeColors[theme];
 
 export const isLocale = (x: unknown): x is Locale => (locales as readonly unknown[]).includes(x);

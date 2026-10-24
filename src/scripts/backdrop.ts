@@ -1,19 +1,21 @@
 /**
- * Sayfanın arkasındaki hareketli zemin (site.ts `backdrop`). Tek bir tuval, içeriğin arkasında sabit durur.
+ * Sayfanın arkasındaki hareketli zemin. Tek bir tuval, içeriğin arkasında sabit durur.
  * - harita: noktalarla çizilmiş dünya haritası; çalışılan 20 ülkenin başkentinde sarı ışık, İstanbul'dan
- *   onlara giden ince yaylar. Yaylarda arada bir ışık yürür, vardığı şehir parlar.
+ *   onlara giden ince yollar. Yollarda arada bir ışık yürür, vardığı şehir parlar.
  *   Kenarlarında yavaşça söner, kesik görünmez.
- * - toz: sol üstten vuran projektör ışığı ve içinde yavaşça süzülen toz zerreleri.
- * Kaydırınca harita ve toz, sayfaya göre `kayma` oranında kayar (0 hiç, 100 sayfayla birlikte; 25 = 4'e 1).
- * Uzun sayfada harita yukarı çıktıkça arkasından aralıklı bir kopyası gelir, zerreler ekranın altından yeniden girer.
- * Belirginlik ve yoğunluk ayarları sitenin kökündeki ayarlar.txt dosyasından okunur (public/ayarlar.txt);
- * dosya yoksa ya da okunamazsa aşağıdaki varsayılanlar geçer. Adrese ?ayar eklenince ekranda kaydırıcılar açılır.
+ * - toz: sol üstten vuran ışık ve içinde yavaşça süzülen toz zerreleri.
+ * Kaydırınca harita ve toz, sayfaya göre `kayma` oranında kayar (0 hiç, 25 = 4'e 1, 100 sayfayla birlikte).
+ * Uzun sayfada harita yukarı çıktıkça arkasından kopyası gelir, zerreler ekranın altından yeniden girer.
+ * Açık ve kapalı olma, belirginlik ve yoğunluk ayar panelinden gelir (src/config/ayar.ts, scripts/ayar.ts).
+ * Renkler temaya göre: koyuda karanlıkta parlayan ışık; açıkta kâğıt üstünde mürekkep noktalar, koyu altın şehirler,
+ * fosforlu kalem sarısı haleler ve kâğıda düşen ılık gün ışığı.
  * Hareket azaltma tercihinde tek kare çizilir; sekme görünmezken çizim durur.
  */
 import { map, rows } from '../data/world-dots';
+import type { Ayar } from '../config/ayar';
+import { ayar, dinle } from './ayar';
 
 const cv = document.querySelector<HTMLCanvasElement>('canvas.backdrop');
-const layers = new Set((cv?.dataset.layers ?? '').split(' ').filter(Boolean));
 const ctx = cv?.getContext('2d');
 
 /* çalışılan ülkeler (src/data/home.ts kariyer listesi), başkent ya da ekibin şehri: boylam, enlem */
@@ -24,75 +26,28 @@ const CITIES: [number, number][] = [
   [44.51, 40.18], [69.24, 41.3], [27.56, 53.9], [76.89, 43.24], [44.36, 33.31], [23.32, 42.7],
 ];
 
-/* ayarlar.txt ile aynı adlar; değerler 0–100 */
-const DEFAULTS = {
-  genel: { kayma: 25 },
-  harita: { acik: true, noktalar: 35, sari: 80, ucus_yogunlugu: 40 },
-  toz: { acik: true, gorunurluk: 70, yogunluk: 65 },
-};
-type Settings = typeof DEFAULTS;
-const LABELS: Record<string, string> = {
-  kayma: 'Kayma (0 sabit, 100 sayfayla)',
-  noktalar: 'Beyaz harita noktaları',
-  sari: 'Sarı ülkeler ve yaylar',
-  ucus_yogunlugu: 'Uçuş yoğunluğu',
-  gorunurluk: 'Toz ve ışık görünürlüğü',
-  yogunluk: 'Toz yoğunluğu',
+/* temaya göre renkler (r, g, b) ve belirginlik çarpanları */
+const RENK = {
+  dark: {
+    kara: '243, 240, 234', karaK: 1, yol: '242, 169, 0', yolK: 1, nokta: '255, 196, 64', hale: '242, 169, 0', haleK: 1,
+    isik: ['255, 238, 205', '255, 236, 200'], isikK: 1, isikMod: 'lighter' as GlobalCompositeOperation, zerre: '255, 240, 210', zerreK: 1,
+  },
+  light: {
+    kara: '22, 20, 15', karaK: 1.5, yol: '143, 94, 0', yolK: 1.4, nokta: '143, 94, 0', hale: '242, 169, 0', haleK: 0.9,
+    isik: ['255, 190, 80', '255, 196, 96'], isikK: 0.75, isikMod: 'source-over' as GlobalCompositeOperation, zerre: '128, 84, 8', zerreK: 1.2,
+  },
 };
 
-/** INI biçimi: [bölüm], ad = değer, ';' ya da '#' sonrası açıklama */
-function parseIni(text: string, base: Settings): Settings {
-  const out = structuredClone(base) as Record<string, Record<string, number | boolean>>;
-  let sec = '';
-  for (const raw of text.split(/\r?\n/)) {
-    const line = raw.replace(/[;#].*$/, '').trim();
-    if (!line) continue;
-    const head = line.match(/^\[(.+)\]$/);
-    if (head) {
-      sec = head[1].trim().toLowerCase();
-      continue;
-    }
-    const kv = line.match(/^([^=]+)=(.*)$/);
-    if (!kv || !out[sec]) continue;
-    const k = kv[1].trim().toLowerCase(), v = kv[2].trim().toLowerCase();
-    if (!(k in out[sec])) continue;
-    if (typeof out[sec][k] === 'boolean') out[sec][k] = !/^(hay[ıi]r|kapal[ıi]|0|no|false|off)$/.test(v);
-    else if (Number.isFinite(parseFloat(v))) out[sec][k] = Math.max(0, Math.min(100, parseFloat(v)));
-  }
-  return out as unknown as Settings;
-}
-function toIni(s: Settings): string {
-  const yn = (b: boolean) => (b ? 'evet' : 'hayır');
-  return `; Arka plan ayarları (Dr. Murat Vural sitesi)
-; Değerler 0 ile 100 arası: 0 = kapalı/en az, 100 = en fazla. "acik" satırı evet ya da hayır.
-; Dosyayı kaydedip sayfayı yenileyin. Denemek için adresin sonuna ?ayar ekleyin
-; (ör. https://dev.muratvural.com/tr/?ayar): sağ altta kaydırıcılar açılır, beğendiğiniz ayarı oradan indirirsiniz.
-
-[genel]
-kayma = ${s.genel.kayma}             ; kaydırınca arka planın kayma oranı: 0 = hiç kaymaz, 100 = sayfayla birlikte, 25 = 4'e 1
-
-[harita]
-acik = ${yn(s.harita.acik)}
-noktalar = ${s.harita.noktalar}          ; beyaz kara noktalarının belirginliği
-sari = ${s.harita.sari}              ; sarı ülke ışıkları ve İstanbul'dan giden yayların belirginliği
-ucus_yogunlugu = ${s.harita.ucus_yogunlugu}    ; yaylarda aynı anda yürüyen ışık sayısı (0 = hiç uçuş yok)
-
-[toz]
-acik = ${yn(s.toz.acik)}
-gorunurluk = ${s.toz.gorunurluk}        ; projektör ışığının ve toz zerrelerinin belirginliği
-yogunluk = ${s.toz.yogunluk}          ; toz zerresi miktarı
-`;
-}
-
-if (cv && ctx && layers.size) {
+if (cv && ctx) {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const dpr = Math.min(devicePixelRatio || 1, 1.5);
-  let S: Settings = structuredClone(DEFAULTS);
+  let S: Ayar = ayar();
+  let R = RENK.dark;
   let W = 0, H = 0, cell = 0, ox = 0, oy = 0, top0 = 0, mapH = 0, period = 0;
   let dots: HTMLCanvasElement | null = null; // noktalar ve yaylar bir kez çizilir
   let beam: HTMLCanvasElement | null = null; // projektör ışığı bir kez çizilir
   const off = (w: number, h: number) => Object.assign(document.createElement('canvas'), { width: w, height: h });
-  const on = (k: 'harita' | 'toz') => layers.has(k) && S[k].acik;
+  const on = (k: 'harita' | 'toz') => S[k].acik;
 
   const px = ([lon, lat]: [number, number]): [number, number] => [ox + ((lon - map.west) / map.step) * cell, oy + ((map.north - lat) / map.step) * cell];
   const arcCtl = (a: [number, number], b: [number, number]): [number, number] => {
@@ -108,6 +63,7 @@ if (cv && ctx && layers.size) {
   const layout = () => {
     W = innerWidth;
     H = innerHeight;
+    R = document.documentElement.dataset.theme === 'light' ? RENK.light : RENK.dark;
     cv.width = Math.round(W * dpr);
     cv.height = Math.round(H * dpr);
     const cols = Math.max(...rows.map((r) => r.length));
@@ -127,7 +83,7 @@ if (cv && ctx && layers.size) {
       const g = dots.getContext('2d')!;
       g.scale(dpr, dpr);
       const r = Math.max(0.8, cell * 0.2);
-      const a = 0.34 * (S.harita.noktalar / 100);
+      const a = 0.34 * (S.harita.noktalar / 100) * R.karaK;
       if (a > 0) {
         rows.forEach((row, y) => {
           // haritanın kenarına yaklaştıkça noktalar söner: bölgenin sınırı düz bir çizgi gibi görünmez
@@ -135,7 +91,7 @@ if (cv && ctx && layers.size) {
           for (let x = 0; x < row.length; x++) if (row[x] === '#') {
             const f = fy * smooth(0.14, Math.min(x, cols - 1 - x) / cols);
             if (f < 0.02) continue;
-            g.fillStyle = `rgba(243, 240, 234, ${(a * f).toFixed(3)})`;
+            g.fillStyle = `rgba(${R.kara}, ${(a * f).toFixed(3)})`;
             g.beginPath();
             g.arc(ox + x * cell, oy + y * cell, r, 0, 7);
             g.fill();
@@ -143,7 +99,7 @@ if (cv && ctx && layers.size) {
         });
       }
       const hub = px(HUB);
-      g.strokeStyle = `rgba(242, 169, 0, ${0.2 * (S.harita.sari / 100)})`;
+      g.strokeStyle = `rgba(${R.yol}, ${Math.min(1, 0.2 * (S.harita.sari / 100) * R.yolK)})`;
       g.lineWidth = 1;
       for (const c of CITIES) {
         const b = px(c), k = arcCtl(hub, b);
@@ -162,9 +118,9 @@ if (cv && ctx && layers.size) {
       const ax = -W * 0.08, ay = -H * 0.2;
       for (const [spread, a] of [[0.2, 0.05], [0.13, 0.06], [0.07, 0.07]] as const) {
         const grad = g.createLinearGradient(ax, ay, W * 0.75, H * 1.15);
-        grad.addColorStop(0, `rgba(255, 238, 205, ${a * 2})`);
-        grad.addColorStop(0.55, `rgba(255, 236, 200, ${a})`);
-        grad.addColorStop(1, 'rgba(255, 236, 200, 0)');
+        grad.addColorStop(0, `rgba(${R.isik[0]}, ${a * 2 * R.isikK})`);
+        grad.addColorStop(0.55, `rgba(${R.isik[1]}, ${a * R.isikK})`);
+        grad.addColorStop(1, `rgba(${R.isik[1]}, 0)`);
         g.fillStyle = grad;
         g.beginPath();
         g.moveTo(ax, ay);
@@ -212,7 +168,7 @@ if (cv && ctx && layers.size) {
 
     if (dots) {
       // harita kaydırmanın `kayma` oranında yukarı çıkar; ekrandan çıkan kopyanın yerine aşağıdan sonraki gelir
-      const shift = scrollY * (S.genel.kayma / 100);
+      const shift = scrollY * (S.zemin.kayma / 100);
       const first = top0 - (((shift % period) + period) % period);
       const bases: number[] = [];
       for (let b = first - period; b < H + oy; b += period) if (b + mapH + oy > 0) bases.push(b - oy);
@@ -255,11 +211,10 @@ if (cv && ctx && layers.size) {
     if (beam) {
       const v = S.toz.gorunurluk / 70;
       ctx.setTransform(1, 0, 0, 1, 0, 0);
-      ctx.globalCompositeOperation = 'lighter';
-      ctx.globalAlpha = Math.min(1, (0.85 + 0.15 * Math.sin(t * 0.45)) * v);
-      ctx.drawImage(beam, 0, 0);
-      if (v > 1) {
-        ctx.globalAlpha = Math.min(1, v - 1); // 70'in üstünde ışık ikinci kez eklenir
+      ctx.globalCompositeOperation = R.isikMod;
+      // 70'in üstünde ışık üst üste bir kez daha eklenir (150'de üç kat)
+      for (let left = (0.85 + 0.15 * Math.sin(t * 0.45)) * v; left > 0.01; left -= 1) {
+        ctx.globalAlpha = Math.min(1, left);
         ctx.drawImage(beam, 0, 0);
       }
       ctx.globalAlpha = 1;
@@ -270,10 +225,10 @@ if (cv && ctx && layers.size) {
         if (m.x > 1.05) m.x = -0.05;
         if (m.y > 1.05) m.y = -0.05;
         if (m.y < -0.05) m.y = 1.05;
-        const x = m.x * W, y = ((((m.y * H - scrollY * (S.genel.kayma / 100)) % H) + H) % H);
+        const x = m.x * W, y = ((((m.y * H - scrollY * (S.zemin.kayma / 100)) % H) + H) % H);
         const lit = inBeam(x, y);
-        const a = (m.r > 2.5 ? 0.05 + lit * 0.12 : 0.04 + lit * 0.6) * v;
-        ctx.fillStyle = `rgba(255, 240, 210, ${Math.min(1, a * (0.7 + 0.3 * Math.sin(t * 2 + m.ph)))})`;
+        const a = (m.r > 2.5 ? 0.05 + lit * 0.12 : 0.04 + lit * 0.6) * v * R.zerreK;
+        ctx.fillStyle = `rgba(${R.zerre}, ${Math.min(1, a * (0.7 + 0.3 * Math.sin(t * 2 + m.ph)))})`;
         ctx.beginPath();
         ctx.arc(x, y, m.r, 0, 7);
         ctx.fill();
@@ -282,7 +237,7 @@ if (cv && ctx && layers.size) {
     }
   };
   function dot([x, y]: [number, number], r: number, a: number) {
-    ctx!.fillStyle = `rgba(255, 196, 64, ${a})`;
+    ctx!.fillStyle = `rgba(${R.nokta}, ${a})`;
     ctx!.beginPath();
     ctx!.arc(x, y, r, 0, 7);
     ctx!.fill();
@@ -290,16 +245,16 @@ if (cv && ctx && layers.size) {
   function glow([x, y]: [number, number], r: number, a: number) {
     if (a <= 0) return;
     const g = ctx!.createRadialGradient(x, y, 0, x, y, r);
-    g.addColorStop(0, `rgba(242, 169, 0, ${Math.min(1, a)})`);
-    g.addColorStop(1, 'rgba(242, 169, 0, 0)');
+    g.addColorStop(0, `rgba(${R.hale}, ${Math.min(1, a * R.haleK)})`);
+    g.addColorStop(1, `rgba(${R.hale}, 0)`);
     ctx!.fillStyle = g;
     ctx!.fillRect(x - r, y - r, r * 2, r * 2);
   }
 
-  const apply = (next: Settings) => {
+  const apply = (next: Ayar) => {
     S = next;
     setMotes();
-    layout();
+    layout(); // tuvalin boyu yeniden verilince içi de temizlenir
     if (reduce) frame(4000);
   };
 
@@ -307,8 +262,9 @@ if (cv && ctx && layers.size) {
   let raf = 0, prev = 0, lastY = -1;
   const loop = (now: number) => {
     raf = requestAnimationFrame(loop);
+    if (!dots && !beam) return; // ikisi de kapalı: tuval apply()'da temizlendi
     // saniyede ~30 kare yeter, pil yorulmaz; kaydırılırken her kare çizilir ki zemin sayfayla takılmadan aksın
-    const moving = S.genel.kayma > 0 && scrollY !== lastY;
+    const moving = S.zemin.kayma > 0 && scrollY !== lastY;
     if (!moving && now - prev < 32) return;
     prev = now;
     lastY = scrollY;
@@ -327,52 +283,5 @@ if (cv && ctx && layers.size) {
     if (!document.hidden && !reduce) raf = requestAnimationFrame(loop);
   });
 
-  // ayar dosyası: sunucu ve tarayıcı önbelleği atlanır, değiştirilen dosya yenileyince hemen görünür
-  fetch(`/ayarlar.txt?t=${Date.now()}`, { cache: 'no-store' })
-    .then((r) => (r.ok ? r.text() : ''))
-    .catch(() => '')
-    .then((txt) => {
-      if (txt) apply(parseIni(txt, DEFAULTS));
-      if (new URLSearchParams(location.search).has('ayar')) panel();
-    });
-
-  /* ?ayar: kaydırıcılarla anında deneme; sonuç ayarlar.txt olarak indirilir ya da kopyalanır */
-  function panel() {
-    const box = document.createElement('div');
-    box.className = 'bd-panel mono';
-    const sections = (Object.keys(S) as (keyof Settings)[]).filter((k) => k === 'genel' || layers.has(k));
-    box.innerHTML =
-      sections
-        .map((sec) => {
-          const o = S[sec] as Record<string, number | boolean>;
-          const legend = sec === 'genel' ? 'Genel' : `<label><input type="checkbox" data-sec="${sec}" data-key="acik" ${o.acik ? 'checked' : ''}> ${sec === 'harita' ? 'Harita' : 'Toz'}</label>`;
-          return `<fieldset><legend>${legend}</legend>${Object.keys(o)
-            .filter((k) => k !== 'acik')
-            .map((k) => `<label>${LABELS[k] ?? k}<span><input type="range" min="0" max="100" value="${o[k]}" data-sec="${sec}" data-key="${k}"><output>${o[k]}</output></span></label>`)
-            .join('')}</fieldset>`;
-        })
-        .join('') + `<div class="bd-actions"><button type="button" data-dl>ayarlar.txt indir</button><button type="button" data-copy>Kopyala</button></div>`;
-    box.addEventListener('input', (e) => {
-      const el = e.target as HTMLInputElement;
-      const sec = el.dataset.sec as keyof Settings, key = el.dataset.key!;
-      const next = structuredClone(S) as Record<string, Record<string, number | boolean>>;
-      next[sec][key] = el.type === 'checkbox' ? el.checked : Number(el.value);
-      if (el.nextElementSibling) el.nextElementSibling.textContent = el.value;
-      apply(next as unknown as Settings);
-    });
-    box.querySelector('[data-dl]')!.addEventListener('click', () => {
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(new Blob([toIni(S)], { type: 'text/plain;charset=utf-8' }));
-      a.download = 'ayarlar.txt';
-      a.click();
-    });
-    box.querySelector('[data-copy]')!.addEventListener('click', (e) => {
-      const b = e.currentTarget as HTMLButtonElement;
-      navigator.clipboard?.writeText(toIni(S)).then(() => {
-        b.textContent = 'Kopyalandı';
-        setTimeout(() => (b.textContent = 'Kopyala'), 1500);
-      });
-    });
-    document.body.append(box);
-  }
+  dinle(apply); // panelden ya da sunucudan yeni ayar gelince
 }
