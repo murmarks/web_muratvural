@@ -2,8 +2,10 @@
  * Sayfanın arkasındaki hareketli zemin (site.ts `backdrop`). Tek bir tuval, içeriğin arkasında sabit durur.
  * - harita: noktalarla çizilmiş dünya haritası; çalışılan 20 ülkenin başkentinde sarı ışık, İstanbul'dan
  *   onlara giden ince yaylar. Yaylarda arada bir ışık yürür, vardığı şehir parlar.
- *   Kaydırdıkça harita içerikten daha yavaş kayar (derinlik); kenarlarında yavaşça söner, kesik görünmez.
+ *   Kenarlarında yavaşça söner, kesik görünmez.
  * - toz: sol üstten vuran projektör ışığı ve içinde yavaşça süzülen toz zerreleri.
+ * Kaydırınca harita ve toz, sayfaya göre `kayma` oranında kayar (0 hiç, 100 sayfayla birlikte; 25 = 4'e 1).
+ * Uzun sayfada harita yukarı çıktıkça arkasından aralıklı bir kopyası gelir, zerreler ekranın altından yeniden girer.
  * Belirginlik ve yoğunluk ayarları sitenin kökündeki ayarlar.txt dosyasından okunur (public/ayarlar.txt);
  * dosya yoksa ya da okunamazsa aşağıdaki varsayılanlar geçer. Adrese ?ayar eklenince ekranda kaydırıcılar açılır.
  * Hareket azaltma tercihinde tek kare çizilir; sekme görünmezken çizim durur.
@@ -24,11 +26,13 @@ const CITIES: [number, number][] = [
 
 /* ayarlar.txt ile aynı adlar; değerler 0–100 */
 const DEFAULTS = {
+  genel: { kayma: 25 },
   harita: { acik: true, noktalar: 35, sari: 80, ucus_yogunlugu: 40 },
   toz: { acik: true, gorunurluk: 70, yogunluk: 65 },
 };
 type Settings = typeof DEFAULTS;
 const LABELS: Record<string, string> = {
+  kayma: 'Kayma (0 sabit, 100 sayfayla)',
   noktalar: 'Beyaz harita noktaları',
   sari: 'Sarı ülkeler ve yaylar',
   ucus_yogunlugu: 'Uçuş yoğunluğu',
@@ -64,6 +68,9 @@ function toIni(s: Settings): string {
 ; Dosyayı kaydedip sayfayı yenileyin. Denemek için adresin sonuna ?ayar ekleyin
 ; (ör. https://dev.muratvural.com/tr/?ayar): sağ altta kaydırıcılar açılır, beğendiğiniz ayarı oradan indirirsiniz.
 
+[genel]
+kayma = ${s.genel.kayma}             ; kaydırınca arka planın kayma oranı: 0 = hiç kaymaz, 100 = sayfayla birlikte, 25 = 4'e 1
+
 [harita]
 acik = ${yn(s.harita.acik)}
 noktalar = ${s.harita.noktalar}          ; beyaz kara noktalarının belirginliği
@@ -81,7 +88,7 @@ if (cv && ctx && layers.size) {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const dpr = Math.min(devicePixelRatio || 1, 1.5);
   let S: Settings = structuredClone(DEFAULTS);
-  let W = 0, H = 0, cell = 0, ox = 0, oy = 0, travel = 0;
+  let W = 0, H = 0, cell = 0, ox = 0, oy = 0, top0 = 0, mapH = 0, period = 0;
   let dots: HTMLCanvasElement | null = null; // noktalar ve yaylar bir kez çizilir
   let beam: HTMLCanvasElement | null = null; // projektör ışığı bir kez çizilir
   const off = (w: number, h: number) => Object.assign(document.createElement('canvas'), { width: w, height: h });
@@ -108,12 +115,15 @@ if (cv && ctx && layers.size) {
     cell = Math.max((W * 1.05) / cols, (H * 0.8) / rows.length);
     const centre = W < 760 ? 38 : 55;
     ox = W / 2 - ((centre - map.west) / map.step) * cell;
-    oy = (H - rows.length * cell) / 2 + cell * 4;
-    travel = H * 0.3;
+    // harita kendi tuvalinde üstten `oy` kadar boşlukla durur (ışık halkaları kesilmesin); ekranda üst kenarı top0'da
+    mapH = rows.length * cell;
+    oy = cell * 3;
+    top0 = (H - mapH) / 2 + cell * 4;
+    period = mapH + cell * 6; // kopyalar arası boşluk: kenarlar zaten sönük, ekran haritasız kalmasın
 
     dots = null;
     if (on('harita')) {
-      dots = off(cv.width, Math.round((H + travel) * dpr));
+      dots = off(cv.width, Math.round((mapH + oy * 2) * dpr));
       const g = dots.getContext('2d')!;
       g.scale(dpr, dpr);
       const r = Math.max(0.8, cell * 0.2);
@@ -201,11 +211,12 @@ if (cv && ctx && layers.size) {
     ctx.clearRect(0, 0, cv.width, cv.height);
 
     if (dots) {
-      // harita sayfanın başından sonuna kadar içerikten yavaş, sürekli kayar
-      const max = Math.max(1, document.documentElement.scrollHeight - H);
-      const shift = Math.min(1, scrollY / max) * travel;
-      ctx.drawImage(dots, 0, -Math.round(shift * dpr));
-      ctx.setTransform(dpr, 0, 0, dpr, 0, -shift * dpr);
+      // harita kaydırmanın `kayma` oranında yukarı çıkar; ekrandan çıkan kopyanın yerine aşağıdan sonraki gelir
+      const shift = scrollY * (S.genel.kayma / 100);
+      const first = top0 - (((shift % period) + period) % period);
+      const bases: number[] = [];
+      for (let b = first - period; b < H + oy; b += period) if (b + mapH + oy > 0) bases.push(b - oy);
+      for (const b of bases) ctx.drawImage(dots, 0, Math.round(b * dpr));
       const y = S.harita.sari / 100;
       const hub = px(HUB);
       trips = trips.filter((p) => t - p.start < FLY + GLOW);
@@ -216,24 +227,27 @@ if (cv && ctx && layers.size) {
         trips.push({ city: free[Math.floor(Math.random() * free.length)], start: t });
         nextTrip = t + (FLY + GLOW) / Math.max(1, want) * (0.6 + Math.random() * 0.8); // aynı anda kalkmasınlar
       }
-      CITIES.forEach((c, i) => {
-        const p = px(c);
-        const trip = trips.find((q) => q.city === i);
-        const k = trip ? (t - trip.start) / FLY : 0;
-        const arrived = k >= 1 ? Math.max(0, 1 - ((k - 1) * FLY) / GLOW) : 0;
-        const breathe = 0.75 + 0.25 * Math.sin(t * 1.3 + i * 1.7);
-        glow(p, cell * (1.3 + arrived * 1.4), (0.35 * breathe + arrived * 0.6) * y);
-        dot(p, Math.max(1.4, cell * 0.24), Math.min(1, 1.2 * y));
-      });
-      glow(hub, cell * 1.8, 0.44 * y);
-      dot(hub, Math.max(1.8, cell * 0.3), Math.min(1, 1.25 * y));
-      for (const trip of trips) {
-        const k = (t - trip.start) / FLY;
-        if (k <= 0 || k >= 1) continue;
-        const dest = px(CITIES[trip.city]), ctl = arcCtl(hub, dest);
-        for (let j = 0; j < 8; j++) {
-          const q = onArc(hub, ctl, dest, Math.max(0, k - j * 0.025));
-          dot(q, Math.max(1, cell * 0.2) * (1 - j / 9), Math.min(1, 1.1 * y) * (1 - j / 8));
+      for (const b of bases) {
+        ctx.setTransform(dpr, 0, 0, dpr, 0, b * dpr);
+        CITIES.forEach((c, i) => {
+          const p = px(c);
+          const trip = trips.find((q) => q.city === i);
+          const k = trip ? (t - trip.start) / FLY : 0;
+          const arrived = k >= 1 ? Math.max(0, 1 - ((k - 1) * FLY) / GLOW) : 0;
+          const breathe = 0.75 + 0.25 * Math.sin(t * 1.3 + i * 1.7);
+          glow(p, cell * (1.3 + arrived * 1.4), (0.35 * breathe + arrived * 0.6) * y);
+          dot(p, Math.max(1.4, cell * 0.24), Math.min(1, 1.2 * y));
+        });
+        glow(hub, cell * 1.8, 0.44 * y);
+        dot(hub, Math.max(1.8, cell * 0.3), Math.min(1, 1.25 * y));
+        for (const trip of trips) {
+          const k = (t - trip.start) / FLY;
+          if (k <= 0 || k >= 1) continue;
+          const dest = px(CITIES[trip.city]), ctl = arcCtl(hub, dest);
+          for (let j = 0; j < 8; j++) {
+            const q = onArc(hub, ctl, dest, Math.max(0, k - j * 0.025));
+            dot(q, Math.max(1, cell * 0.2) * (1 - j / 9), Math.min(1, 1.1 * y) * (1 - j / 8));
+          }
         }
       }
     }
@@ -256,7 +270,7 @@ if (cv && ctx && layers.size) {
         if (m.x > 1.05) m.x = -0.05;
         if (m.y > 1.05) m.y = -0.05;
         if (m.y < -0.05) m.y = 1.05;
-        const x = m.x * W, y = m.y * H;
+        const x = m.x * W, y = ((((m.y * H - scrollY * (S.genel.kayma / 100)) % H) + H) % H);
         const lit = inBeam(x, y);
         const a = (m.r > 2.5 ? 0.05 + lit * 0.12 : 0.04 + lit * 0.6) * v;
         ctx.fillStyle = `rgba(255, 240, 210, ${Math.min(1, a * (0.7 + 0.3 * Math.sin(t * 2 + m.ph)))})`;
@@ -290,11 +304,14 @@ if (cv && ctx && layers.size) {
   };
 
   apply(S);
-  let raf = 0, prev = 0;
+  let raf = 0, prev = 0, lastY = -1;
   const loop = (now: number) => {
     raf = requestAnimationFrame(loop);
-    if (now - prev < 32) return; // saniyede ~30 kare yeter, pil yorulmaz
+    // saniyede ~30 kare yeter, pil yorulmaz; kaydırılırken her kare çizilir ki zemin sayfayla takılmadan aksın
+    const moving = S.genel.kayma > 0 && scrollY !== lastY;
+    if (!moving && now - prev < 32) return;
     prev = now;
+    lastY = scrollY;
     frame(now);
   };
   if (reduce) addEventListener('scroll', () => frame(4000), { passive: true });
@@ -323,12 +340,13 @@ if (cv && ctx && layers.size) {
   function panel() {
     const box = document.createElement('div');
     box.className = 'bd-panel mono';
-    const sections = (Object.keys(S) as (keyof Settings)[]).filter((k) => layers.has(k));
+    const sections = (Object.keys(S) as (keyof Settings)[]).filter((k) => k === 'genel' || layers.has(k));
     box.innerHTML =
       sections
         .map((sec) => {
           const o = S[sec] as Record<string, number | boolean>;
-          return `<fieldset><legend><label><input type="checkbox" data-sec="${sec}" data-key="acik" ${o.acik ? 'checked' : ''}> ${sec === 'harita' ? 'Harita' : 'Toz'}</label></legend>${Object.keys(o)
+          const legend = sec === 'genel' ? 'Genel' : `<label><input type="checkbox" data-sec="${sec}" data-key="acik" ${o.acik ? 'checked' : ''}> ${sec === 'harita' ? 'Harita' : 'Toz'}</label>`;
+          return `<fieldset><legend>${legend}</legend>${Object.keys(o)
             .filter((k) => k !== 'acik')
             .map((k) => `<label>${LABELS[k] ?? k}<span><input type="range" min="0" max="100" value="${o[k]}" data-sec="${sec}" data-key="${k}"><output>${o[k]}</output></span></label>`)
             .join('')}</fieldset>`;

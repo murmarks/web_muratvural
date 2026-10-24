@@ -3,6 +3,9 @@
 ; Dosyayı kaydedip sayfayı yenileyin. Denemek için adresin sonuna ?ayar ekleyin
 ; (ör. https://dev.muratvural.com/tr/?ayar): sağ altta kaydırıcılar açılır, beğendiğiniz ayarı oradan indirirsiniz.
 
+[genel]
+kayma = 25             ; kaydırınca arka planın kayma oranı: 0 = hiç kaymaz, 100 = sayfayla birlikte, 25 = 4'e 1
+
 [harita]
 acik = evet
 noktalar = 35          ; beyaz kara noktalarının belirginliği
