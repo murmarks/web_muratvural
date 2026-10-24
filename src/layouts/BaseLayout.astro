@@ -33,11 +33,11 @@ const desc = description ?? t('metaDescription');
 const here = Astro.url.pathname;
 const canonical = new URL(here, Astro.site);
 /*
- * Diğer dil sayfası önceden indirilmez (speculationrules / prefetch yok, 2026-10-24).
- * Hostinger'ın önündeki hCDN ilk ziyarette tarayıcıyı "Checking your browser" sayfasıyla sınar;
- * önceden indirilen sayfa bu sınavdan geçemiyor ve Chrome dil düğmesine basılınca o yarım kalan
- * indirmeyi beklerken takılıyordu (sayfa Türkçe kalıyor, yenileyince düzeliyordu).
- * Dil düğmesi artık her tarayıcıda sıradan bir bağlantı gibi açılır.
+ * Diğer dil sayfası önceden indirilmez (speculationrules / prefetch kaldırıldı, 2026-10-24).
+ * Canlı sitede ilk ziyarette dil düğmesi "yükleniyor"da uzun bekleyip sayfayı eski dilde bırakıyordu;
+ * yenileyince düzeliyordu. Hostinger'ın önündeki hCDN her yeni ziyaretçiye önce "Checking your browser"
+ * sınavını gösteriyor; tarayıcının arka planda hazırladığı sayfa bu akışla bozulabiliyor.
+ * Dil düğmesi artık her tarayıcıda sıradan bir bağlantı gibi açılır (site.ts gerekirse isteği yineler).
  */
 ---
 
