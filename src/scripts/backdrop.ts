@@ -4,7 +4,10 @@
  *   onlara giden ince yollar. Yollarda arada bir ışık yürür, vardığı şehir parlar.
  *   Kenarlarında yavaşça söner, kesik görünmez.
  * - toz: sol üstten vuran ışık ve içinde yavaşça süzülen toz zerreleri.
- * Kaydırınca harita ve toz, sayfaya göre `kayma` oranında kayar (0 hiç, 25 = 4'e 1, 100 sayfayla birlikte).
+ * Kaydırınca harita ve toz, sayfaya göre `kayma` oranında kayar (0 hiç, 25 = 4'e 1, 100 sayfayla birlikte;
+ * 100'ün üstü daha dik artar: 125 sayfanın 2, 150 sayfanın 3 katı).
+ * Sayfa bir geçiş için beklerken (ana sayfada sahadaki fotoğraflar, kaydırma tutulur) tekerlek ve dokunma
+ * zemini yine yürütür: sayfa durur ama zemin, kaydırmaya devam eden eli izler; durup kalkma ve geri sıçrama olmaz.
  * Uzun sayfada harita yukarı çıktıkça arkasından kopyası gelir, zerreler ekranın altından yeniden girer.
  * Açık ve kapalı olma, belirginlik ve yoğunluk ayar panelinden gelir (src/config/ayar.ts, scripts/ayar.ts).
  * Renkler temaya göre: koyuda karanlıkta parlayan ışık; açıkta kâğıt üstünde mürekkep noktalar, koyu altın şehirler,
@@ -159,16 +162,45 @@ if (cv && ctx) {
   let trips: { city: number; start: number }[] = [];
   let nextTrip = 0;
   let last = 0;
+
+  /* kayma oranı: 0–100 doğrusal, üstü dik (150'de 3 kat) */
+  const oran = () => (S.zemin.kayma <= 100 ? S.zemin.kayma / 100 : 1 + ((S.zemin.kayma - 100) / 50) * 2);
+  /*
+   * tutulan kaydırma: sayfanın engellediği (preventDefault) tekerlek, dokunma ve tuş hareketleri `extra`da birikir;
+   * zemin scrollY + extra kadar kayar. Olay bitince engellenip engellenmediği kesinleşir, o yüzden karede okunur.
+   */
+  let extra = 0, extraS = 0, ty = 0;
+  const pending: { e: Event; d: number }[] = [];
+  addEventListener('wheel', (e) => pending.push({ e, d: e.deltaY * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? innerHeight : 1) }), { passive: true });
+  addEventListener('touchstart', (e) => (ty = e.touches[0]?.clientY ?? 0), { passive: true });
+  addEventListener('touchmove', (e) => {
+    const y = e.touches[0]?.clientY ?? ty;
+    pending.push({ e, d: ty - y });
+    ty = y;
+  }, { passive: true });
+  const KEYS: Record<string, number> = { ArrowDown: 1, ArrowUp: -1, PageDown: 8, PageUp: -8, ' ': 8 };
+  addEventListener('keydown', (e) => {
+    const k = KEYS[e.key];
+    if (k) pending.push({ e, d: (Math.abs(k) === 8 ? innerHeight * 0.85 * Math.sign(k) : k * 60) * (e.key === ' ' && e.shiftKey ? -1 : 1) });
+  });
+  const kaydir = (dt: number) => {
+    for (const p of pending) if (p.e.defaultPrevented) extra += Math.max(-400, Math.min(400, p.d));
+    pending.length = 0;
+    extraS += (extra - extraS) * (1 - Math.exp(-dt / 0.14)); // tarayıcının yumuşak kaydırması gibi
+    return scrollY + extraS;
+  };
+
   const frame = (now: number) => {
     const t = now / 1000;
     const dt = Math.min(0.1, (now - last) / 1000 || 0);
     last = now;
+    const sy = kaydir(dt) * oran();
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, cv.width, cv.height);
 
     if (dots) {
       // harita kaydırmanın `kayma` oranında yukarı çıkar; ekrandan çıkan kopyanın yerine aşağıdan sonraki gelir
-      const shift = scrollY * (S.zemin.kayma / 100);
+      const shift = sy;
       const first = top0 - (((shift % period) + period) % period);
       const bases: number[] = [];
       for (let b = first - period; b < H + oy; b += period) if (b + mapH + oy > 0) bases.push(b - oy);
@@ -225,7 +257,7 @@ if (cv && ctx) {
         if (m.x > 1.05) m.x = -0.05;
         if (m.y > 1.05) m.y = -0.05;
         if (m.y < -0.05) m.y = 1.05;
-        const x = m.x * W, y = ((((m.y * H - scrollY * (S.zemin.kayma / 100)) % H) + H) % H);
+        const x = m.x * W, y = ((((m.y * H - sy) % H) + H) % H);
         const lit = inBeam(x, y);
         const a = (m.r > 2.5 ? 0.05 + lit * 0.12 : 0.04 + lit * 0.6) * v * R.zerreK;
         ctx.fillStyle = `rgba(${R.zerre}, ${Math.min(1, a * (0.7 + 0.3 * Math.sin(t * 2 + m.ph)))})`;
@@ -264,7 +296,7 @@ if (cv && ctx) {
     raf = requestAnimationFrame(loop);
     if (!dots && !beam) return; // ikisi de kapalı: tuval apply()'da temizlendi
     // saniyede ~30 kare yeter, pil yorulmaz; kaydırılırken her kare çizilir ki zemin sayfayla takılmadan aksın
-    const moving = S.zemin.kayma > 0 && scrollY !== lastY;
+    const moving = S.zemin.kayma > 0 && (scrollY !== lastY || pending.length > 0 || Math.abs(extra - extraS) > 0.5);
     if (!moving && now - prev < 32) return;
     prev = now;
     lastY = scrollY;

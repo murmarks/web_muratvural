@@ -1,7 +1,7 @@
 /**
  * Panel ayarlarının sayfadaki hali (src/config/ayar.ts). İlk değer tarayıcıdaki son kayıttan gelir;
  * sunucudaki kayıt gelince (window.mvAyar, AyarHead) o geçer. Zemin gibi parçalar dinle() ile haber alır.
- * Adreste ?ayar varsa panel yüklenir.
+ * Adreste ?ayar varsa ya da şifre bu sekmede girildiyse panel yüklenir.
  */
 import { duzelt, type Ayar } from '../config/ayar';
 
@@ -11,10 +11,11 @@ declare global {
     mvAyarOnbellek?: unknown;
     mvSayfa?: (s: unknown) => void;
     mvPanel?: boolean;
+    mvTaslak?: unknown;
   }
 }
 
-let simdiki: Ayar = duzelt(window.mvAyarOnbellek);
+let simdiki: Ayar = duzelt(window.mvTaslak ?? window.mvAyarOnbellek);
 const dinleyenler = new Set<(a: Ayar) => void>();
 
 export const ayar = () => simdiki;
@@ -34,7 +35,13 @@ window.mvAyar?.then((s) => {
   if (s && !window.mvPanel) uygula(duzelt(s));
 });
 
-if (new URLSearchParams(location.search).has('ayar')) {
+let panelAcik = false;
+try {
+  panelAcik = sessionStorage.getItem('mv-panel') === '1'; // şifre bu sekmede girildi, panel sayfadan sayfaya açık kalır
+} catch {
+  /* sessionStorage yok */
+}
+if (panelAcik || new URLSearchParams(location.search).has('ayar')) {
   window.mvPanel = true;
   import('./ayar-panel');
 }

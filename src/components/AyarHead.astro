@@ -22,10 +22,14 @@ import { themeColors } from '../config/site';
     const m = document.querySelector('meta[name="theme-color"]');
     if (m) m.content = acik ? renk.light : renk.dark;
   };
-  let c = null;
+  let c = null, t = null;
   try { c = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
-  window.mvSayfa(c);
+  // ayar paneli bu sekmede açıksa kaydedilmemiş önizleme sayfadan sayfaya sürer
+  try { if (sessionStorage.getItem('mv-panel') === '1') t = JSON.parse(sessionStorage.getItem('mv-taslak') || 'null'); } catch (e) {}
+  if (t) window.mvPanel = true;
+  window.mvSayfa(t || c);
   window.mvAyarOnbellek = c;
+  window.mvTaslak = t;
   window.mvAyar = fetch('/ayar.php?t=' + Date.now(), { cache: 'no-store' })
     .then((r) => (r.ok ? r.json() : null))
     .catch(() => null)
@@ -34,7 +38,7 @@ import { themeColors } from '../config/site';
       try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {}
       return s;
     });
-  if (!c) {
+  if (!c && !t) {
     h.classList.add('mv-bekle');
     const ac = () => h.classList.remove('mv-bekle');
     setTimeout(ac, 900);

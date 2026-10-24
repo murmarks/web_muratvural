@@ -1,7 +1,8 @@
 /**
  * Site sahibinin panelden değiştirdiği ayarlar (adrese ?ayar eklenince açılır: src/scripts/ayar-panel.ts).
  * Kayıt sunucuda durur (public/ayar.php); kayıt yoksa ya da okunamazsa buradaki varsayılanlar geçer.
- * Sayılar 0–150 arası: 100 eski en fazladır, üstü abartmak isteyene pay.
+ * Sayılar 0–150 arası: 100 eski en fazladır, üstü abartmak isteyene pay. Kaymada 100 sayfayla birlikte,
+ * üstü daha dik artar (125 sayfanın 2, 150 sayfanın 3 katı): 1,5 kat gözle sayfayla aynı görünüyordu.
  */
 import { locales, site, theme, type Locale } from './site';
 
@@ -89,7 +90,7 @@ tema = ${a.site.tema}${' '.repeat(Math.max(1, 14 - a.site.tema.length))}; koyu y
 dil = ${a.site.dil}${' '.repeat(Math.max(1, 15 - a.site.dil.length))}; ilk açılışta: otomatik (Türkiye saati ya da Türkçe tarayıcı → Türkçe, diğerleri İngilizce), tr ya da en
 
 [zemin]
-kayma = ${a.zemin.kayma}${' '.repeat(Math.max(1, 13 - String(a.zemin.kayma).length))}; kaydırınca zeminin kayma oranı: 0 hiç kaymaz, 25 = 4'e 1, 100 sayfayla birlikte, 150 sayfadan hızlı
+kayma = ${a.zemin.kayma}${' '.repeat(Math.max(1, 13 - String(a.zemin.kayma).length))}; kaydırınca zeminin kayma oranı: 0 hiç kaymaz, 25 = 4'e 1, 100 sayfayla birlikte, 125 sayfanın 2 katı, 150 sayfanın 3 katı
 
 [harita]
 acik = ${yn(a.harita.acik)}${' '.repeat(Math.max(1, 14 - yn(a.harita.acik).length))}; noktalı dünya haritası

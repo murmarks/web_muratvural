@@ -1,6 +1,8 @@
 /**
  * Site sahibinin ayar paneli: adresin sonuna ?ayar eklenince sağ altta açılır.
  * Şifre girilmeden hiçbir ayar görünmez; şifreyi sunucu denetler (public/ayar.php), sekme kapanana kadar hatırlanır.
+ * Şifre girildikten sonra panel aynı sekmede gezilen her sayfada açık kalır ve henüz kaydedilmemiş ayarlar da
+ * sayfadan sayfaya taşınır (sessionStorage); "Çık"a basınca kapanır.
  * Her değişiklik sayfada hemen görünür ama yalnızca "Kaydet"e basınca sitenin kendisi değişir.
  * "Varsayılanlar" src/config/ayar.ts'deki ilk ayarları getirir; "Dosyaya indir" o anki ayarları okunur bir
  * dosyaya yazar, "Dosyadan yükle" o dosyayı geri getirir. İkisinden sonra da geçerli olması için Kaydet gerekir.
@@ -8,7 +10,7 @@
 import { AD, EN_FAZLA, SECENEK, VARSAYILAN, ayniMi, dosyaOku, dosyaYaz, duzelt, type Ayar } from '../config/ayar';
 import { uygula } from './ayar';
 
-const SIFRE = 'mv-sifre';
+const SIFRE = 'mv-sifre', PANEL = 'mv-panel', TASLAK = 'mv-taslak', KUCUK = 'mv-kucuk';
 const kopya = (a: Ayar): Ayar => JSON.parse(JSON.stringify(a));
 const oku = (k: string) => {
   try {
@@ -100,7 +102,7 @@ function ciz() {
       <small>Otomatik: Türkiye saatindeki ya da Türkçe tarayıcı Türkçe, diğerleri İngilizce açar. Ziyaretçi dili her zaman kendisi değiştirebilir.</small>
     </fieldset>
     <fieldset><legend>${AD.zemin}</legend>
-      ${kaydirici('zemin', 'kayma', a.zemin.kayma, '0 sabit · 25 = 4\'e 1 · 100 sayfayla birlikte · 150 sayfadan hızlı')}
+      ${kaydirici('zemin', 'kayma', a.zemin.kayma, '0 sabit · 25 = 4\'e 1 · 100 sayfayla birlikte · 125 sayfanın 2 katı · 150 sayfanın 3 katı')}
     </fieldset>
     <fieldset data-kapali="${!a.harita.acik}"><legend>${anahtar('harita', a.harita.acik)}</legend>
       ${kaydirici('harita', 'noktalar', a.harita.noktalar)}
@@ -138,6 +140,12 @@ function ciz() {
 }
 
 const degisti = () => !ayniMi(taslak, kayitli);
+/** Ayarı sayfada gösterir ve sekmede saklar: başka sayfaya geçince de aynı önizleme sürer. */
+function onizle(a: Ayar) {
+  taslak = a;
+  uygula(a);
+  yaz(TASLAK, JSON.stringify(a));
+}
 function durum(msg?: string, tur: '' | 'iyi' | 'kotu' = '') {
   box.querySelector('[data-kaydet]')?.toggleAttribute('data-bekliyor', degisti());
   if (msg !== undefined) not(msg, tur);
@@ -148,11 +156,11 @@ function durum(msg?: string, tur: '' | 'iyi' | 'kotu' = '') {
 function degistir(sec: string, k: string, v: unknown) {
   const t = kopya(taslak) as unknown as Record<string, Record<string, unknown>>;
   t[sec][k] = v;
-  taslak = duzelt(t);
-  uygula(taslak);
+  onizle(duzelt(t));
 }
 
 function ac() {
+  yaz(PANEL, '1');
   ciz();
 }
 
@@ -177,8 +185,7 @@ box.addEventListener('change', async (e) => {
   const f = el.files[0];
   el.value = '';
   if (f.size > 20000) return durum('Bu dosya bir ayar dosyası değil.', 'kotu');
-  taslak = dosyaOku(await f.text());
-  uygula(taslak);
+  onizle(dosyaOku(await f.text()));
   ciz();
   durum(`"${f.name}" yüklendi. Sitenin kendisi Kaydet'e basınca değişir.`);
 });
@@ -189,6 +196,7 @@ box.addEventListener('click', async (e) => {
   if (b.hasAttribute('data-kucult')) {
     // sayfayı görmek için panel başlığına kadar küçülür
     const k = box.classList.toggle('kucuk');
+    yaz(KUCUK, k ? '1' : '');
     b.textContent = k ? '+' : '–';
     b.setAttribute('aria-label', k ? 'Büyüt' : 'Küçült');
     b.setAttribute('aria-expanded', String(!k));
@@ -197,8 +205,7 @@ box.addEventListener('click', async (e) => {
     b.parentElement!.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
     durum();
   } else if (b.hasAttribute('data-varsayilan')) {
-    taslak = kopya(VARSAYILAN);
-    uygula(taslak);
+    onizle(kopya(VARSAYILAN));
     ciz();
     durum('Varsayılan ayarlar yüklendi. Sitenin kendisi Kaydet\'e basınca değişir.');
   } else if (b.hasAttribute('data-indir')) {
@@ -218,7 +225,7 @@ box.addEventListener('click', async (e) => {
     b.disabled = false;
     if (kod === 200 && veri.ayar) {
       kayitli = duzelt(veri.ayar);
-      taslak = kopya(kayitli);
+      onizle(kopya(kayitli));
       sunucuOkundu = true;
       try {
         localStorage.setItem('mv-ayar', JSON.stringify(veri.ayar));
@@ -236,25 +243,25 @@ box.addEventListener('click', async (e) => {
     uygula(kayitli);
     box.remove();
     window.mvPanel = false;
+    [PANEL, TASLAK, KUCUK].forEach((k) => yaz(k, ''));
     const u = new URL(location.href);
     u.searchParams.delete('ayar');
     history.replaceState(history.state, '', u);
   }
 });
 
-addEventListener('beforeunload', (e) => {
-  if (box.isConnected && box.querySelector('.ap-govde') && degisti()) e.preventDefault();
-});
-
 /* açılış: önce sunucudaki kayıt, sonra şifre (bu sekmede daha önce girildiyse sessizce denetlenir) */
 box.innerHTML = `${bas}<p class="ap-not" role="status">Yükleniyor…</p>`;
+if (oku(KUCUK)) box.classList.add('kucuk');
 const s = await (window.mvAyar ?? Promise.resolve(null));
 sunucuOkundu = !!s;
 if (s) kayitli = duzelt(s);
-taslak = kopya(kayitli);
+// önceki sayfada kaydedilmeden bırakılan ayarlar sürer
+const onceki = oku(PANEL) && oku(TASLAK);
+taslak = onceki ? duzelt(JSON.parse(onceki)) : kopya(kayitli);
 uygula(taslak);
 if (sifre && (await sunucu({ sifre })).durum === 200) ac();
 else {
-  yaz(SIFRE, '');
+  [SIFRE, PANEL, TASLAK].forEach((k) => yaz(k, ''));
   kilit();
 }
