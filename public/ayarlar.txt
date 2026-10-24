@@ -1,0 +1,15 @@
+; Arka plan ayarları (Dr. Murat Vural sitesi)
+; Değerler 0 ile 100 arası: 0 = kapalı/en az, 100 = en fazla. "acik" satırı evet ya da hayır.
+; Dosyayı kaydedip sayfayı yenileyin. Denemek için adresin sonuna ?ayar ekleyin
+; (ör. https://dev.muratvural.com/tr/?ayar): sağ altta kaydırıcılar açılır, beğendiğiniz ayarı oradan indirirsiniz.
+
+[harita]
+acik = evet
+noktalar = 35          ; beyaz kara noktalarının belirginliği
+sari = 80              ; sarı ülke ışıkları ve İstanbul'dan giden yayların belirginliği
+ucus_yogunlugu = 40    ; yaylarda aynı anda yürüyen ışık sayısı (0 = hiç uçuş yok)
+
+[toz]
+acik = evet
+gorunurluk = 70        ; projektör ışığının ve toz zerrelerinin belirginliği
+yogunluk = 65          ; toz zerresi miktarı

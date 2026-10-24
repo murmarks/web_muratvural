@@ -363,6 +363,20 @@
   inset: 0;
   background: radial-gradient(65% 70% at 42% 50%, transparent 20%, var(--bg) 88%);
 }
+/*
+ * Arkada hareketli zemin varken (backdrop.ts) bölümler kendi düz zeminleriyle onu kesmesin:
+ * sahadaki renk kenarlarda zemin rengine boyanmak yerine saydamlaşarak söner, rakamlar sahnesinin ışığı saydam biter.
+ */
+html[data-backdrop] .amb {
+  -webkit-mask-image: radial-gradient(65% 70% at 42% 50%, #000 20%, transparent 88%);
+  mask-image: radial-gradient(65% 70% at 42% 50%, #000 20%, transparent 88%);
+}
+html[data-backdrop] .amb::after {
+  display: none;
+}
+html[data-backdrop] .s2 {
+  background: radial-gradient(70% 60% at 30% 50%, color-mix(in srgb, var(--glow) 70%, transparent), transparent);
+}
 .pics {
   position: relative;
   min-height: 0;
