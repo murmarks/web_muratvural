@@ -1,6 +1,6 @@
 # Siteyi derler ve dist/ çıktısını yayın dalına yazar. Aynı dosya iki dalda da çalışır:
-#   source     → main     → wmmurvur/wMV main     (canlı site, pebuc.site)
-#   dev_source → dev_main → wmmurvur/wMV dev_main (deneme sitesi, dev.pebuc.site)
+#   source     → main     → wmmurvur/wMV main     (canlı site, muratvural.com)
+#   dev_source → dev_main → wmmurvur/wMV dev_main (deneme sitesi, dev.muratvural.com)
 # Böylece dev_source onaylanıp source'un üzerine yazıldığında bu dosya değişmeden canlı yayını yapar.
 # Yayın dalı her yayında tek bir commit'e sıfırlanır (önceki sürümün üzerine yazılır);
 # eski bir sürüme dönmek için kaynak dalındaki ilgili commit'ten yeniden derlemek yeterli.

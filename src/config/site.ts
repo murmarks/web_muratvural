@@ -7,22 +7,18 @@ export const locales = ['en', 'tr'] as const;
 export type Locale = (typeof locales)[number];
 
 export const site = {
-  url: 'https://pebuc.site',
+  url: 'https://muratvural.com',
   /** Hiçbir kural uymazsa açılan dil. */
   defaultLocale: 'en' as Locale,
   /**
    * Ziyaretçi henüz dil seçmediyse sitenin hangi dilde açılacağı:
    * - 'fixed': herkes `defaultLocale` ile açar.
-   * - 'regional': ziyaretçinin bulunduğu yere göre: Türkiye'de Türkçe, başka her yerde `defaultLocale` (İngilizce).
-   * Statik sitede sunucu ziyaretçinin ülkesini bilmez; yer, cihazın saat diliminden anlaşılır
-   * (Türkiye'deki her cihaz Europe/Istanbul kullanır, başka hiçbir ülke kullanmaz). Ziyaretçiye soru sorulmaz,
-   * dışarıya istek gitmez, sayfa beklemez. VPN saat dilimini değiştirmez; yurt dışındaki Türk ziyaretçi İngilizce görür.
-   * `languages`: tarayıcı dili de hesaba katılsın istenirse (ör. ['tr'] yurt dışındaki Türkçe tarayıcıları da Türkçe açar).
-   * Ziyaretçi dil düğmesiyle bir kez seçtiyse site sonraki ziyaretlerde hep o dilde açılır; bu kurallar yalnızca ilk ziyarette geçer.
+   * - 'regional': aşağıdaki `regional` kurallarına göre (Türkiye'den gelen Türkçe, diğerleri İngilizce).
+   * Statik sitede ülke, tarayıcının saat dilimi ve dilinden tahmin edilir.
    */
   languageMode: 'regional' as 'fixed' | 'regional',
   regional: {
-    tr: { timeZones: ['Europe/Istanbul', 'Asia/Istanbul', 'Turkey'], languages: [] },
+    tr: { timeZones: ['Europe/Istanbul'], languages: ['tr'] },
   } as Partial<Record<Locale, { timeZones: string[]; languages: string[] }>>,
   /**
    * Görünen marka. 'personal' = Dr. Murat Vural. 'pebuc' eski PeBuC adını ve logosunu geri getirir;
@@ -36,10 +32,10 @@ export const site = {
    */
   fieldEffect: 'tul' as 'tul' | 'isik' | 'panjur' | 'odak' | 'none',
   /**
-   * Sitenin teması: 'light' açık zemin (2026-10-20'de dev dallarında denenmeye başlandı), 'dark' ilk koyu tasarım.
+   * Sitenin teması: 'dark' koyu tasarım (canlıda bu). 'light' açık zemin: 2026-10-20'de denendi, sonraya bırakıldı (2026-10-24).
    * İkisi de kodda durur (src/styles/global.css). Derlerken THEME ortam değişkeni bunu geçersiz kılar (önizleme için).
    */
-  theme: 'light' as Theme,
+  theme: 'dark' as Theme,
   contact: {
     email: 'contact@muratvural.com',
     whatsapp: '+84934000150',

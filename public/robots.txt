@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pebuc.site/sitemap-index.xml
+Sitemap: https://muratvural.com/sitemap-index.xml
