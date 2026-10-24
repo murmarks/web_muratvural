@@ -13,7 +13,8 @@ jobs:
         continue-on-error: true
         run: |
           set +e
-          for h in dev.pebuc.site pebuc.site www.pebuc.site; do echo "$h: $(getent hosts $h)"; done
+          for h in dev.pebuc.site pebuc.site www.pebuc.site muratvural.com; do echo "$h: sys=[$(getent hosts $h)] g=[$(dig +short @8.8.8.8 $h | tr '\n' ' ')] c=[$(dig +short @1.1.1.1 $h | tr '\n' ' ')] ns=[$(dig +short NS @8.8.8.8 $h | tr '\n' ' ')]"; done
+          cat /etc/resolv.conf; resolvectl status 2>/dev/null | head -20
           for H0 in dev.pebuc.site pebuc.site; do echo "== $H0"
           for i in 1 2; do for p in /tr/ /en/; do for sp in none prefetch 'prefetch;prerender'; do
             H=(); [ "$sp" != none ] && H=(-H "Sec-Purpose: $sp")
@@ -24,7 +25,7 @@ jobs:
           echo ---; google-chrome --version
       - name: Gerçek Chrome ile düğme
         run: |
-          sudo apt-get install -y xdotool imagemagick bc >/dev/null 2>&1
+          sudo apt-get update -qq >/dev/null 2>&1; sudo apt-get install -y xdotool imagemagick bc >/dev/null 2>&1
           Xvfb :99 -screen 0 1440x900x24 >/dev/null 2>&1 & sleep 2
           export DISPLAY=:99
           for H0 in pebuc.site dev.pebuc.site; do export H0
