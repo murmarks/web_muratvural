@@ -5,7 +5,7 @@ set -u
 WAIT=$1; HOVER=$2; TAG=$3
 D=$(mktemp -d); NL=/tmp/netlog-$TAG.json
 google-chrome --kiosk --no-first-run --no-default-browser-check --disable-features=Translate \
-  --user-data-dir=$D --log-net-log=$NL https://dev.pebuc.site/tr/ >/dev/null 2>&1 &
+  --user-data-dir=$D --log-net-log=$NL https://${H0:-dev.pebuc.site}/tr/ >/dev/null 2>&1 &
 CP=$!
 T0=$(date +%s.%N)
 t() { printf '%5.1f' "$(echo "$(date +%s.%N) - $T0" | bc)"; }

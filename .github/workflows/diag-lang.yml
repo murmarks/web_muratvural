@@ -10,22 +10,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Sunucu yanıtları (curl)
+        continue-on-error: true
         run: |
-          for i in 1 2 3; do for p in /tr/ /en/; do for sp in none prefetch 'prefetch;prerender'; do
+          set +e
+          for h in dev.pebuc.site pebuc.site www.pebuc.site; do echo "$h: $(getent hosts $h)"; done
+          for H0 in dev.pebuc.site pebuc.site; do echo "== $H0"
+          for i in 1 2; do for p in /tr/ /en/; do for sp in none prefetch 'prefetch;prerender'; do
             H=(); [ "$sp" != none ] && H=(-H "Sec-Purpose: $sp")
-            curl -s -o /dev/null "${H[@]}" -w "$p sp=$sp code=%{http_code} ttfb=%{time_starttransfer}s total=%{time_total}s http=%{http_version}\n" https://dev.pebuc.site$p
-          done; done; done
-          echo ---; curl -sI https://dev.pebuc.site/tr/
-          echo ---; curl -sI -H 'Sec-Purpose: prefetch;prerender' https://dev.pebuc.site/en/
+            curl -s -o /dev/null "${H[@]}" -w "$p sp=$sp code=%{http_code} ttfb=%{time_starttransfer}s total=%{time_total}s http=%{http_version}\n" https://$H0$p
+          done; done; done; done
+          echo ---; curl -sI https://pebuc.site/tr/
+          echo ---; curl -sI -H 'Sec-Purpose: prefetch;prerender' https://pebuc.site/en/
           echo ---; google-chrome --version
       - name: Gerçek Chrome ile düğme
         run: |
           sudo apt-get install -y xdotool imagemagick bc >/dev/null 2>&1
           Xvfb :99 -screen 0 1440x900x24 >/dev/null 2>&1 & sleep 2
           export DISPLAY=:99
-          bash .github/diag/lang.sh 8 1 gec-hover1
-          bash .github/diag/lang.sh 2 0.3 erken
-          bash .github/diag/lang.sh 15 3 gec-hover3
+          for H0 in pebuc.site dev.pebuc.site; do export H0
+          bash .github/diag/lang.sh 8 1 gec-hover1-$H0
+          bash .github/diag/lang.sh 2 0.3 erken-$H0
+          bash .github/diag/lang.sh 15 3 gec-hover3-$H0
+          done
       - uses: actions/upload-artifact@v4
         if: always()
         with: { name: diag, path: /tmp/shot-*.png }
