@@ -12,4 +12,4 @@ jobs:
       - run: |
           for i in $(seq 1 60); do curl -s https://muratvural.com/tr/ | grep -q 'https://muratvural.com/tr/' && { echo "canlı yeni sürümde ($i)"; break; }; sleep 10; done
           mkdir -p /tmp/pw && cd /tmp/pw && npm init -y >/dev/null && npm i playwright@1.56.1 >/dev/null 2>&1
-          node $GITHUB_WORKSPACE/.github/diag/check.cjs
+          cp $GITHUB_WORKSPACE/.github/diag/check.cjs . && node check.cjs
